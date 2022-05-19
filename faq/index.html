@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#333333" />
+  
+  <link rel="stylesheet" href="/global-d3fend.css" />
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+  
+  <!-- This contains the contents of the <svelte:head> component, if
+    the current page has one -->
+    <meta http-equiv="content-security-policy" content=""><title>Frequently Asked Questions | MITRE D3FEND™</title>
+	<link rel="stylesheet" href="/_app/assets/pages/__layout-matrix.svelte-5f711740.css">
+	<link rel="stylesheet" href="/_app/assets/Nav-mobile-e0f80dc0.css">
+	<link rel="modulepreload" href="/_app/start-9eaa1704.js">
+	<link rel="modulepreload" href="/_app/chunks/index-a02da30e.js">
+	<link rel="modulepreload" href="/_app/chunks/index-98a102c4.js">
+	<link rel="modulepreload" href="/_app/chunks/singletons-d1fb5791.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-bde4ab7a.js">
+	<link rel="modulepreload" href="/_app/chunks/Nav-mobile-db0c9fed.js">
+	<link rel="modulepreload" href="/_app/chunks/stores-59d8ae96.js">
+	<link rel="modulepreload" href="/_app/chunks/stores-cf129ad8.js">
+	<link rel="modulepreload" href="/_app/chunks/config-6e32f34b.js">
+	<link rel="modulepreload" href="/_app/chunks/lib-c1de3c87.js">
+	<link rel="modulepreload" href="/_app/chunks/marked.esm-8ab30116.js">
+	<link rel="modulepreload" href="/_app/pages/faq/index.svelte-cfbc359d.js">
+	<link rel="modulepreload" href="/_app/chunks/Title-1d23c88f.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/service-worker.js');
+		}
+	</script>
+  </head>
+  <body>
+    <!-- The application will be rendered inside this element,
+      because `src/client.js` references it -->
+      <div>
+
+
+<nav class="svelte-acckgo">
+
+
+    <nav id="desktop" class="svelte-posd1r"><ul class="text-1 svelte-posd1r"><li class="logo svelte-posd1r"><a href="/" class="svelte-posd1r"><img alt="MITRE logo" src="/img/mitre.png" class="svelte-posd1r"></a></li>
+
+    
+    
+      <li class="svelte-posd1r"><a href="/" class="svelte-posd1r">matrix</a></li>
+      <li class="svelte-posd1r"><a href="/dao" class="svelte-posd1r">artifacts</a></li>
+      <li class="svelte-posd1r"><a href="/about" class="svelte-posd1r">about</a></li>
+      <li class="svelte-posd1r"><a href="/resources" class="svelte-posd1r">resources</a></li>
+      <li class="svelte-posd1r"><a href="/contribute" class="svelte-posd1r">contribute</a></li>
+      <li class="svelte-posd1r"><a aria-current="page" href="/faq" class="svelte-posd1r">faq</a></li>
+
+      <li class="logo logo-right svelte-posd1r"><a href="https://www.nsa.gov" class="svelte-posd1r"><img id="sponsor_logo" alt="NSA logo" src="/img/nsa.png" class="svelte-posd1r"></a></li></ul></nav>
+
+<nav id="mobile"><div><button aria-label="Close Mobile Menu" class="svelte-1ea8tj3"><svg width="32" height="24" class="svelte-1ea8tj3"><line id="top" x1="0" y1="2" x2="32" y2="2" class="svelte-1ea8tj3"></line><line id="middle" x1="0" y1="12" x2="24" y2="12" class="svelte-1ea8tj3"></line><line id="bottom" x1="0" y1="22" x2="32" y2="22" class="svelte-1ea8tj3"></line></svg>
+</button></div>
+</nav></nav>
+  <main class="svelte-acckgo">
+
+<section class="content"><!-- HTML_TAG_START --><h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<h2 id="what-is-d3fend">What is D3FEND?</h2>
+<p>D3FEND is a knowledge base, but more specifically a knowledge graph, of cybersecurity countermeasure techniques. In the simplest sense, it is a catalog of defensive cybersecurity techniques and their relationships to offensive/adversary techniques. The primary goal of the initial D3FEND release is to help standardize the vocabulary used to describe defensive cybersecurity technology functionality.</p>
+<h2 id="what-is-d3fend-not">What is D3FEND not?</h2>
+<p>D3FEND does not prescribe specific countermeasures, it does not prioritize them, and it does not characterize their effectiveness. However, standardizing the vocabulary we use to describe technical countermeasures may help us solve those problems.</p>
+<h2 id="who-is-d3fend-for">Who is D3FEND for?</h2>
+<p>D3FEND has multiple audiences. The most immediate is security systems architecture experts and technical executives making acquisition or investment decisions. If you need to understand how cyber defenses work in granular detail, D3FEND is meant to be a good starting point.</p>
+<h2 id="what-are-d3fend-use-cases">What are D3FEND use cases?</h2>
+<p>The dominant use case thus far has been to inform acquisition and investment. It can do this in two ways.</p>
+<p>First, it can be used to compare the claimed functionality in multiple product solution sets with a common defensive technique taxonomy. This makes it possible to identify product differences and product gaps relative to desired functionality in a more precise, consistent, and repeatable manner.</p>
+<p>Second, it can suggest a potential testing scope for the defensive techniques in terms of relevant offensive techniques. This is done by identifying a product or product set&#39;s claimed defensive techniques, then querying D3FEND for the potentially related offensive techniques. An offensive test plan can be constructed by selecting combinations of the related offensive techniques. This sort of testing can be useful to determine how well a defensive product performs its claimed functionality.</p>
+<h2 id="what-is-the-maturity-level-of-d3fend">What is the maturity level of D3FEND?</h2>
+<p>D3FEND is at an early stage and is an experimental research project. The initial release is not considered comprehensive, and the defensive to offensive technique mappings (which are inferentially generated) are fundamentally generalizations. However, expert cybersecurity knowledge is often, at its essence, the application of fundamental computer system knowledge. We aim to codify this knowledge in our knowledge graph and expect improvement over time as the graph builds on itself.</p>
+<h2 id="how-often-is-d3fend-updated">How often is D3FEND updated?</h2>
+<p>The target update frequency will eventually be semi-annually. Though as of 2021, updates will be more frequent since the project is new and we are receiving frequent contributions from the community.</p>
+<h2 id="what-does-a-listed-reference-in-d3fend-mean-or-imply">What does a listed reference in D3FEND mean or imply?</h2>
+<p>D3FEND references a number of different types of internet links. For example, patents, external knowledgebases, open specficiations, and even open source code repositories. The references are used for the purposes of developing the generic countermeasure technique knowledgebase article.</p>
+<h2 id="why-does-d3fend-reference-patents">Why does D3FEND reference patents?</h2>
+<p>The patent corpus was our initial focus for multiple reasons. There is strong motivation for inventors, investors, and organizations to describe and distinguish how their cybersecurity technologies work in patents. This due to the various protections patents provide for intellectual property owners. It is also a highly curated corpus with category codes, citations, and an official legally authoritative assessment of the novelty of their claims. In our experience, vendor white papers and marketing material do not sufficiently explain how the technologies work at an engineering level, nor do they do so in as uniform a manner as patents. To date, there appears to be no comprehensive public analysis of the cybersecurity patent corpus for the purpose of developing a knowledge graph of cyber countermeasures.</p>
+<p>This corpus, while useful, has numerous issues that need to be understood when using it for our purpose. In some cases, the corpus is adversarial. For example, in academic papers, the citations tend to have high fidelity because researchers are incentivized to accurately represent prior scientific knowledge. Patents also have citations and prior art enumerations. However, these are often selected to bolster the case that the new patent is truly novel, useful, and non-obvious for business purposes. This is done without the peer review process used in academia.</p>
+<h2 id="what-does-d3fend-stand-for">What does D3FEND stand for?</h2>
+<p>Detection, Denial, and Disruption Framework Empowering Network Defense.</p>
+<h2 id="how-can-i-contribute">How can I contribute?</h2>
+<p>The D3FEND team seeks your feedback and suggestions. We know that the first version may have inconsistencies or issues, but we felt it was useful and novel enough to release to engage the community. If you have a technique which you think should be added, or you have identified an issue, please do not hesitate to send the team an email at <a href="mailto:&#x64;&#51;&#x66;&#101;&#110;&#100;&#64;&#109;&#105;&#x74;&#x72;&#101;&#x2e;&#x6f;&#x72;&#x67;">&#x64;&#51;&#x66;&#101;&#110;&#100;&#64;&#109;&#105;&#x74;&#x72;&#101;&#x2e;&#x6f;&#x72;&#x67;</a>. We will review and analyze submissions as time permits.</p>
+<p>If you are recommending a new defensive technique, please ensure you include a public reference that explains how the technique works in sufficient engineering-level detail.</p>
+<!-- HTML_TAG_END -->
+</section></main>
+
+  
+  <footer class="svelte-acckgo"><div class="svelte-fefdvk"><p class="text-small">Use of the MITRE D3FEND™ Knowledge Graph and website is subject to the <a href="/tou">Terms of Use</a>. Use of the MITRE D3FEND website is subject to the
+    <a href="/privacy">MITRE D3FEND Privacy Policy</a>. MITRE D3FEND is funded
+    by the
+    <a target="_blank" rel="" href="https://www.nsa.gov/">National Security Agency</a>
+    (NSA)
+    <a target="_blank" href="https://www.nsa.gov/what-we-do/cybersecurity/">Cybersecurity Directorate</a>
+    and managed by the
+    <a href="https://www.mitre.org/centers/national-security-and-engineering-center/who-we-are" target="_blank" rel="noopener noreferrer">National Security Engineering Center</a>
+    (NSEC) which is operated by
+    <a target="_blank" rel="noopener noreferrer" href="http://www.mitre.org/">The MITRE Corporation</a>. MITRE D3FEND; and the MITRE D3FEND logo are trademarks of The MITRE
+    Corporation. MITRE ATT&amp;CK® and ATT&amp;CK® are registered trademarks of
+    The MITRE Corporation. MITRE ATT&amp;CK content is subject to the MITRE ATT&amp;CK
+    <a href="https://attack.mitre.org/resources/terms-of-use/">terms of use</a>.
+    This software was produced for the U. S. Government under Basic Contract No.
+    W56KGU-18-D-0004, and is subject to the Rights in Noncommercial Computer
+    Software and Noncommercial Computer Software Documentation Clause
+    252.227-7014 (FEB 2012)
+    <br>© 2021 The MITRE Corporation.
+    <br> Approved for Public Release; Distribution Unlimited #20-2338.
+  </p>
+</div>
+  </footer>
+
+
+		<script type="module" data-hydrate="1c6nh56">
+		import { start } from "/_app/start-9eaa1704.js";
+		start({
+			target: document.querySelector('[data-hydrate="1c6nh56"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "always",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-bde4ab7a.js"),
+						import("/_app/pages/faq/index.svelte-cfbc359d.js")
+				],
+				params: {},
+				routeId: "faq"
+			}
+		});
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/faq/faq.json">{"status":200,"statusText":"","headers":{"content-type":"text/plain;charset=UTF-8"},"body":"{\"plaintext\":\"# Frequently Asked Questions\\n\\n## What is D3FEND?\\n\\nD3FEND is a knowledge base, but more specifically a knowledge graph, of cybersecurity countermeasure techniques. In the simplest sense, it is a catalog of defensive cybersecurity techniques and their relationships to offensive/adversary techniques. The primary goal of the initial D3FEND release is to help standardize the vocabulary used to describe defensive cybersecurity technology functionality.\\n\\n## What is D3FEND not?\\n\\nD3FEND does not prescribe specific countermeasures, it does not prioritize them, and it does not characterize their effectiveness. However, standardizing the vocabulary we use to describe technical countermeasures may help us solve those problems.\\n\\n## Who is D3FEND for?\\n\\nD3FEND has multiple audiences. The most immediate is security systems architecture experts and technical executives making acquisition or investment decisions. If you need to understand how cyber defenses work in granular detail, D3FEND is meant to be a good starting point.\\n\\n## What are D3FEND use cases?\\n\\nThe dominant use case thus far has been to inform acquisition and investment. It can do this in two ways.\\n\\nFirst, it can be used to compare the claimed functionality in multiple product solution sets with a common defensive technique taxonomy. This makes it possible to identify product differences and product gaps relative to desired functionality in a more precise, consistent, and repeatable manner.\\n\\nSecond, it can suggest a potential testing scope for the defensive techniques in terms of relevant offensive techniques. This is done by identifying a product or product set's claimed defensive techniques, then querying D3FEND for the potentially related offensive techniques. An offensive test plan can be constructed by selecting combinations of the related offensive techniques. This sort of testing can be useful to determine how well a defensive product performs its claimed functionality.\\n\\n## What is the maturity level of D3FEND?\\n\\nD3FEND is at an early stage and is an experimental research project. The initial release is not considered comprehensive, and the defensive to offensive technique mappings (which are inferentially generated) are fundamentally generalizations. However, expert cybersecurity knowledge is often, at its essence, the application of fundamental computer system knowledge. We aim to codify this knowledge in our knowledge graph and expect improvement over time as the graph builds on itself.\\n\\n## How often is D3FEND updated?\\n\\nThe target update frequency will eventually be semi-annually. Though as of 2021, updates will be more frequent since the project is new and we are receiving frequent contributions from the community.\\n\\n## What does a listed reference in D3FEND mean or imply?\\n\\nD3FEND references a number of different types of internet links. For example, patents, external knowledgebases, open specficiations, and even open source code repositories. The references are used for the purposes of developing the generic countermeasure technique knowledgebase article.\\n\\n## Why does D3FEND reference patents?\\n\\nThe patent corpus was our initial focus for multiple reasons. There is strong motivation for inventors, investors, and organizations to describe and distinguish how their cybersecurity technologies work in patents. This due to the various protections patents provide for intellectual property owners. It is also a highly curated corpus with category codes, citations, and an official legally authoritative assessment of the novelty of their claims. In our experience, vendor white papers and marketing material do not sufficiently explain how the technologies work at an engineering level, nor do they do so in as uniform a manner as patents. To date, there appears to be no comprehensive public analysis of the cybersecurity patent corpus for the purpose of developing a knowledge graph of cyber countermeasures.\\n\\nThis corpus, while useful, has numerous issues that need to be understood when using it for our purpose. In some cases, the corpus is adversarial. For example, in academic papers, the citations tend to have high fidelity because researchers are incentivized to accurately represent prior scientific knowledge. Patents also have citations and prior art enumerations. However, these are often selected to bolster the case that the new patent is truly novel, useful, and non-obvious for business purposes. This is done without the peer review process used in academia.\\n\\n## What does D3FEND stand for?\\n\\nDetection, Denial, and Disruption Framework Empowering Network Defense.\\n\\n## How can I contribute?\\n\\nThe D3FEND team seeks your feedback and suggestions. We know that the first version may have inconsistencies or issues, but we felt it was useful and novel enough to release to engage the community. If you have a technique which you think should be added, or you have identified an issue, please do not hesitate to send the team an email at d3fend@mitre.org. We will review and analyze submissions as time permits.\\n\\nIf you are recommending a new defensive technique, please ensure you include a public reference that explains how the technique works in sufficient engineering-level detail.\\n\"}"}</script></div>
+      
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script id="atarget" async      >
+      </script>
+      <script>
+        if (window.location.hostname != "localhost" && 
+              window.location.hostname !=  "127.0.0.1") {
+          
+          // target = document.getElementById("atarget");
+          // target.onload = function(){};
+          // target.src="https://www.googletagmanager.com/gtag/js?id=UA-200005342-1"
+
+          // window.dataLayer = window.dataLayer || [];
+          // function gtag() {
+          //   dataLayer.push(arguments);
+          // }
+          // gtag("js", new Date());
+          // gtag("config", "UA-200005342-1");
+
+          let gaID = "UA-200005342-1";
+          window.dataLayer = window.dataLayer || []
+          function gtag() { dataLayer.push(arguments) }
+          gtag('js', new Date())
+          gtag('config', gaID)
+
+          const script = document.createElement('script')
+          script.src = `https://www.googletagmanager.com/gtag/js?id=${gaID}`
+          document.body.appendChild(script)
+
+        } else {
+          console.info("Analytics disabled in development mode")
+        }
+      </script>
+    </body>
+    </html>
+    
