@@ -1,5 +1,5 @@
 const build = [
-  "/_app/start-2216d376.js",
+  "/_app/start-e1c7880c.js",
   "/_app/pages/__layout.svelte-4dfd0ac0.js",
   "/_app/assets/pages/__layout-matrix.svelte-5f711740.css",
   "/_app/pages/__error.svelte-1d825c42.js",
@@ -36,7 +36,7 @@ const build = [
   "/_app/assets/pages/poster@matrix.svelte-ad010473.css",
   "/_app/pages/privacy.svelte-c80c93be.js",
   "/_app/pages/progress/index.svelte-e7c335fc.js",
-  "/_app/pages/resources/index.svelte-9fa12dee.js",
+  "/_app/pages/resources/index.svelte-f40b8b27.js",
   "/_app/pages/resources/ontology.svelte-2dd31f08.js",
   "/_app/pages/search.svelte-487768bc.js",
   "/_app/assets/pages/search.svelte-6a857f2b.css",
@@ -46,11 +46,11 @@ const build = [
   "/_app/pages/technique/_technique_@tech.svelte-c3ab531b.js",
   "/_app/assets/pages/technique/_technique_@tech.svelte-4c576568.css",
   "/_app/pages/technique/index.svelte-e0a269cc.js",
-  "/_app/pages/tools/artifact-extractor.svelte-124b92a9.js",
+  "/_app/pages/tools/artifact-extractor.svelte-46a93790.js",
   "/_app/assets/pages/tools/artifact-extractor.svelte-9d57e037.css",
-  "/_app/pages/tools/attack-extractor.svelte-6ccbc810.js",
+  "/_app/pages/tools/attack-extractor.svelte-a4eb8567.js",
   "/_app/assets/pages/tools/attack-extractor.svelte-81c1f600.css",
-  "/_app/pages/tools/d3fend-extractor.svelte-ef203fb7.js",
+  "/_app/pages/tools/d3fend-extractor.svelte-a7be37de.js",
   "/_app/assets/pages/tools/d3fend-extractor.svelte-120a3a9b.css",
   "/_app/pages/tools/index.svelte-75caa666.js",
   "/_app/pages/tou.svelte-4cff5701.js",
@@ -82,7 +82,7 @@ const build = [
   "/_app/chunks/Table-79382ad4.js",
   "/_app/chunks/TechniqueSubclasses-efbe15c1.js",
   "/_app/assets/TechniqueSubclasses-62da13f8.css",
-  "/_app/chunks/extract-487bbbcb.js"
+  "/_app/chunks/extract-71b4e4e9.js"
 ];
 const files = [
   "/favicon.ico",
@@ -119,7 +119,7 @@ const files = [
   "/resources/extra-dist/CNAME",
   "/resources/extra-dist/README.md"
 ];
-const version = "1653061866796";
+const version = "1653065263500";
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
 const staticAssets = new Set(to_cache);
