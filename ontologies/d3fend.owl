@@ -10,11 +10,13 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl">
-        <owl:versionIRI rdf:resource="http://d3fend.mitre.org/ontologies/d3fend/0.10.0-BETA-2/d3fend.owl"/>
+        <owl:versionIRI rdf:resource="http://d3fend.mitre.org/ontologies/d3fend/0.10.1-BETA-1/d3fend.owl"/>
+        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-13T00:00:00.000Z</release-date>
         <dcterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D3FEND is a framework which encodes a countermeasure knowledge base as a knowledge graph. The graph contains the types and relations that define key concepts in the cybersecurity countermeasure domain and the relations necessary to link those concepts to each other. Each of these concepts and relations are linked to references in the cybersecurity literature.</dcterms:description>
         <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIT</dcterms:license>
         <dcterms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D3FEND™ - A knowledge graph of cybersecurity countermeasures</dcterms:title>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of the D3FEND Knowledge Graph, and the associated references from this ontology are subject to the Terms of Use. D3FEND is funded by the National Security Agency (NSA) Cybersecurity Directorate and managed by the National Security Engineering Center (NSEC) which is operated by The MITRE Corporation. D3FEND™ and the D3FEND logo are trademarks of The MITRE Corporation. This software was produced for the U.S. Government under Basic Contract No. W56KGU-18-D0004, and is subject to the Rights in Noncommercial Computer Sotware and Noncommercial Computer Software Documentation Clause 252.227-7014 (FEB 2012) Copyright 2022 The MITRE Corporation.</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.10.1-BETA-1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -4344,10 +4346,8 @@
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#D3FENDThing -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#D3FENDThing">
-        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-31T00:00:00</release-date>
         <rdfs:comment>D3FEND things are concepts defined in the core D3FEND Framework.</rdfs:comment>
         <rdfs:label>D3FEND Thing</rdfs:label>
-        <owl:versionInfo>0.10.0-BETA-2</owl:versionInfo>
     </owl:Class>
     
 
@@ -4455,7 +4455,7 @@
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DNSServer">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Server"/>
-        <rdfs:comment>A Domain Name System (DNS) name server is a kind of name server.  Domain names are one of the two principal namespaces of the Internet. The most important function of DNS servers is the translation (resolution) of human-memorable domain names and hostnames into the corresponding numeric Internet Protocol (IP) addresses, the second principal name space of the Internet which is used to identify and locate computer systems and resources on the Internet. (en). 
+        <rdfs:comment>A Domain Name System (DNS) name server is a kind of name server.  Domain names are one of the two principal namespaces of the Internet. The most important function of DNS servers is the translation (resolution) of human-memorable domain names and hostnames into the corresponding numeric Internet Protocol (IP) addresses, the second principal name space of the Internet which is used to identify and locate computer systems and resources on the Internet. (en).
 
 More generally, a name server is a computer application that implements a network service for providing responses to queries against a directory service. It translates an often humanly meaningful, text-based identifier to a system-internal, often numeric identification or addressing component. This service is performed by the server in response to a service protocol request.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Name_server"/>
@@ -5598,6 +5598,12 @@ More generally, a name server is a computer application that implements a networ
                 <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#LocalResourceAccess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -6191,6 +6197,12 @@ More generally, a name server is a computer application that implements a networ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#filters"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#filters"/>
                 <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#InputDevice"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -6780,9 +6792,9 @@ Intrusion prevention systems are considered extensions of intrusion detection sy
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket">
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessToken"/>
     </owl:Class>
     
@@ -6791,7 +6803,7 @@ Intrusion prevention systems are considered extensions of intrusion detection sy
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicketGrantingServiceTicket -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicketGrantingServiceTicket">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket"/>
         <rdfs:comment>A Kerberos ticket-granting service (TGS) ticket is given in response to requesting a Kerberos TGS request.</rdfs:comment>
         <rdfs:label>Kerberos Ticket Granting Service Ticket</rdfs:label>
         <skos:altLabel>TGS Ticket</skos:altLabel>
@@ -6802,7 +6814,7 @@ Intrusion prevention systems are considered extensions of intrusion detection sy
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicketGrantingTicket -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicketGrantingTicket">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket"/>
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TicketGrantingTicket"/>
     </owl:Class>
     
@@ -9006,9 +9018,6 @@ Intrusion prevention systems are considered extensions of intrusion detection sy
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"/>
-        <rdfs:comment>A program that needs to access data from a file stored in a file system uses the read system call. The file is identified by a file descriptor that is normally obtained from a previous call to open. This system call reads in data in bytes, the number of which is specified by the caller, from the file and stores then into a buffer supplied by the calling process.</rdfs:comment>
-        <rdfs:label>Read File</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Read_(system_call)"/>
     </owl:Class>
     
 
@@ -10759,6 +10768,16 @@ Another difference are the capabilities of the mechanism:
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1027.003 -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1027.003">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#T1027"/>
+        <attack-id>T1027.003</attack-id>
+        <rdfs:label>Steganography</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1027.004 -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1027.004">
@@ -10776,7 +10795,7 @@ Another difference are the capabilities of the mechanism:
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1027.005 -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1027.005">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasionTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#T1027"/>
         <attack-id>T1027.005</attack-id>
         <rdfs:label>Indicator Removal from Tools</rdfs:label>
     </owl:Class>
@@ -12542,7 +12561,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#T1114"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"/>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#reads"/>
                 <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Email"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13982,6 +14001,26 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasionTechnique"/>
         <attack-id>T1497</attack-id>
         <rdfs:label>Virtualization/Sandbox Evasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1497.001 -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1497.001">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#T1497"/>
+        <attack-id>T1497.001</attack-id>
+        <rdfs:label>System Checks</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1497.002 -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1497.002">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#T1497"/>
+        <attack-id>T1497.002</attack-id>
+        <rdfs:label>User Activity Based Checks</rdfs:label>
     </owl:Class>
     
 
@@ -15499,13 +15538,13 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-create"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -15795,7 +15834,7 @@ Another difference are the capabilities of the mechanism:
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1562.006 -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1562.006">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasionTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#T1562"/>
         <attack-id>T1562.006</attack-id>
         <rdfs:label>Indicator Blocking</rdfs:label>
     </owl:Class>
@@ -19081,6 +19120,7 @@ This analytic could depend on the possibility of the known strings used as argum
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileAccessPatternAnalysis">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessAnalysis"/>
         <analyzes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#LocalResourceAccess"/>
+        <analyzes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_File-modifyingMalwareDetection_CrowdstrikeInc"/>
         <d3fend-id>D3-FAPA</d3fend-id>
     </owl:NamedIndividual>
@@ -19437,6 +19477,7 @@ Because these commands are built in, they may be run frequently by power users o
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#IOPortRestriction">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutionIsolation"/>
+        <filters rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareDevice"/>
         <filters rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#InputDevice"/>
         <filters rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#RemovableMediaDevice"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ComputerMotherboardHavingPeripheralSecurityFunctions"/>
@@ -19751,9 +19792,9 @@ Because these commands are built in, they may be run frequently by power users o
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket -->
 
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket"/>
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket"/>
     
 
 
@@ -21537,6 +21578,7 @@ Powershell can be used to hide monitored command line execution such as:
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#RFShielding">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#PlatformHardening"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-PrivacyAndSecuritySystemsAndMethodsOfUse"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_-_Technical_Specifications_for_Construction_and_Management_of_Sensitive_Compartmented_Information_Facilities"/>
         <d3fend-id>D3-RFS</d3fend-id>
     </owl:NamedIndividual>
     
@@ -21563,6 +21605,12 @@ Powershell can be used to hide monitored command line execution such as:
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CAR-2014-05-001%3ARPCActivity-MITRE"/>
         <d3fend-id>D3-RTA</d3fend-id>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
     
 
 
@@ -21633,7 +21681,7 @@ Methods, systems, and apparatus, including computer programs encoded on computer
         <kb-reference-of rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#PassiveCertificateAnalysis"/>
         <has-link rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.certificate-transparency.org/</has-link>
         <kb-reference-title>Certificate Transparency</kb-reference-title>
-        <kb-abstract>Google&apos;s Certificate Transparency project fixes several structural flaws in the SSL certificate system, which is the main cryptographic system that underlies all HTTPS connections. 
+        <kb-abstract>Google&apos;s Certificate Transparency project fixes several structural flaws in the SSL certificate system, which is the main cryptographic system that underlies all HTTPS connections.
 
 These flaws weaken the reliability and effectiveness of encrypted Internet connections and can compromise critical TLS/SSL mechanisms, including domain validation, end-to-end encryption, and the chains of trust set up by certificate authorities.</kb-abstract>
         <kb-author>Google</kb-author>
@@ -22442,6 +22490,32 @@ significant outages to web applications and services-such as government services
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_-_Technical_Specifications_for_Construction_and_Management_of_Sensitive_Compartmented_Information_Facilities -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_-_Technical_Specifications_for_Construction_and_Management_of_Sensitive_Compartmented_Information_Facilities">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpecificationReference"/>
+        <kb-reference-of rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#RFShielding"/>
+        <has-link rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.dni.gov/files/Governance/IC-Tech-Specs-for-Const-and-Mgmt-of-SCIFs-v15.pdf</has-link>
+        <kb-reference-title>Technical Specifications for Construction and Management of Sensitive Compartmented Information Facilities</kb-reference-title>
+        <kb-author>National Counterintelligence and Security Center</kb-author>
+        <rdfs:label>Reference - Technical Specifications for Construction and Management of Sensitive Compartmented Information Facilities</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_-_Testing_Metrics_for_Password_Creation_Policies_by_Attacking_Large_Sets_of_Revealed_Passwords -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_-_Testing_Metrics_for_Password_Creation_Policies_by_Attacking_Large_Sets_of_Revealed_Passwords">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AcademicPaperReference"/>
+        <kb-reference-of rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#StrongPasswordPolicy"/>
+        <has-link rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.cs.umd.edu/~jkatz/security/downloads/passwords_revealed-weir.pdf</has-link>
+        <kb-reference-title>Testing Metrics for Password Creation Policies by Attacking Large Sets of Revealed Passwords</kb-reference-title>
+        <kb-author>Matt Weir, Sudhir Aggarwal, Michael Collins, Henry Stern</kb-author>
+        <rdfs:label>Reference - Testing Metrics for Password Creation Policies by Attacking Large Sets of Revealed Passwords</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_AccountMonitoring_ForescoutTechnologies -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_AccountMonitoring_ForescoutTechnologies">
@@ -22501,7 +22575,7 @@ significant outages to web applications and services-such as government services
         <kb-author>Igor A. Baikalov; Tanuj Gulati; Sachin Nayyar; Anjaneya Shenoy; Ganpatrao H. Patwardhan</kb-author>
         <kb-mitre-analysis>The patent describes a technique for detecting anomalous activity within an organization&apos;s IT infrastructure to identify threats. Behavioral profiles can be grouped by peer groups that identify functionally similar groups of actors (users or resources) based on their attributes and pre-defined grouping rules. For example, users can be grouped by their job title, organizational hierarchy, or location and can be observed for similarities in access patterns, based on granted access entitlements or actual logged resource access.
 
-Behavioral profiles are created from measurements of events over a time period for example: 
+Behavioral profiles are created from measurements of events over a time period for example:
 
 * Transaction counts
 * Concurrent users per hour
@@ -22526,6 +22600,20 @@ Outlier data values which deviate from behavioral profile by more than a predete
         <kb-mitre-analysis></kb-mitre-analysis>
         <kb-organization>ARXAN TECHNOLOGIES Inc</kb-organization>
         <rdfs:label>Reference - Anti-tamper system with self-adjusting guards - ARXAN TECHNOLOGIES Inc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_ApparatusForToProvideContentToAndQueryAReverseDomainNameSystemServer -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_ApparatusForToProvideContentToAndQueryAReverseDomainNameSystemServer">
+        <kb-reference-of rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReverseResolutionDomainDenylisting"/>
+        <has-link rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://patents.google.com/patent/US20100174829A1/en?oq=20100174829</has-link>
+        <kb-reference-title>Apparatus for to provide content to and query a reverse domain name system server</kb-reference-title>
+        <kb-abstract>An apparatus is disclosed for to provide content to and query a reverse domain name system (DNS) server without depending on the kindness of domain name system registrars, registrants. DNS replies are observed by firewalls or filters, analyzed, and transmitted to a reverse domain name system server. An embodiment of the present invention can be within a DNS server or SMTP server.</kb-abstract>
+        <kb-author>Dean Danko</kb-author>
+        <kb-mitre-analysis>This patent includes the description of a method of blocking email traffic from untrusted domains by analyzing the TCP/IP source IP addresses and blocking traffic for IPs whose reverse lookup response FQDN matches a denylist.</kb-mitre-analysis>
+        <rdfs:label>Reference - Apparatus for to provide content to and query a reverse domain name system server - Barrracuda Networks</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -22778,10 +22866,10 @@ Similarly, the person could expose decoy profiles on other sites, for instance t
         <kb-reference-title>Detecting script-based malware</kb-reference-title>
         <kb-abstract>Described herein are systems, techniques, and computer program products for preventing execution, by a scripting engine, of harmful commands that may be introduced by computer malware or other mechanisms. The system identifies certain host processes that may attempt to utilize a hosted scripting engine. An unmanaged interface module is injected into an identified host process. The unmanaged interface module is configured to detect certain conditions indicating the likelihood that a scripting engine will be instantiated, and in response to inject a managed interface module into the host process. The managed interface module hooks into certain methods of the scripting engine to intercept commands before they are executed by the scripting engine. The managed and unmanaged interface components then communicate with a kernel-mode threat detection component to determine whether any commands should be blocked.</kb-abstract>
         <kb-author>Ion-Alexandru IONESCU; Satoshi Tanda</kb-author>
-        <kb-mitre-analysis>The patent describes techniques that can be implemented to detect and block malicious commands and command scripts from being executed by scripting engines. 
+        <kb-mitre-analysis>The patent describes techniques that can be implemented to detect and block malicious commands and command scripts from being executed by scripting engines.
 
 ### Script Execution Monitoring explanation
-This patent describes software installed on the host system that hooks into methods of a scripting engine to intercept commands before they are executed and block commands if they are determined to be harmful. For example regular expression checking may be used to identify commands having malicious patterns. Expression checking may be used for script files as well as interactively - typed commands. 
+This patent describes software installed on the host system that hooks into methods of a scripting engine to intercept commands before they are executed and block commands if they are determined to be harmful. For example regular expression checking may be used to identify commands having malicious patterns. Expression checking may be used for script files as well as interactively - typed commands.
 
 ### File Content Signatures explanation
 This patent includes File Content Signatures because in the case of a script file, a hash of the file is compared against hashes of known malicious script files to determine whether the script file is malicious.</kb-mitre-analysis>
@@ -22901,16 +22989,16 @@ This patent includes File Content Signatures because in the case of a script fil
         <kb-reference-title>File-modifying malware detection</kb-reference-title>
         <kb-abstract>A security agent implemented on a computing device is described herein. The security agent is configured to detect file-modifying malware by detecting that a process is traversing a directory of the memory of the computing device and detecting that the process is accessing files in the memory according to specified file access patterns. The security agent can also be configured to correlate actions of multiple processes that correspond to a specified file access pattern and detect that one or more of the multiple processes are malware by correlating their behavior.</kb-abstract>
         <kb-author>Daniel W. Brown</kb-author>
-        <kb-mitre-analysis>This patent describes a technique for detecting file modifying malware such as wipers and ransomware that overwrite portions of files and encrypt portions of a computer&apos;s memory, respectively. Processes that are traversing a directory are identified along with file access patterns. Processes executing on a computing device that are traversing a directory include:  
+        <kb-mitre-analysis>This patent describes a technique for detecting file modifying malware such as wipers and ransomware that overwrite portions of files and encrypt portions of a computer&apos;s memory, respectively. Processes that are traversing a directory are identified along with file access patterns. Processes executing on a computing device that are traversing a directory include:
 
 * changing a directory of a process (e.g., iteratively, systematically, repeatedly)
-* detecting that a process is conducting an &quot;open directory&quot; operation repeatedly 
+* detecting that a process is conducting an &quot;open directory&quot; operation repeatedly
 * the same process traversing through a directory and recording the locations of data files encountered in each sub - directory
 
 In addition to identifying processes traversing a directory, particular file access patterns are also detected that may be indicative of malicious behavior including:
 * multiple file types being accessed
 * accessing a large number of files
-* files located in multiple locations in the directory being accessed 
+* files located in multiple locations in the directory being accessed
 
 If a process is conducting a traversal of the directory and accessing files according to a defined access pattern associated with malicious behavior, a preventative action is performed.</kb-mitre-analysis>
         <kb-organization>Crowdstrike Inc</kb-organization>
@@ -23040,14 +23128,14 @@ If a process is conducting a traversal of the directory and accessing files acco
         <kb-reference-title>Hardware-assisted system and method for detecting and analyzing system calls made to an operting system kernel</kb-reference-title>
         <kb-abstract>The present disclosure relates to a system and method for monitoring system calls to an operating system kernel. A performance monitoring unit is used to monitor system calls and to gather information about each system call. The information is gathered upon interrupting the system call and can include system call type, parameters, and information about the calling thread/process, in order to determine whether the system call was generated by malicious software code. Potentially malicious software code is nullified by a malicious code counter-attack module.</kb-abstract>
         <kb-author>Matthew D. Spisak</kb-author>
-        <kb-mitre-analysis>This patent describes a technique for monitoring system calls to detect malicious software code. A system call monitoring module operates at the kernel level and traps system calls. 
+        <kb-mitre-analysis>This patent describes a technique for monitoring system calls to detect malicious software code. A system call monitoring module operates at the kernel level and traps system calls.
 Monitoring data includes:
 
 * information about the path to the file to be accessed by a system call.
-* the memory address or range of addresses to be accessed by a system call. 
-* the context for the thread within operating system that will be interrupted by a system call. 
+* the memory address or range of addresses to be accessed by a system call.
+* the context for the thread within operating system that will be interrupted by a system call.
 * the type of system call information about the socket that is being used by system call in order to send or receive data.
-* the history of system calls in order to monitor for specific sequences of system calls. 
+* the history of system calls in order to monitor for specific sequences of system calls.
 * the frequency or periodicity of a particular system call or set of systems calls.
 
 Captured system call data is analyzed using data analysis algorithms such as machine learning algorithms, artificial intelligence algorithms, pattern recognition algorithms, or other known data analysis techniques. An alert is generated if it is likely that the system call was generated by malicious software code.</kb-mitre-analysis>
@@ -23108,7 +23196,7 @@ Code behavior monitored includes code:
 a different location
 * disabling OS tools in the registry
 * opening a hidden file
- 
+
 The user interaction and the code process executed during the user session are monitored and compared with predetermined malicious behavior profiles that are typically present in a malicious user session.  The predetermined collection of malicious behaviors are created based on analysis of families of malware in run time in a threat research facility. If a match is made an action is taken that can include isolating the computer on which the user interaction occurs and limiting network access to or from the computer.</kb-mitre-analysis>
         <kb-organization>Sophos Ltd</kb-organization>
         <rdfs:label>Reference - Host intrusion prevention system using software and user behavior analysis - Sophos Ltd</rdfs:label>
@@ -23177,7 +23265,7 @@ Determining that the return address is outside memory previously allocated for a
         <kb-reference-title>Integrity assurance through early loading in the boot phase</kb-reference-title>
         <kb-abstract>Techniques utilizing library and pre-boot components to ensure that a driver associated with a kernel-mode component is initialized before other drivers during a boot phase are described herein. The library component is processed during a boot phase; the pre-boot component, which may be an alternative to the library component, is processed during a pre-boot phase. By ensuring that the driver is the first driver initialized, the components enable the driver to launch the kernel-mode component before other drivers are initialized. The library component may also determine whether another driver is to be initialized before the kernel-mode component driver, may ensure that kernel-mode component driver is initialized first, and may alert the kernel-mode component. Also, the library component may retrieve information that is to be deleted by the operating system before initialization of drivers and may provide that information to the kernel-mode component.</kb-abstract>
         <kb-author>Ion-Alexandru Ionescu</kb-author>
-        <kb-mitre-analysis>To compromise software or to gain control of a host device, a security exploit can modify driver initialization order used by an operating system and place a driver associated with the security exploit first in a list of drivers initialized by the operating system. 
+        <kb-mitre-analysis>To compromise software or to gain control of a host device, a security exploit can modify driver initialization order used by an operating system and place a driver associated with the security exploit first in a list of drivers initialized by the operating system.
 
 This patent describes ensuring that a driver associated with the agent is initialized first. To ensure the driver is initialized first, a dependent DLL associated with the driver is configured to be processed before other dependent DLLs. The dependent DLL can be configured to be processed first by various methods, for example if processing is done in alphabetical order, changing its name to be processed first. The dependent DLL, once processed, executes a number of operations to ensure the driver associated with the agent is initialized first. Furthermore, if the initialization order is modified, an alert is provided to the kernel-mode component that notifies the kernel-mode component it was not first and the order had to be altered. It can then take additional actions such as additional monitoring or remediation.</kb-mitre-analysis>
         <kb-organization>Crowdstrike Inc</kb-organization>
@@ -23198,9 +23286,9 @@ This patent describes ensuring that a driver associated with the agent is initia
         <kb-mitre-analysis>This patent describes a health monitor deployed on an endpoint that uses a heartbeat to periodically communicate status to a gateway&apos;s remote health monitor. The endpoint health monitor issues a heartbeat for satisfactory status of the endpoint using factors such as:
 
 * checking the status of individual software items executing on the endpoint
-* checking that antivirus and other security software is up to date (e. g., with current virus definition files) and running correctly 
-* checking the integrity of cryptographic key stores 
-* checking other hardware or software components of the endpoint as necessary or helpful for health monitoring 
+* checking that antivirus and other security software is up to date (e. g., with current virus definition files) and running correctly
+* checking the integrity of cryptographic key stores
+* checking other hardware or software components of the endpoint as necessary or helpful for health monitoring
 
 A disappearance of the heartbeat from the endpoint may indicate that the endpoint has been compromised.</kb-mitre-analysis>
         <kb-organization>Sophos Ltd</kb-organization>
@@ -23284,9 +23372,9 @@ A disappearance of the heartbeat from the endpoint may indicate that the endpoin
         <kb-author>John Burnet MUNRO, IV; Jason Aaron Trost; Zachary Daniel HANIF</kb-author>
         <kb-mitre-analysis>This patent describes a domain classification engine on the host computer that analyzes URLs clicked by a user or entered into a web browser to visit a website. URL analysis is done by using a combination of techniques:
 
-* Feature extraction: A URL is analyzed against features associated with suspicious URLs such as % of longest consecutive digits in a subdomain, % of longest repeated characters in a subdomain, % of vowels in a high level domain.  
+* Feature extraction: A URL is analyzed against features associated with suspicious URLs such as % of longest consecutive digits in a subdomain, % of longest repeated characters in a subdomain, % of vowels in a high level domain.
 
-* Markov analysis: The probability of a digit occurring in normal language given the preceding two digits is determined. For example, if the received URL is google.com, the probability of a &apos;g&apos; occurring at the beginning of a word, the probability of an &apos;o&apos; occurring after a &quot;g, the probability of an &quot;o&apos; occurring after a &apos;g&apos; and &quot;o, and so forth will be determined. The probability of each digit is then multiplied to get a probability for the whole domain name. Probabilities are determined based on a database of existing usage, such as a dictionary, or a list of known good domain names 
+* Markov analysis: The probability of a digit occurring in normal language given the preceding two digits is determined. For example, if the received URL is google.com, the probability of a &apos;g&apos; occurring at the beginning of a word, the probability of an &apos;o&apos; occurring after a &quot;g, the probability of an &quot;o&apos; occurring after a &apos;g&apos; and &quot;o, and so forth will be determined. The probability of each digit is then multiplied to get a probability for the whole domain name. Probabilities are determined based on a database of existing usage, such as a dictionary, or a list of known good domain names
 
 * Domain names are compared against an existing dataset of known unauthorized domain names.
 
@@ -23329,10 +23417,10 @@ A rating is developed based on the results of these techniques, and if the ratin
         <kb-mitre-analysis>This patent describes determining a confidence score to detect anomalies in user activity based on comparing a user&apos;s behavior profile with current user activity events.  The following types of events are used to develop a user entity profile:
 
 * logon and logoff times and locations
-* starting or ending applications 
+* starting or ending applications
 * reading or writing files
 * changing an entity &apos;s authorization
-* monitoring network traffic 
+* monitoring network traffic
 
 User events that deviate from the entity profile over a certain threshold trigger a remedial action.</kb-mitre-analysis>
         <kb-organization>Idaptive LLC</kb-organization>
@@ -23888,7 +23976,7 @@ Rules are created that specify the type and location of the API call. For exampl
         <kb-reference-title>System and method for identifying the presence of malware using mini-traps set at network endpoints</kb-reference-title>
         <kb-abstract>A system for identifying the presence of advanced persistent threats on a network including a plurality of resources, interconnected to form a network, at least one decoy resource, at least one mini-trap installed on at least one of the plurality of resources and functionally associated with at one of the at least one decoy resource, the at least one mini-trap comprising deceptive information directing malware accessing the at least one mini-trap to the decoy resource associated therewith, and a manager node forming part of the network, locally or remotely, and configured to manage placement of the at least one mini-trap on the at least one of the plurality of resources and association between the at least one mini-trap and the decoy resource associated therewith.</kb-abstract>
         <kb-author>Doron Kolton; Rami Mizrahi; Omer Zohar; Benny Ben-Rabi; Alex Barbalat; Shlomi Gabai</kb-author>
-        <kb-mitre-analysis>Questionable or all files (as determined by the enterprise) are forwarded to the decoy network. Using a manager node user interface, you can setup fake information (ex. IP address of a decoy FTP server) 
+        <kb-mitre-analysis>Questionable or all files (as determined by the enterprise) are forwarded to the decoy network. Using a manager node user interface, you can setup fake information (ex. IP address of a decoy FTP server)
 and deploy decoy physical or virtual endpoints.</kb-mitre-analysis>
         <kb-organization>Fidelis Cybersecurity Solutions Inc</kb-organization>
         <rdfs:label>Reference - System and method for identifying the presence of malware using mini-traps set at network endpoints - Fidelis Cybersecurity Solutions Inc</rdfs:label>
@@ -23993,7 +24081,7 @@ and deploy decoy physical or virtual endpoints.</kb-mitre-analysis>
 * data downloaded or streamed
 * messages received and sent
 * amount of memory used for processing
- 
+
 The data is then analyzed according to a set of dynamically created rules to determine normal behavior patterns associated with the network or user devices. Anomalies between current behavior and normal behavior patterns trigger an alert.</kb-mitre-analysis>
         <kb-organization>Palo Alto Networks Inc</kb-organization>
         <rdfs:label>Reference - System and method thereof for identifying and responding to security incidents based on preemptive forensics - Palo Alto Networks Inc</rdfs:label>
@@ -24143,13 +24231,13 @@ Network packet capture data is collected and metadata is extracted. Aggregate da
         <kb-reference-title>Systems and methods for detecting and/or handling targeted attacks in the email channel</kb-reference-title>
         <kb-abstract>Techniques for detecting and/or handling target attacks in an enterprise&apos;s email channel are provided. The techniques include receiving aspects of an incoming email message addressed to a first email account holder, selecting a recipient interaction profile and/or a sender profile from a plurality of predetermined profiles stored in a memory based upon the received properties, determining a message trust rating associated with the incoming email message based upon the incoming email message and the selected recipient interaction profile and/or the sender profile; and generating an alert identifying the incoming email message as including a security risk based upon the determined message trust rating. The recipient interaction profile includes information associating the first email account holder and a plurality of email senders from whom email messages have previously been received for the first email account holder, and the sender profile includes information associating a sender of the incoming email message with characteristics determined from a plurality of email messages previously received from the sender.</kb-abstract>
         <kb-author>Manoj Kumar Srivastava</kb-author>
-        <kb-mitre-analysis>The patent describes using sender trust rating and sender MTA trust rating as an indicator of level of email security risk. 
+        <kb-mitre-analysis>The patent describes using sender trust rating and sender MTA trust rating as an indicator of level of email security risk.
 
 ### Sender Reputation explanation
 This patent includes Sender Reputation because it describes sender trust rating being used as an indicator of the level of security risk and/or trust level associated with an email sender. The sender trust rating may be determined based on one or more of:
 
 * length of time sender has known the enterprise
-* number of recipients in the enterprise the sender interacts with 
+* number of recipients in the enterprise the sender interacts with
 * sender vs. enterprise originated message ratio
 * sender messages open vs. not-open ratio
 * number of emails received from this sender
@@ -24158,7 +24246,7 @@ This patent includes Sender Reputation because it describes sender trust rating 
 * number of emails from this sender not opened that contain an attachment
 * number of emails from this sender not opened that contain a URL
 * number of emails sent to this sender
-* number of email replies received from this sender 
+* number of email replies received from this sender
 
 Based on the trust rating an alert is generated identifying the incoming email message as a security risk.
 
@@ -25044,6 +25132,7 @@ Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pr
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#StrongPasswordPolicy">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialHardening"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-DigitalIdentityGuidelines800-63-3"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference_-_Testing_Metrics_for_Password_Creation_Policies_by_Attacking_Large_Sets_of_Revealed_Passwords"/>
         <strengthens rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Password"/>
         <strengthens rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"/>
         <d3fend-id>D3-SPP</d3fend-id>
@@ -26200,7 +26289,7 @@ Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pr
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1114.001 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1114.001">
-        <accesses rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Email"/>
+        <reads rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Email"/>
     </owl:NamedIndividual>
     
 
@@ -27398,8 +27487,8 @@ Logon events are Windows Event Code 4624 for Windows Vista and above, 518 for pr
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1558 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1558">
-        <may-access rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket"/>
-        <may-create rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket"/>
+        <may-access rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket"/>
+        <may-create rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket"/>
     </owl:NamedIndividual>
     
 
@@ -28455,6 +28544,20 @@ Could be applied to a number of different types of monitoring depending on what 
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#&apos;Reference_ReverseDNSBlocking_BarracudaNetworks -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#&apos;Reference_ReverseDNSBlocking_BarracudaNetworks">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#UserManualReference"/>
+        <kb-reference-of rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReverseResolutionDomainDenylisting"/>
+        <has-link rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://campus.barracuda.com/product/emailsecuritygateway/doc/39819732/reverse-dns-blocking/</has-link>
+        <kb-reference-title>Reverse DNS Blocking</kb-reference-title>
+        <kb-author>campus.barracuda.com</kb-author>
+        <kb-mitre-analysis>Inbound corporate traffic SMTP traffic on port 25 can be routed through Barracuda Email Security Gateway before reaching the corporate mail server, acting as a traffic filter based on reverse DNS lookups and a denylist for blocking domains.</kb-mitre-analysis>
+        <rdfs:label>Reference - Reverse DNS Blocking - Barracuda Networks</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CAR-2014-05-001%3ARPCActivity-MITRE -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CAR-2014-05-001%3ARPCActivity-MITRE">
@@ -29250,13 +29353,13 @@ In order to convince the potential attacker that the deception environment is th
         <kb-author>Sylvain Gil; Domingo Mihovilovic; Nir Polak; Magnus Stensmo; Sing Yip</kb-author>
         <kb-mitre-analysis>This patent describes calculating a risk score to detect anomalies in user activity based on comparing a user&apos;s current session with a user behavior model. The user behavior model is comprised of a number of histograms including:
 
-* client devices from which the user logs in 
+* client devices from which the user logs in
 * servers accessed
 * data accessed
-* applications accessed 
+* applications accessed
 * session duration
 * logon time of day
-* logon day of week 
+* logon day of week
 * geo - location of logon origination
 
 The system has an initial training period with x number of days (e. g., 90 days) in which session data is recorded in behavior models before behavior analysis begins.The histograms are then used to determine anomalies between current session activity and a user&apos;s behavior model. Values for a histogram category are along one axis and the number of times the value is received for the category is along another axis. If a data point value associated with the current user session is over an anomaly threshold, an alert is generated.</kb-mitre-analysis>
@@ -29327,7 +29430,7 @@ Management servers with enterprise policies for account management provide the a
 
 ## Considerations
 * Local accounts caches vs centralized account management
-* Single Sign-on 
+* Single Sign-on
 * Role based vs Attribute based systems
 
 ## Examples of account configuration stores
@@ -29485,8 +29588,8 @@ This technique covers statistical outliers. Though depending on the complexity o
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthenticationService">
         <rdfs:label>Authentication Service</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authentication"/>
         <rdfs:isDefinedBy rdf:resource="https://www.gartner.com/en/information-technology/glossary/authentication-service"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authentication"/>
         <rdfs:comment>An authentication service is a mechanism, analogous to the use of passwords on time-sharing systems, for the secure authentication of the identity of network clients by servers and vice versa, without presuming the operating system integrity of either (e.g., Kerberos).</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Authorization">
@@ -29506,8 +29609,8 @@ Authorization event data is collected to create a baseline user profile. Authori
 Depending on the complexity of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If malicious activity is not statistically different from benign activity, an alert threshold will not be met.</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthorizationLog">
-        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
         <rdfs:label>Authorization Log</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
         <rdfs:comment>A log of authorization events.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authorization"/>
     </rdf:Description>
@@ -29517,18 +29620,18 @@ Depending on the complexity of the data considered, outliers may not be obvious 
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#BlockDevice">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Device_file#BLOCKDEV"/>
-        <rdfs:comment>A block device (or block special file) provides buffered access to hardware devices, and provides some abstraction from their specifics. 
+        <rdfs:seeAlso rdf:resource="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_79"/>
+        <rdfs:comment>A block device (or block special file) provides buffered access to hardware devices, and provides some abstraction from their specifics.
 
 IEEE Std 1003.1-2017: A file that refers to a device. A block special file is normally distinguished from a character special file by providing access to the device in a manner such that the hardware characteristics of the device are not visible.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_79"/>
         <skos:altLabel>Block Special File</skos:altLabel>
         <rdfs:label>Block Device</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#BootLoader">
         <rdfs:label>Boot Loader</rdfs:label>
         <skos:altLabel>Bootloader</skos:altLabel>
-        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Bootloader"/>
         <rdfs:comment>A bootloader is software that is responsible for booting a computer. When a computer is turned off, its software‍—‌including operating systems, application code, and data‍—‌remains stored on non-volatile memory. When the computer is powered on, it typically does not have an operating system or its loader in random-access memory (RAM). The computer first executes a relatively small program stored in read-only memory (ROM, and later EEPROM, NOR flash) along with some needed data, to initialize RAM (especially on x86 systems) to access the nonvolatile device (usually block device, eg NAND flash) or devices from which the operating system programs and data can be loaded into RAM.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Bootloader"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#BootSector">
         <rdfs:comment>A boot record [boot sector] is the sector of a persistent data storage device (e.g., hard disk, floppy disk, optical disc, etc.) which contains machine code to be loaded into random-access memory (RAM) and then executed by a computer system&apos;s built-in firmware (e.g., the BIOS, Das U-Boot, etc.).</rdfs:comment>
@@ -29543,6 +29646,7 @@ IEEE Std 1003.1-2017: A file that refers to a device. A block special file is no
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#BroadcastDomainIsolation">
         <synonym>Network Segmentation</synonym>
         <definition>Broadcast isolation restricts the number of computers a host can contact on their LAN.</definition>
+        <rdfs:label>Broadcast Domain Isolation</rdfs:label>
         <kb-article>## How it works
 Software Defined Networking, or other network encapsulation technologies intercept host broadcast traffic then route it to a specified destination per a configured policy.
 
@@ -29550,7 +29654,6 @@ This can be implemented within hypervisors, networking hardware (WAPs, switches,
 
 ## Considerations
 This technique is highly dependent on network infrastructure and networking requirements.</kb-article>
-        <rdfs:label>Broadcast Domain Isolation</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Browser">
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/13376000-n"/>
@@ -29565,9 +29668,10 @@ This technique is highly dependent on network infrastructure and networking requ
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ByteSequenceEmulation">
         <rdfs:label>Byte Sequence Emulation</rdfs:label>
+        <definition>Analyzing sequences of bytes and determining if they likely represent malicious shellcode.</definition>
         <kb-article>## How it works
 
-Bytes are analyzed as if they are machine code instructions, and such instructions that are a common component of known shellcode are noted, such as stack pivots, reads from a Memory Address Table, and system calls for functions that disable protections or execute code.  For example, the x86 instruction `b0 0b: mov $11, %ax`, with no further alterations to the `%ax` register, followed by `cd 80: syscall` executes the system call `execve()` in the Linux kernel, which replaces the current process with another one specified -- this is a common action in shellcode, so this sequence would be flagged. 
+Bytes are analyzed as if they are machine code instructions, and such instructions that are a common component of known shellcode are noted, such as stack pivots, reads from a Memory Address Table, and system calls for functions that disable protections or execute code.  For example, the x86 instruction `b0 0b: mov $11, %ax`, with no further alterations to the `%ax` register, followed by `cd 80: syscall` executes the system call `execve()` in the Linux kernel, which replaces the current process with another one specified -- this is a common action in shellcode, so this sequence would be flagged.
 
 This technique detects shellcode despite whether or not it would cause a buffer overflow in the target binary.
 
@@ -29591,7 +29695,6 @@ With inserting code directly, that it is not a buffer overflow, and just some pl
 ### False Positives
 
 Byte sequences containing code that is never used as machine code are still analyzed and flagged for anomalies, and [eventually](http://mathforum.org/library/drmath/view/55871.html), it is likely that an attack sequence will arise from the sheer volume of bytes transmitted.</kb-article>
-        <definition>Analyzing sequences of bytes and determining if they likely represent malicious shellcode.</definition>
         <synonym>Shellcode Transmission Detection</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CallStack">
@@ -29653,17 +29756,17 @@ An extension of PKP is Subject Public Key Information Pinning (SPKI) includes pu
         <rdfs:comment>A certificate truststore is used to store public certificates used to authenticate clients by the server for an SSL connection.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Client-serverPayloadProfiling">
-        <rdfs:label>Client-server Payload Profiling</rdfs:label>
-        <definition>Comparing client-server request and response payloads to a baseline profile to identify outliers.</definition>
         <kb-article>## How it works
 Profiling request and response payloads across multiple clients to a single server to develop a baseline of their characteristics. May take into account request/response sizes, entropy, frequency, and rhythm. Finally, identify outliers as they may indicate a malicious payload delivery and subsequent server exploitation.
 
 
 ## Considerations
-* Collecting metrics to establish a profile can be challenging since user behavior can change easily. 
+* Collecting metrics to establish a profile can be challenging since user behavior can change easily.
 * Employees may work different hours or inconsistent schedules which will cause false positives.
 * Collection of network activity to generate metrics is a computationally intensive process.
 * Users may log into different workstations which may cause false positives.</kb-article>
+        <rdfs:label>Client-server Payload Profiling</rdfs:label>
+        <definition>Comparing client-server request and response payloads to a baseline profile to identify outliers.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ClientApplication">
         <rdfs:seeAlso>http://attackguidev.mitre.org/techniques/T1554/ &quot;Compromise Client Software Binary&quot;</rdfs:seeAlso>
@@ -29698,8 +29801,8 @@ Profiling request and response payloads across multiple clients to a single serv
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CodeRepository">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Repository_(version_control)"/>
-        <rdfs:comment>A code repository is a form of database where code, typically source code, is stored and managed.  In revision control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Depending on whether the version control system in use is distributed like (Git or Mercurial) or centralized like (Subversion, CVS, or Perforce), the whole set of information in the repository may be duplicated on every user&apos;s system or may be maintained on a single server.</rdfs:comment>
         <rdfs:label>Code Repository</rdfs:label>
+        <rdfs:comment>A code repository is a form of database where code, typically source code, is stored and managed.  In revision control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Depending on whether the version control system in use is distributed like (Git or Mercurial) or centralized like (Subversion, CVS, or Perforce), the whole set of information in the repository may be duplicated on every user&apos;s system or may be maintained on a single server.</rdfs:comment>
         <skos:altLabel>Repository</skos:altLabel>
         <skos:altLabel>Version Control Repository</skos:altLabel>
     </rdf:Description>
@@ -29754,12 +29857,11 @@ A connected honeynet provides a tradeoff between emulating certain functionality
         <rdfs:label>Connected Honeynet</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectionAttemptAnalysis">
-        <rdfs:label>Connection Attempt Analysis</rdfs:label>
         <kb-article>## How it works
-Connection Attempt Analysis in multiple ways. 
+Connection Attempt Analysis in multiple ways.
 
 ### Monitoring traffic to unallocated IP space
-One approach looks for failed connection attempts against unallocated IP space. First, network traffic is captured to map out the network to identify network assets as well as unallocated IP space. The map is then used to determine if connection attempts are being made to the unallocated IP space.  
+One approach looks for failed connection attempts against unallocated IP space. First, network traffic is captured to map out the network to identify network assets as well as unallocated IP space. The map is then used to determine if connection attempts are being made to the unallocated IP space.
 
 ### Monitoring for sequentially transmitted traffic
 Another approach passively inspects network traffic with application protocol analyzers observing network activity characteristics such as volume of packets sent/ received, TCP session attributes, and connection information between hosts (start time, source/destination host, services, etc.). Then using pattern matching to identify traffic which appears to be probing for network hosts.
@@ -29769,6 +29871,7 @@ Another approach passively inspects network traffic with application protocol an
 * Implementations that rely on analysis of unallocated IP address space increase in their complexity with network size and decentralized network infrastructure.
 * Inventory of unallocated IP space should should be continuously updated to mitigate the risk of false positives.
 * IPv6 also introduces challenges including IPv6 traffic bypassing IPv4 specific protection systems (ex. firewalls and IDS) and complexity in managing both IPv6 and IPv4 addresses.</kb-article>
+        <rdfs:label>Connection Attempt Analysis</rdfs:label>
         <synonym>Network Scan Detection</synonym>
         <definition>Analyzing failed connections in a network to detect unauthorized activity.</definition>
     </rdf:Description>
@@ -29794,14 +29897,14 @@ Container images become containers at runtime and in the case of Docker containe
         <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea"/>
         <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfile2"/>
         <rdfs:seeAlso rdf:resource="https://linux.die.net/man/2/creat"/>
-        <rdfs:label>Create File</rdfs:label>
         <rdfs:comment>System call to create a new file on a file system. Some operating systems implement this functionality as part of their d3f:OpenFile system call.</rdfs:comment>
+        <rdfs:label>Create File</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess">
         <rdfs:comment>A process spawn refers to a function that loads and executes a new child process.The current process may wait for the child to terminate or may continue to execute asynchronously. Creating a new subprocess requires enough memory in which both the child process and the current program can execute. There is a family of spawn functions in DOS, inherited by Microsoft Windows. There is also a different family of spawn functions in an optional extension of the POSIX standards.  Fork-exec is another technique combining two Unix system calls, which can effect a process spawn.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Spawn_(computing)"/>
         <skos:altLabel>Process Spawn</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Spawn_(computing)"/>
         <rdfs:label>Create Process</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Fork%E2%80%93exec"/>
         <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/procthread/creating-processes"/>
@@ -29889,24 +29992,24 @@ Effective implementation requires identifying any location that could end up con
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DNSDenylisting">
         <rdfs:label>DNS Denylisting</rdfs:label>
         <kb-article>## How it works
-Rules are implemented that filter DNS queries using criteria such as: 
+Rules are implemented that filter DNS queries using criteria such as:
 - Client subnet
 - Type of network protocol used in query
 - Fully qualified domain name (FQDN) of record in the query
 - DNS Server IP address that received the DNS request
 - Type of DNS record being queried
 - Time of day the query is received
-- Size of the response 
+- Size of the response
 
 For example, a DNS policy can be created for blocking DNS queries for FQDNs that have been identified as unauthorized.
 
 ## Considerations
 - Implementation considerations for DNS filtering policies to avoid over-blocking or under-blocking domains.
 - Continuous maintenance of unauthorized domain lists is needed to keep up to date with possible site content changes.
-- File sharing or content delivery networks may require other filtering techniques that are more fine-grained (URL blocking). 
+- File sharing or content delivery networks may require other filtering techniques that are more fine-grained (URL blocking).
 - Access to malicious websites or other network resources directly by IP instead of by DNS record, or after alteration of local DNS hosts file, may not result in DNS network traffic.</kb-article>
-        <synonym>DNS Blacklisting</synonym>
         <definition>Blocking DNS Network Traffic based on criteria such as IP address, domain name, or DNS query type.</definition>
+        <synonym>DNS Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DNSLookup">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/List_of_DNS_record_types"/>
@@ -29920,13 +30023,11 @@ For example, a DNS policy can be created for blocking DNS queries for FQDNs that
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DNSTrafficAnalysis">
         <definition>Analysis of domain name metadata, including name and DNS records, to determine whether the domain is likely to resolve to an undesirable host.</definition>
-        <rdfs:label>DNS Traffic Analysis</rdfs:label>
-        <synonym>Domain Name Analysis</synonym>
         <kb-article>## How it works
-This technique can be accomplished in a number of ways. 
+This technique can be accomplished in a number of ways.
 
-* One example analytic determines whether or not a domain name was generated with an algorithm. Domain generation algorithms (DGAs) are sometimes used to create a domain name automatically  that will resolve to C2 infrastructure, without directly coding the domains in question into the malicious code. 
-* Another method analyzes information about domains that have been visited, including whether a domain name is longer than a common length,  if a dynamic DNS domain was visited, if a fast-flux domain was visited, and if a recently created domain was visited. These factors are used to develop a score and if that score is over a certain threshold, an alert is generated. 
+* One example analytic determines whether or not a domain name was generated with an algorithm. Domain generation algorithms (DGAs) are sometimes used to create a domain name automatically  that will resolve to C2 infrastructure, without directly coding the domains in question into the malicious code.
+* Another method analyzes information about domains that have been visited, including whether a domain name is longer than a common length,  if a dynamic DNS domain was visited, if a fast-flux domain was visited, and if a recently created domain was visited. These factors are used to develop a score and if that score is over a certain threshold, an alert is generated.
 * Collected malware samples can be executed in a virtual environment to identify network domains that are connected to during execution. The network domains are then generated into signatures to identity bad domains for other hosts.
 
 This technique does not check for content hosted at the domain.
@@ -29935,6 +30036,8 @@ This technique does not check for content hosted at the domain.
 
 * DNS produces a large amount of traffic which can be resource-intensive to analyze in real time.
 * If a server is compromised, for example, as part of a watering hole attack, but the DNS information pointing to that server is not altered, this technique would not catch such an incident.</kb-article>
+        <rdfs:label>DNS Traffic Analysis</rdfs:label>
+        <synonym>Domain Name Analysis</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Database">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Database"/>
@@ -29984,19 +30087,20 @@ Code can also be deemed unreachable for certain run-time conditions. Different d
         <definition>The deceive tactic is used to advertise, entice, and allow potential attackers access to an observed or controlled environment.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyArtifact">
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Deception_technology"/>
         <skos:altLabel>Trap</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Deception_technology"/>
         <skos:altLabel>Decoy</skos:altLabel>
         <skos:altLabel>Lure</skos:altLabel>
         <rdfs:seeAlso rdf:resource="https://doi.org/10.1007/978-3-319-25133-2"/>
         <rdfs:seeAlso rdf:resource="https://shield.mitre.org/"/>
         <rdfs:label>Decoy Artifact</rdfs:label>
-        <rdfs:comment>A decoy is an imitation digital artifact in any sense of a digital artifact, object, or phenomenon that is intended to deceive a cyber attacker&apos;s surveillance devices or mislead their evaluation.  Examples include fake files, accounts, hosts (honeypots), and network segments (honeynets).</rdfs:comment>
         <skos:altLabel>Decoy Object</skos:altLabel>
+        <rdfs:comment>A decoy is an imitation digital artifact in any sense of a digital artifact, object, or phenomenon that is intended to deceive a cyber attacker&apos;s surveillance devices or mislead their evaluation.  Examples include fake files, accounts, hosts (honeypots), and network segments (honeynets).</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyEnvironment">
         <definition>A Decoy Environment comprises hosts and networks for the purposes of deceiving an attacker.</definition>
         <rdfs:label>Decoy Environment</rdfs:label>
+        <synonym>Honeypot</synonym>
         <kb-article>## Technique Overview
 
 Systems in a decoy environment are typically configured so that some detectable means of communication does not have any legitimate business purpose.  Any communication via these means should be logged and analyzed to find potential indicators of compromise for a possible past or future attack against other systems.</kb-article>
@@ -30022,7 +30126,7 @@ A &quot;honeypot&quot; may serve a variety of decoy network resources.
 
 ## Considerations
 
-* Developing a deployment and placement strategy for the decoy network resource.  
+* Developing a deployment and placement strategy for the decoy network resource.
 * Personnel responsible for creation of decoy networks should consider the potential for resource exhaustion through denial of service attacks.
 
 ## Examples
@@ -30036,16 +30140,17 @@ A &quot;honeypot&quot; may serve a variety of decoy network resources.
         <rdfs:label>Decoy Object</rdfs:label>
         <kb-article>## Technique Overview
 Decoy objects are typically configured with detectable means of communication but do not have any legitimate business purpose. Any communication via or to these objects should be logged and analyzed to find potential indicators of compromise for a possible past or future attack against other systems.</kb-article>
+        <synonym>Lure</synonym>
         <definition>A Decoy Object is created and deployed for the purposes of deceiving attackers.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyPersona">
-        <definition>Establishing a fake online identity to misdirect, deceive, and or interact with adversaries.</definition>
         <kb-article>## How it works
 A false online identity is created for the purposes of interacting with adversaries in a direct or indirect manner. This includes the associated email addresses, social media accounts, and other online communication profiles.
 
 ## Considerations
 * Include phone numbers and online social profiles as well as automatically or manually responding to contact made to the persona to improve realism.
 * Continuous updating and managing the decoy personas and online activity streams to ensure personas do not become stale and outdated.</kb-article>
+        <definition>Establishing a fake online identity to misdirect, deceive, and or interact with adversaries.</definition>
         <rdfs:label>Decoy Persona</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyPublicRelease">
@@ -30072,7 +30177,6 @@ Usage of decoy session tokens may be monitored to track attacker behavior or oth
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyUserCredential">
         <rdfs:label>Decoy User Credential</rdfs:label>
-        <definition>A Credential created for the purpose of deceiving an adversary.</definition>
         <kb-article>## How it works
 A detection analytic is developed to determine when a user uses decoy credentials. Subsequent actions by that user may be monitored or controlled by the defender.
 
@@ -30083,6 +30187,7 @@ A credential may be:
 ## Considerations
 * Decoy credentials should be integrated with a larger decoy environment to ensure that when decoy credentials are compromised, the credentials are used to interact with a decoy asset that is being monitored.
 * Continuous maintenance and updates are needed to ensure the legitimacy of the larger decoy environment and specifically the assets that utilize the decoy credentials.</kb-article>
+        <definition>A Credential created for the purpose of deceiving an adversary.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DefaultUserAccount">
         <rdfs:comment>Default accounts are those that are built-into an OS, such as the Guest or Administrator accounts on Windows systems or default factory/provider set accounts on other types of systems, software, or devices.</rdfs:comment>
@@ -30142,8 +30247,8 @@ A credential may be:
         <rdfs:label>Display Adapter</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Video_card"/>
         <skos:altLabel>Display Card</skos:altLabel>
-        <skos:altLabel>Graphics Adapter</skos:altLabel>
         <rdfs:comment>A graphics card (also called a display card, video card, display adapter, or graphics adapter) is an expansion card which generates a feed of output images to a display device (such as a computer monitor). Frequently, these are advertised as discrete or dedicated graphics cards, emphasizing the distinction between these and integrated graphics. At the core of both is the graphics processing unit (GPU), which is the main part that does the actual computations, but should not be confused with the video card as a whole, although &quot;GPU&quot; is often used to refer to video cards.</rdfs:comment>
+        <skos:altLabel>Graphics Adapter</skos:altLabel>
         <skos:altLabel>Video Card</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayDeviceDriver">
@@ -30155,8 +30260,8 @@ A credential may be:
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Display_server"/>
         <rdfs:comment>A display server or window server is a program whose primary task is to coordinate the input and output of its clients to and from the rest of the operating system, the hardware, and each other. The display server communicates with its clients over the display server protocol, a communications protocol, which can be network-transparent or simply network-capable. The display server is a key component in any graphical user interface, specifically the windowing system.</rdfs:comment>
-        <skos:altLabel>Window Server</skos:altLabel>
         <rdfs:label>Display Server</rdfs:label>
+        <skos:altLabel>Window Server</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DocumentFile">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Document"/>
@@ -30189,12 +30294,13 @@ A credential may be:
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DriverLoadIntegrityChecking">
         <definition>Ensuring the integrity of drivers loaded during initialization of the operating system.</definition>
+        <rdfs:label>Driver Load Integrity Checking</rdfs:label>
         <kb-article>## How it works
 This technique can be accomplished in a number of ways:
 
 * A kernel level security agent installed on a host machine ensures that the driver associated with the agent is first in the initialization order. A dependent DLL associated with the driver is configured to be processed before other dependent DLLs and executes a number of operations to ensure the driver associated with the security agent is initialized first.
 
-* Kernel components can be signed by a certificate obtained by a third party to verify the source of the component and whether it has been modified. When signed, the component will include a signature block implemented as a hash value of the component header and can also include a certificate chain. The signature and certificate data are typically added before the kernel component is distributed to the public. 
+* Kernel components can be signed by a certificate obtained by a third party to verify the source of the component and whether it has been modified. When signed, the component will include a signature block implemented as a hash value of the component header and can also include a certificate chain. The signature and certificate data are typically added before the kernel component is distributed to the public.
 
 
 ## Considerations
@@ -30206,11 +30312,10 @@ This technique can be accomplished in a number of ways:
 * It may not be difficult for an attacker to start an organization which can obtain a signed certificate.
 
 * A root certificate authority (CA) whose certificate is trusted in the verification logic could generate incorrect certificates, if they are lax or have ulterior motives.</kb-article>
-        <rdfs:label>Driver Load Integrity Checking</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis">
-        <rdfs:label>Dynamic Analysis</rdfs:label>
         <definition>Executing or opening a file in a synthetic &quot;sandbox&quot; environment to determine if the file is a malicious program or if the file exploits another program such as a document reader.</definition>
+        <rdfs:label>Dynamic Analysis</rdfs:label>
         <synonym>Malware Sandbox</synonym>
         <kb-article>## How it works
 Analyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.
@@ -30218,7 +30323,7 @@ Analyzing the interaction of a piece of code with a system while the code is bei
 ## Considerations
  * Malware often detects a fake environment, then changes its behavior accordingly. For example, it could detect that the system clock is being sped up in an effort to get it to execute commands that it would normally only execute at a later time, or that the hardware manufacturer of the machine is a virtualization provider.
  * Malware can attempt to determine if it is being debugged, and change its behavior accordingly.
- * For maximum fidelity, the simulated and real environments should be as similar as possible because the malware could perform differently in different environments.  
+ * For maximum fidelity, the simulated and real environments should be as similar as possible because the malware could perform differently in different environments.
  * Sometimes the malware behavior is triggered only under certain conditions (on a specific system date, after a certain time, or after it is sent a specific command) and can&apos;t be detected through a short execution in a virtual environment.
 
 ## Implementations
@@ -30240,8 +30345,8 @@ Analyzing the interaction of a piece of code with a system while the code is bei
         <rdfs:label>Email Rule</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#EmulatedFileAnalysis">
-        <definition>Emulating instructions in a file looking for specific patterns.</definition>
         <rdfs:label>Emulated File Analysis</rdfs:label>
+        <definition>Emulating instructions in a file looking for specific patterns.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Enclave">
         <rdfs:label>Enclave</rdfs:label>
@@ -30259,16 +30364,16 @@ Analyzing the interaction of a piece of code with a system while the code is bei
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#EndpointHealthBeacon">
         <definition>Monitoring the security status of an endpoint by sending periodic messages with health status, where absence of a response may indicate that the endpoint has been compromised.</definition>
+        <synonym>Endpoint Health Telemetry</synonym>
+        <rdfs:label>Endpoint Health Beacon</rdfs:label>
         <kb-article>## How it works
-Endpoints are configured to periodically generate and transmit a secure heartbeat that is delivered on a configured schedule and provides endpoint status information. Status information can include software details (version, configuration, etc), endpoint identification (MAC, IP address, machine ID) or other hardware/software configuration information. Interruption of the heartbeat can signal that the endpoint has been compromised. 
+Endpoints are configured to periodically generate and transmit a secure heartbeat that is delivered on a configured schedule and provides endpoint status information. Status information can include software details (version, configuration, etc), endpoint identification (MAC, IP address, machine ID) or other hardware/software configuration information. Interruption of the heartbeat can signal that the endpoint has been compromised.
 
 ## Considerations
 * Security of heartbeat messages to ensure message integrity
 * Disappearance of the heartbeat could simply mean that the endpoint is powered off or intentionally disconnected from the network. Therefore other criteria may need to be used to accurately detect endpoint compromise.
 * Attacker presence on the machine may leave the heartbeat intact.
 * An attacker may determine the format of the heartbeat and continue to send it even after the machine is compromised.</kb-article>
-        <synonym>Endpoint Health Telemetry</synonym>
-        <rdfs:label>Endpoint Health Beacon</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#EndpointSensor">
         <rdfs:label>Endpoint Sensor</rdfs:label>
@@ -30296,7 +30401,7 @@ A buffer overflow can overwrite the saved return pointer with an invalid locatio
 With Process Exception Handler Validation, before the handler is called, it checks the exception handler against a source of valid exception handlers.  If the requested handler is not in this list, other techniques such as those in Process Eviction might be invoked, such as Process Termination to end the current process, or Executable Blacklisting to blacklist the potentially vulnerable or malfunctioning executable.
 
 ### Runtime valid exception handler source generation
-The source of valid exception handlers could be generated at runtime, with the risk of the information that is used to determine the validity of exception handlers being compromised.  
+The source of valid exception handlers could be generated at runtime, with the risk of the information that is used to determine the validity of exception handlers being compromised.
 
 ### Compile-time
 The source of valid exception handlers could also be generated at compile time or as a binary patch.  Given the source code, it would be rather straightforward to find the exceptions, as they are pointed in the catch statement of a try-catch clause and the compiler must already generate the code to call exceptions from this.
@@ -30313,9 +30418,11 @@ SafeSEH might be applied only to some executable files or modules, allowing an a
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting">
         <rdfs:label>Executable Allowlisting</rdfs:label>
+        <synonym>File Signature Authentication</synonym>
+        <definition>Using a digital signature to authenticate a file before opening.</definition>
         <kb-article>## How it works
 
-This technique is generic and there are numerous ways to compute and authenticate digital signatures. 
+This technique is generic and there are numerous ways to compute and authenticate digital signatures.
 A digital certificate is generated from a private/public key pair issued by a certificate authority (CA). A hash of the file is encrypted using the private key. When the file is downloaded by another user, the user&apos;s system uses the public key to decrypt the hash and a new hash is created of the downloaded file. The hash decrypted by the public key is compared to the new hash and if there is a mismatch, further techniques, such as file deletion, file quarantine, or **Executable Blacklisting** may be invoked.
 
 This technique may be invoked when deciding whether to execute a file.
@@ -30323,8 +30430,6 @@ This technique may be invoked when deciding whether to execute a file.
 ## Considerations
 
 Organizations which download or create high volumes of software make management complex, in particular engineering or scientific organizations.</kb-article>
-        <synonym>File Signature Authentication</synonym>
-        <definition>Using a digital signature to authenticate a file before opening.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableBinary">
         <rdfs:label>Executable Binary</rdfs:label>
@@ -30332,6 +30437,9 @@ Organizations which download or create high volumes of software make management 
         <rdfs:comment>An executable binary contains machine code instructions for a physical CPU. D3FEND also considers byte code for a virtual machine to be binary code.  This is in contrast to executable scripts written in a scripting language.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting">
+        <synonym>Executable Blacklisting</synonym>
+        <definition>Blocking the execution of files on a host in accordance with defined application policy rules.</definition>
+        <rdfs:label>Executable Denylisting</rdfs:label>
         <kb-article>## How it works
 
 #### Criteria
@@ -30361,20 +30469,17 @@ System administrators will customize the rules for the given environment.
 
 #### Backend
 
-The policy-enforcing program may work by running in kernel mode, and [intercepting] [system calls which execute a process]. 
+The policy-enforcing program may work by running in kernel mode, and [intercepting] [system calls which execute a process].
 
 ## Considerations
 
 * If denylisting is done by filename, filepath, or hash, these mechanisms may be a worthy first line of defense and detection, but could still be evaded by an attacker.
 * Continuous management is needed to keep the denylist up to date, whether it is based on hash, publisher, behavior, or any other digital artifact.
-* Although denylists based on attributes such as file path and virus scan could defend against some threats which they have not been explicitly coded to block, denylists may not provide protection from new, unknown, or zero day attacks. 
+* Although denylists based on attributes such as file path and virus scan could defend against some threats which they have not been explicitly coded to block, denylists may not provide protection from new, unknown, or zero day attacks.
 
 
 ## Examples
 On a Windows machine the Windows Defender Application Control (WDAC) policy enforcement is run in the kernel and allows for restricting applications.</kb-article>
-        <synonym>Executable Blacklisting</synonym>
-        <definition>Blocking the execution of files on a host in accordance with defined application policy rules.</definition>
-        <rdfs:label>Executable Denylisting</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Executable"/>
@@ -30410,12 +30515,12 @@ On a Windows machine the Windows Defender Application Control (WDAC) policy enfo
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileAccessPatternAnalysis">
         <rdfs:label>File Access Pattern Analysis</rdfs:label>
+        <definition>Analyzing the way a process accesses local files to identify unauthorized activity.</definition>
         <kb-article>## How it works
 File modifying malware such as wipers and ransomware are detected by identifying file access patterns that are associated with a malicious process. Examples of file access patterns include accessing a large number of files, accessing multiple file types, files being accessed located in multiple locations in a directory, and copying a file and encrypting the contents of that file into a copy.
 
 ## Considerations
 Certain file access actions may not be statistically different from authorized activity.</kb-article>
-        <definition>Analyzing the files accessed by a process to identify unauthorized activity.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis">
         <rdfs:label>File Analysis</rdfs:label>
@@ -30435,15 +30540,13 @@ Protocol stream reassembly software recreates a directional byte stream by analy
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentRules">
         <synonym>File Signatures</synonym>
-        <synonym>File Content Signatures</synonym>
-        <definition>Employing a pattern matching rule language to analyze files.</definition>
         <kb-article>## How it works
 Rules, often called signatures, are used for both generic and targeted malware detection. The rules are usually expressed in a domain specific language (DSL), then deployed to software that scans files for matches. The rules are developed and broadly distributed by commercial vendors, or they are developed and deployed by enterprise security teams to address highly targeted or custom malware. Conceptually, there are public and private rule sets. Both leverage the same technology, but they are intended to detect different types of cyber adversaries.
 
 ## Considerations
-* Patterns expressed in the DSLs range in their complexity. Some scanning engines support file parsing and normalization for high fidelity matching, others support only simple regular expression matching against raw file data. Engineers must make a trade-off in terms of: 
-     * The fidelity of the matching capabilities in order to balance high recall with avoiding false positives, 
-     * The computational load for scanning, and 
+* Patterns expressed in the DSLs range in their complexity. Some scanning engines support file parsing and normalization for high fidelity matching, others support only simple regular expression matching against raw file data. Engineers must make a trade-off in terms of:
+     * The fidelity of the matching capabilities in order to balance high recall with avoiding false positives,
+     * The computational load for scanning, and
      * The resilience of the engine to deal with adversarial content presented in different forms-- content which in some cases is designed to exploit or defeat the scanning engines.
  * Signature libraries can become large over time and impact scanning performance.
  * Some vendors who sell signatures have to delete old signatures over time.
@@ -30452,6 +30555,8 @@ Rules, often called signatures, are used for both generic and targeted malware d
 ## Implementations
  * YARA
  * ClamAV</kb-article>
+        <synonym>File Content Signatures</synonym>
+        <definition>Employing a pattern matching rule language to analyze files.</definition>
         <rdfs:label>File Content Rules</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileCreationAnalysis">
@@ -30461,7 +30566,7 @@ Rules, often called signatures, are used for both generic and targeted malware d
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileEncryption">
         <definition>Encrypting a file using a cryptographic key.</definition>
         <kb-article>## How it Works
-Files are encrypted using either a single key for both encryption and decryption or separate keys. Single key encryption is symmetric encryption and using two key distinct keys is asymmetric encryption. 
+Files are encrypted using either a single key for both encryption and decryption or separate keys. Single key encryption is symmetric encryption and using two key distinct keys is asymmetric encryption.
 
 ### Symmetric Cryptography
 Symmetric encryption uses the same cryptographic key for both the encryption and decryption a file. Managing keys at scale sometimes uses asymmetric key exchange protocols such as Diffie-Hellman can be used to share the symmetric cryptographic key with the others.
@@ -30515,22 +30620,22 @@ Performance on large files or very large numbers of files.</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FirmwareBehaviorAnalysis">
         <rdfs:label>Firmware Behavior Analysis</rdfs:label>
+        <definition>Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.</definition>
         <kb-article>## How it works
 Firmware behavior analysis provides protections by ensuring that installed firmware has not been tampered with or modified. Firmware analysis applies to mutable firmware and immutable read-only memory (ROMs).
 
-Firmware in deployed network devices is typically not analyzed and monitored for vulnerabilities and thus is subject to potential attacks. This technique makes use of known and measured behavioral attributes, including timing attributes, of analyzed firmware on deployed devices. 
+Firmware in deployed network devices is typically not analyzed and monitored for vulnerabilities and thus is subject to potential attacks. This technique makes use of known and measured behavioral attributes, including timing attributes, of analyzed firmware on deployed devices.
 
 A behavioral method that employs known timing measurements may use the timing results from a challenge and response protocol to detect the presence of malware in embedded firmware. Firmware device timing measurements are made, specific to the installed device, and are used in the verifying function.
 
-The original firmware image is modified by injecting a monitoring software component into the embedded firmware code. The injected software components will allow for a software root of trust, the challenge and response protocol, to be implement in the firmware. 
+The original firmware image is modified by injecting a monitoring software component into the embedded firmware code. The injected software components will allow for a software root of trust, the challenge and response protocol, to be implement in the firmware.
 
-A challenge-response is issued and includes a nonce so that replays are not allowed. The firmware will calculate a checksum over all of memory, including the nonce, and return the result. The verification system will compare the computed checksum and the time it took for the computation of the checksum to determine if the firmware has been modified. 
+A challenge-response is issued and includes a nonce so that replays are not allowed. The firmware will calculate a checksum over all of memory, including the nonce, and return the result. The verification system will compare the computed checksum and the time it took for the computation of the checksum to determine if the firmware has been modified.
 
 ## Considerations
 * The firmware code will need to be modified to include the behavioral monitoring functionality.
 * This technique is sensitive to the device the embedded firmware is hosted on and it is expected that the devices and firmware will need to be profiled and analyzed to determine timing estimation.
 * This technique is not expected to be one hundred percent correct as you would expect in a hardware root of trust solution and may require some tuning.</kb-article>
-        <definition>Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.</definition>
         <synonym>Firmware Timing Analysis</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FirmwareEmbeddedMonitoringCode">
@@ -30541,7 +30646,7 @@ Firmware in deployed network devices is typically not monitored for malicious ch
 
 The injected software components provide a feature similar to intrusion detection systems for the firmware by detecting unauthorized modifications of the embedded firmware. The integrity of static code and firmware data are monitored continuously in the hosted devices. Comparisons are made to monitored elements like firmware memory addresses and data segments. Memory pages are scanned and if a modification is detected the software component may lock the page. This will protect subsequent attempted modifications to the firmware. The software component may utilize the exception handling code and thus be able to disclose the exact address of the modified memory.
 
-The injected software components are inserted during the firmware imaging process. The injected software is assumed to have knowledge of both the embedded code and the current execution state of the host program. The injected software will monitor and alert, in near real-time, on potential suspicious activity. The injected code is run alongside of the embedded code in the host. The injected software operates as an independent entity and is not dependent on the host software. 
+The injected software components are inserted during the firmware imaging process. The injected software is assumed to have knowledge of both the embedded code and the current execution state of the host program. The injected software will monitor and alert, in near real-time, on potential suspicious activity. The injected code is run alongside of the embedded code in the host. The injected software operates as an independent entity and is not dependent on the host software.
 
 Finally, this technique may implement other countermeasure techniques as part of their analytical processes. These should be identified by referencing other countermeasure techniques directly as necessary.
 
@@ -30554,7 +30659,7 @@ Finally, this technique may implement other countermeasure techniques as part of
 Cryptographic hash values are computed for system and peripheral firmware. The hash values are compared against precomputed hash values for the identified firmware. A hash value mismatch may indicate that the firmware may have been tampered with or updated with a non-current release indicating a misconfiguration for the system.
 
 ## Considerations
-* Requires cryptographically computed hash values of firmware 
+* Requires cryptographically computed hash values of firmware
 * Requires storage of precomputed firmware hash values</kb-article>
         <rdfs:label>Firmware Verification</rdfs:label>
         <definition>Cryptographically verifying firmware integrity.</definition>
@@ -30574,7 +30679,6 @@ Continuous maintenance of unauthorized domain lists is needed to keep up to date
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ForwardResolutionIPDenylisting">
         <rdfs:label>Forward Resolution IP Denylisting</rdfs:label>
         <definition>Blocking a DNS lookup&apos;s answer&apos;s IP address value.</definition>
-        <synonym>Forward Resolution IP Blacklisting</synonym>
         <kb-article>## How it works
 
 This technique prevents a client from learning IP addresses deemed to be potentially malicious, which would have been delivered via forward resolution responses.
@@ -30592,6 +30696,7 @@ The DNS lookup can be blocked by either dropping the network traffic with an inl
 * This technique must be implemented logically between the application that receives the response and the server which sent the response.
   * DNS responses sent in an encrypted manner, such as those using DoH or DoT, will require interception of the TLS connections in order to determine the IP address(es) in the response.
 * Replacing the response is not effective in the case that the nameserver uses a technique to provide integrity of its responses, such as DNSSEC for DNS responses.</kb-article>
+        <synonym>Forward Resolution IP Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemTime">
         <rdfs:comment>A system call that gets the system time.  For POSIX.1 systems, time() invokes a call to get the system time.</rdfs:comment>
@@ -30627,12 +30732,12 @@ Hardware process isolation is commonly implemented through Direct Memory Access 
 
 * DMA - Direct memory access allows memory access to occur independently of the program currently run by the microprocessor. DMA allows for I/O devices to directly read from and write to memory, or it can be used to efficiently copy blocks of memory. During DMA transfers, the microprocessor can execute an unrelated program.
 * MMU - A memory management unit acts as an access control and is responsible for performing the translation of virtual memory addresses to physical memory addresses. The MMU allocates each process its own virtual memory space.
-* IOMMU - An input-output memory management unit is used to allocate each I/O device its own virtual address space to the underlying physical addresses. IOMMU allows devices that do not support long memory addresses to address the entire memory space. 
+* IOMMU - An input-output memory management unit is used to allocate each I/O device its own virtual address space to the underlying physical addresses. IOMMU allows devices that do not support long memory addresses to address the entire memory space.
 
 ## Considerations
 * Private hosts may be vulnerable to DMA attack if they have a PCI or PCI Express port that connects attached devices directly to physical address space.
 
-## Implementations: 
+## Implementations:
  * Intel Virtualization Technology for Directed I/O (Intel VT-d)
  * Firecracker</kb-article>
         <rdfs:label>Hardware-based Process Isolation</rdfs:label>
@@ -30651,8 +30756,9 @@ Hardware process isolation is commonly implemented through Direct Memory Access 
         <rdfs:comment>In computing, a device driver (commonly referred to simply as a driver) is a computer program that operates or controls a particular type of device that is attached to a computer. A driver provides a software interface to hardware devices, enabling operating systems and other computer programs to access hardware functions without needing to know precise details of the hardware being used. A driver communicates with the device through the computer bus or communications subsystem to which the hardware connects. When a calling program invokes a routine in the driver, the driver issues commands to the device. Once the device sends data back to the driver, the driver may invoke routines in the original calling program. Drivers are hardware dependent and operating-system-specific. They usually provide the interrupt handling required for any necessary asynchronous time-dependent hardware interface.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HierarchicalDomainDenylisting">
+        <rdfs:label>Hierarchical Domain Denylisting</rdfs:label>
         <kb-article>## How it works
-This technique is used to block DNS queries from related domains and subdomains that are unauthorized. 
+This technique is used to block DNS queries from related domains and subdomains that are unauthorized.
 
 Hierarchical domain blacklisting considers the blacklisting of second level domains and additional sub-domains and specific hosts for a given query value. A denylist is maintained that contains DNS names and corresponding subdomains, including wildcards, that should be blocked for a given lookup.
 
@@ -30661,7 +30767,6 @@ Hierarchical domain blacklisting considers the blacklisting of second level doma
 * Other domains that resolve to the domain of interest for blocking (CNAME, etc).
 * Denylists should have identified maintenance cycles to ensure lists are not stale.</kb-article>
         <definition>Blocking the resolution of any subdomain of a specified domain name.</definition>
-        <rdfs:label>Hierarchical Domain Denylisting</rdfs:label>
         <synonym>Hierarchical Domain Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HomoglyphDenylisting">
@@ -30679,14 +30784,14 @@ The blacklisted named components also include consideration for fonts or Unicode
         <synonym>Homoglyph Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HomoglyphDetection">
+        <definition>Comparing strings using a variety of techniques to determine if a deceptive or malicious string is being presented to a user.</definition>
+        <rdfs:label>Homoglyph Detection</rdfs:label>
         <kb-article>## How it works
 A homoglyph, in this context, is a deceptive string or word which looks like a trusted word, but is composed of different characters, for example: goooogle.com versus google.com. This is commonly found in phishing and typo squatting attacks where a human exploiting through a social engineering campaign.
 
 ## Considerations
-* In very large environments processing DNS queries can be computationally expensive due to the amount of traffic that is generated 
+* In very large environments processing DNS queries can be computationally expensive due to the amount of traffic that is generated
 * Legitimate companies and products use non-dictionary words in their names that could result in many false positives</kb-article>
-        <definition>Comparing strings using a variety of techniques to determine if a deceptive or malicious string is being presented to a user.</definition>
-        <rdfs:label>Homoglyph Detection</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Host">
         <rdfs:label>Host</rdfs:label>
@@ -30705,6 +30810,7 @@ A homoglyph, in this context, is a deceptive string or word which looks like a t
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Hostname"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#IOPortRestriction">
+        <rdfs:label>IO Port Restriction</rdfs:label>
         <kb-article>## How It works
 
 Software-based restriction uses agent software installed on a computer system. The agent software monitors all IO port system traffic. The agent software is configurable to limit the use of certain devices connected to IO ports. The restriction software can also be configured to limit the access to files and applications on external storage devices connected to IO ports.
@@ -30721,7 +30827,6 @@ Types of restrictions that may be applied:
 ## Considerations
  * Agent software will need to be installed on host systems
  * Configurations for allow/deny for devices and files will need to be maintained</kb-article>
-        <rdfs:label>IO Port Restriction</rdfs:label>
         <definition>Limiting access to computer input/output (IO) ports to restrict unauthorized devices.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#IPCTrafficAnalysis">
@@ -30735,15 +30840,15 @@ IPC can occur within a single computer or between multiple computers remotely th
  * Java RMI API
 
 ## Considerations
-* IPC can generate substantial amounts of data, and it may not be feasible to collect all of it. 
+* IPC can generate substantial amounts of data, and it may not be feasible to collect all of it.
 * IPC may occur over loopback interfaces or direct memory access granted by the operating system.</kb-article>
         <definition>Analyzing standard inter process communication (IPC) protocols to detect deviations from normal protocol activity.</definition>
         <synonym>IPC Analysis</synonym>
         <rdfs:label>IPC Traffic Analysis</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Identifier">
-        <rdfs:label>Identifier</rdfs:label>
         <skos:altLabel>ID</skos:altLabel>
+        <rdfs:label>Identifier</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Identifier"/>
         <rdfs:comment>An identifier is a name that identifies (that is, labels the identity of) either a unique object or a unique class of objects, where the &quot;object&quot; or class may be an idea, physical [countable] object (or class thereof), or physical [noncountable] substance (or class thereof). The abbreviation ID often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification). An identifier may be a word, number, letter, symbol, or any combination of those.</rdfs:comment>
     </rdf:Description>
@@ -30805,7 +30910,7 @@ Scalability as volume of attacks increase; single servers may not have the memor
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#InboundTrafficFiltering">
         <kb-article>## How it works
-Inbound Traffic, in this context, is network traffic originating from an untrusted network towards a private host or enclave. 
+Inbound Traffic, in this context, is network traffic originating from an untrusted network towards a private host or enclave.
 For example:
 
 * An untrusted network host connecting to a internal commercial portal, shopping.example.com
@@ -30845,7 +30950,7 @@ Identification of potential ROP exploit execution includes:
   - The LBR is configured to return only instruction of interest (ret, indirect jmp, indirect calls)
 
 
-- Behavior is analyzed for 
+- Behavior is analyzed for
   - Ret instructions that appear to target areas not preceded by the call sites
   - Sequences of small code fragments that appear to be chained through the indirect branching calls (gadgets)
 
@@ -30875,8 +30980,6 @@ Identification of potential ROP exploit execution includes:
         <rdfs:label>Input Device</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#InputDeviceAnalysis">
-        <rdfs:label>Input Device Analysis</rdfs:label>
-        <definition>Operating system level mechanisms to prevent abusive input device exploitation.</definition>
         <kb-article>## How it works
 
 Input Device Hardening techniques filter certain commands, or disable related operating system functionality.
@@ -30904,7 +31007,7 @@ Context can also include:
 
 Actions can include:
 
-* Disabling the source device 
+* Disabling the source device
 * Sending an alert
 * Locking the current session (eg. system screen lock, or returning to an authentication screen in a web app) and requiring one or more methods of authentication to continue
 * Administratively disabling credentials for the account or the entire account -- the technique *Account Locking*
@@ -30919,12 +31022,14 @@ A system receives key press events from two different devices -- one device send
 
 A system receives physical input in a user session, while that user has sent input from a device located out of the country in the past hour.
 
-Network traffic is suddenly routed through a new external device, and nearly the same volume of network traffic is subsequently sent out the previously existing interface.  The new external device is disabled, and an alert is raised to investigate the network configuration for a potential compromise. 
+Network traffic is suddenly routed through a new external device, and nearly the same volume of network traffic is subsequently sent out the previously existing interface.  The new external device is disabled, and an alert is raised to investigate the network configuration for a potential compromise.
 
 
 ## Considerations
 
 Given some example of legitimate behavioral input patterns, attackers could mimic those input patterns, a technique which has been used in popular culture in the creation of Deepfake videos and [This Person Does Not Exist](https://thispersondoesnotexist.com).</kb-article>
+        <rdfs:label>Input Device Analysis</rdfs:label>
+        <definition>Operating system level mechanisms to prevent abusive input device exploitation.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#IntegratedHoneynet">
         <rdfs:label>Integrated Honeynet</rdfs:label>
@@ -30972,8 +31077,8 @@ If an attacker manages to stop the processes used to log an attack without setti
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetMulticastNetworkTraffic">
         <rdfs:comment>Intranet IPC network traffic is multicast network traffic that does not cross a given network&apos;s boundaries.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Multicast"/>
         <rdfs:label>Intranet Multicast Network Traffic</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Multicast"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetNetwork">
         <rdfs:comment>An intranet is a private network accessible only to an organization&apos;s staff or delegates. Generally a wide range of information and services from the organization&apos;s internal IT systems are available that would not be available to the public from the Internet. A company-wide intranet can constitute an important focal point of internal communication and collaboration, and provide a single starting point to access internal and external resources. In its simplest form an intranet is established with the technologies for local area networks (LANs) and wide area networks (WANs).</rdfs:comment>
@@ -31007,9 +31112,9 @@ Potential for false positives from anomalies that are not associated with malici
         <definition>Detecting anomalies in user access patterns by comparing user access activity to behavioral profiles that categorize users by role such as job title, function, department.</definition>
         <rdfs:label>Job Function Access Pattern Analysis</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTIcket">
-        <rdfs:comment>An access ticket/token issued by a Kerberos system.</rdfs:comment>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicket">
         <rdfs:label>Kerberos TIcket</rdfs:label>
+        <rdfs:comment>An access ticket/token issued by a Kerberos system.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KerberosTicketGrantingTicket">
         <rdfs:comment>A ticket granting ticket issued by a Kerberos system; that is, a ticket that grants a user domain admin access.</rdfs:comment>
@@ -31045,8 +31150,8 @@ Most current Unix-like systems and Microsoft Windows support loadable kernel mod
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Computer_keyboard"/>
         <skos:altLabel>Computer Keyboard</skos:altLabel>
         <rdfs:label>Keyboard Input Device</rdfs:label>
-        <skos:altLabel>Keyboard</skos:altLabel>
         <rdfs:comment>A computer keyboard is a typewriter-style device which uses an arrangement of buttons or keys to act as mechanical levers or electronic switches. Following the decline of punch cards and paper tape, interaction via teleprinter-style keyboards became the main input method for computers. A keyboard is also used to give commands to the operating system of a computer, such as Windows&apos; Control-Alt-Delete combination. Although on Pre-Windows 95 Microsoft operating systems this forced a re-boot, now it brings up a system security options screen.</rdfs:comment>
+        <skos:altLabel>Keyboard</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement">
         <rdfs:label>Lateral Movement</rdfs:label>
@@ -31117,8 +31222,8 @@ Many operating systems, software frameworks and programs include a logging syste
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MacOSKeychain">
         <rdfs:comment>Keychain is the password management system in macOS, developed by Apple. It was introduced with Mac OS 8.6, and has been included in all subsequent versions of the operating system, now known as macOS. A Keychain can contain various types of data: passwords (for websites, FTP servers, SSH accounts, network shares, wireless networks, groupware applications, encrypted disk images), private keys, certificates, and secure notes.</rdfs:comment>
-        <rdfs:label>MacOS Keychain</rdfs:label>
         <skos:altLabel>Keychain</skos:altLabel>
+        <rdfs:label>MacOS Keychain</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Keychain_(software)"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MailNetworkTraffic">
@@ -31126,8 +31231,8 @@ Many operating systems, software frameworks and programs include a logging syste
         <rdfs:label>Mail Network Traffic</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer">
-        <rdfs:label>Mail Server</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Message_transfer_agent"/>
+        <rdfs:label>Mail Server</rdfs:label>
         <skos:altLabel>MX Host</skos:altLabel>
         <rdfs:comment>Within the Internet email system, a message transfer agent or mail transfer agent (MTA) or mail relay is software that transfers electronic mail messages from one computer to another using SMTP. The terms mail server, mail exchanger, and MX host are also used in some contexts. Messages exchanged across networks are passed between mail servers, including any attached data files (such as images, multimedia or documents). These servers also often keep mailboxes for email. Access to this email by end users is typically either via webmail or an email client.</rdfs:comment>
         <skos:altLabel>Mail Exchanger</skos:altLabel>
@@ -31140,20 +31245,20 @@ Many operating systems, software frameworks and programs include a logging syste
         <kb-article>## How it works
 Mandatory access control is a non-discretionary access control system because the rules and polices that determine access is determined by a security control authority and not distributed to local users. Access determinations are based on designed access control polices and are not based on local resource owner determinations.
 
-Access is typically granted by defining sets of subjects and sets of objects. Subjects are the entities requesting access and objects are the resources that subjects are trying to access. Rules and policies are defined that associate subjects and object permissions and access controls. 
+Access is typically granted by defining sets of subjects and sets of objects. Subjects are the entities requesting access and objects are the resources that subjects are trying to access. Rules and policies are defined that associate subjects and object permissions and access controls.
 
 ### Common MAC implementations
 #### Security label access control
-A fine-grained form of mandatory access control is to apply security labels to individual resources, including processes, and the access control decisions are against a particular resource and a given user attempting to gain access. This type of MAC requires that the file system has built-in support for security labels. 
+A fine-grained form of mandatory access control is to apply security labels to individual resources, including processes, and the access control decisions are against a particular resource and a given user attempting to gain access. This type of MAC requires that the file system has built-in support for security labels.
 
-Access controls are typically implemented through the use of label identifiers for every file system object. Identifier labels are applied to resources and users are assigned a similar access identifier. Users attempting to access a resource will result in the operating system performing an access control check. The access control check will compare the assigned user&apos;s credentials to that of the resource or object they are attempting to access. 
+Access controls are typically implemented through the use of label identifiers for every file system object. Identifier labels are applied to resources and users are assigned a similar access identifier. Users attempting to access a resource will result in the operating system performing an access control check. The access control check will compare the assigned user&apos;s credentials to that of the resource or object they are attempting to access.
 
 A security context is associated with resources and is used to determine assess. Typical basic access control elements include users, roles and types and together they form a security context which is the basis for the security labels.
 
 This type of access control is what is employed in SELinux [2]. This form of MAC is considered the most flexible implementation, but it also is the most complex to deploy across the enterprise. Where multiple virtual machines (VM) are run together this type of access control is typically employed to ensure true isolation of processes and VMs.
 
 #### File path level controls
-A less fine-grained form of mandatory access control is to apply security labels that allow for access control at the file path level.  Access control is filesystem agnostic and no relabeling of resources is required. Pathname access control usually seems more natural for implementation and corresponding access audits. 
+A less fine-grained form of mandatory access control is to apply security labels that allow for access control at the file path level.  Access control is filesystem agnostic and no relabeling of resources is required. Pathname access control usually seems more natural for implementation and corresponding access audits.
 
 This type of MAC is what is employed in AppArmor [3]. AppArmor was developed to provide a simpler alternative MAC method with much less management overhead. A simple access policy is maintained that defines path resource access rules. Access control attributes are typically associated with programs instead of users.
 
@@ -31205,7 +31310,7 @@ Emails and messages are also complex data structures. They contain files and lin
 Digital signatures are used to verifying a message is from the expected sender. In email, Secure/Multipurpose Internet Mail Extensions (S/MIME) protocol is typically used to digitally sign messages. A hash value of the sender&apos;s message is created and encrypted with the sender&apos;s private key to create a digital signature. The message and the digital signature are sent to the recipient where the sender&apos;s public key is used to decrypt the digital signature and compute the hash of the message. The computed hash is compared with the hash from the received message, and any difference in the hash values signify the message did not originate from the sender and has been alerted in transit.
 
 ### Message Authentication Code (MAC)
-MAC is a fixed size string that is appended to a message to provide message authentication and integrity. The sender MAC signing algorithm takes as input a secret symmetric key shared between sender and recipient and the message to calculate a short tag that is appended to the message. The recipient receives the message with the appended tag, and a MAC verification algorithm is run using the symmetric key to verify the message came from the stated sender and ensure the message has not been tampered with. 
+MAC is a fixed size string that is appended to a message to provide message authentication and integrity. The sender MAC signing algorithm takes as input a secret symmetric key shared between sender and recipient and the message to calculate a short tag that is appended to the message. The recipient receives the message with the appended tag, and a MAC verification algorithm is run using the symmetric key to verify the message came from the stated sender and ensure the message has not been tampered with.
 
 ## Considerations
 - Public keys associated with digital signatures should be verified by a Certification Authority (CA) to prevent impersonation. The CA verifies the owner of a public key and puts the sender&apos;s identity and public key into a certificate that is signed by the CA.
@@ -31400,8 +31505,8 @@ Additionally, after the code file is printed, it could be recovered from the sys
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemLogFile">
         <rdfs:label>Operating System Log File</rdfs:label>
-        <rdfs:comment>An operating system log file records events that occur in an operating system</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Log_file"/>
+        <rdfs:comment>An operating system log file records events that occur in an operating system</rdfs:comment>
         <rdfs:seeAlso>Log File</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemMonitoring">
@@ -31483,7 +31588,7 @@ Operating System Monitoring Techniques have varied implementations including bui
         <kb-article>## How it works
 
 Outbound traffic, in this context, is network traffic originating from a private host or enclave destined towards untrusted networks.
-For example: 
+For example:
 
 * An enterprise desktop intranet user connecting to www.example.com
 * An internal mail server connecting to an external mail server, mail.example.com
@@ -31499,7 +31604,7 @@ There are various strategies for developing filtering rulesets:
 
 ## Considerations
 * Dynamic IP assignment creates challenges for Outbound Traffic Filtering because users are not necessarily associated with the same IP address. This can be addressed by linking IP address management information with the filtering logic.
-* Connections using non-standard transport layer ports may circumvent outbound traffic filtering technology which does not detect application protocol based on traffic content. 
+* Connections using non-standard transport layer ports may circumvent outbound traffic filtering technology which does not detect application protocol based on traffic content.
 * Business requirements typically drive the development of filtering rule sets.
 
 ## Implementations
@@ -31527,6 +31632,8 @@ There are various strategies for developing filtering rulesets:
         <rdfs:comment>A partition is a fixed-size subset of a storage device which is treated as a unit by the operating system. A partition table is a table maintained on the storage device by the operating system describing the partitions on that device. The terms partition table and partition map are most commonly associated with the MBR partition table of a Master Boot Record (MBR) in IBM PC compatibles, but it may be used generically to refer to other &quot;formats&quot; that divide a disk drive into partitions, such as: GUID Partition Table (GPT), Apple partition map (APM), or BSD disklabel.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PassiveCertificateAnalysis">
+        <definition>Collecting host certificates from network traffic or other passive sources like a certificate transparency log and analyzing them for unauthorized activity.</definition>
+        <rdfs:label>Passive Certificate Analysis</rdfs:label>
         <kb-article>## How it works
 Certificates are analyzed outside of a TLS server connection using third-party secure update logs, domain name analysis and analytics.
 
@@ -31543,7 +31650,7 @@ Certificate monitoring, of the logs, is typically done by the CA and they watch 
 Log integrity is verified by log auditors. Auditors make use of log proofs are used to validate the cryptographic hashes (Merkle Trees) that the log employs are consistent. In order to ensure consistency throughout multiple monitors and auditors, sharing a common logging service, gossip protocol is employed.
 
 ### Phishing domain name analysis
-* A curated corpus of known benign domains and phishing domain names is used as training text for machine learning. Through the use of feature set extraction, vectors labels are created with scoring to indicated if they are considered benign or phishing domains. 
+* A curated corpus of known benign domains and phishing domain names is used as training text for machine learning. Through the use of feature set extraction, vectors labels are created with scoring to indicated if they are considered benign or phishing domains.
 
 * A stream of new or updated SSL certificates with fully qualified domain names (FQDN) is analyzed against the feature vectors and a predictive model determines a score for the domains. The scoring considers distance measures such as Levenshtein distance to help in determining the final label score. Supervised learning is also employed using the curated domains of benign and phishing domains.
 
@@ -31552,12 +31659,10 @@ Log integrity is verified by log auditors. Auditors make use of log proofs are u
 ## Considerations
 * Some entity will need to run the logging service and a trusted entity is preferred.
 * Certificate Authorities will likely need to monitor the logging service for consistency.
-* Certificate revocation is unchanged and remains outside of Certificate Transparency, but certificates needing to be revoked are visible. 
+* Certificate revocation is unchanged and remains outside of Certificate Transparency, but certificates needing to be revoked are visible.
 * Technique dependent of reliable feed of new and updated certificates
 * Some certificate authorities allow for certificates to be registered with wildcards in the FQDN and thus will fail some of the subdomain scoring
 * Phishing HTTP domains will not be discovered</kb-article>
-        <definition>Collecting host certificates from network traffic or other passive sources like a certificate transparency log and analyzing them for unauthorized activity.</definition>
-        <rdfs:label>Passive Certificate Analysis</rdfs:label>
         <rdfs:comment>Passively collecting certificates and analyzing them.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Password">
@@ -31581,7 +31686,7 @@ Log integrity is verified by log auditors. Auditors make use of log proofs are u
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PerHostDownload-UploadRatioAnalysis">
         <definition>Detecting anomalies that indicate malicious activity by comparing the amount of data downloaded versus data uploaded by a host.</definition>
         <kb-article>## How it works
-Aggregate pull vs. push ratios from metadata are used to develop a baseline for a given host over a specific time period, e.g., over a three-hour period, one day, one week, etc. Anomalies identified over a threshold produce an alert. 
+Aggregate pull vs. push ratios from metadata are used to develop a baseline for a given host over a specific time period, e.g., over a three-hour period, one day, one week, etc. Anomalies identified over a threshold produce an alert.
 
 ## Considerations
 Collection and analysis of large network packet captures requires large storage and intensive computing power. The time windows used to calculate the ratio may vary in implementations, this consideration should take into account a threat model and likely effects (impacts) delivered by an adversary.</kb-article>
@@ -31597,7 +31702,7 @@ Collection and analysis of large network packet captures requires large storage 
         <kb-article># How it works
 Peripherial firmware is collected and  analyzed on a host either periodically or on demand. This information may be collected for future comparisons.
 
-Changes in firmware hash values may indicate that the firmware has been tampered with or that firmware images are not maintained to current baselined versions, or even known vulnerable versions are deployed. 
+Changes in firmware hash values may indicate that the firmware has been tampered with or that firmware images are not maintained to current baselined versions, or even known vulnerable versions are deployed.
 
 ## Considerations
 * Trust baselines will need to be generated for specific devices
@@ -31654,9 +31759,10 @@ Monitored platform components includes system files and embedded devices such as
         <rdfs:label>Pointer</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PointerAuthentication">
+        <definition>Comparing the cryptographic hash or derivative of a pointer&apos;s value to an expected value.</definition>
         <kb-article>## How It Works
 
-Pointer Authentication (frequently referred to as PAC, although the technique is properly Pointer Authentication) is a security feature to provide protection against attackers with memory read/write access.  A Pointer Authentication Code (PAC) is a cryptographic hash or derivative computed on the value of a pointer and some additional context information which can then provide a cryptographically strong guarantee about the likelihood that a pointer has been tampered with by an attacker. 
+Pointer Authentication (frequently referred to as PAC, although the technique is properly Pointer Authentication) is a security feature to provide protection against attackers with memory read/write access.  A Pointer Authentication Code (PAC) is a cryptographic hash or derivative computed on the value of a pointer and some additional context information which can then provide a cryptographically strong guarantee about the likelihood that a pointer has been tampered with by an attacker.
 
 Although pointers are 64 bits, most systems have a substantially smaller virtual address space, leaving unused bits in pointers that can store the value of the PAC, this can be done to reduce memory space requirements. One implementation is in ARMv8.3-A.  A PAC is computed over the 64-bit pointer value and a 64-bit context value.  Instructions are introduced to deal with pointers: one category to compute and insert the PAC into a pointer, another category to verify the pointer and invalidate the pointer if the PAC does not check, and a third category to remove the pointer and restore the original value without verifying.
 
@@ -31668,7 +31774,6 @@ In the ARM implementation, the mechanisms above for manipulating PACS are provid
 
 
 A known potential limitation of PACs concerns signing gadgets. Under certain circumstances PACs can be bypassed by forcing the system to run a signing gadget which will allow the signing of arbitrary pointers to occur.</kb-article>
-        <definition>Comparing the cryptographic hash or derivative of a pointer&apos;s value to an expected value.</definition>
         <rdfs:label>Pointer Authentication</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PowerShellProfileScript">
@@ -31706,7 +31811,7 @@ A known potential limitation of PACs concerns signing gadgets. Under certain cir
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessCodeSegmentVerification">
         <rdfs:label>Process Code Segment Verification</rdfs:label>
         <kb-article>## How it works
-A process code segment is an executable portion of computer memory allocated to a particular process. Process Code Segment Verification implements verification to compare a process code segment to some expected value. 
+A process code segment is an executable portion of computer memory allocated to a particular process. Process Code Segment Verification implements verification to compare a process code segment to some expected value.
 
 ### Verification logic
 Verification can occur during application startup, or continuously during execution. The logic which verifies the process code may be separate in a third-party process, embedded in the application itself at compile time, or dynamically linked at runtime.
@@ -31746,8 +31851,8 @@ False negatives can occur via alteration of the verification logic or source of 
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessEnvironmentVariable">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Environment_variable"/>
-        <rdfs:label>Process Environment Variable</rdfs:label>
         <rdfs:comment>An environment variable is a dynamic-named value that can affect the way running processes will behave on a computer. They are part of the environment in which a process runs.</rdfs:comment>
+        <rdfs:label>Process Environment Variable</rdfs:label>
         <skos:altLabel>Environment Variable</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessEviction">
@@ -31761,8 +31866,10 @@ False negatives can occur via alteration of the verification logic or source of 
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis">
         <definition>Identification of suspicious processes executing on an end-point device by examining the ancestry and siblings of a process, and the associated metadata of each node on the tree, such as process execution, duration, and order relative to siblings and ancestors.</definition>
+        <synonym>Process Tree Analysis</synonym>
+        <rdfs:label>Process Lineage Analysis</rdfs:label>
         <kb-article>## How it works
-Process tree analysis techniques gather information on how a process was initiated to determine if a process is malicious. For example, if a process was not initiated from boot or not initiated by another process, that process is identified as suspicious. Also, if a new process was started before a process initiated by the device (ex. during boot) and that new process was not initiated by a user (which can be determined by examining process parameters such as type of process, its creator, source, etc.) the process is identified as suspicious. 
+Process tree analysis techniques gather information on how a process was initiated to determine if a process is malicious. For example, if a process was not initiated from boot or not initiated by another process, that process is identified as suspicious. Also, if a new process was started before a process initiated by the device (ex. during boot) and that new process was not initiated by a user (which can be determined by examining process parameters such as type of process, its creator, source, etc.) the process is identified as suspicious.
 
 For example, Microsoft Word may block execution of any subprocess that is not in an approved path.
 
@@ -31770,8 +31877,6 @@ For example, Microsoft Word may block execution of any subprocess that is not in
 * Attackers may spoof the parent PID (https://attack.mitre.org/techniques/T1502/), rendering such after-the-fact analysis on process lineage ineffective.
 * Processes may hide from various means of detection; an example on Linux is where a rootkit might remove key files for the process from its directory in /proc.
 * Zombie processes.</kb-article>
-        <synonym>Process Tree Analysis</synonym>
-        <rdfs:label>Process Lineage Analysis</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSegment">
         <rdfs:label>Process Segment</rdfs:label>
@@ -31800,8 +31905,8 @@ Different implementations of this defense have been in place since the 1980s, bu
 ROP or ret2libc/return-to-function attacks could bypass this defense, as although they may pass attacker-controlled data or stack frames to a function, they abuse functions that are legitimately located in the .text segment (code segment) of the program.  For those, more advanced defenses such as a table of valid jump addresses, function call analysis, or return depth analysis could be used.</kb-article>
         <synonym>No Execute</synonym>
         <rdfs:label>Process Segment Execution Prevention</rdfs:label>
-        <synonym>Execute Disable</synonym>
         <definition>Preventing execution of any address in a memory region other than the code segment.</definition>
+        <synonym>Execute Disable</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSelf-ModificationDetection">
         <rdfs:label>Process Self-Modification Detection</rdfs:label>
@@ -31818,9 +31923,8 @@ A security agent installed on the host machine intercepts API calls between a pr
 Comparing loaded code segments of processes with what is expected to have been loaded from a file can result in false positives, due to legitimate uses of self-modification for decrypting or uncompressing code segments.</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSpawnAnalysis">
-        <definition>Analyzing spawn arguments or attributes of a process to detect processes that are unauthorized.</definition>
         <kb-article>## How it works
-Process attributes are established when an operating system spawns a new process. These attributes are analyzed to look for the presence or absence of specific values or patterns. 
+Process attributes are established when an operating system spawns a new process. These attributes are analyzed to look for the presence or absence of specific values or patterns.
 
 Some attributes of interest are:
  - user
@@ -31835,6 +31939,7 @@ Some attributes of interest are:
  - Location: If the full image path is not checked, there could be a conflict with an executable that appears earlier due to resolution involving the system environment path/classpath variable.
  - Parsing issues: If the raw command from a shell is analyzed, rather than the actual function call, it is important to identify the actual command  being run from its arguments.  In Windows, services with unquoted file paths containing spaces will try to use the first token as the executable and the rest as arguments -- and shift tokens to the executable until a valid one is found.
  - Some [operating systems](/dao/artifact/d3f:OperatingSystem) can spawn processes without forking.</kb-article>
+        <definition>Analyzing spawn arguments or attributes of a process to detect processes that are unauthorized.</definition>
         <rdfs:label>Process Spawn Analysis</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessTermination">
@@ -31879,7 +31984,7 @@ Processes may have open resource handles, which could leave those resources in a
 #### Signal Traps
 As the process may have open resource handles, commonly-used methods of process termination involve sending a signal to the process to terminate.
 On Windows, the `ExitProcess()` function is used for this purpose.  Process instructions, as well as a third-party DLL can also cause the process to exit.
-On Linux, the process is sent a signal on the occurrence of various events: when it loses the console, `SIGHUP`; when termination is requested, `SIGTERM`.  The processor then redirects execution to the function registered to handle the signal.  
+On Linux, the process is sent a signal on the occurrence of various events: when it loses the console, `SIGHUP`; when termination is requested, `SIGTERM`.  The processor then redirects execution to the function registered to handle the signal.
 
 Therefore, sending a signal to the process to ask it to terminate may not always work.
 
@@ -31961,8 +32066,8 @@ Metadata collection on enterprises can yield large data sets. Storage, indexing,
         <skos:altLabel>Remote Desktop Session</skos:altLabel>
         <skos:altLabel>Terminal Services</skos:altLabel>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Remote_Desktop_Services"/>
-        <rdfs:label>RDP Session</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Remote_Desktop_Protocol"/>
+        <rdfs:label>RDP Session</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#RFShielding">
         <definition>Adding physical barriers to a platform to prevent undesired radio interference.</definition>
@@ -31999,6 +32104,11 @@ Example RPC Protocols:
 * RPC traffic may occur over a pipe, or within a host over loopback interface, thus making network collection difficult.</kb-article>
         <definition>Monitoring the activity of remote procedure calls in communication traffic to establish standard protocol operations and potential attacker activities.</definition>
         <synonym>RPC Protocol Analysis</synonym>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile">
+        <rdfs:label>Read File</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Read_(system_call)"/>
+        <rdfs:comment>A program that needs to access data from a file stored in a file system uses the read system call. The file is identified by a file descriptor that is normally obtained from a previous call to open. This system call reads in data in bytes, the number of which is specified by the caller, from the file and stores then into a buffer supplied by the calling process.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#RelayPatternAnalysis">
         <kb-article>## How it works
@@ -32099,8 +32209,8 @@ This technique prevents a client from learning domains deemed to be potentially 
 Queries for reverse resolution requests (that is, requests where IP(s) are sent and a domain is returned) are collected, and the IP address(es) included in the query are examined. If the IP address(es) are in a range included in the blacklist, then the query is dropped.
 
 ## Considerations
-- The blacklist will have to be maintained and will need to be kept up to date with identified maintenance cycles to ensure lists are not stale. 
-- DNS query traffic can be transmitted over many different protocols, which presents a challenge to implementing methods to extract all DNS query IP address value(s). 
+- The blacklist will have to be maintained and will need to be kept up to date with identified maintenance cycles to ensure lists are not stale.
+- DNS query traffic can be transmitted over many different protocols, which presents a challenge to implementing methods to extract all DNS query IP address value(s).
   - DNS has historically used UDP port 53, with TCP port 53 instead used for responses over 512 bytes or after a lack of response over UDP.
   - Usage of new protocols to provide confidentiality for DNS traffic, such as DoH (DNS over HTTPS) and DoT (DNS over TLS), complicates collection of the IP address(es) in DNS queries. These protocols have often been enabled in browser settings transparently after a browser update, with DNS queries proxied over one of these cryptographic protocols through a specified host.</kb-article>
         <definition>Blocking a reverse lookup based on the query&apos;s IP address value.</definition>
@@ -32174,7 +32284,7 @@ If an attacker wants to inject some data into the program, for example as a para
         <kb-article>## How it works
 The sender message transfer agent (MTA) trust rating can be considered an indicator of the level of security risk and/or a trust level associated with sender MTAs in an email header.
 
-The features considered in determining the trust rating may include: 
+The features considered in determining the trust rating may include:
 
 * Length of time MTA has interacted with the enterprise
 * Number of sender domains sending emails from the MTA
@@ -32189,6 +32299,7 @@ Legitimate emails from a sender MTA may receive a lower trust rating over time i
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SenderReputationAnalysis">
         <definition>Ascertaining sender reputation based on information associated with a message (e.g. email/instant messaging).</definition>
+        <rdfs:label>Sender Reputation Analysis</rdfs:label>
         <kb-article>## How it works
 
 Sender trust rating can be considered an indicator of the level of security risk and/or a trust level associated with a sender. The features considered in determining the trust rating include:
@@ -32197,7 +32308,7 @@ Sender trust rating can be considered an indicator of the level of security risk
 * Number of recipients in the enterprise the sender interacts with
 * Sender vs. enterprise originated message ratio
 * Sender messages opened vs. not-opened ratio
-* Number of emails received from this sender 
+* Number of emails received from this sender
 * Number of emails replied to this sender
 * Number of emails from this sender not opened
 * Number of emails from this sender not opened that contain an attachment
@@ -32209,13 +32320,12 @@ Higher values for the number of recipients the sender has interacted with or the
 
 ## Considerations
 Legitimate emails from a sender may receive a lower trust rating over time if the sender&apos;s domain gets spoofed and is used to send unauthorized emails.</kb-article>
-        <rdfs:label>Sender Reputation Analysis</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplication">
         <rdfs:comment>An application that provides a set of software functionalities so that multiple clients who can reuse the functionality, provided they are authorized for use of the service.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Server_(computing)"/>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Service_(systems_architecture)"/>
         <rdfs:label>Service Application</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Service_(systems_architecture)"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceBinaryVerification">
         <definition>Analyzing changes in service binary files by comparing to a source of truth.</definition>
@@ -32342,12 +32452,12 @@ A vulnerability such as a write-what-where condition that allows one to write da
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#StandaloneHoneynet">
         <definition>An environment created for the purpose of attracting attackers and eliciting their behaviors that is not connected to any production enterprise systems.</definition>
+        <rdfs:label>Standalone Honeynet</rdfs:label>
         <kb-article>## How it works
 A standalone honeynet does not directly interact with the real enterprise environment. It may be located near or in some portion of the enterprise address space, but it does not interact with enterprise resources.
 
 ## Considerations
 A standalone honeynet is a lower risk to deploy compared to connected or integrated honeynets due to its isolation from the enterprise network. However, this comes at cost in loss of fidelity and realism. Significant extra effort must be made in order to make the environment look realistic.</kb-article>
-        <rdfs:label>Standalone Honeynet</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Storage">
         <rdfs:comment>Computer data storage, often called storage or memory, is a technology consisting of computer components and recording media used to retain digital data. It is a core function and fundamental component of computers. In the Von Neumann architecture, the CPU consists of two main parts: The control unit and the arithmetic / logic unit (ALU). The former controls the flow of data between the CPU and memory, while the latter performs arithmetic and logical operations on data.</rdfs:comment>
@@ -32451,7 +32561,6 @@ System calls are analyzed with a variety of methods. Some analytics look for spe
 Attackers may manipulate system settings or services to disable system logging or monitoring of security tools and events. Firewall and antivirus services are popular targets for attackers. Disabling system logs will also allow an attacker&apos;s actions to go unnoticed. Analysis of logs, registries, and process monitoring help defenders locate signs of tampering. Two possible approaches are to monitor hardened system services or to monitor registry updates for modifications to security settings.</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemFileAnalysis">
-        <rdfs:label>System File Analysis</rdfs:label>
         <kb-article>## How it works
 This technique ensures the integrity of system owned file resources. System files can impact the behavior below the user level.
 
@@ -32460,6 +32569,7 @@ This technique ensures the integrity of system owned file resources. System file
 * Need to manage the size of log file analysis.
 * False positives are a concern with this technique and filtering will need to be given additional thought.
 * A baseline or snapshot of file checksums should be established for future comparison.</kb-article>
+        <rdfs:label>System File Analysis</rdfs:label>
         <definition>Monitoring system files such as authentication databases, configuration files, system logs, and system executables for modification or tampering.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemFirewallConfiguration">
@@ -33776,20 +33886,20 @@ When system firmware verification fails a set of predefined responses is typical
         <attack-id>T1620</attack-id>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TPMBootIntegrity">
+        <synonym>STRM</synonym>
         <kb-article>## How it works
-During the boot process, the BIOS boot block (which with this defense enabled, is the Core Root of Trust for Measurement) measures boot components (firmware, ROM). The TPM hashes those measurements and stores the hashes in Platform Configuration Registers (PCRs).  Upon a subsequent boot, these hashes are provided to a verifier which compares the stored measurements to the new boot measurements. Integrity of the boot components is assured if they match.  
+During the boot process, the BIOS boot block (which with this defense enabled, is the Core Root of Trust for Measurement) measures boot components (firmware, ROM). The TPM hashes those measurements and stores the hashes in Platform Configuration Registers (PCRs).  Upon a subsequent boot, these hashes are provided to a verifier which compares the stored measurements to the new boot measurements. Integrity of the boot components is assured if they match.
 
 Attestation of the secure boot occurs when a verifying entity requests a Quote which is a concatenation of the requested PCR values, hashed and signed by the TPM&apos;s unique RSA key.  The TPM signature is trusted because the private key is stored securely in hardware and never leaves the TPM.
 
 ## Considerations
- 
+
 * The TPM does not perform the follow-on actions of acting on the PCR value information, it just provides the PCR stored information.
 * The current version of TPM is 2.0.; most existing implementations use TPM 1.2.
 
 ## Citations
 [1] [TPM 2.0 Library](https://trustedcomputinggroup.org/resource/tpm-library-specification/)
 [2] [TCG Trusted Attestation Protocol (TAP) Use Cases for TPM Families 1.2 and 2.0 and DICE](https://trustedcomputinggroup.org/wp-content/uploads/TCG_TNC_TAP_Use_Cases_v1r0p35_published.pdf)</kb-article>
-        <synonym>STRM</synonym>
         <rdfs:label>TPM Boot Integrity</rdfs:label>
         <definition>Assuring the integrity of a platform by demonstrating that the boot process starts from a trusted combination of hardware and software and continues until the operating system has fully booted and applications are running.  Sometimes called Static Root of Trust Measurement (STRM).</definition>
         <synonym>Static Root of Trust Measurement</synonym>
@@ -33801,7 +33911,6 @@ Attestation of the secure boot occurs when a verifying entity requests a Quote w
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Cron"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TransferAgentAuthentication">
-        <rdfs:label>Transfer Agent Authentication</rdfs:label>
         <kb-article>## How it works
 Transfer Agent Authentication can be accomplished in different ways for depending on the protocol. In Email,  Sender Policy Framework (SPF), Domain Key Identified Email (DKIM) or Domain-based Message Authentication Reporting and Conformance (DMARC) to validate sender domain ownership.
 
@@ -33810,15 +33919,16 @@ SPF protocol allows for mail domain owners to specify the mail servers they use 
 ### DKIM
 DKIM also uses a record entry in DNS for authentication but does not rely on the simple return-path for validation. A signature header is added to email and encryption is used for security. This adds an additional layer of complexity and requires that DKIM servers be configured identified cryptographic signatures. The additional complexity results in a validation process that can survive complex routing of emails.
 
-### DMARC 
+### DMARC
 DMARC is an email policy and authentication protocol that seeks to ensure that the &quot;From&quot; field of emails is not spoofed. DMARC makes use of both SPF records and DKIM published key validation. DMARC also has a decision policy framework, contained in a DMARC record, for handling of rejected email. The DMARC framework also updates DMARC domains with authentication statues for allowed senders of that domain.
 
 ## Considerations
-- Additional work is required to ensure that all SPF, DKIM and DMARC records are current and up to date. 
-- Maintenance of DKIM signing keys is needed. 
-- Using SPF without DKIM and DMARC verifies the Return-Path domain however does not prevent spoofing of the displayed From: address. 
-- Parts of an email that are not signed or verified by email authentication methods, such as the message body or the header To: and Subject: fields, can be altered or modified. 
+- Additional work is required to ensure that all SPF, DKIM and DMARC records are current and up to date.
+- Maintenance of DKIM signing keys is needed.
+- Using SPF without DKIM and DMARC verifies the Return-Path domain however does not prevent spoofing of the displayed From: address.
+- Parts of an email that are not signed or verified by email authentication methods, such as the message body or the header To: and Subject: fields, can be altered or modified.
 - Email message authentication does not replace the need to do email content analysis since executables, attachments, or links or other parts of the email beyond the sender domain are not verified.</kb-article>
+        <rdfs:label>Transfer Agent Authentication</rdfs:label>
         <definition>Validating that server components of a messaging infrastructure are authorized to send a particular message.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#URL">
@@ -33829,6 +33939,7 @@ DMARC is an email policy and authentication protocol that seeks to ensure that t
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#URLAnalysis">
         <definition>Determining if a URL is benign or malicious by analyzing the URL or its components.</definition>
+        <rdfs:label>URL Analysis</rdfs:label>
         <kb-article>## How it works
 
 URLs may contain components, for example:
@@ -33847,7 +33958,7 @@ Contextual information about a URL such as where it is embedded (ex. emails, fil
 
 Additional techniques include:
 
-* Extracting features of a URL such as domain name length, ratio of consecutive consonants, percentage of digits in a domain, and number of vowels. Values for each feature are combined to develop a score for the URL. 
+* Extracting features of a URL such as domain name length, ratio of consecutive consonants, percentage of digits in a domain, and number of vowels. Values for each feature are combined to develop a score for the URL.
 * Determining the probability of a character occurring in the URL given the preceding two characters. For example, for google.com, the probability of a &apos;g&apos; occurring at the beginning of a word, the probability of an &apos;o&apos; occurring after a &quot;g, the probability of an o&quot; occurring after a &apos;g&apos; and &quot;o, and so forth. A dictionary or a list of known good domains is used to determine probability. Probabilities are multiplied to develop a score for the URL.
 
 URL analysis may trigger follow-on analytics such as **File Analysis**
@@ -33856,12 +33967,11 @@ URL analysis may trigger follow-on analytics such as **File Analysis**
 
 * Volume of URLs being analyzed, combined with the speed at which they are analyzed
 * Fidelity of analysis technique at detecting brand new URLs versus analyzing URLs of established domains</kb-article>
-        <rdfs:label>URL Analysis</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#User">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/User_(computing)"/>
-        <rdfs:seeAlso>UserAccount</rdfs:seeAlso>
         <rdfs:label>User</rdfs:label>
+        <rdfs:seeAlso>UserAccount</rdfs:seeAlso>
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/10761247-n"/>
         <rdfs:comment>A user is a person [or agent] who uses a computer or network service. Users generally use a system or a software product without the technical expertise required to fully understand it. Power users use advanced features of programs, though they are not necessarily capable of computer programming and system administration. A user often has a user account and is identified to the system by a username (or user name). Other terms for username include login name, screenname (or screen name), nickname (or nick) and handle, which is derived from the identical Citizen&apos;s Band radio term. Some software products provide services to other systems and have no direct end users.</rdfs:comment>
     </rdf:Description>
@@ -33887,14 +33997,14 @@ URL analysis may trigger follow-on analytics such as **File Analysis**
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UserBehaviorAnalysis">
         <definition>Analysis of user behavior and patterns for the purpose of detecting unauthorized user activity.</definition>
         <rdfs:label>User Behavior Analysis</rdfs:label>
-        <synonym>Credential Monitoring</synonym>
         <kb-article>## Technique Overview
 
 Some techniques monitor patterns of human behavior and then apply algorithms and to identify patterns such as repeated login attempts from a single IP address or large file downloads, or abnormal accesses.
 
 Other techniques may have explicit or rigid definitions of &quot;bad behavior&quot; which are then matched against instances in a computer network environment.</kb-article>
-        <synonym>UBA</synonym>
+        <synonym>Credential Monitoring</synonym>
         <rdfs:comment>User behavior analytics (&quot;UBA&quot;) as defined by Gartner, is a cybersecurity process about detection of insider threats, targeted attacks, and financial fraud. UBA solutions look at patterns of human behavior, and then apply algorithms and statistical analysis to detect meaningful anomalies from those patterns-anomalies that indicate potential threats.&apos; Instead of tracking devices or security events, UBA tracks a system&apos;s users. Big data platforms are increasing UBA functionality by allowing them to analyze petabytes worth of data to detect insider threats and advanced persistent threats.</rdfs:comment>
+        <synonym>UBA</synonym>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/User_behavior_analytics"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UserDataTransferAnalysis">
@@ -33910,7 +34020,7 @@ Unusual data transfer activity may indicate unauthorized activity. Data transfer
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UserGeolocationLogonPatternAnalysis">
         <definition>Monitoring geolocation data of user logon attempts and comparing it to a baseline user behavior profile to identify anomalies in logon location.</definition>
         <kb-article>## How it works
-Geolocation data for each user logon attempt is collected and used to create a baseline user behavior profile. Current geolocation logon data is then compared against the user behavior profile. Logon activity that deviates from normal patterns and can help in identifying situations that may be indicative of a remote attacker using stolen credentials. For example: 
+Geolocation data for each user logon attempt is collected and used to create a baseline user behavior profile. Current geolocation logon data is then compared against the user behavior profile. Logon activity that deviates from normal patterns and can help in identifying situations that may be indicative of a remote attacker using stolen credentials. For example:
 
 * logons from locations that are different from where a user usually logs in
 * logons from a location in which an enterprise has no users located
@@ -34021,7 +34131,7 @@ Geolocation data for each user logon attempt is collected and used to create a b
         <definition>Monitoring changes in user web session behavior by comparing current web session activity to a baseline behavior profile or a catalog of predetermined malicious behavior.</definition>
         <rdfs:label>Web Session Activity Analysis</rdfs:label>
         <kb-article>## How it works
-User web session data is collected over a period of time to create a user behavior profile. Data collected includes clicks made on a website, average time between clicks, filling out web forms, order in which pages are viewed, and downloading files. Current user web session behavior is then compared against the use behavior profile to identify anomalies and a likelihood that the current user web session is malicious. Current user web session behavior can also be compared to predetermined known malicious behavior profiles that are developed through analysis of malware in run time at a threat research facility. 
+User web session data is collected over a period of time to create a user behavior profile. Data collected includes clicks made on a website, average time between clicks, filling out web forms, order in which pages are viewed, and downloading files. Current user web session behavior is then compared against the use behavior profile to identify anomalies and a likelihood that the current user web session is malicious. Current user web session behavior can also be compared to predetermined known malicious behavior profiles that are developed through analysis of malware in run time at a threat research facility.
 
 ## Considerations
 * Potential for false positives from anomalies that are not associated with malicious activity.
@@ -34040,8 +34150,8 @@ User web session data is collected over a period of time to create a user behavi
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsShortcutFile">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Shortcut_(computing)#Microsoft_Windows"/>
         <skos:altLabel>Shell Link</skos:altLabel>
-        <rdfs:label>Windows Shortcut File</rdfs:label>
         <rdfs:comment>A Microsoft Windows shortcut file.</rdfs:comment>
+        <rdfs:label>Windows Shortcut File</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Symbolic_link#Shortcuts"/>
     </rdf:Description>
     <rdf:Description rdf:about="wptmp:entity#Reference%20-%20%20CAR-2016-04-004:%20Successful%20Local%20Account%20Login">
