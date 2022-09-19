@@ -1,4 +1,30 @@
 ID,D3FEND Tactic,D3FEND Technique,D3FEND Technique Level 0,D3FEND Technique Level 1,Definition
+D3-OAM,Model,Operational Activity Mapping,,,
+D3-AM,Model,,Access Modeling,,"Access modeling identifies and records the access permissions granted to administrators, users, groups, and systems."
+D3-ODM,Model,,Operational Dependency Mapping,,"Operational dependency mapping identifies and models the dependencies of the organization's activities on each other and on the organization's performers (people, systems, and services.)  This may include modeling the higher- and lower-level activities of an organization forming a hierarchy, or layering, of the dependencies in an organization's activities."
+D3-ORA,Model,,Operational Risk Assessment,,"Operational risk assessment identifies and models the vulnerabilities of, and risks to, an organization's activities individually and as a whole."
+D3-OM,Model,,Organization Mapping,,"Organization mapping identifies and models the people, roles, and groups with an organization and the relations between them."
+D3-SYSM,Model,System Mapping,,,
+D3-DEM,Model,,Data Exchange Mapping,,"Information exchange mapping identifies and models the organization's intended design for the exchange of the data types, formats, and volumes between systems at the application layer."
+D3-SVCDM,Model,,Service Dependency Mapping,,Service dependency mapping determines the services on which each given service relies.
+D3-SYSDM,Model,,System Dependency Mapping,,System dependency mapping identifies and models the dependencies of system components on each other to carry out their function.
+D3-SYSVA,Model,,System Vulnerability Assessment,,"System vulnerability assessment relates all the vulnerabilities of a system's components in the context of their configuration and internal dependencies and can also include assessing risk emerging from the system's design as a whole, not just the sum of individual component vulnerabilities."
+D3-AI,Model,Asset Inventory,,,
+D3-AVA,Model,,Asset Vulnerability Assessment,,Asset vulnerability assessment enriches inventory items with knowledge identifying their vulnerabilities.
+D3-CI,Model,,Configuration Inventory,,Configuration inventory identifies and records the configuration of software and hardware and their components throughout the organization.
+D3-DI,Model,,Data Inventory,,"Data inventorying is identifies and records the schemas, formats, volumes, and locations of data stored and used on the organization's architecture."
+D3-HWI,Model,,Hardware Inventory,,Hardware inventorying identifies and records the hardware items in the organization's architecture.
+D3-SWI,Model,,Software Inventory,,Software inventorying identifies and records the software items in the organization's architecture.
+D3-SYSI,Model,,System Inventory,,System inventorying identifies and records all the systems in the organization's architecture.
+D3-NM,Model,Network Mapping,,,
+D3-LLM,Model,,Logical Link Mapping,,
+D3-ALLM,Model,,,Active Logical Link Mapping,"Active logical link mapping sends and receives network traffic as a means to map the whole data link layer, where the links represent logical data flows rather than physical connection"
+D3-PLLM,Model,,,Passive Logical Link Mapping,"Passive logical link mapping only listens to network traffic as a means to map the the whole data link layer, where the links represent logical data flows rather than physical connections."
+D3-NVA,Model,,Network Vulnerability Assessment,,"Network vulnerability assessment relates all the vulnerabilities of a network's components in the context of their configuration and interdependencies and can also include assessing risk emerging from the network's design as a whole, not just the sum of individual network node or network segment vulnerabilities."
+D3-PLM,Model,,Physical Link Mapping,,
+D3-APLM,Model,,,Active Physical Link Mapping,Active physical link mapping sends and receives network traffic as a means to map the physical layer.
+D3-PPLM,Model,,,Passive Physical Link Mapping,Passive physical link mapping only listens to network traffic as a means to map the physical layer.
+D3-NTPM,Model,,Network Traffic Policy Mapping,,"Network traffic policy mapping identifies and models the allowed pathways of data at the network, tranport, and/or application levels."
 D3-AH,Harden,Application Hardening,,,
 D3-ACH,Harden,,Application Configuration Hardening,,Modifying an application's configuration to reduce its attack surface.
 D3-DCE,Harden,,Dead Code Elimination,,"Removing unreachable or ""dead code"" from compiled source code."
@@ -51,7 +77,7 @@ D3-RTSD,Detect,,Remote Terminal Session Detection,,Detection of an unauthorized 
 D3-RTA,Detect,,RPC Traffic Analysis,,Monitoring the activity of remote procedure calls in communication traffic to establish standard protocol operations and potential attacker activities.
 D3-PA,Detect,Process Analysis,,,
 D3-DQSA,Detect,,Database Query String Analysis,,Analyzing database queries to detect [SQL Injection](https://capec.mitre.org/data/definitions/66.html).
-D3-FAPA,Detect,,File Access Pattern Analysis,,Analyzing the way a process accesses local files to identify unauthorized activity.
+D3-FAPA,Detect,,File Access Pattern Analysis,,Analyzing the files accessed by a process to identify unauthorized activity.
 D3-IBCA,Detect,,Indirect Branch Call Analysis,,Analyzing vendor specific branch call recording in order to detect ROP style attacks.
 D3-PCSV,Detect,,Process Code Segment Verification,,"Comparing the ""text"" or ""code"" memory segments to a source of truth."
 D3-PSMD,Detect,,Process Self-Modification Detection,,"Detects processes that modify, change, or replace their own code at runtime."
