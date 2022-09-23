@@ -11,14 +11,14 @@
   <!-- This contains the contents of the <svelte:head> component, if
     the current page has one -->
     <meta http-equiv="content-security-policy" content=""><title>Stack Frame Canary - Artifact Details | MITRE D3FEND™</title><meta property="og:type" content="article" data-svelte="svelte-1b5eb8v"><meta property="og:title" content="Stack Frame Canary - Artifact Details" data-svelte="svelte-1b5eb8v"><meta property="og:description" content="Stack canaries, named for their analogy to a canary in a coal mine, are used to detect a stack buffer overflow before execution of malicious code can occur. This method works by placing a small integer, the value of which is randomly chosen at program start, in memory just before the stack return pointer. Most buffer overflows overwrite memory from lower to higher memory addresses, so in order to overwrite the return pointer (and thus take control of the process) the canary value must also be overwritten. This value is checked to make sure it has not changed before a routine uses the return pointer on the stack. This technique can greatly increase the difficulty of exploiting a stack buffer overflow because it forces the attacker to gain control of the instruction pointer by some non-traditional means such as corrupting other important variables on the stack." data-svelte="svelte-1b5eb8v">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout-matrix.svelte-5f711740.css">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-a0ff9840.css">
 	<link rel="stylesheet" href="/_app/assets/Nav-mobile-e0f80dc0.css">
 	<link rel="stylesheet" href="/_app/assets/pages/dao/artifact/_artifact_.svelte-76d0c295.css">
 	<link rel="stylesheet" href="/_app/assets/Alert.svelte_svelte_type_style_lang-6b570326.css">
 	<link rel="stylesheet" href="/_app/assets/SimpleAutocomplete.svelte_svelte_type_style_lang-c01bf9e8.css">
 	<link rel="stylesheet" href="/_app/assets/BlockTree-54ffff92.css">
 	<link rel="stylesheet" href="/_app/assets/Lookup-DAO-2347e66b.css">
-	<link rel="modulepreload" href="/_app/start-be9a2bc3.js">
+	<link rel="modulepreload" href="/_app/start-741e5eff.js">
 	<link rel="modulepreload" href="/_app/chunks/index-a02da30e.js">
 	<link rel="modulepreload" href="/_app/chunks/index-98a102c4.js">
 	<link rel="modulepreload" href="/_app/chunks/singletons-d1fb5791.js">
@@ -70,7 +70,7 @@
   <main class="svelte-acckgo">
 
 <h1 class="text-center">Stack Frame Canary</h1>
-<section><div class="flex flex-start content svelte-3hh43c"><span id="lookup_container" class="flex-column flex-column-max-content text-right"><div class="dao-lookup-wrapper"><div class="autocomplete select is-fullwidth sautocomplete-476 svelte-1nqq7zl"><select  class="svelte-1nqq7zl"></select>
+<section><div class="flex flex-start content svelte-3hh43c"><span id="lookup_container" class="flex-column flex-column-max-content text-right"><div class="dao-lookup-wrapper"><div class="autocomplete select is-fullwidth sautocomplete-111 svelte-1nqq7zl"><select  class="svelte-1nqq7zl"></select>
   <div class="input-container svelte-1nqq7zl">
     <input type="text" class=" input autocomplete-input svelte-1nqq7zl" id="" autocomplete="off" placeholder="Search D3FEND&#39;s 442 Artifacts"    tabindex="0" value="">
     </div>
@@ -1477,10 +1477,10 @@
   </footer>
 
 
-		<script type="module" data-hydrate="1bf66py">
-		import { start } from "/_app/start-be9a2bc3.js";
+		<script type="module" data-hydrate="1rnp9qa">
+		import { start } from "/_app/start-741e5eff.js";
 		start({
-			target: document.querySelector('[data-hydrate="1bf66py"]').parentNode,
+			target: document.querySelector('[data-hydrate="1rnp9qa"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
