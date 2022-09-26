@@ -1,15 +1,15 @@
 const build = [
-  "/_app/start-741e5eff.js",
+  "/_app/start-51d85cd1.js",
   "/_app/pages/__layout.svelte-dd97aeab.js",
   "/_app/assets/pages/__layout.svelte-a0ff9840.css",
   "/_app/pages/__error.svelte-1d825c42.js",
   "/_app/pages/__layout-matrix.svelte-e1086294.js",
   "/_app/pages/mappings/__layout.svelte-9c60b20b.js",
-  "/_app/pages/offensive-technique/attack/__layout@matrix.svelte-175e5f68.js",
+  "/_app/pages/offensive-technique/attack/__layout@matrix.svelte-4c3ec53e.js",
   "/_app/pages/progress/__layout.svelte-5e5c52fc.js",
-  "/_app/pages/tactic/__layout-tactic@matrix.svelte-a3ee6850.js",
-  "/_app/assets/pages/tactic/__layout-tactic@matrix.svelte-b7a77fc7.css",
-  "/_app/pages/technique/__layout-tech@matrix.svelte-0db26b29.js",
+  "/_app/pages/tactic/__layout-tactic@matrix.svelte-a6944341.js",
+  "/_app/assets/pages/technique/__layout-tech@matrix.svelte-c1854619.css",
+  "/_app/pages/technique/__layout-tech@matrix.svelte-dccb47ba.js",
   "/_app/pages/about.svelte-5bf95ec1.js",
   "/_app/assets/pages/about.svelte-b0b5b64a.css",
   "/_app/pages/contact.svelte-27af9ef7.js",
@@ -23,7 +23,7 @@ const build = [
   "/_app/pages/dao/index.svelte-88afb2c5.js",
   "/_app/assets/pages/dao/index.svelte-43d7df8e.css",
   "/_app/pages/faq/index.svelte-cfbc359d.js",
-  "/_app/pages/index@matrix.svelte-b7437db5.js",
+  "/_app/pages/index@matrix.svelte-84404722.js",
   "/_app/assets/pages/index@matrix.svelte-3b40261d.css",
   "/_app/pages/mappings/attack-mitigations.svelte-c3b092e4.js",
   "/_app/pages/mappings/index.svelte-1c5de77e.js",
@@ -32,7 +32,7 @@ const build = [
   "/_app/pages/offensive-technique/index.svelte-cd83ad1b.js",
   "/_app/pages/ontology/describe/_slug_.svelte-0393b459.js",
   "/_app/assets/pages/ontology/describe/_slug_.svelte-55af8b4a.css",
-  "/_app/pages/poster@matrix.svelte-e6ae70ba.js",
+  "/_app/pages/poster@matrix.svelte-d54cc00c.js",
   "/_app/assets/pages/poster@matrix.svelte-ad010473.css",
   "/_app/pages/privacy.svelte-ffcf299b.js",
   "/_app/pages/progress/index.svelte-e7c335fc.js",
@@ -64,8 +64,8 @@ const build = [
   "/_app/chunks/config-6e32f34b.js",
   "/_app/chunks/lib-cf80d2a1.js",
   "/_app/chunks/marked.esm-8ab30116.js",
-  "/_app/chunks/D3FMatrix-2084fe96.js",
-  "/_app/assets/D3FMatrix-289d507f.css",
+  "/_app/chunks/D3FMatrix-4ff2ec73.js",
+  "/_app/assets/D3FMatrix-16200cee.css",
   "/_app/chunks/navigation-0e6511d1.js",
   "/_app/chunks/Header-47fd749a.js",
   "/_app/assets/Header-6acab121.css",
@@ -124,7 +124,7 @@ const files = [
   "/resources/extra-dist/CNAME",
   "/resources/extra-dist/README.md"
 ];
-const version = "1663966784936";
+const version = "1664203764439";
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
 const staticAssets = new Set(to_cache);
