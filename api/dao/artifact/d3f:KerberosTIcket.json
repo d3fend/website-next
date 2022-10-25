@@ -498,10 +498,10 @@
         "@id": "d3f:AccessToken",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:TicketGrantingTicket"
+            "@id": "d3f:KerberosTicket"
           },
           {
-            "@id": "d3f:KerberosTicket"
+            "@id": "d3f:TicketGrantingTicket"
           }
         ],
         "rdfs:label": "Access Token"

@@ -1825,7 +1825,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -1849,10 +1854,10 @@
             "@id": "d3f:OperatingSystemConfigurationFile"
           },
           {
-            "@id": "d3f:PropertyListFile"
+            "@id": "d3f:UserInitConfigurationFile"
           },
           {
-            "@id": "d3f:UserInitConfigurationFile"
+            "@id": "d3f:PropertyListFile"
           }
         ],
         "rdfs:label": "Configuration File"

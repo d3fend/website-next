@@ -2424,13 +2424,13 @@
             "@id": "d3f:OutboundInternetWebTraffic"
           },
           {
+            "@id": "d3f:OutboundInternetMailTraffic"
+          },
+          {
             "@id": "d3f:OutboundInternetDNSLookupTraffic"
           },
           {
             "@id": "d3f:OutboundInternetFileTransferTraffic"
-          },
-          {
-            "@id": "d3f:OutboundInternetMailTraffic"
           }
         ],
         "rdfs:label": "Outbound Internet Network Traffic"

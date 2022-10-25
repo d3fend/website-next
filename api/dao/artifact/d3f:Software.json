@@ -2729,7 +2729,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -2811,6 +2816,9 @@
         "@id": "d3f:ServiceApplication",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:AuthenticationService"
+          },
+          {
             "@id": "d3f:CredentialManagementSystem"
           },
           {
@@ -2818,9 +2826,6 @@
           },
           {
             "@id": "d3f:SoftwareDeploymentTool"
-          },
-          {
-            "@id": "d3f:AuthenticationService"
           },
           {
             "@id": "d3f:VirtualizationSoftware"
@@ -2903,10 +2908,10 @@
             "@id": "d3f:DeveloperApplication"
           },
           {
-            "@id": "d3f:BrowserExtension"
+            "@id": "d3f:OfficeApplication"
           },
           {
-            "@id": "d3f:OfficeApplication"
+            "@id": "d3f:BrowserExtension"
           }
         ],
         "rdfs:label": "User Application"

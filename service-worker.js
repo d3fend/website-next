@@ -1,20 +1,20 @@
 const build = [
-  "/_app/start-82f91ab4.js",
+  "/_app/start-145e44ac.js",
   "/_app/pages/__layout.svelte-2c685df2.js",
-  "/_app/assets/pages/__layout.svelte-a0ff9840.css",
+  "/_app/assets/pages/__layout-matrix.svelte-5f711740.css",
   "/_app/pages/__error.svelte-1d825c42.js",
   "/_app/pages/__layout-matrix.svelte-813d3b24.js",
   "/_app/pages/mappings/__layout.svelte-9c60b20b.js",
   "/_app/pages/offensive-technique/attack/__layout@matrix.svelte-fc6cb3e8.js",
   "/_app/pages/progress/__layout.svelte-5e5c52fc.js",
   "/_app/pages/tactic/__layout-tactic@matrix.svelte-caf8f657.js",
-  "/_app/assets/pages/tactic/__layout-tactic@matrix.svelte-b7a77fc7.css",
+  "/_app/assets/pages/technique/__layout-tech@matrix.svelte-c1854619.css",
   "/_app/pages/technique/__layout-tech@matrix.svelte-cea1bc61.js",
   "/_app/pages/about.svelte-5bf95ec1.js",
   "/_app/assets/pages/about.svelte-b0b5b64a.css",
   "/_app/pages/contact.svelte-27af9ef7.js",
   "/_app/assets/Button.svelte_svelte_type_style_lang-7ef90c91.css",
-  "/_app/pages/contribute/index.svelte-97a307a9.js",
+  "/_app/pages/contribute/index.svelte-e1d35310.js",
   "/_app/pages/dao/artifact/_artifact_.svelte-469baecc.js",
   "/_app/assets/pages/dao/artifact/_artifact_.svelte-76d0c295.css",
   "/_app/assets/Alert.svelte_svelte_type_style_lang-6b570326.css",
@@ -38,7 +38,7 @@ const build = [
   "/_app/assets/pages/poster@matrix.svelte-ad010473.css",
   "/_app/pages/privacy.svelte-ffcf299b.js",
   "/_app/pages/progress/index.svelte-29a4a0b5.js",
-  "/_app/pages/resources/index.svelte-6713f628.js",
+  "/_app/pages/resources/index.svelte-0f1cfd84.js",
   "/_app/pages/resources/ontology.svelte-54817cb5.js",
   "/_app/pages/search.svelte-73d49f20.js",
   "/_app/assets/pages/search.svelte-6a857f2b.css",
@@ -129,7 +129,7 @@ const files = [
   "/resources/extra-dist/CNAME",
   "/resources/extra-dist/README.md"
 ];
-const version = "1666706345151";
+const version = "1666709951398";
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
 const staticAssets = new Set(to_cache);

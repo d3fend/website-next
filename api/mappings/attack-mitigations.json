@@ -1271,16 +1271,16 @@
       ],
       "d3f:related": [
         {
-          "@id": "d3f:ApplicationHardening"
-        },
-        {
-          "@id": "d3f:ExceptionHandlerPointerValidation"
-        },
-        {
           "@id": "d3f:InboundTrafficFiltering"
         },
         {
           "@id": "d3f:ShadowStackComparisons"
+        },
+        {
+          "@id": "d3f:ApplicationHardening"
+        },
+        {
+          "@id": "d3f:ExceptionHandlerPointerValidation"
         }
       ],
       "rdfs:label": [

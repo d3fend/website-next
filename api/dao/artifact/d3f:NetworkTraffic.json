@@ -5565,9 +5565,6 @@
         "@id": "d3f:IntranetNetworkTraffic",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:IntranetWebNetworkTraffic"
-          },
-          {
             "@id": "d3f:IntranetAdministrativeNetworkTraffic"
           },
           {
@@ -5578,6 +5575,9 @@
           },
           {
             "@id": "d3f:IntranetMulticastNetworkTraffic"
+          },
+          {
+            "@id": "d3f:IntranetWebNetworkTraffic"
           }
         ],
         "rdfs:label": "Intranet Network Traffic"
@@ -5631,10 +5631,10 @@
             "@id": "d3f:OutboundNetworkTraffic"
           },
           {
-            "@id": "d3f:NetworkSession"
+            "@id": "d3f:RPCNetworkTraffic"
           },
           {
-            "@id": "d3f:RPCNetworkTraffic"
+            "@id": "d3f:NetworkSession"
           }
         ],
         "rdfs:label": "Network Traffic"
@@ -5681,10 +5681,10 @@
             "@id": "d3f:OutboundInternetWebTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetDNSLookupTraffic"
+            "@id": "d3f:OutboundInternetFileTransferTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetFileTransferTraffic"
+            "@id": "d3f:OutboundInternetDNSLookupTraffic"
           },
           {
             "@id": "d3f:OutboundInternetMailTraffic"
@@ -5706,10 +5706,10 @@
             "@id": "d3f:OutboundInternetNetworkTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetDNSLookupTraffic"
+            "@id": "d3f:OutboundInternetFileTransferTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetFileTransferTraffic"
+            "@id": "d3f:OutboundInternetDNSLookupTraffic"
           }
         ],
         "rdfs:label": "Outbound Network Traffic"

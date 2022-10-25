@@ -9071,12 +9071,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -9112,13 +9107,13 @@
             "@id": "d3f:ApplicationConfigurationFile"
           },
           {
+            "@id": "d3f:PropertyListFile"
+          },
+          {
             "@id": "d3f:UserInitConfigurationFile"
           },
           {
             "@id": "d3f:OperatingSystemConfigurationFile"
-          },
-          {
-            "@id": "d3f:PropertyListFile"
           }
         ],
         "rdfs:label": "Configuration File"
@@ -9248,16 +9243,16 @@
             "@id": "d3f:SymbolicLink"
           },
           {
-            "@id": "d3f:PasswordFile"
+            "@id": "d3f:ContainerImage"
           },
           {
-            "@id": "d3f:DatabaseFile"
+            "@id": "d3f:PasswordFile"
           },
           {
             "@id": "d3f:CertificateFile"
           },
           {
-            "@id": "d3f:ContainerImage"
+            "@id": "d3f:DatabaseFile"
           }
         ],
         "rdfs:label": "File"
@@ -9301,10 +9296,10 @@
         "@id": "d3f:LogFile",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:CommandHistoryLogFile"
+            "@id": "d3f:OperatingSystemLogFile"
           },
           {
-            "@id": "d3f:OperatingSystemLogFile"
+            "@id": "d3f:CommandHistoryLogFile"
           }
         ],
         "rdfs:label": "Log File"
@@ -9379,13 +9374,13 @@
             "@id": "d3f:OperatingSystemConfigurationFile"
           },
           {
+            "@id": "d3f:OperatingSystemSharedLibraryFile"
+          },
+          {
             "@id": "d3f:OperatingSystemLogFile"
           },
           {
             "@id": "d3f:OperatingSystemExecutableFile"
-          },
-          {
-            "@id": "d3f:OperatingSystemSharedLibraryFile"
           }
         ],
         "rdfs:label": "Operating System File"

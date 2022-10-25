@@ -3956,10 +3956,10 @@
         "@id": "d3f:SystemConfigurationDatabaseRecord",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:WindowsRegistryKey"
+            "@id": "d3f:SystemConfigurationInitDatabaseRecord"
           },
           {
-            "@id": "d3f:SystemConfigurationInitDatabaseRecord"
+            "@id": "d3f:WindowsRegistryKey"
           }
         ],
         "rdfs:label": "System Configuration Database Record"

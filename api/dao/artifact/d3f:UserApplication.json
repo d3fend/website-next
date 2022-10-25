@@ -400,10 +400,10 @@
             "@id": "d3f:DeveloperApplication"
           },
           {
-            "@id": "d3f:OfficeApplication"
+            "@id": "d3f:BrowserExtension"
           },
           {
-            "@id": "d3f:BrowserExtension"
+            "@id": "d3f:OfficeApplication"
           }
         ],
         "rdfs:label": "User Application"

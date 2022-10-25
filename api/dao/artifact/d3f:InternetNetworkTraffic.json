@@ -3089,10 +3089,10 @@
         "@id": "d3f:OutboundInternetEncryptedTraffic",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:OutboundInternetEncryptedWebTraffic"
+            "@id": "d3f:OutboundInternetEncryptedRemoteTerminalTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetEncryptedRemoteTerminalTraffic"
+            "@id": "d3f:OutboundInternetEncryptedWebTraffic"
           }
         ],
         "rdfs:label": "Outbound Internet Encrypted Traffic"

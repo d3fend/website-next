@@ -1549,10 +1549,10 @@
             "@id": "d3f:PasswordStore"
           },
           {
-            "@id": "d3f:PasswordFile"
+            "@id": "d3f:SystemPasswordDatabase"
           },
           {
-            "@id": "d3f:SystemPasswordDatabase"
+            "@id": "d3f:PasswordFile"
           }
         ],
         "rdfs:label": "Password Database"
