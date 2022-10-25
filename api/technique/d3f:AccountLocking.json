@@ -4963,12 +4963,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -4990,10 +4985,10 @@
         "d3f:kb-article": "## How it works\nManagement servers with enterprise policies for account management provide the ability to enable and disable account for given rules. The rules may include specific periods of time (eg. weekend, plant shutdown, leave periods), specific user types or groups, or individual users.\n\n## Considerations\n* Local accounts caches vs centralized account management\n* Single Sign-on\n* Role based vs Attribute based systems\n\n## Examples of account configuration stores\n* Directory Services\n* Active Directory\n* RADIUS\n* LDAP\n* Oracle User Account Management\n* JumpCloud",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_AccountMonitoring_ForescoutTechnologies"
+            "@id": "d3f:Reference-AccountMonitoring_ForescoutTechnologies"
           },
           {
-            "@id": "d3f:Reference_FrameworkForNotifyingADirectoryServiceOfAuthenticationEventsProcessedOutsideTheDirectoryService_OracleInternationalCorp"
+            "@id": "d3f:Reference-FrameworkForNotifyingADirectoryServiceOfAuthenticationEventsProcessedOutsideTheDirectoryService_OracleInternationalCorp"
           }
         ],
         "rdfs:label": "Account Locking",
@@ -5072,7 +5067,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_AccountMonitoring_ForescoutTechnologies",
+        "@id": "d3f:Reference-AccountMonitoring_ForescoutTechnologies",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5093,7 +5088,7 @@
         "rdfs:label": "Reference - Account monitoring - Forescout Technologies"
       },
       {
-        "@id": "d3f:Reference_FrameworkForNotifyingADirectoryServiceOfAuthenticationEventsProcessedOutsideTheDirectoryService_OracleInternationalCorp",
+        "@id": "d3f:Reference-FrameworkForNotifyingADirectoryServiceOfAuthenticationEventsProcessedOutsideTheDirectoryService_OracleInternationalCorp",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5123,12 +5118,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

@@ -11343,16 +11343,16 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:FirmwareBehaviorAnalysis"
+          },
+          {
+            "@id": "d3f:FirmwareEmbeddedMonitoringCode"
+          },
+          {
+            "@id": "d3f:FirmwareVerification"
+          },
+          {
             "@id": "d3f:OperatingSystemMonitoring"
-          },
-          {
-            "@id": "d3f:EndpointHealthBeacon"
-          },
-          {
-            "@id": "d3f:InputDeviceAnalysis"
-          },
-          {
-            "@id": "d3f:MemoryBoundaryTracking"
           },
           {
             "@id": "d3f:ScheduledJobAnalysis"
@@ -11373,13 +11373,13 @@
             "@id": "d3f:UserSessionInitConfigAnalysis"
           },
           {
-            "@id": "d3f:FirmwareBehaviorAnalysis"
+            "@id": "d3f:EndpointHealthBeacon"
           },
           {
-            "@id": "d3f:FirmwareEmbeddedMonitoringCode"
+            "@id": "d3f:InputDeviceAnalysis"
           },
           {
-            "@id": "d3f:FirmwareVerification"
+            "@id": "d3f:MemoryBoundaryTracking"
           },
           {
             "@id": "d3f:PeripheralFirmwareVerification"

@@ -338,9 +338,6 @@
             "@id": "d3f:HomoglyphDetection"
           },
           {
-            "@id": "d3f:IdentifierReputationAnalysis"
-          },
-          {
             "@id": "d3f:DomainNameReputationAnalysis"
           },
           {
@@ -351,6 +348,9 @@
           },
           {
             "@id": "d3f:URLReputationAnalysis"
+          },
+          {
+            "@id": "d3f:IdentifierReputationAnalysis"
           }
         ],
         "rdfs:label": "Identifier Analysis"
@@ -453,6 +453,15 @@
             "@id": "d3f:RPCTrafficAnalysis"
           },
           {
+            "@id": "d3f:NetworkTrafficCommunityDeviation"
+          },
+          {
+            "@id": "d3f:PerHostDownload-UploadRatioAnalysis"
+          },
+          {
+            "@id": "d3f:ProtocolMetadataAnomalyDetection"
+          },
+          {
             "@id": "d3f:AdministrativeNetworkActivityAnalysis"
           },
           {
@@ -477,22 +486,13 @@
             "@id": "d3f:InboundSessionVolumeAnalysis"
           },
           {
-            "@id": "d3f:IPCTrafficAnalysis"
-          },
-          {
-            "@id": "d3f:NetworkTrafficCommunityDeviation"
-          },
-          {
             "@id": "d3f:ActiveCertificateAnalysis"
           },
           {
             "@id": "d3f:PassiveCertificateAnalysis"
           },
           {
-            "@id": "d3f:PerHostDownload-UploadRatioAnalysis"
-          },
-          {
-            "@id": "d3f:ProtocolMetadataAnomalyDetection"
+            "@id": "d3f:IPCTrafficAnalysis"
           }
         ],
         "rdfs:label": "Network Traffic Analysis"
@@ -549,6 +549,9 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:OperatingSystemMonitoring"
+          },
+          {
             "@id": "d3f:FirmwareBehaviorAnalysis"
           },
           {
@@ -558,7 +561,13 @@
             "@id": "d3f:FirmwareVerification"
           },
           {
-            "@id": "d3f:OperatingSystemMonitoring"
+            "@id": "d3f:EndpointHealthBeacon"
+          },
+          {
+            "@id": "d3f:InputDeviceAnalysis"
+          },
+          {
+            "@id": "d3f:PeripheralFirmwareVerification"
           },
           {
             "@id": "d3f:ScheduledJobAnalysis"
@@ -579,19 +588,10 @@
             "@id": "d3f:UserSessionInitConfigAnalysis"
           },
           {
-            "@id": "d3f:EndpointHealthBeacon"
-          },
-          {
-            "@id": "d3f:InputDeviceAnalysis"
-          },
-          {
-            "@id": "d3f:MemoryBoundaryTracking"
-          },
-          {
             "@id": "d3f:ServiceBinaryVerification"
           },
           {
-            "@id": "d3f:PeripheralFirmwareVerification"
+            "@id": "d3f:MemoryBoundaryTracking"
           }
         ],
         "rdfs:label": "Platform Monitoring"
@@ -618,6 +618,9 @@
             "@id": "d3f:SystemCallAnalysis"
           },
           {
+            "@id": "d3f:ProcessCodeSegmentVerification"
+          },
+          {
             "@id": "d3f:DatabaseQueryStringAnalysis"
           },
           {
@@ -625,9 +628,6 @@
           },
           {
             "@id": "d3f:IndirectBranchCallAnalysis"
-          },
-          {
-            "@id": "d3f:ProcessCodeSegmentVerification"
           },
           {
             "@id": "d3f:FileCreationAnalysis"

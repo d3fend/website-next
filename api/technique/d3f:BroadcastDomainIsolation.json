@@ -58,10 +58,10 @@
         "d3f:kb-article": "## How it works\nSoftware Defined Networking, or other network encapsulation technologies intercept host broadcast traffic then route it to a specified destination per a configured policy.\n\nThis can be implemented within hypervisors, networking hardware (WAPs, switches, routers), or virutal hardware.\n\n## Considerations\nThis technique is highly dependent on network infrastructure and networking requirements.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_BroadcastIsolationAndLevel3NetworkSwitch_HewlettPackardEnterpriseDevelopmentLP"
+            "@id": "d3f:Reference-BroadcastIsolationAndLevel3NetworkSwitch_HewlettPackardEnterpriseDevelopmentLP"
           },
           {
-            "@id": "d3f:Reference_PrivateVirtualLocalAreaNetworkIsolation_CiscoTechnologyInc"
+            "@id": "d3f:Reference-PrivateVirtualLocalAreaNetworkIsolation_CiscoTechnologyInc"
           }
         ],
         "d3f:synonym": "Network Segmentation",
@@ -141,7 +141,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_BroadcastIsolationAndLevel3NetworkSwitch_HewlettPackardEnterpriseDevelopmentLP",
+        "@id": "d3f:Reference-BroadcastIsolationAndLevel3NetworkSwitch_HewlettPackardEnterpriseDevelopmentLP",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -162,7 +162,7 @@
         "rdfs:label": "Reference - Broadcast isolation and level 3 network switch - Hewlett Packard Enterprise Development LP"
       },
       {
-        "@id": "d3f:Reference_PrivateVirtualLocalAreaNetworkIsolation_CiscoTechnologyInc",
+        "@id": "d3f:Reference-PrivateVirtualLocalAreaNetworkIsolation_CiscoTechnologyInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

@@ -104,6 +104,12 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:IOPortRestriction"
+          },
+          {
+            "@id": "d3f:Kernel-basedProcessIsolation"
+          },
+          {
             "@id": "d3f:ExecutableAllowlisting"
           },
           {
@@ -113,16 +119,10 @@
             "@id": "d3f:Hardware-basedProcessIsolation"
           },
           {
-            "@id": "d3f:SystemCallFiltering"
-          },
-          {
-            "@id": "d3f:IOPortRestriction"
-          },
-          {
-            "@id": "d3f:Kernel-basedProcessIsolation"
-          },
-          {
             "@id": "d3f:MandatoryAccessControl"
+          },
+          {
+            "@id": "d3f:SystemCallFiltering"
           }
         ],
         "rdfs:label": "Execution Isolation"
@@ -220,6 +220,9 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:NetworkTrafficFiltering"
+          },
+          {
             "@id": "d3f:BroadcastDomainIsolation"
           },
           {
@@ -238,15 +241,6 @@
             "@id": "d3f:ForwardResolutionIPDenylisting"
           },
           {
-            "@id": "d3f:ReverseResolutionDomainDenylisting"
-          },
-          {
-            "@id": "d3f:ReverseResolutionIPDenylisting"
-          },
-          {
-            "@id": "d3f:NetworkTrafficFiltering"
-          },
-          {
             "@id": "d3f:InboundTrafficFiltering"
           },
           {
@@ -257,6 +251,12 @@
           },
           {
             "@id": "d3f:HomoglyphDenylisting"
+          },
+          {
+            "@id": "d3f:ReverseResolutionDomainDenylisting"
+          },
+          {
+            "@id": "d3f:ReverseResolutionIPDenylisting"
           }
         ],
         "rdfs:label": "Network Isolation"

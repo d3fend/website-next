@@ -55,13 +55,13 @@
         "d3f:kb-article": "## How it works\nThe organization collects and models architectural information about the services and consumers of services and maps the dependencies between the services.\n\n## Considerations\n* Architectural design artifacts and SMEs may need to be consulted to determine if dependencies are intended or otherwise essential.\n* Service dependencies for critical systems--those supporting critical organizational activities--should be prioritized for supply chain risk analysis.\n* Service dependencies in cloud or microservice architectures may be discovered using distributed tracing capabilities",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_CatiaUAFPlugin"
+            "@id": "d3f:Reference-CatiaUAFPlugin"
           },
           {
-            "@id": "d3f:Reference_TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources"
+            "@id": "d3f:Reference-TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources"
           },
           {
-            "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF"
+            "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF"
           }
         ],
         "d3f:maps": {
@@ -144,7 +144,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_CatiaUAFPlugin",
+        "@id": "d3f:Reference-CatiaUAFPlugin",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -180,7 +180,7 @@
         "rdfs:label": "Reference - Catia UAF Plugin"
       },
       {
-        "@id": "d3f:Reference_TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources",
+        "@id": "d3f:Reference-TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources",
         "@type": [
           "d3f:UserManualReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -206,7 +206,7 @@
         "rdfs:label": "Reference - Tivoli Application Dependency Discovery Manager 7.3.0 - Dependencies between resources"
       },
       {
-        "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF",
+        "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -239,7 +239,7 @@
         ],
         "d3f:kb-reference-title": "Unified Architecture Framework (UAF)",
         "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Unified Architecture Framework (UAF)"
+        "rdfs:label": "Reference - Unified Architecture Framework (UAF)"
       }
     ]
   },

@@ -469,7 +469,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -486,7 +491,7 @@
         "d3f:definition": "Characterizing the reputation of mail transfer agents (MTA) to determine the security risk in emails.",
         "d3f:kb-article": "## How it works\nThe sender message transfer agent (MTA) trust rating can be considered an indicator of the level of security risk and/or a trust level associated with sender MTAs in an email header.\n\nThe features considered in determining the trust rating may include:\n\n* Length of time MTA has interacted with the enterprise\n* Number of sender domains sending emails from the MTA\n* Number of recipients in the enterprise the MTA sends emails to\n* Number of emails received from this MTA\n* Number of email replies received from this MTA\n\nFor example, higher values for the length of time an MTA has interacted with the enterprise, or number of emails received from an MTA can result in a higher trust rating. The trust rating categorizes the sender MTA as unrated, neutral, trusted, suspicious, or malicious.\n\n## Considerations\nLegitimate emails from a sender MTA may receive a lower trust rating over time if the sender's domain gets spoofed and is used to send unauthorized emails.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_SystemsAndMethodsForDetectingAnd_orHandlingTargetedAttacksInTheEmailChannel_GraphusInc"
+          "@id": "d3f:Reference-SystemsAndMethodsForDetectingAnd_orHandlingTargetedAttacksInTheEmailChannel_GraphusInc"
         },
         "rdfs:label": "Sender MTA Reputation Analysis",
         "rdfs:subClassOf": {
@@ -564,7 +569,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SystemsAndMethodsForDetectingAnd_orHandlingTargetedAttacksInTheEmailChannel_GraphusInc",
+        "@id": "d3f:Reference-SystemsAndMethodsForDetectingAnd_orHandlingTargetedAttacksInTheEmailChannel_GraphusInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -599,7 +604,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

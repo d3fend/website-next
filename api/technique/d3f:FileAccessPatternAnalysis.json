@@ -40,12 +40,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -62,7 +57,7 @@
         "d3f:definition": "Analyzing the files accessed by a process to identify unauthorized activity.",
         "d3f:kb-article": "## How it works\nFile modifying malware such as wipers and ransomware are detected by identifying file access patterns that are associated with a malicious process. Examples of file access patterns include accessing a large number of files, accessing multiple file types, files being accessed located in multiple locations in a directory, and copying a file and encrypting the contents of that file into a copy.\n\n## Considerations\nCertain file access actions may not be statistically different from authorized activity.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_File-modifyingMalwareDetection_CrowdstrikeInc"
+          "@id": "d3f:Reference-File-modifyingMalwareDetection_CrowdstrikeInc"
         },
         "rdfs:label": "File Access Pattern Analysis",
         "rdfs:subClassOf": {
@@ -140,7 +135,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_File-modifyingMalwareDetection_CrowdstrikeInc",
+        "@id": "d3f:Reference-File-modifyingMalwareDetection_CrowdstrikeInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -170,12 +165,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

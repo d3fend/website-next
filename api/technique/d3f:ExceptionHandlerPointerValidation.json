@@ -40,12 +40,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -59,7 +54,7 @@
         "d3f:definition": "Validates that a referenced exception handler pointer is a valid exception handler.",
         "d3f:kb-article": "## How It Works\nWhen a process encounters an exception, it calls an exception handler to deal with the exception.  The method by which this exception handler is determined varies by the operating system.  The exception handler is called, even if it is the default exception handler to terminate the program and display a message that the program stopped working.  In the case that no valid exception handler is found, the program would fail to proceed as normal and could be programmed to terminate.\n\nIn Windows, the address of the exception registration record is stored at the very start of the the Thread Information Block; the GS register points to this structure.\n\nThe exception registration record contains two pointers: a pointer to the next exception registration record should this handler fail to handle the exception, and a pointer to the handler.\n\nA buffer overflow can overwrite the saved return pointer with an invalid location to execute memory; this often triggers the exception handler chain, which could also be corrupted by the buffer overflow.  Although Process Exception Handler Validation does not make sure that the exception handler pointer or the code at the exception handler was unaltered, or that the exception handler code is secure, this technique does ensure that the pointer is at least an exception handler that could be called by the program.\n\nWith Process Exception Handler Validation, before the handler is called, it checks the exception handler against a source of valid exception handlers.  If the requested handler is not in this list, other techniques such as those in Process Eviction might be invoked, such as Process Termination to end the current process, or Executable Blacklisting to blacklist the potentially vulnerable or malfunctioning executable.\n\n### Runtime valid exception handler source generation\nThe source of valid exception handlers could be generated at runtime, with the risk of the information that is used to determine the validity of exception handlers being compromised.\n\n### Compile-time\nThe source of valid exception handlers could also be generated at compile time or as a binary patch.  Given the source code, it would be rather straightforward to find the exceptions, as they are pointed in the catch statement of a try-catch clause and the compiler must already generate the code to call exceptions from this.\n\n## Considerations\nIf the program file can be altered by the attacker, then the security could be bypassed by replacing it with any desired program, without even bypassing SEH.\n\nIf the attacker was already able to overwrite the code for a valid exception handler via other functionality in the program, this defense would not prevent arbitrary code execution.\nIf an exception handler recognized as valid is vulnerable, it would be executed anyway.\n\nSafeSEH might be applied only to some executable files or modules, allowing an attacker to call any piece of code as an exception handler in the unprotected modules.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_SAFESEH_ImageHasSafeExceptionHandlers_MicrosoftDocs"
+          "@id": "d3f:Reference-SAFESEH_ImageHasSafeExceptionHandlers_MicrosoftDocs"
         },
         "d3f:synonym": "Exception Handler Validation",
         "d3f:validates": {
@@ -141,7 +136,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SAFESEH_ImageHasSafeExceptionHandlers_MicrosoftDocs",
+        "@id": "d3f:Reference-SAFESEH_ImageHasSafeExceptionHandlers_MicrosoftDocs",
         "@type": [
           "d3f:UserManualReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -171,12 +166,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

@@ -134,7 +134,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Deceive"
+            "value": "Model"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -147,23 +147,23 @@
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "Decoy Object"
+            "value": "Asset Inventory"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Decoy File"
+            "value": "Asset Vulnerability Enumeration"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "spoofs"
+            "value": "evaluates"
           },
           "def_artifact_label": {
             "type": "literal",
-            "value": "File"
+            "value": "Digital Artifact"
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Deceive"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -171,15 +171,15 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyFile"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#spoofs"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
           },
           "def_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
           }
         },
         {
@@ -287,6 +287,57 @@
         {
           "def_tactic_label": {
             "type": "literal",
+            "value": "Deceive"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Decoy Object"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Decoy File"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "spoofs"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Deceive"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyFile"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#spoofs"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
             "value": "Detect"
           },
           "def_tactic_rel_label": {
@@ -343,7 +394,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {

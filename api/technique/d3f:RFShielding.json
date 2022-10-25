@@ -57,7 +57,7 @@
             "@id": "d3f:Reference-PrivacyAndSecuritySystemsAndMethodsOfUse"
           },
           {
-            "@id": "d3f:Reference_-_Technical_Specifications_for_Construction_and_Management_of_Sensitive_Compartmented_Information_Facilities"
+            "@id": "d3f:Reference-Technical_Specifications_for_Construction_and_Management_of_Sensitive_Compartmented_Information_Facilities"
           }
         ],
         "rdfs:label": "RF Shielding",
@@ -105,10 +105,10 @@
         "d3f:kb-author": "Teddy David Thomas",
         "d3f:kb-reference-title": "Privacy and security systems and methods of use",
         "d3f:reference-type-label": "Patent",
-        "rdfs:label": "Reference -  Privacy and security systems and methods of use"
+        "rdfs:label": "Reference - Privacy and security systems and methods of use"
       },
       {
-        "@id": "d3f:Reference_-_Technical_Specifications_for_Construction_and_Management_of_Sensitive_Compartmented_Information_Facilities",
+        "@id": "d3f:Reference-Technical_Specifications_for_Construction_and_Management_of_Sensitive_Compartmented_Information_Facilities",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

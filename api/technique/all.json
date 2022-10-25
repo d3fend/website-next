@@ -646,7 +646,7 @@
     {
       "@id": "d3f:NetworkNodeInventory",
       "@type": "owl:Class",
-      "d3f:d3fend-id": "D3-SYSI",
+      "d3f:d3fend-id": "D3-NNI",
       "d3f:synonym": [
         "System Discovery",
         "System Inventorying"

@@ -54,7 +54,7 @@
         "d3f:definition": "Issuing publicly released media to deceive adversaries.",
         "d3f:kb-article": "## How it works\nPublicly released media includes press release, videos, or other marketing collateral. The media may include URLs, points of contact, or other identifiers to entice interaction from adversaries.\n\n## Considerations\n* Information used in decoy public released media must contain enough realism to deceive and provide interaction from adversaries.\n* Continuous development, creation, and distribution of media and identifiers are needed to ensure adversary interaction continues over time.\n* Decoy public releases could be placed on platforms with different degrees of ownership, including entirely enterprise-owned infrastructure, IaaS, and SaaS (including social applications). Platforms that are not entirely enterprise-owned may be more likely to gather information",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_MockAttackCybersecurityTrainingSystemAndMethods_WOMBATSECURITYTECHNOLOGIESInc"
+          "@id": "d3f:Reference-MockAttackCybersecurityTrainingSystemAndMethods_WOMBATSECURITYTECHNOLOGIESInc"
         },
         "rdfs:label": "Decoy Public Release",
         "rdfs:subClassOf": {
@@ -89,7 +89,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MockAttackCybersecurityTrainingSystemAndMethods_WOMBATSECURITYTECHNOLOGIESInc",
+        "@id": "d3f:Reference-MockAttackCybersecurityTrainingSystemAndMethods_WOMBATSECURITYTECHNOLOGIESInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

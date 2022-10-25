@@ -24,6 +24,52 @@
           },
           "off_artifact_rel_label": {
             "type": "literal",
+            "value": "loads"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Component Object Model Hijacking"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1546.015"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableBinary"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#loads"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.015"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Executable Binary"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
             "value": "modifies"
           },
           "off_tech_label": {
@@ -434,19 +480,19 @@
         {
           "off_artifact_label": {
             "type": "literal",
-            "value": "Executable Binary"
+            "value": "Executable File"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "loads"
+            "value": "executes"
           },
           "off_tech_label": {
             "type": "literal",
-            "value": "Component Object Model Hijacking"
+            "value": "Bypass User Access Control"
           },
           "off_tech_id": {
             "type": "literal",
-            "value": "T1546.015"
+            "value": "T1548.002"
           },
           "off_tactic_rel_label": {
             "type": "literal",
@@ -458,15 +504,153 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableBinary"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#loads"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#executes"
           },
           "off_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.015"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.002"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Executable File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Path Interception by PATH Environment Variable"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1574.007"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1574.007"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Executable File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Path Interception by Search Order Hijacking"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1574.008"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1574.008"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Executable File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Path Interception by Unquoted Path"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1574.009"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1574.009"
           },
           "off_tactic_rel": {
             "type": "uri",
@@ -1170,190 +1354,6 @@
         {
           "off_artifact_label": {
             "type": "literal",
-            "value": "Executable File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "executes"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bypass User Access Control"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1548.002"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#executes"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.002"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Executable File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Path Interception by PATH Environment Variable"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1574.007"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1574.007"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Executable File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Path Interception by Search Order Hijacking"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1574.008"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1574.008"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Executable File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Path Interception by Unquoted Path"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1574.009"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1574.009"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
             "value": "Executable Script"
           },
           "off_artifact_rel_label": {
@@ -1880,7 +1880,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Persistence"
+            "value": "Privilege Escalation"
           },
           "off_artifact": {
             "type": "uri",
@@ -1900,7 +1900,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
           }
         },
         {
@@ -1926,7 +1926,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Privilege Escalation"
+            "value": "Persistence"
           },
           "off_artifact": {
             "type": "uri",
@@ -1946,7 +1946,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
           }
         },
         {
@@ -2294,7 +2294,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Persistence"
+            "value": "Privilege Escalation"
           },
           "off_artifact": {
             "type": "uri",
@@ -2314,7 +2314,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
           }
         },
         {
@@ -2340,7 +2340,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Persistence"
+            "value": "Privilege Escalation"
           },
           "off_artifact": {
             "type": "uri",
@@ -2360,7 +2360,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
           }
         },
         {
@@ -2386,7 +2386,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Privilege Escalation"
+            "value": "Persistence"
           },
           "off_artifact": {
             "type": "uri",
@@ -2406,7 +2406,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
           }
         },
         {
@@ -2432,7 +2432,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Privilege Escalation"
+            "value": "Persistence"
           },
           "off_artifact": {
             "type": "uri",
@@ -2452,7 +2452,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
           }
         },
         {
@@ -2526,7 +2526,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Detect"
+            "value": "Model"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -2539,23 +2539,23 @@
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "File Analysis"
+            "value": "Asset Inventory"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Dynamic Analysis"
+            "value": "Asset Vulnerability Enumeration"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "analyzes"
+            "value": "evaluates"
           },
           "def_artifact_label": {
             "type": "literal",
-            "value": "Executable File"
+            "value": "Digital Artifact"
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -2563,21 +2563,21 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
           },
           "def_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
           }
         },
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Detect"
+            "value": "Isolate"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -2590,15 +2590,15 @@
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "File Analysis"
+            "value": "Execution Isolation"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Emulated File Analysis"
+            "value": "Executable Allowlisting"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "analyzes"
+            "value": "blocks"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -2606,7 +2606,7 @@
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -2614,11 +2614,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#EmulatedFileAnalysis"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
           },
           "def_artifact": {
             "type": "uri",
@@ -2679,7 +2679,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Isolate"
+            "value": "Detect"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -2692,15 +2692,15 @@
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "Execution Isolation"
+            "value": "File Analysis"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Executable Allowlisting"
+            "value": "Emulated File Analysis"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "blocks"
+            "value": "analyzes"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -2708,7 +2708,7 @@
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -2716,11 +2716,62 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#EmulatedFileAnalysis"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Dynamic Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Executable File"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
           },
           "def_artifact": {
             "type": "uri",
@@ -2939,7 +2990,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -2982,13 +3038,13 @@
             "@id": "d3f:UserInitScript"
           },
           {
-            "@id": "d3f:WebScriptFile"
-          },
-          {
             "@id": "d3f:SystemInitScript"
           },
           {
             "@id": "d3f:UserStartupScriptFile"
+          },
+          {
+            "@id": "d3f:WebScriptFile"
           }
         ],
         "rdfs:label": "Executable Script"
@@ -3144,12 +3200,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -3181,12 +3232,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {

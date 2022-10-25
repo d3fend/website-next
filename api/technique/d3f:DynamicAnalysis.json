@@ -6461,12 +6461,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -6489,10 +6484,10 @@
         "d3f:kb-article": "## How it works\nAnalyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.\n\n## Considerations\n * Malware often detects a fake environment, then changes its behavior accordingly. For example, it could detect that the system clock is being sped up in an effort to get it to execute commands that it would normally only execute at a later time, or that the hardware manufacturer of the machine is a virtualization provider.\n * Malware can attempt to determine if it is being debugged, and change its behavior accordingly.\n * For maximum fidelity, the simulated and real environments should be as similar as possible because the malware could perform differently in different environments.\n * Sometimes the malware behavior is triggered only under certain conditions (on a specific system date, after a certain time, or after it is sent a specific command) and can't be detected through a short execution in a virtual environment.\n\n## Implementations\n* [Cuckoo Sandbox](https://cuckoosandbox.org)",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_MalwareAnalysisSystem_PaloAltoNetworksInc"
+            "@id": "d3f:Reference-MalwareAnalysisSystem_PaloAltoNetworksInc"
           },
           {
-            "@id": "d3f:Reference_UseOfAnApplicationControllerToMonitorAndControlSoftwareFileAndApplicationEnvironments_SophosLtd"
+            "@id": "d3f:Reference-UseOfAnApplicationControllerToMonitorAndControlSoftwareFileAndApplicationEnvironments_SophosLtd"
           }
         ],
         "d3f:synonym": [
@@ -6617,7 +6612,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MalwareAnalysisSystem_PaloAltoNetworksInc",
+        "@id": "d3f:Reference-MalwareAnalysisSystem_PaloAltoNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -6638,7 +6633,7 @@
         "rdfs:label": "Reference - Malware analysis system - Palo Alto Networks Inc"
       },
       {
-        "@id": "d3f:Reference_UseOfAnApplicationControllerToMonitorAndControlSoftwareFileAndApplicationEnvironments_SophosLtd",
+        "@id": "d3f:Reference-UseOfAnApplicationControllerToMonitorAndControlSoftwareFileAndApplicationEnvironments_SophosLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -6668,12 +6663,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

@@ -1111,7 +1111,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -1128,13 +1133,13 @@
         "d3f:definition": "Analysis of any system process startup configuration.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:AutorunDifferences_"
+            "@id": "d3f:Reference-AutorunDifferences_MITRE"
           },
           {
-            "@id": "d3f:Reference-CAR-2020-11-001%3ABootOrLogonInitializationScripts-MITRE"
+            "@id": "d3f:Reference-CAR-2020-09-005%3AAppInitDLLs_MITRE"
           },
           {
-            "@id": "d3f:Reference-CAR-2020-09-005%3AAppInitDLLs-MITRE"
+            "@id": "d3f:Reference-CAR-2020-11-001%3ABootOrLogonInitializationScripts_MITRE"
           }
         ],
         "d3f:synonym": [
@@ -1218,7 +1223,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:AutorunDifferences_",
+        "@id": "d3f:Reference-AutorunDifferences_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1236,10 +1241,10 @@
         },
         "d3f:kb-reference-title": "CAR-2013-01-002: Autorun Differences",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-01-002: Autorun Differences -"
+        "rdfs:label": "Reference - CAR-2013-01-002: Autorun Differences - MITRE"
       },
       {
-        "@id": "d3f:Reference-CAR-2020-09-005%3AAppInitDLLs-MITRE",
+        "@id": "d3f:Reference-CAR-2020-09-005%3AAppInitDLLs_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1259,7 +1264,7 @@
         "rdfs:label": "Reference - CAR-2020-09-005: AppInit DLLs - MITRE"
       },
       {
-        "@id": "d3f:Reference-CAR-2020-11-001%3ABootOrLogonInitializationScripts-MITRE",
+        "@id": "d3f:Reference-CAR-2020-11-001%3ABootOrLogonInitializationScripts_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1288,7 +1293,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

@@ -2198,7 +2198,7 @@
         "d3f:definition": "Detecting anomalies in user access patterns by comparing user access activity to behavioral profiles that categorize users by role such as job title, function, department.",
         "d3f:kb-article": "## How it works\nPeer group analysis identifies functionally similar groups of actors (users or resources) based on categorizations such as job title, organizational hierarchy, or other attribute that indicates similarity of job function. Current user access activity is then compared to the appropriate peer group behavior profile to identify anomalies.\n\n## Considerations\nPotential for false positives from anomalies that are not associated with malicious activity.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_AnomalyDetectionUsingAdaptiveBehavioralProfiles_SecuronixInc"
+          "@id": "d3f:Reference-AnomalyDetectionUsingAdaptiveBehavioralProfiles_SecuronixInc"
         },
         "rdfs:label": "Job Function Access Pattern Analysis",
         "rdfs:subClassOf": {
@@ -2276,7 +2276,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_AnomalyDetectionUsingAdaptiveBehavioralProfiles_SecuronixInc",
+        "@id": "d3f:Reference-AnomalyDetectionUsingAdaptiveBehavioralProfiles_SecuronixInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

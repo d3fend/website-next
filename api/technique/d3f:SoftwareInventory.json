@@ -5730,13 +5730,13 @@
         "d3f:kb-article": "## How it works\nAdministrators collect information on software items in their architecture using a variety of administrative and management tools that query network nodes for information.  In limited cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through network enumeration methods to determine services responding on network nodes.\"\n\n## Considerations\n* Scanning and probing techniques using mapping tools can result in side effects to information technology (IT) and operational technology (OT) systems.\n* An adversary conducting network enumeration may engage in activities that parallel normal software inventorying activities, but would require escalating to admin privileges for most of the operations requiting administrative tools.\n\n## Examples\n\nApplication-layer discovery:\n\n* Simple Network Management Protocol (SNMP) collects MIB information\n* Web-based Enterprise Management (WBEM) collects CIM information\n   * Windows Management Instrumentation (WMI)\n   * Windows Management Infrastructure (MI)",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_Windows-Management-Instrumentation"
+            "@id": "d3f:Reference-Web-BasedEnterpriseManagement"
           },
           {
-            "@id": "d3f:Reference_Web-BasedEnterpriseManagement"
+            "@id": "d3f:Reference-Windows-Management-Infrastructure"
           },
           {
-            "@id": "d3f:Reference_Windows-Management-Infrastructure"
+            "@id": "d3f:Reference-Windows-Management-Instrumentation"
           }
         ],
         "d3f:synonym": [
@@ -5819,7 +5819,36 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_Windows-Management-Infrastructure",
+        "@id": "d3f:Reference-Web-BasedEnterpriseManagement",
+        "@type": [
+          "d3f:SpecificationReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://www.dmtf.org/standards/wbem"
+        },
+        "d3f:kb-organization": "Distributed Management Task Force (DMTF)",
+        "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:ConfigurationInventory"
+          },
+          {
+            "@id": "d3f:HardwareInventory"
+          },
+          {
+            "@id": "d3f:SoftwareInventory"
+          },
+          {
+            "@id": "d3f:NetworkNodeInventory"
+          }
+        ],
+        "d3f:kb-reference-title": "Web-Based Enterprise Management",
+        "d3f:reference-type-label": "Specification",
+        "rdfs:label": "Reference - Web-Based Enterprise Management"
+      },
+      {
+        "@id": "d3f:Reference-Windows-Management-Infrastructure",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5830,6 +5859,9 @@
         },
         "d3f:kb-organization": "Microsoft",
         "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:ConfigurationInventory"
+          },
           {
             "@id": "d3f:HardwareInventory"
           },
@@ -5845,7 +5877,7 @@
         "rdfs:label": "Reference - Windows Management Infrastructure (MI)"
       },
       {
-        "@id": "d3f:Reference_Windows-Management-Instrumentation",
+        "@id": "d3f:Reference-Windows-Management-Instrumentation",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5876,7 +5908,7 @@
     ]
   },
   "references_meta": {
-    "Specification": 2
+    "Specification": 3
   },
   "subtechniques": {
     "@context": {

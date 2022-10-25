@@ -7959,12 +7959,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -7982,28 +7977,28 @@
         "d3f:kb-article": "## How it works\n\nSystem calls are APIs between a user application and the operating system [1].\n\nBy analyzing a process's use of these APIs, it is, in some cases, possible to ascertain whether a program is exhibiting unauthorized behavior, including trying to escalate its privileges.\n\n### Gathering System Calls\nA common method to capture system calls is to use kernel APIs to hook [2] a process's system call invocations.\n\nThe Linux system call `ptrace` tracks other system calls in a process and allows their alteration; this is made use of by GDB.  `strace` utilizes `ptrace` and will print to stdout each system call invoked. Other applications record this data in local or remote databases.\n\nThe log entry for each system call, which may reference additional information such as the date and time, and the process tree for the process which made the system call, is relayed, in real time or post-facto, to an analysis module which consults a catalog or model to determine whether the distribution matches a known-good or known-bad pattern.\n\n\n### Analysis\n\nSystem calls are analyzed with a variety of methods. Some analytics look for specific sequences of instructions, others may apply statistical methods to identify abnormal behavior. Sequences of instructions can be abstracted into conceptually higher order user activities, for example:\n\n* An attacker executes many system calls in a short period of time, with several sequences which could be used to escalate privileges.\n* Getting the contents from a URL, writing to a new file, and then executing the same file.\n* A ransomware program which either uses a loop or creates many threads to: read a specified file, encrypt its contents, create an output file with a similar name to the original file, and delete the unencrypted original.\n\n## Considerations\n\n* Duplicative or extraneous system calls may be added to malware to defeat analytics.\n* Malware could replace API hooking instructions to allow system calls to be made without being monitored.\n* A model built from a training set of system calls and related data may not be updated fast enough to detect new threats.\n\n\n[1] [Syscalls](http://man7.org/linux/man-pages/man2/syscalls.2.html)\n\n[2] [Hooking](http://dbpedia.org/resource/Hooking)",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:CredentialDumpingViaWindowsTaskManager_MITRE"
+            "@id": "d3f:Reference-CAR-2020-05-001%3AMiniDumpOfLSASS_MITRE"
           },
           {
-            "@id": "d3f:DLLInjectionViaLoadLibrary_MITRE"
+            "@id": "d3f:Reference-CAR-2021-05-011%3ACreateRemoteThreadIntoLSASS_MITRE"
           },
           {
-            "@id": "d3f:Reference_DeterministicMethodForDetectingAndBlockingOfExploitsOnInterpretedCode_K2CyberSecurityInc"
+            "@id": "d3f:Reference-CredentialDumpingViaWindowsTaskManager_MITRE"
           },
           {
-            "@id": "d3f:Reference_Hardware-assistedSystemAndMethodForDetectingAndAnalyzingSystemCallsMadeToAnOpertingSystemKernel_EndgameInc"
+            "@id": "d3f:Reference-DeterministicMethodForDetectingAndBlockingOfExploitsOnInterpretedCode_K2CyberSecurityInc"
           },
           {
-            "@id": "d3f:Reference_MalwareDetectionInEventLoops_CrowdstrikeInc"
+            "@id": "d3f:Reference-DLLInjectionViaLoadLibrary_MITRE"
           },
           {
-            "@id": "d3f:Reference_PostSandboxMethodsAndSystemsForDetectingAndBlockingZero-dayExploitsViaApiCallValidation_K2CyberSecurityInc"
+            "@id": "d3f:Reference-Hardware-assistedSystemAndMethodForDetectingAndAnalyzingSystemCallsMadeToAnOpertingSystemKernel_EndgameInc"
           },
           {
-            "@id": "d3f:Reference-CAR-2020-05-001%3AMiniDumpOfLSASS-MITRE"
+            "@id": "d3f:Reference-MalwareDetectionInEventLoops_CrowdstrikeInc"
           },
           {
-            "@id": "d3f:Reference-CAR-2021-05-011%3ACreateRemoteThreadIntoLSASS-MITRE"
+            "@id": "d3f:Reference-PostSandboxMethodsAndSystemsForDetectingAndBlockingZero-dayExploitsViaApiCallValidation_K2CyberSecurityInc"
           }
         ],
         "rdfs:label": "System Call Analysis",
@@ -8082,7 +8077,47 @@
     },
     "@graph": [
       {
-        "@id": "d3f:CredentialDumpingViaWindowsTaskManager_MITRE",
+        "@id": "d3f:Reference-CAR-2020-05-001%3AMiniDumpOfLSASS_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2020-05-001/"
+        },
+        "d3f:kb-abstract": "This analytic detects the minidump variant of credential dumping where a process opens lsass.exe in order to extract credentials using the Win32 API call MiniDumpWriteDump. Tools like SafetyKatz, SafetyDump, and Outflank-Dumpert default to this variant and may be detected by this analytic, though keep in mind that not all options for using those tools will result in this specific behavior.\n\nThe analytic is based on a Sigma analytic contributed by Samir Bousseaden and written up in a blog on MENASEC. It looks for a call trace that includes either dbghelp.dll or dbgcore.dll, which export the relevant functions/permissions to perform the dump. It also detects using the Windows Task Manager (taskmgr.exe) to dump lsass, which is described in CAR-2019-08-001. In this iteration of the Sigma analytic, the GrantedAccess filter isn’t included because it didn’t seem to filter out any false positives and introduces the potential for evasion.\n\nThis analytic was tested both in a lab and in a production environment with a very low false-positive rate. werfault.exe and tasklist.exe, both standard Windows processes, showed up multiple times as false positives.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:SystemCallAnalysis"
+        },
+        "d3f:kb-reference-title": "CAR-2020-05-001: MiniDump of LSASS",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2020-05-001: MiniDump of LSASS - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-CAR-2021-05-011%3ACreateRemoteThreadIntoLSASS_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2021-05-011/"
+        },
+        "d3f:kb-abstract": "Actors may create a remote thread into the LSASS service as part of a workflow to dump credentials.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:SystemCallAnalysis"
+        },
+        "d3f:kb-reference-title": "CAR-2021-05-011: Create Remote Thread into LSASS",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2021-05-011: Create Remote Thread into LSASS - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-CredentialDumpingViaWindowsTaskManager_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -8103,7 +8138,7 @@
         "rdfs:label": "Reference - CAR-2019-08-001: Credential Dumping via Windows Task Manager - MITRE"
       },
       {
-        "@id": "d3f:DLLInjectionViaLoadLibrary_MITRE",
+        "@id": "d3f:Reference-DLLInjectionViaLoadLibrary_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -8124,47 +8159,7 @@
         "rdfs:label": "Reference - CAR-2013-10-002: DLL Injection via Load Library - MITRE"
       },
       {
-        "@id": "d3f:Reference-CAR-2020-05-001%3AMiniDumpOfLSASS-MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2020-05-001/"
-        },
-        "d3f:kb-abstract": "This analytic detects the minidump variant of credential dumping where a process opens lsass.exe in order to extract credentials using the Win32 API call MiniDumpWriteDump. Tools like SafetyKatz, SafetyDump, and Outflank-Dumpert default to this variant and may be detected by this analytic, though keep in mind that not all options for using those tools will result in this specific behavior.\n\nThe analytic is based on a Sigma analytic contributed by Samir Bousseaden and written up in a blog on MENASEC. It looks for a call trace that includes either dbghelp.dll or dbgcore.dll, which export the relevant functions/permissions to perform the dump. It also detects using the Windows Task Manager (taskmgr.exe) to dump lsass, which is described in CAR-2019-08-001. In this iteration of the Sigma analytic, the GrantedAccess filter isn’t included because it didn’t seem to filter out any false positives and introduces the potential for evasion.\n\nThis analytic was tested both in a lab and in a production environment with a very low false-positive rate. werfault.exe and tasklist.exe, both standard Windows processes, showed up multiple times as false positives.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:SystemCallAnalysis"
-        },
-        "d3f:kb-reference-title": "CAR-2020-05-001: MiniDump of LSASS",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2020-05-001: MiniDump of LSASS - MITRE"
-      },
-      {
-        "@id": "d3f:Reference-CAR-2021-05-011%3ACreateRemoteThreadIntoLSASS-MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2021-05-011/"
-        },
-        "d3f:kb-abstract": "Actors may create a remote thread into the LSASS service as part of a workflow to dump credentials.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:SystemCallAnalysis"
-        },
-        "d3f:kb-reference-title": "CAR-2021-05-011: Create Remote Thread into LSASS",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2021-05-011: Create Remote Thread into LSASS - MITRE"
-      },
-      {
-        "@id": "d3f:Reference_DeterministicMethodForDetectingAndBlockingOfExploitsOnInterpretedCode_K2CyberSecurityInc",
+        "@id": "d3f:Reference-DeterministicMethodForDetectingAndBlockingOfExploitsOnInterpretedCode_K2CyberSecurityInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -8185,7 +8180,7 @@
         "rdfs:label": "Reference - Deterministic method for detecting and blocking of exploits on interpreted code - K2 Cyber Security Inc"
       },
       {
-        "@id": "d3f:Reference_Hardware-assistedSystemAndMethodForDetectingAndAnalyzingSystemCallsMadeToAnOpertingSystemKernel_EndgameInc",
+        "@id": "d3f:Reference-Hardware-assistedSystemAndMethodForDetectingAndAnalyzingSystemCallsMadeToAnOpertingSystemKernel_EndgameInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -8206,7 +8201,7 @@
         "rdfs:label": "Reference - Hardware-assisted system and method for detecting and analyzing system calls made to an operting system kernel - Endgame Inc"
       },
       {
-        "@id": "d3f:Reference_MalwareDetectionInEventLoops_CrowdstrikeInc",
+        "@id": "d3f:Reference-MalwareDetectionInEventLoops_CrowdstrikeInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -8227,7 +8222,7 @@
         "rdfs:label": "Reference - Malware detection in event loops - Crowdstrike Inc"
       },
       {
-        "@id": "d3f:Reference_PostSandboxMethodsAndSystemsForDetectingAndBlockingZero-dayExploitsViaApiCallValidation_K2CyberSecurityInc",
+        "@id": "d3f:Reference-PostSandboxMethodsAndSystemsForDetectingAndBlockingZero-dayExploitsViaApiCallValidation_K2CyberSecurityInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -8258,12 +8253,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {

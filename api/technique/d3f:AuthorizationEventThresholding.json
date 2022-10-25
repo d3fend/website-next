@@ -2203,16 +2203,16 @@
         "d3f:kb-article": "## How it works\n\nAuthorization event data is collected to create a baseline user profile. Authorization events that deviate from the baseline and exceed a static or dynamic threshold are identified for further action. Authorization events can include successful and failed authorization attempts as well as events related to permissions including viewing, editing, deleting, creating files, databases etc.\n\n## Considerations\n\nDepending on the complexity of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If malicious activity is not statistically different from benign activity, an alert threshold will not be met.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC"
+            "@id": "d3f:Reference-MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC"
           },
           {
-            "@id": "d3f:Reference_System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc"
+            "@id": "d3f:Reference-SMBSessionSetups_MITRE"
           },
           {
-            "@id": "d3f:SMBSessionSetups_MITRE"
+            "@id": "d3f:Reference-System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc"
           },
           {
-            "@id": "d3f:UserLoggedInToMultipleHosts_MITRE"
+            "@id": "d3f:Reference-UserLoggedInToMultipleHosts_MITRE"
           }
         ],
         "rdfs:label": "Authorization Event Thresholding",
@@ -2291,7 +2291,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC",
+        "@id": "d3f:Reference-MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -2326,7 +2326,33 @@
         "rdfs:label": "Reference - Method and Apparatus for Network Fraud Detection and Remediation Through Analytics - Idaptive LLC"
       },
       {
-        "@id": "d3f:Reference_System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc",
+        "@id": "d3f:Reference-SMBSessionSetups_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2013-09-003/"
+        },
+        "d3f:kb-abstract": "Account usage within SMB can be used to identify compromised credentials, and the hosts accessed with them.\n\nThis analytic monitors SMB activity that deals with user activity rather than file activity.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-mitre-analysis": "",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:AuthorizationEventThresholding"
+          },
+          {
+            "@id": "d3f:IPCTrafficAnalysis"
+          }
+        ],
+        "d3f:kb-reference-title": "CAR-2013-09-003: SMB Session Setups",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2013-09-003: SMB Session Setups - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -2361,33 +2387,7 @@
         "rdfs:label": "Reference - System, method, and computer program product for detecting and assessing security risks in a network - Exabeam Inc"
       },
       {
-        "@id": "d3f:SMBSessionSetups_MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2013-09-003/"
-        },
-        "d3f:kb-abstract": "Account usage within SMB can be used to identify compromised credentials, and the hosts accessed with them.\n\nThis analytic monitors SMB activity that deals with user activity rather than file activity.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-mitre-analysis": "",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": [
-          {
-            "@id": "d3f:AuthorizationEventThresholding"
-          },
-          {
-            "@id": "d3f:IPCTrafficAnalysis"
-          }
-        ],
-        "d3f:kb-reference-title": "CAR-2013-09-003: SMB Session Setups",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-09-003: SMB Session Setups - MITRE"
-      },
-      {
-        "@id": "d3f:UserLoggedInToMultipleHosts_MITRE",
+        "@id": "d3f:Reference-UserLoggedInToMultipleHosts_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

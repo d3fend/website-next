@@ -63,13 +63,13 @@
         },
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_CatiaUAFPlugin"
+            "@id": "d3f:Reference-CatiaUAFPlugin"
           },
           {
-            "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF"
+            "@id": "d3f:Reference-OrganizationalManagementInSAPERPHCM"
           },
           {
-            "@id": "d3f:Reference_OrganizationalManagementInSAPERPHCM"
+            "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF"
           }
         ],
         "d3f:maps": {
@@ -151,7 +151,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_CatiaUAFPlugin",
+        "@id": "d3f:Reference-CatiaUAFPlugin",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -187,7 +187,7 @@
         "rdfs:label": "Reference - Catia UAF Plugin"
       },
       {
-        "@id": "d3f:Reference_OrganizationalManagementInSAPERPHCM",
+        "@id": "d3f:Reference-OrganizationalManagementInSAPERPHCM",
         "@type": [
           "d3f:BookReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -203,10 +203,10 @@
         },
         "d3f:kb-reference-title": "Organization Mapping in SAP ERP HCM",
         "d3f:reference-type-label": "Book",
-        "rdfs:label": "Organizational Management in SAP ERP HCM"
+        "rdfs:label": "Reference - Organizational Management in SAP ERP HCM"
       },
       {
-        "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF",
+        "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -239,7 +239,7 @@
         ],
         "d3f:kb-reference-title": "Unified Architecture Framework (UAF)",
         "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Unified Architecture Framework (UAF)"
+        "rdfs:label": "Reference - Unified Architecture Framework (UAF)"
       }
     ]
   },

@@ -5195,13 +5195,13 @@
         "d3f:kb-article": "## How it works\nProcess isolation, in this context, is address space separation controlled by a security function that limits the communication between processes so that one process cannot directly modify the executing code of another process. For example with virtual address space:\n\n* Process A address space is different from process B address space, which prevents process A from writing to process B\n\nHardware process isolation is commonly implemented through Direct Memory Access (DMA) which collaborates with a Memory Management Unit (MMU), or Input-Output Memory Management Unit (IOMMU). These hardware controls are deployed directly on processors to aid hosts or enclaves in process isolation.\n\n* DMA - Direct memory access allows memory access to occur independently of the program currently run by the microprocessor. DMA allows for I/O devices to directly read from and write to memory, or it can be used to efficiently copy blocks of memory. During DMA transfers, the microprocessor can execute an unrelated program.\n* MMU - A memory management unit acts as an access control and is responsible for performing the translation of virtual memory addresses to physical memory addresses. The MMU allocates each process its own virtual memory space.\n* IOMMU - An input-output memory management unit is used to allocate each I/O device its own virtual address space to the underlying physical addresses. IOMMU allows devices that do not support long memory addresses to address the entire memory space.\n\n## Considerations\n* Private hosts may be vulnerable to DMA attack if they have a PCI or PCI Express port that connects attached devices directly to physical address space.\n\n## Implementations:\n * Intel Virtualization Technology for Directed I/O (Intel VT-d)\n * Firecracker",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_ApproachesForSecuringAnInternetEndpointUsingFine-grainedOperatingSystemVirtualization_Bromium,Inc."
+            "@id": "d3f:Reference-ApproachesForSecuringAnInternetEndpointUsingFine-grainedOperatingSystemVirtualization_Bromium,Inc."
           },
           {
-            "@id": "d3f:Reference_IsolationOfApplicationsWithinAVirtualMachine_Bromium,Inc."
+            "@id": "d3f:Reference-IsolationOfApplicationsWithinAVirtualMachine_Bromium,Inc."
           },
           {
-            "@id": "d3f:Reference_VirtualizedProcessIsolation_AdvancedMicroDevicesInc"
+            "@id": "d3f:Reference-VirtualizedProcessIsolation_AdvancedMicroDevicesInc"
           }
         ],
         "d3f:restricts": {
@@ -5326,7 +5326,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_ApproachesForSecuringAnInternetEndpointUsingFine-grainedOperatingSystemVirtualization_Bromium,Inc.",
+        "@id": "d3f:Reference-ApproachesForSecuringAnInternetEndpointUsingFine-grainedOperatingSystemVirtualization_Bromium,Inc.",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5347,7 +5347,7 @@
         "rdfs:label": "Reference - Approaches for securing an internet endpoint using fine-grained operating system virtualization - Bromium, Inc."
       },
       {
-        "@id": "d3f:Reference_IsolationOfApplicationsWithinAVirtualMachine_Bromium,Inc.",
+        "@id": "d3f:Reference-IsolationOfApplicationsWithinAVirtualMachine_Bromium,Inc.",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5368,7 +5368,7 @@
         "rdfs:label": "Reference - Isolation of applications within a virtual machine - Bromium, Inc."
       },
       {
-        "@id": "d3f:Reference_VirtualizedProcessIsolation_AdvancedMicroDevicesInc",
+        "@id": "d3f:Reference-VirtualizedProcessIsolation_AdvancedMicroDevicesInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

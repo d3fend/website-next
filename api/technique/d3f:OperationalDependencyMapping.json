@@ -54,22 +54,22 @@
         "d3f:definition": "Operational dependency mapping identifies and models the dependencies of the organization's activities on each other and on the organization's performers (people, systems, and services.)  This may include modeling the higher- and lower-level activities of an organization forming a hierarchy, or layering, of the dependencies in an organization's activities.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_CatiaUAFPlugin"
+            "@id": "d3f:Reference-CatiaUAFPlugin"
           },
           {
-            "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF"
+            "@id": "d3f:Reference-CyberCommandSystemCYCS"
           },
           {
-            "@id": "d3f:Reference_CyberCommandSystemCYCS"
+            "@id": "d3f:Reference-DaggerFactSheet"
           },
           {
-            "@id": "d3f:Reference_DaggerFactSheet"
+            "@id": "d3f:Reference-DaggerModelingAndVisualizationForMissionImpactSituationalAwareness"
           },
           {
-            "@id": "d3f:Reference_DaggerModelingAndVisualizationForMissionImpactSituationalAwareness"
+            "@id": "d3f:Reference-MissionDependencyModelingForCyberSituationalAwareness"
           },
           {
-            "@id": "d3f:Reference_MissionDependencyModelingForCyberSituationalAwareness"
+            "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF"
           }
         ],
         "d3f:maps": {
@@ -151,7 +151,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_CatiaUAFPlugin",
+        "@id": "d3f:Reference-CatiaUAFPlugin",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -187,7 +187,7 @@
         "rdfs:label": "Reference - Catia UAF Plugin"
       },
       {
-        "@id": "d3f:Reference_CyberCommandSystemCYCS",
+        "@id": "d3f:Reference-CyberCommandSystemCYCS",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -206,7 +206,7 @@
         "rdfs:label": "Reference - Cyber Command System (CYCS)"
       },
       {
-        "@id": "d3f:Reference_DaggerFactSheet",
+        "@id": "d3f:Reference-DaggerFactSheet",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -226,7 +226,7 @@
         "rdfs:label": "Reference - Dagger Fact Sheet"
       },
       {
-        "@id": "d3f:Reference_DaggerModelingAndVisualizationForMissionImpactSituationalAwareness",
+        "@id": "d3f:Reference-DaggerModelingAndVisualizationForMissionImpactSituationalAwareness",
         "@type": [
           "d3f:AcademicPaperReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -246,7 +246,7 @@
         "rdfs:label": "Reference - Dagger: Modeling and visualization for mission impact situational awareness"
       },
       {
-        "@id": "d3f:Reference_MissionDependencyModelingForCyberSituationalAwareness",
+        "@id": "d3f:Reference-MissionDependencyModelingForCyberSituationalAwareness",
         "@type": [
           "d3f:AcademicPaperReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -266,7 +266,7 @@
         "rdfs:label": "Reference - Mission Dependency Modeling for Cyber Situational Awareness"
       },
       {
-        "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF",
+        "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -299,7 +299,7 @@
         ],
         "d3f:kb-reference-title": "Unified Architecture Framework (UAF)",
         "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Unified Architecture Framework (UAF)"
+        "rdfs:label": "Reference - Unified Architecture Framework (UAF)"
       }
     ]
   },

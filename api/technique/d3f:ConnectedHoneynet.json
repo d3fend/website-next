@@ -148,7 +148,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -162,7 +167,7 @@
         "d3f:definition": "A decoy service, system, or environment, that is connected to the enterprise network, and simulates or emulates certain functionality to the network, without exposing full access to a production system.",
         "d3f:kb-article": "## How it works\nDecoy honeypots are deployed within the enterprise environment that emulate certain services or portions of an OS to attract attackers.\n\n## Considerations\nA connected honeynet provides a tradeoff between emulating certain functionality but not being as sophisticated as an integrated honeynet. The connected honeynet may not provide enough functionality to detect new attack patterns or zero day exploits but could provide enough functionality for specific known vulnerabilities.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_ModificationOfAServerToMimicADeceptionMechanism_AcalvioTechnologiesInc"
+          "@id": "d3f:Reference-ModificationOfAServerToMimicADeceptionMechanism_AcalvioTechnologiesInc"
         },
         "d3f:spoofs": {
           "@id": "d3f:LocalAreaNetwork"
@@ -285,7 +290,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_ModificationOfAServerToMimicADeceptionMechanism_AcalvioTechnologiesInc",
+        "@id": "d3f:Reference-ModificationOfAServerToMimicADeceptionMechanism_AcalvioTechnologiesInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -315,7 +320,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

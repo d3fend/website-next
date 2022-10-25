@@ -2716,12 +2716,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -2738,7 +2733,7 @@
         "d3f:definition": "Analyzing failed connections in a network to detect unauthorized activity.",
         "d3f:kb-article": "## How it works\nConnection Attempt Analysis in multiple ways.\n\n### Monitoring traffic to unallocated IP space\nOne approach looks for failed connection attempts against unallocated IP space. First, network traffic is captured to map out the network to identify network assets as well as unallocated IP space. The map is then used to determine if connection attempts are being made to the unallocated IP space.\n\n### Monitoring for sequentially transmitted traffic\nAnother approach passively inspects network traffic with application protocol analyzers observing network activity characteristics such as volume of packets sent/ received, TCP session attributes, and connection information between hosts (start time, source/destination host, services, etc.). Then using pattern matching to identify traffic which appears to be probing for network hosts.\n\n## Considerations\n\n* Implementations that rely on analysis of unallocated IP address space increase in their complexity with network size and decentralized network infrastructure.\n* Inventory of unallocated IP space should should be continuously updated to mitigate the risk of false positives.\n* IPv6 also introduces challenges including IPv6 traffic bypassing IPv4 specific protection systems (ex. firewalls and IDS) and complexity in managing both IPv6 and IPv4 addresses.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_DetectingNetworkReconnaissanceByTrackingIntranetDark-netCommunications_VECTRANETWORKSInc"
+          "@id": "d3f:Reference-DetectingNetworkReconnaissanceByTrackingIntranetDark-netCommunications_VECTRANETWORKSInc"
         },
         "d3f:synonym": "Network Scan Detection",
         "rdfs:label": "Connection Attempt Analysis",
@@ -2817,7 +2812,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_DetectingNetworkReconnaissanceByTrackingIntranetDark-netCommunications_VECTRANETWORKSInc",
+        "@id": "d3f:Reference-DetectingNetworkReconnaissanceByTrackingIntranetDark-netCommunications_VECTRANETWORKSInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -2847,12 +2842,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

@@ -58,10 +58,10 @@
             "@id": "d3f:StandaloneHoneynet"
           },
           {
-            "@id": "d3f:ConnectedHoneynet"
+            "@id": "d3f:IntegratedHoneynet"
           },
           {
-            "@id": "d3f:IntegratedHoneynet"
+            "@id": "d3f:ConnectedHoneynet"
           }
         ],
         "rdfs:label": "Decoy Environment"

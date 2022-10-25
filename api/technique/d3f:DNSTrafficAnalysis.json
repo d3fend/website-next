@@ -683,12 +683,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -706,19 +701,19 @@
         "d3f:kb-article": "## How it works\nThis technique can be accomplished in a number of ways.\n\n* One example analytic determines whether or not a domain name was generated with an algorithm. Domain generation algorithms (DGAs) are sometimes used to create a domain name automatically  that will resolve to C2 infrastructure, without directly coding the domains in question into the malicious code.\n* Another method analyzes information about domains that have been visited, including whether a domain name is longer than a common length,  if a dynamic DNS domain was visited, if a fast-flux domain was visited, and if a recently created domain was visited. These factors are used to develop a score and if that score is over a certain threshold, an alert is generated.\n* Collected malware samples can be executed in a virtual environment to identify network domains that are connected to during execution. The network domains are then generated into signatures to identity bad domains for other hosts.\n\nThis technique does not check for content hosted at the domain.\n\n## Considerations\n\n* DNS produces a large amount of traffic which can be resource-intensive to analyze in real time.\n* If a server is compromised, for example, as part of a watering hole attack, but the DNS information pointing to that server is not altered, this technique would not catch such an incident.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_DomainAgeRegistrationAlert_IncRapid7IncRAPID7Inc"
+            "@id": "d3f:Reference-DomainAgeRegistrationAlert_IncRapid7IncRAPID7Inc"
           },
           {
-            "@id": "d3f:Reference_HeuristicBotnetDetection_PaloAltoNetworksInc"
+            "@id": "d3f:Reference-HeuristicBotnetDetection_PaloAltoNetworksInc"
           },
           {
-            "@id": "d3f:Reference_MethodAndSystemForDetectingAlgorithm-generatedDomains_VECTRANETWORKSInc"
+            "@id": "d3f:Reference-MethodAndSystemForDetectingAlgorithm-generatedDomains_VECTRANETWORKSInc"
           },
           {
-            "@id": "d3f:Reference_PredictingDomainGenerationAlgorithmsWithLongShort-TermMemoryNetworks_"
+            "@id": "d3f:Reference-PredictingDomainGenerationAlgorithmsWithLongShort-TermMemoryNetworks_"
           },
           {
-            "@id": "d3f:Reference_SinkholingBadNetworkDomainsByRegisteringTheBadNetworkDomainsOnTheInternet_PaloAltoNetworksInc"
+            "@id": "d3f:Reference-SinkholingBadNetworkDomainsByRegisteringTheBadNetworkDomainsOnTheInternet_PaloAltoNetworksInc"
           }
         ],
         "d3f:may-contain": {
@@ -843,7 +838,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_DomainAgeRegistrationAlert_IncRapid7IncRAPID7Inc",
+        "@id": "d3f:Reference-DomainAgeRegistrationAlert_IncRapid7IncRAPID7Inc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -864,7 +859,7 @@
         "rdfs:label": "Reference - Domain age registration alert - Inc Rapid7 Inc RAPID7 Inc"
       },
       {
-        "@id": "d3f:Reference_HeuristicBotnetDetection_PaloAltoNetworksInc",
+        "@id": "d3f:Reference-HeuristicBotnetDetection_PaloAltoNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -885,7 +880,7 @@
         "rdfs:label": "Reference - Heuristic botnet detection - Palo Alto Networks Inc"
       },
       {
-        "@id": "d3f:Reference_MethodAndSystemForDetectingAlgorithm-generatedDomains_VECTRANETWORKSInc",
+        "@id": "d3f:Reference-MethodAndSystemForDetectingAlgorithm-generatedDomains_VECTRANETWORKSInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -906,7 +901,7 @@
         "rdfs:label": "Reference - Method and system for detecting algorithm-generated domains - VECTRA NETWORKS Inc"
       },
       {
-        "@id": "d3f:Reference_PredictingDomainGenerationAlgorithmsWithLongShort-TermMemoryNetworks_",
+        "@id": "d3f:Reference-PredictingDomainGenerationAlgorithmsWithLongShort-TermMemoryNetworks_",
         "@type": [
           "d3f:AcademicPaperReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -924,10 +919,10 @@
         },
         "d3f:kb-reference-title": "Predicting Domain Generation Algorithms with Long Short-Term Memory Networks",
         "d3f:reference-type-label": "Academic Paper",
-        "rdfs:label": "Reference - Predicting Domain Generation Algorithms with Long Short-Term Memory Networks -"
+        "rdfs:label": "Reference - Predicting Domain Generation Algorithms with Long Short-Term Memory Networks"
       },
       {
-        "@id": "d3f:Reference_SinkholingBadNetworkDomainsByRegisteringTheBadNetworkDomainsOnTheInternet_PaloAltoNetworksInc",
+        "@id": "d3f:Reference-SinkholingBadNetworkDomainsByRegisteringTheBadNetworkDomainsOnTheInternet_PaloAltoNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -958,12 +953,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

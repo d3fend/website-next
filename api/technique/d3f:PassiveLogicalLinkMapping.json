@@ -11276,12 +11276,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -11294,7 +11289,7 @@
         "d3f:d3fend-id": "D3-PLLM",
         "d3f:definition": "Passive logical link mapping only listens to network traffic as a means to map the the whole data link layer, where the links represent logical data flows rather than physical connections.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_TenablePassiveNetworkMonitoring"
+          "@id": "d3f:Reference-TenablePassiveNetworkMonitoring"
         },
         "d3f:monitors": {
           "@id": "d3f:NetworkTraffic"
@@ -11418,7 +11413,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_TenablePassiveNetworkMonitoring",
+        "@id": "d3f:Reference-TenablePassiveNetworkMonitoring",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11451,12 +11446,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

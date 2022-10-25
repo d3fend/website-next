@@ -10229,10 +10229,10 @@
         "d3f:kb-article": "## How it works\n\n#### Criteria\n\nA policy-enforcing application can register an application for denylisting based on conditions including the following:\n\n* File attributes\n    * file name\n    * file path\n    * file hash\n    * file publisher, as obtained from the digital signature\n    * permissions of the file\n* File malware scan (eg. Windows SmartScreen)\n* User-File combination\n\nThis may be done to prevent execution of applications which are:\n\n* an old version with known vulnerabilities\n* without a valid license, which could cause legal issues\n* in a directory that is accessible to low-privileged users, that could be accessed by a malware dropper\n* known trojan horse programs\n* too open in their permissions, possibly set to run as a user other than the originator or allowing execution when they should not be\n* a match to the hash of other known malware\n* are detected as undesirable based on a file scan runtime behavior\n\nSystem administrators will customize the rules for the given environment.\n\n#### Backend\n\nThe policy-enforcing program may work by running in kernel mode, and [intercepting] [system calls which execute a process].\n\n## Considerations\n\n* If denylisting is done by filename, filepath, or hash, these mechanisms may be a worthy first line of defense and detection, but could still be evaded by an attacker.\n* Continuous management is needed to keep the denylist up to date, whether it is based on hash, publisher, behavior, or any other digital artifact.\n* Although denylists based on attributes such as file path and virus scan could defend against some threats which they have not been explicitly coded to block, denylists may not provide protection from new, unknown, or zero day attacks.\n\n\n## Examples\nOn a Windows machine the Windows Defender Application Control (WDAC) policy enforcement is run in the kernel and allows for restricting applications.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_ContentExtractorAndAnalysisSystem_Bit9Inc,CarbonBlackInc"
+            "@id": "d3f:Reference-ContentExtractorAndAnalysisSystem_Bit9Inc,CarbonBlackInc"
           },
           {
-            "@id": "d3f:Reference_MethodAndApparatusForIncreasingTheSpeedAtWhichComputerVirusesAreDetected_McAfeeLLC"
+            "@id": "d3f:Reference-MethodAndApparatusForIncreasingTheSpeedAtWhichComputerVirusesAreDetected_McAfeeLLC"
           }
         ],
         "d3f:restricts": {
@@ -10278,48 +10278,6 @@
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Create Process"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Executable Denylisting"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Execution Isolation"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Executable Denylisting"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
             "value": "blocks"
           },
           "def_artifact_label": {
@@ -10346,6 +10304,48 @@
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
           }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Executable Denylisting"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Execution Isolation"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Executable Denylisting"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Create Process"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
+          }
         }
       ]
     }
@@ -10357,7 +10357,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_ContentExtractorAndAnalysisSystem_Bit9Inc,CarbonBlackInc",
+        "@id": "d3f:Reference-ContentExtractorAndAnalysisSystem_Bit9Inc,CarbonBlackInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -10378,7 +10378,7 @@
         "rdfs:label": "Reference - Content extractor and analysis system - Bit 9 Inc, Carbon Black Inc"
       },
       {
-        "@id": "d3f:Reference_MethodAndApparatusForIncreasingTheSpeedAtWhichComputerVirusesAreDetected_McAfeeLLC",
+        "@id": "d3f:Reference-MethodAndApparatusForIncreasingTheSpeedAtWhichComputerVirusesAreDetected_McAfeeLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

@@ -5177,7 +5177,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -5191,7 +5196,7 @@
         "d3f:definition": "Analyzing changes in service binary files by comparing to a source of truth.",
         "d3f:kb-article": "## How it works\nSystem service applications may originate from the operating system installation or third-party applications installed with administrative privileges. These services have an entry point of some executable file-- a binary or a script. Attackers sometimes modify these executables to launch their own code. Analyzing changes in these files may uncover unauthorized activity.\n\n## Considerations\n* These files change for legitimate reasons when the system or software updates.\n* The source of truth must not be corrupted in order for this method to work.",
         "d3f:kb-reference": {
-          "@id": "d3f:ServiceBinaryModifications_MITRE"
+          "@id": "d3f:Reference-ServiceBinaryModifications_MITRE"
         },
         "d3f:verifies": {
           "@id": "d3f:ServiceApplication"
@@ -5314,7 +5319,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:ServiceBinaryModifications_MITRE",
+        "@id": "d3f:Reference-ServiceBinaryModifications_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5344,7 +5349,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

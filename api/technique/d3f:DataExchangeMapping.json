@@ -40,7 +40,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -54,13 +59,13 @@
         "d3f:definition": "Information exchange mapping identifies and models the organization's intended design for the exchange of the data types, formats, and volumes between systems at the application layer.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_CatiaUAFPlugin"
+            "@id": "d3f:Reference-CatiaUAFPlugin"
           },
           {
-            "@id": "d3f:Reference_TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources"
+            "@id": "d3f:Reference-TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources"
           },
           {
-            "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF"
+            "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF"
           }
         ],
         "d3f:maps": {
@@ -143,7 +148,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_CatiaUAFPlugin",
+        "@id": "d3f:Reference-CatiaUAFPlugin",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -179,7 +184,7 @@
         "rdfs:label": "Reference - Catia UAF Plugin"
       },
       {
-        "@id": "d3f:Reference_TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources",
+        "@id": "d3f:Reference-TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources",
         "@type": [
           "d3f:UserManualReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -205,7 +210,7 @@
         "rdfs:label": "Reference - Tivoli Application Dependency Discovery Manager 7.3.0 - Dependencies between resources"
       },
       {
-        "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF",
+        "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -238,7 +243,7 @@
         ],
         "d3f:kb-reference-title": "Unified Architecture Framework (UAF)",
         "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Unified Architecture Framework (UAF)"
+        "rdfs:label": "Reference - Unified Architecture Framework (UAF)"
       }
     ]
   },
@@ -252,7 +257,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

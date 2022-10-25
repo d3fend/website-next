@@ -4963,7 +4963,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -4983,10 +4988,10 @@
             "@id": "d3f:BiometricAuthentication"
           },
           {
-            "@id": "d3f:Reference_www.biometric-solutions.com_keystroke-dynamics"
+            "@id": "d3f:Reference-TokenlessBiometricTransactionAuthorizationMethodAndSystem"
           },
           {
-            "@id": "d3f:Reference-TokenlessBiometricTransactionAuthorizationMethodAndSystem"
+            "@id": "d3f:Reference-www.biometric-solutions.com_keystroke-dynamics"
           }
         ],
         "rdfs:label": "Biometric Authentication",
@@ -5065,7 +5070,26 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_www.biometric-solutions.com_keystroke-dynamics",
+        "@id": "d3f:Reference-TokenlessBiometricTransactionAuthorizationMethodAndSystem",
+        "@type": [
+          "d3f:PatentReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://patents.google.com/patent/US5870723A/"
+        },
+        "d3f:kb-abstract": "A method and system for tokenless authorization of commercial transactions between a buyer and a seller using a computer system. A transaction is proposed by a seller, and the buyer signals his acceptance by entering his personal authentication information comprising a PIN and at least one biometric sample, forming a commercial transaction message. The commercial transaction message is forwarded to the computer system, where the computer system compares the personal authentication information in the commercial transaction message with previously registered buyer biometric samples. If the computer system successfully identifies the buyer, a financial account of the buyer is debited and a financial account of the seller is credited, and the results of the transaction are presented to both buyer and seller. As a result of the invention, a buyer can conduct commercial transactions without having to use any tokens such as portable man-made memory devices such as smartcards or swipe cards. The invention allows buyers to quickly select one of a group of different financial accounts from which to transfer funds. The invention further indicates to the user that the authentic computer system was accessed by the use of a private code that is returned to the buyer after the identification is complete. The invention additionally permits an authorized buyer to alert authorities in the event of an emergency, such as when a transaction is coerced.",
+        "d3f:kb-organization": "SmartTouch Inc",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:BiometricAuthentication"
+        },
+        "d3f:kb-reference-title": "Tokenless biometric transaction authorization method and system",
+        "d3f:reference-type-label": "Patent",
+        "rdfs:label": "Reference - Tokenless biometric transaction authorization method and system"
+      },
+      {
+        "@id": "d3f:Reference-www.biometric-solutions.com_keystroke-dynamics",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5087,6 +5111,7 @@
     ]
   },
   "references_meta": {
+    "Patent": 1,
     "Internet Article": 1
   },
   "subtechniques": {
@@ -5094,7 +5119,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

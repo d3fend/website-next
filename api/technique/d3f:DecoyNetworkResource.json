@@ -1646,12 +1646,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -1666,16 +1661,16 @@
         "d3f:kb-article": "## How it works\nDecoy network resources are deployed to web application servers, network file shares, or other network based sharing services.\n\nA \"honeypot\" may serve a variety of decoy network resources.\n\n## Considerations\n\n* Developing a deployment and placement strategy for the decoy network resource.\n* Personnel responsible for creation of decoy networks should consider the potential for resource exhaustion through denial of service attacks.\n\n## Examples\n* Honeypots are typically used to mimic a known system with fake vulnerabilities. This may attract attackers to the honeypot.\n* Decoy accounts are also used to scan for attempted logins. The decoy accounts can provide security analysts with the attacker's potential intents and strategies.\n* Tarpits are used to monitor unallocated IP space for unauthorized network activity.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_AutomaticallyGeneratingNetworkResourceGroupsAndAssigningCustomizedDecoyPoliciesThereto_IllusiveNetworksLtd"
+            "@id": "d3f:Reference-AutomaticallyGeneratingNetworkResourceGroupsAndAssigningCustomizedDecoyPoliciesThereto_IllusiveNetworksLtd"
           },
           {
-            "@id": "d3f:Reference_Deception-BasedResponsesToSecurityAttacks_CrowdstrikeInc"
+            "@id": "d3f:Reference-Deception-BasedResponsesToSecurityAttacks_CrowdstrikeInc"
           },
           {
-            "@id": "d3f:Reference_DynamicSelectionAndGenerationOfAVirtualCloneForDetonationOfSuspiciousContentWithinAHoneyNetwork_PaloAltoNetworksInc"
+            "@id": "d3f:Reference-DynamicSelectionAndGenerationOfAVirtualCloneForDetonationOfSuspiciousContentWithinAHoneyNetwork_PaloAltoNetworksInc"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodForIdentifyingThePresenceOfMalwareUsingMini-trapsSetAtNetworkEndpoints_FidelisCybersecuritySolutionsInc"
+            "@id": "d3f:Reference-SystemAndMethodForIdentifyingThePresenceOfMalwareUsingMini-trapsSetAtNetworkEndpoints_FidelisCybersecuritySolutionsInc"
           }
         ],
         "d3f:spoofs": {
@@ -1757,7 +1752,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_AutomaticallyGeneratingNetworkResourceGroupsAndAssigningCustomizedDecoyPoliciesThereto_IllusiveNetworksLtd",
+        "@id": "d3f:Reference-AutomaticallyGeneratingNetworkResourceGroupsAndAssigningCustomizedDecoyPoliciesThereto_IllusiveNetworksLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1778,7 +1773,7 @@
         "rdfs:label": "Reference - Automatically generating network resource groups and assigning customized decoy policies thereto - Illusive Networks Ltd"
       },
       {
-        "@id": "d3f:Reference_Deception-BasedResponsesToSecurityAttacks_CrowdstrikeInc",
+        "@id": "d3f:Reference-Deception-BasedResponsesToSecurityAttacks_CrowdstrikeInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1799,7 +1794,7 @@
         "rdfs:label": "Reference - Deception-Based Responses to Security Attacks - Crowdstrike Inc"
       },
       {
-        "@id": "d3f:Reference_DynamicSelectionAndGenerationOfAVirtualCloneForDetonationOfSuspiciousContentWithinAHoneyNetwork_PaloAltoNetworksInc",
+        "@id": "d3f:Reference-DynamicSelectionAndGenerationOfAVirtualCloneForDetonationOfSuspiciousContentWithinAHoneyNetwork_PaloAltoNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1825,7 +1820,7 @@
         "rdfs:label": "Reference - Dynamic selection and generation of a virtual clone for detonation of suspicious content within a honey network - Palo Alto Networks Inc"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodForIdentifyingThePresenceOfMalwareUsingMini-trapsSetAtNetworkEndpoints_FidelisCybersecuritySolutionsInc",
+        "@id": "d3f:Reference-SystemAndMethodForIdentifyingThePresenceOfMalwareUsingMini-trapsSetAtNetworkEndpoints_FidelisCybersecuritySolutionsInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1860,12 +1855,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

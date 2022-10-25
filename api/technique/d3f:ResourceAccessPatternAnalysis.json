@@ -5177,7 +5177,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -5200,19 +5205,19 @@
         "d3f:kb-article": "## How it works\nThis technique analyzes a user's resource accesses by comparing the user's recent activity against a baseline activity model. Major differences between the current activity and the baseline model might indicate unauthorized activity if they are severe enough.\n\n\n## Considerations\n* Potential for false positives from anomalies that are not associated with malicious activity.\n* Attackers that move low and slow may not differentiate their resource access activity behavior enough to trigger an alert.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd"
+            "@id": "d3f:Reference-HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd"
           },
           {
-            "@id": "d3f:Reference_MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC"
+            "@id": "d3f:Reference-MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC"
           },
           {
-            "@id": "d3f:Reference_System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc"
+            "@id": "d3f:Reference-ModelingUserAccessToComputerResources_DaedalusGroupLLC"
           },
           {
-            "@id": "d3f:Reference_ModelingUserAccessToComputerResources_DaedalusGroupLLC"
+            "@id": "d3f:Reference-System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc"
+            "@id": "d3f:Reference-SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc"
           }
         ],
         "rdfs:label": "Resource Access Pattern Analysis",
@@ -5333,7 +5338,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd",
+        "@id": "d3f:Reference-HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5362,7 +5367,7 @@
         "rdfs:label": "Reference - Host intrusion prevention system using software and user behavior analysis - Sophos Ltd"
       },
       {
-        "@id": "d3f:Reference_MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC",
+        "@id": "d3f:Reference-MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5397,7 +5402,7 @@
         "rdfs:label": "Reference - Method and Apparatus for Network Fraud Detection and Remediation Through Analytics - Idaptive LLC"
       },
       {
-        "@id": "d3f:Reference_ModelingUserAccessToComputerResources_DaedalusGroupLLC",
+        "@id": "d3f:Reference-ModelingUserAccessToComputerResources_DaedalusGroupLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5418,7 +5423,7 @@
         "rdfs:label": "Reference - Modeling user access to computer resources - Daedalus Group LLC (formerly IBM)"
       },
       {
-        "@id": "d3f:Reference_System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc",
+        "@id": "d3f:Reference-System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5453,7 +5458,7 @@
         "rdfs:label": "Reference - System, method, and computer program product for detecting and assessing security risks in a network - Exabeam Inc"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc",
+        "@id": "d3f:Reference-SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5491,7 +5496,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

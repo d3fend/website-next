@@ -8173,12 +8173,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -8194,9 +8189,17 @@
           "@id": "d3f:ConfigurationResource"
         },
         "d3f:kb-article": "## How it works\n\nThe organization retrieves configuration information through means of SNMP (MIB records), WBEM (CIM records), other protocols, or custom scripts and captures that information in a repository, typically known as a Configuration Management Database (CMDB).\"",
-        "d3f:kb-reference": {
-          "@id": "d3f:Reference_Windows-Management-Instrumentation"
-        },
+        "d3f:kb-reference": [
+          {
+            "@id": "d3f:Reference-Web-BasedEnterpriseManagement"
+          },
+          {
+            "@id": "d3f:Reference-Windows-Management-Infrastructure"
+          },
+          {
+            "@id": "d3f:Reference-Windows-Management-Instrumentation"
+          }
+        ],
         "rdfs:label": "Configuration Inventory",
         "rdfs:subClassOf": {
           "@id": "d3f:AssetInventory"
@@ -8273,7 +8276,65 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_Windows-Management-Instrumentation",
+        "@id": "d3f:Reference-Web-BasedEnterpriseManagement",
+        "@type": [
+          "d3f:SpecificationReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://www.dmtf.org/standards/wbem"
+        },
+        "d3f:kb-organization": "Distributed Management Task Force (DMTF)",
+        "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:ConfigurationInventory"
+          },
+          {
+            "@id": "d3f:HardwareInventory"
+          },
+          {
+            "@id": "d3f:SoftwareInventory"
+          },
+          {
+            "@id": "d3f:NetworkNodeInventory"
+          }
+        ],
+        "d3f:kb-reference-title": "Web-Based Enterprise Management",
+        "d3f:reference-type-label": "Specification",
+        "rdfs:label": "Reference - Web-Based Enterprise Management"
+      },
+      {
+        "@id": "d3f:Reference-Windows-Management-Infrastructure",
+        "@type": [
+          "d3f:SpecificationReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://docs.microsoft.com/en-us/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure"
+        },
+        "d3f:kb-organization": "Microsoft",
+        "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:ConfigurationInventory"
+          },
+          {
+            "@id": "d3f:HardwareInventory"
+          },
+          {
+            "@id": "d3f:SoftwareInventory"
+          },
+          {
+            "@id": "d3f:NetworkNodeInventory"
+          }
+        ],
+        "d3f:kb-reference-title": "Windows Management Infrastructure",
+        "d3f:reference-type-label": "Specification",
+        "rdfs:label": "Reference - Windows Management Infrastructure (MI)"
+      },
+      {
+        "@id": "d3f:Reference-Windows-Management-Instrumentation",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -8304,19 +8365,14 @@
     ]
   },
   "references_meta": {
-    "Specification": 1
+    "Specification": 3
   },
   "subtechniques": {
     "@context": {
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

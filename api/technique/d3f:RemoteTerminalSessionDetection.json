@@ -11276,12 +11276,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -11299,13 +11294,13 @@
         "d3f:kb-article": "## How it works\nAn external attacker takes remote control of a host inside a company or organization's network and manually directs offensive techniques. Nonstandard terminal sessions and abnormal behaviors are analyzed in this technique. Abnormal behavior detection includes analysis of user input patterns in the real-time session, keyboard output and packet inspection.\n\n### Network Traffic Inspection\nNetwork traffic from internal hosts is the main concern and focus for the traffic inspection. The network traffic is collected into inspection groups. The groups of traffic are assembled into distinct pair flows (outbound/inbound) and the pair flows are further divided into sessions. Only sessions originated inside of the network are considered for the inspection. Traffic inspection includes analysis to determine if a human is involved in the session exchanges. Time-based statistics are captured for each session being analyzed by the detection engine.\n\n### Algorithm Analysis Description\nAnalysis algorithms look for patterns in the network traffic captured from the session data.  A detection engine groups the session traffic data, between the hosts, into rapid exchange instances. Analysis of rapid exchange traffic patterns can lead to the discovery of abnormal behavior which is indicative of a compromised internal host. The analysis algorithms look for patterns in the traffic which correlate to known activity (e.g., relay attacks, bot activity, bitcoin mining). Some metrics used during inspection include the following.\n\n* Number of rapid-exchange instances\n* Time interval between packets\n* Fixed cadence of traffic\n* Rhythm and direction of the initiation of instances\n* Volume of data flowing from internal to external controlling host\n* Data transfer characteristics\n* Variability in length of silent periods\n\n## Considerations\n* Full packet capture is required which can be process intensive to analyze\n* Attackers that move low and slow may blend in with existing traffic resulting in false negatives",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:RDPConnectionDetection_MITRE"
+            "@id": "d3f:Reference-MethodAndSystemForDetectingExternalControlOfCompromisedHosts_VECTRANETWORKSInc"
           },
           {
-            "@id": "d3f:Reference_MethodAndSystemForDetectingExternalControlOfCompromisedHosts_VECTRANETWORKSInc"
+            "@id": "d3f:Reference-RDPConnectionDetection_MITRE"
           },
           {
-            "@id": "d3f:RemoteDesktopLogon_MITRE"
+            "@id": "d3f:Reference-RemoteDesktopLogon_MITRE"
           }
         ],
         "rdfs:label": "Remote Terminal Session Detection",
@@ -11384,28 +11379,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:RDPConnectionDetection_MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2013-07-002"
-        },
-        "d3f:kb-abstract": "The Remote Desktop Protocol (RDP), built in to Microsoft operating systems, allows a user to remotely log in to the desktop of another host. It allows for interactive access of the running windows, and forwards key presses, mouse clicks, etc. Network administrators, power users, and end-users may use RDP for day-to-day operations. From an adversary's perspective, RDP provides a means to laterally move to a new host. Determining which RDP connections correspond to adversary activity can be a difficult problem in highly dynamic environments, but will be useful in identifying the scope of a compromise.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-mitre-analysis": "",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:RemoteTerminalSessionDetection"
-        },
-        "d3f:kb-reference-title": "CAR-2013-07-002: RDP Connection Detection",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-07-002: RDP Connection Detection - MITRE"
-      },
-      {
-        "@id": "d3f:Reference_MethodAndSystemForDetectingExternalControlOfCompromisedHosts_VECTRANETWORKSInc",
+        "@id": "d3f:Reference-MethodAndSystemForDetectingExternalControlOfCompromisedHosts_VECTRANETWORKSInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11426,7 +11400,28 @@
         "rdfs:label": "Reference - Method and system for detecting external control of compromised hosts - VECTRA NETWORKS Inc"
       },
       {
-        "@id": "d3f:RemoteDesktopLogon_MITRE",
+        "@id": "d3f:Reference-RDPConnectionDetection_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2013-07-002"
+        },
+        "d3f:kb-abstract": "The Remote Desktop Protocol (RDP), built in to Microsoft operating systems, allows a user to remotely log in to the desktop of another host. It allows for interactive access of the running windows, and forwards key presses, mouse clicks, etc. Network administrators, power users, and end-users may use RDP for day-to-day operations. From an adversary's perspective, RDP provides a means to laterally move to a new host. Determining which RDP connections correspond to adversary activity can be a difficult problem in highly dynamic environments, but will be useful in identifying the scope of a compromise.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-mitre-analysis": "",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:RemoteTerminalSessionDetection"
+        },
+        "d3f:kb-reference-title": "CAR-2013-07-002: RDP Connection Detection",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2013-07-002: RDP Connection Detection - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-RemoteDesktopLogon_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11449,20 +11444,15 @@
     ]
   },
   "references_meta": {
-    "External Knowledge Base": 2,
-    "Patent": 1
+    "Patent": 1,
+    "External Knowledge Base": 2
   },
   "subtechniques": {
     "@context": {
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

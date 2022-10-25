@@ -4107,7 +4107,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -4134,7 +4139,7 @@
           }
         ],
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_DataProcessingAndScanningSystemsForGeneratingAndPopulatingADataInventory"
+          "@id": "d3f:Reference-DataProcessingAndScanningSystemsForGeneratingAndPopulatingADataInventory"
         },
         "d3f:synonym": [
           "Data Discovery",
@@ -4342,7 +4347,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_DataProcessingAndScanningSystemsForGeneratingAndPopulatingADataInventory",
+        "@id": "d3f:Reference-DataProcessingAndScanningSystemsForGeneratingAndPopulatingADataInventory",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -4371,7 +4376,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

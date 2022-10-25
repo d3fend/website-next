@@ -40,7 +40,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -58,10 +63,10 @@
         "d3f:kb-article": "## How it works\nUnusual data transfer activity may indicate unauthorized activity. Data transfers can be analyzed by collecting network traffic or application logs.\n\n## Considerations\n* There is a potential for false positives from anomalies that are not associated with unauthorized activity.\n* Attackers that move low and slow may not differentiate their data transfer behavior enough for an alert to trigger.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc"
+            "@id": "d3f:Reference-SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc"
           },
           {
-            "@id": "d3f:Reference_SystemForImplementingThreatDetectionUsingThreatAndRiskAssessmentOfAsset-actorInteractions_VECTRANETWORKSInc"
+            "@id": "d3f:Reference-SystemForImplementingThreatDetectionUsingThreatAndRiskAssessmentOfAsset-actorInteractions_VECTRANETWORKSInc"
           }
         ],
         "rdfs:label": "User Data Transfer Analysis",
@@ -140,7 +145,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc",
+        "@id": "d3f:Reference-SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -169,7 +174,7 @@
         "rdfs:label": "Reference - System and method thereof for identifying and responding to security incidents based on preemptive forensics - Palo Alto Networks Inc"
       },
       {
-        "@id": "d3f:Reference_SystemForImplementingThreatDetectionUsingThreatAndRiskAssessmentOfAsset-actorInteractions_VECTRANETWORKSInc",
+        "@id": "d3f:Reference-SystemForImplementingThreatDetectionUsingThreatAndRiskAssessmentOfAsset-actorInteractions_VECTRANETWORKSInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -199,7 +204,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

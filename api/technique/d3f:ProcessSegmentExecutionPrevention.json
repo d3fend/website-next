@@ -1753,7 +1753,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -1768,10 +1773,10 @@
         "d3f:kb-article": "## How it works\n\nDuring execution of a process, the instruction pointer register should only point to addresses in a code segment (also called the .text segment), as this is the sole segment which should contain program code.\n\nWhen this technique detects an attempt to execute something that has been designated as non-executable, other techniques such as those in **Process Eviction** might be invoked, such as **Process Termination** to end the current process, or **Executable Blacklisting** to blacklist the potentially vulnerable or malfunctioning executable.\n\n### Software-based implementations\nThe software-based implementation in Windows XP SP2 might not check that every time the instruction pointer is changed, and does not check on each jump or return.  Before calling an exception handler, Windows XP SP2 software-enforced DEP checks whether the exception handler is located in a memory region marked as executable.  If the program was also built with SafeSEH, this implementation also checks before changing control to the exception handler whether it is a registered exception handler in the program's file on disk.\n\n### Hardware-based implementations\nThe NX (No Execute) or XD (Execute Disable) bit on the processor specifies whether a certain part of memory is executable.  Early implementations set this bit by the memory segment, while modern implementations which are built on the flat memory model often store this bit in each entry of the page table, to control execution by the page.\n\n\n## Considerations\n\nNon-hardware process data segment execution prevention is more susceptible to being able to be turned off for a page of memory.\n\nDifferent implementations of this defense have been in place since the 1980s, but implementation stalled when larger 16-bit programs began stuffing code in the segments usually reserved for data. Many modern programs follow the best practice of separation of code and data, are able to run under this defense.\n\nROP or ret2libc/return-to-function attacks could bypass this defense, as although they may pass attacker-controlled data or stack frames to a function, they abuse functions that are legitimately located in the .text segment (code segment) of the program.  For those, more advanced defenses such as a table of valid jump addresses, function call analysis, or return depth analysis could be used.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:DataExecutionPrevention_Microsoft"
+            "@id": "d3f:Reference-DataExecutionPrevention_Microsoft"
           },
           {
-            "@id": "d3f:Reference_WhatIsNX_XDFeature_RedHat"
+            "@id": "d3f:Reference-WhatIsNX_XDFeature_RedHat"
           }
         ],
         "d3f:neutralizes": {
@@ -1857,7 +1862,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:DataExecutionPrevention_Microsoft",
+        "@id": "d3f:Reference-DataExecutionPrevention_Microsoft",
         "@type": [
           "d3f:UserManualReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1878,7 +1883,7 @@
         "rdfs:label": "Reference - Mitigate threats by using Windows 10 security features: Data Execution Prevention - Microsoft"
       },
       {
-        "@id": "d3f:Reference_WhatIsNX_XDFeature_RedHat",
+        "@id": "d3f:Reference-WhatIsNX_XDFeature_RedHat",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1909,7 +1914,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

@@ -1753,7 +1753,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -1768,10 +1773,10 @@
         "d3f:kb-article": "## How it works\n\nMany application exploits rely on an attacker specifying a location in memory, which points to data or code used by the attacker.  If the addresses are changed each time the program is run, then it becomes more difficult for the attacker to determine the location that will contain the code they wish to run.\n\nImported modules may be similarly realigned if their default memory addresses conflict with other modules, in a process known as \"rebasing.\"  Just as not all code is built for participation in ASLR, not all modules can be rebased; instead, modules must indicate whether they implement support for rebasing.  Such information to relocate the executable is typically stored in the \".reloc\" segment -- each of the addresses pointed to in this segment has its address increased by the amount of the offset.\n(An alternative method for relocation would be to add an amount to a global variable each time -- leading to less overhead in the module load, but more for each access.  Still another implementation could instead contain code to deference each changeable memory location on the fly, so that each of the references do not need to be updated.\n\n\n## Considerations\n\nAs the offset for each segment is constant, it is possible to guess at the value of the address given the address of another variable.  Alternatively, memory pointers may be kept around, which contain the address of another variable.\nAnother bypass technique is known as an \"egg hunt,\" whereby the attacker searches for a rather unique piece of the data or code in memory to determine its likely address.\n\nThe program needs to store these addresses for the functions somewhere.  In Linux, the PLT contains a \"trampoline\" to these addresses.  If an attacker desires to jump to the start of an existing function, they can jump directly to the trampoline anyway, and may have the opportunity to provide their own stack frame to the function with a write to the stack. If they overwrite a saved stack pointer which is loaded back into memory, or execute a function, that changes the address of a stack pointer.\n\nIf an attacker wants to inject some data into the program, for example as a parameter to a known function that is not under ASLR or a pointer to a trampoline function in the PLT, then they can repeat the data until they exceed the range of ASLR coverage, which on 32-bit systems is accomplishable in a few seconds with a heap spray.  Microsoft's EMET and Windows 10 Exploit Guard can pre-allocate particular addresses that are commonly used in heap sprays.  However, in many products, there does not seem to be nearly a complete coverage of such addresses, which only need to be executable and in the range of the heap; 0x0c0c0c0c is such an address that is commonly used for the x86 processor architecture, as when executed it only performs a numeric operation to a register four times.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_DYNAMICBASE_UseAddressSpaceLayoutRandomization_MicrosoftDocs"
+            "@id": "d3f:Reference-DYNAMICBASE_UseAddressSpaceLayoutRandomization_MicrosoftDocs"
           },
           {
-            "@id": "d3f:Reference_HowASLRProtectsLinuxSystemsFromBufferOverflowAttacks_NetworkWorld"
+            "@id": "d3f:Reference-HowASLRProtectsLinuxSystemsFromBufferOverflowAttacks_NetworkWorld"
           }
         ],
         "d3f:obfuscates": {
@@ -1857,7 +1862,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_DYNAMICBASE_UseAddressSpaceLayoutRandomization_MicrosoftDocs",
+        "@id": "d3f:Reference-DYNAMICBASE_UseAddressSpaceLayoutRandomization_MicrosoftDocs",
         "@type": [
           "d3f:UserManualReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1877,7 +1882,7 @@
         "rdfs:label": "Reference - /DYNAMICBASE (Use address space layout randomization) - Microsoft Docs"
       },
       {
-        "@id": "d3f:Reference_HowASLRProtectsLinuxSystemsFromBufferOverflowAttacks_NetworkWorld",
+        "@id": "d3f:Reference-HowASLRProtectsLinuxSystemsFromBufferOverflowAttacks_NetworkWorld",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1908,7 +1913,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

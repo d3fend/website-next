@@ -255,12 +255,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -277,7 +272,7 @@
         "d3f:definition": "Identifying and extracting files from network application protocols through the use of network stream reassembly software.",
         "d3f:kb-article": "## How it works\nProtocol stream reassembly software recreates a directional byte stream by analyzing captured network packets. Once the stream is reassembled pattern matching is applied to determine if it contains a file of interest. Files of interest range from executable, archive, or document file formats. Once the file is captured, it is then processed with standard File Analysis Techniques. Example network protocols include HTTP, SMTP, FTP, HTTP/2, and TLS/HTTP/Dropbox.\n\n## Considerations\n- This is an error prone process due to the intricacies of network protocols and network packet capture.  For example reassembly may be done in real-time or streaming fashion, or packets may be written to disk, then bulk processed.  The packets may arrive out of order, with fragmentation, duplicates, or re-transmissions.  The reassembly software must compensate for the imperfect packet stream in order to recreate the well formed file which was transmitted.\n- File type identification can be a difficult process which can be exploited by adversaries.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_ComputerWormDefenseSystemAndMethod_FireEyeInc"
+          "@id": "d3f:Reference-ComputerWormDefenseSystemAndMethod_FireEyeInc"
         },
         "rdfs:label": "File Carving",
         "rdfs:subClassOf": {
@@ -355,7 +350,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_ComputerWormDefenseSystemAndMethod_FireEyeInc",
+        "@id": "d3f:Reference-ComputerWormDefenseSystemAndMethod_FireEyeInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -385,12 +380,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

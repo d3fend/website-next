@@ -40,12 +40,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -59,7 +54,7 @@
         "d3f:definition": "Monitoring the security status of an endpoint by sending periodic messages with health status, where absence of a response may indicate that the endpoint has been compromised.",
         "d3f:kb-article": "## How it works\nEndpoints are configured to periodically generate and transmit a secure heartbeat that is delivered on a configured schedule and provides endpoint status information. Status information can include software details (version, configuration, etc), endpoint identification (MAC, IP address, machine ID) or other hardware/software configuration information. Interruption of the heartbeat can signal that the endpoint has been compromised.\n\n## Considerations\n* Security of heartbeat messages to ensure message integrity\n* Disappearance of the heartbeat could simply mean that the endpoint is powered off or intentionally disconnected from the network. Therefore other criteria may need to be used to accurately detect endpoint compromise.\n* Attacker presence on the machine may leave the heartbeat intact.\n* An attacker may determine the format of the heartbeat and continue to send it even after the machine is compromised.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_IntrusionDetectionUsingAHeartbeat_SophosLtd"
+          "@id": "d3f:Reference-IntrusionDetectionUsingAHeartbeat_SophosLtd"
         },
         "d3f:synonym": "Endpoint Health Telemetry",
         "rdfs:label": "Endpoint Health Beacon",
@@ -95,7 +90,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_IntrusionDetectionUsingAHeartbeat_SophosLtd",
+        "@id": "d3f:Reference-IntrusionDetectionUsingAHeartbeat_SophosLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -125,12 +120,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

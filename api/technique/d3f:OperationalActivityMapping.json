@@ -1218,12 +1218,18 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
         "@id": "d3f:OperationalActivityMapping",
         "@type": [
+          "d3f:DefensiveTechnique",
           "owl:NamedIndividual",
           "owl:Class"
         ],
@@ -1233,7 +1239,7 @@
           "@id": "d3f:Model"
         },
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_CatiaUAFPlugin"
+          "@id": "d3f:Reference-CatiaUAFPlugin"
         },
         "d3f:synonym": "Mission Mapping",
         "rdfs:comment": "Identifying staff and organizational structure is part of operational activity mapping.  One inventories assets; people are *not* assets, but are resources.  Grasping operations and activities (missions) and mapping them to people is (notionally) last phase of modeling architecture.",
@@ -1397,7 +1403,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_CatiaUAFPlugin",
+        "@id": "d3f:Reference-CatiaUAFPlugin",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1442,7 +1448,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {

@@ -379,10 +379,10 @@
         "d3f:definition": "Analyzing the properties of file create system call invocations.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:LsassProcessDumpViaProcdump_MITRE"
+            "@id": "d3f:Reference-CAR-2020-09-001%3AScheduledTask-FileAccess_MITRE"
           },
           {
-            "@id": "d3f:Reference-CAR-2020-09-001%3AScheduledTask-FileAccess-MITRE"
+            "@id": "d3f:Reference-LsassProcessDumpViaProcdump_MITRE"
           }
         ],
         "rdfs:label": "File Creation Analysis",
@@ -461,7 +461,27 @@
     },
     "@graph": [
       {
-        "@id": "d3f:LsassProcessDumpViaProcdump_MITRE",
+        "@id": "d3f:Reference-CAR-2020-09-001%3AScheduledTask-FileAccess_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2020-09-001/"
+        },
+        "d3f:kb-abstract": "In order to gain persistence, privilege escalation, or remote execution, an adversary may use the Windows Task Scheduler to schedule a command to be run at a specified time, date, and even host. Task Scheduler stores tasks as files in two locations - C:\\Windows\\Tasks (legacy) or C:\\Windows\\System32\\Tasks. Accordingly, this analytic looks for the creation of task files in these two locations.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:FileCreationAnalysis"
+        },
+        "d3f:kb-reference-title": "CAR-2020-09-001: Scheduled Task - FileAccess",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2020-09-001: Scheduled Task - FileAccess - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-LsassProcessDumpViaProcdump_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -480,26 +500,6 @@
         "d3f:kb-reference-title": "CAR-2019-07-002: Lsass Process Dump via Procdump",
         "d3f:reference-type-label": "External Knowledge Base",
         "rdfs:label": "Reference - CAR-2019-07-002: Lsass Process Dump via Procdump - MITRE"
-      },
-      {
-        "@id": "d3f:Reference-CAR-2020-09-001%3AScheduledTask-FileAccess-MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2020-09-001/"
-        },
-        "d3f:kb-abstract": "In order to gain persistence, privilege escalation, or remote execution, an adversary may use the Windows Task Scheduler to schedule a command to be run at a specified time, date, and even host. Task Scheduler stores tasks as files in two locations - C:\\Windows\\Tasks (legacy) or C:\\Windows\\System32\\Tasks. Accordingly, this analytic looks for the creation of task files in these two locations.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:FileCreationAnalysis"
-        },
-        "d3f:kb-reference-title": "CAR-2020-09-001: Scheduled Task - FileAccess",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2020-09-001: Scheduled Task - FileAccess - MITRE"
       }
     ]
   },

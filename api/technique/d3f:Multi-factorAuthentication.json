@@ -4980,7 +4980,7 @@
         "d3f:definition": "Requiring proof of two or more pieces of evidence in order to authenticate a user.",
         "d3f:kb-article": "## How it works\nWhen logging into an account users present two or more credentials that fall into different categories: something you know (password or PIN), something you have (smart card or phone), or something you are (fingerprint).\n\n## Considerations\nMFA configuration steps may vary across accounts and in some cases left up to users to activate and implement.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_MethodAndApparatusForUtilizingATokenForResourceAccess_RsaSecurityInc."
+          "@id": "d3f:Reference-MethodAndApparatusForUtilizingATokenForResourceAccess_RsaSecurityInc."
         },
         "rdfs:label": "Multi-factor Authentication",
         "rdfs:subClassOf": {
@@ -5058,7 +5058,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MethodAndApparatusForUtilizingATokenForResourceAccess_RsaSecurityInc.",
+        "@id": "d3f:Reference-MethodAndApparatusForUtilizingATokenForResourceAccess_RsaSecurityInc.",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

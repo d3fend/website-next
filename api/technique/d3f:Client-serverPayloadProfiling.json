@@ -11276,7 +11276,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -11293,7 +11298,7 @@
         "d3f:definition": "Comparing client-server request and response payloads to a baseline profile to identify outliers.",
         "d3f:kb-article": "## How it works\nProfiling request and response payloads across multiple clients to a single server to develop a baseline of their characteristics. May take into account request/response sizes, entropy, frequency, and rhythm. Finally, identify outliers as they may indicate a malicious payload delivery and subsequent server exploitation.\n\n\n## Considerations\n* Collecting metrics to establish a profile can be challenging since user behavior can change easily.\n* Employees may work different hours or inconsistent schedules which will cause false positives.\n* Collection of network activity to generate metrics is a computationally intensive process.\n* Users may log into different workstations which may cause false positives.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_MethodAndSystemForDetectingMaliciousPayloads_VectraNetworksInc"
+          "@id": "d3f:Reference-MethodAndSystemForDetectingMaliciousPayloads_VectraNetworksInc"
         },
         "rdfs:label": "Client-server Payload Profiling",
         "rdfs:subClassOf": {
@@ -11371,7 +11376,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MethodAndSystemForDetectingMaliciousPayloads_VectraNetworksInc",
+        "@id": "d3f:Reference-MethodAndSystemForDetectingMaliciousPayloads_VectraNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11401,7 +11406,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

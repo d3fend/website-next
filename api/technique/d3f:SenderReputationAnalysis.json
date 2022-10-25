@@ -491,7 +491,7 @@
         "d3f:definition": "Ascertaining sender reputation based on information associated with a message (e.g. email/instant messaging).",
         "d3f:kb-article": "## How it works\n\nSender trust rating can be considered an indicator of the level of security risk and/or a trust level associated with a sender. The features considered in determining the trust rating include:\n\n* Length of time sender has sent emails to the enterprise\n* Number of recipients in the enterprise the sender interacts with\n* Sender vs. enterprise originated message ratio\n* Sender messages opened vs. not-opened ratio\n* Number of emails received from this sender\n* Number of emails replied to this sender\n* Number of emails from this sender not opened\n* Number of emails from this sender not opened that contain an attachment\n* Number of emails from this sender not opened that contain a URL\n* Number of emails sent to this sender\n* Number of email replies received from this sender.\n\nHigher values for the number of recipients the sender has interacted with or the number of emails received from the sender, for example, results in a higher trust rating. The trust rating can categorize the sender as unrated, neutral, trusted, suspicious, or malicious.\n\n## Considerations\nLegitimate emails from a sender may receive a lower trust rating over time if the sender's domain gets spoofed and is used to send unauthorized emails.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_SystemsAndMethodsForDetectingAnd_orHandlingTargetedAttacksInTheEmailChannel_GraphusInc"
+          "@id": "d3f:Reference-SystemsAndMethodsForDetectingAnd_orHandlingTargetedAttacksInTheEmailChannel_GraphusInc"
         },
         "rdfs:label": "Sender Reputation Analysis",
         "rdfs:subClassOf": {
@@ -569,7 +569,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SystemsAndMethodsForDetectingAnd_orHandlingTargetedAttacksInTheEmailChannel_GraphusInc",
+        "@id": "d3f:Reference-SystemsAndMethodsForDetectingAnd_orHandlingTargetedAttacksInTheEmailChannel_GraphusInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

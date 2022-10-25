@@ -1339,7 +1339,7 @@
         "d3f:definition": "An authentication token created for the purposes of deceiving an adversary.",
         "d3f:kb-article": "## How it works\nUsage of decoy session tokens may be monitored to track attacker behavior or otherwise control the beliefs of the attacker.\n\n## Considerations\n* Interaction and activity with the decoy session token must be constantly monitored and analyzed to detect unauthorized activity.\n* Session tokens are typically short-lived and therefore the decoy must be continuously updated to provide the appearance of it being used in the production environment.\n* Automated tools can assist with maintenance and updates by automatically adjusting the decoy session token and environment to mimic the production environment.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_DecoyAndDeceptiveDataObjectTechnology_CymmetriaInc"
+          "@id": "d3f:Reference-DecoyAndDeceptiveDataObjectTechnology_CymmetriaInc"
         },
         "d3f:spoofs": {
           "@id": "d3f:AccessToken"
@@ -1420,7 +1420,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_DecoyAndDeceptiveDataObjectTechnology_CymmetriaInc",
+        "@id": "d3f:Reference-DecoyAndDeceptiveDataObjectTechnology_CymmetriaInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

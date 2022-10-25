@@ -40,7 +40,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -55,16 +60,16 @@
         "d3f:kb-article": "## How it works\nThe organization collects and models architectural information about the software, hardware, and products and maps the dependencies between systems, including each system's internal components and dependencies.\n\n## Considerations\n* Data exchanges identified in the network mapping efforts usually indicate such dependencies, but may not be part of the intended design.\n* Architectural design artifacts and SMEs may need to be consulted to determine if dependencies are intended or otherwise essential.\n* System depedency mapping can identify internal dependencies of standard and pre-built systems that should be incorporated into a complete system dependency model.\n* System dependencies for critical systems--those supporting critical organizational activities--should be prioritized for supply chain risk analysis.\n* System dependencies should identify the integral components of a given named system and their structure to form a system.\n* System dependencies with a given system may be fixed by a particular product's configuration, and leveraging external knowledge bases about dependencies available (e.g., from package managers) is essential.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_CatiaUAFPlugin"
+            "@id": "d3f:Reference-CatiaUAFPlugin"
           },
           {
-            "@id": "d3f:Reference_TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources"
+            "@id": "d3f:Reference-SoftwareVulnerabilityGraphDatabase"
           },
           {
-            "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF"
+            "@id": "d3f:Reference-TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources"
           },
           {
-            "@id": "d3f:Reference_SoftwareVulnerabilityGraphDatabase"
+            "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF"
           }
         ],
         "d3f:maps": {
@@ -146,7 +151,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_CatiaUAFPlugin",
+        "@id": "d3f:Reference-CatiaUAFPlugin",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -182,7 +187,7 @@
         "rdfs:label": "Reference - Catia UAF Plugin"
       },
       {
-        "@id": "d3f:Reference_SoftwareVulnerabilityGraphDatabase",
+        "@id": "d3f:Reference-SoftwareVulnerabilityGraphDatabase",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -210,7 +215,7 @@
         "rdfs:label": "Reference - Software vulnerability graph database"
       },
       {
-        "@id": "d3f:Reference_TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources",
+        "@id": "d3f:Reference-TivoliApplicationDependencyDiscoverManager7_3_0DependenciesBetweenResources",
         "@type": [
           "d3f:UserManualReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -236,7 +241,7 @@
         "rdfs:label": "Reference - Tivoli Application Dependency Discovery Manager 7.3.0 - Dependencies between resources"
       },
       {
-        "@id": "d3f:Reference_UnifiedArchitectureFrameworkUAF",
+        "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -269,7 +274,7 @@
         ],
         "d3f:kb-reference-title": "Unified Architecture Framework (UAF)",
         "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Unified Architecture Framework (UAF)"
+        "rdfs:label": "Reference - Unified Architecture Framework (UAF)"
       }
     ]
   },
@@ -284,7 +289,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

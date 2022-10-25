@@ -4,12 +4,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -40,12 +35,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -186,6 +176,9 @@
             "@id": "d3f:PhysicalLinkMapping"
           },
           {
+            "@id": "d3f:NetworkTrafficPolicyMapping"
+          },
+          {
             "@id": "d3f:ActiveLogicalLinkMapping"
           },
           {
@@ -196,16 +189,13 @@
           },
           {
             "@id": "d3f:PassivePhysicalLinkMapping"
-          },
-          {
-            "@id": "d3f:NetworkTrafficPolicyMapping"
           }
         ],
         "rdfs:label": "Network Mapping"
       },
       {
         "@id": "d3f:NetworkNodeInventory",
-        "d3f:d3fend-id": "D3-SYSI",
+        "d3f:d3fend-id": "D3-NNI",
         "d3f:definition": "Network node inventorying identifies and records all the network nodes (hosts, routers, switches, firewalls, etc.) in the organization's architecture.",
         "d3f:synonym": [
           "System Discovery",

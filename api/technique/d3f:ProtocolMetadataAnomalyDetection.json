@@ -11276,7 +11276,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -11294,13 +11299,13 @@
         "d3f:kb-article": "## How it works\nNetwork protocol metadata is first collected and processed in real-time or post-facto. Metadata may include packet header information or information about a session (ex. time between requests/responses). Metadata is then grouped based on shared characteristics and those groups are compared to each other. If particular metadata differs significantly from other data, an alert is generated, identifying the network event as anomalous. Anomalous activity may indicate unauthorized activity.\n\n## Considerations\nMetadata collection on enterprises can yield large data sets. Storage, indexing, querying, and aging should be considered prior to implementation.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_MethodAndSystemForDetectingThreatsUsingMetadataVectors_VECTRANETWORKSInc"
+            "@id": "d3f:Reference-MethodAndSystemForDetectingThreatsUsingMetadataVectors_VECTRANETWORKSInc"
           },
           {
-            "@id": "d3f:Reference_MethodAndSystemForDetectingThreatsUsingPassiveClusterMapping_VectraNetworksInc"
+            "@id": "d3f:Reference-MethodAndSystemForDetectingThreatsUsingPassiveClusterMapping_VectraNetworksInc"
           },
           {
-            "@id": "d3f:Reference_SystemForImplementingThreatDetectionUsingDailyNetworkTrafficCommunityOutliers_VECTRANETWORKSInc"
+            "@id": "d3f:Reference-SystemForImplementingThreatDetectionUsingDailyNetworkTrafficCommunityOutliers_VECTRANETWORKSInc"
           }
         ],
         "rdfs:label": "Protocol Metadata Anomaly Detection",
@@ -11379,7 +11384,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MethodAndSystemForDetectingThreatsUsingMetadataVectors_VECTRANETWORKSInc",
+        "@id": "d3f:Reference-MethodAndSystemForDetectingThreatsUsingMetadataVectors_VECTRANETWORKSInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11400,7 +11405,7 @@
         "rdfs:label": "Reference - Method and system for detecting threats using metadata vectors - VECTRA NETWORKS Inc"
       },
       {
-        "@id": "d3f:Reference_MethodAndSystemForDetectingThreatsUsingPassiveClusterMapping_VectraNetworksInc",
+        "@id": "d3f:Reference-MethodAndSystemForDetectingThreatsUsingPassiveClusterMapping_VectraNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11421,7 +11426,7 @@
         "rdfs:label": "Reference - Method and system for detecting threats using passive cluster mapping - Vectra Networks Inc"
       },
       {
-        "@id": "d3f:Reference_SystemForImplementingThreatDetectionUsingDailyNetworkTrafficCommunityOutliers_VECTRANETWORKSInc",
+        "@id": "d3f:Reference-SystemForImplementingThreatDetectionUsingDailyNetworkTrafficCommunityOutliers_VECTRANETWORKSInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11456,7 +11461,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

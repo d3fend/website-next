@@ -9154,10 +9154,10 @@
         "d3f:kb-article": "## Technique Overview\n\n\"An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs.\" [1]\n\nOperating System Monitoring Techniques have varied implementations including built-in kernel modules, third-party privileged system daemons, or even standard systems administration tools included with an operating system.\n\n1. http://dbpedia.org/resource/Operating_system",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd"
+            "@id": "d3f:Reference-HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd"
           },
           {
-            "@id": "d3f:UserActivityFromClearingEventLogs_MITRE"
+            "@id": "d3f:Reference-UserActivityFromClearingEventLogs_MITRE"
           }
         ],
         "rdfs:label": "Operating System Monitoring",
@@ -9530,7 +9530,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd",
+        "@id": "d3f:Reference-HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -9559,7 +9559,7 @@
         "rdfs:label": "Reference - Host intrusion prevention system using software and user behavior analysis - Sophos Ltd"
       },
       {
-        "@id": "d3f:UserActivityFromClearingEventLogs_MITRE",
+        "@id": "d3f:Reference-UserActivityFromClearingEventLogs_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

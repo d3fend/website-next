@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-ca571b8a.js",
+    "file": "start-82f91ab4.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -144,7 +144,7 @@
       "_singletons-d1fb5791.js"
     ],
     "css": [
-      "assets/pages/technique/__layout-tech@matrix.svelte-c1854619.css"
+      "assets/pages/tactic/__layout-tactic@matrix.svelte-b7a77fc7.css"
     ]
   },
   "src/routes/technique/__layout-tech@matrix.svelte": {
@@ -162,7 +162,7 @@
       "_singletons-d1fb5791.js"
     ],
     "css": [
-      "assets/pages/technique/__layout-tech@matrix.svelte-c1854619.css"
+      "assets/pages/tactic/__layout-tactic@matrix.svelte-b7a77fc7.css"
     ]
   },
   "src/routes/about.svelte": {

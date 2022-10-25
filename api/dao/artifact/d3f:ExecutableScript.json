@@ -1192,7 +1192,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Detect"
+            "value": "Model"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -1205,23 +1205,23 @@
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "File Analysis"
+            "value": "Asset Inventory"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Emulated File Analysis"
+            "value": "Asset Vulnerability Enumeration"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "analyzes"
+            "value": "evaluates"
           },
           "def_artifact_label": {
             "type": "literal",
-            "value": "Executable File"
+            "value": "Digital Artifact"
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -1229,15 +1229,15 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#EmulatedFileAnalysis"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
           },
           "def_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
           }
         },
         {
@@ -1281,6 +1281,57 @@
           "def_tech": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Emulated File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Executable File"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#EmulatedFileAnalysis"
           },
           "def_artifact_rel": {
             "type": "uri",

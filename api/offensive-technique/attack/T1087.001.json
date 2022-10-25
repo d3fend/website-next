@@ -750,105 +750,6 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "authenticates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Collection"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Credential Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
             "value": "Multi-factor Authentication"
           },
           "def_artifact_rel_label": {
@@ -1146,11 +1047,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -1178,7 +1079,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Command And Control"
+            "value": "Collection"
           },
           "def_tactic": {
             "type": "uri",
@@ -1190,11 +1091,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -1222,7 +1123,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
           }
         },
         {
@@ -1542,11 +1443,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -1574,7 +1475,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Credential Access"
+            "value": "Command And Control"
           },
           "def_tactic": {
             "type": "uri",
@@ -1586,11 +1487,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -1618,7 +1519,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
           }
         },
         {
@@ -1938,11 +1839,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -1970,7 +1871,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Defense Evasion"
+            "value": "Credential Access"
           },
           "def_tactic": {
             "type": "uri",
@@ -1982,11 +1883,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -2014,7 +1915,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
           }
         },
         {
@@ -2334,11 +2235,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -2366,7 +2267,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Discovery"
+            "value": "Defense Evasion"
           },
           "def_tactic": {
             "type": "uri",
@@ -2378,11 +2279,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -2410,7 +2311,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
           }
         },
         {
@@ -2730,11 +2631,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -2762,7 +2663,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Execution"
+            "value": "Discovery"
           },
           "def_tactic": {
             "type": "uri",
@@ -2774,11 +2675,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -2806,7 +2707,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
           }
         },
         {
@@ -3126,11 +3027,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -3158,7 +3059,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Exfiltration"
+            "value": "Execution"
           },
           "def_tactic": {
             "type": "uri",
@@ -3170,11 +3071,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -3202,7 +3103,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
           }
         },
         {
@@ -3522,11 +3423,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -3554,7 +3455,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Impact"
+            "value": "Exfiltration"
           },
           "def_tactic": {
             "type": "uri",
@@ -3566,11 +3467,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -3598,7 +3499,106 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Exfiltration"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
           }
         },
         {
@@ -3918,11 +3918,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -3950,7 +3950,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Initial Access"
+            "value": "Impact"
           },
           "def_tactic": {
             "type": "uri",
@@ -3962,11 +3962,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -3994,7 +3994,106 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Impact"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
           }
         },
         {
@@ -4314,11 +4413,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "authenticates"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -4346,7 +4445,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Lateral Movement"
+            "value": "Initial Access"
           },
           "def_tactic": {
             "type": "uri",
@@ -4358,11 +4457,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -4390,7 +4489,106 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Initial Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
           }
         },
         {
@@ -4710,7 +4908,205 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Lateral Movement"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Lateral Movement"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Credential Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Multi-factor Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -4754,7 +5150,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Multi-factorAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -4767,105 +5163,6 @@
           "off_artifact": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Credential Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Biometric Authentication"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "authenticates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -4965,105 +5262,6 @@
           "off_artifact": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Credential Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Multi-factor Authentication"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "authenticates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Multi-factorAuthentication"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -5320,6 +5518,105 @@
           },
           "off_artifact_label": {
             "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#StrongPasswordPolicy"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#strengthens"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Credential Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Strong Password Policy"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "strengthens"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
             "value": "User Account"
           },
           "off_artifact_rel_label": {
@@ -5403,7 +5700,304 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Biometric Authentication"
+            "value": "User Account Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Credential Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Multi-factor Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -5447,7 +6041,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Multi-factorAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -5460,105 +6054,6 @@
           "off_artifact": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Credential Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Biometric Authentication"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "authenticates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -5658,105 +6153,6 @@
           "off_artifact": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Credential Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Multi-factor Authentication"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "authenticates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Multi-factorAuthentication"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -6013,6 +6409,105 @@
           },
           "off_artifact_label": {
             "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#StrongPasswordPolicy"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#strengthens"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Credential Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Strong Password Policy"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "strengthens"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
             "value": "User Account"
           },
           "off_artifact_rel_label": {
@@ -6074,6 +6569,897 @@
           "off_tactic": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Credential Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "User Account Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Collection"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Command And Control"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Credential Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Defense Evasion"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Discovery"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Execution"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
           }
         },
         {
@@ -6294,11 +7680,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -6338,11 +7724,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -6591,11 +7977,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -6635,11 +8021,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -6888,11 +8274,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -6932,11 +8318,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -7185,11 +8571,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -7229,11 +8615,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -7482,11 +8868,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -7526,11 +8912,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -7779,11 +9165,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -7823,11 +9209,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -8076,11 +9462,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -8120,11 +9506,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -8373,11 +9759,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -8417,11 +9803,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -8670,11 +10056,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -8714,11 +10100,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -8967,11 +10353,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -9011,11 +10397,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -9181,7 +10567,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Local User Account"
+            "value": "User Account"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -9221,7 +10607,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -9280,7 +10666,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "User Account"
+            "value": "Local User Account"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -9313,105 +10699,6 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#disables"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Credential Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Strong Password Policy"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "strengthens"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#StrongPasswordPolicy"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#strengthens"
           },
           "def_artifact": {
             "type": "uri",
@@ -9478,7 +10765,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "User Account"
+            "value": "Local User Account"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -9511,6 +10798,105 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Credential Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Biometric Authentication"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "authenticates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -9561,11 +10947,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -9605,11 +10991,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -9775,7 +11161,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Local User Account"
+            "value": "User Account"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -9815,7 +11201,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -9874,7 +11260,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "User Account"
+            "value": "Local User Account"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -9907,105 +11293,6 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#disables"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Credential Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Strong Password Policy"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "strengthens"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "User Account"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#StrongPasswordPolicy"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#strengthens"
           },
           "def_artifact": {
             "type": "uri",
@@ -10072,7 +11359,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "User Account"
+            "value": "Local User Account"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -10105,6 +11392,105 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Credential Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Biometric Authentication"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "authenticates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",
@@ -10155,11 +11541,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "User Account Permissions"
+            "value": "Biometric Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "authenticates"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -10199,11 +11585,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccountPermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BiometricAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#authenticates"
           },
           "def_artifact": {
             "type": "uri",

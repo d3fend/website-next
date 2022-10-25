@@ -40,7 +40,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -55,9 +60,14 @@
         },
         "d3f:d3fend-id": "D3-DNRA",
         "d3f:definition": "Analyzing the reputation of a domain name.",
-        "d3f:kb-reference": {
-          "@id": "d3f:Reference-Finding_phishing_sites"
-        },
+        "d3f:kb-reference": [
+          {
+            "@id": "d3f:Reference-Database_for_receiving_storing_and_compiling_information_about_email_messages"
+          },
+          {
+            "@id": "d3f:Reference-Finding_phishing_sites"
+          }
+        ],
         "rdfs:label": "Domain Name Reputation Analysis",
         "rdfs:subClassOf": {
           "@id": "d3f:IdentifierReputationAnalysis"
@@ -134,6 +144,29 @@
     },
     "@graph": [
       {
+        "@id": "d3f:Reference-Database_for_receiving_storing_and_compiling_information_about_email_messages",
+        "@type": [
+          "d3f:PatentReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://patents.google.com/patent/US20050091319A1/"
+        },
+        "d3f:kb-author": "Steven Kirsch",
+        "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:DomainNameReputationAnalysis"
+          },
+          {
+            "@id": "d3f:IPReputationAnalysis"
+          }
+        ],
+        "d3f:kb-reference-title": "Database for receiving, storing and compiling information about email messages",
+        "d3f:reference-type-label": "Patent",
+        "rdfs:label": "Reference - Database for receiving, storing and compiling information about email messages"
+      },
+      {
         "@id": "d3f:Reference-Finding_phishing_sites",
         "@type": [
           "d3f:PatentReference",
@@ -162,14 +195,19 @@
     ]
   },
   "references_meta": {
-    "Patent": 1
+    "Patent": 2
   },
   "subtechniques": {
     "@context": {
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

@@ -163,13 +163,13 @@
         "d3f:kb-article": "## How it works\nAttackers may manipulate system settings or services to disable system logging or monitoring of security tools and events. Firewall and antivirus services are popular targets for attackers. Disabling system logs will also allow an attacker's actions to go unnoticed. Analysis of logs, registries, and process monitoring help defenders locate signs of tampering. Two possible approaches are to monitor hardened system services or to monitor registry updates for modifications to security settings.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd"
+            "@id": "d3f:Reference-HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd"
           },
           {
-            "@id": "d3f:Reference_MethodUsingKernelModeAssistanceForTheDetectionAndRemovalOfThreatsWhichAreActivelyPreventingDetectionAndRemovalFromARunningSystem_SymantecCorporation"
+            "@id": "d3f:Reference-MethodUsingKernelModeAssistanceForTheDetectionAndRemovalOfThreatsWhichAreActivelyPreventingDetectionAndRemovalFromARunningSystem_SymantecCorporation"
           },
           {
-            "@id": "d3f:UserActivityFromStoppingWindowsDefensiveServices_MITRE"
+            "@id": "d3f:Reference-UserActivityFromStoppingWindowsDefensiveServices_MITRE"
           }
         ],
         "d3f:monitors": {
@@ -251,7 +251,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd",
+        "@id": "d3f:Reference-HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -280,7 +280,7 @@
         "rdfs:label": "Reference - Host intrusion prevention system using software and user behavior analysis - Sophos Ltd"
       },
       {
-        "@id": "d3f:Reference_MethodUsingKernelModeAssistanceForTheDetectionAndRemovalOfThreatsWhichAreActivelyPreventingDetectionAndRemovalFromARunningSystem_SymantecCorporation",
+        "@id": "d3f:Reference-MethodUsingKernelModeAssistanceForTheDetectionAndRemovalOfThreatsWhichAreActivelyPreventingDetectionAndRemovalFromARunningSystem_SymantecCorporation",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -301,7 +301,7 @@
         "rdfs:label": "Reference - Method using kernel mode assistance for the detection and removal of threats which are actively preventing detection and removal from a running system - Symantec Corporation"
       },
       {
-        "@id": "d3f:UserActivityFromStoppingWindowsDefensiveServices_MITRE",
+        "@id": "d3f:Reference-UserActivityFromStoppingWindowsDefensiveServices_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

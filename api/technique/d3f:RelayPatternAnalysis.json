@@ -3808,7 +3808,7 @@
         "d3f:definition": "The detection of an internal host relaying traffic between the internal network and the external network.",
         "d3f:kb-article": "## How it works\nA relay may use a variety of proxying, forwarding, or routing technologies to bridge a protected network with an external network. A defensive analytic to detect a relay network may compare the network sessions among multiple hosts. Hosts which have nearly similar network statistics may be part of a relay network. The statistics may include number of bytes sent to and from, time of session initiation, packet size, or packet arrival time data.\n\n## Considerations\n\nComplex intranet VPNs or routing encapsulation may affect the detection analytics.  In addition, unwanted packets might not be forwarded, and additional packets may be added at the relay, further complicating detection.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_MaliciousRelayDetectionOnNetworks_VECTRANETWORKSInc"
+          "@id": "d3f:Reference-MaliciousRelayDetectionOnNetworks_VECTRANETWORKSInc"
         },
         "d3f:synonym": "Relay Network Detection",
         "rdfs:label": "Relay Pattern Analysis",
@@ -3887,7 +3887,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MaliciousRelayDetectionOnNetworks_VECTRANETWORKSInc",
+        "@id": "d3f:Reference-MaliciousRelayDetectionOnNetworks_VECTRANETWORKSInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

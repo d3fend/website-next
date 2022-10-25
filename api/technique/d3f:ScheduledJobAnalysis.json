@@ -1129,13 +1129,13 @@
         "d3f:kb-article": "## How it works\nScheduled job execution can be utilized by adversaries for the purpose of persistence, conducting remote execution, or gaining privileges. Details of a scheduled job such as associated source files, processes, destination files, or destination servers are first identified and analyzed and then compared against an anti-malware signature database, whitelist, or reputation server. For example, a file associated with a scheduled job to be executed at a specified time or a remote server that is accessed as part of a scheduled task is compared against an anti-malware signature database, whitelist, or reputation server, and if a match is found, execution is denied and an alert is generated.\n\nIn addition to traditional scheduled jobs, triggers can be set to execute a specific command after detecting a specific event in the system, such as with WMI Event Subscriptions in Windows.\n\n## Considerations\nJobs can be scheduled in many different and sometimes creative ways through operating system capabilities.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:ExecutionWithAT_"
+            "@id": "d3f:Reference-ExecutionWithAT_MITRE"
           },
           {
-            "@id": "d3f:ExecutionWithSchtasks_"
+            "@id": "d3f:Reference-ExecutionWithSchtasks_MITRE"
           },
           {
-            "@id": "d3f:Reference_PreventingExecutionOfTaskScheduledMalware_McAfeeLLC"
+            "@id": "d3f:Reference-PreventingExecutionOfTaskScheduledMalware_McAfeeLLC"
           }
         ],
         "d3f:synonym": "Scheduled Job Execution",
@@ -1215,7 +1215,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:ExecutionWithAT_",
+        "@id": "d3f:Reference-ExecutionWithAT_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1233,10 +1233,10 @@
         },
         "d3f:kb-reference-title": "CAR-2013-05-004: Execution with AT",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-05-004: Execution with AT -"
+        "rdfs:label": "Reference - CAR-2013-05-004: Execution with AT - MITRE"
       },
       {
-        "@id": "d3f:ExecutionWithSchtasks_",
+        "@id": "d3f:Reference-ExecutionWithSchtasks_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1254,10 +1254,10 @@
         },
         "d3f:kb-reference-title": "CAR-2013-08-001: Execution with schtasks",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-08-001: Execution with schtasks -"
+        "rdfs:label": "Reference - CAR-2013-08-001: Execution with schtasks - MITRE"
       },
       {
-        "@id": "d3f:Reference_PreventingExecutionOfTaskScheduledMalware_McAfeeLLC",
+        "@id": "d3f:Reference-PreventingExecutionOfTaskScheduledMalware_McAfeeLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

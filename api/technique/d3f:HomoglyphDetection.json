@@ -920,10 +920,10 @@
         "d3f:kb-article": "## How it works\nA homoglyph, in this context, is a deceptive string or word which looks like a trusted word, but is composed of different characters, for example: goooogle.com versus google.com. This is commonly found in phishing and typo squatting attacks where a human exploiting through a social engineering campaign.\n\n## Considerations\n* In very large environments processing DNS queries can be computationally expensive due to the amount of traffic that is generated\n* Legitimate companies and products use non-dictionary words in their names that could result in many false positives",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_Computer-implementedMethodsAndSystemsForIdentifyingVisuallySimilarTextCharacterStrings_GreathornInc"
+            "@id": "d3f:Reference-Computer-implementedMethodsAndSystemsForIdentifyingVisuallySimilarTextCharacterStrings_GreathornInc"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodForDetectingHomoglyphAttacksWithASiameseConvolutionalNeuralNetwork_EndgameInc"
+            "@id": "d3f:Reference-SystemAndMethodForDetectingHomoglyphAttacksWithASiameseConvolutionalNeuralNetwork_EndgameInc"
           }
         ],
         "rdfs:label": "Homoglyph Detection",
@@ -1044,7 +1044,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_Computer-implementedMethodsAndSystemsForIdentifyingVisuallySimilarTextCharacterStrings_GreathornInc",
+        "@id": "d3f:Reference-Computer-implementedMethodsAndSystemsForIdentifyingVisuallySimilarTextCharacterStrings_GreathornInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1065,7 +1065,7 @@
         "rdfs:label": "Reference - Computer-implemented methods and systems for identifying visually similar text character strings - Greathorn Inc"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodForDetectingHomoglyphAttacksWithASiameseConvolutionalNeuralNetwork_EndgameInc",
+        "@id": "d3f:Reference-SystemAndMethodForDetectingHomoglyphAttacksWithASiameseConvolutionalNeuralNetwork_EndgameInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

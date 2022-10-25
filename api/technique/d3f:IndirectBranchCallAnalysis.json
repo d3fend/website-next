@@ -40,7 +40,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -54,7 +59,7 @@
         "d3f:definition": "Analyzing vendor specific branch call recording in order to detect ROP style attacks.",
         "d3f:kb-article": "## How it works\n\nThis technique is used to detect an attacker attempting to exploit and execute code on a target system's call stack using return-oriented programming (ROP). Modern processors that have the ability to maintain a list of the branching calls, e.g., Intel's Last Branch Recording (LBR), can be used to track and analyze indirect branching calls that are indicative of malicious activity.\n\nIn order to reduce the number of indirect branch calls to analyze to a manageable set it is assumed that malicious ROP activity will involve the use of system calls.  The technique observes indirect branch calls that are part of paths that lead to system calls, all others are ignored. Branching calls chained together is often referred to as gadgets and gadgets are often used in ROP attacks. Indirect branch calls that involve a transfer from user-space to kernel-space are of interest for this technique.\n\nIdentification of potential ROP exploit execution includes:\n\n- Inspecting the LBR when a system function call is made\n\n  - The LBR is configured to return only instruction of interest (ret, indirect jmp, indirect calls)\n\n\n- Behavior is analyzed for\n  - Ret instructions that appear to target areas not preceded by the call sites\n  - Sequences of small code fragments that appear to be chained through the indirect branching calls (gadgets)\n\n\n- Of interest are returns that appear to not render control back after calls\n  - Typical ret-call are paired\n  - gadgets will appear to have ret followed by instruction of next instruction of the following gadget\n\n\n## Considerations\n\n* May be operating system dependent since specific system calls are used to scope branching behavoir\n* Processors need to support access to a Last Branch Recording list feature\n* The size of the LBR stack can limit the expected size of the analyzed execution stack\n* If processor does not support LBR then overhead costs for the analysis can be significant",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference-IndirectBranchingCalss"
+          "@id": "d3f:Reference-IndirectBranchingCalls"
         },
         "rdfs:label": "Indirect Branch Call Analysis",
         "rdfs:subClassOf": {
@@ -89,7 +94,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference-IndirectBranchingCalss",
+        "@id": "d3f:Reference-IndirectBranchingCalls",
         "@type": [
           "d3f:AcademicPaperReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -118,7 +123,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

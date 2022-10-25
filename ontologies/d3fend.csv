@@ -10,12 +10,12 @@ D3-SVCDM,Model,,Service Dependency Mapping,,Service dependency mapping determine
 D3-SYSDM,Model,,System Dependency Mapping,,System dependency mapping identifies and models the dependencies of system components on each other to carry out their function.
 D3-SYSVA,Model,,System Vulnerability Assessment,,"System vulnerability assessment relates all the vulnerabilities of a system's components in the context of their configuration and internal dependencies and can also include assessing risk emerging from the system's design as a whole, not just the sum of individual component vulnerabilities."
 D3-AI,Model,Asset Inventory,,,
-D3-AVA,Model,,Asset Vulnerability Assessment,,Asset vulnerability assessment enriches inventory items with knowledge identifying their vulnerabilities.
 D3-CI,Model,,Configuration Inventory,,Configuration inventory identifies and records the configuration of software and hardware and their components throughout the organization.
-D3-DI,Model,,Data Inventory,,"Data inventorying is identifies and records the schemas, formats, volumes, and locations of data stored and used on the organization's architecture."
+D3-DI,Model,,Data Inventory,,"Data inventorying identifies and records the schemas, formats, volumes, and locations of data stored and used on the organization's architecture."
 D3-HWI,Model,,Hardware Inventory,,Hardware inventorying identifies and records the hardware items in the organization's architecture.
 D3-SWI,Model,,Software Inventory,,Software inventorying identifies and records the software items in the organization's architecture.
-D3-SYSI,Model,,System Inventory,,System inventorying identifies and records all the systems in the organization's architecture.
+D3-AVE,Model,,Asset Vulnerability Enumeration,,Asset vulnerability enumeration enriches inventory items with knowledge identifying their vulnerabilities.
+D3-NNI,Model,,Network Node Inventory,,"Network node inventorying identifies and records all the network nodes (hosts, routers, switches, firewalls, etc.) in the organization's architecture."
 D3-NM,Model,Network Mapping,,,
 D3-LLM,Model,,Logical Link Mapping,,
 D3-ALLM,Model,,,Active Logical Link Mapping,"Active logical link mapping sends and receives network traffic as a means to map the whole data link layer, where the links represent logical data flows rather than physical connection"
@@ -111,6 +111,11 @@ D3-USICA,Detect,,,User Session Init Config Analysis,Analyzing modifications to u
 D3-ID,Detect,Identifier Analysis,,,
 D3-HD,Detect,,Homoglyph Detection,,Comparing strings using a variety of techniques to determine if a deceptive or malicious string is being presented to a user.
 D3-UA,Detect,,URL Analysis,,Determining if a URL is benign or malicious by analyzing the URL or its components.
+D3-IRA,Detect,,Identifier Reputation Analysis,,
+D3-DNRA,Detect,,,Domain Name Reputation Analysis,Analyzing the reputation of a domain name.
+D3-FHRA,Detect,,,File Hash Reputation Analysis,Analyzing the reputation of a file hash.
+D3-IPRA,Detect,,,IP Reputation Analysis,Analyzing the reputation of an IP address.
+D3-URA,Detect,,,URL Reputation Analysis,Analyzing the reputation of a URL.
 D3-MA,Detect,Message Analysis,,,
 D3-SMRA,Detect,,Sender MTA Reputation Analysis,,Characterizing the reputation of mail transfer agents (MTA) to determine the security risk in emails.
 D3-SRA,Detect,,Sender Reputation Analysis,,Ascertaining sender reputation based on information associated with a message (e.g. email/instant messaging).

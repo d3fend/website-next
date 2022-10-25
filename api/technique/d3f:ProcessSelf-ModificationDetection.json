@@ -790,7 +790,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -807,7 +812,7 @@
         "d3f:definition": "Detects processes that modify, change, or replace their own code at runtime.",
         "d3f:kb-article": "## How it Works\nA security agent installed on the host machine intercepts API calls between a process and operating system. Intercepted API calls are then compared against attack signatures/patterns to identify API calls that modify executable memory or modify the entry point address of a suspended child process. Attack patterns include:\n\n* Executable code of a suspended child process removed from memory by one or more API calls.\n* New executable code injected and / or loaded into memory of a suspended child process by one or more API calls.\n* Executable code modified by one or more API calls.\n* Next instruction pointer value in memory modified by one or more API calls.\n\n## Considerations\nComparing loaded code segments of processes with what is expected to have been loaded from a file can result in false positives, due to legitimate uses of self-modification for decrypting or uncompressing code segments.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_SystemAndMethodForProcessHollowingDetection_CarbonBlackInc"
+          "@id": "d3f:Reference-SystemAndMethodForProcessHollowingDetection_CarbonBlackInc"
         },
         "rdfs:label": "Process Self-Modification Detection",
         "rdfs:subClassOf": {
@@ -885,7 +890,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SystemAndMethodForProcessHollowingDetection_CarbonBlackInc",
+        "@id": "d3f:Reference-SystemAndMethodForProcessHollowingDetection_CarbonBlackInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -915,7 +920,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

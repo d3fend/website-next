@@ -40,12 +40,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -63,16 +58,16 @@
         "d3f:kb-article": "## How it works\nUser web session data is collected over a period of time to create a user behavior profile. Data collected includes clicks made on a website, average time between clicks, filling out web forms, order in which pages are viewed, and downloading files. Current user web session behavior is then compared against the use behavior profile to identify anomalies and a likelihood that the current user web session is malicious. Current user web session behavior can also be compared to predetermined known malicious behavior profiles that are developed through analysis of malware in run time at a threat research facility.\n\n## Considerations\n* Potential for false positives from anomalies that are not associated with malicious activity.\n* Attackers may not differentiate their web session activity enough to trigger an alert.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd"
+            "@id": "d3f:Reference-HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodForDetectionOfAChangeInBehaviorInTheUseOfAWebsiteThroughVectorVelocityAnalysis_SilverTailSystems"
+            "@id": "d3f:Reference-SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodForNetworkSecurityIncludingDetectionOfAttacksThroughPartnerWebsites_EMCIPHoldingCoLLC"
+            "@id": "d3f:Reference-SystemAndMethodForDetectionOfAChangeInBehaviorInTheUseOfAWebsiteThroughVectorVelocityAnalysis_SilverTailSystems"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc"
+            "@id": "d3f:Reference-SystemAndMethodForNetworkSecurityIncludingDetectionOfAttacksThroughPartnerWebsites_EMCIPHoldingCoLLC"
           }
         ],
         "rdfs:label": "Web Session Activity Analysis",
@@ -151,7 +146,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd",
+        "@id": "d3f:Reference-HostIntrusionPreventionSystemUsingSoftwareAndUserBehaviorAnalysis_SophosLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -180,7 +175,7 @@
         "rdfs:label": "Reference - Host intrusion prevention system using software and user behavior analysis - Sophos Ltd"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodForDetectionOfAChangeInBehaviorInTheUseOfAWebsiteThroughVectorVelocityAnalysis_SilverTailSystems",
+        "@id": "d3f:Reference-SystemAndMethodForDetectionOfAChangeInBehaviorInTheUseOfAWebsiteThroughVectorVelocityAnalysis_SilverTailSystems",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -201,7 +196,7 @@
         "rdfs:label": "Reference - System and Method for Detection of a Change in Behavior in the Use of a Website Through Vector Velocity Analysis - Silver Tail Systems"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodForNetworkSecurityIncludingDetectionOfAttacksThroughPartnerWebsites_EMCIPHoldingCoLLC",
+        "@id": "d3f:Reference-SystemAndMethodForNetworkSecurityIncludingDetectionOfAttacksThroughPartnerWebsites_EMCIPHoldingCoLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -222,7 +217,7 @@
         "rdfs:label": "Reference - System and Method for Network Security Including Detection of Attacks Through Partner Websites - EMC IP Holding Co LLC"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc",
+        "@id": "d3f:Reference-SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -260,12 +255,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

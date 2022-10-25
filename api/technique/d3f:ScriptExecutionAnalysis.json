@@ -40,12 +40,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -62,7 +57,7 @@
         "d3f:definition": "Analyzing the execution of a script to detect unauthorized user activity.",
         "d3f:kb-article": "## How it works\nSoftware installed on the host system hooks into a scripting engine to intercept commands before they are executed and block commands if they are determined to be harmful. Pattern matching is used to identify unauthorized commands or in the case of script files, a hash of the file is compared against hashes of known unauthorized script files.\n\n## Considerations\nList of known unauthorized script files or regular expression patterns must be kept up to date to ensure detection of new threats.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_DetectingScript-basedMalware_CrowdstrikeInc"
+          "@id": "d3f:Reference-DetectingScript-basedMalware_CrowdstrikeInc"
         },
         "rdfs:label": "Script Execution Analysis",
         "rdfs:subClassOf": {
@@ -140,7 +135,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_DetectingScript-basedMalware_CrowdstrikeInc",
+        "@id": "d3f:Reference-DetectingScript-basedMalware_CrowdstrikeInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -175,12 +170,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

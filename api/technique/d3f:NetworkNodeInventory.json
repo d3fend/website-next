@@ -362,12 +362,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -377,7 +372,7 @@
           "d3f:AssetInventory",
           "owl:Class"
         ],
-        "d3f:d3fend-id": "D3-SYSI",
+        "d3f:d3fend-id": "D3-NNI",
         "d3f:definition": "Network node inventorying identifies and records all the network nodes (hosts, routers, switches, firewalls, etc.) in the organization's architecture.",
         "d3f:inventories": {
           "@id": "d3f:NetworkNode"
@@ -385,25 +380,25 @@
         "d3f:kb-article": "## How it works\nAdministrators collect information on network nodes in their architecture using a variety of administrative and management tools that query network devices and nodes for information.  In some cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through network enumeration methods to include host discovery and scanning for active ports and services.\n\n## Considerations\n* Scanning and probing techniques using mapping tools can result in side effects to information technology (IT) and operational technology (OT) systems.\n* An adversary conducting network enumeration may engage in activities that parallel normal hardware inventorying activities, but would require escalating to admin privileges for most of the operations requiting administrative tools\n\n## Examples\n* Link-layer discovery\n   * Link-layer Discovery Protocol (LLDP)\n   * Cisco Discovery Protocol (CDP)\n* Application-layer discovery\n   * Simple Network Management Protocol (SNMP) collects MIB information\n   * Web-based Enterprise Management (WBEM) collects CIM information\n      * Windows Management Instrumentation (WMI)\n      * Windows Management Infrastructure (MI)",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_Windows-Management-Instrumentation"
+            "@id": "d3f:Reference-Web-BasedEnterpriseManagement"
           },
           {
-            "@id": "d3f:Reference_AdvancedDeviceMatchingSystem"
+            "@id": "d3f:Reference-AdvancedDeviceMatchingSystem"
           },
           {
-            "@id": "d3f:Reference_IEEE-802_1AB-2016"
+            "@id": "d3f:Reference-IEEE-802_1AB-2016"
           },
           {
-            "@id": "d3f:Reference_QualysNetworkPassiveSensorGettingStartedGuide"
+            "@id": "d3f:Reference-QualysNetworkPassiveSensorGettingStartedGuide"
           },
           {
-            "@id": "d3f:Reference_RFC3411-AnArchitectureForDescribingSimpleNetworkManagementProtocolSNMPManagementFrameworks"
+            "@id": "d3f:Reference-RFC3411-AnArchitectureForDescribingSimpleNetworkManagementProtocolSNMPManagementFrameworks"
           },
           {
-            "@id": "d3f:Reference_Web-BasedEnterpriseManagement"
+            "@id": "d3f:Reference-Windows-Management-Infrastructure"
           },
           {
-            "@id": "d3f:Reference_Windows-Management-Infrastructure"
+            "@id": "d3f:Reference-Windows-Management-Instrumentation"
           }
         ],
         "d3f:synonym": [
@@ -486,15 +481,21 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_AdvancedDeviceMatchingSystem",
+        "@id": "d3f:Reference-AdvancedDeviceMatchingSystem",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
         ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://patents.google.com/patent/US10892951B2/"
-        },
+        "d3f:has-link": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": "https://patents.google.com/patent/US10892951B2/"
+          },
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+            "@value": " https://patents.google.com/patent/US10892951B2/"
+          }
+        ],
         "d3f:kb-abstract": "Disclosed is a device management system for discovery and management of components added to computer systems and sub-systems. The device management system provides for recognizing a newly added component, and determining if the newly added component is already a part of the system inventory. The newly added component is matched with a component currently on the system, based on at least one matching attribute. A point total is calculated for each match level and a final match score is provided. The match score is compared with an aggressiveness level to determine if a match does indeed exist.",
         "d3f:kb-author": "Rajneesh Jalan, Joseph M. Schmitt, and Marco Simoes",
         "d3f:kb-organization": "Device42 Inc",
@@ -506,7 +507,7 @@
         "rdfs:label": "Reference - Advanced device matching system"
       },
       {
-        "@id": "d3f:Reference_IEEE-802_1AB-2016",
+        "@id": "d3f:Reference-IEEE-802_1AB-2016",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -524,7 +525,31 @@
         "rdfs:label": "Reference - IEEE Standard for Local and Metropolitan Area Networks - Station and Media Access Control Connectivity Discovery"
       },
       {
-        "@id": "d3f:Reference_RFC3411-AnArchitectureForDescribingSimpleNetworkManagementProtocolSNMPManagementFrameworks",
+        "@id": "d3f:Reference-QualysNetworkPassiveSensorGettingStartedGuide",
+        "@type": [
+          "d3f:UserManualReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://www.qualys.com/passive-scanning-sensor/"
+        },
+        "d3f:kb-abstract": "Qualys Passive Scanning Sensor (PS) continuously monitors all network traffic and flags any asset activity. It identifies and profiles devices the moment they connect to the network, including those difficult to scan, corporate owned, brought by employees, and rogue IT. The data is sent immediately to the Qualys Cloud Platform for centralized analysis.",
+        "d3f:kb-organization": "Qualys",
+        "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:HardwareInventory"
+          },
+          {
+            "@id": "d3f:NetworkNodeInventory"
+          }
+        ],
+        "d3f:kb-reference-title": "Qualys Network Passive Sensor Getting Started Guide",
+        "d3f:reference-type-label": "User Manual",
+        "rdfs:label": "Reference - Qualys Network Passive Sensor Getting Started Guide"
+      },
+      {
+        "@id": "d3f:Reference-RFC3411-AnArchitectureForDescribingSimpleNetworkManagementProtocolSNMPManagementFrameworks",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -543,7 +568,36 @@
         "rdfs:label": "Reference - An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks"
       },
       {
-        "@id": "d3f:Reference_Windows-Management-Infrastructure",
+        "@id": "d3f:Reference-Web-BasedEnterpriseManagement",
+        "@type": [
+          "d3f:SpecificationReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://www.dmtf.org/standards/wbem"
+        },
+        "d3f:kb-organization": "Distributed Management Task Force (DMTF)",
+        "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:ConfigurationInventory"
+          },
+          {
+            "@id": "d3f:HardwareInventory"
+          },
+          {
+            "@id": "d3f:SoftwareInventory"
+          },
+          {
+            "@id": "d3f:NetworkNodeInventory"
+          }
+        ],
+        "d3f:kb-reference-title": "Web-Based Enterprise Management",
+        "d3f:reference-type-label": "Specification",
+        "rdfs:label": "Reference - Web-Based Enterprise Management"
+      },
+      {
+        "@id": "d3f:Reference-Windows-Management-Infrastructure",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -554,6 +608,9 @@
         },
         "d3f:kb-organization": "Microsoft",
         "d3f:kb-reference-of": [
+          {
+            "@id": "d3f:ConfigurationInventory"
+          },
           {
             "@id": "d3f:HardwareInventory"
           },
@@ -569,7 +626,7 @@
         "rdfs:label": "Reference - Windows Management Infrastructure (MI)"
       },
       {
-        "@id": "d3f:Reference_Windows-Management-Instrumentation",
+        "@id": "d3f:Reference-Windows-Management-Instrumentation",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -601,19 +658,15 @@
   },
   "references_meta": {
     "Patent": 1,
-    "Specification": 4
+    "Specification": 5,
+    "User Manual": 1
   },
   "subtechniques": {
     "@context": {
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

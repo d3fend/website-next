@@ -2734,10 +2734,10 @@
         "d3f:kb-article": "## How it works\nApplications can locally cache user authentication credentials for certain server connections. An application may attempt to use the cached credential for a connection. If the cached credentials exist then the user will not be typically prompted for new credentials.\n\n\n## Considerations\nAre these cached credentials only on the local host? Can they be persisted to the remote server?\n\n## Examples\nWindows Credential Management API",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_SecureCachingOfServerCredentials_DellProductsLP"
+            "@id": "d3f:Reference-SecureCachingOfServerCredentials_DellProductsLP"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodForProvidingAnActivelyInvalidatedClient-sideNetworkResourceCache_IMVU"
+            "@id": "d3f:Reference-SystemAndMethodForProvidingAnActivelyInvalidatedClient-sideNetworkResourceCache_IMVU"
           }
         ],
         "rdfs:label": "Authentication Cache Invalidation",
@@ -2816,7 +2816,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SecureCachingOfServerCredentials_DellProductsLP",
+        "@id": "d3f:Reference-SecureCachingOfServerCredentials_DellProductsLP",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -2837,7 +2837,7 @@
         "rdfs:label": "Reference - Secure caching of server credentials - Dell Products LP"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodForProvidingAnActivelyInvalidatedClient-sideNetworkResourceCache_IMVU",
+        "@id": "d3f:Reference-SystemAndMethodForProvidingAnActivelyInvalidatedClient-sideNetworkResourceCache_IMVU",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

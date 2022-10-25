@@ -790,12 +790,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -818,58 +813,58 @@
         "d3f:kb-article": "## How it works\nProcess tree analysis techniques gather information on how a process was initiated to determine if a process is malicious. For example, if a process was not initiated from boot or not initiated by another process, that process is identified as suspicious. Also, if a new process was started before a process initiated by the device (ex. during boot) and that new process was not initiated by a user (which can be determined by examining process parameters such as type of process, its creator, source, etc.) the process is identified as suspicious.\n\nFor example, Microsoft Word may block execution of any subprocess that is not in an approved path.\n\n## Considerations\n* Attackers may spoof the parent PID (https://attack.mitre.org/techniques/T1502/), rendering such after-the-fact analysis on process lineage ineffective.\n* Processes may hide from various means of detection; an example on Linux is where a rootkit might remove key files for the process from its directory in /proc.\n* Zombie processes.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:CommandLaunchedFromWinLogon_MITRE"
+            "@id": "d3f:Reference-CAR-2020-11-002%3ALocalNetworkSniffing_MITRE"
           },
           {
-            "@id": "d3f:DebuggersForAccessibilityApplications_MITRE"
+            "@id": "d3f:Reference-CAR-2020-11-004%3AProcessesStartedFromIrregularParent_MITRE"
           },
           {
-            "@id": "d3f:GenericRegsvr32_MITRE"
+            "@id": "d3f:Reference-CAR-2021-02-002%3AGetSystemElevation_MITRE"
           },
           {
-            "@id": "d3f:OutlierParentsOfCmd_MITRE"
+            "@id": "d3f:Reference-CAR-2021-05-003%3ABCDEditFailureRecoveryModification_MITRE"
           },
           {
-            "@id": "d3f:ProcessesSpawningCmd.exe_"
+            "@id": "d3f:Reference-CommandLaunchedFromWinLogon_MITRE"
           },
           {
-            "@id": "d3f:QuickExecutionOfASeriesOfSuspiciousCommands_MITRE"
+            "@id": "d3f:Reference-DebuggersForAccessibilityApplications_MITRE"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodsThereofForCausalityIdentificationAndAttributionsDeterminationOfProcessesInANetwork_PaloAltoNetworksIncCyberSecdoLtd"
+            "@id": "d3f:Reference-GenericRegsvr32_MITRE"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodsThereofForIdentificationOfSuspiciousSystemProcesses_PaloAltoNetworksInc"
+            "@id": "d3f:Reference-OutlierParentsOfCmd_MITRE"
           },
           {
-            "@id": "d3f:Reference-CAR-2020-11-002%3ALocalNetworkSniffing-MITRE"
+            "@id": "d3f:Reference-ProcessesSpawningCmd.exe_MITRE"
           },
           {
-            "@id": "d3f:Reference-CAR-2020-11-004%3AProcessesStartedFromIrregularParent-MITRE"
+            "@id": "d3f:Reference-QuickExecutionOfASeriesOfSuspiciousCommands_MITRE"
           },
           {
-            "@id": "d3f:Reference-CAR-2021-02-002%3AGetSystemElevation-MITRE"
+            "@id": "d3f:Reference-Reg.exeCalledFromCommandShell_MITRE"
           },
           {
-            "@id": "d3f:Reference-CAR-2021-05-003%3ABCDEditFailureRecoveryModification-MITRE"
+            "@id": "d3f:Reference-RemotelyLaunchedExecutablesViaWMI_MITRE"
           },
           {
-            "@id": "d3f:Reg.exeCalledFromCommandShell_MITRE"
+            "@id": "d3f:Reference-ServiceOutlierExecutables_MITRE"
           },
           {
-            "@id": "d3f:RemotelyLaunchedExecutablesViaWMI_MITRE"
+            "@id": "d3f:Reference-ServiceSearchPathInterception_MITRE"
           },
           {
-            "@id": "d3f:ServiceOutlierExecutables_"
+            "@id": "d3f:Reference-ServicesLaunchingCmd_MITRE"
           },
           {
-            "@id": "d3f:ServiceSearchPathInterception_MITRE"
+            "@id": "d3f:Reference-SystemAndMethodsThereofForCausalityIdentificationAndAttributionsDeterminationOfProcessesInANetwork_PaloAltoNetworksIncCyberSecdoLtd"
           },
           {
-            "@id": "d3f:ServicesLaunchingCmd_"
+            "@id": "d3f:Reference-SystemAndMethodsThereofForIdentificationOfSuspiciousSystemProcesses_PaloAltoNetworksInc"
           },
           {
-            "@id": "d3f:UACBypass_MITRE"
+            "@id": "d3f:Reference-UACBypass_MITRE"
           }
         ],
         "d3f:synonym": "Process Tree Analysis",
@@ -991,7 +986,87 @@
     },
     "@graph": [
       {
-        "@id": "d3f:CommandLaunchedFromWinLogon_MITRE",
+        "@id": "d3f:Reference-CAR-2020-11-002%3ALocalNetworkSniffing_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2020-11-002/"
+        },
+        "d3f:kb-abstract": "Adversaries may use a variety of tools to gain visibility on the current status of things on the network: which processes are listening on which ports, which services are running on other hosts, etc. This analytic looks for the names of the most common network sniffing tools. While this may be noisy on networks where sysadmins are using any of these tools on a regular basis, in most networks their use is noteworthy.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:ProcessLineageAnalysis"
+        },
+        "d3f:kb-reference-title": "CAR-2020-11-002: Local Network Sniffing",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2020-11-002: Local Network Sniffing - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-CAR-2020-11-004%3AProcessesStartedFromIrregularParent_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2020-11-004/"
+        },
+        "d3f:kb-abstract": "Adversaries may start legitimate processes and then use their memory space to run malicious code. This analytic looks for common Windows processes that have been abused this way in the past; when the processes are started for this purpose they may not have the standard parent that we would expect. This list is not exhaustive, and it is possible for cyber actors to avoid this discepency. These signatures only work if Sysmon reports the parent process, which may not always be the case if the parent dies before sysmon processes the event.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:ProcessLineageAnalysis"
+        },
+        "d3f:kb-reference-title": "CAR-2020-11-004: Processes Started From Irregular Parent",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2020-11-004: Processes Started From Irregular Parent - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-CAR-2021-02-002%3AGetSystemElevation_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2021-02-002/"
+        },
+        "d3f:kb-abstract": "Cyber actors frequently escalate to the SYSTEM account after gaining entry to a Windows host, to enable them to carry out various attacks more effectively. Tools such as Meterpreter, Cobalt Strike, and Empire carry out automated steps to “Get System”, which is the same as switching over to the System user account. Most of these tools utilize multiple techniques to try and attain SYSTEM: in the first technique, they create a named pipe and connects an instance of cmd.exe to it, which allows them to impersonate the security context of cmd.exe, which is SYSTEM. In the second technique, a malicious DLL is injected into a process that is running as SYSTEM; the injected DLL steals the SYSTEM token and applies it where necessary to escalate privileges. This analytic looks for both of these techniques.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:ProcessLineageAnalysis"
+        },
+        "d3f:kb-reference-title": "CAR-2021-02-002: Get System Elevation",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2021-02-002: Get System Elevation - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-CAR-2021-05-003%3ABCDEditFailureRecoveryModification_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2021-05-003/"
+        },
+        "d3f:kb-abstract": "This search looks for flags passed to bcdedit.exe modifications to the built-in Windows error recovery boot configurations. This is typically used by ransomware to prevent recovery.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-organization": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:ProcessSpawnAnalysis"
+        },
+        "d3f:kb-reference-title": "CAR-2021-05-003: BCDEdit Failure Recovery Modification",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2021-05-003: BCDEdit Failure Recovery Modification - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-CommandLaunchedFromWinLogon_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1012,7 +1087,7 @@
         "rdfs:label": "Reference - CAR-2014-11-008: Command Launched from WinLogon - MITRE"
       },
       {
-        "@id": "d3f:DebuggersForAccessibilityApplications_MITRE",
+        "@id": "d3f:Reference-DebuggersForAccessibilityApplications_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1033,7 +1108,7 @@
         "rdfs:label": "Reference - CAR-2014-11-003: Debuggers for Accessibility Applications - MITRE"
       },
       {
-        "@id": "d3f:GenericRegsvr32_MITRE",
+        "@id": "d3f:Reference-GenericRegsvr32_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1054,7 +1129,7 @@
         "rdfs:label": "Reference - CAR-2019-04-002: Generic Regsvr32 - MITRE"
       },
       {
-        "@id": "d3f:OutlierParentsOfCmd_MITRE",
+        "@id": "d3f:Reference-OutlierParentsOfCmd_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1075,7 +1150,7 @@
         "rdfs:label": "Reference - CAR-2014-11-002: Outlier Parents of Cmd - MITRE"
       },
       {
-        "@id": "d3f:ProcessesSpawningCmd.exe_",
+        "@id": "d3f:Reference-ProcessesSpawningCmd.exe_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1093,10 +1168,10 @@
         },
         "d3f:kb-reference-title": "CAR-2013-02-003: Processes Spawning cmd.exe",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-02-003: Processes Spawning cmd.exe -"
+        "rdfs:label": "Reference - CAR-2013-02-003: Processes Spawning cmd.exe - MITRE"
       },
       {
-        "@id": "d3f:QuickExecutionOfASeriesOfSuspiciousCommands_MITRE",
+        "@id": "d3f:Reference-QuickExecutionOfASeriesOfSuspiciousCommands_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1117,129 +1192,7 @@
         "rdfs:label": "Reference - CAR-2013-04-002: Quick execution of a series of suspicious commands - MITRE"
       },
       {
-        "@id": "d3f:Reference-CAR-2020-11-002%3ALocalNetworkSniffing-MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2020-11-002/"
-        },
-        "d3f:kb-abstract": "Adversaries may use a variety of tools to gain visibility on the current status of things on the network: which processes are listening on which ports, which services are running on other hosts, etc. This analytic looks for the names of the most common network sniffing tools. While this may be noisy on networks where sysadmins are using any of these tools on a regular basis, in most networks their use is noteworthy.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:ProcessLineageAnalysis"
-        },
-        "d3f:kb-reference-title": "CAR-2020-11-002: Local Network Sniffing",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2020-11-002: Local Network Sniffing - MITRE"
-      },
-      {
-        "@id": "d3f:Reference-CAR-2020-11-004%3AProcessesStartedFromIrregularParent-MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2020-11-004/"
-        },
-        "d3f:kb-abstract": "Adversaries may start legitimate processes and then use their memory space to run malicious code. This analytic looks for common Windows processes that have been abused this way in the past; when the processes are started for this purpose they may not have the standard parent that we would expect. This list is not exhaustive, and it is possible for cyber actors to avoid this discepency. These signatures only work if Sysmon reports the parent process, which may not always be the case if the parent dies before sysmon processes the event.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:ProcessLineageAnalysis"
-        },
-        "d3f:kb-reference-title": "CAR-2020-11-004: Processes Started From Irregular Parent",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2020-11-004: Processes Started From Irregular Parent - MITRE"
-      },
-      {
-        "@id": "d3f:Reference-CAR-2021-02-002%3AGetSystemElevation-MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2021-02-002/"
-        },
-        "d3f:kb-abstract": "Cyber actors frequently escalate to the SYSTEM account after gaining entry to a Windows host, to enable them to carry out various attacks more effectively. Tools such as Meterpreter, Cobalt Strike, and Empire carry out automated steps to “Get System”, which is the same as switching over to the System user account. Most of these tools utilize multiple techniques to try and attain SYSTEM: in the first technique, they create a named pipe and connects an instance of cmd.exe to it, which allows them to impersonate the security context of cmd.exe, which is SYSTEM. In the second technique, a malicious DLL is injected into a process that is running as SYSTEM; the injected DLL steals the SYSTEM token and applies it where necessary to escalate privileges. This analytic looks for both of these techniques.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:ProcessLineageAnalysis"
-        },
-        "d3f:kb-reference-title": "CAR-2021-02-002: Get System Elevation",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2021-02-002: Get System Elevation - MITRE"
-      },
-      {
-        "@id": "d3f:Reference-CAR-2021-05-003%3ABCDEditFailureRecoveryModification-MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2021-05-003/"
-        },
-        "d3f:kb-abstract": "This search looks for flags passed to bcdedit.exe modifications to the built-in Windows error recovery boot configurations. This is typically used by ransomware to prevent recovery.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-organization": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:ProcessSpawnAnalysis"
-        },
-        "d3f:kb-reference-title": "CAR-2021-05-003: BCDEdit Failure Recovery Modification",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2021-05-003: BCDEdit Failure Recovery Modification - MITRE"
-      },
-      {
-        "@id": "d3f:Reference_SystemAndMethodsThereofForCausalityIdentificationAndAttributionsDeterminationOfProcessesInANetwork_PaloAltoNetworksIncCyberSecdoLtd",
-        "@type": [
-          "d3f:PatentReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://patents.google.com/patent/US20170195350A1/en?oq=US-2017195350-A1"
-        },
-        "d3f:kb-abstract": "A system is used for detection of advanced persistent and non-persistent threats in a computerized environment. The system is connected to a plurality of user devices coupled to an enterprise's network. The system receives via an interface an electronic notification of at least one event in the operating system of the computer. The system then analyzes the at least one event. The system then generates a causality chain for the at least one event respective of the analysis. The causality chain comprises all the threads that attributed to the at least one event in a chronological order. The system then identifies a main thread that started the causality chain that led to the at least one event. Then, the system determines whether the main thread is associated with malicious software. Upon determination that the main thread is associated with malicious software, the causality chain is marked as infected.",
-        "d3f:kb-author": "Gil BARAK",
-        "d3f:kb-mitre-analysis": "This patent describes detecting malicious processes on a host. Agents are deployed on hosts that monitor all initiated processes and determine whether a process was initiated at boot or initiated by another process. If not initiated at boot or by another process, the process is identified as suspicious and an alert is triggered.",
-        "d3f:kb-organization": "Palo Alto Networks IncCyber Secdo Ltd",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:ProcessLineageAnalysis"
-        },
-        "d3f:kb-reference-title": "System and methods thereof for causality identification and attributions determination of processes in a network",
-        "d3f:reference-type-label": "Patent",
-        "rdfs:label": "Reference - System and methods thereof for causality identification and attributions determination of processes in a network - Palo Alto Networks IncCyber Secdo Ltd"
-      },
-      {
-        "@id": "d3f:Reference_SystemAndMethodsThereofForIdentificationOfSuspiciousSystemProcesses_PaloAltoNetworksInc",
-        "@type": [
-          "d3f:PatentReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://patents.google.com/patent/US20170286683A1/en?oq=US-2017286683-A1"
-        },
-        "d3f:kb-abstract": "A computerized method for identification of suspicious processes executing on an end-point device communicatively connected to network, the network communicatively connected to a server, the method comprising receiving, by the server, a record of at least one process, initiated by and executing on by the end-point device. One or more parameters associated with the at least one process are identified. A first time pointer is identified corresponding to the identified one or more parameters, a first time pointer. A second time pointer at which a user associated with the end-point device initiated a user dependent process is identified. Whether the second time pointer occurred before the first time pointer is identified. It is determined whether the at least one process was initiated by the user based on identification of user dependent processes and corresponding attribution. An action is performed based on the above determination.",
-        "d3f:kb-author": "Gil BARAK",
-        "d3f:kb-mitre-analysis": "The patent describes detecting malicious processes by identifying the order of process initiation. The start of a user initiated process (user query, opening an application, etc.) is compared with the start of processes initiated by the device (ex. during boot). In addition, a determination is made on whether processes are not initiated by a user by examining process parameters such as type of process, its creator, source, etc. If it is determined that a user initiated process was started before a process initiated by the device and a process was not initiated by the user, the process is marked as suspicious.",
-        "d3f:kb-organization": "Palo Alto Networks Inc",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:ProcessLineageAnalysis"
-        },
-        "d3f:kb-reference-title": "System and methods thereof for identification of suspicious system processes",
-        "d3f:reference-type-label": "Patent",
-        "rdfs:label": "Reference - System and methods thereof for identification of suspicious system processes - Palo Alto Networks Inc"
-      },
-      {
-        "@id": "d3f:Reg.exeCalledFromCommandShell_MITRE",
+        "@id": "d3f:Reference-Reg.exeCalledFromCommandShell_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1265,7 +1218,7 @@
         "rdfs:label": "Reference - CAR-2013-03-001: Reg.exe called from Command Shell - MITRE"
       },
       {
-        "@id": "d3f:RemotelyLaunchedExecutablesViaWMI_MITRE",
+        "@id": "d3f:Reference-RemotelyLaunchedExecutablesViaWMI_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1291,7 +1244,7 @@
         "rdfs:label": "Reference - CAR-2014-12-001: Remotely Launched Executables via WMI - MITRE"
       },
       {
-        "@id": "d3f:ServiceOutlierExecutables_",
+        "@id": "d3f:Reference-ServiceOutlierExecutables_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1309,10 +1262,10 @@
         },
         "d3f:kb-reference-title": "CAR-2013-09-005: Service Outlier Executables",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-09-005: Service Outlier Executables -"
+        "rdfs:label": "Reference - CAR-2013-09-005: Service Outlier Executables - MITRE"
       },
       {
-        "@id": "d3f:ServiceSearchPathInterception_MITRE",
+        "@id": "d3f:Reference-ServiceSearchPathInterception_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1333,7 +1286,7 @@
         "rdfs:label": "Reference - CAR-2014-07-001: Service Search Path Interception - MITRE"
       },
       {
-        "@id": "d3f:ServicesLaunchingCmd_",
+        "@id": "d3f:Reference-ServicesLaunchingCmd_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1351,10 +1304,52 @@
         },
         "d3f:kb-reference-title": "CAR-2014-05-002: Services launching Cmd",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2014-05-002: Services launching Cmd -"
+        "rdfs:label": "Reference - CAR-2014-05-002: Services launching Cmd - MITRE"
       },
       {
-        "@id": "d3f:UACBypass_MITRE",
+        "@id": "d3f:Reference-SystemAndMethodsThereofForCausalityIdentificationAndAttributionsDeterminationOfProcessesInANetwork_PaloAltoNetworksIncCyberSecdoLtd",
+        "@type": [
+          "d3f:PatentReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://patents.google.com/patent/US20170195350A1/en?oq=US-2017195350-A1"
+        },
+        "d3f:kb-abstract": "A system is used for detection of advanced persistent and non-persistent threats in a computerized environment. The system is connected to a plurality of user devices coupled to an enterprise's network. The system receives via an interface an electronic notification of at least one event in the operating system of the computer. The system then analyzes the at least one event. The system then generates a causality chain for the at least one event respective of the analysis. The causality chain comprises all the threads that attributed to the at least one event in a chronological order. The system then identifies a main thread that started the causality chain that led to the at least one event. Then, the system determines whether the main thread is associated with malicious software. Upon determination that the main thread is associated with malicious software, the causality chain is marked as infected.",
+        "d3f:kb-author": "Gil BARAK",
+        "d3f:kb-mitre-analysis": "This patent describes detecting malicious processes on a host. Agents are deployed on hosts that monitor all initiated processes and determine whether a process was initiated at boot or initiated by another process. If not initiated at boot or by another process, the process is identified as suspicious and an alert is triggered.",
+        "d3f:kb-organization": "Palo Alto Networks IncCyber Secdo Ltd",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:ProcessLineageAnalysis"
+        },
+        "d3f:kb-reference-title": "System and methods thereof for causality identification and attributions determination of processes in a network",
+        "d3f:reference-type-label": "Patent",
+        "rdfs:label": "Reference - System and methods thereof for causality identification and attributions determination of processes in a network - Palo Alto Networks IncCyber Secdo Ltd"
+      },
+      {
+        "@id": "d3f:Reference-SystemAndMethodsThereofForIdentificationOfSuspiciousSystemProcesses_PaloAltoNetworksInc",
+        "@type": [
+          "d3f:PatentReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://patents.google.com/patent/US20170286683A1/en?oq=US-2017286683-A1"
+        },
+        "d3f:kb-abstract": "A computerized method for identification of suspicious processes executing on an end-point device communicatively connected to network, the network communicatively connected to a server, the method comprising receiving, by the server, a record of at least one process, initiated by and executing on by the end-point device. One or more parameters associated with the at least one process are identified. A first time pointer is identified corresponding to the identified one or more parameters, a first time pointer. A second time pointer at which a user associated with the end-point device initiated a user dependent process is identified. Whether the second time pointer occurred before the first time pointer is identified. It is determined whether the at least one process was initiated by the user based on identification of user dependent processes and corresponding attribution. An action is performed based on the above determination.",
+        "d3f:kb-author": "Gil BARAK",
+        "d3f:kb-mitre-analysis": "The patent describes detecting malicious processes by identifying the order of process initiation. The start of a user initiated process (user query, opening an application, etc.) is compared with the start of processes initiated by the device (ex. during boot). In addition, a determination is made on whether processes are not initiated by a user by examining process parameters such as type of process, its creator, source, etc. If it is determined that a user initiated process was started before a process initiated by the device and a process was not initiated by the user, the process is marked as suspicious.",
+        "d3f:kb-organization": "Palo Alto Networks Inc",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:ProcessLineageAnalysis"
+        },
+        "d3f:kb-reference-title": "System and methods thereof for identification of suspicious system processes",
+        "d3f:reference-type-label": "Patent",
+        "rdfs:label": "Reference - System and methods thereof for identification of suspicious system processes - Palo Alto Networks Inc"
+      },
+      {
+        "@id": "d3f:Reference-UACBypass_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1385,12 +1380,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

@@ -40,12 +40,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -60,10 +55,10 @@
         "d3f:kb-article": "## How it works\nA false online identity is created for the purposes of interacting with adversaries in a direct or indirect manner. This includes the associated email addresses, social media accounts, and other online communication profiles.\n\n## Considerations\n* Include phone numbers and online social profiles as well as automatically or manually responding to contact made to the persona to improve realism.\n* Continuous updating and managing the decoy personas and online activity streams to ensure personas do not become stale and outdated.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_DecoyAndDeceptiveDataObjectTechnology_Cymmetria,Inc."
+            "@id": "d3f:Reference-DecoyAndDeceptiveDataObjectTechnology_Cymmetria,Inc."
           },
           {
-            "@id": "d3f:Reference_DecoyPersonasForSafeguardingOnlineIdentityUsingDeception_"
+            "@id": "d3f:Reference-DecoyPersonasForSafeguardingOnlineIdentityUsingDeception_"
           }
         ],
         "d3f:spoofs": {
@@ -145,7 +140,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_DecoyAndDeceptiveDataObjectTechnology_Cymmetria,Inc.",
+        "@id": "d3f:Reference-DecoyAndDeceptiveDataObjectTechnology_Cymmetria,Inc.",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -166,7 +161,7 @@
         "rdfs:label": "Reference - Decoy and deceptive data object technology - Cymmetria, Inc."
       },
       {
-        "@id": "d3f:Reference_DecoyPersonasForSafeguardingOnlineIdentityUsingDeception_",
+        "@id": "d3f:Reference-DecoyPersonasForSafeguardingOnlineIdentityUsingDeception_",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -184,7 +179,7 @@
         },
         "d3f:kb-reference-title": "Decoy Personas for Safeguarding Online Identity Using Deception",
         "d3f:reference-type-label": "Internet Article",
-        "rdfs:label": "Reference - Decoy Personas for Safeguarding Online Identity Using Deception -"
+        "rdfs:label": "Reference - Decoy Personas for Safeguarding Online Identity Using Deception - MITRE"
       }
     ]
   },
@@ -197,12 +192,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

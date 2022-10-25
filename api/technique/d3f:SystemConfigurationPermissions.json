@@ -68,648 +68,6 @@
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Credentials in Registry"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.002"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Unsecured Credentials"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Credential Access"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.002"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Windows Registry"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "modifies"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Modify Registry"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1112"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Defense Evasion Technique"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Defense Evasion"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsRegistry"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1112"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasionTechnique"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "modifies"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Rogue Domain Controller"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1207"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Defense Evasion Technique"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Defense Evasion"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1207"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasionTechnique"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-modify"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "MMC"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1218.014"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Signed Binary Proxy Execution"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Defense Evasion"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.014"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Query Registry"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1012"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Discovery Technique"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Discovery"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1012"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiscoveryTechnique"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-modify"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "MMC"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1218.014"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Signed Binary Proxy Execution"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Execution"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.014"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Configuration Permissions"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "System Configuration Database"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
             "value": "creates"
           },
           "off_tech_label": {
@@ -1958,6 +1316,648 @@
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
           }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Hardening"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Credentials in Registry"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.002"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Unsecured Credentials"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Credential Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.002"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Hardening"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Windows Registry"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "modifies"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Modify Registry"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1112"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Defense Evasion Technique"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Defense Evasion"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsRegistry"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1112"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasionTechnique"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Hardening"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "modifies"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Rogue Domain Controller"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1207"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Defense Evasion Technique"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Defense Evasion"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1207"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasionTechnique"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Hardening"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "may-modify"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "MMC"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1218.014"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Signed Binary Proxy Execution"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Defense Evasion"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.014"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Hardening"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Query Registry"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1012"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Discovery Technique"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Discovery"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1012"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiscoveryTechnique"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Hardening"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Configuration Permissions"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "System Configuration Database"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "may-modify"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "MMC"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1218.014"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Signed Binary Proxy Execution"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Execution"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.014"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+          }
         }
       ]
     }
@@ -2101,9 +2101,9 @@
     "@graph": []
   },
   "related_offensive_matrix": {
-    "Credential Access": [
+    "Defense Evasion": [
       [
-        "Unsecured Credentials",
+        "Abuse Elevation Control Mechanism",
         [
           {
             "query_def_tech_label": {
@@ -2140,19 +2140,19 @@
             },
             "off_artifact_rel_label": {
               "type": "literal",
-              "value": "accesses"
+              "value": "creates"
             },
             "off_tech_label": {
               "type": "literal",
-              "value": "Credentials in Registry"
+              "value": "Elevated Execution with Prompt"
             },
             "off_tech_id": {
               "type": "literal",
-              "value": "T1552.002"
+              "value": "T1548.004"
             },
             "off_tech_parent_label": {
               "type": "literal",
-              "value": "Unsecured Credentials"
+              "value": "Abuse Elevation Control Mechanism"
             },
             "off_tech_parent_is_toplevel": {
               "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
@@ -2165,7 +2165,7 @@
             },
             "off_tactic_label": {
               "type": "literal",
-              "value": "Credential Access"
+              "value": "Defense Evasion"
             },
             "def_tactic": {
               "type": "uri",
@@ -2193,15 +2193,15 @@
             },
             "off_artifact_rel": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
             },
             "off_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.002"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.004"
             },
             "off_tech_parent": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548"
             },
             "off_tactic_rel": {
               "type": "uri",
@@ -2209,13 +2209,230 @@
             },
             "off_tactic": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
             }
           }
         ]
-      ]
-    ],
-    "Defense Evasion": [
+      ],
+      [
+        "Hide Artifacts",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "System Configuration Permissions"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Platform Hardening"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Harden"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "System Configuration Permissions"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "restricts"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "System Configuration Database"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "System Configuration Database"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "may-modify"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Hidden Window"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1564.003"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Hide Artifacts"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Defense Evasion"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1564.003"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1564"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+            }
+          },
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "System Configuration Permissions"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Platform Hardening"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Harden"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "System Configuration Permissions"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "restricts"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "System Configuration Database"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "System Configuration Database"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "may-modify"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Hidden File System"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1564.005"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Hide Artifacts"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Defense Evasion"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1564.005"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1564"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+            }
+          }
+        ]
+      ],
       [
         "Modify Registry",
         [
@@ -2551,452 +2768,9 @@
             }
           }
         ]
-      ],
-      [
-        "Abuse Elevation Control Mechanism",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "System Configuration Permissions"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Platform Hardening"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Harden"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "System Configuration Permissions"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "restricts"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "System Configuration Database"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "System Configuration Database"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "creates"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Elevated Execution with Prompt"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1548.004"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Abuse Elevation Control Mechanism"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Defense Evasion"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.004"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-            }
-          }
-        ]
-      ],
-      [
-        "Hide Artifacts",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "System Configuration Permissions"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Platform Hardening"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Harden"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "System Configuration Permissions"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "restricts"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "System Configuration Database"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "System Configuration Database"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "may-modify"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Hidden Window"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1564.003"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Hide Artifacts"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Defense Evasion"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1564.003"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1564"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-            }
-          },
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "System Configuration Permissions"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Platform Hardening"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Harden"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "System Configuration Permissions"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "restricts"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "System Configuration Database"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "System Configuration Database"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "may-modify"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Hidden File System"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1564.005"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Hide Artifacts"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Defense Evasion"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1564.005"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1564"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-            }
-          }
-        ]
       ]
     ],
     "Discovery": [
-      [
-        "Query Registry",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "System Configuration Permissions"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Platform Hardening"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Harden"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "System Configuration Permissions"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "restricts"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "System Configuration Database"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "System Configuration Database"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "accesses"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Query Registry"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1012"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Discovery Technique"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "true"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Discovery"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1012"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiscoveryTechnique"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
-            }
-          }
-        ]
-      ],
       [
         "System Location Discovery",
         [
@@ -3108,11 +2882,9 @@
             }
           }
         ]
-      ]
-    ],
-    "Execution": [
+      ],
       [
-        "Signed Binary Proxy Execution",
+        "Query Registry",
         [
           {
             "query_def_tech_label": {
@@ -3149,24 +2921,24 @@
             },
             "off_artifact_rel_label": {
               "type": "literal",
-              "value": "may-modify"
+              "value": "accesses"
             },
             "off_tech_label": {
               "type": "literal",
-              "value": "MMC"
+              "value": "Query Registry"
             },
             "off_tech_id": {
               "type": "literal",
-              "value": "T1218.014"
+              "value": "T1012"
             },
             "off_tech_parent_label": {
               "type": "literal",
-              "value": "Signed Binary Proxy Execution"
+              "value": "Discovery Technique"
             },
             "off_tech_parent_is_toplevel": {
               "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
               "type": "literal",
-              "value": "false"
+              "value": "true"
             },
             "off_tactic_rel_label": {
               "type": "literal",
@@ -3174,7 +2946,7 @@
             },
             "off_tactic_label": {
               "type": "literal",
-              "value": "Execution"
+              "value": "Discovery"
             },
             "def_tactic": {
               "type": "uri",
@@ -3202,15 +2974,15 @@
             },
             "off_artifact_rel": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
             },
             "off_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.014"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1012"
             },
             "off_tech_parent": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiscoveryTechnique"
             },
             "off_tactic_rel": {
               "type": "uri",
@@ -3218,7 +2990,7 @@
             },
             "off_tactic": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
             }
           }
         ]
@@ -4109,6 +3881,234 @@
             "off_tactic": {
               "type": "uri",
               "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            }
+          }
+        ]
+      ]
+    ],
+    "Credential Access": [
+      [
+        "Unsecured Credentials",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "System Configuration Permissions"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Platform Hardening"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Harden"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "System Configuration Permissions"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "restricts"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "System Configuration Database"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "System Configuration Database"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "accesses"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Credentials in Registry"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1552.002"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Unsecured Credentials"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Credential Access"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.002"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+            }
+          }
+        ]
+      ]
+    ],
+    "Execution": [
+      [
+        "Signed Binary Proxy Execution",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "System Configuration Permissions"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Platform Hardening"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Harden"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "System Configuration Permissions"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "restricts"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "System Configuration Database"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "System Configuration Database"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "may-modify"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "MMC"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1218.014"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Signed Binary Proxy Execution"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Execution"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationPermissions"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabase"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.014"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
             }
           }
         ]

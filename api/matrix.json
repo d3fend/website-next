@@ -3,158 +3,6 @@
     "@id": "d3f:Model",
     "children": [
       {
-        "@id": "d3f:AssetInventory",
-        "children": [
-          {
-            "@id": "d3f:ConfigurationInventory",
-            "d3f:d3fend-id": "D3-CI",
-            "d3f:definition": "Configuration inventory identifies and records the configuration of software and hardware and their components throughout the organization.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "1"
-            },
-            "rdfs:label": "Configuration Inventory"
-          },
-          {
-            "@id": "d3f:DataInventory",
-            "d3f:d3fend-id": "D3-DI",
-            "d3f:definition": "Data inventorying identifies and records the schemas, formats, volumes, and locations of data stored and used on the organization's architecture.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "1"
-            },
-            "rdfs:label": "Data Inventory"
-          },
-          {
-            "@id": "d3f:HardwareInventory",
-            "d3f:d3fend-id": "D3-HWI",
-            "d3f:definition": "Hardware inventorying identifies and records the hardware items in the organization's architecture.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "4"
-            },
-            "rdfs:label": "Hardware Inventory"
-          },
-          {
-            "@id": "d3f:SoftwareInventory",
-            "d3f:d3fend-id": "D3-SWI",
-            "d3f:definition": "Software inventorying identifies and records the software items in the organization's architecture.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "3"
-            },
-            "rdfs:label": "Software Inventory"
-          },
-          {
-            "@id": "d3f:AssetVulnerabilityEnumeration",
-            "d3f:d3fend-id": "D3-AVE",
-            "d3f:definition": "Asset vulnerability enumeration enriches inventory items with knowledge identifying their vulnerabilities.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "3"
-            },
-            "rdfs:label": "Asset Vulnerability Enumeration"
-          },
-          {
-            "@id": "d3f:NetworkNodeInventory",
-            "d3f:d3fend-id": "D3-SYSI",
-            "d3f:definition": "Network node inventorying identifies and records all the network nodes (hosts, routers, switches, firewalls, etc.) in the organization's architecture.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "7"
-            },
-            "rdfs:label": "Network Node Inventory"
-          }
-        ],
-        "d3f:d3fend-id": "D3-AI",
-        "d3f:definition": "Asset inventorying identifies and records the organization's assets and enriches each inventory item with knowledge about their vulnerabilities.",
-        "rdfs:label": "Asset Inventory"
-      },
-      {
-        "@id": "d3f:NetworkMapping",
-        "children": [
-          {
-            "@id": "d3f:LogicalLinkMapping",
-            "children": [
-              {
-                "@id": "d3f:ActiveLogicalLinkMapping",
-                "d3f:d3fend-id": "D3-ALLM",
-                "d3f:definition": "Active logical link mapping sends and receives network traffic as a means to map the whole data link layer, where the links represent logical data flows rather than physical connection",
-                "d3f:ref-count": {
-                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "2"
-                },
-                "rdfs:label": "Active Logical Link Mapping"
-              },
-              {
-                "@id": "d3f:PassiveLogicalLinkMapping",
-                "d3f:d3fend-id": "D3-PLLM",
-                "d3f:definition": "Passive logical link mapping only listens to network traffic as a means to map the the whole data link layer, where the links represent logical data flows rather than physical connections.",
-                "d3f:ref-count": {
-                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "1"
-                },
-                "rdfs:label": "Passive Logical Link Mapping"
-              }
-            ],
-            "d3f:d3fend-id": "D3-LLM",
-            "d3f:definition": "Logical link mapping creates a model of existing or previous node-to-node connections using network-layer data or metadata.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "1"
-            },
-            "rdfs:label": "Logical Link Mapping"
-          },
-          {
-            "@id": "d3f:NetworkVulnerabilityAssessment",
-            "d3f:d3fend-id": "D3-NVA",
-            "d3f:definition": "Network vulnerability assessment relates all the vulnerabilities of a network's components in the context of their configuration and interdependencies and can also include assessing risk emerging from the network's design as a whole, not just the sum of individual network node or network segment vulnerabilities.",
-            "rdfs:label": "Network Vulnerability Assessment"
-          },
-          {
-            "@id": "d3f:PhysicalLinkMapping",
-            "children": [
-              {
-                "@id": "d3f:ActivePhysicalLinkMapping",
-                "d3f:d3fend-id": "D3-APLM",
-                "d3f:definition": "Active physical link mapping sends and receives network traffic as a means to map the physical layer.",
-                "d3f:ref-count": {
-                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "2"
-                },
-                "rdfs:label": "Active Physical Link Mapping"
-              },
-              {
-                "@id": "d3f:PassivePhysicalLinkMapping",
-                "d3f:d3fend-id": "D3-PPLM",
-                "d3f:definition": "Passive physical link mapping only listens to network traffic as a means to map the physical layer.",
-                "rdfs:label": "Passive Physical Link Mapping"
-              }
-            ],
-            "d3f:d3fend-id": "D3-PLM",
-            "d3f:definition": "Physical link mapping identifies and models the link connectivity of the network devices within a physical network.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "1"
-            },
-            "rdfs:label": "Physical Link Mapping"
-          },
-          {
-            "@id": "d3f:NetworkTrafficPolicyMapping",
-            "d3f:d3fend-id": "D3-NTPM",
-            "d3f:definition": "Network traffic policy mapping identifies and models the allowed pathways of data at the network, tranport, and/or application levels.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "1"
-            },
-            "rdfs:label": "Network Traffic Policy Mapping"
-          }
-        ],
-        "d3f:d3fend-id": "D3-NM",
-        "d3f:definition": "Network mapping encompasses the techniques to identify and model the physical layer, network layer, and data exchange layers of the organization's network and their physical location, and determine allowed pathways through that network.",
-        "rdfs:label": "Network Mapping"
-      },
-      {
         "@id": "d3f:OperationalActivityMapping",
         "children": [
           {
@@ -253,6 +101,158 @@
         "d3f:d3fend-id": "D3-SYSM",
         "d3f:definition": "System mapping encompasses the techniques to identify the organization's systems, how they are configured and decomposed into subsystems and components, how they are dependent on one another, and where they are physically located.",
         "rdfs:label": "System Mapping"
+      },
+      {
+        "@id": "d3f:AssetInventory",
+        "children": [
+          {
+            "@id": "d3f:ConfigurationInventory",
+            "d3f:d3fend-id": "D3-CI",
+            "d3f:definition": "Configuration inventory identifies and records the configuration of software and hardware and their components throughout the organization.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "3"
+            },
+            "rdfs:label": "Configuration Inventory"
+          },
+          {
+            "@id": "d3f:DataInventory",
+            "d3f:d3fend-id": "D3-DI",
+            "d3f:definition": "Data inventorying identifies and records the schemas, formats, volumes, and locations of data stored and used on the organization's architecture.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "1"
+            },
+            "rdfs:label": "Data Inventory"
+          },
+          {
+            "@id": "d3f:HardwareInventory",
+            "d3f:d3fend-id": "D3-HWI",
+            "d3f:definition": "Hardware inventorying identifies and records the hardware items in the organization's architecture.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "6"
+            },
+            "rdfs:label": "Hardware Inventory"
+          },
+          {
+            "@id": "d3f:SoftwareInventory",
+            "d3f:d3fend-id": "D3-SWI",
+            "d3f:definition": "Software inventorying identifies and records the software items in the organization's architecture.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "3"
+            },
+            "rdfs:label": "Software Inventory"
+          },
+          {
+            "@id": "d3f:AssetVulnerabilityEnumeration",
+            "d3f:d3fend-id": "D3-AVE",
+            "d3f:definition": "Asset vulnerability enumeration enriches inventory items with knowledge identifying their vulnerabilities.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "3"
+            },
+            "rdfs:label": "Asset Vulnerability Enumeration"
+          },
+          {
+            "@id": "d3f:NetworkNodeInventory",
+            "d3f:d3fend-id": "D3-NNI",
+            "d3f:definition": "Network node inventorying identifies and records all the network nodes (hosts, routers, switches, firewalls, etc.) in the organization's architecture.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "7"
+            },
+            "rdfs:label": "Network Node Inventory"
+          }
+        ],
+        "d3f:d3fend-id": "D3-AI",
+        "d3f:definition": "Asset inventorying identifies and records the organization's assets and enriches each inventory item with knowledge about their vulnerabilities.",
+        "rdfs:label": "Asset Inventory"
+      },
+      {
+        "@id": "d3f:NetworkMapping",
+        "children": [
+          {
+            "@id": "d3f:LogicalLinkMapping",
+            "children": [
+              {
+                "@id": "d3f:ActiveLogicalLinkMapping",
+                "d3f:d3fend-id": "D3-ALLM",
+                "d3f:definition": "Active logical link mapping sends and receives network traffic as a means to map the whole data link layer, where the links represent logical data flows rather than physical connection",
+                "d3f:ref-count": {
+                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                  "@value": "2"
+                },
+                "rdfs:label": "Active Logical Link Mapping"
+              },
+              {
+                "@id": "d3f:PassiveLogicalLinkMapping",
+                "d3f:d3fend-id": "D3-PLLM",
+                "d3f:definition": "Passive logical link mapping only listens to network traffic as a means to map the the whole data link layer, where the links represent logical data flows rather than physical connections.",
+                "d3f:ref-count": {
+                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                  "@value": "1"
+                },
+                "rdfs:label": "Passive Logical Link Mapping"
+              }
+            ],
+            "d3f:d3fend-id": "D3-LLM",
+            "d3f:definition": "Logical link mapping creates a model of existing or previous node-to-node connections using network-layer data or metadata.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "1"
+            },
+            "rdfs:label": "Logical Link Mapping"
+          },
+          {
+            "@id": "d3f:NetworkVulnerabilityAssessment",
+            "d3f:d3fend-id": "D3-NVA",
+            "d3f:definition": "Network vulnerability assessment relates all the vulnerabilities of a network's components in the context of their configuration and interdependencies and can also include assessing risk emerging from the network's design as a whole, not just the sum of individual network node or network segment vulnerabilities.",
+            "rdfs:label": "Network Vulnerability Assessment"
+          },
+          {
+            "@id": "d3f:PhysicalLinkMapping",
+            "children": [
+              {
+                "@id": "d3f:ActivePhysicalLinkMapping",
+                "d3f:d3fend-id": "D3-APLM",
+                "d3f:definition": "Active physical link mapping sends and receives network traffic as a means to map the physical layer.",
+                "d3f:ref-count": {
+                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                  "@value": "2"
+                },
+                "rdfs:label": "Active Physical Link Mapping"
+              },
+              {
+                "@id": "d3f:PassivePhysicalLinkMapping",
+                "d3f:d3fend-id": "D3-PPLM",
+                "d3f:definition": "Passive physical link mapping only listens to network traffic as a means to map the physical layer.",
+                "rdfs:label": "Passive Physical Link Mapping"
+              }
+            ],
+            "d3f:d3fend-id": "D3-PLM",
+            "d3f:definition": "Physical link mapping identifies and models the link connectivity of the network devices within a physical network.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "1"
+            },
+            "rdfs:label": "Physical Link Mapping"
+          },
+          {
+            "@id": "d3f:NetworkTrafficPolicyMapping",
+            "d3f:d3fend-id": "D3-NTPM",
+            "d3f:definition": "Network traffic policy mapping identifies and models the allowed pathways of data at the network, tranport, and/or application levels.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "1"
+            },
+            "rdfs:label": "Network Traffic Policy Mapping"
+          }
+        ],
+        "d3f:d3fend-id": "D3-NM",
+        "d3f:definition": "Network mapping encompasses the techniques to identify and model the physical layer, network layer, and data exchange layers of the organization's network and their physical location, and determine allowed pathways through that network.",
+        "rdfs:label": "Network Mapping"
       }
     ],
     "d3f:display-order": {
@@ -1142,7 +1142,7 @@
                 "d3f:definition": "Analyzing the reputation of a domain name.",
                 "d3f:ref-count": {
                   "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "1"
+                  "@value": "2"
                 },
                 "rdfs:label": "Domain Name Reputation Analysis"
               },
@@ -1162,7 +1162,7 @@
                 "d3f:definition": "Analyzing the reputation of an IP address.",
                 "d3f:ref-count": {
                   "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "1"
+                  "@value": "2"
                 },
                 "rdfs:label": "IP Reputation Analysis"
               },

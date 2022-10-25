@@ -591,13 +591,13 @@
         "d3f:kb-article": "## How it works\nCryptographic hash values are computed for system and peripheral firmware. The hash values are compared against precomputed hash values for the identified firmware. A hash value mismatch may indicate that the firmware may have been tampered with or updated with a non-current release indicating a misconfiguration for the system.\n\n## Considerations\n* Requires cryptographically computed hash values of firmware\n* Requires storage of precomputed firmware hash values",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_PlatformFirmwareResiliencyGuidelines_NIST"
-          },
-          {
             "@id": "d3f:Reference-FirmwareVerificationEclypsium"
           },
           {
             "@id": "d3f:Reference-FirmwareVerificationTrapezoid"
+          },
+          {
+            "@id": "d3f:Reference-PlatformFirmwareResiliencyGuidelines_NIST"
           }
         ],
         "d3f:verifies": {
@@ -719,7 +719,7 @@
         "rdfs:label": "Reference - Firmware Verification Trapezoid"
       },
       {
-        "@id": "d3f:Reference_PlatformFirmwareResiliencyGuidelines_NIST",
+        "@id": "d3f:Reference-PlatformFirmwareResiliencyGuidelines_NIST",
         "@type": [
           "d3f:GuidelineReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -760,10 +760,10 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:SystemFirmwareVerification"
+            "@id": "d3f:PeripheralFirmwareVerification"
           },
           {
-            "@id": "d3f:PeripheralFirmwareVerification"
+            "@id": "d3f:SystemFirmwareVerification"
           }
         ],
         "rdfs:label": "Firmware Verification"

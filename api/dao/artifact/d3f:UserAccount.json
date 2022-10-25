@@ -1514,6 +1514,57 @@
         {
           "def_tactic_label": {
             "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
             "value": "Detect"
           },
           "def_tactic_rel_label": {
@@ -1684,7 +1735,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Multi-factor Authentication"
+            "value": "One-time Password"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1704,7 +1755,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Multi-factorAuthentication"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#One-timePassword"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1735,7 +1786,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "One-time Password"
+            "value": "Multi-factor Authentication"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1755,7 +1806,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#One-timePassword"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Multi-factorAuthentication"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1985,7 +2036,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -2022,7 +2078,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {

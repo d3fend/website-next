@@ -683,798 +683,6 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Discovery"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Execution"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Exfiltration"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Impact"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Initial Access"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Lateral Movement"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
             "value": "Harden"
           },
           "def_tactic_rel_label": {
@@ -1640,105 +848,6 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Collection"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
           },
           "def_artifact": {
             "type": "uri",
@@ -1970,7 +1079,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Detect"
+            "value": "Harden"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -1979,19 +1088,19 @@
           "def_tech_parent_is_toplevel": {
             "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
             "type": "literal",
-            "value": "false"
+            "value": "true"
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "Defensive Technique"
+            "value": "Platform Hardening"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "File Analysis"
+            "value": "File Encryption"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "analyzes"
+            "value": "encrypts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -2019,11 +1128,11 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Command And Control"
+            "value": "Credential Access"
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -2031,11 +1140,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileEncryption"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
           },
           "def_artifact": {
             "type": "uri",
@@ -2063,7 +1172,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
           }
         },
         {
@@ -2217,7 +1326,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Credential Access"
+            "value": "Defense Evasion"
           },
           "def_tactic": {
             "type": "uri",
@@ -2261,205 +1370,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Credential Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Credential Transmission Scoping"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Credential"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Credential"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Credential Access"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialTransmissionScoping"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Credential Access"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
           }
         },
         {
@@ -2559,303 +1470,6 @@
           "off_tactic": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Encryption"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "encrypts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Defense Evasion"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileEncryption"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Defensive Technique"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Defense Evasion"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Local File Permissions"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "restricts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Command History Log File"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Bash History"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Discovery"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalFilePermissions"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1552.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
           }
         },
         {
@@ -3009,7 +1623,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Execution"
+            "value": "Discovery"
           },
           "def_tactic": {
             "type": "uri",
@@ -3053,7 +1667,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
           }
         },
         {
@@ -3207,7 +1821,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Exfiltration"
+            "value": "Execution"
           },
           "def_tactic": {
             "type": "uri",
@@ -3251,7 +1865,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
           }
         },
         {
@@ -3405,7 +2019,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Impact"
+            "value": "Exfiltration"
           },
           "def_tactic": {
             "type": "uri",
@@ -3449,7 +2063,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
           }
         },
         {
@@ -3603,7 +2217,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Initial Access"
+            "value": "Impact"
           },
           "def_tactic": {
             "type": "uri",
@@ -3647,7 +2261,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
           }
         },
         {
@@ -3774,6 +2388,105 @@
           "def_artifact_rel_label": {
             "type": "literal",
             "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Initial Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalFilePermissions"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Platform Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Encryption"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "encrypts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -3813,11 +2526,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalFilePermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileEncryption"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
           },
           "def_artifact": {
             "type": "uri",
@@ -3868,11 +2581,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "File Encryption"
+            "value": "Local File Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "encrypts"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -3912,11 +2625,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileEncryption"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalFilePermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -4313,6 +3026,2481 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Collection"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Collection"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Command And Control"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Command And Control"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Credential"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Credential Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Credential Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Credential Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Defense Evasion"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Defense Evasion"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Discovery"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Discovery"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Execution"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Execution"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Exfiltration"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Exfiltration"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Impact"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Impact"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Initial Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Initial Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Lateral Movement"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Lateral Movement"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Defensive Technique"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Command History Log File"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
           },
           "def_artifact": {
             "type": "uri",
@@ -4907,6 +6095,105 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#deletes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1552.003"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1552.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Credential Hardening"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Credential Transmission Scoping"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "restricts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Credential"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Credential"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Bash History"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Credential Access"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialTransmissionScoping"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",

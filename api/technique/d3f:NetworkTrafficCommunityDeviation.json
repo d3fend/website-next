@@ -11276,12 +11276,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -11298,7 +11293,7 @@
         "d3f:definition": "Establishing baseline communities of network hosts and identifying statistically divergent inter-community communication.",
         "d3f:kb-article": "## How it works\nHosts/users within a computer network are analyzed to identify communities of hosts which frequently communicate. Future communications between communities that don't usually communicate can then be detected.  For example, if a community of hosts that communicate in support of a company's finance division suddenly starts to access the code server usually accessed only by engineers, this may indicate unauthorized activity.\n\n## Considerations\n* Potential for false positives in very dynamic network environments.\n* Attackers that move low and slow may not differentiate their behavior enough to trigger an alert.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_SystemForImplementingThreatDetectionUsingDailyNetworkTrafficCommunityOutliers_VECTRANETWORKSInc"
+          "@id": "d3f:Reference-SystemForImplementingThreatDetectionUsingDailyNetworkTrafficCommunityOutliers_VECTRANETWORKSInc"
         },
         "rdfs:label": "Network Traffic Community Deviation",
         "rdfs:subClassOf": {
@@ -11376,7 +11371,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SystemForImplementingThreatDetectionUsingDailyNetworkTrafficCommunityOutliers_VECTRANETWORKSInc",
+        "@id": "d3f:Reference-SystemForImplementingThreatDetectionUsingDailyNetworkTrafficCommunityOutliers_VECTRANETWORKSInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11411,12 +11406,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

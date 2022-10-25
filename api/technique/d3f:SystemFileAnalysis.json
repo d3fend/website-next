@@ -5195,13 +5195,13 @@
         "d3f:kb-article": "## How it works\nThis technique ensures the integrity of system owned file resources. System files can impact the behavior below the user level.\n\n\n## Considerations\n* Need to manage the size of log file analysis.\n* False positives are a concern with this technique and filtering will need to be given additional thought.\n* A baseline or snapshot of file checksums should be established for future comparison.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:AccessPermissionModification_MITRE"
+            "@id": "d3f:Reference-AccessPermissionModification_MITRE"
           },
           {
-            "@id": "d3f:AutorunDifferences_"
+            "@id": "d3f:Reference-AutorunDifferences_MITRE"
           },
           {
-            "@id": "d3f:UserActivityFromClearingEventLogs_MITRE"
+            "@id": "d3f:Reference-UserActivityFromClearingEventLogs_MITRE"
           }
         ],
         "rdfs:label": "System File Analysis",
@@ -5228,48 +5228,6 @@
     },
     "results": {
       "bindings": [
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System File Analysis"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Monitoring"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System File Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Operating System File"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemFileAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemFile"
-          }
-        },
         {
           "query_def_tech_label": {
             "type": "literal",
@@ -5311,6 +5269,48 @@
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplication"
           }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System File Analysis"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Monitoring"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System File Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Operating System File"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemFileAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemFile"
+          }
         }
       ]
     }
@@ -5322,7 +5322,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:AccessPermissionModification_MITRE",
+        "@id": "d3f:Reference-AccessPermissionModification_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5343,7 +5343,7 @@
         "rdfs:label": "Reference - CAR-2019-07-001: Access Permission Modification - MITRE"
       },
       {
-        "@id": "d3f:AutorunDifferences_",
+        "@id": "d3f:Reference-AutorunDifferences_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5361,10 +5361,10 @@
         },
         "d3f:kb-reference-title": "CAR-2013-01-002: Autorun Differences",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-01-002: Autorun Differences -"
+        "rdfs:label": "Reference - CAR-2013-01-002: Autorun Differences - MITRE"
       },
       {
-        "@id": "d3f:UserActivityFromClearingEventLogs_MITRE",
+        "@id": "d3f:Reference-UserActivityFromClearingEventLogs_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

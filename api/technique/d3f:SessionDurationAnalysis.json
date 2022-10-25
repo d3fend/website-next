@@ -5205,10 +5205,10 @@
         "d3f:kb-article": "## How it works\nDetecting unauthorized user sessions by comparing the duration of a user logon session with a baseline behavior model. The behavior model comprises historical user session duration times.  Abnormalities between session duration and the behavior model may indicate suspicious activity.\n\n## Considerations\n* Potential for false positives from anomalies that are not associated with malicious activity.\n* Attackers may not differentiate their session duration enough to trigger an alert.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC"
+            "@id": "d3f:Reference-MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC"
           },
           {
-            "@id": "d3f:Reference_System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc"
+            "@id": "d3f:Reference-System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc"
           }
         ],
         "rdfs:label": "Session Duration Analysis",
@@ -5329,7 +5329,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC",
+        "@id": "d3f:Reference-MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -5364,7 +5364,7 @@
         "rdfs:label": "Reference - Method and Apparatus for Network Fraud Detection and Remediation Through Analytics - Idaptive LLC"
       },
       {
-        "@id": "d3f:Reference_System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc",
+        "@id": "d3f:Reference-System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

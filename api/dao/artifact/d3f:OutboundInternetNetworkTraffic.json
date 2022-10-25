@@ -1560,7 +1560,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Detect"
+            "value": "Model"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -1573,23 +1573,23 @@
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "Network Traffic Analysis"
+            "value": "Asset Inventory"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Client-server Payload Profiling"
+            "value": "Asset Vulnerability Enumeration"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "analyzes"
+            "value": "evaluates"
           },
           "def_artifact_label": {
             "type": "literal",
-            "value": "Network Traffic"
+            "value": "Digital Artifact"
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -1597,219 +1597,15 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Client-serverPayloadProfiling"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
           },
           "def_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Network Traffic Analysis"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Per Host Download-Upload Ratio Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PerHostDownload-UploadRatioAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Network Traffic Analysis"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Network Traffic Community Deviation"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTrafficCommunityDeviation"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Network Traffic Analysis"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Protocol Metadata Anomaly Detection"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProtocolMetadataAnomalyDetection"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Network Traffic Analysis"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Remote Terminal Session Detection"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#RemoteTerminalSessionDetection"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
           }
         },
         {
@@ -1968,7 +1764,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Model"
+            "value": "Detect"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -1977,19 +1773,19 @@
           "def_tech_parent_is_toplevel": {
             "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
             "type": "literal",
-            "value": "false"
+            "value": "true"
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "Logical Link Mapping"
+            "value": "Network Traffic Analysis"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Active Logical Link Mapping"
+            "value": "Client-server Payload Profiling"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "produces"
+            "value": "analyzes"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -1997,7 +1793,7 @@
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -2005,62 +1801,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ActiveLogicalLinkMapping"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Client-serverPayloadProfiling"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Physical Link Mapping"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Active Physical Link Mapping"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "produces"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ActivePhysicalLinkMapping"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
           },
           "def_artifact": {
             "type": "uri",
@@ -2087,7 +1832,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "DNS Traffic Analysis"
+            "value": "Network Traffic Community Deviation"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -2095,7 +1840,7 @@
           },
           "def_artifact_label": {
             "type": "literal",
-            "value": "Outbound Internet DNS Lookup Traffic"
+            "value": "Network Traffic"
           },
           "def_tactic": {
             "type": "uri",
@@ -2107,7 +1852,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DNSTrafficAnalysis"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTrafficCommunityDeviation"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -2115,7 +1860,160 @@
           },
           "def_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetDNSLookupTraffic"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Network Traffic Analysis"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Per Host Download-Upload Ratio Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Network Traffic"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PerHostDownload-UploadRatioAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Network Traffic Analysis"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Protocol Metadata Anomaly Detection"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Network Traffic"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProtocolMetadataAnomalyDetection"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Network Traffic Analysis"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Remote Terminal Session Detection"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Network Traffic"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#RemoteTerminalSessionDetection"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
           }
         },
         {
@@ -2265,6 +2163,57 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetDNSLookupTraffic"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Network Traffic Analysis"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "DNS Traffic Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Outbound Internet DNS Lookup Traffic"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DNSTrafficAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
           },
           "def_artifact": {
             "type": "uri",
@@ -2475,13 +2424,13 @@
             "@id": "d3f:OutboundInternetWebTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetMailTraffic"
-          },
-          {
             "@id": "d3f:OutboundInternetDNSLookupTraffic"
           },
           {
             "@id": "d3f:OutboundInternetFileTransferTraffic"
+          },
+          {
+            "@id": "d3f:OutboundInternetMailTraffic"
           }
         ],
         "rdfs:label": "Outbound Internet Network Traffic"
@@ -2522,7 +2471,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -2561,7 +2515,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   }

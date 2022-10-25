@@ -470,6 +470,12 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:ReverseResolutionDomainDenylisting"
+          },
+          {
+            "@id": "d3f:ReverseResolutionIPDenylisting"
+          },
+          {
             "@id": "d3f:ForwardResolutionDomainDenylisting"
           },
           {
@@ -480,12 +486,6 @@
           },
           {
             "@id": "d3f:HomoglyphDenylisting"
-          },
-          {
-            "@id": "d3f:ReverseResolutionDomainDenylisting"
-          },
-          {
-            "@id": "d3f:ReverseResolutionIPDenylisting"
           }
         ],
         "rdfs:label": "DNS Denylisting"

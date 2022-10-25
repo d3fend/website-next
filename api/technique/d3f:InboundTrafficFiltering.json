@@ -683,12 +683,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -706,31 +701,31 @@
         "d3f:kb-article": "## How it works\nInbound Traffic, in this context, is network traffic originating from an untrusted network towards a private host or enclave.\nFor example:\n\n* An untrusted network host connecting to a internal commercial portal, shopping.example.com\n* An external mail server connecting to an internal mail server, mail.example.com\n\nFiltering policies are developed by administrators to meet business requirements and limit connectivity. These policies are implemented on edge devices such as firewalls, routers, and intrusion prevention systems. Examples of filters:\n\n* Blocking incoming traffic from spoofed internally facing IP addresses\n* Blocking specific ports and services from establishing connections\n* Limiting specific IP ranges from connecting to the network\n* Dynamic inbound filtering (Hole punching, STUN, NAT-T)\n\n## Considerations\n* Business requirements typically drive the development of filtering rulesets\n* Protocols using non-standard ports may circumvent filtering technology, which does not detect application protocol based on traffic content\n\n## Implementations\n* OpenWRT (Embedded)\n* Netfilter (Linux)\n* Windows Firewall\n* pf(BSD)",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_ActiveFirewallSystemAndMethodology_McAfeeLLC"
+            "@id": "d3f:Reference-ActiveFirewallSystemAndMethodology_McAfeeLLC"
           },
           {
-            "@id": "d3f:Reference_AutomaticallyGeneratingRulesForConnectionSecurity_Microsoft"
+            "@id": "d3f:Reference-AutomaticallyGeneratingRulesForConnectionSecurity_Microsoft"
           },
           {
-            "@id": "d3f:Reference_FirewallForInterentAccess_SecureComputingLLC"
+            "@id": "d3f:Reference-FirewallForInterentAccess_SecureComputingLLC"
           },
           {
-            "@id": "d3f:Reference_FirewallForProcessingAConnectionlessNetworkPacket_NationalSecurityAgency"
+            "@id": "d3f:Reference-FirewallForProcessingAConnectionlessNetworkPacket_NationalSecurityAgency"
           },
           {
-            "@id": "d3f:Reference_FirewallForProcessingConnection-orientedAndConnectionlessDatagramsOverAConnection-orientedNetwork_NationalSecurityAgency"
+            "@id": "d3f:Reference-FirewallForProcessingConnection-orientedAndConnectionlessDatagramsOverAConnection-orientedNetwork_NationalSecurityAgency"
           },
           {
-            "@id": "d3f:Reference_FirewallsThatFilterBasedUponProtocolCommands_IntelCorp"
+            "@id": "d3f:Reference-FirewallsThatFilterBasedUponProtocolCommands_IntelCorp"
           },
           {
-            "@id": "d3f:Reference_FWTK-FirewallToolkit_"
+            "@id": "d3f:Reference-FWTK-FirewallToolkit_"
           },
           {
-            "@id": "d3f:Reference_MethodForControllingComputerNetworkSecurity_CheckpointSoftwareTechnologiesLtd"
+            "@id": "d3f:Reference-MethodForControllingComputerNetworkSecurity_CheckpointSoftwareTechnologiesLtd"
           },
           {
-            "@id": "d3f:Reference_NetworkFirewallWithProxy_SecureComputingLLC"
+            "@id": "d3f:Reference-NetworkFirewallWithProxy_SecureComputingLLC"
           }
         ],
         "rdfs:label": "Inbound Traffic Filtering",
@@ -809,7 +804,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_ActiveFirewallSystemAndMethodology_McAfeeLLC",
+        "@id": "d3f:Reference-ActiveFirewallSystemAndMethodology_McAfeeLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -830,7 +825,7 @@
         "rdfs:label": "Reference - Active firewall system and methodology - McAfee LLC"
       },
       {
-        "@id": "d3f:Reference_AutomaticallyGeneratingRulesForConnectionSecurity_Microsoft",
+        "@id": "d3f:Reference-AutomaticallyGeneratingRulesForConnectionSecurity_Microsoft",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -856,7 +851,7 @@
         "rdfs:label": "Reference - Automatically generating rules for connection security - Microsoft"
       },
       {
-        "@id": "d3f:Reference_FWTK-FirewallToolkit_",
+        "@id": "d3f:Reference-FWTK-FirewallToolkit_",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -871,10 +866,10 @@
         "d3f:kb-organization": "",
         "d3f:kb-reference-title": "FWTK - Firewall Toolkit",
         "d3f:reference-type-label": "Internet Article",
-        "rdfs:label": "Reference - FWTK - Firewall Toolkit -"
+        "rdfs:label": "Reference - FWTK - Firewall Toolkit"
       },
       {
-        "@id": "d3f:Reference_FirewallForInterentAccess_SecureComputingLLC",
+        "@id": "d3f:Reference-FirewallForInterentAccess_SecureComputingLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -895,7 +890,7 @@
         "rdfs:label": "Reference - Firewall for interent access - Secure Computing LLC"
       },
       {
-        "@id": "d3f:Reference_FirewallForProcessingAConnectionlessNetworkPacket_NationalSecurityAgency",
+        "@id": "d3f:Reference-FirewallForProcessingAConnectionlessNetworkPacket_NationalSecurityAgency",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -916,7 +911,7 @@
         "rdfs:label": "Reference - Firewall for processing a connectionless network packet - National Security Agency"
       },
       {
-        "@id": "d3f:Reference_FirewallForProcessingConnection-orientedAndConnectionlessDatagramsOverAConnection-orientedNetwork_NationalSecurityAgency",
+        "@id": "d3f:Reference-FirewallForProcessingConnection-orientedAndConnectionlessDatagramsOverAConnection-orientedNetwork_NationalSecurityAgency",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -937,7 +932,7 @@
         "rdfs:label": "Reference - Firewall for processing connection-oriented and connectionless datagrams over a connection-oriented network - National Security Agency"
       },
       {
-        "@id": "d3f:Reference_FirewallsThatFilterBasedUponProtocolCommands_IntelCorp",
+        "@id": "d3f:Reference-FirewallsThatFilterBasedUponProtocolCommands_IntelCorp",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -958,7 +953,7 @@
         "rdfs:label": "Reference - Firewalls that filter based upon protocol commands - Intel Corp"
       },
       {
-        "@id": "d3f:Reference_MethodForControllingComputerNetworkSecurity_CheckpointSoftwareTechnologiesLtd",
+        "@id": "d3f:Reference-MethodForControllingComputerNetworkSecurity_CheckpointSoftwareTechnologiesLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -979,7 +974,7 @@
         "rdfs:label": "Reference - Method for controlling computer network security - Checkpoint Software Technologies Ltd"
       },
       {
-        "@id": "d3f:Reference_NetworkFirewallWithProxy_SecureComputingLLC",
+        "@id": "d3f:Reference-NetworkFirewallWithProxy_SecureComputingLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1010,12 +1005,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

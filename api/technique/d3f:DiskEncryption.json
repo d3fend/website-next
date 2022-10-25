@@ -276,7 +276,7 @@
           "@id": "d3f:Storage"
         },
         "d3f:kb-reference": {
-          "@id": "d3f:LUKS1On-DiskFormatSpecificationVersion1.2.3"
+          "@id": "d3f:Reference-LUKS1On-DiskFormatSpecificationVersion1.2.3"
         },
         "rdfs:label": "Disk Encryption",
         "rdfs:subClassOf": {
@@ -354,7 +354,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:LUKS1On-DiskFormatSpecificationVersion1.2.3",
+        "@id": "d3f:Reference-LUKS1On-DiskFormatSpecificationVersion1.2.3",
         "@type": [
           "d3f:SpecificationReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -370,7 +370,7 @@
         },
         "d3f:kb-reference-title": "LUKS1 On-Disk Format SpecificationVersion 1.2.3",
         "d3f:reference-type-label": "Specification",
-        "rdfs:label": "LUKS1 On-Disk Format SpecificationVersion 1.2.3"
+        "rdfs:label": "Reference - LUKS1 On-Disk Format SpecificationVersion 1.2.3"
       }
     ]
   },

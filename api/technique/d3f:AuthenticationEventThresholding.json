@@ -3059,19 +3059,19 @@
         "d3f:kb-article": "## How it works\nAuthentication event data is collected (logon information such as device id, time of day, day of week, geo-location, etc.) to create an activity baseline. Then, a threshold is determined either through a manually specified configuration, or a statistical analysis of deviations in historical data. New authentication events are evaluated to determine if a threshold is exceeded. Thresholds can be static or dynamic.\n\n### Actions\nAs a result of the analysis, actions taken could include:\n\n* [Account Locking](/technique/d3f:AccountLocking)\n* Raising an alert\n\n### Example data sources\n * Directory server logs\n * VPN Server logs\n * IDAM Capability logs\n * NAC logs\n * Authentication client logs\n * Kerberos network traffic\n * LDAP network traffic\n\n## Considerations\n\nThis technique covers statistical outliers. Though depending on the complexity or dimensionality of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If the malicious activity is not statistically different from benign activity, an alert threshold will not be met.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC"
+            "@id": "d3f:Reference-MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC"
           },
           {
-            "@id": "d3f:Reference_System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc"
+            "@id": "d3f:Reference-SimultaneousLoginsOnAHost_MITRE"
           },
           {
-            "@id": "d3f:SimultaneousLoginsOnAHost_MITRE"
+            "@id": "d3f:Reference-System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc"
           },
           {
-            "@id": "d3f:UserLoggedInToMultipleHosts_MITRE"
+            "@id": "d3f:Reference-UserLoggedInToMultipleHosts_MITRE"
           },
           {
-            "@id": "d3f:UserLoginActivityMonitoring_MITRE"
+            "@id": "d3f:Reference-UserLoginActivityMonitoring_MITRE"
           }
         ],
         "rdfs:label": "Authentication Event Thresholding",
@@ -3150,7 +3150,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC",
+        "@id": "d3f:Reference-MethodAndApparatusForNetworkFraudDetectionAndRemediationThroughAnalytics_IdaptiveLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -3185,7 +3185,26 @@
         "rdfs:label": "Reference - Method and Apparatus for Network Fraud Detection and Remediation Through Analytics - Idaptive LLC"
       },
       {
-        "@id": "d3f:Reference_System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc",
+        "@id": "d3f:Reference-SimultaneousLoginsOnAHost_MITRE",
+        "@type": [
+          "d3f:ExternalKnowledgeBase",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://car.mitre.org/analytics/CAR-2013-02-008/"
+        },
+        "d3f:kb-abstract": "Multiple users logged into a single machine at the same time, or even within the same hour, do not typically occur in networks we have observed.\n\nLogon events are Windows Event Code 4624 for Windows Vista and above, 518 for pre-Vista. Logoff events are 4634 for Windows Vista and above, 538 for pre-Vista. Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types table on Microsoft's Audit Logon Events page.",
+        "d3f:kb-author": "MITRE",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:AuthenticationEventThresholding"
+        },
+        "d3f:kb-reference-title": "CAR-2013-02-008: Simultaneous Logins on a Host",
+        "d3f:reference-type-label": "External Knowledge Base",
+        "rdfs:label": "Reference - CAR-2013-02-008: Simultaneous Logins on a Host - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-System,Method,AndComputerProgramProductForDetectingAndAssessingSecurityRisksInANetwork_ExabeamInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -3220,26 +3239,7 @@
         "rdfs:label": "Reference - System, method, and computer program product for detecting and assessing security risks in a network - Exabeam Inc"
       },
       {
-        "@id": "d3f:SimultaneousLoginsOnAHost_MITRE",
-        "@type": [
-          "d3f:ExternalKnowledgeBase",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://car.mitre.org/analytics/CAR-2013-02-008/"
-        },
-        "d3f:kb-abstract": "Multiple users logged into a single machine at the same time, or even within the same hour, do not typically occur in networks we have observed.\n\nLogon events are Windows Event Code 4624 for Windows Vista and above, 518 for pre-Vista. Logoff events are 4634 for Windows Vista and above, 538 for pre-Vista. Logon types 2, 3, 9 and 10 are of interest. For more details see the Logon Types table on Microsoft's Audit Logon Events page.",
-        "d3f:kb-author": "MITRE",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:AuthenticationEventThresholding"
-        },
-        "d3f:kb-reference-title": "CAR-2013-02-008: Simultaneous Logins on a Host",
-        "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-02-008: Simultaneous Logins on a Host - MITRE"
-      },
-      {
-        "@id": "d3f:UserLoggedInToMultipleHosts_MITRE",
+        "@id": "d3f:Reference-UserLoggedInToMultipleHosts_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -3265,7 +3265,7 @@
         "rdfs:label": "Reference - CAR-2013-02-012: User Logged in to Multiple Hosts - MITRE"
       },
       {
-        "@id": "d3f:UserLoginActivityMonitoring_MITRE",
+        "@id": "d3f:Reference-UserLoginActivityMonitoring_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

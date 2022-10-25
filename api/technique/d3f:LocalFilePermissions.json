@@ -19301,7 +19301,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -19440,15 +19445,41 @@
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#"
     },
-    "@graph": []
+    "@graph": [
+      {
+        "@id": "d3f:Reference-FileAndFolderPermissions",
+        "@type": [
+          "d3f:UserManualReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb727008(v=technet.10)?redirectedfrom=MSDN"
+        },
+        "d3f:kb-organization": "Microsoft",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:LocalFilePermissions"
+        },
+        "d3f:kb-reference-title": "File and Folder Permissions",
+        "d3f:reference-type-label": "User Manual",
+        "rdfs:label": "Reference - File and Folder Permissions"
+      }
+    ]
   },
-  "references_meta": {},
+  "references_meta": {
+    "User Manual": 1
+  },
   "subtechniques": {
     "@context": {
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

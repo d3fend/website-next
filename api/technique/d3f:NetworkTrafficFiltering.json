@@ -11293,31 +11293,31 @@
         },
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_ActiveFirewallSystemAndMethodology_McAfeeLLC"
+            "@id": "d3f:Reference-ActiveFirewallSystemAndMethodology_McAfeeLLC"
           },
           {
-            "@id": "d3f:Reference_AutomaticallyGeneratingRulesForConnectionSecurity_Microsoft"
+            "@id": "d3f:Reference-AutomaticallyGeneratingRulesForConnectionSecurity_Microsoft"
           },
           {
-            "@id": "d3f:Reference_FirewallForInterentAccess_SecureComputingLLC"
+            "@id": "d3f:Reference-FirewallForInterentAccess_SecureComputingLLC"
           },
           {
-            "@id": "d3f:Reference_FirewallForProcessingAConnectionlessNetworkPacket_NationalSecurityAgency"
+            "@id": "d3f:Reference-FirewallForProcessingAConnectionlessNetworkPacket_NationalSecurityAgency"
           },
           {
-            "@id": "d3f:Reference_FirewallForProcessingConnection-orientedAndConnectionlessDatagramsOverAConnection-orientedNetwork_NationalSecurityAgency"
+            "@id": "d3f:Reference-FirewallForProcessingConnection-orientedAndConnectionlessDatagramsOverAConnection-orientedNetwork_NationalSecurityAgency"
           },
           {
-            "@id": "d3f:Reference_FirewallsThatFilterBasedUponProtocolCommands_IntelCorp"
+            "@id": "d3f:Reference-FirewallsThatFilterBasedUponProtocolCommands_IntelCorp"
           },
           {
-            "@id": "d3f:Reference_FWTK-FirewallToolkit_"
+            "@id": "d3f:Reference-FWTK-FirewallToolkit_"
           },
           {
-            "@id": "d3f:Reference_MethodForControllingComputerNetworkSecurity_CheckpointSoftwareTechnologiesLtd"
+            "@id": "d3f:Reference-MethodForControllingComputerNetworkSecurity_CheckpointSoftwareTechnologiesLtd"
           },
           {
-            "@id": "d3f:Reference_NetworkFirewallWithProxy_SecureComputingLLC"
+            "@id": "d3f:Reference-NetworkFirewallWithProxy_SecureComputingLLC"
           }
         ],
         "rdfs:label": "Network Traffic Filtering",
@@ -11396,7 +11396,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_ActiveFirewallSystemAndMethodology_McAfeeLLC",
+        "@id": "d3f:Reference-ActiveFirewallSystemAndMethodology_McAfeeLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11417,7 +11417,7 @@
         "rdfs:label": "Reference - Active firewall system and methodology - McAfee LLC"
       },
       {
-        "@id": "d3f:Reference_AutomaticallyGeneratingRulesForConnectionSecurity_Microsoft",
+        "@id": "d3f:Reference-AutomaticallyGeneratingRulesForConnectionSecurity_Microsoft",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11443,7 +11443,7 @@
         "rdfs:label": "Reference - Automatically generating rules for connection security - Microsoft"
       },
       {
-        "@id": "d3f:Reference_FWTK-FirewallToolkit_",
+        "@id": "d3f:Reference-FWTK-FirewallToolkit_",
         "@type": [
           "d3f:InternetArticleReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11458,10 +11458,10 @@
         "d3f:kb-organization": "",
         "d3f:kb-reference-title": "FWTK - Firewall Toolkit",
         "d3f:reference-type-label": "Internet Article",
-        "rdfs:label": "Reference - FWTK - Firewall Toolkit -"
+        "rdfs:label": "Reference - FWTK - Firewall Toolkit"
       },
       {
-        "@id": "d3f:Reference_FirewallForInterentAccess_SecureComputingLLC",
+        "@id": "d3f:Reference-FirewallForInterentAccess_SecureComputingLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11482,7 +11482,7 @@
         "rdfs:label": "Reference - Firewall for interent access - Secure Computing LLC"
       },
       {
-        "@id": "d3f:Reference_FirewallForProcessingAConnectionlessNetworkPacket_NationalSecurityAgency",
+        "@id": "d3f:Reference-FirewallForProcessingAConnectionlessNetworkPacket_NationalSecurityAgency",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11503,7 +11503,7 @@
         "rdfs:label": "Reference - Firewall for processing a connectionless network packet - National Security Agency"
       },
       {
-        "@id": "d3f:Reference_FirewallForProcessingConnection-orientedAndConnectionlessDatagramsOverAConnection-orientedNetwork_NationalSecurityAgency",
+        "@id": "d3f:Reference-FirewallForProcessingConnection-orientedAndConnectionlessDatagramsOverAConnection-orientedNetwork_NationalSecurityAgency",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11524,7 +11524,7 @@
         "rdfs:label": "Reference - Firewall for processing connection-oriented and connectionless datagrams over a connection-oriented network - National Security Agency"
       },
       {
-        "@id": "d3f:Reference_FirewallsThatFilterBasedUponProtocolCommands_IntelCorp",
+        "@id": "d3f:Reference-FirewallsThatFilterBasedUponProtocolCommands_IntelCorp",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11545,7 +11545,7 @@
         "rdfs:label": "Reference - Firewalls that filter based upon protocol commands - Intel Corp"
       },
       {
-        "@id": "d3f:Reference_MethodForControllingComputerNetworkSecurity_CheckpointSoftwareTechnologiesLtd",
+        "@id": "d3f:Reference-MethodForControllingComputerNetworkSecurity_CheckpointSoftwareTechnologiesLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -11566,7 +11566,7 @@
         "rdfs:label": "Reference - Method for controlling computer network security - Checkpoint Software Technologies Ltd"
       },
       {
-        "@id": "d3f:Reference_NetworkFirewallWithProxy_SecureComputingLLC",
+        "@id": "d3f:Reference-NetworkFirewallWithProxy_SecureComputingLLC",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"

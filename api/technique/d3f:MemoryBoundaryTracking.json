@@ -1004,12 +1004,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -1026,7 +1021,7 @@
         "d3f:definition": "Analyzing a call stack for return addresses which point to unexpected  memory locations.",
         "d3f:kb-article": "## How it works\nThis technique monitors for indicators of whether a return address is outside memory previously allocated for an object (i.e. function, module, process, or thread). If so, code that the return address points to is treated as malicious code.\n\n## Considerations\nKernel malware can manipulate memory contents, for example modifying pointers to hide processes, and thereby impact the accuracy of memory allocation information used to perform the analysis.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_InferentialExploitAttemptDetection_CrowdstrikeInc"
+          "@id": "d3f:Reference-InferentialExploitAttemptDetection_CrowdstrikeInc"
         },
         "rdfs:label": "Memory Boundary Tracking",
         "rdfs:subClassOf": {
@@ -1104,7 +1099,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_InferentialExploitAttemptDetection_CrowdstrikeInc",
+        "@id": "d3f:Reference-InferentialExploitAttemptDetection_CrowdstrikeInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1134,12 +1129,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

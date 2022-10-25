@@ -1004,7 +1004,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -1019,22 +1024,22 @@
         "d3f:kb-article": "## How it works\nA process code segment is an executable portion of computer memory allocated to a particular process. Process Code Segment Verification implements verification to compare a process code segment to some expected value.\n\n### Verification logic\nVerification can occur during application startup, or continuously during execution. The logic which verifies the process code may be separate in a third-party process, embedded in the application itself at compile time, or dynamically linked at runtime.\n\n### System of record\nExamples of systems of record:\n\n * On-disk application binary files or checksums\n * Remotely stored binary data or checksums\n * Embedded binary data or checksums\n\n### Post Verification Actions\nIf the verification function determines a process code segment may have been altered, a capability may invoke Eviction techniques  as **Process Termination** to end the current process, or **Executable Blacklisting** to prevent the executable from launching in the future.\n\n## Considerations\n\n### False positives\n\nFalse positives commonly occur in the case that the layout of code in the process segment is legitimately modified:\n\n*  Operating system features or third-party security software may modify the layout of process code, for example in the defensive technique **Segment Address Offset Randomization**, or in the case that a module is rebased.  In both of these cases, the alteration occurs before the code is fully loaded into memory, and it would be possible to avoid the false positive by securely feeding this constant offset and any relocation data into the verification logic.\n\n* Process code segments may be written to modify themselves or other process code segments; however, this goes against widely-accepted current practices in software development.\n\n### False negatives\n\nFalse negatives can occur via alteration of the verification logic or source of truth, or insufficient verification logic.\n\n* Verification techniques which are executed only locally may be defeated by altering the local verification logic.\n\n* Verification that is run only on a recurring basis could be evaded if the malicious alteration is completed before verification is run.\n\n* Verification that requests an operation to be performed on a subset of the code segment could be evaded by performing that operation on a copy of the relevant bytes of the code segment.\n\n* Verification based on a system of record that can be altered may fail if that system of record is modifiable by a malicious user.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_Anti-tamperSystemWithSelf-adjustingGuards_ARXANTECHNOLOGIESInc"
+            "@id": "d3f:Reference-Anti-tamperSystemWithSelf-adjustingGuards_ARXANTECHNOLOGIESInc"
           },
           {
-            "@id": "d3f:Reference_GuardsForApplicationInSoftwareTamperproofing_PurdueResearchFoundation"
+            "@id": "d3f:Reference-GuardsForApplicationInSoftwareTamperproofing_PurdueResearchFoundation"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodForDetectingMalwareInjectedIntoMemoryOfAComputingDevice_EndgameInc"
+            "@id": "d3f:Reference-SystemAndMethodForDetectingMalwareInjectedIntoMemoryOfAComputingDevice_EndgameInc"
           },
           {
-            "@id": "d3f:Reference_SystemAndMethodForValidatingIn-memoryIntegrityOfExecutableFilesToIdentifyMaliciousActivity_EndgameInc"
+            "@id": "d3f:Reference-SystemAndMethodForValidatingIn-memoryIntegrityOfExecutableFilesToIdentifyMaliciousActivity_EndgameInc"
           },
           {
-            "@id": "d3f:Reference_TamperProofMutatingSoftware_ARXANTECHNOLOGIESInc"
+            "@id": "d3f:Reference-TamperProofMutatingSoftware_ARXANTECHNOLOGIESInc"
           },
           {
-            "@id": "d3f:Reference_ThreatDetectionThroughTheAccumulatedDetectionOfThreatCharacteristics_SophosLtd"
+            "@id": "d3f:Reference-ThreatDetectionThroughTheAccumulatedDetectionOfThreatCharacteristics_SophosLtd"
           }
         ],
         "d3f:verifies": {
@@ -1116,7 +1121,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_Anti-tamperSystemWithSelf-adjustingGuards_ARXANTECHNOLOGIESInc",
+        "@id": "d3f:Reference-Anti-tamperSystemWithSelf-adjustingGuards_ARXANTECHNOLOGIESInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1137,7 +1142,7 @@
         "rdfs:label": "Reference - Anti-tamper system with self-adjusting guards - ARXAN TECHNOLOGIES Inc"
       },
       {
-        "@id": "d3f:Reference_GuardsForApplicationInSoftwareTamperproofing_PurdueResearchFoundation",
+        "@id": "d3f:Reference-GuardsForApplicationInSoftwareTamperproofing_PurdueResearchFoundation",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1158,7 +1163,7 @@
         "rdfs:label": "Reference - Guards for application in software tamperproofing - Purdue Research Foundation"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodForDetectingMalwareInjectedIntoMemoryOfAComputingDevice_EndgameInc",
+        "@id": "d3f:Reference-SystemAndMethodForDetectingMalwareInjectedIntoMemoryOfAComputingDevice_EndgameInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1179,7 +1184,7 @@
         "rdfs:label": "Reference - System and method for detecting malware injected into memory of a computing device - Endgame Inc"
       },
       {
-        "@id": "d3f:Reference_SystemAndMethodForValidatingIn-memoryIntegrityOfExecutableFilesToIdentifyMaliciousActivity_EndgameInc",
+        "@id": "d3f:Reference-SystemAndMethodForValidatingIn-memoryIntegrityOfExecutableFilesToIdentifyMaliciousActivity_EndgameInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1200,7 +1205,7 @@
         "rdfs:label": "Reference - System and method for validating in-memory integrity of executable files to identify malicious activity - Endgame Inc"
       },
       {
-        "@id": "d3f:Reference_TamperProofMutatingSoftware_ARXANTECHNOLOGIESInc",
+        "@id": "d3f:Reference-TamperProofMutatingSoftware_ARXANTECHNOLOGIESInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1221,7 +1226,7 @@
         "rdfs:label": "Reference - Tamper proof mutating software - ARXAN TECHNOLOGIES Inc"
       },
       {
-        "@id": "d3f:Reference_ThreatDetectionThroughTheAccumulatedDetectionOfThreatCharacteristics_SophosLtd",
+        "@id": "d3f:Reference-ThreatDetectionThroughTheAccumulatedDetectionOfThreatCharacteristics_SophosLtd",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -1251,7 +1256,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

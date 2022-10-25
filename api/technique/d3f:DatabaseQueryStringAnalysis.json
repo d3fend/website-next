@@ -148,12 +148,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -170,7 +165,7 @@
         "d3f:definition": "Analyzing database queries to detect [SQL Injection](https://capec.mitre.org/data/definitions/66.html).",
         "d3f:kb-article": "## How it works\n\nSome implementations use software hooks to intercept function calls related to database query operations. Other implementations might intercept or collect network traffic. The database query string is then extracted and analyzed with various methods, for example:\n* Detecting specific administrative SQL commands\n* Anomalous sequences of commands when compared to a statistical baseline.\n* Anomalous commands for a given user role.\n\n## Considerations\n\nSome capabilities sanitize queries before permitting them to be transmitted to the database. This incurs risks such altering data in an undesired way or breaking application functionality.",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_SystemAndMethodForInternetSecurity_CylanceInc"
+          "@id": "d3f:Reference-SystemAndMethodForInternetSecurity_CylanceInc"
         },
         "rdfs:label": "Database Query String Analysis",
         "rdfs:subClassOf": {
@@ -248,7 +243,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SystemAndMethodForInternetSecurity_CylanceInc",
+        "@id": "d3f:Reference-SystemAndMethodForInternetSecurity_CylanceInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -278,12 +273,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

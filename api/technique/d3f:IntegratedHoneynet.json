@@ -148,7 +148,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -162,7 +167,7 @@
         "d3f:definition": "The practice of setting decoys in a production environment to entice interaction from attackers.",
         "d3f:kb-article": "## How it works\nIntegrated honeynets use full production environments connected to the enterprise network, that utilize computing resources or software that attract attackers, and allow full interaction and access that provides a complete view of an attack.\n\n## Considerations\nAn attacker with control of a system on an Integrated Honeynet could:\n* try to attack other connected hosts on the network, its IP range of internal hosts not properly configured to react to connections from machines on the integrated honeynet, or position behind the firewall.\n* exploit its position by eavesdropping on network traffic\nIf an attacker manages to stop the processes used to log an attack without setting off any alarms. [1]\n\n1. Honeypots for Windows, Roger Grimes, 2005",
         "d3f:kb-reference": {
-          "@id": "d3f:Reference_SynchronizingAHoneyNetworkConfigurationToReflectATargetNetworkEnvironment_PaloAltoNetworksInc"
+          "@id": "d3f:Reference-SynchronizingAHoneyNetworkConfigurationToReflectATargetNetworkEnvironment_PaloAltoNetworksInc"
         },
         "d3f:spoofs": {
           "@id": "d3f:IntranetNetwork"
@@ -285,7 +290,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_SynchronizingAHoneyNetworkConfigurationToReflectATargetNetworkEnvironment_PaloAltoNetworksInc",
+        "@id": "d3f:Reference-SynchronizingAHoneyNetworkConfigurationToReflectATargetNetworkEnvironment_PaloAltoNetworksInc",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -315,7 +320,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

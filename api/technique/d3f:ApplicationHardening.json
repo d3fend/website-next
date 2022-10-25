@@ -4642,7 +4642,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -4951,7 +4956,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -4971,6 +4981,9 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:ExceptionHandlerPointerValidation"
+          },
+          {
             "@id": "d3f:ApplicationConfigurationHardening"
           },
           {
@@ -4987,9 +5000,6 @@
           },
           {
             "@id": "d3f:PointerAuthentication"
-          },
-          {
-            "@id": "d3f:ExceptionHandlerPointerValidation"
           }
         ],
         "rdfs:label": "Application Hardening"

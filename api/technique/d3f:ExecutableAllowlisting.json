@@ -10206,12 +10206,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -10229,10 +10224,10 @@
         "d3f:kb-article": "## How it works\n\nThis technique is generic and there are numerous ways to compute and authenticate digital signatures.\nA digital certificate is generated from a private/public key pair issued by a certificate authority (CA). A hash of the file is encrypted using the private key. When the file is downloaded by another user, the user's system uses the public key to decrypt the hash and a new hash is created of the downloaded file. The hash decrypted by the public key is compared to the new hash and if there is a mismatch, further techniques, such as file deletion, file quarantine, or **Executable Blacklisting** may be invoked.\n\nThis technique may be invoked when deciding whether to execute a file.\n\n## Considerations\n\nOrganizations which download or create high volumes of software make management complex, in particular engineering or scientific organizations.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_ComputingApparatusWithAutomaticIntegrityReferenceGenerationAndMaintenance_Tripwire,Inc."
+            "@id": "d3f:Reference-ComputingApparatusWithAutomaticIntegrityReferenceGenerationAndMaintenance_Tripwire,Inc."
           },
           {
-            "@id": "d3f:Reference_EnhancingNetworkSecurityByPreventingUser-InitiatedMalwareExecution_"
+            "@id": "d3f:Reference-EnhancingNetworkSecurityByPreventingUser-InitiatedMalwareExecution_"
           }
         ],
         "d3f:restricts": {
@@ -10357,7 +10352,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference_ComputingApparatusWithAutomaticIntegrityReferenceGenerationAndMaintenance_Tripwire,Inc.",
+        "@id": "d3f:Reference-ComputingApparatusWithAutomaticIntegrityReferenceGenerationAndMaintenance_Tripwire,Inc.",
         "@type": [
           "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -10378,7 +10373,7 @@
         "rdfs:label": "Reference - Computing apparatus with automatic integrity reference generation and maintenance - Tripwire, Inc."
       },
       {
-        "@id": "d3f:Reference_EnhancingNetworkSecurityByPreventingUser-InitiatedMalwareExecution_",
+        "@id": "d3f:Reference-EnhancingNetworkSecurityByPreventingUser-InitiatedMalwareExecution_",
         "@type": [
           "d3f:AcademicPaperReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -10396,7 +10391,7 @@
         },
         "d3f:kb-reference-title": "Enhancing Network Security By Preventing User-Initiated Malware Execution",
         "d3f:reference-type-label": "Academic Paper",
-        "rdfs:label": "Reference - Enhancing Network Security By Preventing User-Initiated Malware Execution -"
+        "rdfs:label": "Reference - Enhancing Network Security By Preventing User-Initiated Malware Execution - MITRE"
       }
     ]
   },
@@ -10409,12 +10404,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

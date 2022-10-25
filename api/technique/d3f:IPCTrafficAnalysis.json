@@ -469,7 +469,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -487,25 +492,25 @@
         "d3f:kb-article": "## How it works\nInter process communication enables applications or threads to share data. This can involve one or more computers. Monitoring IPC in your environment can reveal abnormal or malicious activity.\nIPC can occur within a single computer or between multiple computers remotely through network protocols. Thus there are multiple ways to collect and monitor these exchanges between processes. A network protocol analyzer may monitor and parse SMB network traffic to record system activity. A host based monitoring agent may monitor IPC activity contained within a single host to look for deviations from standard usages.\n\n### Examples\n * SMB\n * Zeromq\n * Java RMI API\n\n## Considerations\n* IPC can generate substantial amounts of data, and it may not be feasible to collect all of it.\n* IPC may occur over loopback interfaces or direct memory access granted by the operating system.",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_SecuritySystemWithMethodologyForInterprocessCommunicationControl_CheckPointSoftwareTechInc"
+            "@id": "d3f:Reference-CAR-2015-04-001%3ARemotelyScheduledTasksViaAT_MITRE"
           },
           {
-            "@id": "d3f:Reference-CAR-2015-04-001%3ARemotelyScheduledTasksViaAT-MITRE"
+            "@id": "d3f:Reference-SecuritySystemWithMethodologyForInterprocessCommunicationControl_CheckPointSoftwareTechInc"
           },
           {
-            "@id": "d3f:SMBCopyAndExecution_"
+            "@id": "d3f:Reference-SMBCopyAndExecution_MITRE"
           },
           {
-            "@id": "d3f:SMBEventsMonitoring_"
+            "@id": "d3f:Reference-SMBEventsMonitoring_MITRE"
           },
           {
-            "@id": "d3f:SMBSessionSetups_MITRE"
+            "@id": "d3f:Reference-SMBSessionSetups_MITRE"
           },
           {
-            "@id": "d3f:SMBWriteRequest_"
+            "@id": "d3f:Reference-SMBWriteRequest_MITRE"
           },
           {
-            "@id": "d3f:SMBWriteRequest-NamedPipes_MITRE"
+            "@id": "d3f:Reference-SMBWriteRequest-NamedPipes_MITRE"
           }
         ],
         "d3f:synonym": "IPC Analysis",
@@ -585,7 +590,7 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference-CAR-2015-04-001%3ARemotelyScheduledTasksViaAT-MITRE",
+        "@id": "d3f:Reference-CAR-2015-04-001%3ARemotelyScheduledTasksViaAT_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -605,28 +610,7 @@
         "rdfs:label": "Reference - CAR-2015-04-001: Remotely Scheduled Tasks via AT - MITRE"
       },
       {
-        "@id": "d3f:Reference_SecuritySystemWithMethodologyForInterprocessCommunicationControl_CheckPointSoftwareTechInc",
-        "@type": [
-          "d3f:PatentReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://patents.google.com/patent/US20040199763"
-        },
-        "d3f:kb-abstract": "A security system with methodology for interprocess communication control is described. In one embodiment, a method for controlling interprocess communication is provided that includes steps of: defining rules indicating which system services a given application can invoke; trapping an attempt by a particular application to invoke a particular system service; identifying the particular application that is attempting to invoke the particular system service; and based on identity of the particular application and on the rules indicating which system services a given application can invoke, blocking the attempt when the rules indicate that the particular application cannot invoke the particular system service.",
-        "d3f:kb-author": "Gregor Freund",
-        "d3f:kb-mitre-analysis": "This patent describes a technique for monitoring interprocess communications to prevent malicious applications from requesting system services. API calls are monitored to detect malicious applications attempting to open a communication channel (port) to access system services or sending messages to other applications using user32 API functions. These requests are examined against an external rules engine or whitelist, matches deny or block access and produce an error message such as connection refused or service not available.",
-        "d3f:kb-organization": "Check Point Software Tech Inc",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:IPCTrafficAnalysis"
-        },
-        "d3f:kb-reference-title": "Security System with Methodology for Interprocess Communication Control",
-        "d3f:reference-type-label": "Patent",
-        "rdfs:label": "Reference - Security System with Methodology for Interprocess Communication Control - Check Point Software Tech Inc"
-      },
-      {
-        "@id": "d3f:SMBCopyAndExecution_",
+        "@id": "d3f:Reference-SMBCopyAndExecution_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -644,10 +628,10 @@
         },
         "d3f:kb-reference-title": "CAR-2013-05-005: SMB Copy and Execution",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-05-005: SMB Copy and Execution -"
+        "rdfs:label": "Reference - CAR-2013-05-005: SMB Copy and Execution - MITRE"
       },
       {
-        "@id": "d3f:SMBEventsMonitoring_",
+        "@id": "d3f:Reference-SMBEventsMonitoring_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -665,10 +649,10 @@
         },
         "d3f:kb-reference-title": "CAR-2013-01-003: SMB Events Monitoring",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-01-003: SMB Events Monitoring -"
+        "rdfs:label": "Reference - CAR-2013-01-003: SMB Events Monitoring - MITRE"
       },
       {
-        "@id": "d3f:SMBSessionSetups_MITRE",
+        "@id": "d3f:Reference-SMBSessionSetups_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -694,7 +678,7 @@
         "rdfs:label": "Reference - CAR-2013-09-003: SMB Session Setups - MITRE"
       },
       {
-        "@id": "d3f:SMBWriteRequest-NamedPipes_MITRE",
+        "@id": "d3f:Reference-SMBWriteRequest-NamedPipes_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -720,7 +704,7 @@
         "rdfs:label": "Reference - CAR-2014-03-001: SMB Write Request - NamedPipes - MITRE"
       },
       {
-        "@id": "d3f:SMBWriteRequest_",
+        "@id": "d3f:Reference-SMBWriteRequest_MITRE",
         "@type": [
           "d3f:ExternalKnowledgeBase",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -738,7 +722,28 @@
         },
         "d3f:kb-reference-title": "CAR-2013-05-003: SMB Write Request",
         "d3f:reference-type-label": "External Knowledge Base",
-        "rdfs:label": "Reference - CAR-2013-05-003: SMB Write Request -"
+        "rdfs:label": "Reference - CAR-2013-05-003: SMB Write Request - MITRE"
+      },
+      {
+        "@id": "d3f:Reference-SecuritySystemWithMethodologyForInterprocessCommunicationControl_CheckPointSoftwareTechInc",
+        "@type": [
+          "d3f:PatentReference",
+          "http://www.w3.org/2002/07/owl#NamedIndividual"
+        ],
+        "d3f:has-link": {
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "@value": "https://patents.google.com/patent/US20040199763"
+        },
+        "d3f:kb-abstract": "A security system with methodology for interprocess communication control is described. In one embodiment, a method for controlling interprocess communication is provided that includes steps of: defining rules indicating which system services a given application can invoke; trapping an attempt by a particular application to invoke a particular system service; identifying the particular application that is attempting to invoke the particular system service; and based on identity of the particular application and on the rules indicating which system services a given application can invoke, blocking the attempt when the rules indicate that the particular application cannot invoke the particular system service.",
+        "d3f:kb-author": "Gregor Freund",
+        "d3f:kb-mitre-analysis": "This patent describes a technique for monitoring interprocess communications to prevent malicious applications from requesting system services. API calls are monitored to detect malicious applications attempting to open a communication channel (port) to access system services or sending messages to other applications using user32 API functions. These requests are examined against an external rules engine or whitelist, matches deny or block access and produce an error message such as connection refused or service not available.",
+        "d3f:kb-organization": "Check Point Software Tech Inc",
+        "d3f:kb-reference-of": {
+          "@id": "d3f:IPCTrafficAnalysis"
+        },
+        "d3f:kb-reference-title": "Security System with Methodology for Interprocess Communication Control",
+        "d3f:reference-type-label": "Patent",
+        "rdfs:label": "Reference - Security System with Methodology for Interprocess Communication Control - Check Point Software Tech Inc"
       }
     ]
   },
@@ -751,7 +756,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": []
   },

@@ -255,12 +255,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -275,10 +270,10 @@
         "d3f:kb-article": "## How it works\nCryptographic hash values are computed for system firmware. The hash values are compared against precomputed firmware hash values to determine if the firmware has been tampered with.\n\nWhen system firmware verification fails a set of predefined responses is typically invoked. The responses may direct the system to disable some devices or operations.\n\n## Considerations\n* Requires the use of system provided security modules\n* Secure hash values will need to be computed for firmware",
         "d3f:kb-reference": [
           {
-            "@id": "d3f:Reference_PlatformFirmwareResiliencyGuidelines_NIST"
+            "@id": "d3f:Reference-FirmwareVerificationEclypsium"
           },
           {
-            "@id": "d3f:Reference-FirmwareVerificationEclypsium"
+            "@id": "d3f:Reference-PlatformFirmwareResiliencyGuidelines_NIST"
           }
         ],
         "d3f:verifies": {
@@ -380,7 +375,7 @@
         "rdfs:label": "Reference - Firmware Verification Eclypsium"
       },
       {
-        "@id": "d3f:Reference_PlatformFirmwareResiliencyGuidelines_NIST",
+        "@id": "d3f:Reference-PlatformFirmwareResiliencyGuidelines_NIST",
         "@type": [
           "d3f:GuidelineReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
@@ -411,12 +406,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

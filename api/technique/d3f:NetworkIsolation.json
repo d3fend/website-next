@@ -11796,90 +11796,6 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "DNS Allowlisting"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "blocks"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Outbound Internet DNS Lookup Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DNSAllowlisting"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetDNSLookupTraffic"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Network Isolation"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Network Isolation"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Broadcast Domain Isolation"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "filters"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Local Area Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BroadcastDomainIsolation"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#filters"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAreaNetworkTraffic"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Network Isolation"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Network Isolation"
-          },
-          "def_tech_label": {
-            "type": "literal",
             "value": "DNS Denylisting"
           },
           "def_artifact_rel_label": {
@@ -11951,6 +11867,90 @@
           "def_artifact": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetNetwork"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Network Isolation"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Network Isolation"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "DNS Allowlisting"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "blocks"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Outbound Internet DNS Lookup Traffic"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DNSAllowlisting"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetDNSLookupTraffic"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Network Isolation"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Network Isolation"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Broadcast Domain Isolation"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "filters"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Local Area Network Traffic"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#BroadcastDomainIsolation"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#filters"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAreaNetworkTraffic"
           }
         },
         {
@@ -12151,15 +12151,6 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:BroadcastDomainIsolation"
-          },
-          {
-            "@id": "d3f:ReverseResolutionDomainDenylisting"
-          },
-          {
-            "@id": "d3f:ReverseResolutionIPDenylisting"
-          },
-          {
             "@id": "d3f:DNSAllowlisting"
           },
           {
@@ -12169,19 +12160,28 @@
             "@id": "d3f:EncryptedTunnels"
           },
           {
+            "@id": "d3f:ReverseResolutionDomainDenylisting"
+          },
+          {
+            "@id": "d3f:ReverseResolutionIPDenylisting"
+          },
+          {
+            "@id": "d3f:BroadcastDomainIsolation"
+          },
+          {
             "@id": "d3f:NetworkTrafficFiltering"
-          },
-          {
-            "@id": "d3f:InboundTrafficFiltering"
-          },
-          {
-            "@id": "d3f:OutboundTrafficFiltering"
           },
           {
             "@id": "d3f:ForwardResolutionDomainDenylisting"
           },
           {
             "@id": "d3f:ForwardResolutionIPDenylisting"
+          },
+          {
+            "@id": "d3f:InboundTrafficFiltering"
+          },
+          {
+            "@id": "d3f:OutboundTrafficFiltering"
           },
           {
             "@id": "d3f:HierarchicalDomainDenylisting"
