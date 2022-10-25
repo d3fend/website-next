@@ -18,11 +18,16 @@
 
 ### User Interface
 
+- Now rendering mappings to NIST 800 53 and DISA CCI on their own pages.
 - New features on the UI are highlighted with green glow.
 - ATT&CK to D3FEND mapper tool renamed to ATT&CK Extractor.
 - New D3FEND Extractor tool extracts D3FEND techniques from raw text and automatically maps them to ATT&CK. Ability to download results as an ATT&CK navigator layer or a properly formatted table to paste into a spreadsheet, or share the results via URL.
 - Redesigned and simplier resources page.
 - Link to slack channel on contribute page.
+- Now pretty printing in /api JSON serializations.
+- Fixed matrix sorting issues in Chrome and Safari.
+- Added committing contributors section to contribute page for those who send pull requests.
+
 
 ### Ontology Updates
 
