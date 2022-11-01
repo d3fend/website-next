@@ -235,6 +235,7 @@
           "owl:NamedIndividual",
           "owl:Class"
         ],
+        "d3f:synonym": "Legacy Digital System",
         "rdfs:comment": "In computing, a legacy system is an old method, technology, computer system, or application program, \"of, relating to, or being a previous or outdated computer system,\" yet still in use. Often referencing a system as \"legacy\" means that it paved the way for the standards that would follow it. This can also imply that the system is out of date or in need of replacement.",
         "rdfs:isDefinedBy": {
           "@id": "http://dbpedia.org/resource/Legacy_system"

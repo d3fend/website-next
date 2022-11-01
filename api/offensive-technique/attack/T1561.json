@@ -3066,204 +3066,6 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Partition Table"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-modify"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Disk Wipe"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Collection"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PartitionTable"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1561"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1561"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Asset Inventory"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Asset Vulnerability Enumeration"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "evaluates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Digital Artifact"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Volume"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-modify"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Disk Wipe"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Collection"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Volume"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1561"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1561"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Asset Inventory"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Asset Vulnerability Enumeration"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "evaluates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Digital Artifact"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
             "value": "Boot Sector"
           },
           "off_artifact_rel_label": {
@@ -3577,7 +3379,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Command And Control"
+            "value": "Collection"
           },
           "def_tactic": {
             "type": "uri",
@@ -3621,7 +3423,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
           }
         },
         {
@@ -3676,7 +3478,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Command And Control"
+            "value": "Collection"
           },
           "def_tactic": {
             "type": "uri",
@@ -3720,7 +3522,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
           }
         },
         {
@@ -4072,7 +3874,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Credential Access"
+            "value": "Command And Control"
           },
           "def_tactic": {
             "type": "uri",
@@ -4116,7 +3918,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
           }
         },
         {
@@ -4171,7 +3973,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Credential Access"
+            "value": "Command And Control"
           },
           "def_tactic": {
             "type": "uri",
@@ -4215,7 +4017,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
           }
         },
         {
@@ -4567,7 +4369,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Defense Evasion"
+            "value": "Credential Access"
           },
           "def_tactic": {
             "type": "uri",
@@ -4611,7 +4413,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
           }
         },
         {
@@ -4666,7 +4468,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Defense Evasion"
+            "value": "Credential Access"
           },
           "def_tactic": {
             "type": "uri",
@@ -4710,7 +4512,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
           }
         },
         {
@@ -5062,7 +4864,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Discovery"
+            "value": "Defense Evasion"
           },
           "def_tactic": {
             "type": "uri",
@@ -5106,7 +4908,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
           }
         },
         {
@@ -5161,7 +4963,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Discovery"
+            "value": "Defense Evasion"
           },
           "def_tactic": {
             "type": "uri",
@@ -5205,7 +5007,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
           }
         },
         {
@@ -5557,7 +5359,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Execution"
+            "value": "Discovery"
           },
           "def_tactic": {
             "type": "uri",
@@ -5601,7 +5403,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
           }
         },
         {
@@ -5656,7 +5458,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Execution"
+            "value": "Discovery"
           },
           "def_tactic": {
             "type": "uri",
@@ -5700,7 +5502,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
           }
         },
         {
@@ -6052,7 +5854,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Exfiltration"
+            "value": "Execution"
           },
           "def_tactic": {
             "type": "uri",
@@ -6096,7 +5898,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
           }
         },
         {
@@ -6151,7 +5953,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Exfiltration"
+            "value": "Execution"
           },
           "def_tactic": {
             "type": "uri",
@@ -6195,7 +5997,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
           }
         },
         {
@@ -6547,7 +6349,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Impact"
+            "value": "Exfiltration"
           },
           "def_tactic": {
             "type": "uri",
@@ -6591,7 +6393,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
           }
         },
         {
@@ -6646,7 +6448,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Impact"
+            "value": "Exfiltration"
           },
           "def_tactic": {
             "type": "uri",
@@ -6690,7 +6492,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
           }
         },
         {
@@ -7026,105 +6828,6 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Partition"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-modify"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Disk Wipe"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Initial Access"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Partition"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1561"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1561"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Asset Inventory"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Asset Vulnerability Enumeration"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "evaluates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Digital Artifact"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
             "value": "Partition Table"
           },
           "off_artifact_rel_label": {
@@ -7141,7 +6844,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Initial Access"
+            "value": "Impact"
           },
           "def_tactic": {
             "type": "uri",
@@ -7185,7 +6888,106 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Volume"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "may-modify"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Disk Wipe"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Impact"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Volume"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1561"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1561"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
           }
         },
         {
@@ -7537,7 +7339,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Lateral Movement"
+            "value": "Initial Access"
           },
           "def_tactic": {
             "type": "uri",
@@ -7581,7 +7383,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
           }
         },
         {
@@ -7636,7 +7438,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Lateral Movement"
+            "value": "Initial Access"
           },
           "def_tactic": {
             "type": "uri",
@@ -7680,7 +7482,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
           }
         },
         {
@@ -8032,7 +7834,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Persistence"
+            "value": "Lateral Movement"
           },
           "def_tactic": {
             "type": "uri",
@@ -8076,7 +7878,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
           }
         },
         {
@@ -8131,7 +7933,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Persistence"
+            "value": "Lateral Movement"
           },
           "def_tactic": {
             "type": "uri",
@@ -8175,7 +7977,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
           }
         },
         {
@@ -8527,7 +8329,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Privilege Escalation"
+            "value": "Persistence"
           },
           "def_tactic": {
             "type": "uri",
@@ -8571,7 +8373,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
           }
         },
         {
@@ -8626,7 +8428,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Privilege Escalation"
+            "value": "Persistence"
           },
           "def_tactic": {
             "type": "uri",
@@ -8670,7 +8472,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
           }
         },
         {
@@ -8952,6 +8754,204 @@
           "off_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1561"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1561"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Partition"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "may-modify"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Disk Wipe"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Partition"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1561"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1561"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Partition Table"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "may-modify"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Disk Wipe"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PartitionTable"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-modify"
           },
           "off_tech": {
             "type": "uri",
@@ -8978,12 +8978,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -9002,12 +8997,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -9020,10 +9010,10 @@
         ],
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:T1561.002"
+            "@id": "d3f:T1561.001"
           },
           {
-            "@id": "d3f:T1561.001"
+            "@id": "d3f:T1561.002"
           }
         ],
         "rdfs:label": [

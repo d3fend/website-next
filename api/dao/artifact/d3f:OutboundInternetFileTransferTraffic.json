@@ -547,57 +547,6 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Logical Link Mapping"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Passive Logical Link Mapping"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "monitors"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PassiveLogicalLinkMapping"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#monitors"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
             "value": "Detect"
           },
           "def_tactic_rel_label": {

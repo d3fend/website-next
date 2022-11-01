@@ -534,7 +534,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Executable Denylisting"
+            "value": "Executable Allowlisting"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -554,7 +554,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -585,7 +585,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Executable Allowlisting"
+            "value": "Executable Denylisting"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -605,7 +605,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -828,12 +828,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -920,12 +915,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -964,12 +954,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   }

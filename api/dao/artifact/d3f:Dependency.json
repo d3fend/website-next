@@ -109,7 +109,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Organization Mapping"
+            "value": "Operational Dependency Mapping"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -129,7 +129,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OrganizationMapping"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperationalDependencyMapping"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -160,7 +160,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Operational Dependency Mapping"
+            "value": "Organization Mapping"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -180,7 +180,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperationalDependencyMapping"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OrganizationMapping"
           },
           "def_artifact_rel": {
             "type": "uri",

@@ -1365,11 +1365,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Get Screen Capture"
+            "value": "Display Server"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-invoke"
+            "value": "may-access"
           },
           "off_tech_label": {
             "type": "literal",
@@ -1405,11 +1405,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
           },
           "off_tech": {
             "type": "uri",
@@ -1464,11 +1464,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Display Server"
+            "value": "Get Screen Capture"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-access"
+            "value": "may-invoke"
           },
           "off_tech_label": {
             "type": "literal",
@@ -1504,11 +1504,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
           },
           "off_tech": {
             "type": "uri",
@@ -1761,11 +1761,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Get Screen Capture"
+            "value": "Display Server"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-invoke"
+            "value": "may-access"
           },
           "off_tech_label": {
             "type": "literal",
@@ -1801,11 +1801,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
           },
           "off_tech": {
             "type": "uri",
@@ -1860,11 +1860,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Display Server"
+            "value": "Get Screen Capture"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-access"
+            "value": "may-invoke"
           },
           "off_tech_label": {
             "type": "literal",
@@ -1900,11 +1900,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
           },
           "off_tech": {
             "type": "uri",
@@ -2157,11 +2157,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Get Screen Capture"
+            "value": "Display Server"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-invoke"
+            "value": "may-access"
           },
           "off_tech_label": {
             "type": "literal",
@@ -2197,11 +2197,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
           },
           "off_tech": {
             "type": "uri",
@@ -2256,11 +2256,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Display Server"
+            "value": "Get Screen Capture"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-access"
+            "value": "may-invoke"
           },
           "off_tech_label": {
             "type": "literal",
@@ -2296,11 +2296,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
           },
           "off_tech": {
             "type": "uri",
@@ -2553,11 +2553,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Get Screen Capture"
+            "value": "Display Server"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-invoke"
+            "value": "may-access"
           },
           "off_tech_label": {
             "type": "literal",
@@ -2593,11 +2593,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
           },
           "off_tech": {
             "type": "uri",
@@ -2652,11 +2652,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Display Server"
+            "value": "Get Screen Capture"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-access"
+            "value": "may-invoke"
           },
           "off_tech_label": {
             "type": "literal",
@@ -2692,11 +2692,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
           },
           "off_tech": {
             "type": "uri",
@@ -2949,11 +2949,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Get Screen Capture"
+            "value": "Display Server"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-invoke"
+            "value": "may-access"
           },
           "off_tech_label": {
             "type": "literal",
@@ -2989,11 +2989,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
           },
           "off_tech": {
             "type": "uri",
@@ -3048,11 +3048,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Display Server"
+            "value": "Get Screen Capture"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-access"
+            "value": "may-invoke"
           },
           "off_tech_label": {
             "type": "literal",
@@ -3088,11 +3088,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
           },
           "off_tech": {
             "type": "uri",
@@ -3345,11 +3345,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Get Screen Capture"
+            "value": "Display Server"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-invoke"
+            "value": "may-access"
           },
           "off_tech_label": {
             "type": "literal",
@@ -3385,11 +3385,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
           },
           "off_tech": {
             "type": "uri",
@@ -3444,11 +3444,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Display Server"
+            "value": "Get Screen Capture"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-access"
+            "value": "may-invoke"
           },
           "off_tech_label": {
             "type": "literal",
@@ -3484,11 +3484,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
           },
           "off_tech": {
             "type": "uri",
@@ -3741,11 +3741,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Get Screen Capture"
+            "value": "Display Server"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-invoke"
+            "value": "may-access"
           },
           "off_tech_label": {
             "type": "literal",
@@ -3781,11 +3781,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
           },
           "off_tech": {
             "type": "uri",
@@ -3840,11 +3840,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Display Server"
+            "value": "Get Screen Capture"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-access"
+            "value": "may-invoke"
           },
           "off_tech_label": {
             "type": "literal",
@@ -3880,11 +3880,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
           },
           "off_tech": {
             "type": "uri",
@@ -4137,11 +4137,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Get Screen Capture"
+            "value": "Display Server"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-invoke"
+            "value": "may-access"
           },
           "off_tech_label": {
             "type": "literal",
@@ -4177,11 +4177,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
           },
           "off_tech": {
             "type": "uri",
@@ -4236,11 +4236,11 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Display Server"
+            "value": "Get Screen Capture"
           },
           "off_artifact_rel_label": {
             "type": "literal",
-            "value": "may-access"
+            "value": "may-invoke"
           },
           "off_tech_label": {
             "type": "literal",
@@ -4276,11 +4276,11 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#GetScreenCapture"
           },
           "off_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-access"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"
           },
           "off_tech": {
             "type": "uri",
@@ -5990,12 +5990,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -6023,12 +6018,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   }

@@ -6805,6 +6805,541 @@
           },
           "off_artifact_label": {
             "type": "literal",
+            "value": "Create Process"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "invokes"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "SQL Stored Procedures"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1505.001"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Server Software Component"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.001"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Process Analysis"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Call"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Create Process"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "invokes"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "AppCert DLLs"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1546.009"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Event Triggered Execution"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.009"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Process Analysis"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Call"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Create Process"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "invokes"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "AppInit DLLs"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1546.010"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Event Triggered Execution"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.010"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Process Analysis"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Call"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Create Process"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "invokes"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "AppCert DLLs"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1546.009"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Event Triggered Execution"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.009"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Process Analysis"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Call"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Create Process"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "invokes"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "AppInit DLLs"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1546.010"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Event Triggered Execution"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.010"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Process Analysis"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Call Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "System Call"
+          },
+          "off_artifact_label": {
+            "type": "literal",
             "value": "Get System Time"
           },
           "off_artifact_rel_label": {
@@ -7406,541 +7941,6 @@
           "off_tech_parent": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Process Analysis"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Call"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Create Process"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "invokes"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "SQL Stored Procedures"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1505.001"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Server Software Component"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.001"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Process Analysis"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Call"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Create Process"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "invokes"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "AppCert DLLs"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1546.009"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Event Triggered Execution"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.009"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Process Analysis"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Call"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Create Process"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "invokes"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "AppInit DLLs"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1546.010"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Event Triggered Execution"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.010"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Process Analysis"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Call"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Create Process"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "invokes"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "AppCert DLLs"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1546.009"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Event Triggered Execution"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.009"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Process Analysis"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "System Call Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "System Call"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Create Process"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "invokes"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "AppInit DLLs"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1546.010"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Event Triggered Execution"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.010"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
           },
           "off_tactic_rel": {
             "type": "uri",
@@ -15972,225 +15972,6 @@
         ]
       ],
       [
-        "Abuse Elevation Control Mechanism",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "System Call Analysis"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Process Analysis"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Detect"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "System Call Analysis"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "analyzes"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "System Call"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Create Process"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "invokes"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Bypass User Access Control"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1548.002"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Abuse Elevation Control Mechanism"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Privilege Escalation"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.002"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-            }
-          },
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "System Call Analysis"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Process Analysis"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Detect"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "System Call Analysis"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "analyzes"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "System Call"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "System Call"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "invokes"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Elevated Execution with Prompt"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1548.004"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Abuse Elevation Control Mechanism"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Privilege Escalation"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.004"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-            }
-          }
-        ]
-      ],
-      [
         "Event Triggered Execution",
         [
           {
@@ -16397,6 +16178,225 @@
             "off_tech_parent": {
               "type": "uri",
               "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            }
+          }
+        ]
+      ],
+      [
+        "Abuse Elevation Control Mechanism",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "System Call Analysis"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Process Analysis"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Detect"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "System Call Analysis"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "analyzes"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "System Call"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Create Process"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "invokes"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Bypass User Access Control"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1548.002"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Abuse Elevation Control Mechanism"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Privilege Escalation"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.002"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            }
+          },
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "System Call Analysis"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Process Analysis"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Detect"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "System Call Analysis"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "analyzes"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "System Call"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "System Call"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "invokes"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Elevated Execution with Prompt"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1548.004"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Abuse Elevation Control Mechanism"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Privilege Escalation"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCallAnalysis"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.004"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1548"
             },
             "off_tactic_rel": {
               "type": "uri",

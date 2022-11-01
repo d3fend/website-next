@@ -385,113 +385,6 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Operating System Process"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "disables"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Disable or Modify Tools"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1562.001"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Impair Defenses"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Defense Evasion"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Process"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemProcess"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#disables"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1562.001"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1562"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Process Lineage Analysis"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Process Analysis"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Process Lineage Analysis"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Process"
-          },
-          "off_artifact_label": {
-            "type": "literal",
             "value": "Process"
           },
           "off_artifact_rel_label": {
@@ -780,6 +673,113 @@
           "off_tactic": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Process Lineage Analysis"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Process Analysis"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Process Lineage Analysis"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Process"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Operating System Process"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "disables"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Disable or Modify Tools"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1562.001"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Impair Defenses"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Defense Evasion"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Process"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemProcess"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#disables"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1562.001"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1562"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
           }
         }
       ]
@@ -1713,120 +1713,6 @@
         ]
       ]
     ],
-    "Defense Evasion": [
-      [
-        "Impair Defenses",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Process Lineage Analysis"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Process Analysis"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Detect"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Process Lineage Analysis"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "analyzes"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Process"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Operating System Process"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "disables"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Disable or Modify Tools"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1562.001"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Impair Defenses"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Defense Evasion"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Process"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemProcess"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#disables"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1562.001"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1562"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-            }
-          }
-        ]
-      ]
-    ],
     "Persistence": [
       [
         "Server Software Component",
@@ -2162,6 +2048,120 @@
             "off_tactic": {
               "type": "uri",
               "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            }
+          }
+        ]
+      ]
+    ],
+    "Defense Evasion": [
+      [
+        "Impair Defenses",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Process Lineage Analysis"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Process Analysis"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Detect"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Process Lineage Analysis"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "analyzes"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Process"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Operating System Process"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "disables"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Disable or Modify Tools"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1562.001"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Impair Defenses"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Defense Evasion"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessLineageAnalysis"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Process"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemProcess"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#disables"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1562.001"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1562"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
             }
           }
         ]

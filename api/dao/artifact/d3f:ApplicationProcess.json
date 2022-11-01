@@ -245,6 +245,57 @@
         {
           "def_tactic_label": {
             "type": "literal",
+            "value": "Evict"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Process Eviction"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Process Termination"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "terminates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Process"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Evict"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessTermination"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#terminates"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Process"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
             "value": "Isolate"
           },
           "def_tactic_rel_label": {
@@ -338,57 +389,6 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#isolates"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Process"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Evict"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Process Eviction"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Process Termination"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "terminates"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Process"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Evict"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessTermination"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#terminates"
           },
           "def_artifact": {
             "type": "uri",

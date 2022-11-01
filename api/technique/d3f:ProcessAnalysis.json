@@ -16770,9 +16770,6 @@
             "@id": "d3f:ProcessSpawnAnalysis"
           },
           {
-            "@id": "d3f:FileAccessPatternAnalysis"
-          },
-          {
             "@id": "d3f:ScriptExecutionAnalysis"
           },
           {
@@ -16780,6 +16777,9 @@
           },
           {
             "@id": "d3f:SystemCallAnalysis"
+          },
+          {
+            "@id": "d3f:FileAccessPatternAnalysis"
           },
           {
             "@id": "d3f:IndirectBranchCallAnalysis"

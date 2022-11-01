@@ -68,6 +68,220 @@
           },
           "off_artifact_rel_label": {
             "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Create Account"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1136"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Local Account Monitoring"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "User Behavior Analysis"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Local Account Monitoring"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "creates"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Local Account"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1087.001"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Create Account"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1136"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Local Account Monitoring"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "User Behavior Analysis"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Local Account Monitoring"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Local User Account"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
             "value": "uses"
           },
           "off_tech_label": {
@@ -460,220 +674,6 @@
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
           }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Local Account Monitoring"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "User Behavior Analysis"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Local Account Monitoring"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Create Account"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1136"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Local Account Monitoring"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "User Behavior Analysis"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Local Account Monitoring"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Local User Account"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "creates"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Local Account"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1087.001"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Create Account"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1136"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
         }
       ]
     }
@@ -866,6 +866,458 @@
     "@graph": []
   },
   "related_offensive_matrix": {
+    "Persistence": [
+      [
+        "Create Account",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Local Account Monitoring"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "User Behavior Analysis"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Detect"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Local Account Monitoring"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "analyzes"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Local User Account"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Local User Account"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "creates"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Local Account"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1087.001"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Create Account"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Persistence"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1136"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            }
+          }
+        ]
+      ],
+      [
+        "Valid Accounts",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Local Account Monitoring"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "User Behavior Analysis"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Detect"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Local Account Monitoring"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "analyzes"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Local User Account"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Local User Account"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "uses"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Local Accounts"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1078.003"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Valid Accounts"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Persistence"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#uses"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1078.003"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1078"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            }
+          }
+        ]
+      ]
+    ],
+    "Privilege Escalation": [
+      [
+        "Create Account",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Local Account Monitoring"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "User Behavior Analysis"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Detect"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Local Account Monitoring"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "analyzes"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Local User Account"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Local User Account"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "creates"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Local Account"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1087.001"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Create Account"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Privilege Escalation"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1136"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            }
+          }
+        ]
+      ],
+      [
+        "Valid Accounts",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Local Account Monitoring"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "User Behavior Analysis"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Detect"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Local Account Monitoring"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "analyzes"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Local User Account"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Local User Account"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "uses"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Local Accounts"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1078.003"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Valid Accounts"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Privilege Escalation"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#uses"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1078.003"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1078"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+            }
+          }
+        ]
+      ]
+    ],
     "Defense Evasion": [
       [
         "Valid Accounts",
@@ -1089,458 +1541,6 @@
             "off_tactic": {
               "type": "uri",
               "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
-            }
-          }
-        ]
-      ]
-    ],
-    "Persistence": [
-      [
-        "Valid Accounts",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Local Account Monitoring"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "User Behavior Analysis"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Detect"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Local Account Monitoring"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "analyzes"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Local User Account"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Local User Account"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "uses"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Local Accounts"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1078.003"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Valid Accounts"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Persistence"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#uses"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1078.003"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1078"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-            }
-          }
-        ]
-      ],
-      [
-        "Create Account",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Local Account Monitoring"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "User Behavior Analysis"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Detect"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Local Account Monitoring"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "analyzes"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Local User Account"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Local User Account"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "creates"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Local Account"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1087.001"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Create Account"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Persistence"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1136"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-            }
-          }
-        ]
-      ]
-    ],
-    "Privilege Escalation": [
-      [
-        "Valid Accounts",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Local Account Monitoring"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "User Behavior Analysis"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Detect"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Local Account Monitoring"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "analyzes"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Local User Account"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Local User Account"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "uses"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Local Accounts"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1078.003"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Valid Accounts"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Privilege Escalation"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#uses"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1078.003"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1078"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-            }
-          }
-        ]
-      ],
-      [
-        "Create Account",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Local Account Monitoring"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "User Behavior Analysis"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Detect"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Local Account Monitoring"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "analyzes"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Local User Account"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Local User Account"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "creates"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Local Account"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1087.001"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Create Account"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Privilege Escalation"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalAccountMonitoring"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalUserAccount"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#creates"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1087.001"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1136"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
             }
           }
         ]

@@ -1,15 +1,15 @@
 const build = [
-  "/_app/start-145e44ac.js",
+  "/_app/start-07c43ec8.js",
   "/_app/pages/__layout.svelte-2c685df2.js",
-  "/_app/assets/pages/__layout-matrix.svelte-5f711740.css",
+  "/_app/assets/pages/__layout.svelte-a0ff9840.css",
   "/_app/pages/__error.svelte-1d825c42.js",
   "/_app/pages/__layout-matrix.svelte-813d3b24.js",
   "/_app/pages/mappings/__layout.svelte-9c60b20b.js",
-  "/_app/pages/offensive-technique/attack/__layout@matrix.svelte-fc6cb3e8.js",
+  "/_app/pages/offensive-technique/attack/__layout@matrix.svelte-4021176a.js",
   "/_app/pages/progress/__layout.svelte-5e5c52fc.js",
-  "/_app/pages/tactic/__layout-tactic@matrix.svelte-caf8f657.js",
-  "/_app/assets/pages/technique/__layout-tech@matrix.svelte-c1854619.css",
-  "/_app/pages/technique/__layout-tech@matrix.svelte-cea1bc61.js",
+  "/_app/pages/tactic/__layout-tactic@matrix.svelte-8d7f29d7.js",
+  "/_app/assets/pages/tactic/__layout-tactic@matrix.svelte-b7a77fc7.css",
+  "/_app/pages/technique/__layout-tech@matrix.svelte-a150bb14.js",
   "/_app/pages/about.svelte-5bf95ec1.js",
   "/_app/assets/pages/about.svelte-b0b5b64a.css",
   "/_app/pages/contact.svelte-27af9ef7.js",
@@ -23,7 +23,7 @@ const build = [
   "/_app/pages/dao/index.svelte-b3372aa8.js",
   "/_app/assets/pages/dao/index.svelte-43d7df8e.css",
   "/_app/pages/faq/index.svelte-cfbc359d.js",
-  "/_app/pages/index@matrix.svelte-b4036c31.js",
+  "/_app/pages/index@matrix.svelte-56bae9dd.js",
   "/_app/assets/pages/index@matrix.svelte-3b40261d.css",
   "/_app/pages/mappings/attack-mitigations.svelte-f63558bf.js",
   "/_app/pages/mappings/cci/_version_.svelte-809600bc.js",
@@ -34,8 +34,8 @@ const build = [
   "/_app/pages/offensive-technique/index.svelte-afda10b9.js",
   "/_app/pages/ontology/describe/_slug_.svelte-22374d72.js",
   "/_app/assets/pages/ontology/describe/_slug_.svelte-040471dd.css",
-  "/_app/pages/poster@matrix.svelte-6d9d5bb5.js",
-  "/_app/assets/pages/poster@matrix.svelte-ad010473.css",
+  "/_app/pages/poster@matrix.svelte-a8746f02.js",
+  "/_app/assets/pages/poster@matrix.svelte-d43515df.css",
   "/_app/pages/privacy.svelte-ffcf299b.js",
   "/_app/pages/progress/index.svelte-29a4a0b5.js",
   "/_app/pages/resources/index.svelte-0f1cfd84.js",
@@ -67,8 +67,8 @@ const build = [
   "/_app/chunks/config-91979045.js",
   "/_app/chunks/lib-88dd6a45.js",
   "/_app/chunks/marked.esm-8ab30116.js",
-  "/_app/chunks/D3FMatrix-6b58e23f.js",
-  "/_app/assets/D3FMatrix-2034dabc.css",
+  "/_app/chunks/D3FMatrix-eeee782d.js",
+  "/_app/assets/D3FMatrix-5aa2f868.css",
   "/_app/chunks/navigation-0e6511d1.js",
   "/_app/chunks/Header-47fd749a.js",
   "/_app/assets/Header-6acab121.css",
@@ -129,7 +129,7 @@ const files = [
   "/resources/extra-dist/CNAME",
   "/resources/extra-dist/README.md"
 ];
-const version = "1666709951398";
+const version = "1667281753816";
 const ASSETS = `cache${version}`;
 const to_cache = build.concat(files);
 const staticAssets = new Set(to_cache);

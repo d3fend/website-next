@@ -72,9 +72,14 @@
             "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF"
           }
         ],
-        "d3f:maps": {
-          "@id": "d3f:Dependency"
-        },
+        "d3f:maps": [
+          {
+            "@id": "d3f:Dependency"
+          },
+          {
+            "@id": "d3f:OrganizationalActivity"
+          }
+        ],
         "rdfs:label": "Operational Dependency Mapping",
         "rdfs:subClassOf": {
           "@id": "d3f:OperationalActivityMapping"

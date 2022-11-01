@@ -36,7 +36,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -52,7 +52,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -105,7 +105,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -143,7 +143,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -159,7 +159,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -212,7 +212,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -250,7 +250,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -266,7 +266,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -319,7 +319,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -357,7 +357,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -373,7 +373,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -426,7 +426,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -464,7 +464,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -480,114 +480,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "inventories"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Node"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Mail Server"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Remote Email Collection"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1114.002"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Email Collection"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Collection"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1114.002"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1114"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Hardware Inventory"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Asset Inventory"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -640,7 +533,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -678,7 +571,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -694,7 +587,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -747,7 +640,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -785,7 +678,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -801,7 +694,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -854,7 +747,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -892,7 +785,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -908,7 +801,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -961,7 +854,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -999,7 +892,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -1015,7 +908,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1068,7 +961,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1106,7 +999,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -1122,7 +1015,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1175,7 +1068,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1213,7 +1106,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -1229,7 +1122,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1282,7 +1175,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1320,7 +1213,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -1336,7 +1229,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1389,7 +1282,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1427,7 +1320,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -1443,7 +1336,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1496,7 +1389,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1534,7 +1427,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -1550,7 +1443,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1603,7 +1496,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1637,220 +1530,6 @@
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
           }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Hardware Inventory"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Asset Inventory"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Hardware Inventory"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "inventories"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Node"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Mail Server"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "modifies"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Transport Agent"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1505.002"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Server Software Component"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.002"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Hardware Inventory"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Asset Inventory"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Hardware Inventory"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "inventories"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Node"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Web Server"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "modifies"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Web Shell"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1505.003"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Server Software Component"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#WebServer"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.003"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
         }
       ]
     }
@@ -1864,48 +1543,26 @@
     },
     "@graph": [
       {
-        "@id": "d3f:HardwareInventory",
+        "@id": "d3f:HardwareComponentInventory",
         "@type": [
           "owl:NamedIndividual",
           "d3f:AssetInventory",
           "owl:Class"
         ],
-        "d3f:d3fend-id": "D3-HWI",
-        "d3f:definition": "Hardware inventorying identifies and records the hardware items in the organization's architecture.",
-        "d3f:inventories": [
-          {
-            "@id": "d3f:HardwareDevice"
-          },
-          {
-            "@id": "d3f:NetworkNode"
-          }
-        ],
-        "d3f:kb-article": "## How it works\nAdministrators collect information on hardware items in their architecture using a variety of administrative and management tools that query network devices and nodes for information.  In some cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through network enumeration methods to include host discovery and scanning for active ports and services.\n\n## Considerations\n* Scanning and probing techniques using mapping tools can result in side effects to information technology (IT) and operational technology (OT) systems.\n* An adversary conducting network enumeration may engage in activities that parallel normal hardware inventorying activities, but would require escalating to admin privileges for most of the operations requiting administrative tools\n\n## Examples\n* Link-layer discovery\n   * Link-layer Discovery Protocol (LLDP)\n   * Cisco Discovery Protocol (CDP)\n* Application-layer discovery\n   * Simple Network Management Protocol (SNMP) collects MIB information\n   * Web-based Enterprise Management (WBEM) collects CIM information\n      * Windows Management Instrumentation (WMI)\n      * Windows Management Infrastructure (MI)",
-        "d3f:kb-reference": [
-          {
-            "@id": "d3f:Reference-Web-BasedEnterpriseManagement"
-          },
-          {
-            "@id": "d3f:Reference-IEEE-802_1AB-2016"
-          },
-          {
-            "@id": "d3f:Reference-QualysNetworkPassiveSensorGettingStartedGuide"
-          },
-          {
-            "@id": "d3f:Reference-RFC3411-AnArchitectureForDescribingSimpleNetworkManagementProtocolSNMPManagementFrameworks"
-          },
-          {
-            "@id": "d3f:Reference-Windows-Management-Infrastructure"
-          },
-          {
-            "@id": "d3f:Reference-Windows-Management-Instrumentation"
-          }
-        ],
+        "d3f:d3fend-id": "D3-HCI",
+        "d3f:definition": "Hardware component inventorying identifies and records the hardware items in the organization's architecture.",
+        "d3f:inventories": {
+          "@id": "d3f:HardwareDevice"
+        },
+        "d3f:kb-article": "## How it works\nAdministrators collect information on hardware devices such as peripherals, NICs, processors, and memory devices that are components of the computers in their architecture using a variety of administrative and management tools that query for this information.  In some cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through remote adminstration tools and system commands, either manually or using scripts.\n\n## Considerations\n* Scanning and probing techniques using mapping tools can result in side effects to information technology (IT) and operational technology (OT) systems.\n* An adversary conducting network enumeration may engage in activities that parallel normal hardware inventorying activities, but would require escalating to admin privileges for most of the operations requiting administrative tools\n\n## Examples\n* Bus discovery \n   * Admin-scripted PCI Bus inventory using ssh and pciutils\n* Application-layer discovery \n   * Simple Network Management Protocol (SNMP) collects MIB information\n   * Web-based Enterprise Management (WBEM) collects CIM information\n      * Windows Management Instrumentation (WMI)\n      * Windows Management Infrastructure (MI)",
+        "d3f:kb-reference": {
+          "@id": "d3f:Reference-AdvancedDeviceMatchingSystem"
+        },
         "d3f:synonym": [
-          "Hardware Discovery",
-          "Hardware Inventorying"
+          "Hardware Component Discovery",
+          "Hardware Component Inventorying"
         ],
-        "rdfs:label": "Hardware Inventory",
+        "rdfs:label": "Hardware Component Inventory",
         "rdfs:subClassOf": {
           "@id": "d3f:AssetInventory"
         }
@@ -1932,7 +1589,7 @@
         {
           "query_def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "top_def_tech_label": {
             "type": "literal",
@@ -1940,7 +1597,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -1960,7 +1617,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -1969,48 +1626,6 @@
           "def_artifact": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareDevice"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Hardware Inventory"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Asset Inventory"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Hardware Inventory"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "inventories"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Node"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
           }
         }
       ]
@@ -2023,158 +1638,29 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference-IEEE-802_1AB-2016",
+        "@id": "d3f:Reference-AdvancedDeviceMatchingSystem",
         "@type": [
-          "d3f:SpecificationReference",
+          "d3f:PatentReference",
           "http://www.w3.org/2002/07/owl#NamedIndividual"
         ],
         "d3f:has-link": {
           "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://standards.ieee.org/ieee/802.1AB/6047/"
+          "@value": "https://patents.google.com/patent/US10892951B2/"
         },
-        "d3f:kb-organization": "IEEE",
+        "d3f:kb-abstract": "Disclosed is a device management system for discovery and management of components added to computer systems and sub-systems. The device management system provides for recognizing a newly added component, and determining if the newly added component is already a part of the system inventory. The newly added component is matched with a component currently on the system, based on at least one matching attribute. A point total is calculated for each match level and a final match score is provided. The match score is compared with an aggressiveness level to determine if a match does indeed exist.",
+        "d3f:kb-author": "Rajneesh Jalan, Joseph M. Schmitt, and Marco Simoes",
+        "d3f:kb-organization": "Device42 Inc",
         "d3f:kb-reference-of": {
-          "@id": "d3f:HardwareInventory"
+          "@id": "d3f:HardwareComponentInventory"
         },
-        "d3f:kb-reference-title": "IEEE Standard for Local and Metropolitan Area Networks - Station and Media Access Control Connectivity Discovery",
-        "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Reference - IEEE Standard for Local and Metropolitan Area Networks - Station and Media Access Control Connectivity Discovery"
-      },
-      {
-        "@id": "d3f:Reference-QualysNetworkPassiveSensorGettingStartedGuide",
-        "@type": [
-          "d3f:UserManualReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://www.qualys.com/passive-scanning-sensor/"
-        },
-        "d3f:kb-abstract": "Qualys Passive Scanning Sensor (PS) continuously monitors all network traffic and flags any asset activity. It identifies and profiles devices the moment they connect to the network, including those difficult to scan, corporate owned, brought by employees, and rogue IT. The data is sent immediately to the Qualys Cloud Platform for centralized analysis.",
-        "d3f:kb-organization": "Qualys",
-        "d3f:kb-reference-of": [
-          {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
-            "@id": "d3f:NetworkNodeInventory"
-          }
-        ],
-        "d3f:kb-reference-title": "Qualys Network Passive Sensor Getting Started Guide",
-        "d3f:reference-type-label": "User Manual",
-        "rdfs:label": "Reference - Qualys Network Passive Sensor Getting Started Guide"
-      },
-      {
-        "@id": "d3f:Reference-RFC3411-AnArchitectureForDescribingSimpleNetworkManagementProtocolSNMPManagementFrameworks",
-        "@type": [
-          "d3f:SpecificationReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://https://datatracker.ietf.org/doc/html/rfc3411"
-        },
-        "d3f:kb-author": "D. Harrington, R. Presuhn, B. Wijnen",
-        "d3f:kb-organization": "Internet Engineering Task Force (IETF)",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:HardwareInventory"
-        },
-        "d3f:kb-reference-title": "An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks",
-        "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Reference - An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks"
-      },
-      {
-        "@id": "d3f:Reference-Web-BasedEnterpriseManagement",
-        "@type": [
-          "d3f:SpecificationReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://www.dmtf.org/standards/wbem"
-        },
-        "d3f:kb-organization": "Distributed Management Task Force (DMTF)",
-        "d3f:kb-reference-of": [
-          {
-            "@id": "d3f:ConfigurationInventory"
-          },
-          {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
-            "@id": "d3f:SoftwareInventory"
-          },
-          {
-            "@id": "d3f:NetworkNodeInventory"
-          }
-        ],
-        "d3f:kb-reference-title": "Web-Based Enterprise Management",
-        "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Reference - Web-Based Enterprise Management"
-      },
-      {
-        "@id": "d3f:Reference-Windows-Management-Infrastructure",
-        "@type": [
-          "d3f:SpecificationReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://docs.microsoft.com/en-us/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure"
-        },
-        "d3f:kb-organization": "Microsoft",
-        "d3f:kb-reference-of": [
-          {
-            "@id": "d3f:ConfigurationInventory"
-          },
-          {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
-            "@id": "d3f:SoftwareInventory"
-          },
-          {
-            "@id": "d3f:NetworkNodeInventory"
-          }
-        ],
-        "d3f:kb-reference-title": "Windows Management Infrastructure",
-        "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Reference - Windows Management Infrastructure (MI)"
-      },
-      {
-        "@id": "d3f:Reference-Windows-Management-Instrumentation",
-        "@type": [
-          "d3f:SpecificationReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": {
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "@value": "https://docs.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page"
-        },
-        "d3f:kb-organization": "Microsoft",
-        "d3f:kb-reference-of": [
-          {
-            "@id": "d3f:ConfigurationInventory"
-          },
-          {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
-            "@id": "d3f:SoftwareInventory"
-          },
-          {
-            "@id": "d3f:NetworkNodeInventory"
-          }
-        ],
-        "d3f:kb-reference-title": "Windows Management Instrumentation",
-        "d3f:reference-type-label": "Specification",
-        "rdfs:label": "Reference - Windows Management Instrumentation (WMI)"
+        "d3f:kb-reference-title": "Advanced device matching system",
+        "d3f:reference-type-label": "Patent",
+        "rdfs:label": "Reference - Advanced device matching system"
       }
     ]
   },
   "references_meta": {
-    "Specification": 5,
-    "User Manual": 1
+    "Patent": 1
   },
   "subtechniques": {
     "@context": {
@@ -2193,7 +1679,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -2209,7 +1695,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -2262,7 +1748,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -2305,7 +1791,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -2321,7 +1807,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -2374,7 +1860,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -2417,7 +1903,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -2433,7 +1919,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -2486,7 +1972,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -2529,7 +2015,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -2545,7 +2031,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -2598,7 +2084,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -2634,118 +2120,6 @@
             }
           }
         ]
-      ],
-      [
-        "Email Collection",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Hardware Inventory"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Asset Inventory"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Model"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Hardware Inventory"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "inventories"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Network Node"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Mail Server"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "accesses"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Remote Email Collection"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1114.002"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Email Collection"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Collection"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1114.002"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1114"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
-            }
-          }
-        ]
       ]
     ],
     "Command And Control": [
@@ -2755,7 +2129,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -2771,7 +2145,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -2824,7 +2198,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -2869,7 +2243,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -2885,7 +2259,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -2938,7 +2312,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -2981,7 +2355,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -2997,7 +2371,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -3050,7 +2424,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -3095,7 +2469,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -3111,7 +2485,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -3164,7 +2538,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -3207,7 +2581,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -3223,7 +2597,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -3276,7 +2650,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -3319,7 +2693,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -3335,7 +2709,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -3388,7 +2762,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -3431,7 +2805,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -3447,7 +2821,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -3500,7 +2874,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -3545,7 +2919,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -3561,7 +2935,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -3614,7 +2988,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -3657,7 +3031,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -3673,7 +3047,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -3726,7 +3100,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -3771,7 +3145,7 @@
           {
             "query_def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "top_def_tech_label": {
               "type": "literal",
@@ -3787,7 +3161,7 @@
             },
             "def_tech_label": {
               "type": "literal",
-              "value": "Hardware Inventory"
+              "value": "Hardware Component Inventory"
             },
             "def_artifact_rel_label": {
               "type": "literal",
@@ -3840,7 +3214,7 @@
             },
             "def_tech": {
               "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
             },
             "def_artifact_rel": {
               "type": "uri",
@@ -3873,227 +3247,6 @@
             "off_tactic": {
               "type": "uri",
               "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
-            }
-          }
-        ]
-      ]
-    ],
-    "Persistence": [
-      [
-        "Server Software Component",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Hardware Inventory"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Asset Inventory"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Model"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Hardware Inventory"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "inventories"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Network Node"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Mail Server"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "modifies"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Transport Agent"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1505.002"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Server Software Component"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Persistence"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.002"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-            }
-          },
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Hardware Inventory"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Asset Inventory"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Model"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Hardware Inventory"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "inventories"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Network Node"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Web Server"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "modifies"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Web Shell"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1505.003"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Server Software Component"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "false"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Persistence"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#WebServer"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.003"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
             }
           }
         ]

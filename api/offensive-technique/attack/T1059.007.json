@@ -397,11 +397,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "File Encryption"
+            "value": "Local File Permissions"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "encrypts"
+            "value": "restricts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -441,11 +441,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileEncryption"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalFilePermissions"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
           },
           "def_artifact": {
             "type": "uri",
@@ -496,11 +496,11 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Local File Permissions"
+            "value": "File Encryption"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "restricts"
+            "value": "encrypts"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -540,11 +540,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LocalFilePermissions"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#FileEncryption"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
           },
           "def_artifact": {
             "type": "uri",

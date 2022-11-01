@@ -383,9 +383,6 @@
             "@id": "d3f:Reference-Web-BasedEnterpriseManagement"
           },
           {
-            "@id": "d3f:Reference-AdvancedDeviceMatchingSystem"
-          },
-          {
             "@id": "d3f:Reference-IEEE-802_1AB-2016"
           },
           {
@@ -481,32 +478,6 @@
     },
     "@graph": [
       {
-        "@id": "d3f:Reference-AdvancedDeviceMatchingSystem",
-        "@type": [
-          "d3f:PatentReference",
-          "http://www.w3.org/2002/07/owl#NamedIndividual"
-        ],
-        "d3f:has-link": [
-          {
-            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-            "@value": "https://patents.google.com/patent/US10892951B2/"
-          },
-          {
-            "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-            "@value": " https://patents.google.com/patent/US10892951B2/"
-          }
-        ],
-        "d3f:kb-abstract": "Disclosed is a device management system for discovery and management of components added to computer systems and sub-systems. The device management system provides for recognizing a newly added component, and determining if the newly added component is already a part of the system inventory. The newly added component is matched with a component currently on the system, based on at least one matching attribute. A point total is calculated for each match level and a final match score is provided. The match score is compared with an aggressiveness level to determine if a match does indeed exist.",
-        "d3f:kb-author": "Rajneesh Jalan, Joseph M. Schmitt, and Marco Simoes",
-        "d3f:kb-organization": "Device42 Inc",
-        "d3f:kb-reference-of": {
-          "@id": "d3f:NetworkNodeInventory"
-        },
-        "d3f:kb-reference-title": "Advanced device matching system",
-        "d3f:reference-type-label": "Patent",
-        "rdfs:label": "Reference - Advanced device matching system"
-      },
-      {
         "@id": "d3f:Reference-IEEE-802_1AB-2016",
         "@type": [
           "d3f:SpecificationReference",
@@ -518,7 +489,7 @@
         },
         "d3f:kb-organization": "IEEE",
         "d3f:kb-reference-of": {
-          "@id": "d3f:HardwareInventory"
+          "@id": "d3f:HardwareComponentInventory"
         },
         "d3f:kb-reference-title": "IEEE Standard for Local and Metropolitan Area Networks - Station and Media Access Control Connectivity Discovery",
         "d3f:reference-type-label": "Specification",
@@ -538,10 +509,10 @@
         "d3f:kb-organization": "Qualys",
         "d3f:kb-reference-of": [
           {
-            "@id": "d3f:HardwareInventory"
+            "@id": "d3f:NetworkNodeInventory"
           },
           {
-            "@id": "d3f:NetworkNodeInventory"
+            "@id": "d3f:HardwareComponentInventory"
           }
         ],
         "d3f:kb-reference-title": "Qualys Network Passive Sensor Getting Started Guide",
@@ -561,7 +532,7 @@
         "d3f:kb-author": "D. Harrington, R. Presuhn, B. Wijnen",
         "d3f:kb-organization": "Internet Engineering Task Force (IETF)",
         "d3f:kb-reference-of": {
-          "@id": "d3f:HardwareInventory"
+          "@id": "d3f:HardwareComponentInventory"
         },
         "d3f:kb-reference-title": "An Architecture for Describing Simple Network Management Protocol (SNMP) Management Frameworks",
         "d3f:reference-type-label": "Specification",
@@ -583,13 +554,13 @@
             "@id": "d3f:ConfigurationInventory"
           },
           {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
             "@id": "d3f:SoftwareInventory"
           },
           {
             "@id": "d3f:NetworkNodeInventory"
+          },
+          {
+            "@id": "d3f:HardwareComponentInventory"
           }
         ],
         "d3f:kb-reference-title": "Web-Based Enterprise Management",
@@ -612,13 +583,13 @@
             "@id": "d3f:ConfigurationInventory"
           },
           {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
             "@id": "d3f:SoftwareInventory"
           },
           {
             "@id": "d3f:NetworkNodeInventory"
+          },
+          {
+            "@id": "d3f:HardwareComponentInventory"
           }
         ],
         "d3f:kb-reference-title": "Windows Management Infrastructure",
@@ -641,13 +612,13 @@
             "@id": "d3f:ConfigurationInventory"
           },
           {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
             "@id": "d3f:SoftwareInventory"
           },
           {
             "@id": "d3f:NetworkNodeInventory"
+          },
+          {
+            "@id": "d3f:HardwareComponentInventory"
           }
         ],
         "d3f:kb-reference-title": "Windows Management Instrumentation",
@@ -657,7 +628,6 @@
     ]
   },
   "references_meta": {
-    "Patent": 1,
     "Specification": 5,
     "User Manual": 1
   },

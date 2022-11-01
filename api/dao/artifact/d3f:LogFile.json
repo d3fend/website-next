@@ -185,6 +185,57 @@
         {
           "def_tactic_label": {
             "type": "literal",
+            "value": "Deceive"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Decoy Object"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Decoy File"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "spoofs"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "File"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Deceive"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyFile"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#spoofs"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
             "value": "Harden"
           },
           "def_tactic_rel_label": {
@@ -278,57 +329,6 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#File"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Deceive"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Decoy Object"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Decoy File"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "spoofs"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "File"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Deceive"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyFile"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#spoofs"
           },
           "def_artifact": {
             "type": "uri",

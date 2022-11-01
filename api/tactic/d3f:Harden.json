@@ -55,6 +55,15 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:ProcessSegmentExecutionPrevention"
+          },
+          {
+            "@id": "d3f:SegmentAddressOffsetRandomization"
+          },
+          {
+            "@id": "d3f:StackFrameCanaryValidation"
+          },
+          {
             "@id": "d3f:ApplicationConfigurationHardening"
           },
           {
@@ -65,15 +74,6 @@
           },
           {
             "@id": "d3f:PointerAuthentication"
-          },
-          {
-            "@id": "d3f:ProcessSegmentExecutionPrevention"
-          },
-          {
-            "@id": "d3f:SegmentAddressOffsetRandomization"
-          },
-          {
-            "@id": "d3f:StackFrameCanaryValidation"
           }
         ],
         "rdfs:label": "Application Hardening"
@@ -122,6 +122,12 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:StrongPasswordPolicy"
+          },
+          {
+            "@id": "d3f:UserAccountPermissions"
+          },
+          {
             "@id": "d3f:BiometricAuthentication"
           },
           {
@@ -141,12 +147,6 @@
           },
           {
             "@id": "d3f:One-timePassword"
-          },
-          {
-            "@id": "d3f:StrongPasswordPolicy"
-          },
-          {
-            "@id": "d3f:UserAccountPermissions"
           }
         ],
         "rdfs:label": "Credential Hardening"
@@ -251,13 +251,13 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:TransferAgentAuthentication"
+          },
+          {
             "@id": "d3f:MessageAuthentication"
           },
           {
             "@id": "d3f:MessageEncryption"
-          },
-          {
-            "@id": "d3f:TransferAgentAuthentication"
           }
         ],
         "rdfs:label": "Message Hardening"
@@ -292,6 +292,18 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:RFShielding"
+          },
+          {
+            "@id": "d3f:SoftwareUpdate"
+          },
+          {
+            "@id": "d3f:SystemConfigurationPermissions"
+          },
+          {
+            "@id": "d3f:TPMBootIntegrity"
+          },
+          {
             "@id": "d3f:BootloaderAuthentication"
           },
           {
@@ -305,18 +317,6 @@
           },
           {
             "@id": "d3f:LocalFilePermissions"
-          },
-          {
-            "@id": "d3f:RFShielding"
-          },
-          {
-            "@id": "d3f:SoftwareUpdate"
-          },
-          {
-            "@id": "d3f:SystemConfigurationPermissions"
-          },
-          {
-            "@id": "d3f:TPMBootIntegrity"
           }
         ],
         "rdfs:label": "Platform Hardening"

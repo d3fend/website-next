@@ -40,12 +40,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -72,8 +67,19 @@
             "@id": "d3f:Reference-UnifiedArchitectureFrameworkUAF"
           }
         ],
-        "d3f:maps": {
-          "@id": "d3f:Dependency"
+        "d3f:maps": [
+          {
+            "@id": "d3f:Organization"
+          },
+          {
+            "@id": "d3f:Person"
+          },
+          {
+            "@id": "d3f:Dependency"
+          }
+        ],
+        "d3f:may-map": {
+          "@id": "d3f:OrganizationalActivity"
         },
         "rdfs:label": "Organization Mapping",
         "rdfs:subClassOf": {
@@ -253,12 +259,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },

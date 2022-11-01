@@ -32,7 +32,329 @@
       ]
     },
     "results": {
-      "bindings": []
+      "bindings": [
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Active Logical Link Mapping"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Network Mapping"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Logical Link Mapping"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "maps"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Network Node"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Mail Server"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Remote Email Collection"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1114.002"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Email Collection"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Collection"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalLinkMapping"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#maps"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1114.002"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1114"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Active Logical Link Mapping"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Network Mapping"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Logical Link Mapping"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "maps"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Network Node"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Mail Server"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "modifies"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Transport Agent"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1505.002"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Server Software Component"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalLinkMapping"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#maps"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.002"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Active Logical Link Mapping"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Network Mapping"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Logical Link Mapping"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "maps"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Network Node"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Web Server"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "modifies"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Web Shell"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1505.003"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Server Software Component"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "false"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalLinkMapping"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#maps"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#WebServer"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.003"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        }
+      ]
     }
   },
   "description": {
@@ -149,6 +471,90 @@
           },
           "def_artifact_label": {
             "type": "literal",
+            "value": "Network"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalLinkMapping"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#maps"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Network"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Active Logical Link Mapping"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Network Mapping"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Logical Link Mapping"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "maps"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Network Node"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalLinkMapping"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#maps"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Active Logical Link Mapping"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Network Mapping"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Logical Link Mapping"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "maps"
+          },
+          "def_artifact_label": {
+            "type": "literal",
             "value": "Logical Link"
           },
           "def_tactic": {
@@ -232,5 +638,341 @@
     },
     "@graph": []
   },
-  "related_offensive_matrix": {}
+  "related_offensive_matrix": {
+    "Collection": [
+      [
+        "Email Collection",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Active Logical Link Mapping"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Network Mapping"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Model"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Logical Link Mapping"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "maps"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Network Node"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Mail Server"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "accesses"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Remote Email Collection"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1114.002"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Email Collection"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Collection"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalLinkMapping"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#maps"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1114.002"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1114"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
+            }
+          }
+        ]
+      ]
+    ],
+    "Persistence": [
+      [
+        "Server Software Component",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Active Logical Link Mapping"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Network Mapping"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Model"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Logical Link Mapping"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "maps"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Network Node"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Mail Server"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "modifies"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Transport Agent"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1505.002"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Server Software Component"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Persistence"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalLinkMapping"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#maps"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.002"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            }
+          },
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Active Logical Link Mapping"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Network Mapping"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Model"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Logical Link Mapping"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "maps"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Network Node"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Web Server"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "modifies"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Web Shell"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1505.003"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Server Software Component"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "false"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Persistence"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalLinkMapping"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#maps"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkNode"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#WebServer"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.003"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1505"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            }
+          }
+        ]
+      ]
+    ]
+  }
 }

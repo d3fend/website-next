@@ -8291,13 +8291,13 @@
             "@id": "d3f:ConfigurationInventory"
           },
           {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
             "@id": "d3f:SoftwareInventory"
           },
           {
             "@id": "d3f:NetworkNodeInventory"
+          },
+          {
+            "@id": "d3f:HardwareComponentInventory"
           }
         ],
         "d3f:kb-reference-title": "Web-Based Enterprise Management",
@@ -8320,13 +8320,13 @@
             "@id": "d3f:ConfigurationInventory"
           },
           {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
             "@id": "d3f:SoftwareInventory"
           },
           {
             "@id": "d3f:NetworkNodeInventory"
+          },
+          {
+            "@id": "d3f:HardwareComponentInventory"
           }
         ],
         "d3f:kb-reference-title": "Windows Management Infrastructure",
@@ -8349,13 +8349,13 @@
             "@id": "d3f:ConfigurationInventory"
           },
           {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
             "@id": "d3f:SoftwareInventory"
           },
           {
             "@id": "d3f:NetworkNodeInventory"
+          },
+          {
+            "@id": "d3f:HardwareComponentInventory"
           }
         ],
         "d3f:kb-reference-title": "Windows Management Instrumentation",

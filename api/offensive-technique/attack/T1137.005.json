@@ -650,105 +650,6 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Configuration Inventory"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "inventories"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Configuration Resource"
-          },
-          "sc": {
-            "type": "literal",
-            "value": "-<-"
-          },
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Application Configuration Database"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "modifies"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Outlook Rules"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Collection"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConfigurationInventory"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConfigurationResource"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ApplicationConfigurationDatabase"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1137.005"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1137.005"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Asset Inventory"
-          },
-          "def_tech_label": {
-            "type": "literal",
             "value": "Asset Vulnerability Enumeration"
           },
           "def_artifact_rel_label": {
@@ -880,7 +781,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Command And Control"
+            "value": "Collection"
           },
           "def_tactic": {
             "type": "uri",
@@ -924,7 +825,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Collection"
           }
         },
         {
@@ -1078,7 +979,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Credential Access"
+            "value": "Command And Control"
           },
           "def_tactic": {
             "type": "uri",
@@ -1122,7 +1023,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
           }
         },
         {
@@ -1276,7 +1177,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Defense Evasion"
+            "value": "Credential Access"
           },
           "def_tactic": {
             "type": "uri",
@@ -1320,7 +1221,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
           }
         },
         {
@@ -1474,7 +1375,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Discovery"
+            "value": "Defense Evasion"
           },
           "def_tactic": {
             "type": "uri",
@@ -1518,7 +1419,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
           }
         },
         {
@@ -1672,7 +1573,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Execution"
+            "value": "Discovery"
           },
           "def_tactic": {
             "type": "uri",
@@ -1716,7 +1617,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
           }
         },
         {
@@ -1870,7 +1771,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Exfiltration"
+            "value": "Execution"
           },
           "def_tactic": {
             "type": "uri",
@@ -1914,7 +1815,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
           }
         },
         {
@@ -2068,7 +1969,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Impact"
+            "value": "Exfiltration"
           },
           "def_tactic": {
             "type": "uri",
@@ -2112,7 +2013,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
           }
         },
         {
@@ -2266,7 +2167,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Initial Access"
+            "value": "Impact"
           },
           "def_tactic": {
             "type": "uri",
@@ -2310,7 +2211,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Impact"
           }
         },
         {
@@ -2464,7 +2365,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Lateral Movement"
+            "value": "Initial Access"
           },
           "def_tactic": {
             "type": "uri",
@@ -2508,7 +2409,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
           }
         },
         {
@@ -2662,7 +2563,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Persistence"
+            "value": "Lateral Movement"
           },
           "def_tactic": {
             "type": "uri",
@@ -2706,7 +2607,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
           }
         },
         {
@@ -2837,6 +2738,105 @@
           "def_artifact_label": {
             "type": "literal",
             "value": "Configuration Resource"
+          },
+          "sc": {
+            "type": "literal",
+            "value": "-<-"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Application Configuration Database"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "modifies"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Outlook Rules"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConfigurationInventory"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConfigurationResource"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ApplicationConfigurationDatabase"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1137.005"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1137.005"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Model"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Asset Inventory"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Asset Vulnerability Enumeration"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "evaluates"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Digital Artifact"
           },
           "sc": {
             "type": "literal",
@@ -2872,15 +2872,15 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConfigurationInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
           },
           "def_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConfigurationResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
           },
           "off_artifact": {
             "type": "uri",
@@ -2927,15 +2927,15 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Asset Vulnerability Enumeration"
+            "value": "Configuration Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "evaluates"
+            "value": "inventories"
           },
           "def_artifact_label": {
             "type": "literal",
-            "value": "Digital Artifact"
+            "value": "Configuration Resource"
           },
           "sc": {
             "type": "literal",
@@ -2971,15 +2971,15 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConfigurationInventory"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#evaluates"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"
           },
           "def_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ConfigurationResource"
           },
           "off_artifact": {
             "type": "uri",

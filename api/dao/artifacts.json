@@ -41,10 +41,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:TicketGrantingTicket"
+          "@id": "d3f:KerberosTicket"
         },
         {
-          "@id": "d3f:KerberosTicket"
+          "@id": "d3f:TicketGrantingTicket"
         }
       ],
       "rdfs:label": [
@@ -91,13 +91,13 @@
           "@id": "d3f:PasswordManager"
         },
         {
-          "@id": "d3f:ClientApplication"
-        },
-        {
           "@id": "d3f:ServiceApplication"
         },
         {
           "@id": "d3f:UserApplication"
+        },
+        {
+          "@id": "d3f:ClientApplication"
         }
       ],
       "rdfs:label": [
@@ -111,9 +111,6 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:ApplicationConfigurationDatabaseRecord"
-        },
-        {
           "@id": "d3f:ApplicationProcessConfiguration"
         },
         {
@@ -121,6 +118,9 @@
         },
         {
           "@id": "d3f:ProcessEnvironmentVariable"
+        },
+        {
+          "@id": "d3f:ApplicationConfigurationDatabaseRecord"
         }
       ],
       "rdfs:label": [
@@ -265,10 +265,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:PublicKey"
+          "@id": "d3f:PrivateKey"
         },
         {
-          "@id": "d3f:PrivateKey"
+          "@id": "d3f:PublicKey"
         }
       ],
       "rdfs:label": [
@@ -433,10 +433,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:Second-stageBootLoader"
+          "@id": "d3f:First-stageBootLoader"
         },
         {
-          "@id": "d3f:First-stageBootLoader"
+          "@id": "d3f:Second-stageBootLoader"
         }
       ],
       "rdfs:label": [
@@ -453,10 +453,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:BootSector"
+          "@id": "d3f:VolumeBootRecord"
         },
         {
-          "@id": "d3f:VolumeBootRecord"
+          "@id": "d3f:BootSector"
         }
       ],
       "rdfs:label": [
@@ -774,10 +774,10 @@
       "@id": "d3f:ConfigurationDatabaseRecord",
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:SystemConfigurationDatabaseRecord"
+          "@id": "d3f:ApplicationConfigurationDatabaseRecord"
         },
         {
-          "@id": "d3f:ApplicationConfigurationDatabaseRecord"
+          "@id": "d3f:SystemConfigurationDatabaseRecord"
         }
       ],
       "rdfs:label": [
@@ -823,9 +823,6 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:ConfigurationDatabase"
-        },
-        {
           "@id": "d3f:ConfigurationDatabaseRecord"
         },
         {
@@ -839,6 +836,9 @@
         },
         {
           "@id": "d3f:OperatingSystemConfiguration"
+        },
+        {
+          "@id": "d3f:ConfigurationDatabase"
         }
       ],
       "rdfs:label": [
@@ -921,16 +921,16 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:Password"
-        },
-        {
-          "@id": "d3f:SessionCookie"
-        },
-        {
           "@id": "d3f:AccessToken"
         },
         {
           "@id": "d3f:EncryptedCredential"
+        },
+        {
+          "@id": "d3f:Password"
+        },
+        {
+          "@id": "d3f:SessionCookie"
         }
       ],
       "rdfs:label": [
@@ -950,10 +950,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:SymmetricKey"
+          "@id": "d3f:AsymmetricKey"
         },
         {
-          "@id": "d3f:AsymmetricKey"
+          "@id": "d3f:SymmetricKey"
         }
       ],
       "rdfs:label": [
@@ -1034,13 +1034,13 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:CodeRepository"
+        },
+        {
           "@id": "d3f:PasswordDatabase"
         },
         {
           "@id": "d3f:SystemConfigurationDatabase"
-        },
-        {
-          "@id": "d3f:CodeRepository"
         }
       ],
       "rdfs:label": [
@@ -1136,10 +1136,10 @@
           "@id": "d3f:CodeAnalyzer"
         },
         {
-          "@id": "d3f:TestExecutionTool"
+          "@id": "d3f:VersionControlTool"
         },
         {
-          "@id": "d3f:VersionControlTool"
+          "@id": "d3f:TestExecutionTool"
         }
       ],
       "rdfs:label": [
@@ -1158,108 +1158,6 @@
         "An information-bearing artifact (object) that is, or is encoded to be used with, a digital computer system. This concept is broad to include the literal instances of an artifact, or an implicit summarization of changes to or properties of other artifacts."
       ],
       "rdfs:hasSubClass": [
-        {
-          "@id": "d3f:Pointer"
-        },
-        {
-          "@id": "d3f:Resource"
-        },
-        {
-          "@id": "d3f:Session"
-        },
-        {
-          "@id": "d3f:Software"
-        },
-        {
-          "@id": "d3f:StackComponent"
-        },
-        {
-          "@id": "d3f:Storage"
-        },
-        {
-          "@id": "d3f:SystemCall"
-        },
-        {
-          "@id": "d3f:TaskSchedule"
-        },
-        {
-          "@id": "d3f:BinaryLargeObject"
-        },
-        {
-          "@id": "d3f:BinarySegment"
-        },
-        {
-          "@id": "d3f:BootLoader"
-        },
-        {
-          "@id": "d3f:Command"
-        },
-        {
-          "@id": "d3f:Credential"
-        },
-        {
-          "@id": "d3f:CryptographicKey"
-        },
-        {
-          "@id": "d3f:Database"
-        },
-        {
-          "@id": "d3f:DigitalSystem"
-        },
-        {
-          "@id": "d3f:Directory"
-        },
-        {
-          "@id": "d3f:DNSLookup"
-        },
-        {
-          "@id": "d3f:FileSection"
-        },
-        {
-          "@id": "d3f:FileSystemLink"
-        },
-        {
-          "@id": "d3f:HardwareDevice"
-        },
-        {
-          "@id": "d3f:HardwareDriver"
-        },
-        {
-          "@id": "d3f:Identifier"
-        },
-        {
-          "@id": "d3f:InterprocessCommunication"
-        },
-        {
-          "@id": "d3f:Log"
-        },
-        {
-          "@id": "d3f:Metadata"
-        },
-        {
-          "@id": "d3f:Network"
-        },
-        {
-          "@id": "d3f:NetworkNode"
-        },
-        {
-          "@id": "d3f:NetworkTraffic"
-        },
-        {
-          "@id": "d3f:Process"
-        },
-        {
-          "@id": "d3f:ProcessImage"
-        },
-        {
-          "@id": "d3f:ProcessTree"
-        },
-        {
-          "@id": "d3f:Record"
-        },
-        {
-          "@id": "d3f:TrustStore"
-        },
         {
           "@id": "d3f:User"
         },
@@ -1288,10 +1186,19 @@
           "@id": "d3f:Link"
         },
         {
+          "@id": "d3f:BinaryLargeObject"
+        },
+        {
+          "@id": "d3f:BinarySegment"
+        },
+        {
           "@id": "d3f:Blob"
         },
         {
           "@id": "d3f:BlockDevice"
+        },
+        {
+          "@id": "d3f:BootLoader"
         },
         {
           "@id": "d3f:CallStack"
@@ -1303,10 +1210,31 @@
           "@id": "d3f:Clipboard"
         },
         {
+          "@id": "d3f:Command"
+        },
+        {
+          "@id": "d3f:Credential"
+        },
+        {
+          "@id": "d3f:CryptographicKey"
+        },
+        {
+          "@id": "d3f:Database"
+        },
+        {
           "@id": "d3f:DecoyArtifact"
         },
         {
+          "@id": "d3f:DigitalSystem"
+        },
+        {
+          "@id": "d3f:Directory"
+        },
+        {
           "@id": "d3f:DisplayServer"
+        },
+        {
+          "@id": "d3f:DNSLookup"
         },
         {
           "@id": "d3f:DomainRegistration"
@@ -1315,13 +1243,46 @@
           "@id": "d3f:Enclave"
         },
         {
+          "@id": "d3f:FileSection"
+        },
+        {
           "@id": "d3f:FileSystem"
+        },
+        {
+          "@id": "d3f:FileSystemLink"
+        },
+        {
+          "@id": "d3f:HardwareDevice"
+        },
+        {
+          "@id": "d3f:HardwareDriver"
+        },
+        {
+          "@id": "d3f:Identifier"
+        },
+        {
+          "@id": "d3f:InterprocessCommunication"
         },
         {
           "@id": "d3f:KernelProcessTable"
         },
         {
+          "@id": "d3f:Log"
+        },
+        {
+          "@id": "d3f:Metadata"
+        },
+        {
+          "@id": "d3f:Network"
+        },
+        {
           "@id": "d3f:NetworkFlow"
+        },
+        {
+          "@id": "d3f:NetworkNode"
+        },
+        {
+          "@id": "d3f:NetworkTraffic"
         },
         {
           "@id": "d3f:OperatingSystem"
@@ -1337,6 +1298,45 @@
         },
         {
           "@id": "d3f:Platform"
+        },
+        {
+          "@id": "d3f:Pointer"
+        },
+        {
+          "@id": "d3f:Process"
+        },
+        {
+          "@id": "d3f:ProcessImage"
+        },
+        {
+          "@id": "d3f:ProcessTree"
+        },
+        {
+          "@id": "d3f:Record"
+        },
+        {
+          "@id": "d3f:Resource"
+        },
+        {
+          "@id": "d3f:Session"
+        },
+        {
+          "@id": "d3f:Software"
+        },
+        {
+          "@id": "d3f:StackComponent"
+        },
+        {
+          "@id": "d3f:Storage"
+        },
+        {
+          "@id": "d3f:SystemCall"
+        },
+        {
+          "@id": "d3f:TaskSchedule"
+        },
+        {
+          "@id": "d3f:TrustStore"
         }
       ],
       "rdfs:label": [
@@ -1585,10 +1585,10 @@
           "@id": "d3f:UserStartupScriptFile"
         },
         {
-          "@id": "d3f:InitScript"
+          "@id": "d3f:WebScriptFile"
         },
         {
-          "@id": "d3f:WebScriptFile"
+          "@id": "d3f:InitScript"
         }
       ],
       "rdfs:label": [
@@ -1611,6 +1611,9 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:DatabaseFile"
+        },
+        {
           "@id": "d3f:ObjectFile"
         },
         {
@@ -1620,10 +1623,10 @@
           "@id": "d3f:NTFSLink"
         },
         {
-          "@id": "d3f:PasswordFile"
+          "@id": "d3f:SymbolicLink"
         },
         {
-          "@id": "d3f:SymbolicLink"
+          "@id": "d3f:ShortcutFile"
         },
         {
           "@id": "d3f:ArchiveFile"
@@ -1647,10 +1650,7 @@
           "@id": "d3f:LogFile"
         },
         {
-          "@id": "d3f:DatabaseFile"
-        },
-        {
-          "@id": "d3f:ShortcutFile"
+          "@id": "d3f:PasswordFile"
         }
       ],
       "rdfs:label": [
@@ -1670,10 +1670,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:ResourceFork"
+          "@id": "d3f:ImageSegment"
         },
         {
-          "@id": "d3f:ImageSegment"
+          "@id": "d3f:ResourceFork"
         }
       ],
       "rdfs:label": [
@@ -1708,16 +1708,16 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:NTFSLink"
-        },
-        {
-          "@id": "d3f:SymbolicLink"
+          "@id": "d3f:UnixLink"
         },
         {
           "@id": "d3f:HardLink"
         },
         {
-          "@id": "d3f:UnixLink"
+          "@id": "d3f:NTFSLink"
+        },
+        {
+          "@id": "d3f:SymbolicLink"
         }
       ],
       "rdfs:label": [
@@ -1786,10 +1786,10 @@
           "@id": "d3f:PeripheralFirmware"
         },
         {
-          "@id": "d3f:Microcode"
+          "@id": "d3f:SystemFirmware"
         },
         {
-          "@id": "d3f:SystemFirmware"
+          "@id": "d3f:Microcode"
         }
       ],
       "rdfs:label": [
@@ -1927,6 +1927,9 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:InputDevice"
+        },
+        {
           "@id": "d3f:OutputDevice"
         },
         {
@@ -1934,9 +1937,6 @@
         },
         {
           "@id": "d3f:SecurityToken"
-        },
-        {
-          "@id": "d3f:InputDevice"
         }
       ],
       "rdfs:label": [
@@ -2046,6 +2046,9 @@
           "@id": "d3f:FileHash"
         },
         {
+          "@id": "d3f:URL"
+        },
+        {
           "@id": "d3f:DomainName"
         },
         {
@@ -2053,9 +2056,6 @@
         },
         {
           "@id": "d3f:IPAddress"
-        },
-        {
-          "@id": "d3f:URL"
         }
       ],
       "rdfs:label": [
@@ -2145,10 +2145,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:InboundInternetMailTraffic"
+          "@id": "d3f:InboundInternetDNSResponseTraffic"
         },
         {
-          "@id": "d3f:InboundInternetDNSResponseTraffic"
+          "@id": "d3f:InboundInternetMailTraffic"
         }
       ],
       "rdfs:label": [
@@ -2535,10 +2535,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:StartupDirectory"
+          "@id": "d3f:InputDevice"
         },
         {
-          "@id": "d3f:InputDevice"
+          "@id": "d3f:StartupDirectory"
         },
         {
           "@id": "d3f:SystemConfigurationInitResource"
@@ -2810,13 +2810,13 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:NTFSHardLink"
+        },
+        {
           "@id": "d3f:NTFSJunctionPoint"
         },
         {
           "@id": "d3f:NTFSSymbolicLink"
-        },
-        {
-          "@id": "d3f:NTFSHardLink"
         }
       ],
       "rdfs:label": [
@@ -2839,6 +2839,9 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:WideAreaNetwork"
+        },
+        {
           "@id": "d3f:InternetNetwork"
         },
         {
@@ -2846,9 +2849,6 @@
         },
         {
           "@id": "d3f:LocalAreaNetwork"
-        },
-        {
-          "@id": "d3f:WideAreaNetwork"
         }
       ],
       "rdfs:label": [
@@ -2932,7 +2932,13 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:Switch"
+        },
+        {
           "@id": "d3f:WirelessAccessPoint"
+        },
+        {
+          "@id": "d3f:Router"
         },
         {
           "@id": "d3f:Firewall"
@@ -2948,12 +2954,6 @@
         },
         {
           "@id": "d3f:ProxyServer"
-        },
-        {
-          "@id": "d3f:Router"
-        },
-        {
-          "@id": "d3f:Switch"
         }
       ],
       "rdfs:label": [
@@ -3056,6 +3056,9 @@
           "@id": "d3f:WebNetworkTraffic"
         },
         {
+          "@id": "d3f:RPCNetworkTraffic"
+        },
+        {
           "@id": "d3f:AdministrativeNetworkTraffic"
         },
         {
@@ -3087,9 +3090,6 @@
         },
         {
           "@id": "d3f:OutboundNetworkTraffic"
-        },
-        {
-          "@id": "d3f:RPCNetworkTraffic"
         }
       ],
       "rdfs:label": [
@@ -3368,13 +3368,13 @@
           "@id": "d3f:OutboundInternetRPCTraffic"
         },
         {
-          "@id": "d3f:OutboundInternetWebTraffic"
-        },
-        {
           "@id": "d3f:OutboundInternetEncryptedTraffic"
         },
         {
           "@id": "d3f:OutboundInternetMailTraffic"
+        },
+        {
+          "@id": "d3f:OutboundInternetWebTraffic"
         }
       ],
       "rdfs:label": [
@@ -3496,13 +3496,13 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:SystemPasswordDatabase"
+        },
+        {
           "@id": "d3f:PasswordFile"
         },
         {
           "@id": "d3f:PasswordStore"
-        },
-        {
-          "@id": "d3f:SystemPasswordDatabase"
         }
       ],
       "rdfs:label": [
@@ -3727,6 +3727,9 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:StackSegment"
+        },
+        {
           "@id": "d3f:HeapSegment"
         },
         {
@@ -3734,9 +3737,6 @@
         },
         {
           "@id": "d3f:ProcessDataSegment"
-        },
-        {
-          "@id": "d3f:StackSegment"
         }
       ],
       "rdfs:label": [
@@ -3830,13 +3830,13 @@
           "@id": "d3f:ConfigurationDatabaseRecord"
         },
         {
+          "@id": "d3f:SystemUtilizationRecord"
+        },
+        {
           "@id": "d3f:BootRecord"
         },
         {
           "@id": "d3f:DNSRecord"
-        },
-        {
-          "@id": "d3f:SystemUtilizationRecord"
         }
       ],
       "rdfs:label": [
@@ -3937,13 +3937,13 @@
           "@id": "d3f:ConfigurationResource"
         },
         {
+          "@id": "d3f:RemoteResource"
+        },
+        {
           "@id": "d3f:File"
         },
         {
           "@id": "d3f:LocalResource"
-        },
-        {
-          "@id": "d3f:RemoteResource"
         }
       ],
       "rdfs:label": [
@@ -4033,9 +4033,6 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:ProxyServer"
-        },
-        {
           "@id": "d3f:VPNServer"
         },
         {
@@ -4067,6 +4064,9 @@
         },
         {
           "@id": "d3f:PrintServer"
+        },
+        {
+          "@id": "d3f:ProxyServer"
         }
       ],
       "rdfs:label": [
@@ -4079,6 +4079,15 @@
         "An application that provides a set of software functionalities so that multiple clients who can reuse the functionality, provided they are authorized for use of the service."
       ],
       "rdfs:hasSubClass": [
+        {
+          "@id": "d3f:WebServerApplication"
+        },
+        {
+          "@id": "d3f:SoftwareDeploymentTool"
+        },
+        {
+          "@id": "d3f:VirtualizationSoftware"
+        },
         {
           "@id": "d3f:AuthenticationService"
         },
@@ -4096,15 +4105,6 @@
         },
         {
           "@id": "d3f:MessageTransferAgent"
-        },
-        {
-          "@id": "d3f:WebServerApplication"
-        },
-        {
-          "@id": "d3f:SoftwareDeploymentTool"
-        },
-        {
-          "@id": "d3f:VirtualizationSoftware"
         }
       ],
       "rdfs:label": [
@@ -4260,10 +4260,7 @@
           "@id": "d3f:UtilitySoftware"
         },
         {
-          "@id": "d3f:Application"
-        },
-        {
-          "@id": "d3f:Firmware"
+          "@id": "d3f:CollectorAgent"
         },
         {
           "@id": "d3f:Shim"
@@ -4272,7 +4269,10 @@
           "@id": "d3f:SoftwarePatch"
         },
         {
-          "@id": "d3f:CollectorAgent"
+          "@id": "d3f:Application"
+        },
+        {
+          "@id": "d3f:Firmware"
         }
       ],
       "rdfs:label": [
@@ -4330,13 +4330,13 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:SavedInstructionPointer"
-        },
-        {
           "@id": "d3f:StackFrame"
         },
         {
           "@id": "d3f:StackFrameCanary"
+        },
+        {
+          "@id": "d3f:SavedInstructionPointer"
         }
       ],
       "rdfs:label": [
@@ -4421,10 +4421,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:ExceptionHandler"
+          "@id": "d3f:StoredProcedure"
         },
         {
-          "@id": "d3f:StoredProcedure"
+          "@id": "d3f:ExceptionHandler"
         }
       ],
       "rdfs:label": [
@@ -4450,13 +4450,13 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:FastSymbolicLink"
+        },
+        {
           "@id": "d3f:NTFSJunctionPoint"
         },
         {
           "@id": "d3f:NTFSSymbolicLink"
-        },
-        {
-          "@id": "d3f:FastSymbolicLink"
         },
         {
           "@id": "d3f:POSIXSymbolicLink"
@@ -4486,15 +4486,6 @@
         "A system call is the programmatic way in which a computer program requests a service from the kernel of the operating system it is executed on. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system."
       ],
       "rdfs:hasSubClass": [
-        {
-          "@id": "d3f:GetOpenSockets"
-        },
-        {
-          "@id": "d3f:GetRunningProcesses"
-        },
-        {
-          "@id": "d3f:GetScreenCapture"
-        },
         {
           "@id": "d3f:AuthenticateUser"
         },
@@ -4548,6 +4539,15 @@
         },
         {
           "@id": "d3f:SystemConfigSystemCall"
+        },
+        {
+          "@id": "d3f:GetOpenSockets"
+        },
+        {
+          "@id": "d3f:GetRunningProcesses"
+        },
+        {
+          "@id": "d3f:GetScreenCapture"
         }
       ],
       "rdfs:label": [
@@ -4705,13 +4705,13 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:TaskSchedulerSoftware"
+        },
+        {
           "@id": "d3f:LocalAuthenticationService"
         },
         {
           "@id": "d3f:LocalAuthorizationService"
-        },
-        {
-          "@id": "d3f:TaskSchedulerSoftware"
         }
       ],
       "rdfs:label": [
@@ -4893,6 +4893,9 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:UnixHardLink"
+        },
+        {
           "@id": "d3f:FastSymbolicLink"
         },
         {
@@ -4900,9 +4903,6 @@
         },
         {
           "@id": "d3f:SlowSymbolicLink"
-        },
-        {
-          "@id": "d3f:UnixHardLink"
         }
       ],
       "rdfs:label": [
@@ -4922,13 +4922,13 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:DomainUserAccount"
-        },
-        {
           "@id": "d3f:CloudUserAccount"
         },
         {
           "@id": "d3f:DefaultUserAccount"
+        },
+        {
+          "@id": "d3f:DomainUserAccount"
         },
         {
           "@id": "d3f:LocalUserAccount"
@@ -4968,19 +4968,19 @@
       ],
       "rdfs:hasSubClass": [
         {
+          "@id": "d3f:DeveloperApplication"
+        },
+        {
           "@id": "d3f:OfficeApplication"
+        },
+        {
+          "@id": "d3f:CollaborativeSoftware"
         },
         {
           "@id": "d3f:Browser"
         },
         {
           "@id": "d3f:BrowserExtension"
-        },
-        {
-          "@id": "d3f:CollaborativeSoftware"
-        },
-        {
-          "@id": "d3f:DeveloperApplication"
         }
       ],
       "rdfs:label": [
@@ -5209,10 +5209,10 @@
       ],
       "rdfs:hasSubClass": [
         {
-          "@id": "d3f:IntranetWebNetworkTraffic"
+          "@id": "d3f:OutboundInternetWebTraffic"
         },
         {
-          "@id": "d3f:OutboundInternetWebTraffic"
+          "@id": "d3f:IntranetWebNetworkTraffic"
         }
       ],
       "rdfs:label": [

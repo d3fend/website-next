@@ -1880,13 +1880,13 @@
         "@id": "d3f:SystemConfigurationInitResource",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:SystemStartupDirectory"
-          },
-          {
             "@id": "d3f:SystemConfigurationInitDatabaseRecord"
           },
           {
             "@id": "d3f:SystemInitScript"
+          },
+          {
+            "@id": "d3f:SystemStartupDirectory"
           }
         ],
         "rdfs:label": "System Configuration Init Resource"
@@ -1895,13 +1895,13 @@
         "@id": "d3f:SystemInitConfiguration",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:SystemStartupDirectory"
-          },
-          {
             "@id": "d3f:SystemConfigurationInitDatabaseRecord"
           },
           {
             "@id": "d3f:SystemInitScript"
+          },
+          {
+            "@id": "d3f:SystemStartupDirectory"
           }
         ],
         "rdfs:label": "System Init Configuration"
@@ -1955,12 +1955,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -1992,12 +1987,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {

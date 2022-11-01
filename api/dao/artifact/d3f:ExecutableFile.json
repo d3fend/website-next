@@ -2577,7 +2577,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Isolate"
+            "value": "Detect"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -2590,15 +2590,15 @@
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "Execution Isolation"
+            "value": "File Analysis"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Executable Allowlisting"
+            "value": "Dynamic Analysis"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "blocks"
+            "value": "analyzes"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -2606,7 +2606,7 @@
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -2614,62 +2614,11 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Isolate"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Execution Isolation"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Executable Denylisting"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "blocks"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Executable File"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
           },
           "def_artifact": {
             "type": "uri",
@@ -2730,7 +2679,7 @@
         {
           "def_tactic_label": {
             "type": "literal",
-            "value": "Detect"
+            "value": "Isolate"
           },
           "def_tactic_rel_label": {
             "type": "literal",
@@ -2743,15 +2692,15 @@
           },
           "def_tech_parent_label": {
             "type": "literal",
-            "value": "File Analysis"
+            "value": "Execution Isolation"
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Dynamic Analysis"
+            "value": "Executable Denylisting"
           },
           "def_artifact_rel_label": {
             "type": "literal",
-            "value": "analyzes"
+            "value": "blocks"
           },
           "def_artifact_label": {
             "type": "literal",
@@ -2759,7 +2708,7 @@
           },
           "def_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
           },
           "def_tactic_rel": {
             "type": "uri",
@@ -2767,11 +2716,62 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting"
           },
           "def_artifact_rel": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Isolate"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Execution Isolation"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Executable Allowlisting"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "blocks"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Executable File"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Isolate"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#blocks"
           },
           "def_artifact": {
             "type": "uri",
@@ -3033,13 +3033,13 @@
             "@id": "d3f:UserInitScript"
           },
           {
+            "@id": "d3f:WebScriptFile"
+          },
+          {
             "@id": "d3f:SystemInitScript"
           },
           {
             "@id": "d3f:UserStartupScriptFile"
-          },
-          {
-            "@id": "d3f:WebScriptFile"
           }
         ],
         "rdfs:label": "Executable Script"

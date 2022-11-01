@@ -396,7 +396,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Executable Denylisting"
+            "value": "Executable Allowlisting"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -416,7 +416,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -447,7 +447,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Executable Allowlisting"
+            "value": "Executable Denylisting"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -467,7 +467,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableDenylisting"
           },
           "def_artifact_rel": {
             "type": "uri",

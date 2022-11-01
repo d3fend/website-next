@@ -984,10 +984,10 @@
             "@id": "d3f:UserInitScript"
           },
           {
-            "@id": "d3f:UserInitConfigurationFile"
+            "@id": "d3f:UserStartupScriptFile"
           },
           {
-            "@id": "d3f:UserStartupScriptFile"
+            "@id": "d3f:UserInitConfigurationFile"
           }
         ],
         "rdfs:label": "User Logon Init Resource"

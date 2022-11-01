@@ -2553,7 +2553,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Network Resource"
+            "value": "Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -2593,7 +2593,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -2652,7 +2652,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Resource"
+            "value": "Network Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -2692,7 +2692,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -2850,7 +2850,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Network Resource"
+            "value": "Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -2890,7 +2890,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -2949,7 +2949,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Resource"
+            "value": "Network Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -2989,7 +2989,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -3147,7 +3147,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Network Resource"
+            "value": "Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -3187,7 +3187,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -3246,7 +3246,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Resource"
+            "value": "Network Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -3286,7 +3286,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -3444,7 +3444,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Network Resource"
+            "value": "Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -3484,7 +3484,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -3543,7 +3543,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Resource"
+            "value": "Network Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -3583,7 +3583,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -3741,7 +3741,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Network Resource"
+            "value": "Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -3781,7 +3781,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -3840,7 +3840,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Resource"
+            "value": "Network Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -3880,7 +3880,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -4038,7 +4038,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Network Resource"
+            "value": "Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -4078,7 +4078,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -4137,7 +4137,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Resource"
+            "value": "Network Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -4177,7 +4177,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -4335,7 +4335,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Network Resource"
+            "value": "Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -4375,7 +4375,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -4434,7 +4434,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Resource"
+            "value": "Network Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -4474,7 +4474,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -4632,7 +4632,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Network Resource"
+            "value": "Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -4672,7 +4672,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
           },
           "off_artifact_rel": {
             "type": "uri",
@@ -4731,7 +4731,7 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Resource"
+            "value": "Network Resource"
           },
           "off_artifact_rel_label": {
             "type": "literal",
@@ -4771,7 +4771,7 @@
           },
           "off_artifact": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Resource"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkResource"
           },
           "off_artifact_rel": {
             "type": "uri",

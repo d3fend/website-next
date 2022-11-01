@@ -210,7 +210,10 @@
       "@id": "d3f:DataExchangeMapping",
       "@type": "owl:Class",
       "d3f:d3fend-id": "D3-DEM",
-      "d3f:synonym": "Information Exchange Mapping",
+      "d3f:synonym": [
+        "Information Exchange Mapping",
+        "Data Flow Mapping"
+      ],
       "rdfs:label": "Data Exchange Mapping"
     },
     {
@@ -464,14 +467,14 @@
       "rdfs:label": "Hardware-based Process Isolation"
     },
     {
-      "@id": "d3f:HardwareInventory",
+      "@id": "d3f:HardwareComponentInventory",
       "@type": "owl:Class",
-      "d3f:d3fend-id": "D3-HWI",
+      "d3f:d3fend-id": "D3-HCI",
       "d3f:synonym": [
-        "Hardware Discovery",
-        "Hardware Inventorying"
+        "Hardware Component Discovery",
+        "Hardware Component Inventorying"
       ],
-      "rdfs:label": "Hardware Inventory"
+      "rdfs:label": "Hardware Component Inventory"
     },
     {
       "@id": "d3f:HierarchicalDomainDenylisting",

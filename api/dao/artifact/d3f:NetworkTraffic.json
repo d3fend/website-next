@@ -28,52 +28,6 @@
           },
           "off_tech_label": {
             "type": "literal",
-            "value": "Remote Service Session Hijacking"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1563"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Lateral Movement"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AdministrativeNetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1563"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Administrative Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "produces"
-          },
-          "off_tech_label": {
-            "type": "literal",
             "value": "Remote Desktop Protocol"
           },
           "off_tech_id": {
@@ -145,6 +99,52 @@
           "off_tech": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1021.004"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#LateralMovement"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Administrative Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "produces"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Remote Service Session Hijacking"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1563"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Lateral Movement"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#AdministrativeNetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1563"
           },
           "off_tactic_rel": {
             "type": "uri",
@@ -764,98 +764,6 @@
           },
           "off_tech_label": {
             "type": "literal",
-            "value": "Accessibility Features"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1546.008"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetAdministrativeNetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-create"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.008"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Intranet Administrative Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-create"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Accessibility Features"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1546.008"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Privilege Escalation"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetAdministrativeNetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-create"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.008"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Intranet Administrative Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-create"
-          },
-          "off_tech_label": {
-            "type": "literal",
             "value": "Password Spraying"
           },
           "off_tech_id": {
@@ -944,6 +852,144 @@
           },
           "off_artifact_rel_label": {
             "type": "literal",
+            "value": "may-create"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Accessibility Features"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1546.008"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetAdministrativeNetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-create"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.008"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Intranet Administrative Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "may-create"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Accessibility Features"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1546.008"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Privilege Escalation"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetAdministrativeNetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-create"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.008"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Intranet Administrative Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "produces"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "DCSync"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1003.006"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Credential Access"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetAdministrativeNetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1003.006"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Intranet Administrative Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
             "value": "produces"
           },
           "off_tech_label": {
@@ -994,11 +1040,11 @@
           },
           "off_tech_label": {
             "type": "literal",
-            "value": "DCSync"
+            "value": "Additional Azure Service Principal Credentials"
           },
           "off_tech_id": {
             "type": "literal",
-            "value": "T1003.006"
+            "value": "T1098.001"
           },
           "off_tactic_rel_label": {
             "type": "literal",
@@ -1006,7 +1052,7 @@
           },
           "off_tactic_label": {
             "type": "literal",
-            "value": "Credential Access"
+            "value": "Persistence"
           },
           "off_artifact": {
             "type": "uri",
@@ -1018,7 +1064,7 @@
           },
           "off_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1003.006"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1098.001"
           },
           "off_tactic_rel": {
             "type": "uri",
@@ -1026,7 +1072,7 @@
           },
           "off_tactic": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
           }
         },
         {
@@ -1119,52 +1165,6 @@
           "off_tactic": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PrivilegeEscalation"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Intranet Administrative Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "produces"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Additional Azure Service Principal Credentials"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1098.001"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetAdministrativeNetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1098.001"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
           }
         },
         {
@@ -1822,98 +1822,6 @@
           },
           "off_tech_label": {
             "type": "literal",
-            "value": "CMSTP"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1218.003"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Defense Evasion"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-produce"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-produce"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "CMSTP"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1218.003"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Execution"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-produce"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "may-produce"
-          },
-          "off_tech_label": {
-            "type": "literal",
             "value": "Application Access Token"
           },
           "off_tech_id": {
@@ -2002,6 +1910,98 @@
           },
           "off_artifact_rel_label": {
             "type": "literal",
+            "value": "may-produce"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "CMSTP"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1218.003"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Defense Evasion"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-produce"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "may-produce"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "CMSTP"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1218.003"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Execution"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#may-produce"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Execution"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
             "value": "produces"
           },
           "off_tech_label": {
@@ -2039,6 +2039,52 @@
           "off_tactic": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "produces"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Traffic Signaling"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1205"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Persistence"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1205"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
           }
         },
         {
@@ -2236,52 +2282,6 @@
           },
           "off_tech_label": {
             "type": "literal",
-            "value": "Traffic Signaling"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1205"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Persistence"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1205"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Persistence"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "produces"
-          },
-          "off_tech_label": {
-            "type": "literal",
             "value": "Port Knocking"
           },
           "off_tech_id": {
@@ -2420,52 +2420,6 @@
           },
           "off_tech_label": {
             "type": "literal",
-            "value": "Dynamic Resolution"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1568"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Command And Control"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetDNSLookupTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1568"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Outbound Internet DNS Lookup Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "produces"
-          },
-          "off_tech_label": {
-            "type": "literal",
             "value": "DNS"
           },
           "off_tech_id": {
@@ -2491,6 +2445,52 @@
           "off_tech": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1071.004"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Outbound Internet DNS Lookup Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "produces"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Dynamic Resolution"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1568"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Command And Control"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetDNSLookupTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1568"
           },
           "off_tactic_rel": {
             "type": "uri",
@@ -2650,52 +2650,6 @@
           },
           "off_tech_label": {
             "type": "literal",
-            "value": "Encrypted Channel"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1573"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Command And Control"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetEncryptedTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1573"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Outbound Internet Encrypted Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "produces"
-          },
-          "off_tech_label": {
-            "type": "literal",
             "value": "Exfiltration Over Symmetric Encrypted Non-C2 Protocol"
           },
           "off_tech_id": {
@@ -2775,6 +2729,52 @@
           "off_tactic": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Outbound Internet Encrypted Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "produces"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Encrypted Channel"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1573"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Command And Control"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetEncryptedTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1573"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
           }
         },
         {
@@ -3340,6 +3340,52 @@
           },
           "off_tech_label": {
             "type": "literal",
+            "value": "Drive-by Compromise"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1189"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Initial Access"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetNetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1189"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Outbound Internet Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "produces"
+          },
+          "off_tech_label": {
+            "type": "literal",
             "value": "Remote Access Software"
           },
           "off_tech_id": {
@@ -3373,6 +3419,52 @@
           "off_tactic": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
+          }
+        },
+        {
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Outbound Internet Network Traffic"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "produces"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1048.003"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Exfiltration"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetNetworkTraffic"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1048.003"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
           }
         },
         {
@@ -3465,98 +3557,6 @@
           "off_tactic": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CommandAndControl"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Outbound Internet Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "produces"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Drive-by Compromise"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1189"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Initial Access"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetNetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1189"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#InitialAccess"
-          }
-        },
-        {
-          "off_artifact_label": {
-            "type": "literal",
-            "value": "Outbound Internet Network Traffic"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "produces"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1048.003"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Exfiltration"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetNetworkTraffic"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#produces"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1048.003"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Exfiltration"
           }
         },
         {
@@ -4765,7 +4765,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Protocol Metadata Anomaly Detection"
+            "value": "Client-server Payload Profiling"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -4785,58 +4785,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProtocolMetadataAnomalyDetection"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Detect"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Network Traffic Analysis"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Remote Terminal Session Detection"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "analyzes"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#RemoteTerminalSessionDetection"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Client-serverPayloadProfiling"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -4969,7 +4918,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Client-server Payload Profiling"
+            "value": "Protocol Metadata Anomaly Detection"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -4989,7 +4938,58 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Client-serverPayloadProfiling"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ProtocolMetadataAnomalyDetection"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
+          }
+        },
+        {
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Detect"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "def_tech_parent_label": {
+            "type": "literal",
+            "value": "Network Traffic Analysis"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Remote Terminal Session Detection"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "analyzes"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Network Traffic"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#RemoteTerminalSessionDetection"
           },
           "def_artifact_rel": {
             "type": "uri",
@@ -5045,57 +5045,6 @@
           "def_artifact_rel": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"
-          }
-        },
-        {
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Model"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "false"
-          },
-          "def_tech_parent_label": {
-            "type": "literal",
-            "value": "Logical Link Mapping"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Passive Logical Link Mapping"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "monitors"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Network Traffic"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Model"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#PassiveLogicalLinkMapping"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#monitors"
           },
           "def_artifact": {
             "type": "uri",
@@ -5467,7 +5416,12 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#"
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "children": {
+        "@id": "d3f:child",
+        "@type": "@id",
+        "@container": "@set"
+      }
     },
     "@graph": [
       {
@@ -5495,10 +5449,10 @@
         "@id": "d3f:FileTransferNetworkTraffic",
         "rdfs:hasSubClass": [
           {
-            "@id": "d3f:OutboundInternetFileTransferTraffic"
+            "@id": "d3f:IntranetFileTransferTraffic"
           },
           {
-            "@id": "d3f:IntranetFileTransferTraffic"
+            "@id": "d3f:OutboundInternetFileTransferTraffic"
           }
         ],
         "rdfs:label": "File Transfer Network Traffic"
@@ -5631,10 +5585,10 @@
             "@id": "d3f:OutboundNetworkTraffic"
           },
           {
-            "@id": "d3f:RPCNetworkTraffic"
+            "@id": "d3f:NetworkSession"
           },
           {
-            "@id": "d3f:NetworkSession"
+            "@id": "d3f:RPCNetworkTraffic"
           }
         ],
         "rdfs:label": "Network Traffic"
@@ -5681,10 +5635,10 @@
             "@id": "d3f:OutboundInternetWebTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetFileTransferTraffic"
+            "@id": "d3f:OutboundInternetDNSLookupTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetDNSLookupTraffic"
+            "@id": "d3f:OutboundInternetFileTransferTraffic"
           },
           {
             "@id": "d3f:OutboundInternetMailTraffic"
@@ -5706,10 +5660,10 @@
             "@id": "d3f:OutboundInternetNetworkTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetFileTransferTraffic"
+            "@id": "d3f:OutboundInternetDNSLookupTraffic"
           },
           {
-            "@id": "d3f:OutboundInternetDNSLookupTraffic"
+            "@id": "d3f:OutboundInternetFileTransferTraffic"
           }
         ],
         "rdfs:label": "Outbound Network Traffic"

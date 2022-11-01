@@ -83,9 +83,6 @@
             "@id": "d3f:DataInventory"
           },
           {
-            "@id": "d3f:HardwareInventory"
-          },
-          {
             "@id": "d3f:SoftwareInventory"
           },
           {
@@ -93,6 +90,9 @@
           },
           {
             "@id": "d3f:NetworkNodeInventory"
+          },
+          {
+            "@id": "d3f:HardwareComponentInventory"
           }
         ],
         "rdfs:label": "Asset Inventory"
@@ -118,8 +118,11 @@
       {
         "@id": "d3f:DataExchangeMapping",
         "d3f:d3fend-id": "D3-DEM",
-        "d3f:definition": "Information exchange mapping identifies and models the organization's intended design for the exchange of the data types, formats, and volumes between systems at the application layer.",
-        "d3f:synonym": "Information Exchange Mapping",
+        "d3f:definition": "Data exchange mapping identifies and models the organization's intended design for the flows of the data types, formats, and volumes between systems at the application layer.",
+        "d3f:synonym": [
+          "Information Exchange Mapping",
+          "Data Flow Mapping"
+        ],
         "rdfs:label": "Data Exchange Mapping",
         "rdfs:subClassOf": {
           "@id": "d3f:SystemMapping"
@@ -139,14 +142,14 @@
         }
       },
       {
-        "@id": "d3f:HardwareInventory",
-        "d3f:d3fend-id": "D3-HWI",
-        "d3f:definition": "Hardware inventorying identifies and records the hardware items in the organization's architecture.",
+        "@id": "d3f:HardwareComponentInventory",
+        "d3f:d3fend-id": "D3-HCI",
+        "d3f:definition": "Hardware component inventorying identifies and records the hardware items in the organization's architecture.",
         "d3f:synonym": [
-          "Hardware Discovery",
-          "Hardware Inventorying"
+          "Hardware Component Discovery",
+          "Hardware Component Inventorying"
         ],
-        "rdfs:label": "Hardware Inventory",
+        "rdfs:label": "Hardware Component Inventory",
         "rdfs:subClassOf": {
           "@id": "d3f:AssetInventory"
         }
@@ -167,7 +170,19 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:ActivePhysicalLinkMapping"
+          },
+          {
+            "@id": "d3f:PassivePhysicalLinkMapping"
+          },
+          {
             "@id": "d3f:LogicalLinkMapping"
+          },
+          {
+            "@id": "d3f:ActiveLogicalLinkMapping"
+          },
+          {
+            "@id": "d3f:PassiveLogicalLinkMapping"
           },
           {
             "@id": "d3f:NetworkVulnerabilityAssessment"
@@ -177,18 +192,6 @@
           },
           {
             "@id": "d3f:NetworkTrafficPolicyMapping"
-          },
-          {
-            "@id": "d3f:ActiveLogicalLinkMapping"
-          },
-          {
-            "@id": "d3f:ActivePhysicalLinkMapping"
-          },
-          {
-            "@id": "d3f:PassiveLogicalLinkMapping"
-          },
-          {
-            "@id": "d3f:PassivePhysicalLinkMapping"
           }
         ],
         "rdfs:label": "Network Mapping"

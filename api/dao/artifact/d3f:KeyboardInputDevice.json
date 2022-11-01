@@ -202,7 +202,7 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "Hardware Inventory"
+            "value": "Hardware Component Inventory"
           },
           "def_artifact_rel_label": {
             "type": "literal",
@@ -222,7 +222,7 @@
           },
           "def_tech": {
             "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareInventory"
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory"
           },
           "def_artifact_rel": {
             "type": "uri",

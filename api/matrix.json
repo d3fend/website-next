@@ -60,7 +60,7 @@
           {
             "@id": "d3f:DataExchangeMapping",
             "d3f:d3fend-id": "D3-DEM",
-            "d3f:definition": "Information exchange mapping identifies and models the organization's intended design for the exchange of the data types, formats, and volumes between systems at the application layer.",
+            "d3f:definition": "Data exchange mapping identifies and models the organization's intended design for the flows of the data types, formats, and volumes between systems at the application layer.",
             "d3f:ref-count": {
               "@type": "http://www.w3.org/2001/XMLSchema#integer",
               "@value": "3"
@@ -126,16 +126,6 @@
             "rdfs:label": "Data Inventory"
           },
           {
-            "@id": "d3f:HardwareInventory",
-            "d3f:d3fend-id": "D3-HWI",
-            "d3f:definition": "Hardware inventorying identifies and records the hardware items in the organization's architecture.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "6"
-            },
-            "rdfs:label": "Hardware Inventory"
-          },
-          {
             "@id": "d3f:SoftwareInventory",
             "d3f:d3fend-id": "D3-SWI",
             "d3f:definition": "Software inventorying identifies and records the software items in the organization's architecture.",
@@ -161,9 +151,19 @@
             "d3f:definition": "Network node inventorying identifies and records all the network nodes (hosts, routers, switches, firewalls, etc.) in the organization's architecture.",
             "d3f:ref-count": {
               "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "7"
+              "@value": "6"
             },
             "rdfs:label": "Network Node Inventory"
+          },
+          {
+            "@id": "d3f:HardwareComponentInventory",
+            "d3f:d3fend-id": "D3-HCI",
+            "d3f:definition": "Hardware component inventorying identifies and records the hardware items in the organization's architecture.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "1"
+            },
+            "rdfs:label": "Hardware Component Inventory"
           }
         ],
         "d3f:d3fend-id": "D3-AI",
@@ -596,6 +596,86 @@
   {
     "@id": "d3f:Detect",
     "children": [
+      {
+        "@id": "d3f:IdentifierAnalysis",
+        "children": [
+          {
+            "@id": "d3f:HomoglyphDetection",
+            "d3f:d3fend-id": "D3-HD",
+            "d3f:definition": "Comparing strings using a variety of techniques to determine if a deceptive or malicious string is being presented to a user.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "2"
+            },
+            "rdfs:label": "Homoglyph Detection"
+          },
+          {
+            "@id": "d3f:URLAnalysis",
+            "d3f:d3fend-id": "D3-UA",
+            "d3f:definition": "Determining if a URL is benign or malicious by analyzing the URL or its components.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "2"
+            },
+            "rdfs:label": "URL Analysis"
+          },
+          {
+            "@id": "d3f:IdentifierReputationAnalysis",
+            "children": [
+              {
+                "@id": "d3f:DomainNameReputationAnalysis",
+                "d3f:d3fend-id": "D3-DNRA",
+                "d3f:definition": "Analyzing the reputation of a domain name.",
+                "d3f:ref-count": {
+                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                  "@value": "2"
+                },
+                "rdfs:label": "Domain Name Reputation Analysis"
+              },
+              {
+                "@id": "d3f:FileHashReputationAnalysis",
+                "d3f:d3fend-id": "D3-FHRA",
+                "d3f:definition": "Analyzing the reputation of a file hash.",
+                "d3f:ref-count": {
+                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                  "@value": "1"
+                },
+                "rdfs:label": "File Hash Reputation Analysis"
+              },
+              {
+                "@id": "d3f:IPReputationAnalysis",
+                "d3f:d3fend-id": "D3-IPRA",
+                "d3f:definition": "Analyzing the reputation of an IP address.",
+                "d3f:ref-count": {
+                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                  "@value": "2"
+                },
+                "rdfs:label": "IP Reputation Analysis"
+              },
+              {
+                "@id": "d3f:URLReputationAnalysis",
+                "d3f:d3fend-id": "D3-URA",
+                "d3f:definition": "Analyzing the reputation of a URL.",
+                "d3f:ref-count": {
+                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
+                  "@value": "1"
+                },
+                "rdfs:label": "URL Reputation Analysis"
+              }
+            ],
+            "d3f:d3fend-id": "D3-IRA",
+            "d3f:definition": "Analyzing the reputation of an identifier.",
+            "d3f:ref-count": {
+              "@type": "http://www.w3.org/2001/XMLSchema#integer",
+              "@value": "1"
+            },
+            "rdfs:label": "Identifier Reputation Analysis"
+          }
+        ],
+        "d3f:d3fend-id": "D3-ID",
+        "d3f:definition": "Analyzing identifier artifacts such as IP address, domain names, or URL(I)s.",
+        "rdfs:label": "Identifier Analysis"
+      },
       {
         "@id": "d3f:NetworkTrafficAnalysis",
         "children": [
@@ -1109,86 +1189,6 @@
         "d3f:d3fend-id": "D3-PM",
         "d3f:definition": "Monitoring platform components such as operating systems software, hardware devices, or firmware.",
         "rdfs:label": "Platform Monitoring"
-      },
-      {
-        "@id": "d3f:IdentifierAnalysis",
-        "children": [
-          {
-            "@id": "d3f:HomoglyphDetection",
-            "d3f:d3fend-id": "D3-HD",
-            "d3f:definition": "Comparing strings using a variety of techniques to determine if a deceptive or malicious string is being presented to a user.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "2"
-            },
-            "rdfs:label": "Homoglyph Detection"
-          },
-          {
-            "@id": "d3f:URLAnalysis",
-            "d3f:d3fend-id": "D3-UA",
-            "d3f:definition": "Determining if a URL is benign or malicious by analyzing the URL or its components.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "2"
-            },
-            "rdfs:label": "URL Analysis"
-          },
-          {
-            "@id": "d3f:IdentifierReputationAnalysis",
-            "children": [
-              {
-                "@id": "d3f:DomainNameReputationAnalysis",
-                "d3f:d3fend-id": "D3-DNRA",
-                "d3f:definition": "Analyzing the reputation of a domain name.",
-                "d3f:ref-count": {
-                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "2"
-                },
-                "rdfs:label": "Domain Name Reputation Analysis"
-              },
-              {
-                "@id": "d3f:FileHashReputationAnalysis",
-                "d3f:d3fend-id": "D3-FHRA",
-                "d3f:definition": "Analyzing the reputation of a file hash.",
-                "d3f:ref-count": {
-                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "1"
-                },
-                "rdfs:label": "File Hash Reputation Analysis"
-              },
-              {
-                "@id": "d3f:IPReputationAnalysis",
-                "d3f:d3fend-id": "D3-IPRA",
-                "d3f:definition": "Analyzing the reputation of an IP address.",
-                "d3f:ref-count": {
-                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "2"
-                },
-                "rdfs:label": "IP Reputation Analysis"
-              },
-              {
-                "@id": "d3f:URLReputationAnalysis",
-                "d3f:d3fend-id": "D3-URA",
-                "d3f:definition": "Analyzing the reputation of a URL.",
-                "d3f:ref-count": {
-                  "@type": "http://www.w3.org/2001/XMLSchema#integer",
-                  "@value": "1"
-                },
-                "rdfs:label": "URL Reputation Analysis"
-              }
-            ],
-            "d3f:d3fend-id": "D3-IRA",
-            "d3f:definition": "Analyzing the reputation of an identifier.",
-            "d3f:ref-count": {
-              "@type": "http://www.w3.org/2001/XMLSchema#integer",
-              "@value": "1"
-            },
-            "rdfs:label": "Identifier Reputation Analysis"
-          }
-        ],
-        "d3f:d3fend-id": "D3-ID",
-        "d3f:definition": "Analyzing identifier artifacts such as IP address, domain names, or URL(I)s.",
-        "rdfs:label": "Identifier Analysis"
       },
       {
         "@id": "d3f:MessageAnalysis",

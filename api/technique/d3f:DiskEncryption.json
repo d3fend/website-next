@@ -64,113 +64,6 @@
           },
           "off_artifact_label": {
             "type": "literal",
-            "value": "Cloud Storage"
-          },
-          "off_artifact_rel_label": {
-            "type": "literal",
-            "value": "accesses"
-          },
-          "off_tech_label": {
-            "type": "literal",
-            "value": "Cloud Storage Object Discovery"
-          },
-          "off_tech_id": {
-            "type": "literal",
-            "value": "T1619"
-          },
-          "off_tech_parent_label": {
-            "type": "literal",
-            "value": "Discovery Technique"
-          },
-          "off_tech_parent_is_toplevel": {
-            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-            "type": "literal",
-            "value": "true"
-          },
-          "off_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "off_tactic_label": {
-            "type": "literal",
-            "value": "Discovery"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiskEncryption"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Storage"
-          },
-          "off_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CloudStorage"
-          },
-          "off_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-          },
-          "off_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1619"
-          },
-          "off_tech_parent": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiscoveryTechnique"
-          },
-          "off_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "off_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Disk Encryption"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Hardening"
-          },
-          "def_tactic_label": {
-            "type": "literal",
-            "value": "Harden"
-          },
-          "def_tactic_rel_label": {
-            "type": "literal",
-            "value": "enables"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Disk Encryption"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "encrypts"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Storage"
-          },
-          "off_artifact_label": {
-            "type": "literal",
             "value": "Storage"
           },
           "off_artifact_rel_label": {
@@ -246,6 +139,113 @@
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
           }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Disk Encryption"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Hardening"
+          },
+          "def_tactic_label": {
+            "type": "literal",
+            "value": "Harden"
+          },
+          "def_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Disk Encryption"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "encrypts"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Storage"
+          },
+          "off_artifact_label": {
+            "type": "literal",
+            "value": "Cloud Storage"
+          },
+          "off_artifact_rel_label": {
+            "type": "literal",
+            "value": "accesses"
+          },
+          "off_tech_label": {
+            "type": "literal",
+            "value": "Cloud Storage Object Discovery"
+          },
+          "off_tech_id": {
+            "type": "literal",
+            "value": "T1619"
+          },
+          "off_tech_parent_label": {
+            "type": "literal",
+            "value": "Discovery Technique"
+          },
+          "off_tech_parent_is_toplevel": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+            "type": "literal",
+            "value": "true"
+          },
+          "off_tactic_rel_label": {
+            "type": "literal",
+            "value": "enables"
+          },
+          "off_tactic_label": {
+            "type": "literal",
+            "value": "Discovery"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiskEncryption"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Storage"
+          },
+          "off_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CloudStorage"
+          },
+          "off_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+          },
+          "off_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1619"
+          },
+          "off_tech_parent": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiscoveryTechnique"
+          },
+          "off_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "off_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
+          }
         }
       ]
     }
@@ -255,12 +255,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -382,130 +377,11 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": []
   },
   "related_offensive_matrix": {
-    "Discovery": [
-      [
-        "Cloud Storage Object Discovery",
-        [
-          {
-            "query_def_tech_label": {
-              "type": "literal",
-              "value": "Disk Encryption"
-            },
-            "top_def_tech_label": {
-              "type": "literal",
-              "value": "Platform Hardening"
-            },
-            "def_tactic_label": {
-              "type": "literal",
-              "value": "Harden"
-            },
-            "def_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "def_tech_label": {
-              "type": "literal",
-              "value": "Disk Encryption"
-            },
-            "def_artifact_rel_label": {
-              "type": "literal",
-              "value": "encrypts"
-            },
-            "def_artifact_label": {
-              "type": "literal",
-              "value": "Storage"
-            },
-            "off_artifact_label": {
-              "type": "literal",
-              "value": "Cloud Storage"
-            },
-            "off_artifact_rel_label": {
-              "type": "literal",
-              "value": "accesses"
-            },
-            "off_tech_label": {
-              "type": "literal",
-              "value": "Cloud Storage Object Discovery"
-            },
-            "off_tech_id": {
-              "type": "literal",
-              "value": "T1619"
-            },
-            "off_tech_parent_label": {
-              "type": "literal",
-              "value": "Discovery Technique"
-            },
-            "off_tech_parent_is_toplevel": {
-              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-              "type": "literal",
-              "value": "true"
-            },
-            "off_tactic_rel_label": {
-              "type": "literal",
-              "value": "enables"
-            },
-            "off_tactic_label": {
-              "type": "literal",
-              "value": "Discovery"
-            },
-            "def_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
-            },
-            "def_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "def_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiskEncryption"
-            },
-            "def_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
-            },
-            "def_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Storage"
-            },
-            "off_artifact": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CloudStorage"
-            },
-            "off_artifact_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
-            },
-            "off_tech": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1619"
-            },
-            "off_tech_parent": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiscoveryTechnique"
-            },
-            "off_tactic_rel": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-            },
-            "off_tactic": {
-              "type": "uri",
-              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
-            }
-          }
-        ]
-      ]
-    ],
     "Defense Evasion": [
       [
         "Hide Artifacts",
@@ -615,6 +491,120 @@
             "off_tactic": {
               "type": "uri",
               "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DefenseEvasion"
+            }
+          }
+        ]
+      ]
+    ],
+    "Discovery": [
+      [
+        "Cloud Storage Object Discovery",
+        [
+          {
+            "query_def_tech_label": {
+              "type": "literal",
+              "value": "Disk Encryption"
+            },
+            "top_def_tech_label": {
+              "type": "literal",
+              "value": "Platform Hardening"
+            },
+            "def_tactic_label": {
+              "type": "literal",
+              "value": "Harden"
+            },
+            "def_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "def_tech_label": {
+              "type": "literal",
+              "value": "Disk Encryption"
+            },
+            "def_artifact_rel_label": {
+              "type": "literal",
+              "value": "encrypts"
+            },
+            "def_artifact_label": {
+              "type": "literal",
+              "value": "Storage"
+            },
+            "off_artifact_label": {
+              "type": "literal",
+              "value": "Cloud Storage"
+            },
+            "off_artifact_rel_label": {
+              "type": "literal",
+              "value": "accesses"
+            },
+            "off_tech_label": {
+              "type": "literal",
+              "value": "Cloud Storage Object Discovery"
+            },
+            "off_tech_id": {
+              "type": "literal",
+              "value": "T1619"
+            },
+            "off_tech_parent_label": {
+              "type": "literal",
+              "value": "Discovery Technique"
+            },
+            "off_tech_parent_is_toplevel": {
+              "datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+              "type": "literal",
+              "value": "true"
+            },
+            "off_tactic_rel_label": {
+              "type": "literal",
+              "value": "enables"
+            },
+            "off_tactic_label": {
+              "type": "literal",
+              "value": "Discovery"
+            },
+            "def_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Harden"
+            },
+            "def_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "def_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiskEncryption"
+            },
+            "def_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#encrypts"
+            },
+            "def_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Storage"
+            },
+            "off_artifact": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#CloudStorage"
+            },
+            "off_artifact_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"
+            },
+            "off_tech": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#T1619"
+            },
+            "off_tech_parent": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#DiscoveryTechnique"
+            },
+            "off_tactic_rel": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+            },
+            "off_tactic": {
+              "type": "uri",
+              "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Discovery"
             }
           }
         ]

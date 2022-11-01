@@ -9279,90 +9279,6 @@
           },
           "def_tech_label": {
             "type": "literal",
-            "value": "System Daemon Monitoring"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "monitors"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Operating System Process"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemDaemonMonitoring"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#monitors"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemProcess"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Operating System Monitoring"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Monitoring"
-          },
-          "def_tech_label": {
-            "type": "literal",
-            "value": "Service Binary Verification"
-          },
-          "def_artifact_rel_label": {
-            "type": "literal",
-            "value": "verifies"
-          },
-          "def_artifact_label": {
-            "type": "literal",
-            "value": "Service Application"
-          },
-          "def_tactic": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
-          },
-          "def_tactic_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
-          },
-          "def_tech": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceBinaryVerification"
-          },
-          "def_artifact_rel": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#verifies"
-          },
-          "def_artifact": {
-            "type": "uri",
-            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplication"
-          }
-        },
-        {
-          "query_def_tech_label": {
-            "type": "literal",
-            "value": "Operating System Monitoring"
-          },
-          "top_def_tech_label": {
-            "type": "literal",
-            "value": "Platform Monitoring"
-          },
-          "def_tech_label": {
-            "type": "literal",
             "value": "Memory Boundary Tracking"
           },
           "def_artifact_rel_label": {
@@ -9434,6 +9350,90 @@
           "def_artifact": {
             "type": "uri",
             "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemFile"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Operating System Monitoring"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Monitoring"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "System Daemon Monitoring"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "monitors"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Operating System Process"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#SystemDaemonMonitoring"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#monitors"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemProcess"
+          }
+        },
+        {
+          "query_def_tech_label": {
+            "type": "literal",
+            "value": "Operating System Monitoring"
+          },
+          "top_def_tech_label": {
+            "type": "literal",
+            "value": "Platform Monitoring"
+          },
+          "def_tech_label": {
+            "type": "literal",
+            "value": "Service Binary Verification"
+          },
+          "def_artifact_rel_label": {
+            "type": "literal",
+            "value": "verifies"
+          },
+          "def_artifact_label": {
+            "type": "literal",
+            "value": "Service Application"
+          },
+          "def_tactic": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#Detect"
+          },
+          "def_tactic_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#enables"
+          },
+          "def_tech": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceBinaryVerification"
+          },
+          "def_artifact_rel": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#verifies"
+          },
+          "def_artifact": {
+            "type": "uri",
+            "value": "http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplication"
           }
         },
         {
@@ -9628,6 +9628,12 @@
         "d3f:top-level": "true",
         "rdfs:hasSubClass": [
           {
+            "@id": "d3f:ScheduledJobAnalysis"
+          },
+          {
+            "@id": "d3f:ServiceBinaryVerification"
+          },
+          {
             "@id": "d3f:EndpointHealthBeacon"
           },
           {
@@ -9635,9 +9641,6 @@
           },
           {
             "@id": "d3f:MemoryBoundaryTracking"
-          },
-          {
-            "@id": "d3f:ScheduledJobAnalysis"
           },
           {
             "@id": "d3f:SystemDaemonMonitoring"
@@ -9650,9 +9653,6 @@
           },
           {
             "@id": "d3f:UserSessionInitConfigAnalysis"
-          },
-          {
-            "@id": "d3f:ServiceBinaryVerification"
           }
         ],
         "rdfs:label": "Operating System Monitoring"

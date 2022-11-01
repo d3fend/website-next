@@ -37,12 +37,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -61,12 +56,7 @@
       "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "children": {
-        "@id": "d3f:child",
-        "@type": "@id",
-        "@container": "@set"
-      }
+      "owl": "http://www.w3.org/2002/07/owl#"
     },
     "@graph": [
       {
@@ -78,9 +68,6 @@
           "true"
         ],
         "rdfs:hasSubClass": [
-          {
-            "@id": "d3f:T1583.006"
-          },
           {
             "@id": "d3f:T1583.001"
           },
@@ -95,6 +82,9 @@
           },
           {
             "@id": "d3f:T1583.005"
+          },
+          {
+            "@id": "d3f:T1583.006"
           }
         ],
         "rdfs:label": [
