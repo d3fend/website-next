@@ -1,96 +1,196 @@
-const build = [
-  "/_app/start-07c43ec8.js",
-  "/_app/pages/__layout.svelte-2c685df2.js",
-  "/_app/assets/pages/__layout.svelte-a0ff9840.css",
-  "/_app/pages/__error.svelte-1d825c42.js",
-  "/_app/pages/__layout-matrix.svelte-813d3b24.js",
-  "/_app/pages/mappings/__layout.svelte-9c60b20b.js",
-  "/_app/pages/offensive-technique/attack/__layout@matrix.svelte-4021176a.js",
-  "/_app/pages/progress/__layout.svelte-5e5c52fc.js",
-  "/_app/pages/tactic/__layout-tactic@matrix.svelte-8d7f29d7.js",
-  "/_app/assets/pages/tactic/__layout-tactic@matrix.svelte-b7a77fc7.css",
-  "/_app/pages/technique/__layout-tech@matrix.svelte-a150bb14.js",
-  "/_app/pages/about.svelte-5bf95ec1.js",
-  "/_app/assets/pages/about.svelte-b0b5b64a.css",
-  "/_app/pages/contact.svelte-27af9ef7.js",
-  "/_app/assets/Button.svelte_svelte_type_style_lang-7ef90c91.css",
-  "/_app/pages/contribute/index.svelte-e1d35310.js",
-  "/_app/pages/dao/artifact/_artifact_.svelte-469baecc.js",
-  "/_app/assets/pages/dao/artifact/_artifact_.svelte-76d0c295.css",
-  "/_app/assets/Alert.svelte_svelte_type_style_lang-6b570326.css",
-  "/_app/assets/SimpleAutocomplete.svelte_svelte_type_style_lang-c01bf9e8.css",
-  "/_app/pages/dao/artifact/index.svelte-bc250a30.js",
-  "/_app/pages/dao/index.svelte-b3372aa8.js",
-  "/_app/assets/pages/dao/index.svelte-43d7df8e.css",
-  "/_app/pages/faq/index.svelte-cfbc359d.js",
-  "/_app/pages/index@matrix.svelte-56bae9dd.js",
-  "/_app/assets/pages/index@matrix.svelte-3b40261d.css",
-  "/_app/pages/mappings/attack-mitigations.svelte-f63558bf.js",
-  "/_app/pages/mappings/cci/_version_.svelte-809600bc.js",
-  "/_app/pages/mappings/index.svelte-807d55cc.js",
-  "/_app/pages/mappings/nist/_version_.svelte-48699f2d.js",
-  "/_app/pages/offensive-technique/attack/_technique_.svelte-c0c8f89c.js",
-  "/_app/assets/pages/offensive-technique/attack/_technique_.svelte-b6dc9aa9.css",
-  "/_app/pages/offensive-technique/index.svelte-afda10b9.js",
-  "/_app/pages/ontology/describe/_slug_.svelte-22374d72.js",
-  "/_app/assets/pages/ontology/describe/_slug_.svelte-040471dd.css",
-  "/_app/pages/poster@matrix.svelte-a8746f02.js",
-  "/_app/assets/pages/poster@matrix.svelte-d43515df.css",
-  "/_app/pages/privacy.svelte-ffcf299b.js",
-  "/_app/pages/progress/index.svelte-29a4a0b5.js",
-  "/_app/pages/resources/index.svelte-0f1cfd84.js",
-  "/_app/pages/resources/ontology.svelte-54817cb5.js",
-  "/_app/pages/search.svelte-73d49f20.js",
-  "/_app/assets/pages/search.svelte-6a857f2b.css",
-  "/_app/pages/styles.svelte-d42bdc43.js",
-  "/_app/pages/tactic/_tactic_@tactic.svelte-df96e341.js",
-  "/_app/assets/pages/tactic/_tactic_@tactic.svelte-72e063e4.css",
-  "/_app/pages/tactic/index.svelte-6cdfa124.js",
-  "/_app/pages/technique/_technique_@tech.svelte-f00e1cb1.js",
-  "/_app/assets/pages/technique/_technique_@tech.svelte-4c576568.css",
-  "/_app/pages/technique/index.svelte-882c3e3f.js",
-  "/_app/pages/tools/artifact-extractor.svelte-e0dc5584.js",
-  "/_app/assets/pages/tools/artifact-extractor.svelte-e05d80cb.css",
-  "/_app/pages/tools/attack-extractor.svelte-81608046.js",
-  "/_app/assets/pages/tools/attack-extractor.svelte-81c1f600.css",
-  "/_app/pages/tools/d3fend-extractor.svelte-ea1b0b7e.js",
-  "/_app/assets/pages/tools/d3fend-extractor.svelte-120a3a9b.css",
-  "/_app/pages/tools/index.svelte-ede4aa42.js",
-  "/_app/pages/tou.svelte-4cff5701.js",
-  "/_app/chunks/index-a02da30e.js",
-  "/_app/chunks/index-98a102c4.js",
-  "/_app/chunks/singletons-d1fb5791.js",
-  "/_app/chunks/Nav-mobile-1b03ef49.js",
-  "/_app/assets/Nav-mobile-e0f80dc0.css",
-  "/_app/chunks/stores-59d8ae96.js",
-  "/_app/chunks/stores-cf129ad8.js",
-  "/_app/chunks/config-91979045.js",
-  "/_app/chunks/lib-88dd6a45.js",
-  "/_app/chunks/marked.esm-8ab30116.js",
-  "/_app/chunks/D3FMatrix-eeee782d.js",
-  "/_app/assets/D3FMatrix-5aa2f868.css",
-  "/_app/chunks/navigation-0e6511d1.js",
-  "/_app/chunks/Header-47fd749a.js",
-  "/_app/assets/Header-6acab121.css",
-  "/_app/chunks/Title-1d23c88f.js",
-  "/_app/chunks/Button-db445531.js",
-  "/_app/chunks/BlockTree-492566e1.js",
-  "/_app/assets/BlockTree-54ffff92.css",
-  "/_app/chunks/Alert-12c40fb9.js",
-  "/_app/chunks/Lookup-DAO-79760d4c.js",
-  "/_app/assets/Lookup-DAO-2347e66b.css",
-  "/_app/chunks/mermaid.esm.min-51ac21d2.js",
-  "/_app/chunks/SPARQLTable-ce931500.js",
-  "/_app/assets/SPARQLTable-f070533e.css",
-  "/_app/chunks/Table-79382ad4.js",
-  "/_app/chunks/Modal_full-a93e1e32.js",
-  "/_app/assets/Modal_full-621476ac.css",
-  "/_app/chunks/TechniqueSubclasses-e8b03f71.js",
-  "/_app/assets/TechniqueSubclasses-62da13f8.css",
-  "/_app/chunks/extract-26c878fb.js",
-  "/_app/assets/extract-d25bbc7d.css"
-];
-const files = [
+const i = [
+  "/_app/immutable/assets/_layout-57bd0c08.css",
+  "/_app/immutable/assets/_page-7d23fb85.css",
+  "/_app/immutable/assets/Lookup-DAO-bfa5abcb.css",
+  "/_app/immutable/assets/_page-be93f9a1.css",
+  "/_app/immutable/assets/Modal_full-64676ff1.css",
+  "/_app/immutable/assets/_page@-43fb420c.css",
+  "/_app/immutable/assets/Button-82434732.css",
+  "/_app/immutable/assets/_layout-e1a8d951.css",
+  "/_app/immutable/assets/_page-b84b65f2.css",
+  "/_app/immutable/assets/_page-cec432e3.css",
+  "/_app/immutable/assets/_page-093affa7.css",
+  "/_app/immutable/assets/SPARQLTable-b89e18ea.css",
+  "/_app/immutable/assets/Button-DAO-2520275a.css",
+  "/_app/immutable/assets/Alert-8ab89406.css",
+  "/_app/immutable/assets/D3FMatrix-56da746e.css",
+  "/_app/immutable/assets/_page-4dc56655.css",
+  "/_app/immutable/assets/Header-d22f11e5.css",
+  "/_app/immutable/assets/Nav-mobile-44a56aec.css",
+  "/_app/immutable/assets/_page-a31569e7.css",
+  "/_app/immutable/assets/_page-5d437c2e.css",
+  "/_app/immutable/assets/extract-af5c7489.css",
+  "/_app/immutable/assets/_page-6c5d86a4.css",
+  "/_app/immutable/assets/TechniqueSubclasses-ec1a3178.css",
+  "/_app/immutable/assets/_page-0decab3c.css",
+  "/_app/immutable/assets/_page-67491860.css",
+  "/_app/immutable/assets/_page-03e1ce12.css",
+  "/_app/immutable/chunks/stores-8717a7b3.js",
+  "/_app/immutable/chunks/_page-8d384334.js",
+  "/_app/immutable/chunks/offensive-technique-a85155c6.js",
+  "/_app/immutable/chunks/_layout-c11d7977.js",
+  "/_app/immutable/chunks/matrix-91be0855.js",
+  "/_app/immutable/chunks/_layout-a04dca56.js",
+  "/_app/immutable/chunks/index-8be87e1c.js",
+  "/_app/immutable/chunks/control-e7f5239e.js",
+  "/_app/immutable/chunks/singletons-6b8ad24d.js",
+  "/_app/immutable/components/pages/progress/_layout.svelte-f4801c37.js",
+  "/_app/immutable/components/pages/_error.svelte-d6c55665.js",
+  "/_app/immutable/chunks/stores-422eb0ed.js",
+  "/_app/immutable/chunks/_page-799dee1f.js",
+  "/_app/immutable/components/pages/contact/_page.svelte-5596cbdc.js",
+  "/_app/immutable/chunks/index-2f9fe195.js",
+  "/_app/immutable/chunks/navigation-9a455fa3.js",
+  "/_app/immutable/chunks/dao-artifacts-b78a4b38.js",
+  "/_app/immutable/chunks/lib-470e6689.js",
+  "/_app/immutable/components/pages/mappings/_layout.svelte-f4801c37.js",
+  "/_app/immutable/chunks/preload-helper-41c905a7.js",
+  "/_app/immutable/chunks/_page-6b9967c5.js",
+  "/_app/immutable/chunks/Alert-3ff1d322.js",
+  "/_app/immutable/chunks/Table-ab00f303.js",
+  "/_app/immutable/components/pages/mappings/_page.svelte-821e9f04.js",
+  "/_app/immutable/chunks/index-b24f75bf.js",
+  "/_app/immutable/chunks/Title-dc0f8b01.js",
+  "/_app/immutable/chunks/_page-7cd96192.js",
+  "/_app/immutable/chunks/_page-08618da5.js",
+  "/_app/immutable/chunks/_page-d6a09b97.js",
+  "/_app/immutable/components/pages/mappings/cci/_version_/_page.svelte-02c973d4.js",
+  "/_app/immutable/components/pages/dao/artifact/_page.svelte-25bfe3ad.js",
+  "/_app/immutable/chunks/Button-6c4e2e09.js",
+  "/_app/immutable/components/pages/faq/_page.svelte-91369888.js",
+  "/_app/immutable/chunks/_page-e28ac8b4.js",
+  "/_app/immutable/chunks/config-ba448d22.js",
+  "/_app/immutable/chunks/_page-e7a262ff.js",
+  "/_app/immutable/chunks/_page-e4365ac9.js",
+  "/_app/immutable/components/pages/privacy/_page.svelte-b051cb26.js",
+  "/_app/immutable/chunks/_page-c4aed8f2.js",
+  "/_app/immutable/components/pages/contribute/_page.svelte-0ba67b3c.js",
+  "/_app/immutable/chunks/_page-98c70254.js",
+  "/_app/immutable/chunks/_page-5cdbcc7e.js",
+  "/_app/immutable/chunks/_page-7e7dfdd6.js",
+  "/_app/immutable/components/pages/offensive-technique/_page.svelte-5d040840.js",
+  "/_app/immutable/components/pages/progress/_page.svelte-659ec254.js",
+  "/_app/immutable/chunks/_page-8276cca3.js",
+  "/_app/immutable/chunks/_page-b0d18648.js",
+  "/_app/immutable/chunks/BlockTree-f7a02736.js",
+  "/_app/immutable/chunks/index-360fd992.js",
+  "/_app/immutable/components/pages/mappings/nist/_version_/_page.svelte-c0ad9665.js",
+  "/_app/immutable/start-701f50fd.js",
+  "/_app/immutable/components/pages/resources/_page.svelte-b1e4b210.js",
+  "/_app/immutable/chunks/_page-72e2bcbc.js",
+  "/_app/immutable/components/pages/mappings/attack-mitigations/_page.svelte-77455dc5.js",
+  "/_app/immutable/chunks/_page-75f1867f.js",
+  "/_app/immutable/chunks/_page-a6d534c1.js",
+  "/_app/immutable/chunks/15-f8a3187f.js",
+  "/_app/immutable/chunks/2-7e821016.js",
+  "/_app/immutable/components/pages/taxonomies/_page.svelte-e49dce64.js",
+  "/_app/immutable/chunks/0-d64dcca1.js",
+  "/_app/immutable/components/pages/technique/_page.svelte-62dc71d0.js",
+  "/_app/immutable/chunks/_page-036fcb69.js",
+  "/_app/immutable/chunks/_page-4f056058.js",
+  "/_app/immutable/chunks/9-a5825a79.js",
+  "/_app/immutable/chunks/_page-86e9f59f.js",
+  "/_app/immutable/modules/pages/_layout.js-341950ad.js",
+  "/_app/immutable/chunks/32-2feb91dc.js",
+  "/_app/immutable/chunks/19-cd137feb.js",
+  "/_app/immutable/chunks/17-16d3c7ee.js",
+  "/_app/immutable/modules/pages/offensive-technique/_page.js-ee065e67.js",
+  "/_app/immutable/chunks/23-62293b71.js",
+  "/_app/immutable/chunks/13-f76e55dd.js",
+  "/_app/immutable/chunks/16-fa23f10c.js",
+  "/_app/immutable/chunks/8-01d44ba2.js",
+  "/_app/immutable/modules/pages/dao/_page.js-7ae24659.js",
+  "/_app/immutable/chunks/20-bc1d60b1.js",
+  "/_app/immutable/chunks/39-13a70587.js",
+  "/_app/immutable/chunks/_page-04a7ffd1.js",
+  "/_app/immutable/modules/pages/dao/artifact/_page.js-ef683711.js",
+  "/_app/immutable/chunks/34-195faba2.js",
+  "/_app/immutable/chunks/29-5d43f8a4.js",
+  "/_app/immutable/chunks/40-72cec6d3.js",
+  "/_app/immutable/chunks/10-105bb710.js",
+  "/_app/immutable/chunks/18-69a7223a.js",
+  "/_app/immutable/chunks/4-20c1106b.js",
+  "/_app/immutable/modules/pages/matrix/_layout.js-c6748bf5.js",
+  "/_app/immutable/chunks/26-c64fff8e.js",
+  "/_app/immutable/modules/pages/matrix/_page.js-761108a4.js",
+  "/_app/immutable/modules/pages/mappings/attack-mitigations/_page.js-394d7325.js",
+  "/_app/immutable/modules/pages/mappings/nist/_version_/_page.js-822cdc15.js",
+  "/_app/immutable/modules/pages/ontology/describe/_slug_/_page.js-8308a408.js",
+  "/_app/immutable/modules/pages/contribute/_page.js-bf8875c7.js",
+  "/_app/immutable/modules/pages/progress/_page.js-14cc96c6.js",
+  "/_app/immutable/modules/pages/tools/artifact-extractor/_page.js-782c71b8.js",
+  "/_app/immutable/modules/pages/resources/_page.js-e7b74260.js",
+  "/_app/immutable/modules/pages/offensive-technique/attack/_technique_/_page.js-b7102f46.js",
+  "/_app/immutable/modules/pages/technique/_technique_/_page.js-f390204b.js",
+  "/_app/immutable/modules/pages/tactic/_tactic_/_page.js-bf32d216.js",
+  "/_app/immutable/modules/pages/taxonomies/_root_id_/_page.js-dbd2097a.js",
+  "/_app/immutable/modules/pages/technique/_page.js-da76446c.js",
+  "/_app/immutable/modules/pages/tactic/_page.js-47c8553b.js",
+  "/_app/immutable/chunks/21-a883b74c.js",
+  "/_app/immutable/modules/pages/tools/d3fend-extractor/_page.js-54503c87.js",
+  "/_app/immutable/chunks/37-1cd00f5a.js",
+  "/_app/immutable/components/pages/tools/_page.svelte-031c95a8.js",
+  "/_app/immutable/components/pages/tou/_page.svelte-698463a9.js",
+  "/_app/immutable/components/pages/_page.svelte-63c0276a.js",
+  "/_app/immutable/chunks/14-5b44c1be.js",
+  "/_app/immutable/chunks/7-d08d348b.js",
+  "/_app/immutable/chunks/12-1acc8180.js",
+  "/_app/immutable/chunks/31-74c12e7c.js",
+  "/_app/immutable/chunks/24-ec36acbe.js",
+  "/_app/immutable/chunks/1-360e50f1.js",
+  "/_app/immutable/modules/pages/tools/attack-extractor/_page.js-e7437f2a.js",
+  "/_app/immutable/chunks/27-d662eb94.js",
+  "/_app/immutable/chunks/35-4c01b549.js",
+  "/_app/immutable/components/pages/technique/_layout.svelte-f392d253.js",
+  "/_app/immutable/chunks/marked.esm-5a9deb85.js",
+  "/_app/immutable/components/pages/poster/_page@.svelte-821d76f5.js",
+  "/_app/immutable/components/pages/tactic/_page@.svelte-cba72ea8.js",
+  "/_app/immutable/chunks/41-27d2372c.js",
+  "/_app/immutable/chunks/22-62fcc467.js",
+  "/_app/immutable/chunks/_page-9b47df28.js",
+  "/_app/immutable/chunks/5-31e8e16c.js",
+  "/_app/immutable/components/pages/resources/ontology/_page.svelte-7106ef7e.js",
+  "/_app/immutable/chunks/3-07070ac8.js",
+  "/_app/immutable/chunks/30-ae2268f6.js",
+  "/_app/immutable/chunks/36-d4f79f2a.js",
+  "/_app/immutable/modules/pages/mappings/cci/_version_/_page.js-47fbbf92.js",
+  "/_app/immutable/modules/pages/_page.js-64423f9a.js",
+  "/_app/immutable/chunks/33-bf76606b.js",
+  "/_app/immutable/chunks/11-ce48740d.js",
+  "/_app/immutable/chunks/38-3c4ec745.js",
+  "/_app/immutable/chunks/28-b2e06695.js",
+  "/_app/immutable/chunks/6-8dfe239e.js",
+  "/_app/immutable/components/pages/_layout.svelte-60b6c039.js",
+  "/_app/immutable/modules/pages/dao/artifact/_artifact_/_page.js-1b858503.js",
+  "/_app/immutable/chunks/SPARQLTable-0a4d1cf4.js",
+  "/_app/immutable/modules/pages/faq/_page.js-53194984.js",
+  "/_app/immutable/components/pages/matrix/_page.svelte-de2f0b83.js",
+  "/_app/immutable/chunks/25-eb8f6dc7.js",
+  "/_app/immutable/chunks/Modal_full-093ff3fd.js",
+  "/_app/immutable/components/pages/ontology/describe/_slug_/_page.svelte-3944a87f.js",
+  "/_app/immutable/components/pages/dao/_page.svelte-4ae6f3e3.js",
+  "/_app/immutable/components/pages/matrix/_layout@.svelte-ca4244f9.js",
+  "/_app/immutable/components/pages/tactic/_layout.svelte-f392d253.js",
+  "/_app/immutable/components/pages/styles/_page.svelte-b67a1aa7.js",
+  "/_app/immutable/components/pages/tactic/_tactic_/_page.svelte-29066803.js",
+  "/_app/immutable/chunks/Lookup-DAO-f8f6810d.js",
+  "/_app/immutable/components/pages/about/_page.svelte-1ac0ba37.js",
+  "/_app/immutable/chunks/Header-3cb519d0.js",
+  "/_app/immutable/components/pages/offensive-technique/attack/_layout.svelte-070e297d.js",
+  "/_app/immutable/components/pages/search/_page.svelte-95ee417d.js",
+  "/_app/immutable/chunks/Nav-mobile-c6dc1e47.js",
+  "/_app/immutable/components/pages/offensive-technique/attack/_technique_/_page.svelte-566009dd.js",
+  "/_app/immutable/chunks/extract-053a57d9.js",
+  "/_app/immutable/chunks/TechniqueSubclasses-26b94b0e.js",
+  "/_app/immutable/chunks/D3FMatrix-fe6f4f33.js",
+  "/_app/immutable/components/pages/tools/artifact-extractor/_page.svelte-2bc1222f.js",
+  "/_app/immutable/components/pages/tools/attack-extractor/_page.svelte-1259fe2c.js",
+  "/_app/immutable/components/pages/dao/artifact/_artifact_/_page.svelte-e709e0f7.js",
+  "/_app/immutable/components/pages/tools/d3fend-extractor/_page.svelte-d09668d5.js",
+  "/_app/immutable/components/pages/taxonomies/_root_id_/_page.svelte-7bd5fb15.js",
+  "/_app/immutable/components/pages/technique/_technique_/_page.svelte-8efab310.js",
+  "/_app/immutable/chunks/mermaid.core-8e167b52.js"
+], l = [
   "/favicon.ico",
   "/font/azonix/azonix-d3fend.otf",
   "/global-d3fend.css",
@@ -128,50 +228,40 @@ const files = [
   "/resources/d3fend-full-mappings.json",
   "/resources/extra-dist/CNAME",
   "/resources/extra-dist/README.md"
-];
-const version = "1667281753816";
-const ASSETS = `cache${version}`;
-const to_cache = build.concat(files);
-const staticAssets = new Set(to_cache);
-self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(ASSETS).then((cache) => cache.addAll(to_cache)).then(() => {
-    self.skipWaiting();
-  }));
+], m = "1676134859814", c = `cache${m}`, u = i.concat(l), _ = new Set(u);
+self.addEventListener("install", (e) => {
+  e.waitUntil(
+    caches.open(c).then((a) => a.addAll(u)).then(() => {
+      self.skipWaiting();
+    })
+  );
 });
-self.addEventListener("activate", (event) => {
-  event.waitUntil(caches.keys().then(async (keys) => {
-    for (const key of keys) {
-      if (key !== ASSETS)
-        await caches.delete(key);
-    }
-    self.clients.claim();
-  }));
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys().then(async (a) => {
+      for (const s of a)
+        s !== c && await caches.delete(s);
+      self.clients.claim();
+    })
+  );
 });
-async function fetchAndCache(request) {
-  const cache = await caches.open(`offline${version}`);
+async function o(e) {
+  const a = await caches.open(`offline${m}`);
   try {
-    const response = await fetch(request);
-    cache.put(request, response.clone());
-    return response;
-  } catch (err) {
-    const response = await cache.match(request);
-    if (response)
-      return response;
-    throw err;
+    const s = await fetch(e);
+    return a.put(e, s.clone()), s;
+  } catch (s) {
+    const p = await a.match(e);
+    if (p)
+      return p;
+    throw s;
   }
 }
-self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET" || event.request.headers.has("range"))
+self.addEventListener("fetch", (e) => {
+  if (e.request.method !== "GET" || e.request.headers.has("range"))
     return;
-  const url = new URL(event.request.url);
-  const isHttp = url.protocol.startsWith("http");
-  const isDevServerRequest = url.hostname === self.location.hostname && url.port !== self.location.port;
-  const isStaticAsset = url.host === self.location.host && staticAssets.has(url.pathname);
-  const skipBecauseUncached = event.request.cache === "only-if-cached" && !isStaticAsset;
-  if (isHttp && !isDevServerRequest && !skipBecauseUncached) {
-    event.respondWith((async () => {
-      const cachedAsset = isStaticAsset && await caches.match(event.request);
-      return cachedAsset || fetchAndCache(event.request);
-    })());
-  }
+  const a = new URL(e.request.url), s = a.protocol.startsWith("http"), p = a.hostname === self.location.hostname && a.port !== self.location.port, t = a.host === self.location.host && _.has(a.pathname), n = e.request.cache === "only-if-cached" && !t;
+  s && !p && !n && e.respondWith(
+    (async () => t && await caches.match(e.request) || o(e.request))()
+  );
 });
