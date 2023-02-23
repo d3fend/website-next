@@ -398,3 +398,7 @@ code {
 .glow:hover {
     text-shadow: 2px 2px 10px #4d87fa;
 }
+
+html.scroll-smooth {
+  scroll-behavior: smooth;
+}
