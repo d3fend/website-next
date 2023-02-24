@@ -1,1 +1,1 @@
-import"../../../../chunks/dao-artifacts-b78a4b38.js";import{l}from"../../../../chunks/_page-6b9967c5.js";export{l as load};
+import"../../../../chunks/dao-artifacts-b78a4b38.js";import{l}from"../../../../chunks/_page-d6a09b97.js";export{l as load};
