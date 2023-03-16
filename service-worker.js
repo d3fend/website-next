@@ -1,51 +1,51 @@
 const n = [
-  "/_app/immutable/entry/app.19d61468.js",
-  "/_app/immutable/chunks/0.c9e99778.js",
-  "/_app/immutable/chunks/1.3289b553.js",
+  "/_app/immutable/entry/app.cb9f15cf.js",
+  "/_app/immutable/chunks/0.c7896553.js",
+  "/_app/immutable/chunks/1.3a2b6f4b.js",
   "/_app/immutable/chunks/10.473f53b3.js",
-  "/_app/immutable/chunks/11.01ea0b87.js",
+  "/_app/immutable/chunks/11.86f70d9f.js",
   "/_app/immutable/chunks/12.560abf7b.js",
   "/_app/immutable/chunks/13.261361d1.js",
-  "/_app/immutable/chunks/14.1a4d9950.js",
+  "/_app/immutable/chunks/14.7e234444.js",
   "/_app/immutable/chunks/15.211fd39c.js",
-  "/_app/immutable/chunks/16.b31ef8ee.js",
+  "/_app/immutable/chunks/16.b488bb9d.js",
   "/_app/immutable/chunks/17.e6262c1e.js",
   "/_app/immutable/chunks/18.60cf31d7.js",
   "/_app/immutable/chunks/19.12089f22.js",
   "/_app/immutable/chunks/2.a758f4cf.js",
   "/_app/immutable/chunks/20.17c2b6e3.js",
   "/_app/immutable/chunks/21.80b0b801.js",
-  "/_app/immutable/chunks/22.a0df1977.js",
+  "/_app/immutable/chunks/22.ef2736e9.js",
   "/_app/immutable/chunks/23.f34d4206.js",
-  "/_app/immutable/chunks/24.f0252888.js",
-  "/_app/immutable/chunks/25.5eb1a7a7.js",
-  "/_app/immutable/chunks/26.da52f009.js",
+  "/_app/immutable/chunks/24.040f982c.js",
+  "/_app/immutable/chunks/25.beb19645.js",
+  "/_app/immutable/chunks/26.82444c64.js",
   "/_app/immutable/chunks/27.4bce3560.js",
   "/_app/immutable/chunks/28.0bbd1bff.js",
   "/_app/immutable/chunks/29.40a056e7.js",
-  "/_app/immutable/chunks/3.08f60025.js",
-  "/_app/immutable/chunks/30.52593d80.js",
-  "/_app/immutable/chunks/31.3c9646fd.js",
+  "/_app/immutable/chunks/3.312bcf00.js",
+  "/_app/immutable/chunks/30.4ff322de.js",
+  "/_app/immutable/chunks/31.d0945d86.js",
   "/_app/immutable/chunks/32.a956d66f.js",
   "/_app/immutable/chunks/33.8aa59a5b.js",
-  "/_app/immutable/chunks/34.357f5b39.js",
-  "/_app/immutable/chunks/35.be2680ee.js",
-  "/_app/immutable/chunks/36.b5a8cdee.js",
+  "/_app/immutable/chunks/34.5bd10960.js",
+  "/_app/immutable/chunks/35.95ab17bb.js",
+  "/_app/immutable/chunks/36.d91e23d2.js",
   "/_app/immutable/chunks/37.cf914210.js",
-  "/_app/immutable/chunks/38.66da2322.js",
+  "/_app/immutable/chunks/38.4041e242.js",
   "/_app/immutable/chunks/39.ffb59e31.js",
-  "/_app/immutable/chunks/4.d7a17859.js",
-  "/_app/immutable/chunks/40.5ec1766b.js",
-  "/_app/immutable/chunks/41.a3e6bcc8.js",
-  "/_app/immutable/chunks/42.d70c45ce.js",
+  "/_app/immutable/chunks/4.813873de.js",
+  "/_app/immutable/chunks/40.87ad4cd8.js",
+  "/_app/immutable/chunks/41.c46ede6c.js",
+  "/_app/immutable/chunks/42.b89322d4.js",
   "/_app/immutable/chunks/43.cf1b1596.js",
   "/_app/immutable/chunks/44.bf7d6cd9.js",
-  "/_app/immutable/chunks/45.9884a51d.js",
+  "/_app/immutable/chunks/45.d2cf11ca.js",
   "/_app/immutable/chunks/5.4a090070.js",
-  "/_app/immutable/chunks/6.ceecc558.js",
-  "/_app/immutable/chunks/7.1486edfb.js",
-  "/_app/immutable/chunks/8.131b8dd8.js",
-  "/_app/immutable/chunks/9.b035b25c.js",
+  "/_app/immutable/chunks/6.0dd61b55.js",
+  "/_app/immutable/chunks/7.93926f98.js",
+  "/_app/immutable/chunks/8.d95ddf56.js",
+  "/_app/immutable/chunks/9.4d0a3db8.js",
   "/_app/immutable/assets/Alert.8ab89406.css",
   "/_app/immutable/assets/Button-DAO.2520275a.css",
   "/_app/immutable/assets/Button.82434732.css",
@@ -63,13 +63,13 @@ const n = [
   "/_app/immutable/chunks/Alert.06a23c66.js",
   "/_app/immutable/chunks/BlockTree.3524e499.js",
   "/_app/immutable/chunks/Button.2b226be8.js",
-  "/_app/immutable/chunks/D3FMatrix.0c5c8e55.js",
+  "/_app/immutable/chunks/D3FMatrix.a6f3ceed.js",
   "/_app/immutable/assets/_Graph.0c9f2136.css",
   "/_app/immutable/chunks/Header.16622278.js",
-  "/_app/immutable/chunks/Lookup-DAO.8504ec7c.js",
-  "/_app/immutable/chunks/MatrixLayout.22a1dfe7.js",
+  "/_app/immutable/chunks/Lookup-DAO.13f23a38.js",
+  "/_app/immutable/chunks/MatrixLayout.f6600151.js",
   "/_app/immutable/chunks/Modal_full.c4bd7078.js",
-  "/_app/immutable/chunks/Nav-mobile.1d80e955.js",
+  "/_app/immutable/chunks/Nav-mobile.3805587c.js",
   "/_app/immutable/chunks/Notification.234f2f4e.js",
   "/_app/immutable/chunks/SPARQLTable.caf3ee38.js",
   "/_app/immutable/chunks/SimpleAutocomplete.2435e796.js",
@@ -77,7 +77,7 @@ const n = [
   "/_app/immutable/chunks/TechniqueSubclasses.ac2986fc.js",
   "/_app/immutable/chunks/Title.76b3b16c.js",
   "/_app/immutable/chunks/ToggleBar.0c7e0bf8.js",
-  "/_app/immutable/chunks/_Graph.50c66ba4.js",
+  "/_app/immutable/chunks/_Graph.e93d7e0c.js",
   "/_app/immutable/chunks/_arrayReduce.865b0d3f.js",
   "/_app/immutable/chunks/_layout.2a4b0c4e.js",
   "/_app/immutable/chunks/_layout.4c650782.js",
@@ -130,20 +130,20 @@ const n = [
   "/_app/immutable/chunks/marked.esm.75dc6516.js",
   "/_app/immutable/chunks/matrix.91be0855.js",
   "/_app/immutable/chunks/mermaid.core.ffca9792.js",
-  "/_app/immutable/chunks/navigation.7aa85286.js",
+  "/_app/immutable/chunks/navigation.11362be2.js",
   "/_app/immutable/chunks/offensive-technique.a85155c6.js",
   "/_app/immutable/chunks/path.53f90ab3.js",
   "/_app/immutable/chunks/preload-helper.41c905a7.js",
   "/_app/immutable/chunks/selectAll.15f5056e.js",
-  "/_app/immutable/chunks/singletons.1394b6d1.js",
-  "/_app/immutable/chunks/stores.b9681986.js",
+  "/_app/immutable/chunks/singletons.3dda11c5.js",
   "/_app/immutable/chunks/stores.e0cd0404.js",
+  "/_app/immutable/chunks/stores.ee0369c7.js",
   "/_app/immutable/chunks/styles-0dd3ba1e.3c716ce9.js",
   "/_app/immutable/chunks/styles-4fe3d1fc.6fe2be53.js",
   "/_app/immutable/chunks/styles-d6bd7a5e.02a62e57.js",
   "/_app/immutable/chunks/svgDraw-6a237a99.82a0d8b1.js",
   "/_app/immutable/chunks/toString.f08f8ecc.js",
-  "/_app/immutable/entry/start.fff23c1f.js",
+  "/_app/immutable/entry/start.2c64bbe6.js",
   "/_app/immutable/chunks/c4Diagram-f9e67060.6856fa55.js",
   "/_app/immutable/chunks/classDiagram-4456d403.2f9de8f0.js",
   "/_app/immutable/chunks/classDiagram-v2-539b00ca.34419499.js",
@@ -163,28 +163,28 @@ const n = [
   "/_app/immutable/chunks/stateDiagram-95825141.30a2f193.js",
   "/_app/immutable/chunks/stateDiagram-v2-1cc5d8ed.9e9e58b7.js",
   "/_app/immutable/chunks/timeline-definition-24ebf147.15a24d3e.js",
-  "/_app/immutable/entry/_error.svelte.70c20680.js",
-  "/_app/immutable/assets/_layout@.0496bb8e.css",
+  "/_app/immutable/entry/_error.svelte.29ead3de.js",
+  "/_app/immutable/assets/_layout.0496bb8e.css",
   "/_app/immutable/entry/_layout.js.a6e82b7a.js",
-  "/_app/immutable/entry/_layout.svelte.0e2141fd.js",
+  "/_app/immutable/entry/_layout.svelte.3692151e.js",
   "/_app/immutable/assets/_page.7d23fb85.css",
   "/_app/immutable/entry/_page.js.a2848361.js",
-  "/_app/immutable/entry/_page.svelte.892aa4b3.js",
+  "/_app/immutable/entry/_page.svelte.03561893.js",
   "/_app/immutable/assets/_page.cec432e3.css",
   "/_app/immutable/entry/about-page.svelte.a8a567be.js",
   "/_app/immutable/assets/_page.3aabccfd.css",
-  "/_app/immutable/entry/api-docs-page.svelte.780e826f.js",
+  "/_app/immutable/entry/api-docs-page.svelte.68fce596.js",
   "/_app/immutable/entry/contact-page.svelte.26c8971c.js",
   "/_app/immutable/entry/contribute-page.js.93871be4.js",
   "/_app/immutable/entry/contribute-page.svelte.b4e3b6cb.js",
   "/_app/immutable/assets/_page.093affa7.css",
   "/_app/immutable/entry/dao-page.js.9fc53fe6.js",
-  "/_app/immutable/entry/dao-page.svelte.bf1a4506.js",
+  "/_app/immutable/entry/dao-page.svelte.18a33599.js",
   "/_app/immutable/entry/dao-artifact-page.js.9fc53fe6.js",
   "/_app/immutable/entry/dao-artifact-page.svelte.d416041b.js",
   "/_app/immutable/assets/_page.31d61478.css",
   "/_app/immutable/entry/dao-artifact-_artifact_-page.js.59e7e212.js",
-  "/_app/immutable/entry/dao-artifact-_artifact_-page.svelte.28653218.js",
+  "/_app/immutable/entry/dao-artifact-_artifact_-page.svelte.49a3a3ce.js",
   "/_app/immutable/entry/faq-page.js.dfbc9572.js",
   "/_app/immutable/entry/faq-page.svelte.2e77f7b6.js",
   "/_app/immutable/entry/mappings-layout.svelte.5215f47a.js",
@@ -196,63 +196,63 @@ const n = [
   "/_app/immutable/entry/mappings-nist-_version_-page.js.269c2d2e.js",
   "/_app/immutable/entry/mappings-nist-_version_-page.svelte.65a1f26d.js",
   "/_app/immutable/entry/matrix-layout.js.3c5127ea.js",
-  "/_app/immutable/entry/matrix-layout@.svelte.1dcbdd21.js",
+  "/_app/immutable/entry/matrix-layout@.svelte.6fbca61c.js",
   "/_app/immutable/entry/matrix-page.js.a2848361.js",
-  "/_app/immutable/entry/matrix-page.svelte.892aa4b3.js",
+  "/_app/immutable/entry/matrix-page.svelte.03561893.js",
   "/_app/immutable/entry/offensive-technique-page.js.15459752.js",
   "/_app/immutable/entry/offensive-technique-page.svelte.aebc4b55.js",
-  "/_app/immutable/entry/offensive-technique-attack-layout.svelte.8bc933bd.js",
+  "/_app/immutable/entry/offensive-technique-attack-layout.svelte.5dc9e4ea.js",
   "/_app/immutable/assets/_page.b84b65f2.css",
   "/_app/immutable/entry/offensive-technique-attack-_technique_-page.js.4f7a9288.js",
-  "/_app/immutable/entry/offensive-technique-attack-_technique_-page.svelte.34bf72bd.js",
+  "/_app/immutable/entry/offensive-technique-attack-_technique_-page.svelte.655a7f0e.js",
   "/_app/immutable/assets/_page.be93f9a1.css",
   "/_app/immutable/entry/ontology-describe-_slug_-page.js.e8226269.js",
-  "/_app/immutable/entry/ontology-describe-_slug_-page.svelte.6d013172.js",
+  "/_app/immutable/entry/ontology-describe-_slug_-page.svelte.1c042533.js",
   "/_app/immutable/assets/_page@.43fb420c.css",
-  "/_app/immutable/entry/poster-page@.svelte.9d430200.js",
+  "/_app/immutable/entry/poster-page@.svelte.a356253b.js",
   "/_app/immutable/entry/privacy-page.svelte.f330bc69.js",
   "/_app/immutable/entry/progress-layout.svelte.5215f47a.js",
   "/_app/immutable/entry/progress-page.js.d845ac19.js",
   "/_app/immutable/entry/progress-page.svelte.6183cd64.js",
   "/_app/immutable/entry/resources-page.js.0fba9c88.js",
   "/_app/immutable/entry/resources-page.svelte.08a0beda.js",
-  "/_app/immutable/entry/resources-ontology-page.svelte.4402b347.js",
+  "/_app/immutable/entry/resources-ontology-page.svelte.34eed25d.js",
   "/_app/immutable/assets/_page.a31569e7.css",
-  "/_app/immutable/entry/search-page.svelte.9c97d986.js",
+  "/_app/immutable/entry/search-page.svelte.1760b589.js",
   "/_app/immutable/entry/styles-page.svelte.cf1daa3a.js",
   "/_app/immutable/assets/_layout.e1a8d951.css",
-  "/_app/immutable/entry/tactic-layout.svelte.2a3db13e.js",
+  "/_app/immutable/entry/tactic-layout.svelte.205dd4b3.js",
   "/_app/immutable/entry/tactic-page.js.863f9c42.js",
   "/_app/immutable/entry/tactic-page@.svelte.3e6bfd5c.js",
   "/_app/immutable/assets/_page.5d437c2e.css",
   "/_app/immutable/entry/tactic-_tactic_-page.js.c42e9ce7.js",
-  "/_app/immutable/entry/tactic-_tactic_-page.svelte.77111633.js",
-  "/_app/immutable/entry/taxonomies-page.svelte.90f76121.js",
+  "/_app/immutable/entry/tactic-_tactic_-page.svelte.e8d5772a.js",
+  "/_app/immutable/entry/taxonomies-page.svelte.9a7d2c61.js",
   "/_app/immutable/assets/_page.b9235a68.css",
   "/_app/immutable/entry/taxonomies-_root_id_-page.js.69280467.js",
-  "/_app/immutable/entry/taxonomies-_root_id_-page.svelte.19bd6db7.js",
-  "/_app/immutable/entry/technique-layout.svelte.2a3db13e.js",
+  "/_app/immutable/entry/taxonomies-_root_id_-page.svelte.d5543862.js",
+  "/_app/immutable/entry/technique-layout.svelte.205dd4b3.js",
   "/_app/immutable/entry/technique-page.js.03d2695d.js",
   "/_app/immutable/entry/technique-page.svelte.b42c88c9.js",
   "/_app/immutable/assets/_page.cff9011f.css",
   "/_app/immutable/entry/technique-_technique_-page.js.488bdeb4.js",
-  "/_app/immutable/entry/technique-_technique_-page.svelte.dc71a610.js",
+  "/_app/immutable/entry/technique-_technique_-page.svelte.53dd3c75.js",
   "/_app/immutable/entry/tools-page.svelte.a9afbf6e.js",
   "/_app/immutable/assets/_page.6c5d86a4.css",
   "/_app/immutable/entry/tools-artifact-extractor-page.js.60714dbf.js",
-  "/_app/immutable/entry/tools-artifact-extractor-page.svelte.c9e9a5ef.js",
+  "/_app/immutable/entry/tools-artifact-extractor-page.svelte.547e76d8.js",
   "/_app/immutable/assets/_page.0decab3c.css",
   "/_app/immutable/entry/tools-attack-extractor-page.js.16df0688.js",
-  "/_app/immutable/entry/tools-attack-extractor-page.svelte.12cf79e2.js",
+  "/_app/immutable/entry/tools-attack-extractor-page.svelte.d52343e0.js",
   "/_app/immutable/entry/tools-d3fend-extractor-page.js.fbdee963.js",
-  "/_app/immutable/entry/tools-d3fend-extractor-page.svelte.6a3166f3.js",
+  "/_app/immutable/entry/tools-d3fend-extractor-page.svelte.206e7aef.js",
   "/_app/immutable/entry/tou-page.svelte.c1728b04.js",
   "/_app/immutable/entry/weakness-page.js.76ae06dd.js",
   "/_app/immutable/entry/weakness-page.svelte.c3f08b77.js",
-  "/_app/immutable/entry/weakness-cwe-layout.svelte.8bc933bd.js",
+  "/_app/immutable/entry/weakness-cwe-layout.svelte.5dc9e4ea.js",
   "/_app/immutable/assets/_page.05781791.css",
   "/_app/immutable/entry/weakness-cwe-_weakness_-page.js.dc228449.js",
-  "/_app/immutable/entry/weakness-cwe-_weakness_-page.svelte.f232762e.js"
+  "/_app/immutable/entry/weakness-cwe-_weakness_-page.svelte.603951b1.js"
 ], l = [
   "/favicon.ico",
   "/font/azonix/azonix-d3fend.otf",
@@ -275,10 +275,18 @@ const n = [
   "/img/ttl.png",
   "/ontologies/.git",
   "/ontologies/README.md",
-  "/ontologies/d3fend/0.10.0-BETA-2/d3fend.csv",
-  "/ontologies/d3fend/0.10.0-BETA-2/d3fend.json",
-  "/ontologies/d3fend/0.10.0-BETA-2/d3fend.owl",
-  "/ontologies/d3fend/0.10.0-BETA-2/d3fend.ttl",
+  "/ontologies/d3fend/0.10.1-BETA-1/d3fend.csv",
+  "/ontologies/d3fend/0.10.1-BETA-1/d3fend.json",
+  "/ontologies/d3fend/0.10.1-BETA-1/d3fend.owl",
+  "/ontologies/d3fend/0.10.1-BETA-1/d3fend.ttl",
+  "/ontologies/d3fend/0.11.0-BETA-1/d3fend.csv",
+  "/ontologies/d3fend/0.11.0-BETA-1/d3fend.json",
+  "/ontologies/d3fend/0.11.0-BETA-1/d3fend.owl",
+  "/ontologies/d3fend/0.11.0-BETA-1/d3fend.ttl",
+  "/ontologies/d3fend/0.12.0-BETA-1/d3fend.csv",
+  "/ontologies/d3fend/0.12.0-BETA-1/d3fend.json",
+  "/ontologies/d3fend/0.12.0-BETA-1/d3fend.owl",
+  "/ontologies/d3fend/0.12.0-BETA-1/d3fend.ttl",
   "/ontologies/d3fend/0.9.3-BETA-1/d3fend.json",
   "/ontologies/d3fend/0.9.3-BETA-1/d3fend.owl",
   "/ontologies/d3fend/0.9.3-BETA-1/d3fend.ttl",
@@ -291,40 +299,40 @@ const n = [
   "/resources/d3fend-full-mappings.json",
   "/resources/extra-dist/CNAME",
   "/resources/extra-dist/README.md"
-], m = "1678473577353", c = `cache${m}`, u = n.concat(l), b = new Set(u);
-self.addEventListener("install", (a) => {
-  a.waitUntil(
-    caches.open(c).then((e) => e.addAll(u)).then(() => {
+], m = "1678989574523", i = `cache${m}`, c = n.concat(l), b = new Set(c);
+self.addEventListener("install", (e) => {
+  e.waitUntil(
+    caches.open(i).then((a) => a.addAll(c)).then(() => {
       self.skipWaiting();
     })
   );
 });
-self.addEventListener("activate", (a) => {
-  a.waitUntil(
-    caches.keys().then(async (e) => {
-      for (const s of e)
-        s !== c && await caches.delete(s);
+self.addEventListener("activate", (e) => {
+  e.waitUntil(
+    caches.keys().then(async (a) => {
+      for (const s of a)
+        s !== i && await caches.delete(s);
       self.clients.claim();
     })
   );
 });
-async function _(a) {
-  const e = await caches.open(`offline${m}`);
+async function _(e) {
+  const a = await caches.open(`offline${m}`);
   try {
-    const s = await fetch(a);
-    return e.put(a, s.clone()), s;
+    const s = await fetch(e);
+    return a.put(e, s.clone()), s;
   } catch (s) {
-    const t = await e.match(a);
+    const t = await a.match(e);
     if (t)
       return t;
     throw s;
   }
 }
-self.addEventListener("fetch", (a) => {
-  if (a.request.method !== "GET" || a.request.headers.has("range"))
+self.addEventListener("fetch", (e) => {
+  if (e.request.method !== "GET" || e.request.headers.has("range"))
     return;
-  const e = new URL(a.request.url), s = e.protocol.startsWith("http"), t = e.hostname === self.location.hostname && e.port !== self.location.port, p = e.host === self.location.host && b.has(e.pathname), i = a.request.cache === "only-if-cached" && !p;
-  s && !t && !i && a.respondWith(
-    (async () => p && await caches.match(a.request) || _(a.request))()
+  const a = new URL(e.request.url), s = a.protocol.startsWith("http"), t = a.hostname === self.location.hostname && a.port !== self.location.port, p = a.host === self.location.host && b.has(a.pathname), u = e.request.cache === "only-if-cached" && !p;
+  s && !t && !u && e.respondWith(
+    (async () => p && await caches.match(e.request) || _(e.request))()
   );
 });
