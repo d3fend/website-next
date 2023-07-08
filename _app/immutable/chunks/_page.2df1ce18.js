@@ -1,0 +1,1 @@
+import{e as r}from"./index.b1f5b21f.js";const o=!0;async function s({fetch:e}){const t=await e("/api/tactic/all.json"),a=await t.json();if(t.status!==200)throw r(500,data.message);return{graph:a}}const c=Object.freeze(Object.defineProperty({__proto__:null,load:s,prerender:o},Symbol.toStringTag,{value:"Module"}));export{c as _,s as l,o as p};

@@ -1,0 +1,1 @@
+async function t({params:e,fetch:a}){return await(await a("/api/taxonomies/d3f:AnalyticTechnique.json")).json()}const s=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{s as _,t as l};

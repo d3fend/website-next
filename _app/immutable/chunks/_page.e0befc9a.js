@@ -1,0 +1,1 @@
+async function o({fetch:t}){const a=await(await t("/api/blog-posts.json")).json();return a.forEach(e=>{e.tags=e.tags.split(", "),e.last_modified=new Date(e.last_modified).toLocaleDateString("en-US"),e.category=e.category.toUpperCase()}),{props:a}}const s=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{s as _,o as l};
