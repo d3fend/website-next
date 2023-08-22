@@ -176,11 +176,11 @@ dt {
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .logo .fancy-font {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .center {
@@ -446,4 +446,8 @@ body.scroll--none {
   overflow-y: scroll */
 
   /* overflow-y: hidden; */
+}
+
+.poster_border {
+  border: 1px solid black;
 }

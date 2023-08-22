@@ -78,6 +78,7 @@
     <owl:AnnotationProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-annotation">
         <definition>x d3fend-annotation y: The d3fend object x has the annotation y.</definition>
         <rdfs:label>d3fend-annotation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
     </owl:AnnotationProperty>
     
 
@@ -314,14 +315,6 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-annotation"/>
-    </rdf:Description>
     
 
 
@@ -2618,6 +2611,7 @@
 
     <owl:DatatypeProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-catalog-data-property">
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-data-property"/>
+        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property"/>
         <rdfs:label>d3fend-catalog-data-property</rdfs:label>
         <skos:altLabel xml:lang="en">d3fend-vendor-registry-data-property</skos:altLabel>
     </owl:DatatypeProperty>
@@ -2656,7 +2650,6 @@
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property -->
 
     <owl:DatatypeProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property">
-        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-catalog-data-property"/>
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-data-property"/>
         <rdfs:label>d3fend-external-control-data-property</rdfs:label>
     </owl:DatatypeProperty>
@@ -3299,7 +3292,7 @@
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#AgglomerativeClustering -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AgglomerativeClustering">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ClusterAnalysis"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#HierarchicalClustering"/>
     </owl:Class>
     
 
@@ -14751,14 +14744,6 @@
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Connection-basedClustering -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Connection-basedClustering">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ClusterAnalysis"/>
-    </owl:Class>
-    
-
-
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectionAttemptAnalysis -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectionAttemptAnalysis">
@@ -15414,18 +15399,6 @@ More generally, a name server is a computer application that implements a networ
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"/>
                 <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DocumentFile"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Email"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#inventories"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#MultimediaDocumentFile"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -16201,6 +16174,14 @@ More generally, a name server is a computer application that implements a networ
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#DivisiveClustering -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DivisiveClustering">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#HierarchicalClustering"/>
+    </owl:Class>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Document -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Document">
@@ -16965,10 +16946,18 @@ More generally, a name server is a computer application that implements a networ
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentAnalysis -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentAnalysis">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"/>
+    </owl:Class>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentRules -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentRules">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentAnalysis"/>
     </owl:Class>
     
 
@@ -17510,6 +17499,14 @@ More generally, a name server is a computer application that implements a networ
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#GoodmanAndKruskalsGamma">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#RankCorrelationCoefficient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#GradientBoostedDecisionTree -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#GradientBoostedDecisionTree">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CART"/>
     </owl:Class>
     
 
@@ -18725,6 +18722,14 @@ Intrusion prevention systems are considered extensions of intrusion detection sy
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#JournalArticle">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AcademicArticle"/>
         <rdfs:label>Journal Article</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#K-CenterClustering -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#K-CenterClustering">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Graph-basedClustering"/>
     </owl:Class>
     
 
@@ -20260,6 +20265,9 @@ Newer system call.</definition>
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MultimediaDocumentFile">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DocumentFile"/>
+        <definition>Digital video files which often contain audio.</definition>
+        <rdfs:label>Multimedia Document File</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Multimedia</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -22836,6 +22844,20 @@ Newer system call.</definition>
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ReissueCredential -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ReissueCredential">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#RestoreObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#restores"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Relational-basedTransferLearning -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Relational-basedTransferLearning">
@@ -24902,12 +24924,8 @@ Another difference are the capabilities of the mechanism:
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1003">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccessTechnique"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#accesses"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <attack-id>T1003</attack-id>
+        <rdfs:label>OS Credential Dumping</rdfs:label>
     </owl:Class>
     
 
@@ -34752,6 +34770,20 @@ Another difference are the capabilities of the mechanism:
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#UnlockAccount -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UnlockAccount">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#RestoreUserAccountAccess"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#restores"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#UnsupervisedLearning -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UnsupervisedLearning">
@@ -42014,8 +42046,6 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AssetInventory"/>
         <inventories rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Database"/>
         <inventories rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DocumentFile"/>
-        <inventories rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Email"/>
-        <inventories rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#MultimediaDocumentFile"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-DataProcessingAndScanningSystemsForGeneratingAndPopulatingADataInventory"/>
         <d3fend-id>D3-DI</d3fend-id>
     </owl:NamedIndividual>
@@ -42430,6 +42460,14 @@ It is a combination of VPN hardware and software technologies that provides VPN 
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DistributionProperties">
         <d3fend-id>D3A-DP</d3fend-id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#DivisiveClustering -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DivisiveClustering">
+        <d3fend-id>D3A-DC</d3fend-id>
     </owl:NamedIndividual>
     
 
@@ -42887,10 +42925,20 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentAnalysis -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentAnalysis">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CyberVaccineAndPredictiveMalwareDefensiveMethodsAndSystems"/>
+        <d3fend-id>D3-FCOA</d3fend-id>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentRules -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentRules">
-        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FileAnalysis"/>
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentAnalysis"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ComputationalModelingAndClassificationOfDataStreams_CrowdstrikeInc"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-DetectingScript-basedMalware_CrowdstrikeInc"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-DistributedMeta-informationQueryInANetwork_Bit9Inc"/>
@@ -43247,6 +43295,14 @@ It is a combination of VPN hardware and software technologies that provides VPN 
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#GoodmanAndKruskalsGamma">
         <d3fend-id>D3A-GAKG</d3fend-id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#GradientBoostedDecisionTree -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#GradientBoostedDecisionTree">
+        <d3fend-id>D3A-GBDT</d3fend-id>
     </owl:NamedIndividual>
     
 
@@ -43959,6 +44015,14 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <creates rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ScheduledJob"/>
         <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#JobSchedule"/>
         <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ScheduledJob"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#K-CenterClustering -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#K-CenterClustering">
+        <d3fend-id>D3A-KCC</d3fend-id>
     </owl:NamedIndividual>
     
 
@@ -45224,12 +45288,6 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MultilayerPerceptronClassification">
         <d3fend-id>D3A-MPC</d3fend-id>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#MultimediaDocumentFile -->
-
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MultimediaDocumentFile"/>
     
 
 
@@ -48858,6 +48916,21 @@ This requires filesystem data to determine whether files have been created.</kb-
         <kb-abstract>MITRE’s Cyber Command System (CyCS) tool addresses the objective of improved mission assurance in cyberspace by enabling the mapping of mission operations to the network operations that support those missions. This tool provides mission-impact assessment through situational awareness and impact analysis. CyCS addresses mission-assurance challenges for highly distributed enterprise systems of systems through vulnerability, threat, and consequence management.</kb-abstract>
         <kb-organization>MITRE</kb-organization>
         <rdfs:label>Reference - Cyber Command System (CYCS)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CyberVaccineAndPredictiveMalwareDefensiveMethodsAndSystems -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CyberVaccineAndPredictiveMalwareDefensiveMethodsAndSystems">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#PatentReference"/>
+        <kb-reference-of rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentAnalysis"/>
+        <has-link rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://patents.google.com/patent/US10848519B2/</has-link>
+        <kb-reference-title>Cyber vaccine and predictive-malware-defense methods and systems</kb-reference-title>
+        <kb-abstract>Methods and systems for Predictive Malware Defense (PMD) are described. The systems and methods can utilize advanced machine-learning (ML) techniques to generate malware defenses preemptively. Embodiments of PMD can utilize models, which are trained on features extracted from malware families, to predict possible courses of malware evolution. PMD captures these predicted future evolutions in signatures of as yet unseen malware variants to function as a malware vaccine. These signatures of predicted future malware “evolutions” can be added to the training set of a machine-learning (ML) based malware detection and/or mitigation system so that it can detect these new variants as they arrive.</kb-abstract>
+        <kb-author>Michael Howard, Avi Pfeifer, Mukesh Dalal, Michael Reposa</kb-author>
+        <kb-organization>Charles River Analytics Inc.</kb-organization>
+        <rdfs:label>Reference - Cyber vaccine and predictive-malware-defense methods and systems</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -52868,6 +52941,17 @@ With keystroke dynamics the biometric template used to identify an individual is
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ReissueCredential -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ReissueCredential">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#RestoreObject"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CybersecurityIncidentandVulnerabilityResponsePlaybooks"/>
+        <restores rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"/>
+        <d3fend-id>D3-RC</d3fend-id>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Relational-basedTransferLearning -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Relational-basedTransferLearning">
@@ -53988,14 +54072,6 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1001">
         <produces rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetNetworkTraffic"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1003 -->
-
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1003">
-        <accesses rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"/>
     </owl:NamedIndividual>
     
 
@@ -56946,6 +57022,17 @@ With keystroke dynamics the biometric template used to identify an individual is
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#UnlockAccount -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UnlockAccount">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#RestoreUserAccountAccess"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CybersecurityIncidentandVulnerabilityResponsePlaybooks"/>
+        <restores rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"/>
+        <d3fend-id>D3-ULA</d3fend-id>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#UnsupervisedLearning -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UnsupervisedLearning">
@@ -58309,16 +58396,16 @@ Wikipedia. (n.d.). Artificial neural network. [Link](https://en.wikipedia.org/wi
         <definition>Combines the principles of Artificial Neural Networks (ANN) and clustering methods.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ARIMAModel">
+        <definition>An autoregressive integrated moving average (ARIMA) model is a generalization of an autoregressive moving average (ARMA) model.</definition>
         <kb-article>## References
 Wikipedia. (n.d.). Autoregressive integrated moving average. [Link](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average)</kb-article>
-        <definition>An autoregressive integrated moving average (ARIMA) model is a generalization of an autoregressive moving average (ARMA) model.</definition>
         <synonym>Autoregressive Integrated Moving Average Model</synonym>
         <rdfs:label>ARIMA Model</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ARMA_Model">
+        <definition>Autoregressive-moving-average (ARMA) models provide a parsimonious description of a (weakly) stationary stochastic process in terms of two polynomials, one for the autoregression (AR) and the second for the moving average (MA).</definition>
         <kb-article>## References
 Wikipedia. (n.d.). Autoregressive-moving-average model. [Link](https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model)</kb-article>
-        <definition>Autoregressive-moving-average (ARMA) models provide a parsimonious description of a (weakly) stationary stochastic process in terms of two polynomials, one for the autoregression (AR) and the second for the moving average (MA).</definition>
         <rdfs:label>ARMA Model</rdfs:label>
         <synonym>Autoregressive moving average model</synonym>
     </rdf:Description>
@@ -58456,11 +58543,78 @@ Network protocols such as RDP, IPMI, SSH, SNMP, VNC, MOSH, NX, TeamViewer, SPICE
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AgglomerativeClustering">
         <rdfs:label>Agglomerative Clustering</rdfs:label>
-        <kb-article>## References
-scikit-learn. (n.d.). AgglomerativeClustering. [Link](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.
-Wikipedia. (2021, August 10). Hierarchical clustering. [Link](https://en.wikipedia.org/wiki/Hierarchical_clustering)
-html)</kb-article>
-        <definition>Recursively merges pair of clusters of sample data; uses linkage distance.</definition>
+        <definition>Agglomerative Clustering is a type of hierarchical clustering method where data points are grouped together based on similarity. Initially, each data point is treated as an individual cluster, and then in successive iterations, the closest clusters are merged until only one large cluster remains or until a specified stopping criterion is met.</definition>
+        <kb-article>## How it works 
+
+Agglomerative clustering starts with each data point as its own cluster. The algorithm then iterates, identifying the two clusters that are closest to each other based on a defined distance metric (e.g., Euclidean, Manhattan). These two clusters are then merged into a single cluster. This process continues iteratively, merging the closest pairs of clusters in each step until all data points are merged into a single cluster or until other stopping criteria are achieved. A dendrogram, which is a tree-like diagram, can be used to represent the sequence of merges, providing a visual representation of the hierarchical structure of data. 
+
+## Considerations  
+
+- **Choice of Distance Metric**: The outcome can vary significantly depending on the chosen distance metric (e.g., Euclidean, Manhattan). 
+
+- **Scalability**: Agglomerative clustering can be computationally intensive for large datasets. 
+
+- **Sensitivity**: The method can be sensitive to outliers, which might affect the quality of the clusters formed. 
+
+## Key Test Considerations  
+
+- **Unsupervised Learning**:
+
+  - **Number of Clusters**: Determine an optimal number of clusters using the dendrogram and techniques like the elbow method.
+
+- **Cluster Analysis**:
+
+    - **Silhouette Score**: Evaluates how similar an object is to its own cluster compared to other clusters. A higher silhouette score indicates that the object is well matched to its own cluster and poorly matched to neighboring clusters.
+
+    - **Dunn Index**: Measures the ratio between the smallest distance between observations not in the same cluster to the largest intra-cluster distance.
+
+- **Hierarchical Clustering**:
+
+    - **Cophenetic Correlation Coefficient**: Measures the correlation between the distances of points in feature space and their distances on the dendrogram. Helps assess the fidelity of the dendrogram in preserving pairwise distances between samples.
+
+- **Agglomerative Clustering**:
+
+    - **Linkage Criteria**: Test different linkage criteria (e.g., single, complete, average) to determine which produces the most cohesive clusters for the data at hand. 
+
+  ## Platforms, Tools, or Libraries
+
+- **scikit-learn**:
+
+    - A versatile machine learning library in Python.
+
+    - The `AgglomerativeClustering` class in scikit-learn provides this functionality.
+
+- **SciPy**:
+
+    - A Python library used for scientific and technical computing.
+
+    - The `scipy.cluster.hierarchy` module provides functions for hierarchical and 
+    agglomerative clustering, including the `linkage` and `dendrogram` functions.
+
+- **R**:
+
+    - The `hclust` function in the stats package provides agglomerative clustering.
+
+    - The `agnes` function in the `cluster` package offers a more extensive implementation.
+
+- **MATLAB**:
+
+    - Offers the `linkage` function for hierarchical agglomerative clustering and `dendrogram` for visualization.
+
+- **Weka**:
+
+    - A collection of machine learning algorithms for data mining tasks.
+
+    - The `HierarchicalClusterer` class provides an implementation of agglomerative clustering.
+
+## References  
+
+1. Jain, A. K., &amp; Dubes, R. C. (1988). *Algorithms for clustering data*. Prentice-Hall, Inc.
+
+2. Murtagh, F., &amp; Legendre, P. (2014). Ward’s hierarchical agglomerative clustering method: which algorithms implement Ward’s criterion?. *Journal of Classification*, 31(3), 274-295. [Link](https://link.springer.com/article/10.1007/s00357-014-9161-z). 
+
+3. Scikit-learn. (30 Jun 2023). Scikit-learn Documentation: Agglomerative Clustering.
+[Link](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html).</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AlethicLogic">
         <rdfs:label>Alethic Logic</rdfs:label>
@@ -58486,8 +58640,8 @@ In a more general sense, ASP includes all applications of answer sets to knowled
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Application">
         <rdfs:label>Application</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Application_software"/>
-        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/06582286-n"/>
         <definition>A program that gives a computer instructions that provide the user with tools to accomplish a task; &quot;he has tried several different word processing applications&quot;.  Distinct from system software that is intrinsically part of the operating system.  An application can be made up of executable files, configuration files, shared libraries, etc.</definition>
+        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/06582286-n"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ApplicationConfiguration">
         <definition>Information used to configure the parameters and initial settings for an application.</definition>
@@ -58555,8 +58709,8 @@ ANN Classification. [Link](http://uc-r.github.io/ann_classification).</kb-articl
         <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</display-order>
         <synonym>Asset Discovery</synonym>
         <synonym>Asset Inventorying</synonym>
-        <rdfs:label>Asset Inventory</rdfs:label>
         <definition>Asset inventorying identifies and records the organization&apos;s assets and enriches each inventory item with knowledge about their vulnerabilities.</definition>
+        <rdfs:label>Asset Inventory</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration">
         <definition>Asset vulnerability enumeration enriches inventory items with knowledge identifying their vulnerabilities.</definition>
@@ -58585,8 +58739,8 @@ Day, O., &amp; Khoshgoftaar, T.M. (2017). A survey on heterogeneous transfer lea
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Authentication">
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
         <definition>A request-response comprising a user credential presentation to a system and a verification response.</definition>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authentication"/>
         <rdfs:label>Authentication</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authentication"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthenticationCacheInvalidation">
         <definition>Removing tokens or credentials from an authentication cache to prevent further user associated account accesses.</definition>
@@ -58659,8 +58813,8 @@ Authorization event data is collected to create a baseline user profile. Authori
 Depending on the complexity of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If malicious activity is not statistically different from benign activity, an alert threshold will not be met.</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthorizationLog">
-        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
         <rdfs:label>Authorization Log</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
         <definition>A log of authorization events.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authorization"/>
     </rdf:Description>
@@ -58819,6 +58973,7 @@ Bootstrap aggregating. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Bootstra
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#BroadcastDomainIsolation">
         <synonym>Network Segmentation</synonym>
         <definition>Broadcast isolation restricts the number of computers a host can contact on their LAN.</definition>
+        <rdfs:label>Broadcast Domain Isolation</rdfs:label>
         <kb-article>## How it works
 Software Defined Networking, or other network encapsulation technologies intercept host broadcast traffic then route it to a specified destination per a configured policy.
 
@@ -58826,7 +58981,6 @@ This can be implemented within hypervisors, networking hardware (WAPs, switches,
 
 ## Considerations
 This technique is highly dependent on network infrastructure and networking requirements.</kb-article>
-        <rdfs:label>Broadcast Domain Isolation</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Browser">
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/13376000-n"/>
@@ -58848,7 +59002,6 @@ Ensemble learning. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Ensemble_lea
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ByteSequenceEmulation">
         <rdfs:label>Byte Sequence Emulation</rdfs:label>
         <definition>Analyzing sequences of bytes and determining if they likely represent malicious shellcode.</definition>
-        <synonym>Shellcode Transmission Detection</synonym>
         <kb-article>## How it works
 
 Bytes are analyzed as if they are machine code instructions, and such instructions that are a common component of known shellcode are noted, such as stack pivots, reads from a Memory Address Table, and system calls for functions that disable protections or execute code.  For example, the x86 instruction `b0 0b: mov $11, %ax`, with no further alterations to the `%ax` register, followed by `cd 80: syscall` executes the system call `execve()` in the Linux kernel, which replaces the current process with another one specified -- this is a common action in shellcode, so this sequence would be flagged.
@@ -58875,6 +59028,7 @@ With inserting code directly, that it is not a buffer overflow, and just some pl
 ### False Positives
 
 Byte sequences containing code that is never used as machine code are still analyzed and flagged for anomalies, and [eventually](http://mathforum.org/library/drmath/view/55871.html), it is likely that an attack sequence will arise from the sheer volume of bytes transmitted.</kb-article>
+        <synonym>Shellcode Transmission Detection</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#C4.5">
         <rdfs:label>C4.5</rdfs:label>
@@ -58985,8 +59139,8 @@ Classification and Regression Tree (CART) Algorithm. Analytics Steps. [Link](htt
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CacheMemory">
         <rdfs:isDefinedBy>https://whatis.techtarget.com/definition/memory</rdfs:isDefinedBy>
         <rdfs:seeAlso>https://dbpedia.org/page/CPU_cache</rdfs:seeAlso>
-        <definition>Cache memory is temporary storage that is more readily available to the processor than the computer&apos;s main memory source, located between the main memory and the processor.  It is typically either integrated directly into the CPU chip (level 1 cache) or placed on a separate chip with a bus interconnect with the CPU (level 2 cache).</definition>
         <rdfs:label>Processor Cache Memory</rdfs:label>
+        <definition>Cache memory is temporary storage that is more readily available to the processor than the computer&apos;s main memory source, located between the main memory and the processor.  It is typically either integrated directly into the CPU chip (level 1 cache) or placed on a separate chip with a bus interconnect with the CPU (level 2 cache).</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CallStack">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Call_stack"/>
@@ -59079,11 +59233,144 @@ An extension of PKP is Subject Public Key Information Pinning (SPKI) includes pu
         <kb-article>## How it works
 Classification recognizes specific entities within the dataset and attempts to draw some conclusions on how those entities should be labeled or defined. Common classification algorithms are linear classifiers, support vector machines (SVM), decision trees, k-nearest neighbor, and random forest, which are described in more detail below.
 
+## Considerations:
 
-## References
-Supervised Learning. IBM. [Link](https://www.ibm.com/topics/supervised-learning).
+There are many different types of classification algorithms for modeling classification predictive modeling problems.
 
-Types of Classification in Machine Learning. Machine Learning Mastery. [Link](https://machinelearningmastery.com/types-of-classification-in-machine-learning/).</kb-article>
+There is no single theory on how to map algorithms onto problem types; instead, it is generally recommended that a practitioner use controlled experiments and discover which algorithm and algorithm configuration results in the best performance for a given classification task.
+
+## Key Test Considerations  
+
+- **Machine Learning**:
+
+  - **Verify the dataset quality**: Check the data to make sure it is
+      free of errors.  Quantify the degree of missing values,
+      outliers, and noise in the data collection.  If the data quality
+      is low, it may be difficult or impossible to create models and
+      systems with the desired performance.
+
+  - **Verify development datasets are representative** of expected
+      operational environment and data collection means.  Compare
+      distributions of dataset features and labels with exploratory
+      data analysis and assess the difference in tests on training
+      data and tests on evaluation data (where the evaluation data
+      must be drawn from a representative dataset.)
+
+  - **Use software libraries**: and tools built for ML where possible, so
+      that the underlying code is verified by prior use.**
+
+  - **Diagnose model errors with domain SMEs**: Have problem domain
+    SMEs investigate model errors for conditions for which the model
+    may underperform and suggest refinements.
+
+- **Classification**:
+
+  - **Use Standard Classification Performance Measures**: Not all of
+      the following may be necessary, but should be considered for
+      both verification (developmental test) and operational test
+      stages use:
+
+    - **Accuracy**: The fraction of predictions that were corret.
+
+    - **Precision**: The proportion of positive identifications that were correct.
+
+    - **Recall**: The proportion of actual positive cases identified correctly.
+
+    - **F-Measure**: Combines the preicion and recall into a single
+        score.  It is the harmonic mean of the precision and recall.
+
+    - **Receiver Operating Characteristic (ROC) Curve**: A ROC curve
+        shows the performance of a classification model at all
+        classification thresholds.  It graphs the True Positive Rate
+        over the False Positive Rate.
+
+    - **Area Under the ROC Curve (AUC)**: This measures the
+        two-dimensional area under the ROC Curve.  AUC is
+        scale-invariant and classification-threshold invariant.
+
+    - **ROC TP vs FP points**: In addition to a specific AUC score,
+        the performance at points
+
+    - **Confusion Matrix**: A confusion matrix is a table layout that
+        allows the visualization of the performance of an
+        algorithm. Each row of the matrix represents the instances in
+        an actual class while each column represents the instances in
+        a predicted class, or vice versa. It is a special kind of
+        contingency table, with two dimensions (&quot;actual&quot; and
+        &quot;predicted&quot;), and identical sets of &quot;classes&quot; in both
+        dimensions (each combination of dimension and class is a
+        variable in the contingency table.)
+
+  - **Prediction Bias**: The difference between the average of the
+      predicted labels and the average of the labels in the data
+      set.  One should check for prediction bias when evaluating the
+      classifier&apos;s results. Causes of bias can include:
+
+    - **Noisy data set**: Errors in original data can as the
+      collection method may have an underlying bias.
+	
+    - **Processing bug**: Errors in the data pipeline can
+      introduce bias.
+	
+    - **Biased training sample (unbalanced samples)**: Model
+      parameters may be skewed towards majority classes.
+	
+	- **Overly strong regularization**: Model may be underfitting
+        model and too simple.
+	
+	- **Proxy variables**: Model features may be highly
+        correlated.
+
+  - **Overfitting and Underfitting**: Overfitting occurs when the the
+    model built corresponds too closely or exactly to a particular
+    set of data, and thus may fail to fit to predict additional data
+    reliably. An overfitted model is a mathematical model that
+    contains more parameters than can be justified by the data.
+    Underfitting occurs when the model built does adequately capture
+    the patterns in the data. As an example, a linear model will
+    underfit a non-linear dataset.
+
+## Platforms, Tools, or Libraries:
+
+- **Python**:
+
+  - **scikit-learn**: Is a free software machine learning library for
+      Python and includes features for classification.
+
+  - **TensorFlow**: is an end-to-end source machine learning
+    platform.
+
+  - **Keras**: is an open-source library that provides a Python API
+    designed to enable fast experimentation with deep neural networks.
+
+  - **PyTorch**: Is a machine learning framework based on the Torch
+    library.
+
+- **R**:
+
+  - **caret**: Classification And REgression Training package contains
+      functions to streamline model training for complex regression
+      and classification problems.
+
+  - **randomForest**: Implementation of classification and regression
+      based on forest of trees.
+      
+## References  
+
+1. Supervised Learning. IBM.
+[Link](https://www.ibm.com/topics/supervised-learning).
+
+1. Types of Classification in Machine Learning. Machine Learning Mastery.
+[Link](https://machinelearningmastery.com/types-of-classification-in-machine-learning/).
+
+1. Google. (18 July 2022). Classification: Precision and Recall.
+[Link](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall).
+
+1. Wikipedia. (18 Aug 2023). Overfitting.
+[Link](https://en.wikipedia.org/wiki/Overfitting).
+
+1. Wikipedia. (19 Aug 2023). Confusion matrix.
+[Link](https://en.wikipedia.org/wiki/Confusion_matrix).</kb-article>
         <definition>Classification uses an algorithm to accurately assign test data into specific categories.</definition>
         <rdfs:label>Classification</rdfs:label>
     </rdf:Description>
@@ -59153,8 +59440,8 @@ Cluster analysis. (n.d.). Wikipedia. [Link](https://en.wikipedia.org/wiki/Cluste
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Repository_(version_control)"/>
         <rdfs:label>Code Repository</rdfs:label>
         <skos:altLabel>Repository</skos:altLabel>
-        <definition>A code repository is a form of database where code, typically source code, is stored and managed.  In revision control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Depending on whether the version control system in use is distributed like (Git or Mercurial) or centralized like (Subversion, CVS, or Perforce), the whole set of information in the repository may be duplicated on every user&apos;s system or may be maintained on a single server.</definition>
         <skos:altLabel>Version Control Repository</skos:altLabel>
+        <definition>A code repository is a form of database where code, typically source code, is stored and managed.  In revision control systems, a repository is a data structure that stores metadata for a set of files or directory structure. Depending on whether the version control system in use is distributed like (Git or Mercurial) or centralized like (Subversion, CVS, or Perforce), the whole set of information in the repository may be duplicated on every user&apos;s system or may be maintained on a single server.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CoefficientOfVariation">
         <rdfs:label>Coefficient of Variation</rdfs:label>
@@ -59192,8 +59479,8 @@ Wikipedia. (n.d.). Coefficient of variation. [Link](https://en.wikipedia.org/wik
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLog">
         <rdfs:label>Command History Log</rdfs:label>
-        <definition>A log of commands run in an operating system shell.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Command_history"/>
+        <definition>A log of commands run in an operating system shell.</definition>
         <rdfs:seeAlso>d3f:CommandLineInterface</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CommandHistoryLogFile">
@@ -59242,13 +59529,8 @@ A connected honeynet provides a tradeoff between emulating certain functionality
         <definition>A decoy service, system, or environment, that is connected to the enterprise network, and simulates or emulates certain functionality to the network, without exposing full access to a production system.</definition>
         <rdfs:label>Connected Honeynet</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Connection-basedClustering">
-        <rdfs:label>Connection-based Clustering</rdfs:label>
-        <kb-article>## References
-Connectivity-Based Clustering. Sarang, P. (2023) in Thinking Data Science. The Springer Series in Applied Machine Learning. Springer, Cham. [Link](https://doi.org/10.1007/978-3-031-02363-7_10)</kb-article>
-        <definition>Connectivity-based clustering is based on connectivity between the elements Clusters are created by building a hierarchical tree-type structure.</definition>
-    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectionAttemptAnalysis">
+        <rdfs:label>Connection Attempt Analysis</rdfs:label>
         <kb-article>## How it works
 Connection Attempt Analysis in multiple ways.
 
@@ -59263,7 +59545,6 @@ Another approach passively inspects network traffic with application protocol an
 * Implementations that rely on analysis of unallocated IP address space increase in their complexity with network size and decentralized network infrastructure.
 * Inventory of unallocated IP space should should be continuously updated to mitigate the risk of false positives.
 * IPv6 also introduces challenges including IPv6 traffic bypassing IPv4 specific protection systems (ex. firewalls and IDS) and complexity in managing both IPv6 and IPv4 addresses.</kb-article>
-        <rdfs:label>Connection Attempt Analysis</rdfs:label>
         <synonym>Network Scan Detection</synonym>
         <definition>Analyzing failed connections in a network to detect unauthorized activity.</definition>
     </rdf:Description>
@@ -59479,8 +59760,8 @@ For example, a DNS policy can be created for blocking DNS queries for FQDNs that
 - Continuous maintenance of unauthorized domain lists is needed to keep up to date with possible site content changes.
 - File sharing or content delivery networks may require other filtering techniques that are more fine-grained (URL blocking).
 - Access to malicious websites or other network resources directly by IP instead of by DNS record, or after alteration of local DNS hosts file, may not result in DNS network traffic.</kb-article>
-        <definition>Blocking DNS Network Traffic based on criteria such as IP address, domain name, or DNS query type.</definition>
         <synonym>DNS Blacklisting</synonym>
+        <definition>Blocking DNS Network Traffic based on criteria such as IP address, domain name, or DNS query type.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DNSLookup">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/List_of_DNS_record_types"/>
@@ -59590,36 +59871,155 @@ Code can also be deemed unreachable for certain run-time conditions. Different d
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecisionTree">
         <definition>Decision tree learning is a supervised learning approach used in statistics, data mining, and machine learning. In this formalism, a classification or regression decision tree is used as a predictive model to draw conclusions about a set of observations.</definition>
-        <kb-article>## How it works
+        <kb-article>## Definition 
+
+Decision tree learning is a supervised learning approach used in statistics, data mining, and machine learning. In this formalism, a classification or regression decision tree is used as a predictive model to draw conclusions about a set of observations.
+
+## How it works
+
 A decision tree starts with a root node, which does not have any incoming branches. The outgoing branches from the root node then feed into the internal nodes, also known as decision nodes. Based on the available features, both node types conduct evaluations to form homogenous subsets, which are denoted by leaf nodes, or terminal nodes. The leaf nodes represent all the possible outcomes within the dataset.
 
-## Considerations
+## Considerations  
 
 While the basic underlying model is that of a decision tree, the decision tree node criteria, and the method for identifying splits varies significantly depending on the learning algorithm selected (e.g., CART, ID3, C4.5, C5.0, CHAID, MARS.)  Extensions like linear and logistic trees can add additional expressiveness as well.
 
-### Verification Approach
-- Use software libraries and tools built for ML where possible, so that the underlying code is verified by prior use.
-- Use standard ML measures for both verification (developmental test) and operational test stages (e.g., accuracy, precision, recall, F1, ROC, confusion matrices.)
-- Assay your data to determine if a decision tree learning method will be effective, and if additional steps or supplemental ML techniques should be incorporated into the solution:
-  - Missing values,
-  - Noise and/or error rates in input data for each feature, or
-  - Decision trees are ideal when decision boundaries can be found that lie along axes of features.
-  - Target class balance; decision tree learning algorithms are especially sensitive to unbalanced target classes.
-- Decision tree learning overfitting may require tuning algorithm hyperparameters such as tree depth, max features used, max leaf nodes, etc.
-- Pruning may result in a more robust model in real-word applications.
+## Key Test Considerations  
+
+- **Machine Learning**:
+
+  - **Verify the dataset quality**: Check the data to make sure it is
+      free of errors.  Quantify the degree of missing values,
+      outliers, and noise in the data collection.  If the data quality
+      is low, it may be difficult or impossible to create models and
+      systems with the desired performance.
+
+  - **Verify development datasets are representative**: of expected
+      operational environment and data collection means.  Compare
+      distributions of dataset features and labels with exploratory
+      data analysis and assess the difference in tests on training
+      data and tests on evaluation data (where the evaluation data
+      must be drawn from a representative dataset.)
+
+   - **Use a variety of data sets**: where available and applicable, to
+      reflect different operating and environment conditions that are
+      likley to be be encountered.
+
+  - **Use software libraries**: and tools built for ML where possible, so
+      that the underlying code is verified by prior use.**
+
+  - **Diagnose model errors with domain SMEs**: Have problem domain
+    SMEs investigate model errors for conditions for which the model
+    may underperform and suggest refinements.
+
+- **Classification**:
+
+  - **Use Standard Classification Performance Measures**: Not all of
+      the following may be necessary, but should be considered for
+      both verification (developmental test) and operational test
+      stages use:
+
+    - **Accuracy**: The fraction of predictions that were corret.
+
+    - **Precision**: The proportion of positive identifications that were correct.
+
+    - **Recall**: The proportion of actual positive cases identified correctly.
+
+    - **F-Measure**: Combines the preicion and recall into a single
+        score.  It is the harmonic mean of the precision and recall.
+
+    - **Receiver Operating Characteristic (ROC) Curve**: A ROC curve
+        shows the performance of a classification model at all
+        classification thresholds.  It graphs the True Positive Rate
+        over the False Positive Rate.
+
+    - **Area Under the ROC Curve (AUC)**: This measures the
+        two-dimensional area under the ROC Curve.  AUC is
+        scale-invariant and classification-threshold invariant.
+
+    - **ROC TP vs FP points**: In addition to a specific AUC score,
+        the performance at points
+
+    - **Confusion Matrix**: A confusion matrix is a table layout that
+        allows the visualization of the performance of an
+        algorithm. Each row of the matrix represents the instances in
+        an actual class while each column represents the instances in
+        a predicted class, or vice versa. It is a special kind of
+        contingency table, with two dimensions (&quot;actual&quot; and
+        &quot;predicted&quot;), and identical sets of &quot;classes&quot; in both
+        dimensions (each combination of dimension and class is a
+        variable in the contingency table.)
+
+  - **Prediction Bias**: The difference between the average of the
+      predicted labels and the average of the labels in the data
+      set.  One should check for prediction bias when evaluating the
+      classifier&apos;s results. Causes of bias can include:
+
+    - **Noisy data set**: Errors in original data can as the
+      collection method may have an underlying bias.
+	
+    - **Processing bug**: Errors in the data pipeline can
+      introduce bias.
+	
+    - **Biased training sample (unbalanced samples)**: Model
+      parameters may be skewed towards majority classes.
+	
+    - **Overly strong regularization**: Model may be underfitting
+       model and too simple.
+	
+    - **Proxy variables**: Model features may be highly
+       correlated.
+
+- **Supervised Learning**:
+
+  - **Overfitting and Underfitting**: Overfitting occurs when the the
+    model built corresponds too closely or exactly to a particular
+    set of data, and thus may fail to fit to predict additional data
+    reliably. An overfitted model is a mathematical model that
+    contains more parameters than can be justified by the data.
+    Underfitting occurs when the model built does adequately capture
+    the patterns in the data. As an example, a linear model will
+    underfit a non-linear dataset.
+
+  - **Sensitivity**: Perform N-fold Cross validation to indicate how
+    much sensitivity the algorithm has to data variation and to avoid
+    overfitting operational models.
+
+- **Decision Tree Learning**:
+
+  - **Sensitive to unbalanced classes**: Examine and determine target
+      class balance; decision tree learning algorithms are especially
+      sensitive to unbalanced target classes.
+
+  - **Consider decision boundaries**: Perform exploratory data
+      analysis to determine if decision boundaries lie alongaxes of
+      features. _Decision trees are ideal when decision boundaries can
+      be found that lie along axes of features._
+
+   - **Decision tree overfitting** may require tuning algorithm hyperparameters such as tree depth, max features used, max leaf nodes, etc.
+
+   - **Pruning** may result in a more robust model in real-word applications.
+
+   - **Missing values**: Inspect the data set to determine if there
+     are missing values and select a means to address them, either by
+     choosing an algorithm that works well or a way to impute the
+     value or eliminate the missing values in the data sensors or
+     pipeline.
+    
+## Platforms, Tools, or Libraries
+
+- **scikit-learn**: includes tree algorithms for ID3, C4.5, C5.0, and CART.
+
+- **Weka**: includes J48 (C4.5), SimpleCart (CART), Logistic Model Trees, Naive Bayes Trees, and more.
 
 ### Validation Approach
 - Use operationally relevant data across the range of application&apos;s operating environment.
-  - Use a variety of data sets reflecting different operating and environment conditions.
-  - Apply cross-fold validation to see sensitivity to data variation and avoid overfitting operational models.
-- Use SMEs to investigate model errors for problem domain areas or conditions for which the model may underperform and suggest refinements.
 - Incorporate some kind of continuous validation to address concept drift and the need to retrain the model and/or check data quality.
 
 ## References
-1. Decision tree learning. (2023, May 30). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Decision_tree_learning)
-2. Decision Trees. (n.d.). In _scikit-learn User Guide 1.2.2_. [Link](https://scikit-learn.org/stable/modules/tree.html)
-3. Concept drift. (2023, April 17). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Concept_drift)
-4. 8 Concept Drift Detection Methods. (n.d.). In _Aporia Learning Center_. [Link](https://www.aporia.com/learn/data-drift/concept-drift-detection-methods/)</kb-article>
+1. Decision tree learning. (2023, May 30). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Decision_tree_learning).
+2. Decision Trees. (n.d.). In _scikit-learn User Guide 1.2.2_. [Link](https://scikit-learn.org/stable/modules/tree.html).
+3. Concept drift. (2023, April 17). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Concept_drift).
+4. 8 Concept Drift Detection Methods. (n.d.). In _Aporia Learning Center_. [Link](https://www.aporia.com/learn/data-drift/concept-drift-detection-methods/).</kb-article>
         <rdfs:label>Decision Tree</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecisionTreeRegression">
@@ -59631,8 +60031,8 @@ scikit-learn. (n.d.). Decision Trees. [Link](https://scikit-learn.org/stable/mod
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyArtifact">
         <skos:altLabel>Trap</skos:altLabel>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Deception_technology"/>
-        <skos:altLabel>Lure</skos:altLabel>
         <skos:altLabel>Decoy</skos:altLabel>
+        <skos:altLabel>Lure</skos:altLabel>
         <definition>A decoy is an imitation digital artifact in any sense of a digital artifact, object, or phenomenon that is intended to deceive a cyber attacker&apos;s surveillance devices or mislead their evaluation.  Examples include fake files, accounts, hosts (honeypots), and network segments (honeynets).</definition>
         <rdfs:seeAlso rdf:resource="https://doi.org/10.1007/978-3-319-25133-2"/>
         <rdfs:seeAlso rdf:resource="https://shield.mitre.org/"/>
@@ -59763,8 +60163,8 @@ Q-learning. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Q-learning#Deep_Q-l
         <rdfs:label>Defense Evasion Technique</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DefensiveTechnique">
-        <display-baseurl>/technique/</display-baseurl>
         <synonym>Technical Security Control</synonym>
+        <display-baseurl>/technique/</display-baseurl>
         <synonym>Defensive Capability Feature</synonym>
         <definition>A method which makes a computer system more difficult to attack.</definition>
         <rdfs:label>Defensive Technique</rdfs:label>
@@ -59822,13 +60222,13 @@ Wikipedia. (n.d.). Descriptive statistics. [Link](https://en.wikipedia.org/wiki/
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Detect">
         <definition>The detect tactic is used to identify adversary access to or unauthorized activity on computer networks.</definition>
-        <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</display-order>
         <rdfs:label>Detect</rdfs:label>
+        <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</display-order>
         <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-priority>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact">
-        <display-baseurl>/dao/artifact/</display-baseurl>
         <definition>An information-bearing artifact (object) that is, or is encoded to be used with, a digital computer system. This concept is broad to include the literal instances of an artifact, or an implicit summarization of changes to or properties of other artifacts.</definition>
+        <display-baseurl>/dao/artifact/</display-baseurl>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Digital_artifactual_value"/>
         <synonym>Digital Asset</synonym>
         <rdfs:label>Digital Artifact</rdfs:label>
@@ -59890,8 +60290,8 @@ Wikipedia. (n.d.). Multivariate statistics. [Link](https://en.wikipedia.org/wiki
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Display_server"/>
         <definition>A display server or window server is a program whose primary task is to coordinate the input and output of its clients to and from the rest of the operating system, the hardware, and each other. The display server communicates with its clients over the display server protocol, a communications protocol, which can be network-transparent or simply network-capable. The display server is a key component in any graphical user interface, specifically the windowing system.</definition>
-        <skos:altLabel>Window Server</skos:altLabel>
         <rdfs:label>Display Server</rdfs:label>
+        <skos:altLabel>Window Server</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Distribution-basedClustering">
         <definition>Distribution-based clustering creates and groups data points based on their likely hood of belonging to the same probability distribution (Gaussian, Binomial, etc.) in the data.</definition>
@@ -59904,6 +60304,10 @@ AnalytixLabs. (n.d.). Types of Clustering Algorithms. [Link](https://www.analyti
         <rdfs:label>Distribution Properties</rdfs:label>
         <kb-article>## References
 Wikipedia. (n.d.). Probability distribution. [Link](https://en.wikipedia.org/wiki/Probability_distribution)</kb-article>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DivisiveClustering">
+        <rdfs:label>Divisive Clustering</rdfs:label>
+        <definition>A divisive clustering approach is a hierarchical, top-down approach to clustering a dataset.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DocumentFile">
         <definition>A document is a written, drawn, presented or recorded representation of thoughts. An electronic document file is usually used to describe a primarily textual file, along with its structure and design, such as fonts, colors and additional images.</definition>
@@ -59968,6 +60372,7 @@ CompNeuro Neuromatch Academy Tutorials. [Link](https://compneuro.neuromatch.io/t
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis">
         <definition>Executing or opening a file in a synthetic &quot;sandbox&quot; environment to determine if the file is a malicious program or if the file exploits another program such as a document reader.</definition>
         <rdfs:label>Dynamic Analysis</rdfs:label>
+        <synonym>Malware Sandbox</synonym>
         <kb-article>## How it works
 Analyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.
 
@@ -59979,13 +60384,12 @@ Analyzing the interaction of a piece of code with a system while the code is bei
 
 ## Implementations
 * [Cuckoo Sandbox](https://cuckoosandbox.org)</kb-article>
-        <synonym>Malware Sandbox</synonym>
         <synonym>Malware Detonation</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Email">
         <rdfs:seeAlso>https://schema.ocsf.io/objects/email</rdfs:seeAlso>
-        <definition>An email, or email message, is a document that is sent between computer users across computer networks.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Email"/>
+        <definition>An email, or email message, is a document that is sent between computer users across computer networks.</definition>
         <rdfs:label>Email</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#EmailAttachment">
@@ -60113,9 +60517,9 @@ Pennsylvania State University. (n.d.). Statistical Inference and Estimation. [Li
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExactMatching">
         <rdfs:label>Exact Matching</rdfs:label>
         <definition>Exact matching for numeric types is just the simple test for mathematical equivalence of the values being matched.</definition>
+        <synonym>Numeric Equivalence Matching</synonym>
         <kb-article>## References
 1. Equality (mathematics). (2023, May 31). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Equality_(mathematics)]</kb-article>
-        <synonym>Numeric Equivalence Matching</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExceptionHandlerPointerValidation">
         <rdfs:label>Exception Handler Pointer Validation</rdfs:label>
@@ -60213,8 +60617,8 @@ On a Windows machine the Windows Defender Application Control (WDAC) policy enfo
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Executable"/>
-        <skos:altLabel>Executable</skos:altLabel>
         <definition>In computing, executable code or an executable file or executable program, sometimes simply an executable, causes a computer &quot;to perform indicated tasks according to encoded instructions,&quot; as opposed to a data file that must be parsed by a program to be meaningful. These instructions are traditionally machine code instructions for a physical CPU. However, in a more general sense, a file containing instructions (such as bytecode) for a software interpreter may also be considered executable; even a scripting language source file may therefore be considered executable in this sense. The exact interpretation depends upon the use; while the term often refers only to machine code files, in the context of protection against computer viruses all files which cause potentially hazardous instruction</definition>
+        <skos:altLabel>Executable</skos:altLabel>
         <rdfs:label>Executable File</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableScript">
@@ -60301,7 +60705,14 @@ Protocol stream reassembly software recreates a directional byte stream by analy
 - This is an error prone process due to the intricacies of network protocols and network packet capture.  For example reassembly may be done in real-time or streaming fashion, or packets may be written to disk, then bulk processed.  The packets may arrive out of order, with fragmentation, duplicates, or re-transmissions.  The reassembly software must compensate for the imperfect packet stream in order to recreate the well formed file which was transmitted.
 - File type identification can be a difficult process which can be exploited by adversaries.</kb-article>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentAnalysis">
+        <kb-article>## How it works
+Analyzing a piece of code without it being executed in a sandbox, virtual machine, or simulator. Patterns or signatures in the file can indicate whati kind of software it is, including whether it is malware.</kb-article>
+        <definition>Employing a pattern matching algorithm to statically analyze the content of files.</definition>
+        <rdfs:label>File Content Analysis</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileContentRules">
+        <definition>Employing a pattern matching rule language to analyze the content of files.</definition>
         <synonym>File Signatures</synonym>
         <kb-article>## How it works
 Rules, often called signatures, are used for both generic and targeted malware detection. The rules are usually expressed in a domain specific language (DSL), then deployed to software that scans files for matches. The rules are developed and broadly distributed by commercial vendors, or they are developed and deployed by enterprise security teams to address highly targeted or custom malware. Conceptually, there are public and private rule sets. Both leverage the same technology, but they are intended to detect different types of cyber adversaries.
@@ -60319,7 +60730,6 @@ Rules, often called signatures, are used for both generic and targeted malware d
  * YARA
  * ClamAV</kb-article>
         <synonym>File Content Signatures</synonym>
-        <definition>Employing a pattern matching rule language to analyze files.</definition>
         <rdfs:label>File Content Rules</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileCreationAnalysis">
@@ -60380,8 +60790,8 @@ Files can change constantly due to the non-static nature of a computer system. F
         <definition>Has an input of a file path, and opens a file handle for reading or writing.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FileRemoval">
-        <definition>The file removal technique deletes malicious artifacts or programs from a computer system.</definition>
         <synonym>File Deletion</synonym>
+        <definition>The file removal technique deletes malicious artifacts or programs from a computer system.</definition>
         <rdfs:label>File Removal</rdfs:label>
         <kb-article>## How it works
 
@@ -60436,7 +60846,6 @@ On Windows systems, deleting a file in File Explorer does not permanently delete
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FirmwareBehaviorAnalysis">
         <rdfs:label>Firmware Behavior Analysis</rdfs:label>
-        <definition>Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.</definition>
         <kb-article>## How it works
 Firmware behavior analysis provides protections by ensuring that installed firmware has not been tampered with or modified. Firmware analysis applies to mutable firmware and immutable read-only memory (ROMs).
 
@@ -60452,6 +60861,7 @@ A challenge-response is issued and includes a nonce so that replays are not allo
 * The firmware code will need to be modified to include the behavioral monitoring functionality.
 * This technique is sensitive to the device the embedded firmware is hosted on and it is expected that the devices and firmware will need to be profiled and analyzed to determine timing estimation.
 * This technique is not expected to be one hundred percent correct as you would expect in a hardware root of trust solution and may require some tuning.</kb-article>
+        <definition>Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.</definition>
         <synonym>Firmware Timing Analysis</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FirmwareEmbeddedMonitoringCode">
@@ -60546,6 +60956,7 @@ Continuous maintenance of unauthorized domain lists is needed to keep up to date
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ForwardResolutionIPDenylisting">
         <rdfs:label>Forward Resolution IP Denylisting</rdfs:label>
         <definition>Blocking a DNS lookup&apos;s answer&apos;s IP address value.</definition>
+        <synonym>Forward Resolution IP Blacklisting</synonym>
         <kb-article>## How it works
 
 This technique prevents a client from learning IP addresses deemed to be potentially malicious, which would have been delivered via forward resolution responses.
@@ -60563,7 +60974,6 @@ The DNS lookup can be blocked by either dropping the network traffic with an inl
 * This technique must be implemented logically between the application that receives the response and the server which sent the response.
   * DNS responses sent in an encrypted manner, such as those using DoH or DoT, will require interception of the TLS connections in order to determine the IP address(es) in the response.
 * Replacing the response is not effective in the case that the nameserver uses a technique to provide integrity of its responses, such as DNSSEC for DNS responses.</kb-article>
-        <synonym>Forward Resolution IP Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FreeMemory">
         <rdfs:label>Free Memory</rdfs:label>
@@ -60640,11 +61050,22 @@ Wikipedia. (n.d.). Central tendency. [Link](https://en.wikipedia.org/wiki/Centra
 1. Goodman and Kruskal&apos;s gamma. (2022, Nov 23). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Goodman_and_Kruskal%27s_gamma]</kb-article>
         <definition>Goodman-Kruskal $\\gamma$ is a measure of rank correlation between x and y and is given by $(n_c -n_d) / (n_c + n_d)$, where $n_c$ is the number of concordant pairs of the observations and $n_d$ is the number of discordant pairs.</definition>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#GradientBoostedDecisionTree">
+        <definition>A gradient-boosted decision tree is, as in other bagging and boosting methods, a method where the relatively &apos;weak&apos; machine learning model (a decision tree) is used in an ensemble to form a &apos;strong&apos; machine learning model.</definition>
+        <rdfs:label>Gradient-Boosted Decision Tree</rdfs:label>
+        <kb-article>## Reference
+
+1. Google. (28 Sep 2023). Gradient Boosted Decision Trees.
+[Link](https://developers.google.com/machine-learning/decision-forests/intro-to-gbdt).</kb-article>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Graph-basedClustering">
-        <kb-article>## References
-Density-Based and Graph-Based Clustering. [Link](https://towardsdatascience.com/density-based-and-graph-based-clustering-a1f0d45ff5fb)</kb-article>
-        <definition>Graph-based Clustering is a form of clustering where data is represented with graphs to identify clusters .</definition>
         <rdfs:label>Graph-based Clustering</rdfs:label>
+        <synonym>Connection-based Clustering</synonym>
+        <definition>Graph-based Clustering is a form of clustering where data is represented with graphs to identify clusters.  We include Connection-based Clustering in this class.</definition>
+        <kb-article>## References
+1. Jagota, A. (13 Dec 2020). Density-based and Graph-based Clustering. towardsdatascience.com. [Link](https://towardsdatascience.com/density-based-and-graph-based-clustering-a1f0d45ff5fb)
+
+1. Connectivity-Based Clustering. Sarang, P. (2023) in Thinking Data Science. The Springer Series in Applied Machine Learning. Springer, Cham. [Link](https://doi.org/10.1007/978-3-031-02363-7_10).</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Graph-basedSemi-supervisedLearning">
         <definition>Graph-based Semi-Supervised Learning (GSSL) methods aim to classify unlabeled data by learning the graph structure and labeled data jointly.</definition>
@@ -60704,6 +61125,7 @@ Hardware process isolation is commonly implemented through Direct Memory Access 
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory">
         <synonym>Hardware Component Discovery</synonym>
+        <synonym>Hardware Component Inventorying</synonym>
         <kb-article>## How it works
 Administrators collect information on hardware devices such as peripherals, NICs, processors, and memory devices that are components of the computers in their architecture using a variety of administrative and management tools that query for this information.  In some cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through remote adminstration tools and system commands, either manually or using scripts.
 
@@ -60719,7 +61141,6 @@ Administrators collect information on hardware devices such as peripherals, NICs
    * Web-based Enterprise Management (WBEM) collects CIM information
       * Windows Management Instrumentation (WMI)
       * Windows Management Infrastructure (MI)</kb-article>
-        <synonym>Hardware Component Inventorying</synonym>
         <rdfs:label>Hardware Component Inventory</rdfs:label>
         <definition>Hardware component inventorying identifies and records the hardware items in the organization&apos;s architecture.</definition>
     </rdf:Description>
@@ -60767,8 +61188,8 @@ Wikipedia. (2021, August 10). Hierarchical clustering. [Link](https://en.wikiped
 html)</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HierarchicalDomainDenylisting">
-        <rdfs:label>Hierarchical Domain Denylisting</rdfs:label>
         <definition>Blocking the resolution of any subdomain of a specified domain name.</definition>
+        <rdfs:label>Hierarchical Domain Denylisting</rdfs:label>
         <kb-article>## How it works
 This technique is used to block DNS queries from related domains and subdomains that are unauthorized.
 
@@ -60917,8 +61338,8 @@ IPC can occur within a single computer or between multiple computers remotely th
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Identifier">
         <definition>An identifier is a name that identifies (that is, labels the identity of) either a unique object or a unique class of objects, where the &quot;object&quot; or class may be an idea, physical [countable] object (or class thereof), or physical [noncountable] substance (or class thereof). The abbreviation ID often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification). An identifier may be a word, number, letter, symbol, or any combination of those.</definition>
-        <skos:altLabel>ID</skos:altLabel>
         <rdfs:label>Identifier</rdfs:label>
+        <skos:altLabel>ID</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Identifier"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#IdentifierActivityAnalysis">
@@ -61184,8 +61605,8 @@ If an attacker manages to stop the processes used to log an attack without setti
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#InterquartileRange">
         <definition>The interquartile range (IQR) is a measure of statistical dispersion, which is the spread of the data and is defined as the difference between the 75th and 25th percentiles of the data.</definition>
-        <synonym>IQR</synonym>
         <rdfs:label>Interquartile Range</rdfs:label>
+        <synonym>IQR</synonym>
         <kb-article>## References
 Wikipedia. (n.d.). Interquartile range. [Link](https://en.wikipedia.org/wiki/Interquartile_range)</kb-article>
     </rdf:Description>
@@ -61272,6 +61693,92 @@ Potential for false positives from anomalies that are not associated with malici
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Cron"/>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Windows_Task_Scheduler"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#K-CenterClustering">
+        <rdfs:label>K-Center Clustering</rdfs:label>
+        <kb-article>## How it works 
+
+An example K-center Clustering problem is to mimimize the number of points in a set that are necessary so that a every other point in the set is within some fixed distance of those points.  For instance, given n cities with specified distances, one wants to build k warehouses in different cities and minimize the maximum distance of a city to a warehouse.
+
+## Considerations  
+
+- **Scalability**: Exact solutions are NP-hard.  However, algorithms
+    that have been proven effective and create no more than 2x the
+    optimal set of clusters can run in O(kn) proportional to k*n where
+    k is the minimum number of clusters and n is the number of data
+    points being clustered. 
+
+## Key Test Considerations  
+
+- **Unsupervised Learning**:
+
+  - **Number of Clusters**: The Gonzalez (Gon) algorithm guarantees
+      creating no more than twice the optimal number of clusters,
+      where the optimal number is the minimum number of clusters to
+      minimize total distance between representative points in the
+      clusters [1].
+
+- **Cluster Analysis**:
+
+    - **Rand Index and Adjusted Rand Index**: Given ground truth set
+      of class labels for the data, the Rand Index is a measure of the
+      similarity between two data clusterings. The Rand Index is the
+      accuracy of determining if a link belongs within a cluster or
+      not. A form of the Rand Index may be defined that is adjusted
+      for the chance grouping of elements, this is the Adjusted Rand
+      Index [5].
+    
+    - **Adjusted Mutual Information**: Given ground truth set of class
+      labels for the data, Adjusted Mutual Information corrects the
+      effect of agreement solely due to chance between clusterings,
+      similar to the way the Adjusted Rand Index corrects the Rand
+      Index [6].
+
+- **Connection-based Clustering**:
+
+  - **Choice of Distance Metric**: The outcome can vary significantly depending on the chosen distance metric (e.g., Euclidean, Manhattan).
+
+  - **Sensitivity**: Connection-based method can be sensitive to outliers, which might affect the quality of the clusters formed.
+
+- **K-center Clustering**:
+
+  - **Silhouette Score**: The silhouette score refers to a scoring
+    method that helps validate the consistency between clusters of
+    data. The evaluation technique also produces a concise graphical
+    representation of how well each object appear to have been
+    classified.  It is suited to K-centric Clustering in that it also
+    works for different metric spaces.
+
+  - **Distance Metric**: The distance measure must be a true metric (see
+    [2]).  Differences in the metric chosen may (e.g., Euclidean,a
+    Manhattan) affect results significantly.
+    
+  - **Sensitivity**: Greedy implementations may be sensitive to
+    outliers.
+    
+## Platforms, Tools, or Libraries
+
+N/A. _Note that this algorithm is relatively simple and so it is
+usually implemented from scratch by those incorporating this algorithm
+into a system._
+
+## References  
+
+1. Gonzalez, T.F. (1985). Clustering to Minimize the Maximum Intercluster Distance. Theor. Comput. Sci., 38, 293-306.
+[Link](https://www.sciencedirect.com/science/article/pii/0304397585902245?via%3Dihub).
+
+1. Weisstein, Eric W. (n.d.). &quot;Metric.&quot; From MathWorld--A Wolfram Web Resource. [Link](https://mathworld.wolfram.com/Metric.html).
+
+1. Wikipedia. (8 Aug 2023). Metric k-center [Link](https://en.wikipedia.org/wiki/Metric_k-center).
+
+1. Wikipedia. (14 Aug 2023). Vertex k-center problem. [Link](https://en.wikipedia.org/wiki/Vertex_k-center_problem).
+
+1. Wikipedia. (n.d.). Rand Index. [Link](https://en.wikipedia.org/wiki/Rand_index).
+
+1. Wikipedia. (n.d.). Adjusted Mutual Information. [Link](https://en.wikipedia.org/wiki/Adjusted_mutual_information).
+
+1. Wikipedia. (1 Aug 2023). Silhouette (clustering). [Link](https://en.wikipedia.org/wiki/Silhouette_(clustering)).</kb-article>
+        <definition>K-center Clustering is a type of clustering based on an combinatorial optimization methods.  It clusters a set of points so as to minimize the maximum intercluster distance.</definition>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#K-FoldCross-Validation">
         <definition>Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample. The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into. As such, the procedure is often called k-fold cross-validation. When a specific value for k is chosen, it may be used in place of k in the reference to the model, such as k=10 becoming 10-fold cross-validation</definition>
         <rdfs:label>K-Fold Cross-Validation</rdfs:label>
@@ -61280,13 +61787,47 @@ K-Fold Cross-Validation. Machine Learning Mastery.  [Link](https://machinelearni
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#K-NearestNeighbors">
         <rdfs:label>K-Nearest Neighbors</rdfs:label>
+        <kb-article>## **How it works**
+The goal of the k-nearest neighbor algorithm is to identify the nearest neighbors of a given query point, so that we can assign a class label to that point. To determine which data points are closest to a given query point, the distance between the query point and the other data points will need to be calculated. The distance measures used can vary depending on the data set or implementation and help inform decision boundaries, which query points into different regions. Then, by defining the k-value (the number of neighbors to be checked to determine the classification of a specific query point), the data can be assigned its class label. 
+
+For classification problems, a class label is assigned on the basis of a majority vote—i.e. the label that is most frequently represented around a given data point is used (the term “majority vote” is commonly used in literature, however, the technique is more technically considered “plurality voting”).  Regression problems use a similar concept as classification problem, but in this case, the average the k nearest neighbors is taken to make a prediction about a classification. The main distinction here is that classification is used for discrete values, whereas regression is used with continuous ones.
+
+Unlike other algorithms that explicitly model the problem, such as linear regression, KNN is instance-based. It means that the algorithm doesn&apos;t explicitly learn a model. Instead, it memorizes the training instances and uses them as &quot;knowledge&quot; for the prediction phase. It&apos;s also worth noting that the KNN algorithm is also part of a family of “lazy learning” models, meaning that it only stores a training dataset versus undergoing a training stage.
+
+## **Considerations**
+
+* **Scaling:** Scaling is a problem as KNN is a lazy algorithm and takes up more memory and storage compared to other classification methods.
+
+* **Implementation and Hyperparameters:** As KNN only requires a k-value and a distance metric, it is often an easy implementation and can adjust will to new training data. 
+
+## Key Test Considerations
+
+- **Supervised Learning:**
+ 
+  - **Cross Validation:** As cross validation methods like k-fold, leave-one-out, and stratified cross validation can help validate model performance. However, nuances like pessimism bias in k-fold cross validation or high variability in leave-one-out cross validation may need consideration. 
+
+- **Classification:**
+
+  - **ROC Curve:**  A standard technique used to summarize classifier performance over a range of tradeoffs between true and false positives is the Receiver Operating Characteristic (ROC) curve. 
+
+  - **Data Imbalance:** Imbalanced data sets where one class significantly outnumbers others, under sampling techniques like SMOTE may be beneficial in sampling minority classes.
+
+- **K-Nearest Neighbor**
+
+  - **Choice of K:** The number of neighbors, K, affects the decision boundary. A smaller K can lead to a noisy decision boundary, while a large K can smooth it out, but may also blur class distinctions.
+
+  - **K-d Tree:** Exact searching on large datasets can be computationally costly and inefficient. Implementing approximate nearest neighbor algorithms like the K-d tree algorithm. 
+
+  - **Dimensionality:** KNN does not perform well while using high-dimensional data and can be sensitive to irrelevant features which can lead to overfitting. 
+
+  - **Distance Metric:** Choosing the appropriate distance metric (Euclidean, Manhattan, MinKowski, Hamming etc.) is essential, based on the nature of the data.
+
+## **References**
+1. IBM. K-Nearest Neighbors Algorithm.  [Link](https://www.ibm.com/topics/knn?mhsrc=ibmsearch_a&amp;mhq=k-nearest%20neighbors%20).
+2. Muja, M., &amp; Lowe, D. G. (2014). Scalable nearest neighbor algorithms for high dimensional data. IEEE Transactions on Pattern Analysis and Machine Intelligence. [Link]( https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6809191).
+3. Chawla, N. V., Bowyer, K. W., Hall, L. O., &amp; Kegelmeyer, W. P. (2002). SMOTE: synthetic minority over-sampling technique. Journal of artificial intelligence research, 16, 321-357. [Link]( https://www.jair.org/index.php/jair/article/view/10302/24590).
+4. Kohavi, R. (1995). A study of cross-validation and bootstrap for accuracy estimation and model selection. Proceedings of the 14th international joint conference on Artificial intelligence . [Link]( https://www.ijcai.org/Proceedings/95-2/Papers/016.pdf).</kb-article>
         <definition>The k-nearest neighbors algorithm, also known as KNN or k-NN, is a non-parametric, supervised learning classifier, which uses proximity to make classifications or predictions about the grouping of an individual data point.</definition>
-        <kb-article>## How it works
-For classification problems, a class label is assigned on the basis of a majority vote-i.e. the label that is most frequently represented around a given data point is used. While this is technically considered “plurality voting”, the term, “majority vote” is more commonly used in literature. The distinction between these terminologies is that “majority voting” technically requires a majority of greater than 50%, which primarily works when there are only two categories. When you have multiple classes-e.g. four categories, you don’t necessarily need 50% of the vote to make a conclusion about a class; you could assign a class label with a vote of greater than 25%.
-
-
-## References
-K-Nearest Neighbors (k-NN). IBM. [Link](https://www.ibm.com/topics/knn?mhsrc=ibmsearch_a&amp;mhq=k-nearest%20neighbors%20).</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#K-meansClustering">
         <rdfs:label>K-means Clustering</rdfs:label>
@@ -61327,8 +61868,8 @@ Towards Data Science. (n.d.). Understanding K-means Clustering in Machine Learni
         <rdfs:label>Kernel API Sensor</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KernelModule">
-        <rdfs:seeAlso>https://schema.ocsf.io/objects/kernel_driver</rdfs:seeAlso>
         <skos:altLabel>LKM</skos:altLabel>
+        <rdfs:seeAlso>https://schema.ocsf.io/objects/kernel_driver</rdfs:seeAlso>
         <skos:altLabel>Loadable Kernel Module</skos:altLabel>
         <definition>A loadable kernel module (LKM) is an object file that contains code to extend the running kernel, or so-called base kernel, of an operating system. LKMs are typically used to add support for new hardware (as device drivers) and/or filesystems, or for adding system calls. When the functionality provided by a LKM is no longer required, it can be unloaded in order to free memory and other resources.
 
@@ -61340,8 +61881,8 @@ Most current Unix-like systems and Microsoft Windows support loadable kernel mod
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Process_(computing)"/>
         <rdfs:label>Kernel Process Table</rdfs:label>
         <definition>A data structure in the kernel which is a table containing all of the information that must be saved when the CPU switches from running one process to another in a multitasking system. It allows the operating system to track all the process&apos;s execution status, and contains the For every process managed by the kernel, there is a process control block (PCB) in the process table.</definition>
-        <rdfs:seeAlso rdf:resource="https://www.geeksforgeeks.org/process-table-and-process-control-block-pcb/"/>
         <rdfs:isDefinedBy rdf:resource="https://encyclopedia2.thefreedictionary.com/process+table"/>
+        <rdfs:seeAlso rdf:resource="https://www.geeksforgeeks.org/process-table-and-process-control-block-pcb/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KeyboardInputDevice">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Computer_keyboard"/>
@@ -61370,8 +61911,8 @@ Wikipedia. (n.d.). Probability distribution. [Link](https://en.wikipedia.org/wik
         <rdfs:label>Legacy System</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LevenshteinMatching">
-        <synonym>Edit Distance</synonym>
         <rdfs:label>Levenschtein Matching</rdfs:label>
+        <synonym>Edit Distance</synonym>
         <kb-article>## References
 1. Navarro, G. (2001). A guided tour to approximate string matching. _ACM Computing Surveys_, 33(1), 31-88. [Link](https://doi.org/10.1145/375360.375365)</kb-article>
         <definition>The Levenshtein distance (LD) is a metric for measuring the differences between two sequences - or strings. Informally, the LD is the number of individual edits one would have to make to turn one sequence into another.</definition>
@@ -61502,12 +62043,22 @@ H :- B_1, ..., B_n.
         <rdfs:label>Logical Link Mapping</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LogicalRules">
-        <kb-article>## References
-1. Event condition action. (2019, Nov 21). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Event_condition_action)
-2. Business rule. (2023, April 10). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Business_rule)
-3. YARA. (2023, June 5). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/YARA)</kb-article>
         <rdfs:label>Logical Rules</rdfs:label>
         <definition>A logical rule matches event data or set of values to a conditional expression and results in the determination of a truth value, which may be used to determine the next action or step to take.</definition>
+        <kb-article>## How it works
+
+Logic rules define a set of patterns that in some patterns must match input data. If the the conditions are met, then the rule will &quot;fire&quot; and some action will be taken, usually notifying a person or another system that the event being monitored needs further processing or attention.
+
+## Key Test Considerations
+
+- **Performance (Accuracy)** Identify instances in data where rule is expected to be triggered. Implement traceability and metrics for individual rule performance. Traceability of cases could be implemented as unit tests or as part of a fine-grained classification performance platform. For simple rule-based matching systems with many rules, individual rules may be unused or may create unusually high false positives (or false negatives relative to expectation.
+
+- **Performance (Computational)** Generate model performance measures (see Classification Performance Measures), esp. a confusion matrix for each rule and identify outliers and relative contribution of rule to overall performance.
+
+## References
+1. Event condition action. (2019, Nov 21). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Event_condition_action).
+2. Business rule. (2023, April 10). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Business_rule).
+3. YARA. (2023, June 5). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/YARA).</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LoginSession">
         <rdfs:label>Login Session</rdfs:label>
@@ -61559,8 +62110,8 @@ Machine learning.&quot; Wikipedia. [Link](https://en.wikipedia.org/wiki/Machine_
         <skos:altLabel>Mail Exchanger</skos:altLabel>
         <skos:altLabel>Email Server Resource</skos:altLabel>
         <skos:altLabel>MTA</skos:altLabel>
-        <skos:altLabel>Message transfer agent</skos:altLabel>
         <skos:altLabel>Mail transfer agent</skos:altLabel>
+        <skos:altLabel>Message transfer agent</skos:altLabel>
         <definition>Within the Internet email system, a message transfer agent or mail transfer agent (MTA) or mail relay is software that transfers electronic mail messages from one computer to another using SMTP. The terms mail server, mail exchanger, and MX host are also used in some contexts. Messages exchanged across networks are passed between mail servers, including any attached data files (such as images, multimedia or documents). These servers also often keep mailboxes for email. Access to this email by end users is typically either via webmail or an email client.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MandatoryAccessControl">
@@ -61672,8 +62223,8 @@ Kernel malware can manipulate memory contents, for example modifying pointers to
         <rdfs:label>Memory Free Function</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MemoryManagementUnit">
-        <rdfs:label>Memory Management Unit</rdfs:label>
         <rdfs:isDefinedBy>https://www.techopedia.com/definition/4768/memory-management-unit-mmu</rdfs:isDefinedBy>
+        <rdfs:label>Memory Management Unit</rdfs:label>
         <definition>A computer’s memory management unit (MMU) is the physical hardware that handles its virtual memory and caching operations. The MMU is usually located within the computer’s central processing unit (CPU), but sometimes operates in a separate integrated chip (IC).</definition>
         <rdfs:seeAlso>https://dbpedia.org/page/Memory_management_unit</rdfs:seeAlso>
     </rdf:Description>
@@ -61763,8 +62314,8 @@ Wikipedia. (n.d.). Central tendency. [Link](https://en.wikipedia.org/wiki/Centra
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Model">
         <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</display-priority>
         <definition>The model tactic is used to apply security engineering, vulnerability, threat, and risk analyses to digital systems. This is accomplished by creating and maintaining a common understanding of the systems being defended, the operations on those systems, actors using the systems, and the relationships and interactions between these elements.</definition>
-        <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</display-order>
         <rdfs:label>Model</rdfs:label>
+        <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</display-order>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Model-basedPolicyOptimization">
         <definition>Model-based policy optimization (MBPO) is a model-based, online, off-policy reinforcement learning algorithm. For more information on the different types of reinforcement learning agents</definition>
@@ -61825,11 +62376,6 @@ MFA configuration steps may vary across accounts and in some cases left up to us
         <kb-article>## References
 Multilayer perceptron. Wikipedia. [Link](https://en.wikipedia.org/wiki/Multilayer_perceptron).</kb-article>
     </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MultimediaDocumentFile">
-        <rdfs:label>Multimedia Document File</rdfs:label>
-        <definition>Digital video files which often contain audio.</definition>
-        <rdfs:seeAlso>https://dbpedia.org/page/Multimedia</rdfs:seeAlso>
-    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MultipleRegression">
         <definition>Multiple (linear) regression attempts to model the relationship between two or more explanatory variables and a response variable by fitting a linear equation to observed data.</definition>
         <synonym>Multiple Linear Regression</synonym>
@@ -61857,10 +62403,10 @@ Naive Bayes. IBM. [Link](https://www.ibm.com/topics/naive-bayes?mhsrc=ibmsearch_
         <rdfs:label>Naive Bayes Classifier</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Network">
-        <definition>A network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of sharing resources located on or provided by the network nodes. The interconnections between nodes are formed from a broad spectrum of telecommunication network technologies, based on physically wired, optical, and wireless radio-frequency methods that may be arranged in a variety of network topologies.</definition>
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/03826490-n"/>
-        <skos:altLabel>Computer Network</skos:altLabel>
+        <definition>A network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of sharing resources located on or provided by the network nodes. The interconnections between nodes are formed from a broad spectrum of telecommunication network technologies, based on physically wired, optical, and wireless radio-frequency methods that may be arranged in a variety of network topologies.</definition>
         <rdfs:label>Network</rdfs:label>
+        <skos:altLabel>Computer Network</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkDirectoryResource">
         <rdfs:label>Network Directory Resource</rdfs:label>
@@ -61963,8 +62509,8 @@ Administrators collect information on network nodes in their architecture using 
         <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Category:Network_analyzers"/>
         <skos:altLabel>Network Sniffer</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Packet_analyzer"/>
-        <rdfs:label>Network Traffic Analysis Software</rdfs:label>
         <definition>A packet analyzer, also known as packet sniffer, protocol analyzer, or network analyzer, is a computer program or computer hardware such as a packet capture appliance, that can intercept and log traffic that passes over a computer network or part of a network.</definition>
+        <rdfs:label>Network Traffic Analysis Software</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTrafficCommunityDeviation">
         <definition>Establishing baseline communities of network hosts and identifying statistically divergent inter-community communication.</definition>
@@ -62048,8 +62594,8 @@ The OWL languages are characterized by formal semantics. They are built upon the
         <rdfs:label>Office Application File</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#One-timePassword">
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/One-time_password"/>
         <rdfs:label>One-time Password</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/One-time_password"/>
         <synonym>OTP</synonym>
         <definition>A one-time password is valid for only one user authentication.</definition>
         <kb-article>## How it works
@@ -62078,9 +62624,9 @@ Additionally, after the code file is printed, it could be recovered from the sys
         <definition>For most file systems, a program initializes access to a file in a file system using the open system call. This allocates resources associated to the file (the file descriptor), and returns a handle that the process will use to refer to that file. In some cases the open is performed by the first access. During the open, the filesystem may allocate memory for buffers, or it may wait until the first operation. Various other errors which may occur during the open include directory update failures, un-permitted multiple connections, media failures, communication link failures and device failures.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystem">
+        <rdfs:label>Operating System</rdfs:label>
         <definition>An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. All computer programs, excluding firmware, require an operating system to function. Time-sharing operating systems schedule tasks for efficient use of the system and may also include accounting software for cost allocation of processor time, mass storage, printing, and other resources.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Operating_system"/>
-        <rdfs:label>Operating System</rdfs:label>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/os</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemConfiguration">
@@ -62275,9 +62821,9 @@ Newcastle University. (n.d.). Parametric Hypothesis Tests. [Link](https://www.nc
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PartialMatching">
         <rdfs:label>Partial Matching</rdfs:label>
-        <kb-article>Numeric pattern matching is a method of matching some defined pattern specification against a numeric value.</kb-article>
         <kb-article>## References
 1. String-searching algorithm. (2023, April 8). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/String-searching_algorithm)</kb-article>
+        <kb-article>Numeric pattern matching is a method of matching some defined pattern specification against a numeric value.</kb-article>
         <definition>Partial string pattern matching is a special case of string pattern matching where one seeks to find a pattern within a larger string (text). It allows for the detection of patterns that occur as substrings or partial segments within the full string, rather than requiring an exact match across the entire string.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Partition">
@@ -62413,9 +62959,9 @@ Zheng, Y., &amp; Song, Y. (2021). An Effective Perturbation-Based Semi-Supervise
 Engelen, S., &amp; Hoos, H. (2020). A survey on semi-supervised learning. Machine Learning, 109(2), 299-337. [Link](https://link.springer.com/article/10.1007/s10994-019-05855-6).</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PhiCoefficient">
+        <definition>The phi coefficient (or mean square contingency coefficient is a measure of association for two binary variables.</definition>
         <kb-article>## References
 \Wikipedia. (n.d.). Phi coefficient. [Link](https://en.wikipedia.org/wiki/Phi_coefficient)</kb-article>
-        <definition>The phi coefficient (or mean square contingency coefficient is a measure of association for two binary variables.</definition>
         <synonym>MCC</synonym>
         <rdfs:label>Phi Coefficient</rdfs:label>
         <synonym>Matthews Correlation Coefficient (in machine learning)</synonym>
@@ -62864,10 +63410,10 @@ Processes that are started in a subsystem might not be fully terminated if they 
         <definition>A processor register is a quickly accessible location available to a computer&apos;s processor. Registers usually consist of a small amount of fast storage, although some registers have specific hardware functions, and may be read-only or write-only.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProgressivelyGrowingGAN">
-        <rdfs:label>Progressively Growing GAN</rdfs:label>
         <kb-article>## References
 
 Machine Learning Mastery. (n.d.). Introduction to Progressive Growing Generative Adversarial Networks. [Link](https://machinelearningmastery.com/introduction-to-progressive-growing-generative-adversarial-networks/)</kb-article>
+        <rdfs:label>Progressively Growing GAN</rdfs:label>
         <definition>Progressive Growing GAN (ProGAN) is an extension to the GAN training process that allows for the stable training of generator models that can output large high-quality images.</definition>
         <synonym>ProGAN</synonym>
     </rdf:Description>
@@ -63034,13 +63580,23 @@ Wikipedia. (2021, September 7). Recurrent Neural Network. [Link](https://en.wiki
         <rdfs:label>Recurrent Neural Network</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#RegexMatching">
-        <kb-article>## References
-1. Regular expression. (2023, June 1). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Regular_expression)
-2. String-searching algorithm. (2023, April 8). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/String-searching_algorithm)</kb-article>
         <rdfs:label>Regex Matching</rdfs:label>
-        <definition>Regular expression matching is type of partial string matching using a regular expression, which is a sequence of characters that specifies a match pattern in text.</definition>
         <synonym>Regexp</synonym>
+        <definition>Regular expression matching is type of partial string matching using a regular expression, which is a sequence of characters that specifies a match pattern in text.</definition>
         <synonym>Regex</synonym>
+        <kb-article>## How it works
+
+A regular expression (shortened as regex or regexp) is a sequence of characters that specifies a match pattern in text. Usually such patterns are used by string-searching algorithms for &quot;find&quot; or &quot;find and replace&quot; operations on strings, or for input validation.
+
+## Key Test Considerations
+
+- **External review of regular expressions**: Regular expressions used in rules should be reviewed by a independent developer SME.  Regex testing and visualization tools may be used to aid this review.  Back-tests for failure modes identified during the review shoud be developed.  Regular expressions are easy to get wrong and may appear to work on limited tests; small mistakes can lead to unintended misses and matches.]
+
+- **Processing Performance Review**: Review of resource-intensive rules may be necessary if system performance degraded.  Look for cases of “exponential backtracking”  Some regexes are computationally expensive.
+
+## References
+1. Regular expression. (2023, June 1). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Regular_expression).
+2. String-searching algorithm. (2023, April 8). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/String-searching_algorithm).</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#RegressionAnalysis">
         <definition>Regression analysis is a set of statistical processes for estimating the relationships between a dependent variable (often called the &apos;outcome&apos; or &apos;response&apos; variable, or a &apos;label&apos; in machine learning parlance) and one or more independent variables (often called &apos;predictors&apos;, &apos;covariates&apos;, &apos;explanatory variables&apos; or &apos;features&apos;).</definition>
@@ -63059,6 +63615,10 @@ Supervised Learning. IBM. [Link](https://www.ibm.com/topics/supervised-learning)
         <kb-article>## References
 Reinforcement learning. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Reinforcement_learning).</kb-article>
         <rdfs:label>Reinforcement Learning</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ReissueCredential">
+        <definition>Issue a new credential to a user which supercedes their old credential.</definition>
+        <rdfs:label>Reissue Credential</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Relational-basedTransferLearning">
         <kb-article>## References
@@ -63454,8 +64014,8 @@ Yu, L., Zhang, W., Wang, J., &amp; Yu, Y. (2017). SeqGAN: Sequence Generative Ad
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplication">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Server_(computing)"/>
         <definition>An application that provides a set of software functionalities so that multiple clients who can reuse the functionality, provided they are authorized for use of the service.</definition>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Service_(systems_architecture)"/>
         <rdfs:label>Service Application</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Service_(systems_architecture)"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplicationProcess">
         <rdfs:label>Service Application Process</rdfs:label>
@@ -63487,15 +64047,15 @@ The organization collects and models architectural information about the service
 * Service dependencies in cloud or microservice architectures may be discovered using distributed tracing capabilities</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SessionCookie">
-        <skos:altLabel>Web Session Cookie</skos:altLabel>
         <skos:altLabel>Transient Cookie</skos:altLabel>
+        <skos:altLabel>Web Session Cookie</skos:altLabel>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/http_cookie</rdfs:seeAlso>
         <skos:altLabel>In-memory Cookie</skos:altLabel>
         <skos:altLabel>Non-persistent Cookie</skos:altLabel>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/HTTP_cookie"/>
         <rdfs:isDefinedBy rdf:resource="https://schema.ocsf.io/objects/http_cookie"/>
-        <rdfs:label>Session Cookie</rdfs:label>
         <definition>A session cookie, also known as an in-memory cookie, transient cookie or non-persistent cookie, exists only in temporary memory while the user navigates the website. Web browsers normally delete session cookies when the user closes the browser. Unlike other cookies, session cookies do not have an expiration date assigned to them, which is how the browser knows to treat them as session cookies.</definition>
+        <rdfs:label>Session Cookie</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SessionDurationAnalysis">
         <rdfs:label>Session Duration Analysis</rdfs:label>
@@ -63617,8 +64177,8 @@ The goal is for homophones to be encoded to the same representation so that they
         <rdfs:label>Source Code</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess">
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Fork%E2%80%93exec"/>
         <definition>A process spawn refers to a function that loads and executes a new child process.The current process may wait for the child to terminate or may continue to execute asynchronously. Creating a new subprocess requires enough memory in which both the child process and the current program can execute. There is a family of spawn functions in DOS, inherited by Microsoft Windows. There is also a different family of spawn functions in an optional extension of the POSIX standards.  Fork-exec is another technique combining two Unix system calls, which can effect a process spawn.</definition>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Fork%E2%80%93exec"/>
         <rdfs:label>Spawn Process</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Spawn_(computing)"/>
         <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/procthread/creating-processes"/>
@@ -63639,8 +64199,8 @@ Towards Data Science. (n.d.). Spectral Clustering. [Link](https://towardsdatasci
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Call_stack#Structure"/>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Call_stack"/>
         <skos:altLabel>Activation Frame</skos:altLabel>
-        <rdfs:label>Stack Frame</rdfs:label>
         <definition>A machine-dependent and application-binary-dependent (ABI-dependent) data structure containing subroutine state information including the arguments passed into the routine, the return address back to the routine&apos;s caller, and space for local variables of the routine.</definition>
+        <rdfs:label>Stack Frame</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#StackFrameCanary">
         <definition>Stack canaries, named for their analogy to a canary in a coal mine, are used to detect a stack buffer overflow before execution of malicious code can occur. This method works by placing a small integer, the value of which is randomly chosen at program start, in memory just before the stack return pointer. Most buffer overflows overwrite memory from lower to higher memory addresses, so in order to overwrite the return pointer (and thus take control of the process) the canary value must also be overwritten. This value is checked to make sure it has not changed before a routine uses the return pointer on the stack. This technique can greatly increase the difficulty of exploiting a stack buffer overflow because it forces the attacker to gain control of the instruction pointer by some non-traditional means such as corrupting other important variables on the stack.</definition>
@@ -63683,8 +64243,8 @@ A vulnerability such as a write-what-where condition that allows one to write da
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#StackSegment">
         <definition>The stack segment contains the program stack, a last-in-first-out structure, typically allocated in the higher parts of memory for the process.</definition>
         <rdfs:label>Stack Segment</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Data_segment#Stack"/>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Call_stack"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Data_segment#Stack"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Stacking">
         <definition>Stacking is a method of using the results and predictions from one layer of ML models as inputs to another layer of ML models. Stacking (sometimes called stacked generalization) involves training a model to combine the predictions of several other learning algorithms.</definition>
@@ -63763,8 +64323,8 @@ Wikipedia. (n.d.). StyleGAN. [Link](https://en.wikipedia.org/wiki/StyleGAN)</kb-
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Subroutine"/>
         <rdfs:label>Subroutine</rdfs:label>
         <definition>In different programming languages, a subroutine may be called a procedure, a function, a routine, a method, or a subprogram. The generic term callable unit is sometimes used.</definition>
-        <synonym>Method</synonym>
         <synonym>Software Function</synonym>
+        <synonym>Method</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SubspaceClustering">
         <kb-article>## References
@@ -63800,12 +64360,12 @@ About Support Vector Machine (SVM). IBM SPSS Modeler SaaS Documentation. [Link](
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SymbolicAI">
         <synonym>Symbolic Artificial Intelligence</synonym>
+        <rdfs:label>Symbolic AI</rdfs:label>
         <kb-article>## How it works
 Symbolic artificial intelligence is used in tools such as logic programming, production rules, semantic nets and frames, and it developed applications such as knowledge-based systems (in particular, expert systems), symbolic mathematics, automated theorem provers, ontologies, the semantic web, and automated planning and scheduling systems. The Symbolic AI paradigm led to seminal ideas in search, symbolic programming languages, agents, multi-agent systems, the semantic web, and the strengths and limitations of formal knowledge and reasoning systems.
 
 ## References
 1. Symbolic artifical intelligence. (2023, May 23). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Symbolic_artificial_intelligence)</kb-article>
-        <rdfs:label>Symbolic AI</rdfs:label>
         <definition>Symbolic artificial intelligence is the term for the collection of all methods in artificial intelligence that are based on high-level symbolic (human-readable) representations of problems, logic, and search.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SymbolicLink">
@@ -64002,10 +64562,6 @@ When system firmware verification fails a set of predefined responses is typical
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1001">
         <attack-id>T1001</attack-id>
         <rdfs:label>Data Obfuscation</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1003">
-        <rdfs:label>OS Credential Dumping</rdfs:label>
-        <attack-id>T1003</attack-id>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1003.001">
         <attack-id>T1003.001</attack-id>
@@ -65444,8 +66000,8 @@ Wikipedia. (n.d.). Central tendency. [Link](https://en.wikipedia.org/wiki/Centra
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Uniform_Resource_Locator"/>
         <skos:altLabel>Uniform Resource Locator</skos:altLabel>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/url</rdfs:seeAlso>
-        <definition>A Uniform Resource Locator (URL), commonly informally termed a web address (a term which is not defined identically) is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it.A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably. A URL implies the means to access an indicated resource, which is not true of every URI. URLs occur most commonly to reference web pages (http), but are also used for file transfer (ftp), email (mailto), database access (JDBC), and many other applications.</definition>
         <rdfs:label>URL</rdfs:label>
+        <definition>A Uniform Resource Locator (URL), commonly informally termed a web address (a term which is not defined identically) is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it.A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably. A URL implies the means to access an indicated resource, which is not true of every URI. URLs occur most commonly to reference web pages (http), but are also used for file transfer (ftp), email (mailto), database access (JDBC), and many other applications.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#URLAnalysis">
         <definition>Determining if a URL is benign or malicious by analyzing the URL or its components.</definition>
@@ -65488,6 +66044,10 @@ URL analysis may trigger follow-on analytics such as **File Analysis**
         <kb-article>## References
 Intro to Active Learning. inovex Blog.  [Link](https://www.inovex.de/de/blog/intro-to-active-learning/).</kb-article>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UnlockAccount">
+        <definition>Restoring a user account&apos;s access to resources by unlocking a locked User Account.</definition>
+        <rdfs:label>Unlock Account</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UnsupervisedLearning">
         <rdfs:label>Unsupervised Learning</rdfs:label>
         <kb-abstract>## References
@@ -65502,8 +66062,8 @@ SAS Institute Inc. (n.d.). Decision Trees. In SAS® Visual Data Mining and Machi
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#User">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/User_(computing)"/>
-        <rdfs:label>User</rdfs:label>
         <rdfs:seeAlso>UserAccount</rdfs:seeAlso>
+        <rdfs:label>User</rdfs:label>
         <definition>A user is a person [or agent] who uses a computer or network service. Users generally use a system or a software product without the technical expertise required to fully understand it. Power users use advanced features of programs, though they are not necessarily capable of computer programming and system administration. A user often has a user account and is identified to the system by a username (or user name). Other terms for username include login name, screenname (or screen name), nickname (or nick) and handle, which is derived from the identical Citizen&apos;s Band radio term. Some software products provide services to other systems and have no direct end users.</definition>
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/10761247-n"/>
     </rdf:Description>
@@ -65637,8 +66197,8 @@ Intro to Active Learning. inovex Blog.  [Link](https://www.inovex.de/de/blog/int
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#VirtualAddress">
         <rdfs:isDefinedBy>https://www.techopedia.com/definition/9934/virtual-address-va</rdfs:isDefinedBy>
-        <rdfs:label>Virtual Address</rdfs:label>
         <synonym>Logical Address</synonym>
+        <rdfs:label>Virtual Address</rdfs:label>
         <rdfs:seeAlso>https://dbpedia.org/page/Virtual_address_space</rdfs:seeAlso>
         <rdfs:seeAlso>https://en.wikipedia.org/wiki/Memory_address#Logical_addresses</rdfs:seeAlso>
         <definition>A virtual address in memory is a pointer or marker for a memory space that an operating system allows a process to use. The virtual address points to a location in primary storage that a process can use independently of other processes.</definition>
@@ -65695,8 +66255,8 @@ Ensemble learning. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Ensemble_lea
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WebServerApplication">
         <definition>A web server application (or web app) is an application software that runs on a web server, unlike computer-based software programs that are stored locally on the Operating System (OS) of the device. Web applications are accessed by the user through a web browser with an active internet connection. These applications are programmed using a client-server modeled structure-the user (&quot;client&quot;) is provided services through an off-site server that is hosted by a third-party. Examples of commonly-used, web applications, include: web-mail, online retail sales, online banking, and online auctions.</definition>
-        <rdfs:label>Web Server Application</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Web_application"/>
+        <rdfs:label>Web Server Application</rdfs:label>
         <skos:altLabel>Web Application</skos:altLabel>
         <skos:altLabel>Web App</skos:altLabel>
     </rdf:Description>

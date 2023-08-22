@@ -75,7 +75,8 @@ D3-SRA,Detect,,Sender Reputation Analysis,,Ascertaining sender reputation based 
 D3-SMRA,Detect,,Sender MTA Reputation Analysis,,Characterizing the reputation of mail transfer agents (MTA) to determine the security risk in emails.
 D3-FA,Detect,File Analysis,,,
 D3-FH,Detect,,File Hashing,,Employing file hash comparisons to detect known malware.
-D3-FCR,Detect,,File Content Rules,,Employing a pattern matching rule language to analyze files.
+D3-FCOA,Detect,,File Content Analysis,,Employing a pattern matching algorithm to statically analyze the content of files.
+D3-FCR,Detect,,,File Content Rules,Employing a pattern matching rule language to analyze the content of files.
 D3-EFA,Detect,,Emulated File Analysis,,Emulating instructions in a file looking for specific patterns.
 D3-DA,Detect,,Dynamic Analysis,,"Executing or opening a file in a synthetic ""sandbox"" environment to determine if the file is a malicious program or if the file exploits another program such as a document reader."
 D3-NTA,Detect,Network Traffic Analysis,,,
