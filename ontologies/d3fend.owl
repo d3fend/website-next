@@ -30822,8 +30822,12 @@ Another difference are the capabilities of the mechanism:
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1542.004">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#T1542"/>
-        <attack-id>T1542.004</attack-id>
-        <rdfs:label>ROMMONkit</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemFirmware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -55817,6 +55821,14 @@ With keystroke dynamics the biometric template used to identify an individual is
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1542.004 -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1542.004">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemFirmware"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1542.005 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1542.005">
@@ -58403,9 +58415,9 @@ Wikipedia. (n.d.). Autoregressive integrated moving average. [Link](https://en.w
         <rdfs:label>ARIMA Model</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ARMA_Model">
-        <definition>Autoregressive-moving-average (ARMA) models provide a parsimonious description of a (weakly) stationary stochastic process in terms of two polynomials, one for the autoregression (AR) and the second for the moving average (MA).</definition>
         <kb-article>## References
 Wikipedia. (n.d.). Autoregressive-moving-average model. [Link](https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model)</kb-article>
+        <definition>Autoregressive-moving-average (ARMA) models provide a parsimonious description of a (weakly) stationary stochastic process in terms of two polynomials, one for the autoregression (AR) and the second for the moving average (MA).</definition>
         <rdfs:label>ARMA Model</rdfs:label>
         <synonym>Autoregressive moving average model</synonym>
     </rdf:Description>
@@ -58709,8 +58721,8 @@ ANN Classification. [Link](http://uc-r.github.io/ann_classification).</kb-articl
         <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</display-order>
         <synonym>Asset Discovery</synonym>
         <synonym>Asset Inventorying</synonym>
-        <definition>Asset inventorying identifies and records the organization&apos;s assets and enriches each inventory item with knowledge about their vulnerabilities.</definition>
         <rdfs:label>Asset Inventory</rdfs:label>
+        <definition>Asset inventorying identifies and records the organization&apos;s assets and enriches each inventory item with knowledge about their vulnerabilities.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AssetVulnerabilityEnumeration">
         <definition>Asset vulnerability enumeration enriches inventory items with knowledge identifying their vulnerabilities.</definition>
@@ -58785,16 +58797,16 @@ This technique covers statistical outliers. Though depending on the complexity o
         <rdfs:label>Authentication Function</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthenticationLog">
-        <definition>A log of authentication events.</definition>
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
+        <definition>A log of authentication events.</definition>
         <rdfs:label>Authentication Log</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authorization"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthenticationService">
         <definition>An authentication service is a mechanism, analogous to the use of passwords on time-sharing systems, for the secure authentication of the identity of network clients by servers and vice versa, without presuming the operating system integrity of either (e.g., Kerberos).</definition>
         <rdfs:label>Authentication Service</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="https://www.gartner.com/en/information-technology/glossary/authentication-service"/>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authentication"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gartner.com/en/information-technology/glossary/authentication-service"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Authorization">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Authorization"/>
@@ -58813,8 +58825,8 @@ Authorization event data is collected to create a baseline user profile. Authori
 Depending on the complexity of the data considered, outliers may not be obvious to a human analyst reviewing events in simplistic analytic views. If malicious activity is not statistically different from benign activity, an alert threshold will not be met.</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthorizationLog">
-        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
         <rdfs:label>Authorization Log</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
         <definition>A log of authorization events.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authorization"/>
     </rdf:Description>
@@ -59002,7 +59014,6 @@ Ensemble learning. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Ensemble_lea
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ByteSequenceEmulation">
         <rdfs:label>Byte Sequence Emulation</rdfs:label>
         <definition>Analyzing sequences of bytes and determining if they likely represent malicious shellcode.</definition>
-        <synonym>Shellcode Transmission Detection</synonym>
         <kb-article>## How it works
 
 Bytes are analyzed as if they are machine code instructions, and such instructions that are a common component of known shellcode are noted, such as stack pivots, reads from a Memory Address Table, and system calls for functions that disable protections or execute code.  For example, the x86 instruction `b0 0b: mov $11, %ax`, with no further alterations to the `%ax` register, followed by `cd 80: syscall` executes the system call `execve()` in the Linux kernel, which replaces the current process with another one specified -- this is a common action in shellcode, so this sequence would be flagged.
@@ -59029,6 +59040,7 @@ With inserting code directly, that it is not a buffer overflow, and just some pl
 ### False Positives
 
 Byte sequences containing code that is never used as machine code are still analyzed and flagged for anomalies, and [eventually](http://mathforum.org/library/drmath/view/55871.html), it is likely that an attack sequence will arise from the sheer volume of bytes transmitted.</kb-article>
+        <synonym>Shellcode Transmission Detection</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#C4.5">
         <rdfs:label>C4.5</rdfs:label>
@@ -59158,8 +59170,8 @@ Wikipedia. (n.d.). Canopy clustering algorithm. [Link](https://en.wikipedia.org/
         <synonym>CPU</synonym>
         <synonym>Central Processor</synonym>
         <definition>A central processing unit (CPU), also called a central processor, main processor or just processor, is the electronic circuitry that executes instructions comprising a computer program. The CPU performs basic arithmetic, logic, controlling, and input/output (I/O) operations specified by the instructions in the program. This contrasts with external components such as main memory and I/O circuitry, and specialized processors such as graphics</definition>
-        <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Central_processing_unit</rdfs:isDefinedBy>
         <synonym>Main Processor</synonym>
+        <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Central_processing_unit</rdfs:isDefinedBy>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CentralTendency">
         <kb-article>## References
@@ -59177,8 +59189,8 @@ Google Developers. (n.d.). Clustering Algorithms. [Link](https://developers.goog
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Certificate">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Public_key_certificate"/>
-        <definition>In cryptography, a public key certificate, also known as a digital certificate or identity certificate, is an electronic document used to prove the ownership of a public key. The certificate includes information about the key, information about the identity of its owner (called the subject), and the digital signature of an entity that has verified the certificate&apos;s contents (called the issuer). If the signature is valid, and the software examining the certificate trusts the issuer, then it can use that key to communicate securely with the certificate&apos;s subject. In email encryption, code signing, and e-signature systems, a certificate&apos;s subject is typically a person or organization. However, in Transport Layer Security (TLS) a certificate&apos;s subject is typically a computer or other device, t</definition>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/certificate</rdfs:seeAlso>
+        <definition>In cryptography, a public key certificate, also known as a digital certificate or identity certificate, is an electronic document used to prove the ownership of a public key. The certificate includes information about the key, information about the identity of its owner (called the subject), and the digital signature of an entity that has verified the certificate&apos;s contents (called the issuer). If the signature is valid, and the software examining the certificate trusts the issuer, then it can use that key to communicate securely with the certificate&apos;s subject. In email encryption, code signing, and e-signature systems, a certificate&apos;s subject is typically a person or organization. However, in Transport Layer Security (TLS) a certificate&apos;s subject is typically a computer or other device.</definition>
         <rdfs:label>Certificate</rdfs:label>
         <skos:altLabel>Public Key Certificate</skos:altLabel>
     </rdf:Description>
@@ -59389,8 +59401,8 @@ Profiling request and response payloads across multiple clients to a single serv
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ClientApplication">
         <rdfs:seeAlso>http://attackguidev.mitre.org/techniques/T1554/ &quot;Compromise Client Software Binary&quot;</rdfs:seeAlso>
-        <rdfs:label>Client Application</rdfs:label>
         <definition>A client application is software that accesses a service made available by a server. The server is often (but not always) on another computer system, in which case the client accesses the service by way of a network. The term applies to the role that programs or devices play in the client-server model</definition>
+        <rdfs:label>Client Application</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Client_(computing)"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Clipboard">
@@ -59617,8 +59629,8 @@ Wikipedia. (n.d.). Cramér&apos;s V. [Link](https://en.wikipedia.org/wiki/Cram%C
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateThread">
         <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread"/>
-        <rdfs:label>Create Thread</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/POSIX_Threads"/>
+        <rdfs:label>Create Thread</rdfs:label>
         <definition>Threads are an execution model that exists independently from a language, as well as a parallel execution model. They enable a program to control multiple different flows of work that overlap in time.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Credential">
@@ -59760,8 +59772,8 @@ For example, a DNS policy can be created for blocking DNS queries for FQDNs that
 - Continuous maintenance of unauthorized domain lists is needed to keep up to date with possible site content changes.
 - File sharing or content delivery networks may require other filtering techniques that are more fine-grained (URL blocking).
 - Access to malicious websites or other network resources directly by IP instead of by DNS record, or after alteration of local DNS hosts file, may not result in DNS network traffic.</kb-article>
-        <synonym>DNS Blacklisting</synonym>
         <definition>Blocking DNS Network Traffic based on criteria such as IP address, domain name, or DNS query type.</definition>
+        <synonym>DNS Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DNSLookup">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/List_of_DNS_record_types"/>
@@ -59772,7 +59784,7 @@ For example, a DNS policy can be created for blocking DNS queries for FQDNs that
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DNSNetworkTraffic">
         <rdfs:label>DNS Network Traffic</rdfs:label>
-        <definition>RPC network traffic is network traffic related to remote procedure calls between network nodes..This includes only network traffic conforming to a standard RPC protocol; not custom protocols.</definition>
+        <definition>DNS network traffic is network traffic related to queries and responses involving the Domain Name System. DNS traffic can involve clients, servers such as relays or resolvers. This includes only network traffic conforming to standard DNS protocol; not custom protocols.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DNSTrafficAnalysis">
         <definition>Analysis of domain name metadata, including name and DNS records, to determine whether the domain is likely to resolve to an undesirable host.</definition>
@@ -59799,8 +59811,8 @@ This technique does not check for content hosted at the domain.
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DataExchangeMapping">
         <synonym>Data Flow Mapping</synonym>
         <synonym>Information Exchange Mapping</synonym>
-        <definition>Data exchange mapping identifies and models the organization&apos;s intended design for the flows of the data types, formats, and volumes between systems at the application layer.</definition>
         <rdfs:label>Data Exchange Mapping</rdfs:label>
+        <definition>Data exchange mapping identifies and models the organization&apos;s intended design for the flows of the data types, formats, and volumes between systems at the application layer.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DataInventory">
         <synonym>Data Discovery</synonym>
@@ -59865,8 +59877,8 @@ Code can also be deemed unreachable for certain run-time conditions. Different d
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Deceive">
         <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-priority>
-        <rdfs:label>Deceive</rdfs:label>
         <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</display-order>
+        <rdfs:label>Deceive</rdfs:label>
         <definition>The deceive tactic is used to advertise, entice, and allow potential attackers access to an observed or controlled environment.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecisionTree">
@@ -60226,8 +60238,8 @@ Wikipedia. (n.d.). Descriptive statistics. [Link](https://en.wikipedia.org/wiki/
         <display-baseurl>/dao/artifact/</display-baseurl>
         <definition>An information-bearing artifact (object) that is, or is encoded to be used with, a digital computer system. This concept is broad to include the literal instances of an artifact, or an implicit summarization of changes to or properties of other artifacts.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Digital_artifactual_value"/>
-        <synonym>Digital Asset</synonym>
         <rdfs:label>Digital Artifact</rdfs:label>
+        <synonym>Digital Asset</synonym>
         <rdfs:seeAlso>https://www.iso.org/obp/ui/#iso:std:iso-iec:19770:-1:ed-3:v1:en</rdfs:seeAlso>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Virtual_artifact"/>
     </rdf:Description>
@@ -60366,8 +60378,9 @@ This technique can be accomplished in a number of ways:
 CompNeuro Neuromatch Academy Tutorials. [Link](https://compneuro.neuromatch.io/tutorials/W3D4_ReinforcementLearning/student/W3D4_Tutorial4.html)</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis">
-        <definition>Executing or opening a file in a synthetic &quot;sandbox&quot; environment to determine if the file is a malicious program or if the file exploits another program such as a document reader.</definition>
         <rdfs:label>Dynamic Analysis</rdfs:label>
+        <definition>Executing or opening a file in a synthetic &quot;sandbox&quot; environment to determine if the file is a malicious program or if the file exploits another program such as a document reader.</definition>
+        <synonym>Malware Sandbox</synonym>
         <kb-article>## How it works
 Analyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.
 
@@ -60379,7 +60392,6 @@ Analyzing the interaction of a piece of code with a system while the code is bei
 
 ## Implementations
 * [Cuckoo Sandbox](https://cuckoosandbox.org)</kb-article>
-        <synonym>Malware Sandbox</synonym>
         <synonym>Malware Detonation</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Email">
@@ -60430,8 +60442,8 @@ Email files may propagate through many storage systems across the an organizatio
         <definition>Emulating instructions in a file looking for specific patterns.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Enclave">
-        <definition>Network enclaves consist of standalone assets that do not interact with other information systems or networks. A major difference between a DMZ or demilitarized zone and a network enclave is a DMZ allows inbound and outbound traffic access, where firewall boundaries are traversed. In an enclave, firewall boundaries are not traversed. Enclave protection tools can be used to provide protection within specific security domains. These mechanisms are installed as part of an Intranet to connect networks that have similar security requirements.</definition>
         <rdfs:label>Enclave</rdfs:label>
+        <definition>Network enclaves consist of standalone assets that do not interact with other information systems or networks. A major difference between a DMZ or demilitarized zone and a network enclave is a DMZ allows inbound and outbound traffic access, where firewall boundaries are traversed. In an enclave, firewall boundaries are not traversed. Enclave protection tools can be used to provide protection within specific security domains. These mechanisms are installed as part of an Intranet to connect networks that have similar security requirements.</definition>
         <skos:altLabel>Network Enclave</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Network_enclave"/>
     </rdf:Description>
@@ -60446,6 +60458,7 @@ Email files may propagate through many storage systems across the an organizatio
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#EndpointHealthBeacon">
         <definition>Monitoring the security status of an endpoint by sending periodic messages with health status, where absence of a response may indicate that the endpoint has been compromised.</definition>
         <synonym>Endpoint Health Telemetry</synonym>
+        <rdfs:label>Endpoint Health Beacon</rdfs:label>
         <kb-article>## How it works
 Endpoints are configured to periodically generate and transmit a secure heartbeat that is delivered on a configured schedule and provides endpoint status information. Status information can include software details (version, configuration, etc), endpoint identification (MAC, IP address, machine ID) or other hardware/software configuration information. Interruption of the heartbeat can signal that the endpoint has been compromised.
 
@@ -60454,7 +60467,6 @@ Endpoints are configured to periodically generate and transmit a secure heartbea
 * Disappearance of the heartbeat could simply mean that the endpoint is powered off or intentionally disconnected from the network. Therefore other criteria may need to be used to accurately detect endpoint compromise.
 * Attacker presence on the machine may leave the heartbeat intact.
 * An attacker may determine the format of the heartbeat and continue to send it even after the machine is compromised.</kb-article>
-        <rdfs:label>Endpoint Health Beacon</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#EndpointSensor">
         <definition>A sensor application installed on a endpoint (platform) to collect information on platform components.</definition>
@@ -60613,8 +60625,8 @@ On a Windows machine the Windows Defender Application Control (WDAC) policy enfo
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Executable"/>
-        <definition>In computing, executable code or an executable file or executable program, sometimes simply an executable, causes a computer &quot;to perform indicated tasks according to encoded instructions,&quot; as opposed to a data file that must be parsed by a program to be meaningful. These instructions are traditionally machine code instructions for a physical CPU. However, in a more general sense, a file containing instructions (such as bytecode) for a software interpreter may also be considered executable; even a scripting language source file may therefore be considered executable in this sense. The exact interpretation depends upon the use; while the term often refers only to machine code files, in the context of protection against computer viruses all files which cause potentially hazardous instruction</definition>
         <skos:altLabel>Executable</skos:altLabel>
+        <definition>In computing, executable code or an executable file or executable program, sometimes simply an executable, causes a computer &quot;to perform indicated tasks according to encoded instructions,&quot; as opposed to a data file that must be parsed by a program to be meaningful. These instructions are traditionally machine code instructions for a physical CPU. However, in a more general sense, a file containing instructions (such as bytecode) for a software interpreter may also be considered executable; even a scripting language source file may therefore be considered executable in this sense. The exact interpretation depends upon the use; while the term often refers only to machine code files, in the context of protection against computer viruses all files which cause potentially hazardous instruction</definition>
         <rdfs:label>Executable File</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableScript">
@@ -60842,7 +60854,6 @@ On Windows systems, deleting a file in File Explorer does not permanently delete
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FirmwareBehaviorAnalysis">
         <rdfs:label>Firmware Behavior Analysis</rdfs:label>
-        <definition>Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.</definition>
         <kb-article>## How it works
 Firmware behavior analysis provides protections by ensuring that installed firmware has not been tampered with or modified. Firmware analysis applies to mutable firmware and immutable read-only memory (ROMs).
 
@@ -60858,6 +60869,7 @@ A challenge-response is issued and includes a nonce so that replays are not allo
 * The firmware code will need to be modified to include the behavioral monitoring functionality.
 * This technique is sensitive to the device the embedded firmware is hosted on and it is expected that the devices and firmware will need to be profiled and analyzed to determine timing estimation.
 * This technique is not expected to be one hundred percent correct as you would expect in a hardware root of trust solution and may require some tuning.</kb-article>
+        <definition>Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.</definition>
         <synonym>Firmware Timing Analysis</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FirmwareEmbeddedMonitoringCode">
@@ -61093,8 +61105,8 @@ TechVidvan. (n.d.). Clustering in Machine Learning Tutorial. [Link](https://tech
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Harden">
         <rdfs:label>Harden</rdfs:label>
-        <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-order>
         <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-priority>
+        <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-order>
         <definition>The harden tactic is used to increase the opportunity cost of computer network exploitation. Hardening differs from Detection in that it generally is conducted before a system is online and operational.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Hardware-basedProcessIsolation">
@@ -61121,7 +61133,6 @@ Hardware process isolation is commonly implemented through Direct Memory Access 
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory">
         <synonym>Hardware Component Discovery</synonym>
-        <synonym>Hardware Component Inventorying</synonym>
         <kb-article>## How it works
 Administrators collect information on hardware devices such as peripherals, NICs, processors, and memory devices that are components of the computers in their architecture using a variety of administrative and management tools that query for this information.  In some cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through remote adminstration tools and system commands, either manually or using scripts.
 
@@ -61137,6 +61148,7 @@ Administrators collect information on hardware devices such as peripherals, NICs
    * Web-based Enterprise Management (WBEM) collects CIM information
       * Windows Management Instrumentation (WMI)
       * Windows Management Infrastructure (MI)</kb-article>
+        <synonym>Hardware Component Inventorying</synonym>
         <rdfs:label>Hardware Component Inventory</rdfs:label>
         <definition>Hardware component inventorying identifies and records the hardware items in the organization&apos;s architecture.</definition>
     </rdf:Description>
@@ -61184,6 +61196,7 @@ Wikipedia. (2021, August 10). Hierarchical clustering. [Link](https://en.wikiped
 html)</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HierarchicalDomainDenylisting">
+        <rdfs:label>Hierarchical Domain Denylisting</rdfs:label>
         <kb-article>## How it works
 This technique is used to block DNS queries from related domains and subdomains that are unauthorized.
 
@@ -61194,7 +61207,6 @@ Hierarchical domain blacklisting considers the blacklisting of second level doma
 * Other domains that resolve to the domain of interest for blocking (CNAME, etc).
 * Denylists should have identified maintenance cycles to ensure lists are not stale.</kb-article>
         <definition>Blocking the resolution of any subdomain of a specified domain name.</definition>
-        <rdfs:label>Hierarchical Domain Denylisting</rdfs:label>
         <synonym>Hierarchical Domain Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#High-dimensionClustering">
@@ -61241,8 +61253,8 @@ A homoglyph, in this context, is a deceptive string or word which looks like a t
 * Legitimate companies and products use non-dictionary words in their names that could result in many false positives</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Host">
-        <rdfs:label>Host</rdfs:label>
         <skos:altLabel>Network Host</skos:altLabel>
+        <rdfs:label>Host</rdfs:label>
         <definition>A host is a computer or other device, typically connected to a computer network. A network host may offer information resources, services, and applications to users or other nodes on the network. A network host is a network node that is assigned a network layer host address. Network hosts that participate in applications that use the client-server model of computing, are classified as server or client systems. Network hosts may also function as nodes in peer-to-peer applications, in which all nodes share and consume resources in an equipotent manner.</definition>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Host_(network)"/>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/device</rdfs:seeAlso>
@@ -61261,8 +61273,8 @@ A homoglyph, in this context, is a deceptive string or word which looks like a t
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Hostname">
         <definition>In computer networking, a hostname (archaically nodename) is a label that is assigned to a device connected to a computer network and that is used to identify the device in various forms of electronic communication, such as the World Wide Web. Hostnames may be simple names consisting of a single word or phrase, or they may be structured.</definition>
-        <skos:altLabel>Nodename</skos:altLabel>
         <rdfs:label>Hostname</rdfs:label>
+        <skos:altLabel>Nodename</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Hostname"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Hybrid-basedTransferLearning">
@@ -61851,8 +61863,8 @@ Towards Data Science. (n.d.). Understanding K-means Clustering in Machine Learni
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Kernel">
         <definition>The kernel is a computer program that constitutes the central core of a computer&apos;s operating system. It has complete control over everything that occurs in the system. As such, it is the first program loaded on startup, and then manages the remainder of the startup, as well as input/output requests from software, translating them into data processing instructions for the central processing unit. It is also responsible for managing memory, and for managing and communicating with computing peripherals, like printers, speakers, etc. The kernel is a fundamental part of a modern computer&apos;s operating system.</definition>
-        <rdfs:label>Kernel</rdfs:label>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/kernel</rdfs:seeAlso>
+        <rdfs:label>Kernel</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Kernel_(operating_system)"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Kernel-basedProcessIsolation">
@@ -61877,8 +61889,8 @@ Most current Unix-like systems and Microsoft Windows support loadable kernel mod
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Process_(computing)"/>
         <rdfs:label>Kernel Process Table</rdfs:label>
         <definition>A data structure in the kernel which is a table containing all of the information that must be saved when the CPU switches from running one process to another in a multitasking system. It allows the operating system to track all the process&apos;s execution status, and contains the For every process managed by the kernel, there is a process control block (PCB) in the process table.</definition>
-        <rdfs:seeAlso rdf:resource="https://www.geeksforgeeks.org/process-table-and-process-control-block-pcb/"/>
         <rdfs:isDefinedBy rdf:resource="https://encyclopedia2.thefreedictionary.com/process+table"/>
+        <rdfs:seeAlso rdf:resource="https://www.geeksforgeeks.org/process-table-and-process-control-block-pcb/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KeyboardInputDevice">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Computer_keyboard"/>
@@ -62084,8 +62096,8 @@ Wikipedia. (2021, September 29). Long short-term memory. [Link](https://en.wikip
         <rdfs:label>Long Short-term Memory</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MacOSKeychain">
-        <rdfs:label>MacOS Keychain</rdfs:label>
         <skos:altLabel>Keychain</skos:altLabel>
+        <rdfs:label>MacOS Keychain</rdfs:label>
         <definition>Keychain is the password management system in macOS, developed by Apple. It was introduced with Mac OS 8.6, and has been included in all subsequent versions of the operating system, now known as macOS. A Keychain can contain various types of data: passwords (for websites, FTP servers, SSH accounts, network shares, wireless networks, groupware applications, encrypted disk images), private keys, certificates, and secure notes.</definition>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Keychain_(software)"/>
     </rdf:Description>
@@ -62100,8 +62112,8 @@ Machine learning.&quot; Wikipedia. [Link](https://en.wikipedia.org/wiki/Machine_
         <rdfs:label>Mail Network Traffic</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MailServer">
-        <rdfs:label>Mail Server</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Message_transfer_agent"/>
+        <rdfs:label>Mail Server</rdfs:label>
         <skos:altLabel>MX Host</skos:altLabel>
         <skos:altLabel>Mail Exchanger</skos:altLabel>
         <skos:altLabel>Email Server Resource</skos:altLabel>
@@ -62169,9 +62181,9 @@ Support Vector Machines for Machine Learning. [Link](https://machinelearningmast
 Wikipedia. (n.d.). Central tendency. [Link](https://en.wikipedia.org/wiki/Central_tendency)</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MeanAbsoluteDeviation">
-        <rdfs:label>Mean Absolute Deviation</rdfs:label>
         <kb-article>## References
 Wikipedia. (n.d.). Average absolute deviation. [Link](https://en.wikipedia.org/wiki/Average_absolute_deviation)</kb-article>
+        <rdfs:label>Mean Absolute Deviation</rdfs:label>
         <synonym>MAD</synonym>
         <definition>The mean absolute deviation (MAD), also referred to as the &quot;mean deviation&quot; or sometimes &quot;average absolute deviation&quot;, is the mean of the data&apos;s absolute deviations around the data&apos;s mean: the average (absolute) distance from the mean.</definition>
     </rdf:Description>
@@ -62308,8 +62320,8 @@ Wikipedia. (n.d.). Central tendency. [Link](https://en.wikipedia.org/wiki/Centra
         <rdfs:label>Mode</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Model">
-        <definition>The model tactic is used to apply security engineering, vulnerability, threat, and risk analyses to digital systems. This is accomplished by creating and maintaining a common understanding of the systems being defended, the operations on those systems, actors using the systems, and the relationships and interactions between these elements.</definition>
         <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</display-priority>
+        <definition>The model tactic is used to apply security engineering, vulnerability, threat, and risk analyses to digital systems. This is accomplished by creating and maintaining a common understanding of the systems being defended, the operations on those systems, actors using the systems, and the relationships and interactions between these elements.</definition>
         <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</display-order>
         <rdfs:label>Model</rdfs:label>
     </rdf:Description>
@@ -62487,8 +62499,8 @@ Administrators collect information on network nodes in their architecture using 
         <rdfs:label>Network Session</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Session_(computer_science)"/>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/network_connection_info</rdfs:seeAlso>
-        <definition>A network session is a temporary and interactive information interchange between two or more devices communicating over a network. A session is established at a certain point in time, and then &apos;torn down&apos; - brought to an end - at some later point. An established communication session may involve more than one message in each direction. A session is typically stateful, meaning that at least one of the communicating parties needs to hold current state information and save information about the session history in order to be able to communicate, as opposed to stateless communication, where the communication consists of independent requests with responses. Network sessions may be established and implemented as part of protocols and services at the application, session, or transport layers of the OSI model.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/OSI_model"/>
+        <definition>A network session is a temporary and interactive information interchange between two or more devices communicating over a network. A session is established at a certain point in time, and then &apos;torn down&apos; - brought to an end - at some later point. An established communication session may involve more than one message in each direction. A session is typically stateful, meaning that at least one of the communicating parties needs to hold current state information and save information about the session history in order to be able to communicate, as opposed to stateless communication, where the communication consists of independent requests with responses. Network sessions may be established and implemented as part of protocols and services at the application, session, or transport layers of the OSI model.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic">
         <rdfs:label>Network Traffic</rdfs:label>
@@ -62556,8 +62568,8 @@ Wikipedia. (n.d.). Nonlinear regression. [Link](https://en.wikipedia.org/wiki/No
         <kb-article>## References
 Wikipedia. (n.d.). Nonlinear regression. [Link](https://en.wikipedia.org/wiki/Nonlinear_regression)</kb-article>
         <rdfs:label>Nonlinear Regression Learning</rdfs:label>
-        <rdfs:seeAlso>http://d3fend.mitre.org/ontologies/d3fend.owl#NonlinearRegression</rdfs:seeAlso>
         <definition>A supervised learning method that builds a non-linear regression model using training data.</definition>
+        <rdfs:seeAlso>http://d3fend.mitre.org/ontologies/d3fend.owl#NonlinearRegression</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#NumericPatternMatching">
         <rdfs:label>Numeric Pattern Matching</rdfs:label>
@@ -62590,8 +62602,8 @@ The OWL languages are characterized by formal semantics. They are built upon the
         <rdfs:label>Office Application File</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#One-timePassword">
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/One-time_password"/>
         <rdfs:label>One-time Password</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/One-time_password"/>
         <synonym>OTP</synonym>
         <definition>A one-time password is valid for only one user authentication.</definition>
         <kb-article>## How it works
@@ -62620,9 +62632,9 @@ Additionally, after the code file is printed, it could be recovered from the sys
         <definition>For most file systems, a program initializes access to a file in a file system using the open system call. This allocates resources associated to the file (the file descriptor), and returns a handle that the process will use to refer to that file. In some cases the open is performed by the first access. During the open, the filesystem may allocate memory for buffers, or it may wait until the first operation. Various other errors which may occur during the open include directory update failures, un-permitted multiple connections, media failures, communication link failures and device failures.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystem">
+        <definition>An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. All computer programs, excluding firmware, require an operating system to function. Time-sharing operating systems schedule tasks for efficient use of the system and may also include accounting software for cost allocation of processor time, mass storage, printing, and other resources.</definition>
         <rdfs:label>Operating System</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Operating_system"/>
-        <definition>An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. All computer programs, excluding firmware, require an operating system to function. Time-sharing operating systems schedule tasks for efficient use of the system and may also include accounting software for cost allocation of processor time, mass storage, printing, and other resources.</definition>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/os</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemConfiguration">
@@ -62638,8 +62650,8 @@ Additionally, after the code file is printed, it could be recovered from the sys
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemConfigurationFile">
         <skos:altLabel>System Configuration File</skos:altLabel>
-        <definition>An operating system configuration file is a file used to configure the operating system.</definition>
         <rdfs:seeAlso>Configuration File</rdfs:seeAlso>
+        <definition>An operating system configuration file is a file used to configure the operating system.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Configuration_file"/>
         <rdfs:label>Operating System Configuration File</rdfs:label>
         <rdfs:seeAlso>Operating System</rdfs:seeAlso>
@@ -62733,16 +62745,16 @@ Operating System Monitoring Techniques have varied implementations including bui
         <rdfs:label>Outbound Internet Encrypted Web Traffic</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetFileTransferTraffic">
-        <definition>Outbound internet file transfer traffic is file transfer traffic that is: (a) on an outgoing connection initiated from a host within a network to a host outside the network, and (b) using a standard file transfer protocol.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/File_transfer"/>
+        <definition>Outbound internet file transfer traffic is file transfer traffic that is: (a) on an outgoing connection initiated from a host within a network to a host outside the network, and (b) using a standard file transfer protocol.</definition>
         <rdfs:label>Outbound Internet File Transfer Traffic</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Internetworking"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetMailTraffic">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Internetworking"/>
         <skos:altLabel>Outbound Internet Email Traffic</skos:altLabel>
-        <definition>Outbound internet DNS lookup traffic is network traffic using a standard email protocol on an outgoing connection initiated from a host within a network to a host outside the network.</definition>
         <rdfs:label>Outbound Internet Mail Traffic</rdfs:label>
+        <definition>Outbound internet DNS lookup traffic is network traffic using a standard email protocol on an outgoing connection initiated from a host within a network to a host outside the network.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OutboundInternetNetworkTraffic">
         <rdfs:label>Outbound Internet Network Traffic</rdfs:label>
@@ -63394,8 +63406,8 @@ Processes that are started in a subsystem might not be fully terminated if they 
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessTree">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Child_process"/>
-        <rdfs:seeAlso>Process Spawn</rdfs:seeAlso>
         <definition>A process tree is a tree structure representation of parent-child relationships established via process spawn operations.</definition>
+        <rdfs:seeAlso>Process Spawn</rdfs:seeAlso>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Parent_process"/>
         <rdfs:label>Process Tree</rdfs:label>
     </rdf:Description>
@@ -63577,8 +63589,8 @@ Wikipedia. (2021, September 7). Recurrent Neural Network. [Link](https://en.wiki
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#RegexMatching">
         <rdfs:label>Regex Matching</rdfs:label>
-        <definition>Regular expression matching is type of partial string matching using a regular expression, which is a sequence of characters that specifies a match pattern in text.</definition>
         <synonym>Regexp</synonym>
+        <definition>Regular expression matching is type of partial string matching using a regular expression, which is a sequence of characters that specifies a match pattern in text.</definition>
         <synonym>Regex</synonym>
         <kb-article>## How it works
 
@@ -63809,8 +63821,8 @@ State-action-reward-state-action. Wikipedia.  [Link](https://en.wikipedia.org/wi
         <definition>A task scheduler process is an operating system process that executes scheduled tasks (time-scheduling in the sense of wall clock time; not operating system scheduling of processes for multitasking).</definition>
         <rdfs:seeAlso>https://linux.die.net/man/1/at</rdfs:seeAlso>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Cron"/>
-        <synonym>Scheduled Task</synonym>
         <rdfs:label>Scheduled Job</rdfs:label>
+        <synonym>Scheduled Task</synonym>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Windows_Task_Scheduler"/>
         <synonym>Task Scheduler Process</synonym>
     </rdf:Description>
@@ -64010,8 +64022,8 @@ Yu, L., Zhang, W., Wang, J., &amp; Yu, Y. (2017). SeqGAN: Sequence Generative Ad
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplication">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Server_(computing)"/>
         <definition>An application that provides a set of software functionalities so that multiple clients who can reuse the functionality, provided they are authorized for use of the service.</definition>
-        <rdfs:label>Service Application</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Service_(systems_architecture)"/>
+        <rdfs:label>Service Application</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplicationProcess">
         <rdfs:label>Service Application Process</rdfs:label>
@@ -64050,8 +64062,8 @@ The organization collects and models architectural information about the service
         <skos:altLabel>Non-persistent Cookie</skos:altLabel>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/HTTP_cookie"/>
         <rdfs:isDefinedBy rdf:resource="https://schema.ocsf.io/objects/http_cookie"/>
-        <rdfs:label>Session Cookie</rdfs:label>
         <definition>A session cookie, also known as an in-memory cookie, transient cookie or non-persistent cookie, exists only in temporary memory while the user navigates the website. Web browsers normally delete session cookies when the user closes the browser. Unlike other cookies, session cookies do not have an expiration date assigned to them, which is how the browser knows to treat them as session cookies.</definition>
+        <rdfs:label>Session Cookie</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SessionDurationAnalysis">
         <rdfs:label>Session Duration Analysis</rdfs:label>
@@ -64123,8 +64135,8 @@ Wikipedia. (n.d.). Skewness. [Link](https://en.wikipedia.org/wiki/Skewness)</kb-
         <definition>Software that coordinates the deployment process of software to systems, typically remotely.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SoftwareInventory">
-        <definition>Software inventorying identifies and records the software items in the organization&apos;s architecture.</definition>
         <synonym>Software Discovery</synonym>
+        <definition>Software inventorying identifies and records the software items in the organization&apos;s architecture.</definition>
         <synonym>Software Inventorying</synonym>
         <kb-article>## How it works
 Administrators collect information on software items in their architecture using a variety of administrative and management tools that query network nodes for information.  In limited cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through network enumeration methods to determine services responding on network nodes.
@@ -64173,8 +64185,8 @@ The goal is for homophones to be encoded to the same representation so that they
         <rdfs:label>Source Code</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess">
-        <definition>A process spawn refers to a function that loads and executes a new child process.The current process may wait for the child to terminate or may continue to execute asynchronously. Creating a new subprocess requires enough memory in which both the child process and the current program can execute. There is a family of spawn functions in DOS, inherited by Microsoft Windows. There is also a different family of spawn functions in an optional extension of the POSIX standards.  Fork-exec is another technique combining two Unix system calls, which can effect a process spawn.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Fork%E2%80%93exec"/>
+        <definition>A process spawn refers to a function that loads and executes a new child process.The current process may wait for the child to terminate or may continue to execute asynchronously. Creating a new subprocess requires enough memory in which both the child process and the current program can execute. There is a family of spawn functions in DOS, inherited by Microsoft Windows. There is also a different family of spawn functions in an optional extension of the POSIX standards.  Fork-exec is another technique combining two Unix system calls, which can effect a process spawn.</definition>
         <rdfs:label>Spawn Process</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Spawn_(computing)"/>
         <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/procthread/creating-processes"/>
@@ -64195,8 +64207,8 @@ Towards Data Science. (n.d.). Spectral Clustering. [Link](https://towardsdatasci
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Call_stack#Structure"/>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Call_stack"/>
         <skos:altLabel>Activation Frame</skos:altLabel>
-        <definition>A machine-dependent and application-binary-dependent (ABI-dependent) data structure containing subroutine state information including the arguments passed into the routine, the return address back to the routine&apos;s caller, and space for local variables of the routine.</definition>
         <rdfs:label>Stack Frame</rdfs:label>
+        <definition>A machine-dependent and application-binary-dependent (ABI-dependent) data structure containing subroutine state information including the arguments passed into the routine, the return address back to the routine&apos;s caller, and space for local variables of the routine.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#StackFrameCanary">
         <definition>Stack canaries, named for their analogy to a canary in a coal mine, are used to detect a stack buffer overflow before execution of malicious code can occur. This method works by placing a small integer, the value of which is randomly chosen at program start, in memory just before the stack return pointer. Most buffer overflows overwrite memory from lower to higher memory addresses, so in order to overwrite the return pointer (and thus take control of the process) the canary value must also be overwritten. This value is checked to make sure it has not changed before a routine uses the return pointer on the stack. This technique can greatly increase the difficulty of exploiting a stack buffer overflow because it forces the attacker to gain control of the instruction pointer by some non-traditional means such as corrupting other important variables on the stack.</definition>
@@ -64368,8 +64380,8 @@ Symbolic artificial intelligence is used in tools such as logic programming, pro
         <skos:altLabel>Softlink</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Symbolic_link"/>
         <rdfs:label>Symbolic Link</rdfs:label>
-        <skos:altLabel>Symlink</skos:altLabel>
         <definition>A symbolic link (also symlink or soft link) is a term for any file that contains a reference to another file or directory in the form of an absolute or relative path and that affects pathname resolution.</definition>
+        <skos:altLabel>Symlink</skos:altLabel>
         <skos:altLabel>Soft Link</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SymbolicLogic">
@@ -64389,8 +64401,8 @@ Symbolic artificial intelligence is used in tools such as logic programming, pro
 Day, O., &amp; Khoshgoftaar, T.M. (2017). A survey on heterogeneous transfer learning. *Journal of Big Data, 4*(1), 29. [Link](https://doi.org/10.1186/s40537-017-0089-0).</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall">
-        <definition>A system call is the programmatic way in which a computer program requests a service from the kernel of the operating system it is executed on. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system.</definition>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/System_call"/>
+        <definition>A system call is the programmatic way in which a computer program requests a service from the kernel of the operating system it is executed on. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system.</definition>
         <rdfs:label>System Call</rdfs:label>
         <synonym>API Monitoring</synonym>
     </rdf:Description>
@@ -65378,6 +65390,10 @@ When system firmware verification fails a set of predefined responses is typical
         <rdfs:label>Bootkit</rdfs:label>
         <attack-id>T1542.003</attack-id>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1542.004">
+        <rdfs:label>ROMMONkit</rdfs:label>
+        <attack-id>T1542.004</attack-id>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1542.005">
         <attack-id>T1542.005</attack-id>
         <rdfs:label>TFTP Boot</rdfs:label>
@@ -65934,8 +65950,8 @@ Wikipedia. (n.d.). Time series. [Link](https://en.wikipedia.org/wiki/Time_series
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TraceProcess">
         <definition>A trace system call provides a means by which one process (the &quot;tracer&quot;) may observe and control the execution of another process (the &quot;tracee&quot;), and examine and change the tracee&apos;s memory and registers. It is primarily used to implement breakpoint debugging and system call tracing.</definition>
         <skos:altLabel>Open Process</skos:altLabel>
-        <rdfs:seeAlso rdf:resource="https://linux.die.net/man/2/ptrace"/>
         <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Ptrace"/>
+        <rdfs:seeAlso rdf:resource="https://linux.die.net/man/2/ptrace"/>
         <rdfs:label>Trace Process</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TransferAgentAuthentication">
@@ -65996,8 +66012,8 @@ Wikipedia. (n.d.). Central tendency. [Link](https://en.wikipedia.org/wiki/Centra
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Uniform_Resource_Locator"/>
         <skos:altLabel>Uniform Resource Locator</skos:altLabel>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/url</rdfs:seeAlso>
-        <definition>A Uniform Resource Locator (URL), commonly informally termed a web address (a term which is not defined identically) is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it.A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably. A URL implies the means to access an indicated resource, which is not true of every URI. URLs occur most commonly to reference web pages (http), but are also used for file transfer (ftp), email (mailto), database access (JDBC), and many other applications.</definition>
         <rdfs:label>URL</rdfs:label>
+        <definition>A Uniform Resource Locator (URL), commonly informally termed a web address (a term which is not defined identically) is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it.A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably. A URL implies the means to access an indicated resource, which is not true of every URI. URLs occur most commonly to reference web pages (http), but are also used for file transfer (ftp), email (mailto), database access (JDBC), and many other applications.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#URLAnalysis">
         <definition>Determining if a URL is benign or malicious by analyzing the URL or its components.</definition>
@@ -66058,14 +66074,14 @@ SAS Institute Inc. (n.d.). Decision Trees. In SAS® Visual Data Mining and Machi
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#User">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/User_(computing)"/>
-        <rdfs:label>User</rdfs:label>
         <rdfs:seeAlso>UserAccount</rdfs:seeAlso>
+        <rdfs:label>User</rdfs:label>
         <definition>A user is a person [or agent] who uses a computer or network service. Users generally use a system or a software product without the technical expertise required to fully understand it. Power users use advanced features of programs, though they are not necessarily capable of computer programming and system administration. A user often has a user account and is identified to the system by a username (or user name). Other terms for username include login name, screenname (or screen name), nickname (or nick) and handle, which is derived from the identical Citizen&apos;s Band radio term. Some software products provide services to other systems and have no direct end users.</definition>
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/10761247-n"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount">
-        <rdfs:seeAlso>https://schema.ocsf.io/objects/user</rdfs:seeAlso>
         <definition>A user account allows a user to authenticate to a system and potentially to receive authorization to access resources provided by or connected to that system; however, authentication does not imply authorization. To log into an account, a user is typically required to authenticate oneself with a password or other credentials for the purposes of accounting, security, logging, and resource management.</definition>
+        <rdfs:seeAlso>https://schema.ocsf.io/objects/user</rdfs:seeAlso>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/User_account"/>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/User_(computing)#User_account"/>
         <rdfs:label>User Account</rdfs:label>
@@ -66086,12 +66102,12 @@ SAS Institute Inc. (n.d.). Decision Trees. In SAS® Visual Data Mining and Machi
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UserBehaviorAnalysis">
         <definition>User behavior analytics (&quot;UBA&quot;) as defined by Gartner, is a cybersecurity process about detection of insider threats, targeted attacks, and financial fraud. UBA solutions look at patterns of human behavior, and then apply algorithms and statistical analysis to detect meaningful anomalies from those patterns-anomalies that indicate potential threats.&apos; Instead of tracking devices or security events, UBA tracks a system&apos;s users. Big data platforms are increasing UBA functionality by allowing them to analyze petabytes worth of data to detect insider threats and advanced persistent threats.</definition>
         <rdfs:label>User Behavior Analysis</rdfs:label>
-        <synonym>Credential Monitoring</synonym>
         <kb-article>## Technique Overview
 
 Some techniques monitor patterns of human behavior and then apply algorithms and to identify patterns such as repeated login attempts from a single IP address or large file downloads, or abnormal accesses.
 
 Other techniques may have explicit or rigid definitions of &quot;bad behavior&quot; which are then matched against instances in a computer network environment.</kb-article>
+        <synonym>Credential Monitoring</synonym>
         <synonym>UBA</synonym>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/User_behavior_analytics"/>
     </rdf:Description>
@@ -66164,8 +66180,8 @@ Geolocation data for each user logon attempt is collected and used to create a b
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UserToUserMessage">
         <skos:altLabel>Private Message</skos:altLabel>
         <rdfs:label>User to User Message</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Personal_message"/>
         <skos:altLabel>Personal Message</skos:altLabel>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Personal_message"/>
         <definition>Personal message, private message (PM), direct message (DM), or personal chat (PC) is a private form of messaging between different members on a given platform. It is only seen and accessible by the users participating in the message.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Variability">
@@ -66193,8 +66209,8 @@ Intro to Active Learning. inovex Blog.  [Link](https://www.inovex.de/de/blog/int
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#VirtualAddress">
         <rdfs:isDefinedBy>https://www.techopedia.com/definition/9934/virtual-address-va</rdfs:isDefinedBy>
-        <synonym>Logical Address</synonym>
         <rdfs:label>Virtual Address</rdfs:label>
+        <synonym>Logical Address</synonym>
         <rdfs:seeAlso>https://en.wikipedia.org/wiki/Memory_address#Logical_addresses</rdfs:seeAlso>
         <rdfs:seeAlso>https://dbpedia.org/page/Virtual_address_space</rdfs:seeAlso>
         <definition>A virtual address in memory is a pointer or marker for a memory space that an operating system allows a process to use. The virtual address points to a location in primary storage that a process can use independently of other processes.</definition>
