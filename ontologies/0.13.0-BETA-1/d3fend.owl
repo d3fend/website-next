@@ -11,7 +11,7 @@
      xmlns:d3fend="http://d3fend.mitre.org/ontologies/d3fend.owl#">
     <owl:Ontology rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl">
         <owl:versionIRI rdf:resource="http://d3fend.mitre.org/ontologies/d3fend/0.13.0-BETA-1/d3fend.owl"/>
-        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-07-07T00:00:00+00:00</release-date>
+        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-30T00:00:00+00:00</release-date>
         <terms:description>D3FEND is a framework which encodes a countermeasure knowledge base as a knowledge graph. The graph contains the types and relations that define key concepts in the cybersecurity countermeasure domain and the relations necessary to link those concepts to each other. Each of these concepts and relations are linked to references in the cybersecurity literature.</terms:description>
         <terms:license>MIT</terms:license>
         <terms:title>D3FEND™ - A knowledge graph of cybersecurity countermeasures</terms:title>
@@ -78,7 +78,6 @@
     <owl:AnnotationProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-annotation">
         <definition>x d3fend-annotation y: The d3fend object x has the annotation y.</definition>
         <rdfs:label>d3fend-annotation</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
     </owl:AnnotationProperty>
     
 
@@ -315,6 +314,14 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-annotation"/>
+    </rdf:Description>
     
 
 
@@ -14963,7 +14970,13 @@
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#executes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -15043,7 +15056,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -16624,6 +16637,20 @@ More generally, a name server is a computer application that implements a networ
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Exec -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Exec">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#executes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableBinary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting">
@@ -16637,7 +16664,7 @@ More generally, a name server is a computer application that implements a networ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -16683,7 +16710,7 @@ More generally, a name server is a computer application that implements a networ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -16708,20 +16735,6 @@ More generally, a name server is a computer application that implements a networ
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableScript">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"/>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#executes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -17665,7 +17678,7 @@ More generally, a name server is a computer application that implements a networ
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -19019,7 +19032,7 @@ Intrusion prevention systems are considered extensions of intrusion detection sy
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxClone -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxClone">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess"/>
         <definition>Creates a child process and provides more precise control over the data shared between the parent and child processes</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/clone.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Clone</rdfs:label>
@@ -19030,7 +19043,7 @@ Intrusion prevention systems are considered extensions of intrusion detection sy
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxClone3 -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxClone3">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess"/>
         <definition>Creates a child process and provides more precise control over the data shared between the parent and child processes.
 
 Newer system call.</definition>
@@ -19043,7 +19056,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxClone3ArgumentCLONE_THREAD -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxClone3ArgumentCLONE_THREAD">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateThread"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread"/>
         <definition>A flag parameter to the Clone3 syscall. If set, the child is placed in the same thread group as the calling process.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/clone3.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Clone3 Argument CLONE_THREAD</rdfs:label>
@@ -19054,7 +19067,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxCloneArgumentCLONE_THREAD -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxCloneArgumentCLONE_THREAD">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateThread"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread"/>
         <definition>A flag parameter to the Clone syscall. If set, the child is placed in the same thread group as the calling process.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/clone.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Clone Argument CLONE_THREAD</rdfs:label>
@@ -19065,7 +19078,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxConnect -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxConnect">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectSocket"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIConnectSocket"/>
         <definition>Initiate a connection on a socket.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/connect.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Connect</rdfs:label>
@@ -19076,7 +19089,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxCreat -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxCreat">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile"/>
         <definition>Equivalent to calling Linux Open with flags equal to O_CREAT|O_WRONLY|O_TRUNC.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/creat.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Creat</rdfs:label>
@@ -19087,7 +19100,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxExecve -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxExecve">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIExec"/>
         <definition>Executes a program by replacing the calling process with a new program, with newly initialized stack, heap, and (initialized and uninitialized) data segments. The PID stays the same.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/execve.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Execve</rdfs:label>
@@ -19098,7 +19111,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxExecveat -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxExecveat">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIExec"/>
         <definition>Execute program relative to a directory file descriptor. Behavior is similar to Linux Execve.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/execveat.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Execveat</rdfs:label>
@@ -19109,7 +19122,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxFork -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxFork">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess"/>
         <definition>Creates a child process with unique PID but retains parent PID as Parent Process Identifier (PPID)</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/fork.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Fork</rdfs:label>
@@ -19120,7 +19133,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxKillArgumentSIGKILL -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxKillArgumentSIGKILL">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TerminateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITerminateProcess"/>
         <definition>Send SIGKILL signal to a process.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/kill.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Kill Argument SIGKILL</rdfs:label>
@@ -19131,7 +19144,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxMmap -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxMmap">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AllocateMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory"/>
         <definition>Map files or devices into memory.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/mmap.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Mmap</rdfs:label>
@@ -19142,7 +19155,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxMmap2 -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxMmap2">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AllocateMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory"/>
         <definition>Map files or devices into memory.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/mmap2.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Mmap2</rdfs:label>
@@ -19153,7 +19166,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxMunmap -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxMunmap">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FreeMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFreeMemory"/>
         <definition>Unmap files or devices from memory.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/munmap.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Munmap</rdfs:label>
@@ -19164,7 +19177,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenArgumentO_CREAT -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenArgumentO_CREAT">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile"/>
         <definition>Create a regular file.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/open.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Open Argument O_CREAT</rdfs:label>
@@ -19175,7 +19188,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenArgumentO_RDONLY-O_WRONLY-O_RDWR -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenArgumentO_RDONLY-O_WRONLY-O_RDWR">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OpenFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile"/>
         <definition>Opens a file specified by pathname.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/open.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Open Argument O_RDONLY, O_WRONLY, O_RDWR</rdfs:label>
@@ -19186,7 +19199,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenAt2ArgumentO_CREAT -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenAt2ArgumentO_CREAT">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile"/>
         <definition>Create a regular file. Extension of Linux Openat.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/openat2.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux OpenAt2 Argument O_CREAT</rdfs:label>
@@ -19197,7 +19210,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenAt2ArgumentO_RDONLY-O_WRONLY-O_RDWR -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenAt2ArgumentO_RDONLY-O_WRONLY-O_RDWR">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OpenFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile"/>
         <definition>Extension of Linux Openat.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/openat2.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux OpenAt2 Argument O_RDONLY, O_WRONLY, O_RDWR</rdfs:label>
@@ -19208,7 +19221,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenAtArgumentO_CREAT -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenAtArgumentO_CREAT">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile"/>
         <definition>Create a regular file. Same functionality as Linux Open but slight differences in parameter.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/openat.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux OpenAt Argument O_CREAT</rdfs:label>
@@ -19219,7 +19232,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenAtArgumentO_RDONLY-O_WRONLY-O_RDWR -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxOpenAtArgumentO_RDONLY-O_WRONLY-O_RDWR">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OpenFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile"/>
         <definition>Same functionality as Linux Open but slight differences in parameter.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/openat.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux OpenAt Argument O_RDONLY, O_WRONLY, O_RDWR</rdfs:label>
@@ -19230,7 +19243,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxPauseProcess -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxPauseProcess">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendProcess"/>
         <definition>Causes the calling process to sleep until a signal is delivered that either terminates the process or causes the invocation of a signal-catching function.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/pause.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Pause Process</rdfs:label>
@@ -19241,7 +19254,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxPauseThread -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxPauseThread">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendThread"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendThread"/>
         <definition>Causes the calling thread to sleep until a signal is delivered that either terminates the thread or causes the invocation of a signal-catching function.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/pause.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Pause Thread</rdfs:label>
@@ -19252,7 +19265,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxPtraceArgumentPTRACEINTERRUPT -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxPtraceArgumentPTRACEINTERRUPT">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendProcess"/>
         <definition>Stops a tracee.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/ptrace.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Ptrace Argument PTRACE_INTERRUPT</rdfs:label>
@@ -19263,7 +19276,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxPtraceArgumentPTRACE_TRACEME -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxPtraceArgumentPTRACE_TRACEME">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TraceProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITraceProcess"/>
         <definition>Indicates that the process is to be traced by its parent.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/ptrace.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Ptrace Argument PTRACE_TRACEME</rdfs:label>
@@ -19274,7 +19287,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxRead -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxRead">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile"/>
         <definition>Read from a file descriptor.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/read.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Read</rdfs:label>
@@ -19285,7 +19298,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxReadv -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxReadv">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile"/>
         <definition>Read data into multiple buffers.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/readv.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Readv</rdfs:label>
@@ -19296,7 +19309,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxRename -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxRename">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#MoveFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIMoveFile"/>
         <definition>Change the name or location of a file</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/rename.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Rename</rdfs:label>
@@ -19307,7 +19320,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxRenameat -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxRenameat">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#MoveFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIMoveFile"/>
         <definition>Change the name or location of a file. Different parameter handling than Linux Rename.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/renameat.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Renameat</rdfs:label>
@@ -19318,7 +19331,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxRenameat2 -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxRenameat2">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#MoveFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIMoveFile"/>
         <definition>Change the name or location of a file. Additional flags argument.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/renameat2.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Renameat2</rdfs:label>
@@ -19329,7 +19342,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxSocket -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxSocket">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateSocket"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateSocket"/>
         <definition>Create an endpoint for communication.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/socket.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Socket</rdfs:label>
@@ -19340,7 +19353,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxSocketcallArgumentSYS_CONNECT -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxSocketcallArgumentSYS_CONNECT">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectSocket"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIConnectSocket"/>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/socketcall.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Socketcall Argument SYS_CONNECT</rdfs:label>
     </owl:Class>
@@ -19350,7 +19363,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxSocketcallArgumentSYS_SOCKET -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxSocketcallArgumentSYS_SOCKET">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateSocket"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateSocket"/>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/socketcall.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Socketcall Argument SYS_SOCKET</rdfs:label>
     </owl:Class>
@@ -19360,7 +19373,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxTime -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxTime">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemTime"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIGetSystemTime"/>
         <definition>Get time in seconds.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/time.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Time</rdfs:label>
@@ -19371,7 +19384,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxUnlink -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxUnlink">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DeleteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile"/>
         <definition>Delete a name and possibly the file it refers to.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/unlink.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Unlink</rdfs:label>
@@ -19382,7 +19395,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxUnlinkat -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxUnlinkat">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DeleteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile"/>
         <definition>Delete a name and possibly the file it refers to. Different parameter handling than Linux Unlink</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/unlinkat.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Unlinkat</rdfs:label>
@@ -19393,7 +19406,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxVfork -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxVfork">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess"/>
         <definition>Create child process that temp suspends parent process until it terminates</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/vfork.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Vfork</rdfs:label>
@@ -19404,7 +19417,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxWrite -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxWrite">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#WriteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile"/>
         <definition>Write to a file descriptor.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/write.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Write</rdfs:label>
@@ -19415,7 +19428,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxWritev -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LinuxWritev">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#WriteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile"/>
         <definition>Write data into multiple buffers.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/writev.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux Writev</rdfs:label>
@@ -19426,7 +19439,7 @@ Newer system call.</definition>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Linux_Exit -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Linux_Exit">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TerminateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITerminateProcess"/>
         <definition>Terminate the calling process.</definition>
         <rdfs:isDefinedBy>https://man7.org/linux/man-pages/man2/exit.2.html</rdfs:isDefinedBy>
         <rdfs:label>Linux _Exit</rdfs:label>
@@ -19740,7 +19753,7 @@ Newer system call.</definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#restricts"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -20810,6 +20823,292 @@ Newer system call.</definition>
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#NumericPatternMatching">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#PatternMatching"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AllocateMemory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIConnectSocket -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIConnectSocket">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectSocket"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICopyToken -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICopyToken">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CopyToken"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateSocket -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateSocket">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateSocket"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateThread"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DeleteFile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIExec -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIExec">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Exec"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFreeMemory -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFreeMemory">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FreeMemory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Software"/>
+        <rdfs:label>OS API Function</rdfs:label>
+        <rdfs:seeAlso>http://dbpedia.org/page/Linux_kernel_interfaces</rdfs:seeAlso>
+        <rdfs:seeAlso>http://dbpedia.org/resource/Windows_API</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIGetSystemTime -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIGetSystemTime">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIMoveFile -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIMoveFile">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#MoveFile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OpenFile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Software"/>
+        <rdfs:label>OS API Private Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendProcess -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendProcess">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendThread -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendThread">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendThread"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITerminateProcess -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITerminateProcess">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TerminateProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITraceProcess -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITraceProcess">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TraceProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFunction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#WriteFile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -22300,13 +22599,13 @@ Newer system call.</definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Process"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#analyzes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Process"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -22320,7 +22619,7 @@ Newer system call.</definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -24083,14 +24382,6 @@ Another difference are the capabilities of the mechanism:
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall"/>
-    </owl:Class>
-    
-
-
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#SpearmansRankCorrelationCoefficient -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SpearmansRankCorrelationCoefficient">
@@ -25141,13 +25432,13 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetRunningProcesses"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetRunningProcesses"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -25185,13 +25476,13 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetOpenWindows"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetOpenWindows"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -25315,13 +25606,13 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemNetworkConfigValue"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemNetworkConfigValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -25361,13 +25652,13 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateSocket"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateSocket"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -25740,7 +26031,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -26073,7 +26364,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -26206,7 +26497,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -26385,7 +26676,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -26471,7 +26762,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -26582,13 +26873,13 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetRunningProcesses"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetRunningProcesses"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -27246,7 +27537,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -28092,13 +28383,13 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemTime"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-invoke"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -28338,7 +28629,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -28560,7 +28851,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -29699,7 +29990,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -29713,7 +30004,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -29733,7 +30024,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -29823,7 +30114,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -29925,7 +30216,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -30427,7 +30718,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -31097,7 +31388,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -31123,7 +31414,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -31501,7 +31792,7 @@ Another difference are the capabilities of the mechanism:
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -35395,7 +35686,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtAllocateVirtualMemory -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtAllocateVirtualMemory">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AllocateMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtAllocateVirtualMemory</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35405,7 +35697,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtAllocateVirtualMemoryEx -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtAllocateVirtualMemoryEx">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AllocateMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtAllocateVirtualMemoryEx</rdfs:label>
     </owl:Class>
     
@@ -35414,7 +35707,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateFile -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtCreateFile</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35424,7 +35718,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateMailslotFile -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateMailslotFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <definition>Creates a special File Object called Mailslot.</definition>
         <rdfs:label>Windows NtCreateMailslotFile</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
@@ -35435,7 +35730,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateNamedPipeFile -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateNamedPipeFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <definition>Creates Named Pipe File Object.</definition>
         <rdfs:label>Windows NtCreateNamedPipeFile</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
@@ -35446,7 +35742,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreatePagingFile -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreatePagingFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <definition>Typically used by Control Panel&apos;s &quot;System&quot; applet for creating new paged files.</definition>
         <rdfs:label>Windows NtCreatePagingFile</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
@@ -35457,8 +35754,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateProcess -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateProcess">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtCreateProcess</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35468,8 +35765,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateProcessEx -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateProcessEx">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtCreateProcessEx</rdfs:label>
     </owl:Class>
     
@@ -35478,7 +35775,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateThread -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateThread">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateThread"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtCreateThread</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35488,7 +35786,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateThreadEx -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtCreateThreadEx">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateThread"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtCreateThreadEx</rdfs:label>
     </owl:Class>
     
@@ -35497,7 +35796,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtDeleteFile -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtDeleteFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DeleteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <definition>Deletes the specified file.</definition>
         <rdfs:label>Windows NtDeleteFile</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
@@ -35508,7 +35808,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtDuplicateToken -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtDuplicateToken">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CopyToken"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICopyToken"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtDuplicateToken</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35518,7 +35819,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtFreeVirtualMemory -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtFreeVirtualMemory">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FreeMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFreeMemory"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtFreeVirtualMemory</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35528,7 +35830,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtOpenFile -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtOpenFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OpenFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <rdfs:label>Windows NtOpenFile</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35538,7 +35841,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtOpenProcess -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtOpenProcess">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TraceProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITraceProcess"/>
         <definition>Opens a handle to process obj and sets the access rights to this object.</definition>
         <rdfs:label>Windows NtOpenProcess</rdfs:label>
         <rdfs:seeAlso>https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddk/nf-ntddk-ntopenprocess</rdfs:seeAlso>
@@ -35549,7 +35853,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtQuerySystemTime -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtQuerySystemTime">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemTime"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIGetSystemTime"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <definition>Returns current time in Coordinated Universal Time (UTC) 8-bytes format.</definition>
         <rdfs:label>Windows NtQuerySystemTime</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
@@ -35560,7 +35865,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtReadFile -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtReadFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile"/>
         <rdfs:label>Windows NtReadFile</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35570,7 +35876,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtReadFileScatter -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtReadFileScatter">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile"/>
         <definition>Reads specified block from file into multiple buffers. Each buffer must have one page length.</definition>
         <rdfs:label>Windows NtReadFileScatter</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
@@ -35581,7 +35888,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtSetInformationFileArgumentFileDispositionInformation -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtSetInformationFileArgumentFileDispositionInformation">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DeleteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
         <definition>Request to delete the file when it is closed or cancel a previously requested deletion.</definition>
         <rdfs:label>Windows NtSetInformationFile Argument FileDispositionInformation</rdfs:label>
         <rdfs:seeAlso>https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-ntsetinformationfile</rdfs:seeAlso>
@@ -35592,7 +35900,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtSuspendProcess -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtSuspendProcess">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendProcess"/>
         <rdfs:label>Windows NtSuspendProcess</rdfs:label>
     </owl:Class>
     
@@ -35601,7 +35910,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtSuspendThread -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtSuspendThread">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendThread"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendThread"/>
         <rdfs:label>Windows NtSuspendThread</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35611,7 +35921,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtTerminateProcess -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtTerminateProcess">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TerminateProcess"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITerminateProcess"/>
         <rdfs:label>Windows NtTerminateProcess</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35621,7 +35932,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtWriteFile -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtWriteFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#WriteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile"/>
         <rdfs:label>Windows NtWriteFile</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
     </owl:Class>
@@ -35631,7 +35943,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtWriteFileGather -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WindowsNtWriteFileGather">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#WriteFile"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIPrivateFunction"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile"/>
         <definition>Writes specified block of file with data from memory pages.</definition>
         <rdfs:label>Windows NtWriteFileGather</rdfs:label>
         <rdfs:seeAlso>https://j00ru.vexillium.org/syscalls/nt/64/</rdfs:seeAlso>
@@ -41804,7 +42117,9 @@ It is a combination of VPN hardware and software technologies that provides VPN 
 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess -->
 
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess">
+        <executes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Process"/>
+    </owl:NamedIndividual>
     
 
 
@@ -41846,7 +42161,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <accesses rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Credential"/>
         <enables rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CredentialAccess"/>
         <may-access rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#PasswordFile"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -42747,6 +43062,14 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Exec -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Exec">
+        <executes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableBinary"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting">
@@ -42754,7 +43077,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <blocks rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-EnhancingNetworkSecurityByPreventingUser-InitiatedMalwareExecution_"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ComputingApparatusWithAutomaticIntegrityReferenceGenerationAndMaintenance_Tripwire,Inc."/>
-        <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <d3fend-id>D3-EAL</d3fend-id>
     </owl:NamedIndividual>
     
@@ -42777,7 +43100,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <blocks rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-MethodAndApparatusForIncreasingTheSpeedAtWhichComputerVirusesAreDetected_McAfeeLLC"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ContentExtractorAndAnalysisSystem_Bit9Inc,CarbonBlackInc"/>
-        <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <d3fend-id>D3-EDL</d3fend-id>
     </owl:NamedIndividual>
     
@@ -42794,14 +43117,6 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableScript -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableScript"/>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess -->
-
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess">
-        <executes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Process"/>
-    </owl:NamedIndividual>
     
 
 
@@ -43389,7 +43704,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-VirtualizedProcessIsolation_AdvancedMicroDevicesInc"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ApproachesForSecuringAnInternetEndpointUsingFine-grainedOperatingSystemVirtualization_Bromium,Inc."/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-IsolationOfApplicationsWithinAVirtualMachine_Bromium,Inc."/>
-        <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <d3fend-id>D3-HBPI</d3fend-id>
     </owl:NamedIndividual>
     
@@ -44914,7 +45229,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <isolates rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Process"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-AnalysisOfTheWindowsVistaSecurityModel_SymantecCorporation"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ArchitectureOfTransparentNetworkSecurityForApplicationContainers_NeuvectorInc"/>
-        <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <d3fend-id>D3-MAC</d3fend-id>
     </owl:NamedIndividual>
     
@@ -47218,6 +47533,158 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AllocateMemory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIConnectSocket -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIConnectSocket">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ConnectSocket"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICopyToken -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICopyToken">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CopyToken"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateSocket -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateSocket">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateSocket"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateThread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DeleteFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIExec -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIExec">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Exec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFreeMemory -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFreeMemory">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#FreeMemory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIGetSystemTime -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIGetSystemTime">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIMoveFile -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIMoveFile">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#MoveFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OpenFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ReadFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendProcess -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendProcess">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendThread -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendThread">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SuspendThread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITerminateProcess -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITerminateProcess">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TerminateProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITraceProcess -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITraceProcess">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TraceProcess"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile">
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#WriteFile"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OWL -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OWL">
@@ -48050,8 +48517,8 @@ It is a combination of VPN hardware and software technologies that provides VPN 
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSpawnAnalysis">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessAnalysis"/>
+        <analyzes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <analyzes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Process"/>
-        <analyzes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ActiveDirectoryDumpingViaNTDSUtil_MITRE"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CommandLineUsageOfArchivingSoftware_MITRE"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CreateRemoteProcessViaWMIC_MITRE_Other"/>
@@ -48102,7 +48569,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessStartFunction -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessStartFunction">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -53632,12 +54099,6 @@ With keystroke dynamics the biometric template used to identify an individual is
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess -->
-
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
-    
-
-
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#SpearmansRankCorrelationCoefficient -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SpearmansRankCorrelationCoefficient">
@@ -54172,8 +54633,8 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1007 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1007">
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetRunningProcesses"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
     </owl:NamedIndividual>
     
 
@@ -54189,8 +54650,8 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1010 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1010">
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetOpenWindows"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
     </owl:NamedIndividual>
     
 
@@ -54228,8 +54689,8 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1016">
         <may-execute rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableScript"/>
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemNetworkConfigValue"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
     </owl:NamedIndividual>
     
 
@@ -54238,8 +54699,8 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1018">
         <may-access rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemConfigurationFile"/>
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateSocket"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
         <produces rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"/>
     </owl:NamedIndividual>
     
@@ -54344,7 +54805,7 @@ With keystroke dynamics the biometric template used to identify an individual is
         <may-access rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#PasswordFile"/>
         <may-access rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessSegment"/>
         <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CopyToken"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -54476,7 +54937,7 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1047">
         <may-create rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#IntranetAdministrativeNetworkTraffic"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -54534,7 +54995,7 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1053">
         <executes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ScheduledJob"/>
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#JobSchedule"/>
     </owl:NamedIndividual>
     
@@ -54586,7 +55047,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1055.004 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1055.004">
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -54627,7 +55088,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1055.013 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1055.013">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -54676,8 +55137,8 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1057 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1057">
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetRunningProcesses"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
     </owl:NamedIndividual>
     
 
@@ -54880,7 +55341,7 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1082">
         <may-access rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DecoyArtifact"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -55162,8 +55623,8 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1124 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1124">
+        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#GetSystemTime"/>
-        <may-invoke rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
     </owl:NamedIndividual>
     
 
@@ -55234,7 +55695,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1134.004 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1134.004">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -55310,7 +55771,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1140 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1140">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-add rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"/>
         <may-modify rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#EventLog"/>
     </owl:NamedIndividual>
@@ -55548,7 +56009,7 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.001">
         <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateFile"/>
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -55556,7 +56017,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.002 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.002">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-modify rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabaseRecord"/>
     </owl:NamedIndividual>
     
@@ -55565,7 +56026,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.003 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.003">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-produce rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"/>
     </owl:NamedIndividual>
     
@@ -55583,7 +56044,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.011 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1218.011">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <loads rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SharedLibraryFile"/>
     </owl:NamedIndividual>
     
@@ -55621,7 +56082,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1220">
         <adds rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#File"/>
         <interprets rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableScript"/>
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -55695,7 +56156,7 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1505.001">
         <creates rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#StoredProcedure"/>
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
     </owl:NamedIndividual>
     
 
@@ -55945,7 +56406,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.009 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.009">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <loads rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SharedLibraryFile"/>
         <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabaseRecord"/>
     </owl:NamedIndividual>
@@ -55955,7 +56416,7 @@ With keystroke dynamics the biometric template used to identify an individual is
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.010 -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1546.010">
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <loads rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SharedLibraryFile"/>
         <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabaseRecord"/>
     </owl:NamedIndividual>
@@ -56117,7 +56578,7 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#T1548.002">
         <executes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableFile"/>
-        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess"/>
+        <invokes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess"/>
         <may-modify rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemConfigurationDatabaseRecord"/>
     </owl:NamedIndividual>
     
@@ -58408,16 +58869,16 @@ Wikipedia. (n.d.). Artificial neural network. [Link](https://en.wikipedia.org/wi
         <definition>Combines the principles of Artificial Neural Networks (ANN) and clustering methods.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ARIMAModel">
-        <definition>An autoregressive integrated moving average (ARIMA) model is a generalization of an autoregressive moving average (ARMA) model.</definition>
         <kb-article>## References
 Wikipedia. (n.d.). Autoregressive integrated moving average. [Link](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average)</kb-article>
+        <definition>An autoregressive integrated moving average (ARIMA) model is a generalization of an autoregressive moving average (ARMA) model.</definition>
         <synonym>Autoregressive Integrated Moving Average Model</synonym>
         <rdfs:label>ARIMA Model</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ARMA_Model">
+        <definition>Autoregressive-moving-average (ARMA) models provide a parsimonious description of a (weakly) stationary stochastic process in terms of two polynomials, one for the autoregression (AR) and the second for the moving average (MA).</definition>
         <kb-article>## References
 Wikipedia. (n.d.). Autoregressive-moving-average model. [Link](https://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model)</kb-article>
-        <definition>Autoregressive-moving-average (ARMA) models provide a parsimonious description of a (weakly) stationary stochastic process in terms of two polynomials, one for the autoregression (AR) and the second for the moving average (MA).</definition>
         <rdfs:label>ARMA Model</rdfs:label>
         <synonym>Autoregressive moving average model</synonym>
     </rdf:Description>
@@ -58639,7 +59100,6 @@ Agglomerative clustering starts with each data point as its own cluster. The alg
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AnswerSetProgramming">
         <rdfs:label>Answer Set Programming</rdfs:label>
-        <definition>Answer set programming is a form of declarative programming based on the stable model (answer set) semantics of logic programming.</definition>
         <kb-article>## How it works
 Answer set programming (ASP) is oriented towards difficult (primarily NP-hard) search problems. The computational process employed in the design of many answer set solvers is an enhancement of the DPLL algorithm and, in principle, it always terminates (unlike Prolog query evaluation, which may lead to an infinite loop).
 
@@ -58647,6 +59107,7 @@ In a more general sense, ASP includes all applications of answer sets to knowled
 
 ## References
 1. Answer set programming. (2023, April 27). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Answer_set_programming)</kb-article>
+        <definition>Answer set programming is a form of declarative programming based on the stable model (answer set) semantics of logic programming.</definition>
         <synonym>ASP</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Application">
@@ -58751,8 +59212,8 @@ Day, O., &amp; Khoshgoftaar, T.M. (2017). A survey on heterogeneous transfer lea
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Authentication">
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/00155053-n"/>
         <definition>A request-response comprising a user credential presentation to a system and a verification response.</definition>
-        <rdfs:label>Authentication</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authentication"/>
+        <rdfs:label>Authentication</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthenticationCacheInvalidation">
         <definition>Removing tokens or credentials from an authentication cache to prevent further user associated account accesses.</definition>
@@ -58805,8 +59266,8 @@ This technique covers statistical outliers. Though depending on the complexity o
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AuthenticationService">
         <definition>An authentication service is a mechanism, analogous to the use of passwords on time-sharing systems, for the secure authentication of the identity of network clients by servers and vice versa, without presuming the operating system integrity of either (e.g., Kerberos).</definition>
         <rdfs:label>Authentication Service</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authentication"/>
         <rdfs:isDefinedBy rdf:resource="https://www.gartner.com/en/information-technology/glossary/authentication-service"/>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Authentication"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Authorization">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Authorization"/>
@@ -58985,7 +59446,6 @@ Bootstrap aggregating. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Bootstra
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#BroadcastDomainIsolation">
         <synonym>Network Segmentation</synonym>
         <definition>Broadcast isolation restricts the number of computers a host can contact on their LAN.</definition>
-        <rdfs:label>Broadcast Domain Isolation</rdfs:label>
         <kb-article>## How it works
 Software Defined Networking, or other network encapsulation technologies intercept host broadcast traffic then route it to a specified destination per a configured policy.
 
@@ -58993,6 +59453,7 @@ This can be implemented within hypervisors, networking hardware (WAPs, switches,
 
 ## Considerations
 This technique is highly dependent on network infrastructure and networking requirements.</kb-article>
+        <rdfs:label>Broadcast Domain Isolation</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Browser">
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/13376000-n"/>
@@ -59014,6 +59475,7 @@ Ensemble learning. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Ensemble_lea
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ByteSequenceEmulation">
         <rdfs:label>Byte Sequence Emulation</rdfs:label>
         <definition>Analyzing sequences of bytes and determining if they likely represent malicious shellcode.</definition>
+        <synonym>Shellcode Transmission Detection</synonym>
         <kb-article>## How it works
 
 Bytes are analyzed as if they are machine code instructions, and such instructions that are a common component of known shellcode are noted, such as stack pivots, reads from a Memory Address Table, and system calls for functions that disable protections or execute code.  For example, the x86 instruction `b0 0b: mov $11, %ax`, with no further alterations to the `%ax` register, followed by `cd 80: syscall` executes the system call `execve()` in the Linux kernel, which replaces the current process with another one specified -- this is a common action in shellcode, so this sequence would be flagged.
@@ -59040,7 +59502,6 @@ With inserting code directly, that it is not a buffer overflow, and just some pl
 ### False Positives
 
 Byte sequences containing code that is never used as machine code are still analyzed and flagged for anomalies, and [eventually](http://mathforum.org/library/drmath/view/55871.html), it is likely that an attack sequence will arise from the sheer volume of bytes transmitted.</kb-article>
-        <synonym>Shellcode Transmission Detection</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#C4.5">
         <rdfs:label>C4.5</rdfs:label>
@@ -59170,8 +59631,8 @@ Wikipedia. (n.d.). Canopy clustering algorithm. [Link](https://en.wikipedia.org/
         <synonym>CPU</synonym>
         <synonym>Central Processor</synonym>
         <definition>A central processing unit (CPU), also called a central processor, main processor or just processor, is the electronic circuitry that executes instructions comprising a computer program. The CPU performs basic arithmetic, logic, controlling, and input/output (I/O) operations specified by the instructions in the program. This contrasts with external components such as main memory and I/O circuitry, and specialized processors such as graphics</definition>
-        <synonym>Main Processor</synonym>
         <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Central_processing_unit</rdfs:isDefinedBy>
+        <synonym>Main Processor</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CentralTendency">
         <kb-article>## References
@@ -59617,10 +60078,18 @@ Wikipedia. (n.d.). Cramér&apos;s V. [Link](https://en.wikipedia.org/wiki/Cram%C
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateProcess">
         <rdfs:seeAlso>https://dbpedia.org/page/Fork%E2%80%93exec</rdfs:seeAlso>
-        <definition>Creates a process.</definition>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Spawn_(computing)"/>
         <rdfs:seeAlso>https://learn.microsoft.com/en-us/windows/win32/procthread/creating-processes</rdfs:seeAlso>
+        <definition>Executes a process.</definition>
         <rdfs:label>Create Process</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/procthread/creating-processes"/>
+        <skos:altLabel>Execute Process</skos:altLabel>
+        <definition>Creates a process.</definition>
+        <skos:altLabel>Process Spawn</skos:altLabel>
+        <skos:altLabel>Spawn Process</skos:altLabel>
+        <definition>A process spawn refers to a function that loads and executes a new child process.The current process may wait for the child to terminate or may continue to execute asynchronously. Creating a new subprocess requires enough memory in which both the child process and the current program can execute. There is a family of spawn functions in DOS, inherited by Microsoft Windows. There is also a different family of spawn functions in an optional extension of the POSIX standards.  Fork-exec is another technique combining two Unix system calls, which can effect a process spawn.</definition>
         <rdfs:seeAlso>https://dbpedia.org/page/Spawn_(computing)</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Fork%E2%80%93exec"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateSocket">
         <rdfs:seeAlso rdf:resource="https://www.man7.org/linux/man-pages/man2/socket.2.html"/>
@@ -59629,8 +60098,8 @@ Wikipedia. (n.d.). Cramér&apos;s V. [Link](https://en.wikipedia.org/wiki/Cram%C
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CreateThread">
         <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread"/>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/POSIX_Threads"/>
         <rdfs:label>Create Thread</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/POSIX_Threads"/>
         <definition>Threads are an execution model that exists independently from a language, as well as a parallel execution model. They enable a program to control multiple different flows of work that overlap in time.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Credential">
@@ -59811,8 +60280,8 @@ This technique does not check for content hosted at the domain.
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DataExchangeMapping">
         <synonym>Data Flow Mapping</synonym>
         <synonym>Information Exchange Mapping</synonym>
-        <rdfs:label>Data Exchange Mapping</rdfs:label>
         <definition>Data exchange mapping identifies and models the organization&apos;s intended design for the flows of the data types, formats, and volumes between systems at the application layer.</definition>
+        <rdfs:label>Data Exchange Mapping</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DataInventory">
         <synonym>Data Discovery</synonym>
@@ -59877,8 +60346,8 @@ Code can also be deemed unreachable for certain run-time conditions. Different d
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Deceive">
         <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-priority>
-        <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</display-order>
         <rdfs:label>Deceive</rdfs:label>
+        <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</display-order>
         <definition>The deceive tactic is used to advertise, entice, and allow potential attackers access to an observed or controlled environment.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DecisionTree">
@@ -60171,8 +60640,8 @@ Q-learning. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Q-learning#Deep_Q-l
         <rdfs:label>Defense Evasion Technique</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DefensiveTechnique">
-        <display-baseurl>/technique/</display-baseurl>
         <synonym>Technical Security Control</synonym>
+        <display-baseurl>/technique/</display-baseurl>
         <synonym>Defensive Capability Feature</synonym>
         <definition>A method which makes a computer system more difficult to attack.</definition>
         <rdfs:label>Defensive Technique</rdfs:label>
@@ -60235,8 +60704,8 @@ Wikipedia. (n.d.). Descriptive statistics. [Link](https://en.wikipedia.org/wiki/
         <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-priority>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalArtifact">
-        <display-baseurl>/dao/artifact/</display-baseurl>
         <definition>An information-bearing artifact (object) that is, or is encoded to be used with, a digital computer system. This concept is broad to include the literal instances of an artifact, or an implicit summarization of changes to or properties of other artifacts.</definition>
+        <display-baseurl>/dao/artifact/</display-baseurl>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Digital_artifactual_value"/>
         <rdfs:label>Digital Artifact</rdfs:label>
         <synonym>Digital Asset</synonym>
@@ -60298,8 +60767,8 @@ Wikipedia. (n.d.). Multivariate statistics. [Link](https://en.wikipedia.org/wiki
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DisplayServer">
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Display_server"/>
         <definition>A display server or window server is a program whose primary task is to coordinate the input and output of its clients to and from the rest of the operating system, the hardware, and each other. The display server communicates with its clients over the display server protocol, a communications protocol, which can be network-transparent or simply network-capable. The display server is a key component in any graphical user interface, specifically the windowing system.</definition>
-        <rdfs:label>Display Server</rdfs:label>
         <skos:altLabel>Window Server</skos:altLabel>
+        <rdfs:label>Display Server</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Distribution-basedClustering">
         <definition>Distribution-based clustering creates and groups data points based on their likely hood of belonging to the same probability distribution (Gaussian, Binomial, etc.) in the data.</definition>
@@ -60378,9 +60847,8 @@ This technique can be accomplished in a number of ways:
 CompNeuro Neuromatch Academy Tutorials. [Link](https://compneuro.neuromatch.io/tutorials/W3D4_ReinforcementLearning/student/W3D4_Tutorial4.html)</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#DynamicAnalysis">
-        <rdfs:label>Dynamic Analysis</rdfs:label>
         <definition>Executing or opening a file in a synthetic &quot;sandbox&quot; environment to determine if the file is a malicious program or if the file exploits another program such as a document reader.</definition>
-        <synonym>Malware Sandbox</synonym>
+        <rdfs:label>Dynamic Analysis</rdfs:label>
         <kb-article>## How it works
 Analyzing the interaction of a piece of code with a system while the code is being executed in a controlled environment such as a sandbox, virtual machine, or simulator. This exposes the natural behavior of the piece of code without requiring the code to be disassembled.
 
@@ -60392,12 +60860,13 @@ Analyzing the interaction of a piece of code with a system while the code is bei
 
 ## Implementations
 * [Cuckoo Sandbox](https://cuckoosandbox.org)</kb-article>
+        <synonym>Malware Sandbox</synonym>
         <synonym>Malware Detonation</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Email">
         <rdfs:seeAlso>https://schema.ocsf.io/objects/email</rdfs:seeAlso>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Email"/>
         <definition>An email, or email message, is a document that is sent between computer users across computer networks.</definition>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Email"/>
         <rdfs:label>Email</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#EmailAttachment">
@@ -60558,10 +61027,14 @@ SafeSEH might be applied only to some executable files or modules, allowing an a
         <definition>Validates that a referenced exception handler pointer is a valid exception handler.</definition>
         <synonym>Exception Handler Validation</synonym>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Exec">
+        <rdfs:label>Exec</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Exec</rdfs:seeAlso>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableAllowlisting">
         <rdfs:label>Executable Allowlisting</rdfs:label>
-        <synonym>File Signature Authentication</synonym>
         <definition>Using a digital signature to authenticate a file before opening.</definition>
+        <synonym>File Signature Authentication</synonym>
         <kb-article>## How it works
 
 This technique is generic and there are numerous ways to compute and authenticate digital signatures.
@@ -60633,13 +61106,6 @@ On a Windows machine the Windows Defender Application Control (WDAC) policy enfo
         <definition>An executable script is written in a scripting language and interpreted at run time. This is in contrast with an executable binary, which contains machine code instructions for a physical CPU or byte code for a virtual machine.</definition>
         <rdfs:label>Executable Script</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Executable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecuteProcess">
-        <rdfs:label>Execute Process</rdfs:label>
-        <rdfs:seeAlso>https://dbpedia.org/page/Spawn_(computing)</rdfs:seeAlso>
-        <definition>Executes a process.</definition>
-        <rdfs:seeAlso>https://learn.microsoft.com/en-us/windows/win32/procthread/creating-processes</rdfs:seeAlso>
-        <rdfs:seeAlso>https://dbpedia.org/page/Fork%E2%80%93exec</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Execution">
         <rdfs:label>Execution</rdfs:label>
@@ -60854,6 +61320,7 @@ On Windows systems, deleting a file in File Explorer does not permanently delete
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FirmwareBehaviorAnalysis">
         <rdfs:label>Firmware Behavior Analysis</rdfs:label>
+        <definition>Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.</definition>
         <kb-article>## How it works
 Firmware behavior analysis provides protections by ensuring that installed firmware has not been tampered with or modified. Firmware analysis applies to mutable firmware and immutable read-only memory (ROMs).
 
@@ -60869,7 +61336,6 @@ A challenge-response is issued and includes a nonce so that replays are not allo
 * The firmware code will need to be modified to include the behavioral monitoring functionality.
 * This technique is sensitive to the device the embedded firmware is hosted on and it is expected that the devices and firmware will need to be profiled and analyzed to determine timing estimation.
 * This technique is not expected to be one hundred percent correct as you would expect in a hardware root of trust solution and may require some tuning.</kb-article>
-        <definition>Analyzing the behavior of embedded code in firmware and looking for anomalous behavior and suspicious activity.</definition>
         <synonym>Firmware Timing Analysis</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FirmwareEmbeddedMonitoringCode">
@@ -60964,7 +61430,6 @@ Continuous maintenance of unauthorized domain lists is needed to keep up to date
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ForwardResolutionIPDenylisting">
         <rdfs:label>Forward Resolution IP Denylisting</rdfs:label>
         <definition>Blocking a DNS lookup&apos;s answer&apos;s IP address value.</definition>
-        <synonym>Forward Resolution IP Blacklisting</synonym>
         <kb-article>## How it works
 
 This technique prevents a client from learning IP addresses deemed to be potentially malicious, which would have been delivered via forward resolution responses.
@@ -60982,6 +61447,7 @@ The DNS lookup can be blocked by either dropping the network traffic with an inl
 * This technique must be implemented logically between the application that receives the response and the server which sent the response.
   * DNS responses sent in an encrypted manner, such as those using DoH or DoT, will require interception of the TLS connections in order to determine the IP address(es) in the response.
 * Replacing the response is not effective in the case that the nameserver uses a technique to provide integrity of its responses, such as DNSSEC for DNS responses.</kb-article>
+        <synonym>Forward Resolution IP Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#FreeMemory">
         <rdfs:label>Free Memory</rdfs:label>
@@ -61105,8 +61571,8 @@ TechVidvan. (n.d.). Clustering in Machine Learning Tutorial. [Link](https://tech
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Harden">
         <rdfs:label>Harden</rdfs:label>
-        <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-priority>
         <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-order>
+        <display-priority rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</display-priority>
         <definition>The harden tactic is used to increase the opportunity cost of computer network exploitation. Hardening differs from Detection in that it generally is conducted before a system is online and operational.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Hardware-basedProcessIsolation">
@@ -61196,7 +61662,6 @@ Wikipedia. (2021, August 10). Hierarchical clustering. [Link](https://en.wikiped
 html)</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HierarchicalDomainDenylisting">
-        <rdfs:label>Hierarchical Domain Denylisting</rdfs:label>
         <kb-article>## How it works
 This technique is used to block DNS queries from related domains and subdomains that are unauthorized.
 
@@ -61207,6 +61672,7 @@ Hierarchical domain blacklisting considers the blacklisting of second level doma
 * Other domains that resolve to the domain of interest for blocking (CNAME, etc).
 * Denylists should have identified maintenance cycles to ensure lists are not stale.</kb-article>
         <definition>Blocking the resolution of any subdomain of a specified domain name.</definition>
+        <rdfs:label>Hierarchical Domain Denylisting</rdfs:label>
         <synonym>Hierarchical Domain Blacklisting</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#High-dimensionClustering">
@@ -61253,10 +61719,10 @@ A homoglyph, in this context, is a deceptive string or word which looks like a t
 * Legitimate companies and products use non-dictionary words in their names that could result in many false positives</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Host">
-        <skos:altLabel>Network Host</skos:altLabel>
         <rdfs:label>Host</rdfs:label>
-        <definition>A host is a computer or other device, typically connected to a computer network. A network host may offer information resources, services, and applications to users or other nodes on the network. A network host is a network node that is assigned a network layer host address. Network hosts that participate in applications that use the client-server model of computing, are classified as server or client systems. Network hosts may also function as nodes in peer-to-peer applications, in which all nodes share and consume resources in an equipotent manner.</definition>
+        <skos:altLabel>Network Host</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Host_(network)"/>
+        <definition>A host is a computer or other device, typically connected to a computer network. A network host may offer information resources, services, and applications to users or other nodes on the network. A network host is a network node that is assigned a network layer host address. Network hosts that participate in applications that use the client-server model of computing, are classified as server or client systems. Network hosts may also function as nodes in peer-to-peer applications, in which all nodes share and consume resources in an equipotent manner.</definition>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/device</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Host-basedFirewall">
@@ -61273,8 +61739,8 @@ A homoglyph, in this context, is a deceptive string or word which looks like a t
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Hostname">
         <definition>In computer networking, a hostname (archaically nodename) is a label that is assigned to a device connected to a computer network and that is used to identify the device in various forms of electronic communication, such as the World Wide Web. Hostnames may be simple names consisting of a single word or phrase, or they may be structured.</definition>
-        <rdfs:label>Hostname</rdfs:label>
         <skos:altLabel>Nodename</skos:altLabel>
+        <rdfs:label>Hostname</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Hostname"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Hybrid-basedTransferLearning">
@@ -61613,8 +62079,8 @@ If an attacker manages to stop the processes used to log an attack without setti
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#InterquartileRange">
         <definition>The interquartile range (IQR) is a measure of statistical dispersion, which is the spread of the data and is defined as the difference between the 75th and 25th percentiles of the data.</definition>
-        <rdfs:label>Interquartile Range</rdfs:label>
         <synonym>IQR</synonym>
+        <rdfs:label>Interquartile Range</rdfs:label>
         <kb-article>## References
 Wikipedia. (n.d.). Interquartile range. [Link](https://en.wikipedia.org/wiki/Interquartile_range)</kb-article>
     </rdf:Description>
@@ -61876,8 +62342,8 @@ Towards Data Science. (n.d.). Understanding K-means Clustering in Machine Learni
         <rdfs:label>Kernel API Sensor</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#KernelModule">
-        <rdfs:seeAlso>https://schema.ocsf.io/objects/kernel_driver</rdfs:seeAlso>
         <skos:altLabel>LKM</skos:altLabel>
+        <rdfs:seeAlso>https://schema.ocsf.io/objects/kernel_driver</rdfs:seeAlso>
         <skos:altLabel>Loadable Kernel Module</skos:altLabel>
         <definition>A loadable kernel module (LKM) is an object file that contains code to extend the running kernel, or so-called base kernel, of an operating system. LKMs are typically used to add support for new hardware (as device drivers) and/or filesystems, or for adding system calls. When the functionality provided by a LKM is no longer required, it can be unloaded in order to free memory and other resources.
 
@@ -61919,8 +62385,8 @@ Wikipedia. (n.d.). Probability distribution. [Link](https://en.wikipedia.org/wik
         <rdfs:label>Legacy System</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#LevenshteinMatching">
-        <synonym>Edit Distance</synonym>
         <rdfs:label>Levenschtein Matching</rdfs:label>
+        <synonym>Edit Distance</synonym>
         <kb-article>## References
 1. Navarro, G. (2001). A guided tour to approximate string matching. _ACM Computing Surveys_, 33(1), 31-88. [Link](https://doi.org/10.1145/375360.375365)</kb-article>
         <definition>The Levenshtein distance (LD) is a metric for measuring the differences between two sequences - or strings. Informally, the LD is the number of individual edits one would have to make to turn one sequence into another.</definition>
@@ -62096,8 +62562,8 @@ Wikipedia. (2021, September 29). Long short-term memory. [Link](https://en.wikip
         <rdfs:label>Long Short-term Memory</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#MacOSKeychain">
-        <skos:altLabel>Keychain</skos:altLabel>
         <rdfs:label>MacOS Keychain</rdfs:label>
+        <skos:altLabel>Keychain</skos:altLabel>
         <definition>Keychain is the password management system in macOS, developed by Apple. It was introduced with Mac OS 8.6, and has been included in all subsequent versions of the operating system, now known as macOS. A Keychain can contain various types of data: passwords (for websites, FTP servers, SSH accounts, network shares, wireless networks, groupware applications, encrypted disk images), private keys, certificates, and secure notes.</definition>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Keychain_(software)"/>
     </rdf:Description>
@@ -62411,10 +62877,10 @@ Naive Bayes. IBM. [Link](https://www.ibm.com/topics/naive-bayes?mhsrc=ibmsearch_
         <rdfs:label>Naive Bayes Classifier</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Network">
-        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/03826490-n"/>
         <definition>A network is a group of computers that use a set of common communication protocols over digital interconnections for the purpose of sharing resources located on or provided by the network nodes. The interconnections between nodes are formed from a broad spectrum of telecommunication network technologies, based on physically wired, optical, and wireless radio-frequency methods that may be arranged in a variety of network topologies.</definition>
-        <skos:altLabel>Computer Network</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/03826490-n"/>
         <rdfs:label>Network</rdfs:label>
+        <skos:altLabel>Computer Network</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkDirectoryResource">
         <rdfs:label>Network Directory Resource</rdfs:label>
@@ -62517,8 +62983,8 @@ Administrators collect information on network nodes in their architecture using 
         <rdfs:seeAlso rdf:resource="https://dbpedia.org/resource/Category:Network_analyzers"/>
         <skos:altLabel>Network Sniffer</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/page/Packet_analyzer"/>
-        <definition>A packet analyzer, also known as packet sniffer, protocol analyzer, or network analyzer, is a computer program or computer hardware such as a packet capture appliance, that can intercept and log traffic that passes over a computer network or part of a network.</definition>
         <rdfs:label>Network Traffic Analysis Software</rdfs:label>
+        <definition>A packet analyzer, also known as packet sniffer, protocol analyzer, or network analyzer, is a computer program or computer hardware such as a packet capture appliance, that can intercept and log traffic that passes over a computer network or part of a network.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTrafficCommunityDeviation">
         <definition>Establishing baseline communities of network hosts and identifying statistically divergent inter-community communication.</definition>
@@ -62575,6 +63041,63 @@ Wikipedia. (n.d.). Nonlinear regression. [Link](https://en.wikipedia.org/wiki/No
         <rdfs:label>Numeric Pattern Matching</rdfs:label>
         <definition>Numeric pattern matching uses a pattern specification and sees if the numeric value matches that pattern--simple forms include exact matching and range matching.</definition>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIAllocateMemory">
+        <rdfs:label>OS API Allocate Memory</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIConnectSocket">
+        <rdfs:label>OS API Connect Socket</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICopyToken">
+        <rdfs:label>OS API Copy Token</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateFile">
+        <rdfs:label>OS API Create File</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateProcess">
+        <rdfs:label>OS API Create Process</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateSocket">
+        <rdfs:label>OS API Create Socket</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPICreateThread">
+        <rdfs:label>OS API Create Thread</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIDeleteFile">
+        <rdfs:label>OS API Delete File</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIExec">
+        <rdfs:label>OS API Exec</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIFreeMemory">
+        <rdfs:label>OS API Free Memory</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIGetSystemTime">
+        <rdfs:label>OS API Get System Time</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIMoveFile">
+        <rdfs:label>OS API Move File</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIOpenFile">
+        <rdfs:label>OS API Open File</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIReadFile">
+        <rdfs:label>OS API Read File</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendProcess">
+        <rdfs:label>OS API Suspend Process</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISuspendThread">
+        <rdfs:label>OS API Suspend Thread</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITerminateProcess">
+        <rdfs:label>OS API Terminate Process</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPITraceProcess">
+        <rdfs:label>OS API Trace Process</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteFile">
+        <rdfs:label>OS API Write File</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OWL">
         <definition>The Web Ontology Language (OWL) is a family of knowledge representation languages for authoring ontologies.</definition>
         <synonym>Web Ontology Language</synonym>
@@ -62602,8 +63125,8 @@ The OWL languages are characterized by formal semantics. They are built upon the
         <rdfs:label>Office Application File</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#One-timePassword">
-        <rdfs:label>One-time Password</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/One-time_password"/>
+        <rdfs:label>One-time Password</rdfs:label>
         <synonym>OTP</synonym>
         <definition>A one-time password is valid for only one user authentication.</definition>
         <kb-article>## How it works
@@ -62633,8 +63156,8 @@ Additionally, after the code file is printed, it could be recovered from the sys
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystem">
         <definition>An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. All computer programs, excluding firmware, require an operating system to function. Time-sharing operating systems schedule tasks for efficient use of the system and may also include accounting software for cost allocation of processor time, mass storage, printing, and other resources.</definition>
-        <rdfs:label>Operating System</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Operating_system"/>
+        <rdfs:label>Operating System</rdfs:label>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/os</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemConfiguration">
@@ -62650,8 +63173,8 @@ Additionally, after the code file is printed, it could be recovered from the sys
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingSystemConfigurationFile">
         <skos:altLabel>System Configuration File</skos:altLabel>
-        <rdfs:seeAlso>Configuration File</rdfs:seeAlso>
         <definition>An operating system configuration file is a file used to configure the operating system.</definition>
+        <rdfs:seeAlso>Configuration File</rdfs:seeAlso>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Configuration_file"/>
         <rdfs:label>Operating System Configuration File</rdfs:label>
         <rdfs:seeAlso>Operating System</rdfs:seeAlso>
@@ -62829,9 +63352,9 @@ Newcastle University. (n.d.). Parametric Hypothesis Tests. [Link](https://www.nc
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PartialMatching">
         <rdfs:label>Partial Matching</rdfs:label>
+        <kb-article>Numeric pattern matching is a method of matching some defined pattern specification against a numeric value.</kb-article>
         <kb-article>## References
 1. String-searching algorithm. (2023, April 8). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/String-searching_algorithm)</kb-article>
-        <kb-article>Numeric pattern matching is a method of matching some defined pattern specification against a numeric value.</kb-article>
         <definition>Partial string pattern matching is a special case of string pattern matching where one seeks to find a pattern within a larger string (text). It allows for the detection of patterns that occur as substrings or partial segments within the full string, rather than requiring an exact match across the entire string.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Partition">
@@ -63106,8 +63629,8 @@ Policy Gradients in a Nutshell. Towards Data Science.  [Link](https://towardsdat
 [Link](https://en.wikipedia.org/wiki/Higher-order_logic)</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PrimaryStorage">
-        <rdfs:isDefinedBy>https://www.memorymanagement.org/glossary/m.html#term-main-memory</rdfs:isDefinedBy>
         <rdfs:seeAlso>https://en.wikipedia.org/wiki/Computer_data_storage#Primary_storage</rdfs:seeAlso>
+        <rdfs:isDefinedBy>https://www.memorymanagement.org/glossary/m.html#term-main-memory</rdfs:isDefinedBy>
         <definition>Primary memory of a computer is memory that is wired directly to the processor, consisting of RAM and possibly ROM.  These terms are used in contrast to mass storage devices and cache memory (although we may note that when a program accesses main memory, it is often actually interacting with a cache).</definition>
         <rdfs:label>Primary Storage</rdfs:label>
     </rdf:Description>
@@ -63406,8 +63929,8 @@ Processes that are started in a subsystem might not be fully terminated if they 
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProcessTree">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Child_process"/>
-        <definition>A process tree is a tree structure representation of parent-child relationships established via process spawn operations.</definition>
         <rdfs:seeAlso>Process Spawn</rdfs:seeAlso>
+        <definition>A process tree is a tree structure representation of parent-child relationships established via process spawn operations.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Parent_process"/>
         <rdfs:label>Process Tree</rdfs:label>
     </rdf:Description>
@@ -63418,10 +63941,10 @@ Processes that are started in a subsystem might not be fully terminated if they 
         <definition>A processor register is a quickly accessible location available to a computer&apos;s processor. Registers usually consist of a small amount of fast storage, although some registers have specific hardware functions, and may be read-only or write-only.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ProgressivelyGrowingGAN">
-        <rdfs:label>Progressively Growing GAN</rdfs:label>
         <kb-article>## References
 
 Machine Learning Mastery. (n.d.). Introduction to Progressive Growing Generative Adversarial Networks. [Link](https://machinelearningmastery.com/introduction-to-progressive-growing-generative-adversarial-networks/)</kb-article>
+        <rdfs:label>Progressively Growing GAN</rdfs:label>
         <definition>Progressive Growing GAN (ProGAN) is an extension to the GAN training process that allows for the stable training of generator models that can output large high-quality images.</definition>
         <synonym>ProGAN</synonym>
     </rdf:Description>
@@ -63642,8 +64165,8 @@ A relay may use a variety of proxying, forwarding, or routing technologies to br
 
 Complex intranet VPNs or routing encapsulation may affect the detection analytics.  In addition, unwanted packets might not be forwarded, and additional packets may be added at the relay, further complicating detection.</kb-article>
         <synonym>Relay Network Detection</synonym>
-        <definition>The detection of an internal host relaying traffic between the internal network and the external network.</definition>
         <rdfs:label>Relay Pattern Analysis</rdfs:label>
+        <definition>The detection of an internal host relaying traffic between the internal network and the external network.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#RemoteSession">
         <rdfs:label>Remote Session</rdfs:label>
@@ -64022,8 +64545,8 @@ Yu, L., Zhang, W., Wang, J., &amp; Yu, Y. (2017). SeqGAN: Sequence Generative Ad
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplication">
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Server_(computing)"/>
         <definition>An application that provides a set of software functionalities so that multiple clients who can reuse the functionality, provided they are authorized for use of the service.</definition>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Service_(systems_architecture)"/>
         <rdfs:label>Service Application</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Service_(systems_architecture)"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ServiceApplicationProcess">
         <rdfs:label>Service Application Process</rdfs:label>
@@ -64055,15 +64578,15 @@ The organization collects and models architectural information about the service
 * Service dependencies in cloud or microservice architectures may be discovered using distributed tracing capabilities</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SessionCookie">
-        <skos:altLabel>Web Session Cookie</skos:altLabel>
         <skos:altLabel>Transient Cookie</skos:altLabel>
-        <rdfs:seeAlso>https://schema.ocsf.io/objects/http_cookie</rdfs:seeAlso>
+        <skos:altLabel>Web Session Cookie</skos:altLabel>
         <skos:altLabel>In-memory Cookie</skos:altLabel>
+        <rdfs:seeAlso>https://schema.ocsf.io/objects/http_cookie</rdfs:seeAlso>
         <skos:altLabel>Non-persistent Cookie</skos:altLabel>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/HTTP_cookie"/>
         <rdfs:isDefinedBy rdf:resource="https://schema.ocsf.io/objects/http_cookie"/>
-        <definition>A session cookie, also known as an in-memory cookie, transient cookie or non-persistent cookie, exists only in temporary memory while the user navigates the website. Web browsers normally delete session cookies when the user closes the browser. Unlike other cookies, session cookies do not have an expiration date assigned to them, which is how the browser knows to treat them as session cookies.</definition>
         <rdfs:label>Session Cookie</rdfs:label>
+        <definition>A session cookie, also known as an in-memory cookie, transient cookie or non-persistent cookie, exists only in temporary memory while the user navigates the website. Web browsers normally delete session cookies when the user closes the browser. Unlike other cookies, session cookies do not have an expiration date assigned to them, which is how the browser knows to treat them as session cookies.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SessionDurationAnalysis">
         <rdfs:label>Session Duration Analysis</rdfs:label>
@@ -64135,8 +64658,8 @@ Wikipedia. (n.d.). Skewness. [Link](https://en.wikipedia.org/wiki/Skewness)</kb-
         <definition>Software that coordinates the deployment process of software to systems, typically remotely.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SoftwareInventory">
-        <synonym>Software Discovery</synonym>
         <definition>Software inventorying identifies and records the software items in the organization&apos;s architecture.</definition>
+        <synonym>Software Discovery</synonym>
         <synonym>Software Inventorying</synonym>
         <kb-article>## How it works
 Administrators collect information on software items in their architecture using a variety of administrative and management tools that query network nodes for information.  In limited cases, where such queries are not supported or provide specific information of interest, an administrator may also collect this information through network enumeration methods to determine services responding on network nodes.
@@ -64183,14 +64706,6 @@ The goal is for homophones to be encoded to the same representation so that they
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SourceCode">
         <rdfs:label>Source Code</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SpawnProcess">
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Fork%E2%80%93exec"/>
-        <definition>A process spawn refers to a function that loads and executes a new child process.The current process may wait for the child to terminate or may continue to execute asynchronously. Creating a new subprocess requires enough memory in which both the child process and the current program can execute. There is a family of spawn functions in DOS, inherited by Microsoft Windows. There is also a different family of spawn functions in an optional extension of the POSIX standards.  Fork-exec is another technique combining two Unix system calls, which can effect a process spawn.</definition>
-        <rdfs:label>Spawn Process</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Spawn_(computing)"/>
-        <rdfs:seeAlso rdf:resource="https://docs.microsoft.com/en-us/windows/win32/procthread/creating-processes"/>
-        <skos:altLabel>Process Spawn</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SpearmansRankCorrelationCoefficient">
         <rdfs:label>Spearman&apos;s Rank Correlation Coefficient</rdfs:label>
@@ -64331,8 +64846,8 @@ Wikipedia. (n.d.). StyleGAN. [Link](https://en.wikipedia.org/wiki/StyleGAN)</kb-
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Subroutine"/>
         <rdfs:label>Subroutine</rdfs:label>
         <definition>In different programming languages, a subroutine may be called a procedure, a function, a routine, a method, or a subprogram. The generic term callable unit is sometimes used.</definition>
-        <synonym>Software Function</synonym>
         <synonym>Method</synonym>
+        <synonym>Software Function</synonym>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SubspaceClustering">
         <kb-article>## References
@@ -64368,20 +64883,20 @@ About Support Vector Machine (SVM). IBM SPSS Modeler SaaS Documentation. [Link](
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SymbolicAI">
         <synonym>Symbolic Artificial Intelligence</synonym>
-        <rdfs:label>Symbolic AI</rdfs:label>
         <kb-article>## How it works
 Symbolic artificial intelligence is used in tools such as logic programming, production rules, semantic nets and frames, and it developed applications such as knowledge-based systems (in particular, expert systems), symbolic mathematics, automated theorem provers, ontologies, the semantic web, and automated planning and scheduling systems. The Symbolic AI paradigm led to seminal ideas in search, symbolic programming languages, agents, multi-agent systems, the semantic web, and the strengths and limitations of formal knowledge and reasoning systems.
 
 ## References
 1. Symbolic artifical intelligence. (2023, May 23). In _Wikipedia_. [Link](https://en.wikipedia.org/wiki/Symbolic_artificial_intelligence)</kb-article>
+        <rdfs:label>Symbolic AI</rdfs:label>
         <definition>Symbolic artificial intelligence is the term for the collection of all methods in artificial intelligence that are based on high-level symbolic (human-readable) representations of problems, logic, and search.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SymbolicLink">
         <skos:altLabel>Softlink</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Symbolic_link"/>
         <rdfs:label>Symbolic Link</rdfs:label>
-        <definition>A symbolic link (also symlink or soft link) is a term for any file that contains a reference to another file or directory in the form of an absolute or relative path and that affects pathname resolution.</definition>
         <skos:altLabel>Symlink</skos:altLabel>
+        <definition>A symbolic link (also symlink or soft link) is a term for any file that contains a reference to another file or directory in the form of an absolute or relative path and that affects pathname resolution.</definition>
         <skos:altLabel>Soft Link</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SymbolicLogic">
@@ -64401,8 +64916,8 @@ Symbolic artificial intelligence is used in tools such as logic programming, pro
 Day, O., &amp; Khoshgoftaar, T.M. (2017). A survey on heterogeneous transfer learning. *Journal of Big Data, 4*(1), 29. [Link](https://doi.org/10.1186/s40537-017-0089-0).</kb-article>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#SystemCall">
-        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/System_call"/>
         <definition>A system call is the programmatic way in which a computer program requests a service from the kernel of the operating system it is executed on. This may include hardware-related services (for example, accessing a hard disk drive), creation and execution of new processes, and communication with integral kernel services such as process scheduling. System calls provide an essential interface between a process and the operating system.</definition>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/System_call"/>
         <rdfs:label>System Call</rdfs:label>
         <synonym>API Monitoring</synonym>
     </rdf:Description>
@@ -66080,8 +66595,8 @@ SAS Institute Inc. (n.d.). Decision Trees. In SAS® Visual Data Mining and Machi
         <rdfs:seeAlso rdf:resource="http://wordnet-rdf.princeton.edu/id/10761247-n"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount">
-        <definition>A user account allows a user to authenticate to a system and potentially to receive authorization to access resources provided by or connected to that system; however, authentication does not imply authorization. To log into an account, a user is typically required to authenticate oneself with a password or other credentials for the purposes of accounting, security, logging, and resource management.</definition>
         <rdfs:seeAlso>https://schema.ocsf.io/objects/user</rdfs:seeAlso>
+        <definition>A user account allows a user to authenticate to a system and potentially to receive authorization to access resources provided by or connected to that system; however, authentication does not imply authorization. To log into an account, a user is typically required to authenticate oneself with a password or other credentials for the purposes of accounting, security, logging, and resource management.</definition>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/User_account"/>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/User_(computing)#User_account"/>
         <rdfs:label>User Account</rdfs:label>
@@ -66209,10 +66724,10 @@ Intro to Active Learning. inovex Blog.  [Link](https://www.inovex.de/de/blog/int
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#VirtualAddress">
         <rdfs:isDefinedBy>https://www.techopedia.com/definition/9934/virtual-address-va</rdfs:isDefinedBy>
-        <rdfs:label>Virtual Address</rdfs:label>
         <synonym>Logical Address</synonym>
-        <rdfs:seeAlso>https://en.wikipedia.org/wiki/Memory_address#Logical_addresses</rdfs:seeAlso>
+        <rdfs:label>Virtual Address</rdfs:label>
         <rdfs:seeAlso>https://dbpedia.org/page/Virtual_address_space</rdfs:seeAlso>
+        <rdfs:seeAlso>https://en.wikipedia.org/wiki/Memory_address#Logical_addresses</rdfs:seeAlso>
         <definition>A virtual address in memory is a pointer or marker for a memory space that an operating system allows a process to use. The virtual address points to a location in primary storage that a process can use independently of other processes.</definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#VirtualizationSoftware">
@@ -66267,8 +66782,8 @@ Ensemble learning. Wikipedia.  [Link](https://en.wikipedia.org/wiki/Ensemble_lea
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#WebServerApplication">
         <definition>A web server application (or web app) is an application software that runs on a web server, unlike computer-based software programs that are stored locally on the Operating System (OS) of the device. Web applications are accessed by the user through a web browser with an active internet connection. These applications are programmed using a client-server modeled structure-the user (&quot;client&quot;) is provided services through an off-site server that is hosted by a third-party. Examples of commonly-used, web applications, include: web-mail, online retail sales, online banking, and online auctions.</definition>
-        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Web_application"/>
         <rdfs:label>Web Server Application</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Web_application"/>
         <skos:altLabel>Web Application</skos:altLabel>
         <skos:altLabel>Web App</skos:altLabel>
     </rdf:Description>
