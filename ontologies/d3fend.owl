@@ -2665,7 +2665,6 @@
 
     <owl:DatatypeProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-catalog-data-property">
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-data-property"/>
-        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property"/>
         <rdfs:label>d3fend-catalog-data-property</rdfs:label>
         <skos:altLabel xml:lang="en">d3fend-vendor-registry-data-property</skos:altLabel>
     </owl:DatatypeProperty>
@@ -2704,6 +2703,7 @@
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property -->
 
     <owl:DatatypeProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property">
+        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-catalog-data-property"/>
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-data-property"/>
         <rdfs:label>d3fend-external-control-data-property</rdfs:label>
     </owl:DatatypeProperty>
@@ -21533,7 +21533,6 @@ Newer system call.</definition>
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteMemory">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPISystemFunction"/>
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteMemory"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#invokes"/>
