@@ -9,15 +9,16 @@
             },
             "data": {
                 "label": "OS API Write File",
-                "sequence": "0"
+                "sequence": "0",
+                "techniqueId": "d3f:OSAPIWriteFile"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 69
+                "width": 182,
+                "height": 63
             },
             "selected": false,
             "dragging": false
@@ -30,16 +31,17 @@
                 "y": -474.58176656760077
             },
             "data": {
-                "label": "Write File",
-                "sequence": "0"
+                "label": "Write File Syscall",
+                "sequence": "0",
+                "techniqueId": "d3f:WriteFile"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 69
+                "width": 182,
+                "height": 63
             },
             "selected": false,
             "dragging": false
@@ -52,16 +54,17 @@
                 "y": -286.12331949494006
             },
             "data": {
-                "label": "Malware BUSHWALK - S1118",
-                "sequence": "0"
+                "label": "BUSHWALK Malware",
+                "sequence": "0",
+                "techniqueId": "d3f:ExecutableBinary"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 69
+                "width": 182,
+                "height": 63
             },
             "selected": false,
             "dragging": false
@@ -82,8 +85,8 @@
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 66
+                "width": 186,
+                "height": 65
             },
             "selected": false,
             "dragging": false
@@ -104,8 +107,8 @@
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 53
+                "width": 186,
+                "height": 52
             },
             "selected": false,
             "dragging": false
@@ -126,8 +129,8 @@
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 51
+                "width": 186,
+                "height": 50
             },
             "selected": false,
             "dragging": false
@@ -140,16 +143,17 @@
                 "y": -475.6407074238169
             },
             "data": {
-                "label": "d3f:OperatingSystemExecutableFile",
-                "sequence": "0"
+                "label": "OS Executable File",
+                "sequence": "0",
+                "techniqueId": "d3f:OperatingSystemExecutableFile"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 69
+                "width": 182,
+                "height": 74
             },
             "selected": false,
             "dragging": false
@@ -162,16 +166,17 @@
                 "y": -126.22264306364235
             },
             "data": {
-                "label": "D3-EAL",
-                "sequence": "0"
+                "label": "Executable Allowlisting",
+                "sequence": "0",
+                "techniqueId": "d3f:ExecutableAllowlisting"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 68
+                "width": 182,
+                "height": 65
             },
             "selected": false,
             "dragging": false
@@ -184,16 +189,17 @@
                 "y": -701.9008044548227
             },
             "data": {
-                "label": "d3f:SystemCallAnalysis",
-                "sequence": "1"
+                "label": "System Call Analysis",
+                "sequence": "2",
+                "techniqueId": "d3f:SystemCallAnalysis"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 68
+                "width": 182,
+                "height": 65
             },
             "selected": false,
             "dragging": false
@@ -206,16 +212,17 @@
                 "y": -697.3687809996632
             },
             "data": {
-                "label": "d3f:FileAnalysis",
-                "sequence": "2"
+                "label": "File Analysis",
+                "sequence": "3",
+                "techniqueId": "d3f:FileAnalysis"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 68
+                "width": 182,
+                "height": 65
             },
             "selected": false,
             "dragging": false
@@ -228,16 +235,40 @@
                 "y": -700.4538274042884
             },
             "data": {
-                "label": "d3f:FileIntegrityMonitoring",
-                "sequence": "3"
+                "label": "File Integrity Monitoring",
+                "sequence": "4",
+                "techniqueId": "d3f:FileIntegrityMonitoring"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 187,
-                "height": 68
+                "width": 182,
+                "height": 65
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.6395594717773364",
+            "type": "countermeasureSelectorNode",
+            "position": {
+                "x": 304.9250080885881,
+                "y": -276.7242378961826
+            },
+            "data": {
+                "label": "System Call Filtering",
+                "sequence": "1",
+                "techniqueId": "d3f:SystemCallFiltering"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 182,
+                "height": 65
             },
             "selected": false,
             "dragging": false
@@ -422,6 +453,21 @@
             "target": "0.7438529946288932",
             "targetHandle": "artTopTarget",
             "id": "xy-edge__0.12193705870339033artBottomSource-0.7438529946288932artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "filters"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.9734359398205206",
+            "sourceHandle": "artBottomSource",
+            "target": "0.6395594717773364",
+            "targetHandle": "defenseTopTarget",
+            "id": "xy-edge__0.9734359398205206artBottomSource-0.6395594717773364defenseTopTarget",
             "selected": false
         }
     ]
