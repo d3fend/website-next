@@ -1,0 +1,1233 @@
+{
+    "nodes": [
+        {
+            "id": "0.581653696636286",
+            "type": "agentSelectorNode",
+            "position": {
+                "x": -231.76773373692288,
+                "y": -279.86447933182404
+            },
+            "data": {
+                "label": "Operation Shadowcat",
+                "sequence": "0"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 243,
+                "height": 107
+            },
+            "selected": false,
+            "dragging": false,
+            "width": 243,
+            "height": 107
+        },
+        {
+            "id": "0.4413793232667994",
+            "type": "attackSelectorNode",
+            "position": {
+                "x": -200.37812924611478,
+                "y": -15.197216736898362
+            },
+            "data": {
+                "label": "Initial Access: Spearphishing Attachment",
+                "sequence": "0",
+                "techniqueId": "d3f:T1598.002"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 279,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false,
+            "width": 279,
+            "height": 93
+        },
+        {
+            "id": "0.13256944195839404",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 247.7564759861873,
+                "y": 301.9733932990606
+            },
+            "data": {
+                "label": ".LNK File \"office doc\"",
+                "sequence": "0",
+                "techniqueId": "d3f:FileSystemLink"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.6071601385874087",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 188.79116128408356,
+                "y": -63.86355667516352
+            },
+            "data": {
+                "label": "Email",
+                "sequence": "0",
+                "techniqueId": "d3f:Email"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.42705486882231847",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 208.7630520996877,
+                "y": 61.07933072109077
+            },
+            "data": {
+                "label": "Email Attachment",
+                "sequence": "0",
+                "techniqueId": "d3f:EmailAttachment"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.4798872031112791",
+            "type": "attackSelectorNode",
+            "position": {
+                "x": -194.20626671199057,
+                "y": 195.6201157946475
+            },
+            "data": {
+                "label": "Execution: Malicious File",
+                "sequence": "1",
+                "techniqueId": "d3f:T1204.002"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.10426293338922998",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 180.6331029268684,
+                "y": -278.0646541667991
+            },
+            "data": {
+                "label": "Inbound Internet Mail Traffic",
+                "sequence": "0",
+                "techniqueId": "d3f:InboundInternetMailTraffic"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 204,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false,
+            "width": 204,
+            "height": 82
+        },
+        {
+            "id": "0.25835674899524097",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 290.9376520119956,
+                "y": 540.5027155115268
+            },
+            "data": {
+                "label": "Powershell script as arg",
+                "sequence": "0",
+                "techniqueId": "d3f:missing"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.7792835143423777",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 269.1256007093973,
+                "y": 420.608372815826
+            },
+            "data": {
+                "label": "powershell.exe",
+                "sequence": "0",
+                "techniqueId": "d3f:ExecutableBinary"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.04249325034853346",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 588.2694429922194,
+                "y": 499.4974123949197
+            },
+            "data": {
+                "label": "DOCX Document File",
+                "sequence": "0",
+                "techniqueId": "d3f:DocumentFile"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.3108464738831057",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 538.726377469877,
+                "y": 650.8978930261893
+            },
+            "data": {
+                "label": "DLL .NET Loader ",
+                "sequence": "0",
+                "techniqueId": "d3f:SharedLibraryFile"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.552059671457854",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 1049.664310739111,
+                "y": 837.5991657557679
+            },
+            "data": {
+                "label": "Steno PNG File",
+                "sequence": "0",
+                "techniqueId": "d3f:DigitalInformationBearer"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.2898381946203664",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 1121.7780698561933,
+                "y": 610.7102422766169
+            },
+            "data": {
+                "label": "Outbound Internet Web Traffic",
+                "sequence": "0",
+                "techniqueId": "d3f:OutboundInternetWebTraffic"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 227,
+                "height": 95
+            },
+            "selected": false,
+            "dragging": false,
+            "width": 227,
+            "height": 95
+        },
+        {
+            "id": "0.7535326980747047",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 228.7114055209784,
+                "y": 180.3893716841476
+            },
+            "data": {
+                "label": "Zip File",
+                "sequence": "0",
+                "techniqueId": "d3f:ArchiveFile"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.3294135325329819",
+            "type": "attackSelectorNode",
+            "position": {
+                "x": -194.45943081336736,
+                "y": 384.82112512061593
+            },
+            "data": {
+                "label": "Masquerade File Type",
+                "sequence": "2",
+                "techniqueId": "d3f:T1036.008"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 187,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false,
+            "width": 187,
+            "height": 93
+        },
+        {
+            "id": "0.9674498279207843",
+            "type": "attackSelectorNode",
+            "position": {
+                "x": -187.41139480045933,
+                "y": 543.5877344114564
+            },
+            "data": {
+                "label": "File Deletion",
+                "sequence": "3",
+                "techniqueId": "d3f:T1107"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 177,
+                "height": 93
+            },
+            "selected": false,
+            "width": 177,
+            "height": 93,
+            "dragging": false
+        },
+        {
+            "id": "0.6835359685533496",
+            "type": "attackSelectorNode",
+            "position": {
+                "x": -165.18514550804846,
+                "y": 700.3471820981673
+            },
+            "data": {
+                "label": "PowerShell",
+                "sequence": "4",
+                "techniqueId": "d3f:T1086"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.34778388263272275",
+            "type": "attackSelectorNode",
+            "position": {
+                "x": -169.16475797695455,
+                "y": 851.548220166627
+            },
+            "data": {
+                "label": "Native API",
+                "sequence": "5",
+                "techniqueId": "d3f:T1106"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 224,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false,
+            "width": 224,
+            "height": 93
+        },
+        {
+            "id": "0.921380612603658",
+            "type": "attackSelectorNode",
+            "position": {
+                "x": -161.19893498330316,
+                "y": 991.7212534670005
+            },
+            "data": {
+                "label": "Asynchronous Procedure Call",
+                "sequence": "6",
+                "techniqueId": "d3f:T1055.004"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 222,
+                "height": 100
+            },
+            "selected": false,
+            "width": 222,
+            "height": 100,
+            "dragging": false
+        },
+        {
+            "id": "0.7984230369581443",
+            "type": "attackSelectorNode",
+            "position": {
+                "x": -139.53287146372574,
+                "y": 1195.9277407509949
+            },
+            "data": {
+                "label": "Web Protocols",
+                "sequence": "7",
+                "techniqueId": "d3f:T1071.001"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.21872006297325297",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 362.46720843686956,
+                "y": 773.5329523272331
+            },
+            "data": {
+                "label": "powershell.exe",
+                "sequence": "0",
+                "techniqueId": "d3f:ExecutableBinary"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.03979030054819055",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 401.765038164518,
+                "y": 899.9476720899229
+            },
+            "data": {
+                "label": "Powershell script as arg",
+                "sequence": "0",
+                "techniqueId": "d3f:missing"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.9366371466114469",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 481.9603960113913,
+                "y": 1037.5179185430407
+            },
+            "data": {
+                "label": "Go RAT",
+                "sequence": "0",
+                "techniqueId": "d3f:ExecutableBinary"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.6553811899665475",
+            "type": "countermeasureSelectorNode",
+            "position": {
+                "x": 764.2128557898541,
+                "y": 908.3378128025386
+            },
+            "data": {
+                "label": "Yara Rule",
+                "sequence": "0",
+                "techniqueId": "d3f:FileContentRules"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.5848797624184087",
+            "type": "countermeasureSelectorNode",
+            "position": {
+                "x": 1190.5026754048322,
+                "y": 320.7522666801542
+            },
+            "data": {
+                "label": "Network Traffic Analysis",
+                "sequence": "0",
+                "techniqueId": "d3f:NetworkTrafficAnalysis"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 93
+            },
+            "selected": false
+        },
+        {
+            "id": "0.9621202021427397",
+            "type": "countermeasureSelectorNode",
+            "position": {
+                "x": 835.5026754048322,
+                "y": 346.7522666801542
+            },
+            "data": {
+                "label": "Executable Allowlisting",
+                "sequence": "0",
+                "techniqueId": "d3f:ExecutableAllowlisting"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.30898977256836024",
+            "type": "countermeasureSelectorNode",
+            "position": {
+                "x": 591.0449188118079,
+                "y": 307.3461035737941
+            },
+            "data": {
+                "label": "Disable powershell",
+                "sequence": "0",
+                "techniqueId": "d3f:PlatformHardening"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 93
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.48477799583965264",
+            "type": "countermeasureSelectorNode",
+            "position": {
+                "x": 1230.7934432120667,
+                "y": 1180.992635586002
+            },
+            "data": {
+                "label": "General Antivirus file scanning (all files)",
+                "sequence": "0",
+                "techniqueId": "d3f:FileContentAnalysis"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 268,
+                "height": 110
+            },
+            "selected": false,
+            "dragging": false,
+            "width": 268,
+            "height": 110
+        },
+        {
+            "id": "0.2898381946203664-copy0.13536047675435314",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 808.2617435629143,
+                "y": 1087.0149816145886
+            },
+            "data": {
+                "label": "Outbound Internet Web Traffic",
+                "sequence": "0",
+                "techniqueId": "d3f:OutboundInternetWebTraffic"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 227,
+                "height": 95
+            },
+            "selected": false,
+            "dragging": false,
+            "width": 227,
+            "height": 95
+        },
+        {
+            "id": "0.8419052487124239",
+            "type": "artifactSelectorNode",
+            "position": {
+                "x": 860.4530405503134,
+                "y": 646.7878436702997
+            },
+            "data": {
+                "label": "Create Process",
+                "sequence": "0",
+                "techniqueId": "d3f:CreateProcess"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 176,
+                "height": 82
+            },
+            "selected": false,
+            "dragging": false
+        },
+        {
+            "id": "0.4032013612667408",
+            "type": "countermeasureSelectorNode",
+            "position": {
+                "x": 564.9495817525076,
+                "y": -127.65302706013556
+            },
+            "data": {
+                "label": "EmailAttachmentPolicy",
+                "sequence": "0",
+                "techniqueId": "EmailAttachmentPolicy"
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 221,
+                "height": 100
+            },
+            "selected": false,
+            "width": 221,
+            "height": 100
+        }
+    ],
+    "edges": [
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "contains"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.6071601385874087",
+            "sourceHandle": "artBottomSource",
+            "target": "0.42705486882231847",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.6071601385874087artBottomSource-0.42705486882231847artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "sends"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.4413793232667994",
+            "sourceHandle": "attackRightSource",
+            "target": "0.6071601385874087",
+            "targetHandle": "vulnerabilityLeftTarget",
+            "id": "xy-edge__0.4413793232667994attackRightSource-0.6071601385874087vulnerabilityLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "downloads"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.581653696636286",
+            "sourceHandle": "artBottomSource",
+            "target": "0.4413793232667994",
+            "targetHandle": "attackTopTarget",
+            "id": "xy-edge__0.581653696636286artBottomSource-0.4413793232667994attackTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "implements"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.4798872031112791",
+            "sourceHandle": "attackRightSource",
+            "target": "0.13256944195839404",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.4798872031112791attackRightSource-0.13256944195839404attackLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "precedes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.4413793232667994",
+            "sourceHandle": "attackBottomSource",
+            "target": "0.4798872031112791",
+            "targetHandle": "attackTopTarget",
+            "id": "xy-edge__0.4413793232667994attackBottomSource-0.4798872031112791attackTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "contains"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.10426293338922998",
+            "sourceHandle": "artBottomSource",
+            "target": "0.6071601385874087",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.10426293338922998artBottomSource-0.6071601385874087artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "executes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.13256944195839404",
+            "sourceHandle": "artBottomSource",
+            "target": "0.7792835143423777",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.13256944195839404artBottomSource-0.7792835143423777artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "invokes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.7792835143423777",
+            "sourceHandle": "artBottomSource",
+            "target": "0.25835674899524097",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.7792835143423777artBottomSource-0.25835674899524097artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "creates"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.25835674899524097",
+            "sourceHandle": "artRightSource",
+            "target": "0.04249325034853346",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.25835674899524097artRightSource-0.04249325034853346attackLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "creates"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.25835674899524097",
+            "sourceHandle": "artRightSource",
+            "target": "0.3108464738831057",
+            "targetHandle": "vulnerabilityLeftTarget",
+            "id": "xy-edge__0.25835674899524097artRightSource-0.3108464738831057vulnerabilityLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "downloads"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.3108464738831057",
+            "sourceHandle": "artRightSource",
+            "target": "0.552059671457854",
+            "targetHandle": "artLeftTarget",
+            "id": "xy-edge__0.3108464738831057artRightSource-0.552059671457854artLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "contains"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.2898381946203664",
+            "sourceHandle": "artBottomSource",
+            "target": "0.552059671457854",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.2898381946203664artBottomSource-0.552059671457854artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "contains"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.7535326980747047",
+            "sourceHandle": "artBottomSource",
+            "target": "0.13256944195839404",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.7535326980747047artBottomSource-0.13256944195839404artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "contains"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.42705486882231847",
+            "sourceHandle": "artBottomSource",
+            "target": "0.7535326980747047",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.42705486882231847artBottomSource-0.7535326980747047artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "implements"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.3294135325329819",
+            "sourceHandle": "attackRightSource",
+            "target": "0.13256944195839404",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.3294135325329819attackRightSource-0.13256944195839404attackLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "implements"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.9674498279207843",
+            "sourceHandle": "attackRightSource",
+            "target": "0.13256944195839404",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.9674498279207843attackRightSource-0.13256944195839404attackLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "invokes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.3108464738831057",
+            "sourceHandle": "artBottomSource",
+            "target": "0.21872006297325297",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.3108464738831057artBottomSource-0.21872006297325297artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "invokes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.21872006297325297",
+            "sourceHandle": "artBottomSource",
+            "target": "0.03979030054819055",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.21872006297325297artBottomSource-0.03979030054819055artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "invokes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.03979030054819055",
+            "sourceHandle": "artBottomSource",
+            "target": "0.9366371466114469",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.03979030054819055artBottomSource-0.9366371466114469artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "detects"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.6553811899665475",
+            "sourceHandle": "defenseLeftSource",
+            "target": "0.9366371466114469",
+            "targetHandle": "defenseRightTarget",
+            "id": "xy-edge__0.6553811899665475defenseLeftSource-0.9366371466114469defenseRightTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "invokes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.5848797624184087",
+            "sourceHandle": "defenseBottomSource",
+            "target": "0.2898381946203664",
+            "targetHandle": "artTopTarget",
+            "id": "xy-edge__0.5848797624184087defenseBottomSource-0.2898381946203664artTopTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "blocks"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.9621202021427397",
+            "sourceHandle": "defenseBottomSource",
+            "target": "0.3108464738831057",
+            "targetHandle": "defenseRightTarget",
+            "id": "xy-edge__0.9621202021427397defenseBottomSource-0.3108464738831057defenseRightTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "invokes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.30898977256836024",
+            "sourceHandle": "defenseLeftSource",
+            "target": "0.7792835143423777",
+            "targetHandle": "defenseRightTarget",
+            "id": "xy-edge__0.30898977256836024defenseLeftSource-0.7792835143423777defenseRightTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "implements"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.6835359685533496",
+            "sourceHandle": "attackRightSource",
+            "target": "0.25835674899524097",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.6835359685533496attackRightSource-0.25835674899524097attackLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "implements"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.6835359685533496",
+            "sourceHandle": "attackRightSource",
+            "target": "0.03979030054819055",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.6835359685533496attackRightSource-0.03979030054819055attackLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "implements"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.34778388263272275",
+            "sourceHandle": "attackRightSource",
+            "target": "0.3108464738831057",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.34778388263272275attackRightSource-0.3108464738831057attackLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "creates"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.9366371466114469",
+            "sourceHandle": "artRightSource",
+            "target": "0.2898381946203664-copy0.13536047675435314",
+            "targetHandle": "artLeftTarget",
+            "id": "xy-edge__0.9366371466114469artRightSource-0.2898381946203664-copy0.13536047675435314artLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "implements"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.921380612603658",
+            "sourceHandle": "attackRightSource",
+            "target": "0.3108464738831057",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.921380612603658attackRightSource-0.3108464738831057attackLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "invokes"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.3108464738831057",
+            "sourceHandle": "artRightSource",
+            "target": "0.8419052487124239",
+            "targetHandle": "artLeftTarget",
+            "id": "xy-edge__0.3108464738831057artRightSource-0.8419052487124239artLeftTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "blocks"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.4032013612667408",
+            "sourceHandle": "defenseLeftSource",
+            "target": "0.42705486882231847",
+            "targetHandle": "defenseRightTarget",
+            "id": "xy-edge__0.4032013612667408defenseLeftSource-0.42705486882231847defenseRightTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "blocks"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.4032013612667408",
+            "sourceHandle": "defenseLeftSource",
+            "target": "0.7535326980747047",
+            "targetHandle": "defenseRightTarget",
+            "id": "xy-edge__0.4032013612667408defenseLeftSource-0.7535326980747047defenseRightTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "blocks"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.4032013612667408",
+            "sourceHandle": "defenseLeftSource",
+            "target": "0.13256944195839404",
+            "targetHandle": "defenseRightTarget",
+            "id": "xy-edge__0.4032013612667408defenseLeftSource-0.13256944195839404defenseRightTarget",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": "implements"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.7984230369581443",
+            "sourceHandle": "attackRightSource",
+            "target": "0.9366371466114469",
+            "targetHandle": "attackLeftTarget",
+            "id": "xy-edge__0.7984230369581443attackRightSource-0.9366371466114469attackLeftTarget",
+            "selected": false
+        }
+    ]
+}

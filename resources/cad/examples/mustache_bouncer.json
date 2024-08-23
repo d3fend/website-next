@@ -1146,6 +1146,13 @@
             "selected": false
         },
         {
+            "type": "editableEdge",
+            "data": {
+                "label": "performs"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
             "source": "0.7559552076065711",
             "sourceHandle": "artBottomSource",
             "target": "0.12367384897689515",
