@@ -1,1 +1,0 @@
-const n=t=>{t.focus()},s=t=>{const e=c=>{t.contains(c.target)||t.dispatchEvent(new CustomEvent("outsideclick"))};return document.addEventListener("click",e,!0),{destroy(){document.removeEventListener("click",e,!0)}}};export{s as c,n as f};
