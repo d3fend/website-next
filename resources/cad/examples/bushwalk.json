@@ -10,7 +10,7 @@
             "data": {
                 "label": "OS API Write File",
                 "sequence": "0",
-                "techniqueId": "d3f:OSAPIWriteFile"
+                "d3f_class": "d3f:OSAPIWriteFile"
             },
             "origin": [
                 0.5,
@@ -33,7 +33,7 @@
             "data": {
                 "label": "Write File Syscall",
                 "sequence": "0",
-                "techniqueId": "d3f:WriteFile"
+                "d3f_class": "d3f:WriteFile"
             },
             "origin": [
                 0.5,
@@ -56,7 +56,7 @@
             "data": {
                 "label": "BUSHWALK Malware",
                 "sequence": "0",
-                "techniqueId": "d3f:ExecutableBinary"
+                "d3f_class": "d3f:ExecutableBinary"
             },
             "origin": [
                 0.5,
@@ -145,7 +145,7 @@
             "data": {
                 "label": "OS Executable File",
                 "sequence": "0",
-                "techniqueId": "d3f:OperatingSystemExecutableFile"
+                "d3f_class": "d3f:OperatingSystemExecutableFile"
             },
             "origin": [
                 0.5,
@@ -168,7 +168,7 @@
             "data": {
                 "label": "Executable Allowlisting",
                 "sequence": "0",
-                "techniqueId": "d3f:ExecutableAllowlisting"
+                "d3f_class": "d3f:ExecutableAllowlisting"
             },
             "origin": [
                 0.5,
@@ -191,7 +191,7 @@
             "data": {
                 "label": "System Call Analysis",
                 "sequence": "2",
-                "techniqueId": "d3f:SystemCallAnalysis"
+                "d3f_class": "d3f:SystemCallAnalysis"
             },
             "origin": [
                 0.5,
@@ -214,7 +214,7 @@
             "data": {
                 "label": "File Analysis",
                 "sequence": "3",
-                "techniqueId": "d3f:FileAnalysis"
+                "d3f_class": "d3f:FileAnalysis"
             },
             "origin": [
                 0.5,
@@ -237,7 +237,7 @@
             "data": {
                 "label": "File Integrity Monitoring",
                 "sequence": "4",
-                "techniqueId": "d3f:FileIntegrityMonitoring"
+                "d3f_class": "d3f:FileIntegrityMonitoring"
             },
             "origin": [
                 0.5,
@@ -260,7 +260,7 @@
             "data": {
                 "label": "System Call Filtering",
                 "sequence": "1",
-                "techniqueId": "d3f:SystemCallFiltering"
+                "d3f_class": "d3f:SystemCallFiltering"
             },
             "origin": [
                 0.5,
@@ -278,31 +278,33 @@
         {
             "type": "editableEdge",
             "data": {
-                "label": "invokes"
+                "label": "invokes",
+                "d3f_property": "d3f:invokes"
             },
             "markerEnd": {
                 "type": "arrowclosed"
             },
             "source": "0.28745244020819394",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.9734359398205206",
-            "targetHandle": "vulnerabilityLeftTarget",
-            "id": "xy-edge__0.28745244020819394artRightSource-0.9734359398205206vulnerabilityLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.28745244020819394source-0.9734359398205206target",
             "selected": false
         },
         {
             "type": "editableEdge",
             "data": {
-                "label": "contains"
+                "label": "contains",
+                "d3f_property": "d3f:contains"
             },
             "markerEnd": {
                 "type": "arrowclosed"
             },
             "source": "0.28745244020819394",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.2991290665885308",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.28745244020819394artBottomSource-0.2991290665885308artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.28745244020819394source-0.2991290665885308target",
             "selected": false
         },
         {
@@ -314,25 +316,26 @@
                 "type": "arrowclosed"
             },
             "source": "0.09193859368571666",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.2991290665885308",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.09193859368571666attackRightSource-0.2991290665885308attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.09193859368571666source-0.2991290665885308target",
             "selected": false
         },
         {
             "type": "editableEdge",
             "data": {
-                "label": "executes"
+                "label": "executes",
+                "d3f_property": "d3f:executes"
             },
             "markerEnd": {
                 "type": "arrowclosed"
             },
             "source": "0.026668828190339",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.09193859368571666",
-            "targetHandle": "attackTopTarget",
-            "id": "xy-edge__0.026668828190339artBottomSource-0.09193859368571666attackTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.026668828190339source-0.09193859368571666target",
             "selected": false
         },
         {
@@ -344,10 +347,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.9734359398205206",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.7438529946288932",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__0.9734359398205206artRightSource-0.7438529946288932artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.9734359398205206source-0.7438529946288932target",
             "selected": false
         },
         {
@@ -359,10 +362,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.2991290665885308",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.8639284363107326",
-            "targetHandle": "defenseTopTarget",
-            "id": "xy-edge__0.2991290665885308artBottomSource-0.8639284363107326defenseTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.2991290665885308source-0.8639284363107326target",
             "selected": false
         },
         {
@@ -374,55 +377,58 @@
                 "type": "arrowclosed"
             },
             "source": "0.026668828190339",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.2991290665885308",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.026668828190339artBottomSource-0.2991290665885308artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.026668828190339source-0.2991290665885308target",
             "selected": false
         },
         {
             "type": "editableEdge",
             "data": {
-                "label": "analyzes"
+                "label": "analyzes",
+                "d3f_property": "d3f:analyzes"
             },
             "markerEnd": {
                 "type": "arrowclosed"
             },
             "source": "0.1803005710496245",
-            "sourceHandle": "defenseBottomSource",
+            "sourceHandle": "source",
             "target": "0.9734359398205206",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.1803005710496245defenseBottomSource-0.9734359398205206artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.1803005710496245source-0.9734359398205206target",
             "selected": false
         },
         {
             "type": "editableEdge",
             "data": {
-                "label": "monitors"
+                "label": "monitors",
+                "d3f_property": "d3f:monitors"
             },
             "markerEnd": {
                 "type": "arrowclosed"
             },
             "source": "0.3180850673915423",
-            "sourceHandle": "defenseBottomSource",
+            "sourceHandle": "source",
             "target": "0.7438529946288932",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.3180850673915423defenseBottomSource-0.7438529946288932artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.3180850673915423source-0.7438529946288932target",
             "selected": false
         },
         {
             "type": "editableEdge",
             "data": {
-                "label": "monitors"
+                "label": "monitors",
+                "d3f_property": "d3f:monitors"
             },
             "markerEnd": {
                 "type": "arrowclosed"
             },
             "source": "0.3615545411229423",
-            "sourceHandle": "defenseBottomSource",
+            "sourceHandle": "source",
             "target": "0.7438529946288932",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.3615545411229423defenseBottomSource-0.7438529946288932artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.3615545411229423source-0.7438529946288932target",
             "selected": false
         },
         {
@@ -434,10 +440,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.12193705870339033",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.9734359398205206",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.12193705870339033artBottomSource-0.9734359398205206artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.12193705870339033source-0.9734359398205206target",
             "selected": false
         },
         {
@@ -449,25 +455,26 @@
                 "type": "arrowclosed"
             },
             "source": "0.12193705870339033",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.7438529946288932",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.12193705870339033artBottomSource-0.7438529946288932artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.12193705870339033source-0.7438529946288932target",
             "selected": false
         },
         {
             "type": "editableEdge",
             "data": {
-                "label": "filters"
+                "label": "filters",
+                "d3f_property": "d3f:filters"
             },
             "markerEnd": {
                 "type": "arrowclosed"
             },
             "source": "0.9734359398205206",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.6395594717773364",
-            "targetHandle": "defenseTopTarget",
-            "id": "xy-edge__0.9734359398205206artBottomSource-0.6395594717773364defenseTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.9734359398205206source-0.6395594717773364target",
             "selected": false
         }
     ]

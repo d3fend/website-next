@@ -614,10 +614,10 @@
             },
             "label": "edge label TBD",
             "source": "1",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "6",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__1attackRightSource-6attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__1source-6target",
             "selected": false
         },
         {
@@ -630,10 +630,10 @@
             },
             "label": "edge label TBD",
             "source": "12",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "13",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__12artBottomSource-13artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__12source-13target",
             "selected": false
         },
         {
@@ -646,10 +646,10 @@
             },
             "label": "edge label TBD",
             "source": "11",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "13",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__11defenseLeftSource-13defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__11source-13target",
             "selected": false
         },
         {
@@ -662,10 +662,10 @@
             },
             "label": "edge label TBD",
             "source": "1",
-            "sourceHandle": "attackBottomSource",
+            "sourceHandle": "source",
             "target": "4",
-            "targetHandle": "attackTopTarget",
-            "id": "xy-edge__1attackBottomSource-4attackTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__1source-4target",
             "selected": false
         },
         {
@@ -678,10 +678,10 @@
             },
             "label": "edge label TBD",
             "source": "3",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "2",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__3defenseLeftSource-2defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__3source-2target",
             "selected": false
         },
         {
@@ -694,10 +694,10 @@
             },
             "label": "edge label TBD",
             "source": "4",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "7",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__4attackRightSource-7attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__4source-7target",
             "selected": false
         },
         {
@@ -710,10 +710,10 @@
             },
             "label": "edge label TBD",
             "source": "1",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "8",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__1attackRightSource-8attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__1source-8target",
             "selected": false
         },
         {
@@ -726,10 +726,10 @@
             },
             "label": "edge label TBD",
             "source": "11",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "0.7309189404807505",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__11defenseLeftSource-0.7309189404807505defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__11source-0.7309189404807505target",
             "selected": false
         },
         {
@@ -742,10 +742,10 @@
             },
             "label": "edge label TBD",
             "source": "1",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.7309189404807505",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__1attackRightSource-0.7309189404807505attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__1source-0.7309189404807505target",
             "selected": false
         },
         {
@@ -758,10 +758,10 @@
             },
             "label": "edge label TBD",
             "source": "3",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "7",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__3defenseLeftSource-7defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__3source-7target",
             "selected": false
         },
         {
@@ -774,10 +774,10 @@
             },
             "label": "edge label TBD",
             "source": "8",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.35571274771954375",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__8artRightSource-0.35571274771954375artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__8source-0.35571274771954375target",
             "selected": false
         },
         {
@@ -790,10 +790,10 @@
             },
             "label": "edge label TBD",
             "source": "12",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "2",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__12artBottomSource-2artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__12source-2target",
             "selected": false
         },
         {
@@ -806,10 +806,10 @@
             },
             "label": "edge label TBD",
             "source": "7",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "2",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__7artRightSource-2artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__7source-2target",
             "selected": false
         },
         {
@@ -822,10 +822,10 @@
             },
             "label": "edge label TBD",
             "source": "0.35571274771954375",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "12",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__0.35571274771954375artRightSource-12artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.35571274771954375source-12target",
             "selected": false
         },
         {
@@ -838,10 +838,10 @@
             },
             "label": "edge label TBD",
             "source": "11",
-            "sourceHandle": "defenseBottomSource",
+            "sourceHandle": "source",
             "target": "3",
-            "targetHandle": "defenseTopTarget",
-            "id": "xy-edge__11defenseBottomSource-3defenseTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__11source-3target",
             "selected": false
         },
         {
@@ -854,10 +854,10 @@
             },
             "label": "edge label TBD",
             "source": "10",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "2",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__10defenseLeftSource-2defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__10source-2target",
             "selected": false
         },
         {
@@ -869,10 +869,10 @@
                 "type": "arrowclosed"
             },
             "source": "4",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.7309189404807505",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__4attackRightSource-0.7309189404807505attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__4source-0.7309189404807505target",
             "selected": false
         },
         {
@@ -884,10 +884,10 @@
                 "type": "arrowclosed"
             },
             "source": "14",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "13",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__14artBottomSource-13artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__14source-13target",
             "selected": false
         },
         {
@@ -899,10 +899,10 @@
                 "type": "arrowclosed"
             },
             "source": "7",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "13",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__7artRightSource-13artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__7source-13target",
             "selected": false
         },
         {
@@ -914,10 +914,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.6928368144754263",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "12",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.6928368144754263artBottomSource-12artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.6928368144754263source-12target",
             "selected": false
         },
         {
@@ -929,10 +929,10 @@
                 "type": "arrowclosed"
             },
             "source": "6",
-            "sourceHandle": "vulnerabilityRightSource",
+            "sourceHandle": "source",
             "target": "0.6928368144754263",
-            "targetHandle": "vulnerabilityLeftTarget",
-            "id": "xy-edge__6vulnerabilityRightSource-0.6928368144754263vulnerabilityLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__6source-0.6928368144754263target",
             "selected": false
         },
         {
@@ -944,10 +944,10 @@
                 "type": "arrowclosed"
             },
             "source": "4",
-            "sourceHandle": "attackBottomSource",
+            "sourceHandle": "source",
             "target": "0.7360906427212425",
-            "targetHandle": "attackTopTarget",
-            "id": "xy-edge__4attackBottomSource-0.7360906427212425attackTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__4source-0.7360906427212425target",
             "selected": false
         },
         {
@@ -959,10 +959,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.12367384897689515",
-            "sourceHandle": "attackBottomSource",
+            "sourceHandle": "source",
             "target": "1",
-            "targetHandle": "attackTopTarget",
-            "id": "xy-edge__0.12367384897689515attackBottomSource-1attackTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.12367384897689515source-1target",
             "selected": false
         },
         {
@@ -974,10 +974,10 @@
                 "type": "arrowclosed"
             },
             "source": "0",
-            "sourceHandle": "attackBottomSource",
+            "sourceHandle": "source",
             "target": "1",
-            "targetHandle": "attackTopTarget",
-            "id": "xy-edge__0attackBottomSource-1attackTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0source-1target",
             "selected": false
         },
         {
@@ -989,10 +989,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.7360906427212425",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "7",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__0.7360906427212425attackRightSource-7artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.7360906427212425source-7target",
             "selected": false
         },
         {
@@ -1004,10 +1004,10 @@
                 "type": "arrowclosed"
             },
             "source": "0",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "6",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0attackRightSource-6attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0source-6target",
             "selected": false
         },
         {
@@ -1019,10 +1019,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.7309189404807505",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.6928368144754263",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__0.7309189404807505artRightSource-0.6928368144754263artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.7309189404807505source-0.6928368144754263target",
             "selected": false
         },
         {
@@ -1034,10 +1034,10 @@
                 "type": "arrowclosed"
             },
             "source": "10",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "7",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__10defenseLeftSource-7defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__10source-7target",
             "selected": false
         },
         {
@@ -1049,10 +1049,10 @@
                 "type": "arrowclosed"
             },
             "source": "1",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.288310609625414",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__1attackRightSource-0.288310609625414attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__1source-0.288310609625414target",
             "selected": false
         },
         {
@@ -1064,10 +1064,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.288310609625414",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "13",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.288310609625414artRightSource-13artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.288310609625414source-13target",
             "selected": false
         },
         {
@@ -1079,10 +1079,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.7275091815275674",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "12",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__0.7275091815275674artRightSource-12artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.7275091815275674source-12target",
             "selected": false
         },
         {
@@ -1094,10 +1094,10 @@
                 "type": "arrowclosed"
             },
             "source": "4",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.7275091815275674",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__4attackRightSource-0.7275091815275674attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__4source-0.7275091815275674target",
             "selected": false
         },
         {
@@ -1109,10 +1109,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.24867744701603156",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "0.6928368144754263",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__0.24867744701603156defenseLeftSource-0.6928368144754263defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.24867744701603156source-0.6928368144754263target",
             "selected": false
         },
         {
@@ -1124,10 +1124,10 @@
                 "type": "arrowclosed"
             },
             "source": "10",
-            "sourceHandle": "defenseBottomSource",
+            "sourceHandle": "source",
             "target": "11",
-            "targetHandle": "defenseTopTarget",
-            "id": "xy-edge__10defenseBottomSource-11defenseTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__10source-11target",
             "selected": false
         },
         {
@@ -1139,10 +1139,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.24867744701603156",
-            "sourceHandle": "defenseBottomSource",
+            "sourceHandle": "source",
             "target": "11",
-            "targetHandle": "defenseTopTarget",
-            "id": "xy-edge__0.24867744701603156defenseBottomSource-11defenseTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.24867744701603156source-11target",
             "selected": false
         },
         {
@@ -1154,10 +1154,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.7559552076065711",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.12367384897689515",
-            "targetHandle": "attackTopTarget",
-            "id": "xyflow__edge-0.7559552076065711artBottomSource-0.12367384897689515attackTopTarget",
+            "targetHandle": "target",
+            "id": "xyflow__edge-0.7559552076065711source-0.12367384897689515target",
             "selected": false
         }
     ]

@@ -34,7 +34,7 @@
             "data": {
                 "label": "Initial Access: Spearphishing Attachment",
                 "sequence": "0",
-                "techniqueId": "d3f:T1598.002"
+                "d3f_class": "d3f:T1598.002"
             },
             "origin": [
                 0.5,
@@ -59,7 +59,7 @@
             "data": {
                 "label": ".LNK File \"office doc\"",
                 "sequence": "0",
-                "techniqueId": "d3f:FileSystemLink"
+                "d3f_class": "d3f:FileSystemLink"
             },
             "origin": [
                 0.5,
@@ -82,7 +82,7 @@
             "data": {
                 "label": "Email",
                 "sequence": "0",
-                "techniqueId": "d3f:Email"
+                "d3f_class": "d3f:Email"
             },
             "origin": [
                 0.5,
@@ -105,7 +105,7 @@
             "data": {
                 "label": "Email Attachment",
                 "sequence": "0",
-                "techniqueId": "d3f:EmailAttachment"
+                "d3f_class": "d3f:EmailAttachment"
             },
             "origin": [
                 0.5,
@@ -128,7 +128,7 @@
             "data": {
                 "label": "Execution: Malicious File",
                 "sequence": "1",
-                "techniqueId": "d3f:T1204.002"
+                "d3f_class": "d3f:T1204.002"
             },
             "origin": [
                 0.5,
@@ -151,7 +151,7 @@
             "data": {
                 "label": "Inbound Internet Mail Traffic",
                 "sequence": "0",
-                "techniqueId": "d3f:InboundInternetMailTraffic"
+                "d3f_class": "d3f:InboundInternetMailTraffic"
             },
             "origin": [
                 0.5,
@@ -176,7 +176,7 @@
             "data": {
                 "label": "Powershell script as arg",
                 "sequence": "0",
-                "techniqueId": "d3f:missing"
+                "d3f_class": "d3f:missing"
             },
             "origin": [
                 0.5,
@@ -199,7 +199,7 @@
             "data": {
                 "label": "powershell.exe",
                 "sequence": "0",
-                "techniqueId": "d3f:ExecutableBinary"
+                "d3f_class": "d3f:ExecutableBinary"
             },
             "origin": [
                 0.5,
@@ -222,7 +222,7 @@
             "data": {
                 "label": "DOCX Document File",
                 "sequence": "0",
-                "techniqueId": "d3f:DocumentFile"
+                "d3f_class": "d3f:DocumentFile"
             },
             "origin": [
                 0.5,
@@ -245,7 +245,7 @@
             "data": {
                 "label": "DLL .NET Loader ",
                 "sequence": "0",
-                "techniqueId": "d3f:SharedLibraryFile"
+                "d3f_class": "d3f:SharedLibraryFile"
             },
             "origin": [
                 0.5,
@@ -268,7 +268,7 @@
             "data": {
                 "label": "Steno PNG File",
                 "sequence": "0",
-                "techniqueId": "d3f:DigitalInformationBearer"
+                "d3f_class": "d3f:DigitalInformationBearer"
             },
             "origin": [
                 0.5,
@@ -291,7 +291,7 @@
             "data": {
                 "label": "Outbound Internet Web Traffic",
                 "sequence": "0",
-                "techniqueId": "d3f:OutboundInternetWebTraffic"
+                "d3f_class": "d3f:OutboundInternetWebTraffic"
             },
             "origin": [
                 0.5,
@@ -316,7 +316,7 @@
             "data": {
                 "label": "Zip File",
                 "sequence": "0",
-                "techniqueId": "d3f:ArchiveFile"
+                "d3f_class": "d3f:ArchiveFile"
             },
             "origin": [
                 0.5,
@@ -339,7 +339,7 @@
             "data": {
                 "label": "Masquerade File Type",
                 "sequence": "2",
-                "techniqueId": "d3f:T1036.008"
+                "d3f_class": "d3f:T1036.008"
             },
             "origin": [
                 0.5,
@@ -364,7 +364,7 @@
             "data": {
                 "label": "File Deletion",
                 "sequence": "3",
-                "techniqueId": "d3f:T1107"
+                "d3f_class": "d3f:T1107"
             },
             "origin": [
                 0.5,
@@ -389,7 +389,7 @@
             "data": {
                 "label": "PowerShell",
                 "sequence": "4",
-                "techniqueId": "d3f:T1086"
+                "d3f_class": "d3f:T1086"
             },
             "origin": [
                 0.5,
@@ -412,7 +412,7 @@
             "data": {
                 "label": "Native API",
                 "sequence": "5",
-                "techniqueId": "d3f:T1106"
+                "d3f_class": "d3f:T1106"
             },
             "origin": [
                 0.5,
@@ -437,7 +437,7 @@
             "data": {
                 "label": "Asynchronous Procedure Call",
                 "sequence": "6",
-                "techniqueId": "d3f:T1055.004"
+                "d3f_class": "d3f:T1055.004"
             },
             "origin": [
                 0.5,
@@ -462,7 +462,7 @@
             "data": {
                 "label": "Web Protocols",
                 "sequence": "7",
-                "techniqueId": "d3f:T1071.001"
+                "d3f_class": "d3f:T1071.001"
             },
             "origin": [
                 0.5,
@@ -485,7 +485,7 @@
             "data": {
                 "label": "powershell.exe",
                 "sequence": "0",
-                "techniqueId": "d3f:ExecutableBinary"
+                "d3f_class": "d3f:ExecutableBinary"
             },
             "origin": [
                 0.5,
@@ -508,7 +508,7 @@
             "data": {
                 "label": "Powershell script as arg",
                 "sequence": "0",
-                "techniqueId": "d3f:missing"
+                "d3f_class": "d3f:missing"
             },
             "origin": [
                 0.5,
@@ -531,7 +531,7 @@
             "data": {
                 "label": "Go RAT",
                 "sequence": "0",
-                "techniqueId": "d3f:ExecutableBinary"
+                "d3f_class": "d3f:ExecutableBinary"
             },
             "origin": [
                 0.5,
@@ -554,7 +554,7 @@
             "data": {
                 "label": "Yara Rule",
                 "sequence": "0",
-                "techniqueId": "d3f:FileContentRules"
+                "d3f_class": "d3f:FileContentRules"
             },
             "origin": [
                 0.5,
@@ -577,7 +577,7 @@
             "data": {
                 "label": "Network Traffic Analysis",
                 "sequence": "0",
-                "techniqueId": "d3f:NetworkTrafficAnalysis"
+                "d3f_class": "d3f:NetworkTrafficAnalysis"
             },
             "origin": [
                 0.5,
@@ -599,7 +599,7 @@
             "data": {
                 "label": "Executable Allowlisting",
                 "sequence": "0",
-                "techniqueId": "d3f:ExecutableAllowlisting"
+                "d3f_class": "d3f:ExecutableAllowlisting"
             },
             "origin": [
                 0.5,
@@ -622,7 +622,7 @@
             "data": {
                 "label": "Disable powershell",
                 "sequence": "0",
-                "techniqueId": "d3f:PlatformHardening"
+                "d3f_class": "d3f:PlatformHardening"
             },
             "origin": [
                 0.5,
@@ -645,7 +645,7 @@
             "data": {
                 "label": "General Antivirus file scanning (all files)",
                 "sequence": "0",
-                "techniqueId": "d3f:FileContentAnalysis"
+                "d3f_class": "d3f:FileContentAnalysis"
             },
             "origin": [
                 0.5,
@@ -670,7 +670,7 @@
             "data": {
                 "label": "Outbound Internet Web Traffic",
                 "sequence": "0",
-                "techniqueId": "d3f:OutboundInternetWebTraffic"
+                "d3f_class": "d3f:OutboundInternetWebTraffic"
             },
             "origin": [
                 0.5,
@@ -695,7 +695,7 @@
             "data": {
                 "label": "Create Process",
                 "sequence": "0",
-                "techniqueId": "d3f:CreateProcess"
+                "d3f_class": "d3f:CreateProcess"
             },
             "origin": [
                 0.5,
@@ -716,9 +716,9 @@
                 "y": -127.65302706013556
             },
             "data": {
-                "label": "EmailAttachmentPolicy",
+                "label": "Email Attachment Policy",
                 "sequence": "0",
-                "techniqueId": "EmailAttachmentPolicy"
+                "d3f_class": ":EmailAttachmentPolicy"
             },
             "origin": [
                 0.5,
@@ -743,10 +743,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.6071601385874087",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.42705486882231847",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.6071601385874087artBottomSource-0.42705486882231847artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.6071601385874087source-0.42705486882231847target",
             "selected": false
         },
         {
@@ -758,10 +758,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.4413793232667994",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.6071601385874087",
-            "targetHandle": "vulnerabilityLeftTarget",
-            "id": "xy-edge__0.4413793232667994attackRightSource-0.6071601385874087vulnerabilityLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.4413793232667994source-0.6071601385874087target",
             "selected": false
         },
         {
@@ -773,10 +773,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.581653696636286",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.4413793232667994",
-            "targetHandle": "attackTopTarget",
-            "id": "xy-edge__0.581653696636286artBottomSource-0.4413793232667994attackTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.581653696636286source-0.4413793232667994target",
             "selected": false
         },
         {
@@ -788,10 +788,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.4798872031112791",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.13256944195839404",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.4798872031112791attackRightSource-0.13256944195839404attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.4798872031112791source-0.13256944195839404target",
             "selected": false
         },
         {
@@ -803,10 +803,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.4413793232667994",
-            "sourceHandle": "attackBottomSource",
+            "sourceHandle": "source",
             "target": "0.4798872031112791",
-            "targetHandle": "attackTopTarget",
-            "id": "xy-edge__0.4413793232667994attackBottomSource-0.4798872031112791attackTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.4413793232667994source-0.4798872031112791target",
             "selected": false
         },
         {
@@ -818,10 +818,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.10426293338922998",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.6071601385874087",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.10426293338922998artBottomSource-0.6071601385874087artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.10426293338922998source-0.6071601385874087target",
             "selected": false
         },
         {
@@ -833,10 +833,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.13256944195839404",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.7792835143423777",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.13256944195839404artBottomSource-0.7792835143423777artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.13256944195839404source-0.7792835143423777target",
             "selected": false
         },
         {
@@ -848,10 +848,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.7792835143423777",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.25835674899524097",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.7792835143423777artBottomSource-0.25835674899524097artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.7792835143423777source-0.25835674899524097target",
             "selected": false
         },
         {
@@ -863,10 +863,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.25835674899524097",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.04249325034853346",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.25835674899524097artRightSource-0.04249325034853346attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.25835674899524097source-0.04249325034853346target",
             "selected": false
         },
         {
@@ -878,10 +878,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.25835674899524097",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.3108464738831057",
-            "targetHandle": "vulnerabilityLeftTarget",
-            "id": "xy-edge__0.25835674899524097artRightSource-0.3108464738831057vulnerabilityLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.25835674899524097source-0.3108464738831057target",
             "selected": false
         },
         {
@@ -893,10 +893,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.3108464738831057",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.552059671457854",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__0.3108464738831057artRightSource-0.552059671457854artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.3108464738831057source-0.552059671457854target",
             "selected": false
         },
         {
@@ -908,10 +908,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.2898381946203664",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.552059671457854",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.2898381946203664artBottomSource-0.552059671457854artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.2898381946203664source-0.552059671457854target",
             "selected": false
         },
         {
@@ -923,10 +923,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.7535326980747047",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.13256944195839404",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.7535326980747047artBottomSource-0.13256944195839404artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.7535326980747047source-0.13256944195839404target",
             "selected": false
         },
         {
@@ -938,10 +938,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.42705486882231847",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.7535326980747047",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.42705486882231847artBottomSource-0.7535326980747047artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.42705486882231847source-0.7535326980747047target",
             "selected": false
         },
         {
@@ -953,10 +953,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.3294135325329819",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.13256944195839404",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.3294135325329819attackRightSource-0.13256944195839404attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.3294135325329819source-0.13256944195839404target",
             "selected": false
         },
         {
@@ -968,10 +968,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.9674498279207843",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.13256944195839404",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.9674498279207843attackRightSource-0.13256944195839404attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.9674498279207843source-0.13256944195839404target",
             "selected": false
         },
         {
@@ -983,10 +983,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.3108464738831057",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.21872006297325297",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.3108464738831057artBottomSource-0.21872006297325297artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.3108464738831057source-0.21872006297325297target",
             "selected": false
         },
         {
@@ -998,10 +998,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.21872006297325297",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.03979030054819055",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.21872006297325297artBottomSource-0.03979030054819055artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.21872006297325297source-0.03979030054819055target",
             "selected": false
         },
         {
@@ -1013,10 +1013,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.03979030054819055",
-            "sourceHandle": "artBottomSource",
+            "sourceHandle": "source",
             "target": "0.9366371466114469",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.03979030054819055artBottomSource-0.9366371466114469artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.03979030054819055source-0.9366371466114469target",
             "selected": false
         },
         {
@@ -1028,10 +1028,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.6553811899665475",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "0.9366371466114469",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__0.6553811899665475defenseLeftSource-0.9366371466114469defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.6553811899665475source-0.9366371466114469target",
             "selected": false
         },
         {
@@ -1043,10 +1043,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.5848797624184087",
-            "sourceHandle": "defenseBottomSource",
+            "sourceHandle": "source",
             "target": "0.2898381946203664",
-            "targetHandle": "artTopTarget",
-            "id": "xy-edge__0.5848797624184087defenseBottomSource-0.2898381946203664artTopTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.5848797624184087source-0.2898381946203664target",
             "selected": false
         },
         {
@@ -1058,10 +1058,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.9621202021427397",
-            "sourceHandle": "defenseBottomSource",
+            "sourceHandle": "source",
             "target": "0.3108464738831057",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__0.9621202021427397defenseBottomSource-0.3108464738831057defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.9621202021427397source-0.3108464738831057target",
             "selected": false
         },
         {
@@ -1073,10 +1073,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.30898977256836024",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "0.7792835143423777",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__0.30898977256836024defenseLeftSource-0.7792835143423777defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.30898977256836024source-0.7792835143423777target",
             "selected": false
         },
         {
@@ -1088,10 +1088,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.6835359685533496",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.25835674899524097",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.6835359685533496attackRightSource-0.25835674899524097attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.6835359685533496source-0.25835674899524097target",
             "selected": false
         },
         {
@@ -1103,10 +1103,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.6835359685533496",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.03979030054819055",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.6835359685533496attackRightSource-0.03979030054819055attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.6835359685533496source-0.03979030054819055target",
             "selected": false
         },
         {
@@ -1118,10 +1118,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.34778388263272275",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.3108464738831057",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.34778388263272275attackRightSource-0.3108464738831057attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.34778388263272275source-0.3108464738831057target",
             "selected": false
         },
         {
@@ -1133,10 +1133,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.9366371466114469",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.2898381946203664-copy0.13536047675435314",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__0.9366371466114469artRightSource-0.2898381946203664-copy0.13536047675435314artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.9366371466114469source-0.2898381946203664-copy0.13536047675435314target",
             "selected": false
         },
         {
@@ -1148,10 +1148,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.921380612603658",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.3108464738831057",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.921380612603658attackRightSource-0.3108464738831057attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.921380612603658source-0.3108464738831057target",
             "selected": false
         },
         {
@@ -1163,10 +1163,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.3108464738831057",
-            "sourceHandle": "artRightSource",
+            "sourceHandle": "source",
             "target": "0.8419052487124239",
-            "targetHandle": "artLeftTarget",
-            "id": "xy-edge__0.3108464738831057artRightSource-0.8419052487124239artLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.3108464738831057source-0.8419052487124239target",
             "selected": false
         },
         {
@@ -1178,10 +1178,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.4032013612667408",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "0.42705486882231847",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__0.4032013612667408defenseLeftSource-0.42705486882231847defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.4032013612667408source-0.42705486882231847target",
             "selected": false
         },
         {
@@ -1193,10 +1193,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.4032013612667408",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "0.7535326980747047",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__0.4032013612667408defenseLeftSource-0.7535326980747047defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.4032013612667408source-0.7535326980747047target",
             "selected": false
         },
         {
@@ -1208,10 +1208,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.4032013612667408",
-            "sourceHandle": "defenseLeftSource",
+            "sourceHandle": "source",
             "target": "0.13256944195839404",
-            "targetHandle": "defenseRightTarget",
-            "id": "xy-edge__0.4032013612667408defenseLeftSource-0.13256944195839404defenseRightTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.4032013612667408source-0.13256944195839404target",
             "selected": false
         },
         {
@@ -1223,10 +1223,10 @@
                 "type": "arrowclosed"
             },
             "source": "0.7984230369581443",
-            "sourceHandle": "attackRightSource",
+            "sourceHandle": "source",
             "target": "0.9366371466114469",
-            "targetHandle": "attackLeftTarget",
-            "id": "xy-edge__0.7984230369581443attackRightSource-0.9366371466114469attackLeftTarget",
+            "targetHandle": "target",
+            "id": "xy-edge__0.7984230369581443source-0.9366371466114469target",
             "selected": false
         }
     ]
