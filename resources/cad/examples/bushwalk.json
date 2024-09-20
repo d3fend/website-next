@@ -10,15 +10,16 @@
             "data": {
                 "label": "OS API Write File",
                 "sequence": "0",
-                "d3f_class": "d3f:OSAPIWriteFile"
+                "d3f_class": "d3f:OSAPIWriteFile",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 63
+                "width": 176,
+                "height": 99
             },
             "selected": false,
             "dragging": false
@@ -33,15 +34,16 @@
             "data": {
                 "label": "Write File Syscall",
                 "sequence": "0",
-                "d3f_class": "d3f:WriteFile"
+                "d3f_class": "d3f:WriteFile",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 63
+                "width": 176,
+                "height": 99
             },
             "selected": false,
             "dragging": false
@@ -56,15 +58,16 @@
             "data": {
                 "label": "BUSHWALK Malware",
                 "sequence": "0",
-                "d3f_class": "d3f:ExecutableBinary"
+                "d3f_class": "d3f:ExecutableBinary",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 63
+                "width": 176,
+                "height": 99
             },
             "selected": false,
             "dragging": false
@@ -73,20 +76,21 @@
             "id": "0.12193705870339033",
             "type": "eventNode",
             "position": {
-                "x": 518.4714092592948,
-                "y": -594.8611042634378
+                "x": 516.2326158537086,
+                "y": -665.3830965394021
             },
             "data": {
                 "label": "Create File Event",
-                "sequence": "0"
+                "sequence": "0",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 186,
-                "height": 65
+                "width": 176,
+                "height": 112
             },
             "selected": false,
             "dragging": false
@@ -99,16 +103,18 @@
                 "y": -286.6295900554935
             },
             "data": {
-                "label": "T1554",
-                "sequence": "0"
+                "label": "Compromise Host Software Binary",
+                "sequence": "0",
+                "user_properties": [],
+                "d3f_class": "d3f:T1554"
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 186,
-                "height": 52
+                "width": 176,
+                "height": 123
             },
             "selected": false,
             "dragging": false
@@ -117,20 +123,21 @@
             "id": "0.026668828190339",
             "type": "agentSelectorNode",
             "position": {
-                "x": -489.37052953290413,
-                "y": -570.6508482305883
+                "x": -453.5498350435255,
+                "y": -585.2030053668983
             },
             "data": {
                 "label": "attacker",
-                "sequence": "0"
+                "sequence": "0",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 186,
-                "height": 50
+                "width": 176,
+                "height": 76
             },
             "selected": false,
             "dragging": false
@@ -145,15 +152,16 @@
             "data": {
                 "label": "OS Executable File",
                 "sequence": "0",
-                "d3f_class": "d3f:OperatingSystemExecutableFile"
+                "d3f_class": "d3f:OperatingSystemExecutableFile",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 74
+                "width": 187,
+                "height": 99
             },
             "selected": false,
             "dragging": false
@@ -168,15 +176,16 @@
             "data": {
                 "label": "Executable Allowlisting",
                 "sequence": "0",
-                "d3f_class": "d3f:ExecutableAllowlisting"
+                "d3f_class": "d3f:ExecutableAllowlisting",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 65
+                "width": 176,
+                "height": 110
             },
             "selected": false,
             "dragging": false
@@ -191,15 +200,16 @@
             "data": {
                 "label": "System Call Analysis",
                 "sequence": "2",
-                "d3f_class": "d3f:SystemCallAnalysis"
+                "d3f_class": "d3f:SystemCallAnalysis",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 65
+                "width": 176,
+                "height": 110
             },
             "selected": false,
             "dragging": false
@@ -214,15 +224,16 @@
             "data": {
                 "label": "File Analysis",
                 "sequence": "3",
-                "d3f_class": "d3f:FileAnalysis"
+                "d3f_class": "d3f:FileAnalysis",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 65
+                "width": 176,
+                "height": 110
             },
             "selected": false,
             "dragging": false
@@ -237,15 +248,16 @@
             "data": {
                 "label": "File Integrity Monitoring",
                 "sequence": "4",
-                "d3f_class": "d3f:FileIntegrityMonitoring"
+                "d3f_class": "d3f:FileIntegrityMonitoring",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 65
+                "width": 176,
+                "height": 110
             },
             "selected": false,
             "dragging": false
@@ -260,15 +272,16 @@
             "data": {
                 "label": "System Call Filtering",
                 "sequence": "1",
-                "d3f_class": "d3f:SystemCallFiltering"
+                "d3f_class": "d3f:SystemCallFiltering",
+                "user_properties": []
             },
             "origin": [
                 0.5,
                 0
             ],
             "measured": {
-                "width": 182,
-                "height": 65
+                "width": 176,
+                "height": 110
             },
             "selected": false,
             "dragging": false
