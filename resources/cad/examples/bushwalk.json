@@ -1,4 +1,22 @@
 {
+    "meta": {
+        "title": "",
+        "authors": [
+            ""
+        ],
+        "orgs": [
+            ""
+        ],
+        "description": "",
+        "article": "",
+        "d3fend_version": "",
+        "cad_data_version": "",
+        "published_date": "",
+        "references": [
+            ""
+        ],
+        "settings": {}
+    },
     "nodes": [
         {
             "id": "0.28745244020819394",
@@ -285,6 +303,34 @@
             },
             "selected": false,
             "dragging": false
+        },
+        {
+            "id": "0.25308669626129376",
+            "type": "noteNode",
+            "position": {
+                "x": 982.6795799010847,
+                "y": -289.56055137678044
+            },
+            "data": {
+                "label": "Note on File Integrity Monitoring ",
+                "sequence": "0",
+                "user_properties": [
+                    [
+                        "rdfs:comment",
+                        "This countermeasure only applies because\nthis is an operating system file, highlighting\nthe need for deep taxonomies.\n\nIf this were a user file, you could not apply\nthis technique due to false positives.\n"
+                    ]
+                ]
+            },
+            "origin": [
+                0.5,
+                0
+            ],
+            "measured": {
+                "width": 240,
+                "height": 137
+            },
+            "selected": false,
+            "dragging": false
         }
     ],
     "edges": [
@@ -488,6 +534,22 @@
             "target": "0.6395594717773364",
             "targetHandle": "target",
             "id": "xy-edge__0.9734359398205206source-0.6395594717773364target",
+            "selected": false
+        },
+        {
+            "type": "editableEdge",
+            "data": {
+                "label": ":has-note",
+                "d3f_property": ":has-note"
+            },
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
+            "source": "0.3615545411229423",
+            "sourceHandle": "source",
+            "target": "0.25308669626129376",
+            "targetHandle": "target",
+            "id": "xy-edge__0.3615545411229423source-0.25308669626129376target",
             "selected": false
         }
     ]
