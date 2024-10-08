@@ -10,7 +10,7 @@
         "description": "Modeling the sandcat report to demonstrate CAD capabilities.",
         "article": "",
         "d3fend_version": "0.16.0",
-        "cad_data_version": "1",
+        "cad_schema_version": 1,
         "published_date": "2024-10-04T00:30:00.000Z",
         "references": [
             "https://cyble.com/blog/operation-shadowcat-targeting-indian-political-observers-via-a-stealthy-rat/"
