@@ -91,29 +91,6 @@
             "dragging": false
         },
         {
-            "id": "0.12193705870339033",
-            "type": "eventNode",
-            "position": {
-                "x": 516.2326158537086,
-                "y": -665.3830965394021
-            },
-            "data": {
-                "label": "Create File Event",
-                "sequence": "0",
-                "user_properties": []
-            },
-            "origin": [
-                0.5,
-                0
-            ],
-            "measured": {
-                "width": 176,
-                "height": 112
-            },
-            "selected": false,
-            "dragging": false
-        },
-        {
             "id": "0.09193859368571666",
             "type": "attackSelectorNode",
             "position": {
@@ -488,36 +465,6 @@
             "target": "0.7438529946288932",
             "targetHandle": "target",
             "id": "xy-edge__0.3615545411229423source-0.7438529946288932target",
-            "selected": false
-        },
-        {
-            "type": "editableEdge",
-            "data": {
-                "label": "event-initator"
-            },
-            "markerEnd": {
-                "type": "arrowclosed"
-            },
-            "source": "0.12193705870339033",
-            "sourceHandle": "source",
-            "target": "0.9734359398205206",
-            "targetHandle": "target",
-            "id": "xy-edge__0.12193705870339033source-0.9734359398205206target",
-            "selected": false
-        },
-        {
-            "type": "editableEdge",
-            "data": {
-                "label": "event-target"
-            },
-            "markerEnd": {
-                "type": "arrowclosed"
-            },
-            "source": "0.12193705870339033",
-            "sourceHandle": "source",
-            "target": "0.7438529946288932",
-            "targetHandle": "target",
-            "id": "xy-edge__0.12193705870339033source-0.7438529946288932target",
             "selected": false
         },
         {

@@ -171,6 +171,7 @@ D3-SHN,Deceive,,Standalone Honeynet,,An environment created for the purpose of a
 D3-IHN,Deceive,,Integrated Honeynet,,The practice of setting decoys in a production environment to entice interaction from attackers.
 D3-CHN,Deceive,,Connected Honeynet,,"A decoy service, system, or environment, that is connected to the enterprise network, and simulates or emulates certain functionality to the network, without exposing full access to a production system."
 D3-PE,Evict,Process Eviction,,,
+D3-ST,Evict,,Session Termination,,Forcefully end all active sessions associated with compromised accounts or devices.
 D3-PT,Evict,,Process Termination,,Terminating a running application process on a computer system.
 D3-PS,Evict,,Process Suspension,,Suspending a running process on a computer system.
 D3-HS,Evict,,Host Shutdown,,Initiating a host's shutdown sequence to terminate all running processes.
