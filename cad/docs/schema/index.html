@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#333333" />
+
+  <link rel="stylesheet" href="/global-d3fend.css" />
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+
+  <!-- This contains the contents of the <svelte:head> component, if
+    the current page has one -->
+  
+		<link href="../../../_app/immutable/assets/67.DRjedr4F.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.CqUV5Pn3.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/entry.Dp1fnJZo.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/scheduler.g8N5vUpP.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.y26hC_rI.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/control.CYgJF_JY.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.CGDdY3Tm.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.DzcqoJ5-.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.Cxz3vv0u.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.CWVoz3GA.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/67.J7SfSHg0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/schema.CHP6_69y.js">
+</head>
+
+<body>
+  <!-- The application will be rendered inside this element,
+      because `src/client.js` references it -->
+  <div>  <section class="content"><h1 data-svelte-h="svelte-fvy29">D3FEND CAD Data Schema</h1> <pre class="svelte-p44jnj">{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "D3FEND CAD Graph Schema",
+  "type": "object",
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "orgs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "article": {
+          "type": "string"
+        },
+        "d3fend_version": {
+          "type": "string"
+        },
+        "cad_schema_version": {
+          "type": "number"
+        },
+        "published_date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "settings": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      },
+      "required": [
+        "title",
+        "authors",
+        "description",
+        "article",
+        "d3fend_version",
+        "cad_schema_version",
+        "published_date"
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "position": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "sequence": {
+                "type": "string"
+              },
+              "d3f_class": {
+                "type": "string"
+              },
+              "user_properties": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "default": ""
+                  }
+                }
+              }
+            },
+            "required": [
+              "label",
+              "sequence",
+              "user_properties"
+            ]
+          },
+          "origin": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "measured": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "width",
+              "height"
+            ]
+          },
+          "selected": {
+            "type": "boolean"
+          },
+          "dragging": {
+            "type": "boolean"
+          },
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "position",
+          "data",
+          "origin",
+          "measured",
+          "selected",
+          "dragging"
+        ]
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "d3f_property": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ]
+          },
+          "markerEnd": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceHandle": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "targetHandle": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "selected": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "source",
+          "sourceHandle",
+          "target",
+          "targetHandle",
+          "id",
+          "selected"
+        ]
+      }
+    }
+  },
+  "required": [
+    "meta",
+    "nodes",
+    "edges"
+  ]
+}</pre> </section> 
+			
+			<script>
+				{
+					__sveltekit_10ntc6q = {
+						base: new URL("../../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../../../_app/immutable/entry/start.CqUV5Pn3.js"),
+						import("../../../_app/immutable/entry/app.CGDdY3Tm.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 12, 67],
+							data,
+							form: null,
+							error: null
+						});
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('../../../service-worker.js');
+						});
+					}
+				}
+			</script>
+		</div>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script id="atarget" async>
+  </script>
+  <script>
+    if (window.location.hostname != "localhost" &&
+      window.location.hostname != "127.0.0.1") {
+
+      // target = document.getElementById("atarget");
+      // target.onload = function(){};
+      // target.src="https://www.googletagmanager.com/gtag/js?id=UA-200005342-1"
+
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag() {
+      //   dataLayer.push(arguments);
+      // }
+      // gtag("js", new Date());
+      // gtag("config", "UA-200005342-1");
+
+      let gaID = "UA-200005342-1";
+      window.dataLayer = window.dataLayer || []
+      function gtag() { dataLayer.push(arguments) }
+      gtag('js', new Date())
+      gtag('config', gaID)
+
+      const script = document.createElement('script')
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${gaID}`
+      document.body.appendChild(script)
+
+    } else {
+      console.info("Analytics disabled in development mode")
+    }
+  </script>
+</body>
+
+</html>

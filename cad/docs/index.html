@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#333333" />
+
+  <link rel="stylesheet" href="/global-d3fend.css" />
+  <link rel="icon" type="image/png" href="/favicon.ico" />
+
+  <!-- This contains the contents of the <svelte:head> component, if
+    the current page has one -->
+  
+		<link href="../../_app/immutable/assets/CADHeader.C3p9lCXq.css" rel="stylesheet">
+		<link rel="modulepreload" href="../../_app/immutable/entry/start.CqUV5Pn3.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/entry.Dp1fnJZo.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/scheduler.g8N5vUpP.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.y26hC_rI.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/control.CYgJF_JY.js">
+		<link rel="modulepreload" href="../../_app/immutable/entry/app.CGDdY3Tm.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/index.DzcqoJ5-.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/0.Cxz3vv0u.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/12.CWVoz3GA.js">
+		<link rel="modulepreload" href="../../_app/immutable/nodes/65.Cbm_NZT5.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/marked.esm.D23x4JZT.js">
+		<link rel="modulepreload" href="../../_app/immutable/chunks/CADHeader.D_YPxf2a.js">
+</head>
+
+<body>
+  <!-- The application will be rendered inside this element,
+      because `src/client.js` references it -->
+  <div>  <div><br> <div class="title-egg" data-svelte-h="svelte-108u7u3"><div style="display: flex; just-content: space-between; align-items: center;"><div style="text-align: center; flex-grow: 1;"><div class="fancy-font font-xxxlarge" title="Cyber Attack-Defense Utility for Capturing Engagements and Understandable Scenarios"><a href="/" class=" svelte-r831mc">D3FEND </a><span class="snakes">☤</span> <a href="/cad" class="svelte-r831mc"><span class="CAD"><span style="color:#e62929;">C</span><span class="A" style="color:white;text-border:1px;">A</span><span style="color:blue;">D</span></span></a></div></div></div> </div> <section class="content"><!-- HTML_TAG_START --><h1>D3FEND CAD User Documentation</h1>
+<p>Put the D3FEND ontology into action with the D3FEND CAD Tool!</p>
+<p>CAD is designed to be versatile and to support many modeling and diagramming use cases. When you create a CAD diagram you are implementing the D3FEND ontology, also known as &quot;instances&quot; of the ontology&#39;s classes. </p>
+<h2>1. Quickstart</h2>
+<ul>
+<li>See the examples by clicking <button>Example Graphs</button> button.<ul>
+<li>The shadowcat.json example models a CTI Report.</li>
+<li>The bushwalk.json examples models malware &quot;procedures&quot;.</li>
+<li>The disk-formatting-contribution.json  represents an advanced use case of CAD.</li>
+</ul>
+</li>
+<li>Drag and drop nodes onto the canvas to create your scenario, connect them by hovering over a node.</li>
+<li>Click the <d3fend class> on any node to select the correct class, <em>you can type to filter</em>.</li>
+<li>Right click the various node types to apply ontology inference results to your diagram.</li>
+<li>Connect nodes together, and select D3FEND object properties with autocomplete.</li>
+<li>Extend the D3FEND ontology yourself! See the disk-formatting-contribution.json example.</li>
+</ul>
+<h2>2. Saving and loading</h2>
+<h3>2.1 Loading</h3>
+<p>You can load a D3FEND CAD JSON file from your file system by clicking <button>Load</button>.</p>
+<h3>2.2 D3FEND CAD JSON</h3>
+<p>This is the native format the D3FEND CAD GUI uses. You can save a D3FEND CAD JSON file to your computer by clicking <button>Save</button>.</p>
+<h3>2.4 D3FEND CAD TTL</h3>
+<p>This format creates a file with D3FEND instances stored in Terse Triple Language (TTL). You can save a D3FEND CAD JSON file to your computer by clicking <button>Save As</button>.</p>
+<h3>2.5 Creating a D3FEND Extension (TTL)</h3>
+<p>This format creates a D3FEND Extension file you can submit to the D3FEND team to add new concepts and relationships to the D3FEND ontology. An extension is serialized in the Terse Triple Language (TTL). You can save a D3FEND Extension file to your computer by clicking <button>Save As</button>.</p>
+<h2>3. Sharing and Embedding</h2>
+<h2>4. <a href="design">Design</a></h2>
+<h3>4.1 <a href="schema">CAD Schema</a></h3>
+<h3>4.2 <a href="/cad/docs/design#CAD-Graph-to-Semantic-Graph-Conversions">CAD Graph to Semantic Graph Conversions</a></h3>
+<h2>5 Terminology</h2>
+<p>The D3FEND ontology is represented in the OWL2-DL specification. Ontologies in OWL2-DL can be serialized into json-ld, rdf/xml, and ttl formats. The D3FEND team prefers the ttl format.</p>
+<p>The ontology comprises classes, object properties, data properties, and annotation properties. Additionally it includes OWL axioms.</p>
+<!-- HTML_TAG_END --></section></div> 
+			
+			<script>
+				{
+					__sveltekit_10ntc6q = {
+						base: new URL("../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.CqUV5Pn3.js"),
+						import("../../_app/immutable/entry/app.CGDdY3Tm.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 12, 65],
+							data,
+							form: null,
+							error: null
+						});
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('../../service-worker.js');
+						});
+					}
+				}
+			</script>
+		</div>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script id="atarget" async>
+  </script>
+  <script>
+    if (window.location.hostname != "localhost" &&
+      window.location.hostname != "127.0.0.1") {
+
+      // target = document.getElementById("atarget");
+      // target.onload = function(){};
+      // target.src="https://www.googletagmanager.com/gtag/js?id=UA-200005342-1"
+
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag() {
+      //   dataLayer.push(arguments);
+      // }
+      // gtag("js", new Date());
+      // gtag("config", "UA-200005342-1");
+
+      let gaID = "UA-200005342-1";
+      window.dataLayer = window.dataLayer || []
+      function gtag() { dataLayer.push(arguments) }
+      gtag('js', new Date())
+      gtag('config', gaID)
+
+      const script = document.createElement('script')
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${gaID}`
+      document.body.appendChild(script)
+
+    } else {
+      console.info("Analytics disabled in development mode")
+    }
+  </script>
+</body>
+
+</html>
