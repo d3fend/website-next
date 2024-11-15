@@ -2,7 +2,7 @@
     "nodes": [
         {
             "id": "0",
-            "type": "attackSelectorNode",
+            "type": "attack-node",
             "data": {
                 "label": "CAPEC-94: Adversary in the Middle",
                 "sequence": "t=1"
@@ -28,7 +28,7 @@
         },
         {
             "id": "1",
-            "type": "attackSelectorNode",
+            "type": "attack-node",
             "data": {
                 "label": "T1557: Adversary in the Middle",
                 "sequence": "t=1"
@@ -54,7 +54,7 @@
         },
         {
             "id": "2",
-            "type": "artifactSelectorNode",
+            "type": "artifact-node",
             "data": {
                 "label": "Process"
             },
@@ -79,7 +79,7 @@
         },
         {
             "id": "3",
-            "type": "countermeasureSelectorNode",
+            "type": "countermeasure-node",
             "data": {
                 "label": "Process Verification",
                 "sequence": "t=2"
@@ -105,7 +105,7 @@
         },
         {
             "id": "4",
-            "type": "attackSelectorNode",
+            "type": "attack-node",
             "data": {
                 "label": "T1036.004: Masquerade Task or Service",
                 "sequence": "t=2"
@@ -131,7 +131,7 @@
         },
         {
             "id": "6",
-            "type": "vulnerabilitySelectorNode",
+            "type": "vulnerability-node",
             "data": {
                 "label": "CVE-2017-12151",
                 "weakness": "CWE-300"
@@ -157,7 +157,7 @@
         },
         {
             "id": "7",
-            "type": "conditionDefinitionNode",
+            "type": "condition-node",
             "data": {
                 "label": "Execution Privilege"
             },
@@ -182,7 +182,7 @@
         },
         {
             "id": "8",
-            "type": "conditionDefinitionNode",
+            "type": "condition-node",
             "data": {
                 "label": "Compromised Data Channel"
             },
@@ -207,7 +207,7 @@
         },
         {
             "id": "10",
-            "type": "countermeasureSelectorNode",
+            "type": "countermeasure-node",
             "data": {
                 "label": "Mandatory Access Control",
                 "sequence": "t=0"
@@ -233,7 +233,7 @@
         },
         {
             "id": "11",
-            "type": "countermeasureSelectorNode",
+            "type": "countermeasure-node",
             "data": {
                 "label": "Multifactor Authentication",
                 "sequence": "t=1"
@@ -259,7 +259,7 @@
         },
         {
             "id": "12",
-            "type": "artifactSelectorNode",
+            "type": "artifact-node",
             "data": {
                 "label": "Client Computer"
             },
@@ -284,7 +284,7 @@
         },
         {
             "id": "13",
-            "type": "artifactSelectorNode",
+            "type": "artifact-node",
             "data": {
                 "label": "User Account"
             },
@@ -309,7 +309,7 @@
         },
         {
             "id": "14",
-            "type": "artifactSelectorNode",
+            "type": "artifact-node",
             "data": {
                 "label": "User"
             },
@@ -334,7 +334,7 @@
         },
         {
             "id": "0.7309189404807505",
-            "type": "conditionDefinitionNode",
+            "type": "condition-node",
             "position": {
                 "x": 240.51688134854533,
                 "y": 425.79500911412663
@@ -364,7 +364,7 @@
         },
         {
             "id": "0.35571274771954375",
-            "type": "artifactSelectorNode",
+            "type": "artifact-node",
             "position": {
                 "x": 560.3027680850063,
                 "y": 217.80942554694406
@@ -394,7 +394,7 @@
         },
         {
             "id": "0.6928368144754263",
-            "type": "artifactSelectorNode",
+            "type": "artifact-node",
             "position": {
                 "x": 1170.0533910701267,
                 "y": 32.41595026694182
@@ -424,7 +424,7 @@
         },
         {
             "id": "0.7360906427212425",
-            "type": "attackSelectorNode",
+            "type": "attack-node",
             "position": {
                 "x": -277.2480266500094,
                 "y": 769.9962690205233
@@ -454,7 +454,7 @@
         },
         {
             "id": "0.12367384897689515",
-            "type": "attackSelectorNode",
+            "type": "attack-node",
             "position": {
                 "x": -265.5182464757735,
                 "y": -56.7986546384505
@@ -484,7 +484,7 @@
         },
         {
             "id": "0.288310609625414",
-            "type": "artifactSelectorNode",
+            "type": "artifact-node",
             "position": {
                 "x": 391.81924097060374,
                 "y": 341.1025339902503
@@ -514,7 +514,7 @@
         },
         {
             "id": "0.7275091815275674",
-            "type": "artifactSelectorNode",
+            "type": "artifact-node",
             "position": {
                 "x": 549.757422832643,
                 "y": 492.8162891186022
@@ -544,7 +544,7 @@
         },
         {
             "id": "0.24867744701603156",
-            "type": "countermeasureSelectorNode",
+            "type": "countermeasure-node",
             "position": {
                 "x": 1508.5029810963347,
                 "y": 17.346706589093287
@@ -574,7 +574,7 @@
         },
         {
             "id": "0.7559552076065711",
-            "type": "agentSelectorNode",
+            "type": "agent-node",
             "position": {
                 "x": -609.5954364660714,
                 "y": -146.36141953359015
