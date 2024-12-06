@@ -78,6 +78,7 @@
     <owl:AnnotationProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-annotation">
         <definition>x d3fend-annotation y: The d3fend object x has the annotation y.</definition>
         <rdfs:label>d3fend-annotation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
     </owl:AnnotationProperty>
     
 
@@ -307,14 +308,6 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-annotation"/>
-    </rdf:Description>
     
 
 
@@ -2661,6 +2654,7 @@
 
     <owl:DatatypeProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-catalog-data-property">
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-data-property"/>
+        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property"/>
         <rdfs:label>d3fend-catalog-data-property</rdfs:label>
         <skos:altLabel xml:lang="en">d3fend-vendor-registry-data-property</skos:altLabel>
     </owl:DatatypeProperty>
@@ -2699,7 +2693,6 @@
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property -->
 
     <owl:DatatypeProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property">
-        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-catalog-data-property"/>
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-data-property"/>
         <rdfs:label>d3fend-external-control-data-property</rdfs:label>
     </owl:DatatypeProperty>
