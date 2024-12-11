@@ -123,6 +123,7 @@
 /dao/artifact/d3f:DeveloperApplication
 /dao/artifact/d3f:DialUpModem
 /dao/artifact/d3f:DigitalArtifact
+/dao/artifact/d3f:DigitalEventRecord
 /dao/artifact/d3f:DigitalFingerprint
 /dao/artifact/d3f:DigitalInformation
 /dao/artifact/d3f:DigitalInformationBearer
@@ -747,6 +748,7 @@
 /offensive-technique/attack/T1027.011
 /offensive-technique/attack/T1027.012
 /offensive-technique/attack/T1027.013
+/offensive-technique/attack/T1027.014
 /offensive-technique/attack/T1028
 /offensive-technique/attack/T1029
 /offensive-technique/attack/T1030
@@ -765,6 +767,7 @@
 /offensive-technique/attack/T1036.007
 /offensive-technique/attack/T1036.008
 /offensive-technique/attack/T1036.009
+/offensive-technique/attack/T1036.010
 /offensive-technique/attack/T1037
 /offensive-technique/attack/T1037.001
 /offensive-technique/attack/T1037.002
@@ -830,6 +833,7 @@
 /offensive-technique/attack/T1059.008
 /offensive-technique/attack/T1059.009
 /offensive-technique/attack/T1059.010
+/offensive-technique/attack/T1059.011
 /offensive-technique/attack/T1060
 /offensive-technique/attack/T1061
 /offensive-technique/attack/T1062
@@ -853,11 +857,13 @@
 /offensive-technique/attack/T1070.007
 /offensive-technique/attack/T1070.008
 /offensive-technique/attack/T1070.009
+/offensive-technique/attack/T1070.010
 /offensive-technique/attack/T1071
 /offensive-technique/attack/T1071.001
 /offensive-technique/attack/T1071.002
 /offensive-technique/attack/T1071.003
 /offensive-technique/attack/T1071.004
+/offensive-technique/attack/T1071.005
 /offensive-technique/attack/T1072
 /offensive-technique/attack/T1073
 /offensive-technique/attack/T1074
@@ -905,6 +911,7 @@
 /offensive-technique/attack/T1098.004
 /offensive-technique/attack/T1098.005
 /offensive-technique/attack/T1098.006
+/offensive-technique/attack/T1098.007
 /offensive-technique/attack/T1099
 /offensive-technique/attack/T1100
 /offensive-technique/attack/T1101
@@ -945,6 +952,7 @@
 /offensive-technique/attack/T1126
 /offensive-technique/attack/T1127
 /offensive-technique/attack/T1127.001
+/offensive-technique/attack/T1127.002
 /offensive-technique/attack/T1128
 /offensive-technique/attack/T1129
 /offensive-technique/attack/T1130
@@ -1058,6 +1066,8 @@
 /offensive-technique/attack/T1213.001
 /offensive-technique/attack/T1213.002
 /offensive-technique/attack/T1213.003
+/offensive-technique/attack/T1213.004
+/offensive-technique/attack/T1213.005
 /offensive-technique/attack/T1214
 /offensive-technique/attack/T1215
 /offensive-technique/attack/T1216
@@ -1088,12 +1098,14 @@
 /offensive-technique/attack/T1223
 /offensive-technique/attack/T1480
 /offensive-technique/attack/T1480.001
+/offensive-technique/attack/T1480.002
 /offensive-technique/attack/T1482
 /offensive-technique/attack/T1483
 /offensive-technique/attack/T1484
 /offensive-technique/attack/T1484.001
 /offensive-technique/attack/T1484.002
 /offensive-technique/attack/T1485
+/offensive-technique/attack/T1485.001
 /offensive-technique/attack/T1486
 /offensive-technique/attack/T1487
 /offensive-technique/attack/T1488
@@ -1107,6 +1119,10 @@
 /offensive-technique/attack/T1494
 /offensive-technique/attack/T1495
 /offensive-technique/attack/T1496
+/offensive-technique/attack/T1496.001
+/offensive-technique/attack/T1496.002
+/offensive-technique/attack/T1496.003
+/offensive-technique/attack/T1496.004
 /offensive-technique/attack/T1497
 /offensive-technique/attack/T1497.001
 /offensive-technique/attack/T1497.002
@@ -1178,6 +1194,7 @@
 /offensive-technique/attack/T1546.014
 /offensive-technique/attack/T1546.015
 /offensive-technique/attack/T1546.016
+/offensive-technique/attack/T1546.017
 /offensive-technique/attack/T1547
 /offensive-technique/attack/T1547.001
 /offensive-technique/attack/T1547.002
@@ -1244,11 +1261,13 @@
 /offensive-technique/attack/T1557.001
 /offensive-technique/attack/T1557.002
 /offensive-technique/attack/T1557.003
+/offensive-technique/attack/T1557.004
 /offensive-technique/attack/T1558
 /offensive-technique/attack/T1558.001
 /offensive-technique/attack/T1558.002
 /offensive-technique/attack/T1558.003
 /offensive-technique/attack/T1558.004
+/offensive-technique/attack/T1558.005
 /offensive-technique/attack/T1559
 /offensive-technique/attack/T1559.001
 /offensive-technique/attack/T1559.002
@@ -1464,12 +1483,14 @@
 /offensive-technique/attack/T1657
 /offensive-technique/attack/T1659
 /offensive-technique/attack/T1665
+/offensive-technique/attack/T1666
 /technique/d3f:AccessModeling
 /technique/d3f:AccountLocking
 /technique/d3f:ActiveCertificateAnalysis
 /technique/d3f:ActiveLogicalLinkMapping
 /technique/d3f:ActivePhysicalLinkMapping
 /technique/d3f:AdministrativeNetworkActivityAnalysis
+/technique/d3f:Application-basedProcessIsolation
 /technique/d3f:ApplicationConfigurationHardening
 /technique/d3f:ApplicationHardening
 /technique/d3f:AssetInventory
