@@ -9,6 +9,7 @@
 /dao/artifact/d3f:AdministrativeNetworkTraffic
 /dao/artifact/d3f:Alias
 /dao/artifact/d3f:AllocateMemory
+/dao/artifact/d3f:AnonymousPipe
 /dao/artifact/d3f:Application
 /dao/artifact/d3f:ApplicationConfiguration
 /dao/artifact/d3f:ApplicationConfigurationDatabase
@@ -24,15 +25,14 @@
 /dao/artifact/d3f:ApplicationShim
 /dao/artifact/d3f:ArchiveFile
 /dao/artifact/d3f:ArtifactServer
+/dao/artifact/d3f:AssetInventoryAgent
 /dao/artifact/d3f:AsymmetricKey
 /dao/artifact/d3f:AudioInputDevice
 /dao/artifact/d3f:AuthenticateUser
-/dao/artifact/d3f:Authentication
 /dao/artifact/d3f:AuthenticationFunction
 /dao/artifact/d3f:AuthenticationLog
 /dao/artifact/d3f:AuthenticationServer
 /dao/artifact/d3f:AuthenticationService
-/dao/artifact/d3f:Authorization
 /dao/artifact/d3f:AuthorizationLog
 /dao/artifact/d3f:AuthorizationService
 /dao/artifact/d3f:BarcodeScannerInputDevice
@@ -60,8 +60,6 @@
 /dao/artifact/d3f:Clipboard
 /dao/artifact/d3f:CloudConfiguration
 /dao/artifact/d3f:CloudInstanceMetadata
-/dao/artifact/d3f:CloudServiceAuthentication
-/dao/artifact/d3f:CloudServiceAuthorization
 /dao/artifact/d3f:CloudServiceSensor
 /dao/artifact/d3f:CloudStorage
 /dao/artifact/d3f:CloudUserAccount
@@ -77,7 +75,9 @@
 /dao/artifact/d3f:CompilerConfigurationFile
 /dao/artifact/d3f:ComputerNetworkNode
 /dao/artifact/d3f:ComputerPlatform
+/dao/artifact/d3f:ComputingImage
 /dao/artifact/d3f:ComputingServer
+/dao/artifact/d3f:ComputingSnapshot
 /dao/artifact/d3f:ConfigurationDatabase
 /dao/artifact/d3f:ConfigurationDatabaseRecord
 /dao/artifact/d3f:ConfigurationFile
@@ -122,6 +122,7 @@
 /dao/artifact/d3f:DesktopComputer
 /dao/artifact/d3f:DeveloperApplication
 /dao/artifact/d3f:DialUpModem
+/dao/artifact/d3f:DifferentialVolumeSnapshot
 /dao/artifact/d3f:DigitalArtifact
 /dao/artifact/d3f:DigitalEventRecord
 /dao/artifact/d3f:DigitalFingerprint
@@ -130,6 +131,7 @@
 /dao/artifact/d3f:DigitalSystem
 /dao/artifact/d3f:Directory
 /dao/artifact/d3f:DirectoryService
+/dao/artifact/d3f:DiskImage
 /dao/artifact/d3f:DisplayAdapter
 /dao/artifact/d3f:DisplayDeviceDriver
 /dao/artifact/d3f:DisplayServer
@@ -174,6 +176,7 @@
 /dao/artifact/d3f:FlashMemory
 /dao/artifact/d3f:ForwardProxyServer
 /dao/artifact/d3f:FreeMemory
+/dao/artifact/d3f:FullVolumeSnapshot
 /dao/artifact/d3f:GetOpenSockets
 /dao/artifact/d3f:GetOpenWindows
 /dao/artifact/d3f:GetRunningProcesses
@@ -223,6 +226,7 @@
 /dao/artifact/d3f:InternetFileTransferTraffic
 /dao/artifact/d3f:InternetNetwork
 /dao/artifact/d3f:InternetNetworkTraffic
+/dao/artifact/d3f:InternetPersona
 /dao/artifact/d3f:InterprocessCommunication
 /dao/artifact/d3f:IntranetAdministrativeNetworkTraffic
 /dao/artifact/d3f:IntranetDNSLookup
@@ -343,6 +347,7 @@
 /dao/artifact/d3f:NTFSJunctionPoint
 /dao/artifact/d3f:NTFSLink
 /dao/artifact/d3f:NTFSSymbolicLink
+/dao/artifact/d3f:NamedPipe
 /dao/artifact/d3f:Network
 /dao/artifact/d3f:NetworkCardFirmware
 /dao/artifact/d3f:NetworkDirectoryResource
@@ -358,6 +363,7 @@
 /dao/artifact/d3f:NetworkProtocolAnalyzer
 /dao/artifact/d3f:NetworkResource
 /dao/artifact/d3f:NetworkResourceAccess
+/dao/artifact/d3f:NetworkScanner
 /dao/artifact/d3f:NetworkSensor
 /dao/artifact/d3f:NetworkService
 /dao/artifact/d3f:NetworkSession
@@ -412,6 +418,7 @@
 /dao/artifact/d3f:OperatingSystemProcess
 /dao/artifact/d3f:OperatingSystemSharedLibraryFile
 /dao/artifact/d3f:OperationsCenterComputer
+/dao/artifact/d3f:OpticalDiscImage
 /dao/artifact/d3f:OpticalModem
 /dao/artifact/d3f:OrchestrationController
 /dao/artifact/d3f:OrchestrationServer
@@ -486,11 +493,13 @@
 /dao/artifact/d3f:RemoteAuthorizationService
 /dao/artifact/d3f:RemoteCommand
 /dao/artifact/d3f:RemoteDatabaseQuery
+/dao/artifact/d3f:RemoteLoginSession
 /dao/artifact/d3f:RemoteProcedureCall
 /dao/artifact/d3f:RemoteResource
 /dao/artifact/d3f:RemoteSession
 /dao/artifact/d3f:RemoteTerminalSession
 /dao/artifact/d3f:RemovableMediaDevice
+/dao/artifact/d3f:Repository
 /dao/artifact/d3f:Resource
 /dao/artifact/d3f:ResourceAccess
 /dao/artifact/d3f:ResourceFork
@@ -534,6 +543,7 @@
 /dao/artifact/d3f:SoftwarePackage
 /dao/artifact/d3f:SoftwarePackagingTool
 /dao/artifact/d3f:SoftwarePatch
+/dao/artifact/d3f:SoftwareRepository
 /dao/artifact/d3f:SourceCodeAnalyzerTool
 /dao/artifact/d3f:StackComponent
 /dao/artifact/d3f:StackFrame
@@ -542,6 +552,8 @@
 /dao/artifact/d3f:StartupDirectory
 /dao/artifact/d3f:StaticAnalysisTool
 /dao/artifact/d3f:Storage
+/dao/artifact/d3f:StorageImage
+/dao/artifact/d3f:StorageSnapshot
 /dao/artifact/d3f:StoredProcedure
 /dao/artifact/d3f:StringFormatFunction
 /dao/artifact/d3f:Subroutine
@@ -566,6 +578,7 @@
 /dao/artifact/d3f:SystemServiceSoftware
 /dao/artifact/d3f:SystemSoftware
 /dao/artifact/d3f:SystemStartupDirectory
+/dao/artifact/d3f:SystemStateImage
 /dao/artifact/d3f:SystemTimeApplication
 /dao/artifact/d3f:SystemUtilizationRecord
 /dao/artifact/d3f:TFTPNetworkTraffic
@@ -600,10 +613,12 @@
 /dao/artifact/d3f:UserInterface
 /dao/artifact/d3f:UserLogonInitResource
 /dao/artifact/d3f:UserProcess
+/dao/artifact/d3f:UserProfile
 /dao/artifact/d3f:UserStartupDirectory
 /dao/artifact/d3f:UserStartupScriptFile
 /dao/artifact/d3f:UserToUserMessage
 /dao/artifact/d3f:UtilitySoftware
+/dao/artifact/d3f:VMImage
 /dao/artifact/d3f:VPNServer
 /dao/artifact/d3f:VersionControlTool
 /dao/artifact/d3f:VideoInputDevice
@@ -612,10 +627,10 @@
 /dao/artifact/d3f:VirtualizationSoftware
 /dao/artifact/d3f:Volume
 /dao/artifact/d3f:VolumeBootRecord
+/dao/artifact/d3f:VolumeSnapshot
 /dao/artifact/d3f:WebAPIResource
 /dao/artifact/d3f:WebApplicationFirewall
 /dao/artifact/d3f:WebApplicationServer
-/dao/artifact/d3f:WebAuthentication
 /dao/artifact/d3f:WebFileResource
 /dao/artifact/d3f:WebNetworkTraffic
 /dao/artifact/d3f:WebResource
@@ -1585,6 +1600,7 @@
 /technique/d3f:InboundTrafficFiltering
 /technique/d3f:IndirectBranchCallAnalysis
 /technique/d3f:InputDeviceAnalysis
+/technique/d3f:IntegerRangeValidation
 /technique/d3f:IntegratedHoneynet
 /technique/d3f:JobFunctionAccessPatternAnalysis
 /technique/d3f:Kernel-basedProcessIsolation
@@ -1592,6 +1608,7 @@
 /technique/d3f:LocalFilePermissions
 /technique/d3f:LogicalLinkMapping
 /technique/d3f:MandatoryAccessControl
+/technique/d3f:MemoryBlockStartValidation
 /technique/d3f:MemoryBoundaryTracking
 /technique/d3f:MessageAnalysis
 /technique/d3f:MessageAuthentication
@@ -1607,6 +1624,7 @@
 /technique/d3f:NetworkTrafficPolicyMapping
 /technique/d3f:NetworkTrafficSignatureAnalysis
 /technique/d3f:NetworkVulnerabilityAssessment
+/technique/d3f:NullPointerChecking
 /technique/d3f:ObjectEviction
 /technique/d3f:One-timePassword
 /technique/d3f:OperatingSystemMonitoring
@@ -1623,6 +1641,7 @@
 /technique/d3f:PlatformHardening
 /technique/d3f:PlatformMonitoring
 /technique/d3f:PointerAuthentication
+/technique/d3f:PointerValidation
 /technique/d3f:ProcessAnalysis
 /technique/d3f:ProcessCodeSegmentVerification
 /technique/d3f:ProcessEviction
@@ -1635,6 +1654,7 @@
 /technique/d3f:ProtocolMetadataAnomalyDetection
 /technique/d3f:RFShielding
 /technique/d3f:RPCTrafficAnalysis
+/technique/d3f:ReferenceNullification
 /technique/d3f:RegistryKeyDeletion
 /technique/d3f:ReissueCredential
 /technique/d3f:RelayPatternAnalysis
@@ -1663,6 +1683,7 @@
 /technique/d3f:ShadowStackComparisons
 /technique/d3f:SoftwareInventory
 /technique/d3f:SoftwareUpdate
+/technique/d3f:SourceCodeHardening
 /technique/d3f:StackFrameCanaryValidation
 /technique/d3f:StandaloneHoneynet
 /technique/d3f:StrongPasswordPolicy
@@ -1678,6 +1699,7 @@
 /technique/d3f:SystemVulnerabilityAssessment
 /technique/d3f:TPMBootIntegrity
 /technique/d3f:TransferAgentAuthentication
+/technique/d3f:TrustedLibrary
 /technique/d3f:URLAnalysis
 /technique/d3f:URLReputationAnalysis
 /technique/d3f:UnlockAccount
@@ -1686,4 +1708,6 @@
 /technique/d3f:UserDataTransferAnalysis
 /technique/d3f:UserGeolocationLogonPatternAnalysis
 /technique/d3f:UserSessionInitConfigAnalysis
+/technique/d3f:VariableInitialization
+/technique/d3f:VariableTypeValidation
 /technique/d3f:WebSessionActivityAnalysis
