@@ -5,6 +5,7 @@
 /dao/artifact/d3f:AccessProcess
 /dao/artifact/d3f:AccessToken
 /dao/artifact/d3f:ActivityDependency
+/dao/artifact/d3f:Actuator
 /dao/artifact/d3f:AddressSpace
 /dao/artifact/d3f:AdministrativeNetworkTraffic
 /dao/artifact/d3f:Alias
@@ -202,6 +203,7 @@
 /dao/artifact/d3f:HostGroup
 /dao/artifact/d3f:Hostname
 /dao/artifact/d3f:HumanInputDeviceFirmware
+/dao/artifact/d3f:IOModule
 /dao/artifact/d3f:IPAddress
 /dao/artifact/d3f:IPCNetworkTraffic
 /dao/artifact/d3f:IPPhone
@@ -403,6 +405,12 @@
 /dao/artifact/d3f:OSAPIUnloadModule
 /dao/artifact/d3f:OSAPIWriteFile
 /dao/artifact/d3f:OSAPIWriteMemory
+/dao/artifact/d3f:OTActuator
+/dao/artifact/d3f:OTController
+/dao/artifact/d3f:OTEmbeddedComputer
+/dao/artifact/d3f:OTIOModule
+/dao/artifact/d3f:OTPowerSupply
+/dao/artifact/d3f:OTSensor
 /dao/artifact/d3f:ObjectFile
 /dao/artifact/d3f:OfficeApplication
 /dao/artifact/d3f:OfficeApplicationFile
@@ -456,6 +464,7 @@
 /dao/artifact/d3f:Pointer
 /dao/artifact/d3f:PointerDereferencingFunction
 /dao/artifact/d3f:PowerShellProfileScript
+/dao/artifact/d3f:PowerSupply
 /dao/artifact/d3f:PrimaryStorage
 /dao/artifact/d3f:PrintServer
 /dao/artifact/d3f:PrivateKey
@@ -601,6 +610,7 @@
 /dao/artifact/d3f:UnitTestExecutionTool
 /dao/artifact/d3f:UnixHardLink
 /dao/artifact/d3f:UnixLink
+/dao/artifact/d3f:UnloadModule
 /dao/artifact/d3f:User
 /dao/artifact/d3f:UserAccount
 /dao/artifact/d3f:UserAction
@@ -1530,6 +1540,7 @@
 /technique/d3f:CredentialHardening
 /technique/d3f:CredentialRevocation
 /technique/d3f:CredentialRotation
+/technique/d3f:CredentialScrubbing
 /technique/d3f:CredentialTransmissionScoping
 /technique/d3f:DNSAllowlisting
 /technique/d3f:DNSCacheEviction

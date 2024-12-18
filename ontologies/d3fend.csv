@@ -26,6 +26,16 @@ D3-SYSVA,Model,,System Vulnerability Assessment,,"System vulnerability assessmen
 D3-SYSDM,Model,,System Dependency Mapping,,System dependency mapping identifies and models the dependencies of system components on each other to carry out their function.
 D3-SVCDM,Model,,Service Dependency Mapping,,Service dependency mapping determines the services on which each given service relies.
 D3-DEM,Model,,Data Exchange Mapping,,"Data exchange mapping identifies and models the organization's intended design for the flows of the data types, formats, and volumes between systems at the application layer."
+D3-SCH,Harden,Source Code Hardening,,,
+D3-VTV,Harden,,Variable Type Validation,,Ensuring that a variable has the correct type.
+D3-VI,Harden,,Variable Initialization,,Setting variables to a known value before use.
+D3-TL,Harden,,Trusted Library,,"A trusted library is a collection of pre-verified and secure code modules or components that are used within software applications to perform specific functions. These libraries are considered reliable and have been vetted for security vulnerabilities, ensuring they do not introduce risks into the application."
+D3-RN,Harden,,Reference Nullification,,"Invalidating all pointers that reference a specific memory block, ensuring that the block cannot be accessed or modified after deallocation."
+D3-PV,Harden,,Pointer Validation,,Ensuring that a pointer variable has the required properties for use.
+D3-NPC,Harden,,,Null Pointer Checking,Checking if a pointer is NULL.
+D3-MBSV,Harden,,,Memory Block Start Validation,Ensuring that a pointer accurately references the beginning of a designated memory block.
+D3-IRV,Harden,,Integer Range Validation,,Ensuring that an integer is within a valid range.
+D3-CS,Harden,,Credential Scrubbing,,The systematic removal of hard-coded credentials from source code to prevent accidental exposure and unauthorized access.
 D3-MH,Harden,Message Hardening,,,
 D3-TAAN,Harden,,Transfer Agent Authentication,,Validating that server components of a messaging infrastructure are authorized to send a particular message.
 D3-MENCR,Harden,,Message Encryption,,Encrypting a message body using a cryptographic key.
@@ -145,6 +155,7 @@ D3-IOPR,Isolate,,IO Port Restriction,,Limiting access to computer input/output (
 D3-HBPI,Isolate,,Hardware-based Process Isolation,,Preventing one process from writing to the memory space of another process through hardware based address manager implementations.
 D3-EDL,Isolate,,Executable Denylisting,,Blocking the execution of files on a host in accordance with defined application policy rules.
 D3-EAL,Isolate,,Executable Allowlisting,,Using a digital signature to authenticate a file before opening.
+D3-ABPI,Isolate,,Application-based Process Isolation,,Application code which prevents its own subroutines from accessing intra-process / internal memory space.
 D3-NI,Isolate,Network Isolation,,,
 D3-NTF,Isolate,,Network Traffic Filtering,,Restricting network traffic originating from any location.
 D3-OTF,Isolate,,,Outbound Traffic Filtering,Restricting network traffic originating from a private host or enclave destined towards untrusted networks.
