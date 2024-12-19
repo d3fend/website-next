@@ -127,6 +127,7 @@
 /dao/artifact/d3f:DigitalArtifact
 /dao/artifact/d3f:DigitalEventRecord
 /dao/artifact/d3f:DigitalFingerprint
+/dao/artifact/d3f:DigitalIdentity
 /dao/artifact/d3f:DigitalInformation
 /dao/artifact/d3f:DigitalInformationBearer
 /dao/artifact/d3f:DigitalSystem
@@ -319,6 +320,7 @@
 /dao/artifact/d3f:LogicalLink
 /dao/artifact/d3f:LoginSession
 /dao/artifact/d3f:LogonUser
+/dao/artifact/d3f:MACAddress
 /dao/artifact/d3f:MacOSKeychain
 /dao/artifact/d3f:MailNetworkTraffic
 /dao/artifact/d3f:MailServer
@@ -358,6 +360,7 @@
 /dao/artifact/d3f:NetworkFlow
 /dao/artifact/d3f:NetworkFlowSensor
 /dao/artifact/d3f:NetworkInitScriptFileResource
+/dao/artifact/d3f:NetworkInterfaceCard
 /dao/artifact/d3f:NetworkLink
 /dao/artifact/d3f:NetworkNode
 /dao/artifact/d3f:NetworkPackets
@@ -533,6 +536,7 @@
 /dao/artifact/d3f:ServiceDependency
 /dao/artifact/d3f:Session
 /dao/artifact/d3f:SessionCookie
+/dao/artifact/d3f:SessionToken
 /dao/artifact/d3f:SetRegisters
 /dao/artifact/d3f:SetSystemConfigValue
 /dao/artifact/d3f:SetThreadContext
@@ -639,9 +643,11 @@
 /dao/artifact/d3f:VolumeBootRecord
 /dao/artifact/d3f:VolumeSnapshot
 /dao/artifact/d3f:WebAPIResource
+/dao/artifact/d3f:WebAccessToken
 /dao/artifact/d3f:WebApplicationFirewall
 /dao/artifact/d3f:WebApplicationServer
 /dao/artifact/d3f:WebFileResource
+/dao/artifact/d3f:WebIdentityToken
 /dao/artifact/d3f:WebNetworkTraffic
 /dao/artifact/d3f:WebResource
 /dao/artifact/d3f:WebResourceAccess
@@ -1509,12 +1515,15 @@
 /offensive-technique/attack/T1659
 /offensive-technique/attack/T1665
 /offensive-technique/attack/T1666
+/technique/d3f:AccessMediation
 /technique/d3f:AccessModeling
+/technique/d3f:AccessPolicyAdministration
 /technique/d3f:AccountLocking
 /technique/d3f:ActiveCertificateAnalysis
 /technique/d3f:ActiveLogicalLinkMapping
 /technique/d3f:ActivePhysicalLinkMapping
 /technique/d3f:AdministrativeNetworkActivityAnalysis
+/technique/d3f:AgentAuthentication
 /technique/d3f:Application-basedProcessIsolation
 /technique/d3f:ApplicationConfigurationHardening
 /technique/d3f:ApplicationHardening
@@ -1530,6 +1539,7 @@
 /technique/d3f:Certificate-basedAuthentication
 /technique/d3f:CertificateAnalysis
 /technique/d3f:CertificatePinning
+/technique/d3f:CertificateRotation
 /technique/d3f:Client-serverPayloadProfiling
 /technique/d3f:ConfigurationInventory
 /technique/d3f:ConnectedHoneynet
@@ -1573,6 +1583,7 @@
 /technique/d3f:EmailRemoval
 /technique/d3f:EmulatedFileAnalysis
 /technique/d3f:EncryptedTunnels
+/technique/d3f:EndpointBasedWebServerAccessMediation
 /technique/d3f:EndpointHealthBeacon
 /technique/d3f:ExceptionHandlerPointerValidation
 /technique/d3f:ExecutableAllowlisting
@@ -1615,10 +1626,11 @@
 /technique/d3f:IntegratedHoneynet
 /technique/d3f:JobFunctionAccessPatternAnalysis
 /technique/d3f:Kernel-basedProcessIsolation
+/technique/d3f:LANAccessMediation
 /technique/d3f:LocalAccountMonitoring
+/technique/d3f:LocalFileAccessMediation
 /technique/d3f:LocalFilePermissions
 /technique/d3f:LogicalLinkMapping
-/technique/d3f:MandatoryAccessControl
 /technique/d3f:MemoryBlockStartValidation
 /technique/d3f:MemoryBoundaryTracking
 /technique/d3f:MessageAnalysis
@@ -1626,9 +1638,11 @@
 /technique/d3f:MessageEncryption
 /technique/d3f:MessageHardening
 /technique/d3f:Multi-factorAuthentication
+/technique/d3f:NetworkAccessMediation
 /technique/d3f:NetworkIsolation
 /technique/d3f:NetworkMapping
 /technique/d3f:NetworkNodeInventory
+/technique/d3f:NetworkResourceAccessMediation
 /technique/d3f:NetworkTrafficAnalysis
 /technique/d3f:NetworkTrafficCommunityDeviation
 /technique/d3f:NetworkTrafficFiltering
@@ -1646,8 +1660,11 @@
 /technique/d3f:OutboundTrafficFiltering
 /technique/d3f:PassiveCertificateAnalysis
 /technique/d3f:PassiveLogicalLinkMapping
+/technique/d3f:PasswordAuthentication
+/technique/d3f:PasswordRotation
 /technique/d3f:PerHostDownload-UploadRatioAnalysis
 /technique/d3f:PeripheralFirmwareVerification
+/technique/d3f:PhysicalAccessMediation
 /technique/d3f:PhysicalLinkMapping
 /technique/d3f:PlatformHardening
 /technique/d3f:PlatformMonitoring
@@ -1663,12 +1680,14 @@
 /technique/d3f:ProcessSuspension
 /technique/d3f:ProcessTermination
 /technique/d3f:ProtocolMetadataAnomalyDetection
+/technique/d3f:ProxyBasedWebServerAccessMediation
 /technique/d3f:RFShielding
 /technique/d3f:RPCTrafficAnalysis
 /technique/d3f:ReferenceNullification
 /technique/d3f:RegistryKeyDeletion
 /technique/d3f:ReissueCredential
 /technique/d3f:RelayPatternAnalysis
+/technique/d3f:RemoteFileAccessMediation
 /technique/d3f:RemoteTerminalSessionDetection
 /technique/d3f:ResourceAccessPatternAnalysis
 /technique/d3f:RestoreAccess
@@ -1682,6 +1701,7 @@
 /technique/d3f:RestoreSoftware
 /technique/d3f:RestoreUserAccountAccess
 /technique/d3f:ReverseResolutionIPDenylisting
+/technique/d3f:RoutingAccessMediation
 /technique/d3f:ScheduledJobAnalysis
 /technique/d3f:ScriptExecutionAnalysis
 /technique/d3f:SegmentAddressOffsetRandomization
@@ -1709,6 +1729,8 @@
 /technique/d3f:SystemMapping
 /technique/d3f:SystemVulnerabilityAssessment
 /technique/d3f:TPMBootIntegrity
+/technique/d3f:Token-basedAuthentication
+/technique/d3f:TokenBinding
 /technique/d3f:TransferAgentAuthentication
 /technique/d3f:TrustedLibrary
 /technique/d3f:URLAnalysis
@@ -1721,4 +1743,5 @@
 /technique/d3f:UserSessionInitConfigAnalysis
 /technique/d3f:VariableInitialization
 /technique/d3f:VariableTypeValidation
+/technique/d3f:WebSessionAccessMediation
 /technique/d3f:WebSessionActivityAnalysis
