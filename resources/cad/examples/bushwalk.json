@@ -533,8 +533,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "uses",
-                "d3f_class": "d3f:uses",
-                "d3f_class_label": "uses"
+                "d3f_property": "d3f:uses"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -550,9 +549,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "participates-in",
-                "d3f_property": "d3f:executes",
-                "d3f_class": "d3f:participates-in",
-                "d3f_class_label": "participates-in"
+                "d3f_property": "d3f:participates-in"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -646,8 +643,7 @@
         {
             "type": "editableEdge",
             "data": {
-                "label": ":has-note",
-                "d3f_property": ":has-note"
+                "label": ":has-note"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -663,8 +659,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "invokes",
-                "d3f_class": "d3f:invokes",
-                "d3f_class_label": "invokes"
+                "d3f_property": "d3f:invokes"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -680,8 +675,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "contains",
-                "d3f_class": "d3f:contains",
-                "d3f_class_label": "contains"
+                "d3f_property": "d3f:contains"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -697,8 +691,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "injects",
-                "d3f_class": "d3f:injects",
-                "d3f_class_label": "injects"
+                "d3f_property": "d3f:injects"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -714,8 +707,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "injects",
-                "d3f_class": "d3f:injects",
-                "d3f_class_label": "injects"
+                "d3f_property": "d3f:injects"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -730,9 +722,7 @@
         {
             "type": "editableEdge",
             "data": {
-                "label": ":has-payload",
-                "d3f_property": ":has-payload",
-                "d3f_class_label": ":has-payload"
+                "label": ":has-payload"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -748,8 +738,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "instructs",
-                "d3f_class": "d3f:instructs",
-                "d3f_class_label": "instructs"
+                "d3f_property": "d3f:instructs"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -765,8 +754,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "contains",
-                "d3f_class": "d3f:contains",
-                "d3f_class_label": "contains"
+                "d3f_property": "d3f:contains"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -782,8 +770,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "instructs",
-                "d3f_class": "d3f:instructs",
-                "d3f_class_label": "instructs"
+                "d3f_property": "d3f:instructs"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -799,8 +786,7 @@
             "type": "editableEdge",
             "data": {
                 "label": "participates-in",
-                "d3f_class": "d3f:participates-in",
-                "d3f_class_label": "participates-in"
+                "d3f_property": "d3f:participates-in"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -815,9 +801,7 @@
         {
             "type": "editableEdge",
             "data": {
-                "label": "rdfs:subClassOf",
-                "d3f_property": "rdfs:subClassOf",
-                "d3f_class_label": "rdfs:subClassOf"
+                "label": "rdfs:subClassOf"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -832,9 +816,7 @@
         {
             "type": "editableEdge",
             "data": {
-                "label": "note",
-                "d3f_property": "note",
-                "d3f_class_label": "note"
+                "label": "note"
             },
             "markerEnd": {
                 "type": "arrowclosed"
@@ -848,7 +830,8 @@
         },
         {
             "data": {
-                "label": "analyzes"
+                "label": "analyzes",
+                "d3f_property": "d3f:analyzes"
             },
             "markerStart": "arrowclosed",
             "source": "0.16777283558886358",
@@ -860,7 +843,8 @@
         },
         {
             "data": {
-                "label": "restricts"
+                "label": "restricts",
+                "d3f_property": "d3f:restricts"
             },
             "markerStart": "arrowclosed",
             "source": "0.27672783406130097",
