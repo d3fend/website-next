@@ -31,8 +31,7 @@
                 "label": "OS API Write File",
                 "sequence": "0",
                 "d3f_class": "d3f:OSAPIWriteFile",
-                "user_properties": [],
-                "d3f_class_label": "OS API Write File"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -56,8 +55,7 @@
                 "label": "Write File Syscall",
                 "sequence": "0",
                 "d3f_class": "d3f:WriteFile",
-                "user_properties": [],
-                "d3f_class_label": "Write File Syscall"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -86,8 +84,7 @@
                         "comment",
                         "perl logic\n"
                     ]
-                ],
-                "d3f_class_label": "Subroutine"
+                ]
             },
             "origin": [
                 0.5,
@@ -111,8 +108,7 @@
                 "label": "Compromise Host Software Binary",
                 "sequence": "1",
                 "user_properties": [],
-                "d3f_class": "d3f:T1554",
-                "d3f_class_label": "Compromise Host Software Binary"
+                "d3f_class": "d3f:T1554"
             },
             "origin": [
                 0.5,
@@ -166,8 +162,7 @@
                 "label": "OS Executable File",
                 "sequence": "0",
                 "d3f_class": "d3f:OperatingSystemExecutableFile",
-                "user_properties": [],
-                "d3f_class_label": "OS Executable File"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -191,8 +186,7 @@
                 "label": "System Call Analysis",
                 "sequence": "3",
                 "d3f_class": "d3f:SystemCallAnalysis",
-                "user_properties": [],
-                "d3f_class_label": "System Call Analysis"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -216,8 +210,7 @@
                 "label": "File Analysis",
                 "sequence": "4",
                 "d3f_class": "d3f:FileAnalysis",
-                "user_properties": [],
-                "d3f_class_label": "File Analysis"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -241,8 +234,7 @@
                 "label": "File Integrity Monitoring",
                 "sequence": "5",
                 "d3f_class": "d3f:FileIntegrityMonitoring",
-                "user_properties": [],
-                "d3f_class_label": "File Integrity Monitoring"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -266,8 +258,7 @@
                 "label": "System Call Filtering",
                 "sequence": "2",
                 "d3f_class": "d3f:SystemCallFiltering",
-                "user_properties": [],
-                "d3f_class_label": "System Call Filtering"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -319,7 +310,6 @@
                 "label": "Web Server Application Process",
                 "sequence": "0",
                 "user_properties": [],
-                "d3f_class_label": ":WebServerApplicationProcess",
                 "d3f_class": ":WebServerApplicationProcess"
             },
             "measured": {
@@ -347,7 +337,6 @@
                         "querymanifest.cgi"
                     ]
                 ],
-                "d3f_class_label": "Executable Script",
                 "d3f_class": "d3f:ExecutableScript"
             },
             "measured": {
@@ -368,7 +357,6 @@
                 "label": "Exploit Public-Facing Application",
                 "sequence": "0",
                 "user_properties": [],
-                "d3f_class_label": "Exploit Public-Facing Application",
                 "d3f_class": "d3f:T1190"
             },
             "measured": {
@@ -391,7 +379,6 @@
                 "label": "Web Server Application",
                 "sequence": "0",
                 "user_properties": [],
-                "d3f_class_label": "Web Server Application",
                 "d3f_class": "d3f:WebServerApplication"
             },
             "measured": {
@@ -414,7 +401,6 @@
                 "label": "Web Application",
                 "sequence": "0",
                 "user_properties": [],
-                "d3f_class_label": ":WebApplication",
                 "d3f_class": ":WebApplication"
             },
             "measured": {
@@ -435,7 +421,6 @@
                 "label": "Service Application",
                 "sequence": "0",
                 "user_properties": [],
-                "d3f_class_label": "Service Application",
                 "d3f_class": "d3f:ServiceApplication"
             },
             "measured": {
@@ -480,8 +465,7 @@
                 "label": "File Integrity Monitoring",
                 "sequence": "1",
                 "d3f_class": "d3f:FileIntegrityMonitoring",
-                "user_properties": [],
-                "d3f_class_label": "File Integrity Monitoring"
+                "user_properties": []
             },
             "measured": {
                 "width": 176,
@@ -501,8 +485,7 @@
                 "label": "Local File Permissions",
                 "sequence": "0",
                 "d3f_class": "d3f:LocalFilePermissions",
-                "user_properties": [],
-                "d3f_class_label": "Local File Permissions"
+                "user_properties": []
             },
             "measured": {
                 "width": 176,

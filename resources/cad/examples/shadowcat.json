@@ -54,8 +54,7 @@
                 "label": "Initial Access: Spearphishing Attachment",
                 "sequence": "0",
                 "d3f_class": "d3f:T1598.002",
-                "user_properties": [],
-                "d3f_class_label": "Initial Access: Spearphishing Attachment"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -81,8 +80,7 @@
                 "label": ".LNK File \"office doc\"",
                 "sequence": "0",
                 "d3f_class": "d3f:FileSystemLink",
-                "user_properties": [],
-                "d3f_class_label": ".LNK File \"office doc\""
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -108,8 +106,7 @@
                 "label": "Email",
                 "sequence": "0",
                 "d3f_class": "d3f:Email",
-                "user_properties": [],
-                "d3f_class_label": "Email"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -135,8 +132,7 @@
                 "label": "Email Attachment",
                 "sequence": "0",
                 "d3f_class": "d3f:EmailAttachment",
-                "user_properties": [],
-                "d3f_class_label": "Email Attachment"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -162,8 +158,7 @@
                 "label": "Execution: Malicious File",
                 "sequence": "1",
                 "d3f_class": "d3f:T1204.002",
-                "user_properties": [],
-                "d3f_class_label": "Execution: Malicious File"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -189,8 +184,7 @@
                 "label": "Inbound Internet Mail Traffic",
                 "sequence": "0",
                 "d3f_class": "d3f:InboundInternetMailTraffic",
-                "user_properties": [],
-                "d3f_class_label": "Inbound Internet Mail Traffic"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -216,8 +210,7 @@
                 "label": "Inline Power Shell Script",
                 "sequence": "0",
                 "d3f_class": ":InlinePowerShellScript",
-                "user_properties": [],
-                "d3f_class_label": "Inline Power Shell Script"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -243,8 +236,7 @@
                 "label": "powershell.exe",
                 "sequence": "0",
                 "d3f_class": "d3f:ExecutableBinary",
-                "user_properties": [],
-                "d3f_class_label": "powershell.exe"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -270,8 +262,7 @@
                 "label": "DOCX Document File",
                 "sequence": "0",
                 "d3f_class": "d3f:DocumentFile",
-                "user_properties": [],
-                "d3f_class_label": "DOCX Document File"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -295,8 +286,7 @@
                 "label": "DLL .NET Loader ",
                 "sequence": "0",
                 "d3f_class": "d3f:SharedLibraryFile",
-                "user_properties": [],
-                "d3f_class_label": "DLL .NET Loader "
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -320,8 +310,7 @@
                 "label": "Steno PNG File",
                 "sequence": "0",
                 "d3f_class": "d3f:DigitalInformationBearer",
-                "user_properties": [],
-                "d3f_class_label": "Steno PNG File"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -345,8 +334,7 @@
                 "label": "Outbound Internet Web Traffic",
                 "sequence": "0",
                 "d3f_class": "d3f:OutboundInternetWebTraffic",
-                "user_properties": [],
-                "d3f_class_label": "Outbound Internet Web Traffic"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -372,8 +360,7 @@
                 "label": "Zip File",
                 "sequence": "0",
                 "d3f_class": "d3f:ArchiveFile",
-                "user_properties": [],
-                "d3f_class_label": "Zip File"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -399,8 +386,7 @@
                 "label": "Masquerade File Type",
                 "sequence": "2",
                 "d3f_class": "d3f:T1036.008",
-                "user_properties": [],
-                "d3f_class_label": "Masquerade File Type"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -426,8 +412,7 @@
                 "label": "File Deletion",
                 "sequence": "3",
                 "d3f_class": "d3f:T1107",
-                "user_properties": [],
-                "d3f_class_label": "File Deletion"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -453,8 +438,7 @@
                 "label": "PowerShell",
                 "sequence": "4",
                 "d3f_class": "d3f:T1086",
-                "user_properties": [],
-                "d3f_class_label": "PowerShell"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -480,8 +464,7 @@
                 "label": "Native API",
                 "sequence": "5",
                 "d3f_class": "d3f:T1106",
-                "user_properties": [],
-                "d3f_class_label": "Native API"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -507,8 +490,7 @@
                 "label": "Asynchronous Procedure Call",
                 "sequence": "7",
                 "d3f_class": "d3f:T1055.004",
-                "user_properties": [],
-                "d3f_class_label": "Asynchronous Procedure Call"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -534,8 +516,7 @@
                 "label": "Web Protocols",
                 "sequence": "8",
                 "d3f_class": "d3f:T1071.001",
-                "user_properties": [],
-                "d3f_class_label": "Web Protocols"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -559,8 +540,7 @@
                 "label": "powershell.exe",
                 "sequence": "0",
                 "d3f_class": "d3f:ExecutableBinary",
-                "user_properties": [],
-                "d3f_class_label": "powershell.exe"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -584,8 +564,7 @@
                 "label": "Inline Power Shell Script",
                 "sequence": "0",
                 "d3f_class": ":InlinePowerShellScript",
-                "user_properties": [],
-                "d3f_class_label": "Inline Power Shell Script"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -611,8 +590,7 @@
                 "label": "Go RAT",
                 "sequence": "0",
                 "d3f_class": "d3f:ExecutableBinary",
-                "user_properties": [],
-                "d3f_class_label": "Go RAT"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -636,8 +614,7 @@
                 "label": "Yara Rule",
                 "sequence": "0",
                 "d3f_class": "d3f:FileContentRules",
-                "user_properties": [],
-                "d3f_class_label": "Yara Rule"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -661,8 +638,7 @@
                 "label": "Network Traffic Analysis",
                 "sequence": "0",
                 "d3f_class": "d3f:NetworkTrafficAnalysis",
-                "user_properties": [],
-                "d3f_class_label": "Network Traffic Analysis"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -686,8 +662,7 @@
                 "label": "Executable Allowlisting",
                 "sequence": "0",
                 "d3f_class": "d3f:ExecutableAllowlisting",
-                "user_properties": [],
-                "d3f_class_label": "Executable Allowlisting"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -711,8 +686,7 @@
                 "label": "Disable PowerShell",
                 "sequence": "0",
                 "d3f_class": "d3f:PlatformHardening",
-                "user_properties": [],
-                "d3f_class_label": "Disable PowerShell"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -741,8 +715,7 @@
                         "comment",
                         "broad recommendation"
                     ]
-                ],
-                "d3f_class_label": "General Antivirus file scanning (all files)"
+                ]
             },
             "origin": [
                 0.5,
@@ -768,8 +741,7 @@
                 "label": "Outbound Internet Web Traffic",
                 "sequence": "0",
                 "d3f_class": "d3f:OutboundInternetWebTraffic",
-                "user_properties": [],
-                "d3f_class_label": "Outbound Internet Web Traffic"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -795,8 +767,7 @@
                 "label": "Email Filtering",
                 "sequence": "0",
                 "d3f_class": "d3f:EmailFiltering",
-                "user_properties": [],
-                "d3f_class_label": "Email Filtering"
+                "user_properties": []
             },
             "origin": [
                 0.5,
@@ -822,8 +793,7 @@
                 "label": "Dynamic Analysis",
                 "sequence": "0",
                 "d3f_class": "d3f:DynamicAnalysis",
-                "user_properties": [],
-                "d3f_class_label": "Dynamic Analysis"
+                "user_properties": []
             },
             "measured": {
                 "width": 224,
@@ -902,8 +872,7 @@
                 "label": "PowerShell",
                 "sequence": "6",
                 "user_properties": [],
-                "d3f_class": "d3f:T1086",
-                "d3f_class_label": "PowerShell"
+                "d3f_class": "d3f:T1086"
             },
             "origin": [
                 0.5,
