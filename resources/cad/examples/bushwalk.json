@@ -816,7 +816,9 @@
                 "label": "analyzes",
                 "d3f_property": "d3f:analyzes"
             },
-            "markerStart": "arrowclosed",
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
             "source": "0.16777283558886358",
             "sourceHandle": "source",
             "target": "0.8386658673435847",
@@ -829,7 +831,9 @@
                 "label": "restricts",
                 "d3f_property": "d3f:restricts"
             },
-            "markerStart": "arrowclosed",
+            "markerEnd": {
+                "type": "arrowclosed"
+            },
             "source": "0.27672783406130097",
             "sourceHandle": "source",
             "target": "0.8386658673435847",
