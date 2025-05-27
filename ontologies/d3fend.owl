@@ -937,7 +937,7 @@
 
     <owl:ObjectProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#erases">
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#associated-with"/>
-        <description>x erases y: A technique x removes recorded data from storage device y creating space for new data.</description>
+        <definition>x erases y: A technique x removes recorded data from storage device y creating space for new data.</definition>
         <rdfs:label>erases</rdfs:label>
     </owl:ObjectProperty>
     
@@ -3274,7 +3274,6 @@
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#AccessMediator -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessMediator">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#D3FENDCore"/>
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalInformationBearer"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -3306,6 +3305,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#maps"/>
                 <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessControlConfiguration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#maps"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalIdentity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -24212,27 +24217,37 @@ Newer system call.</definition>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortService -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortService">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
-        <definition>Command that tells the device to abort a service/program.</definition>
-        <rdfs:label>OT Abort Service</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortServiceEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortServiceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortService"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Abort Service Event</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>OT Abort Command Event</rdfs:label>
     </owl:Class>
     
 
@@ -24245,99 +24260,203 @@ Newer system call.</definition>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTAlarmMessage -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceData"/>
-        <definition>OT command that changes existing data on a remote device.</definition>
-        <rdfs:comment>BACnet/IP: ATOMIC_WRITE_FILE
-BACnet/IP: WRITE_BROADCAST_TABLE
-BACnet/IP: WRITE_GROUP  </rdfs:comment>
-        <rdfs:comment>DNP3: WRITE
-DNP3: SAVE_CONFIG
-DNP3: ASSIGN_CLASS
-DNP3: RECORD_CURRENT_TIME </rdfs:comment>
-        <rdfs:comment>GEMS: SaveConfig</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: WRITE_FILE_RECORD</rdfs:comment>
-        <rdfs:label>OT Change Data</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAlarmMessage">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessage"/>
+        <definition>Report danger, hazards, or serious errors.</definition>
+        <rdfs:comment>BACnet: acknowledgeAlarm
+BACnet: confirmedEventNotification
+BACnet: getAlarmSummary
+BACnet: unconfirmedEventNotification
+BACnet: lifeSafetyOperation
+BACnet: Abort: 1
+BACnet: Abort: 2
+BACnet: Abort: 3
+BACnet: Abort: 4
+BACnet: Abort: 5
+BACnet: Abort: 6
+BACnet: Abort: 7
+BACnet: Abort: 8
+BACnet: Abort: 9
+BACnet: Abort: 10
+BACnet: Abort: 11
+BACnet: Abort: 12 </rdfs:comment>
+        <rdfs:comment>GE-SRTP: RETURN FAULT TABLE
+GE-SRTP: CLEAR FAULT TABLE</rdfs:comment>
+        <rdfs:label>OT Alarm Message</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDataEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTAlarmMessageEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAlarmMessageEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessageEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAlarmMessage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Change Data Event</rdfs:label>
+        <definition>Report danger, hazards, or serious errors.</definition>
+        <rdfs:label>OT Alarm Message Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDeviceProcessData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeControlProgramCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDeviceProcessData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessData"/>
-        <definition>OT command that changes existing process data on a remote device.</definition>
-        <rdfs:comment>BACnet/IP: WRITE_PROPERTY
-BACnet/IP: WRITE_PROPERTY_MULTIPLE
-BACnet/IP: ATOMIC_WRITE_FILE </rdfs:comment>
-        <rdfs:comment>DNP3: INITIALIZE_DATA
-DNP3: ACTIVATE_CONFIG</rdfs:comment>
-        <rdfs:comment>GEMS: LoadConfig
-GEMS: SetConfig</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: WRITE_MULTIPLE_COILS
-Modbus/TCP: MASK_WRITE_REGISTER
-Modbus/TCP: WRITE_MULTIPLE_REGISTERS
-Modbus/TCP: WRITE_SINGLE_COIL
-Modbus/TCP: WRITE_SINGLE_REGISTER
-Modbus/TCP: WRITE_FILE_RECORD </rdfs:comment>
-        <rdfs:label>OT Change Device Process Data</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeControlProgramCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDeviceProcessDataEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeControlProgramCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDeviceProcessDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeControlProgramCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDeviceProcessData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeControlProgramCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Change Device Process Data Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommand -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommand">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
-        <definition>An operational technology event that captures the occurrence of an OT command being issued, executed, or acknowledged, thereby linking a specific command action to its observable impact within a control system.</definition>
-        <rdfs:label>OT Command</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommand"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Command Event</rdfs:label>
+        <definition>Commands a remote device to modify an existing control program.</definition>
+        <rdfs:label>OT Change Control Program Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDataCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDataCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommand"/>
+        <definition>OT command that modifies existing data on a remote device.</definition>
+        <rdfs:comment>BACnet: atomicWriteFile
+BACnet: writeProperty
+BACnet: writePropertyMultiple
+BACnet: write-group </rdfs:comment>
+        <rdfs:comment>CIP: Set Attributes All
+CIP: Set Attribute List
+CIP: Set Attribute Single
+CIP: Set Member</rdfs:comment>
+        <rdfs:comment>GE-SRTP: WRITE SYSTEM MEMORY
+GE-SRTP: WRITE TASK MEMORY </rdfs:comment>
+        <rdfs:comment>Modbus: Write Single Coil
+Modbus: Write Single Register
+Modbus: Write Multiple Coils
+Modbus: Write Multiple Registers
+Modbus: Write File Record
+Modbus: Mask Write Register
+Modbus: Read Write Register</rdfs:comment>
+        <rdfs:label>OT Change Data Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDataCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDataCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeDataCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>OT command that modifies existing data on a remote device.</definition>
+        <rdfs:label>OT Change Data Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommand"/>
+        <definition>Establish a network connection with a device.</definition>
+        <rdfs:comment>BACnet: vtOpen
+BACnet: vtClose </rdfs:comment>
+        <rdfs:comment>ENIP: Register Session
+ENIP: Unregister Session</rdfs:comment>
+        <rdfs:label>OT Connection Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Establish a network connection with a device.</definition>
+        <rdfs:label>OT Connection Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommand"/>
+        <definition>Command and control the managed process.</definition>
+        <rdfs:comment>CIP: Reset
+CIP: Start
+CIP: Stop
+CIP: Create
+CIP: Delete
+CIP: Apply Attributes
+CIP: Restore
+CIP: Save </rdfs:comment>
+        <rdfs:comment>GE-SRTP: PLC SHORT STATUS REQUEST</rdfs:comment>
+        <rdfs:label>OT Control Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Command and control the managed process.</definition>
+        <rdfs:label>OT Control Command Event</rdfs:label>
     </owl:Class>
     
 
@@ -24374,9 +24493,10 @@ Modbus/TCP: WRITE_FILE_RECORD </rdfs:comment>
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlVariable">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTLogicVariable"/>
-        <definition>A control variable is the measurement of the physical condition of the device that influences the Process Variables. For example, if the Set Point of a temperature control system for a residential dwelling is 72 degrees, and the Process Variable is 82 degrees, the Control Variable for the air conditioner should be &apos;on.&apos;</definition>
+        <definition>A control variable is the measurement of the physical condition of the device that influences the Process Variables.</definition>
         <rdfs:isDefinedBy>https://isagca.org/hubfs/2023%20ISA%20Website%20Redesigns/ISAGCA/PDFs/Industrial%20Cybersecurity%20Knowledge%20FINAL.pdf?hsLang=en</rdfs:isDefinedBy>
         <rdfs:label>OT Control Variable</rdfs:label>
+        <skos:example>If the Set Point of a temperature control system for a residential dwelling is 72 degrees, and the Process Variable is 82 degrees, the Control Variable for the air conditioner should be &apos;on.&apos;</skos:example>
     </owl:Class>
     
 
@@ -24419,139 +24539,246 @@ Modbus/TCP: WRITE_FILE_RECORD </rdfs:comment>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateDataCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceData"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateDataCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommand"/>
         <definition>OT command that creates data on a remote device.</definition>
-        <rdfs:comment>BACnet/IP: ADD_LIST_ELEMENT</rdfs:comment>
-        <rdfs:comment>DNP3: FREEZE_AT_TIME
-DNP3: FREEZE_CLEAR
-DNP3: IMMED_FREEZE</rdfs:comment>
-        <rdfs:label>OT Create Data</rdfs:label>
+        <rdfs:comment>BACnet: addListElement
+BACnet: createObject</rdfs:comment>
+        <rdfs:comment>CIP: Insert Member</rdfs:comment>
+        <rdfs:label>OT Create Data Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateDataEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateDataCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateDataCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateDataCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Create Data Event</rdfs:label>
+        <definition>OT command that creates data on a remote device.</definition>
+        <rdfs:label>OT Create Data Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewDeviceProcessData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewControlProgramCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewDeviceProcessData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessData"/>
-        <definition>OT command that creates process data on a remote device.</definition>
-        <rdfs:comment>BACnet/IP: CREATE_OBJECT</rdfs:comment>
-        <rdfs:label>OT Create New Device Process Data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewDeviceProcessDataEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewDeviceProcessDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewControlProgramCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewDeviceProcessData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Create New Device Process Data Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewControlProgramCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceData"/>
-        <definition>OT command that removes existing data on a remote device.</definition>
-        <rdfs:comment>BACnet/IP: REMOVE_LIST_ELEMENT
-BACnet/IP: DELETE_FOREIGN_DEVICE_TABLE_ENTRY </rdfs:comment>
-        <rdfs:comment>DNP3: DELETE_FILE</rdfs:comment>
-        <rdfs:label>OT Delete Data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDataEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewControlProgramCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Delete Data Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDeviceProcessData -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDeviceProcessData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessData"/>
-        <definition>OT command that removes existing process data on a remote device.</definition>
-        <rdfs:comment>BACnet/IP: DELETE_OBJECT</rdfs:comment>
-        <rdfs:label>OT Delete Device Process Data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDeviceProcessDataEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDeviceProcessDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDeviceProcessData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewControlProgramCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Delete Device Process Data Event</rdfs:label>
+        <definition>Commands a remote device to create an control program.</definition>
+        <rdfs:label>OT Create New Control Program Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceAcknowledge -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDebugCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceAcknowledge">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessage"/>
-        <definition>A device&apos;s acknowledgment of a message, not being a response.</definition>
-        <rdfs:comment>BACnet/IP: ACKNOWLEDGE_ALARM
-DNP3: ACK
-DNP3: RESPONSE</rdfs:comment>
-        <rdfs:label>OT Device Acknowledge</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDebugCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessage"/>
+        <definition>Investigate or analyze the current state of the system.</definition>
+        <rdfs:comment>BACnet: getEnrollmentSummary
+BACnet: confirmed-audit-notification
+BACnet: audit-log-query
+BACnet: unconfirmed-audit-notification </rdfs:comment>
+        <rdfs:comment>Modbus: Get Comm. Event Log
+Modbus: Return Query Data
+Modbus: Clear Counters
+Modbus: Get Comm. Event Counters</rdfs:comment>
+        <rdfs:label>OT Debug Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceAcknowledgeEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDebugCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceAcknowledgeEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessageEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDebugCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessageEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceAcknowledge"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDebugCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Device Acknowledge Event</rdfs:label>
+        <definition>Investigate or analyze the current state of the system.</definition>
+        <rdfs:label>OT Debug Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteControlProgramCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteControlProgramCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteControlProgramCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteControlProgramCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteControlProgramCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Commands a remote device to remove an existing control program.</definition>
+        <rdfs:label>OT Delete Control Program Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDataCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDataCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommand"/>
+        <definition>OT command that removes data on a remote device.</definition>
+        <rdfs:comment>BACnet: removeListElement
+BACnet: deleteObject</rdfs:comment>
+        <rdfs:label>OT Delete Data Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDataCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDataCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteDataCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>OT command that removes data on a remote device.</definition>
+        <rdfs:label>OT Delete Data Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessage"/>
+        <definition>Configure or administer managed devices.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: READ PROGRAM MEMORY
+GE-SRTP: WRITE PROGRAM BLOCK MEMORY
+GE-SRTP: CHANGE PLC CPU PRIVILEGE LEVEL
+GE-SRTP: SET CONTROL ID(CPU ID)
+GE-SRTP: SET PLC (RUN VS STOP)
+GE-SRTP: PROGRAM STORE (UPLOAD FROM PLC)
+GE-SRTP: PROGRAM LOAD (DOWNLOAD TO PLC)
+GE-SRTP: TOGGLE FORCE SYSTEM MEMORY</rdfs:comment>
+        <rdfs:label>OT Device Configuration Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessageEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Configure or administer managed devices.</definition>
+        <rdfs:label>OT Device Configuration Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceDescriptionMessage -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceDescriptionMessage">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessage"/>
+        <definition>Describe features, abilities, or performance of system components.</definition>
+        <rdfs:comment>ENIP: List Services
+ENIP: List Interfaces </rdfs:comment>
+        <rdfs:comment>GE-SRTP: RETURN CONTROL PROGRAM NAMES
+GE-SRTP: RETURN CONTROLLER TYPE AND ID INFORMATION</rdfs:comment>
+        <rdfs:label>OT Device Description Message</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceDescriptionMessageEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceDescriptionMessageEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessageEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceDescriptionMessage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Describe features, abilities, or performance of system components.</definition>
+        <rdfs:label>OT Device Description Message Event</rdfs:label>
     </owl:Class>
     
 
@@ -24559,36 +24786,32 @@ DNP3: RESPONSE</rdfs:comment>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceException -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceException">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessage"/>
-        <definition>Response to a message when the incoming message cannot be parsed correctly, or another exception is raised in the message’s execution or request.</definition>
-        <rdfs:comment>BACnet/IP: UNCONFIRMED_EVENT_NOTIFICATION
-BACnet/IP: CONFIRMED_EVENT_NOTIFICATION </rdfs:comment>
-        <rdfs:comment>DNP3: Support for Analog Input Events
-DNP3: Support for Analog Output Events
-DNP3: Support for Binary Input Events
-DNP3: Support for Binary Output Events
-DNP3: Support for Counter Events
-DNP3: Support for Double-Bit Binary Events
-DNP3: Support for Frozen Analog Inputs
-DNP3: Support for Frozen Counter Events
-DNP3: Support for Frozen Counters
-DNP3: Identification of Support for User-Specific Attributes</rdfs:comment>
-        <rdfs:comment>GEMS: ErrorResponse</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: MASK_WRITE_REGISTER_EXCEPTION
-Modbus/TCP: READ_COILS_EXCEPTION
-Modbus/TCP: READ_DISCRETE_INPUTS_EXCEPTION
-Modbus/TCP: READ_EXCEPTION_STATUS_EXCEPTION
-Modbus/TCP: READ_FIFO_QUEUE_EXCEPTION
-Modbus/TCP: READ_FILE_RECORD_EXCEPTION
-Modbus/TCP: READ_HOLDING_REGISTERS_EXCEPTION
-Modbus/TCP: READ_INPUT_REGISTERS_EXCEPTION
-Modbus/TCP: READ_WRITE_MULTIPLE_REGISTERS_EXCEPTION
-Modbus/TCP: WRITE_FILE_RECORD_EXCEPTION
-Modbus/TCP: WRITE_MULTIPLE_COILS_EXCEPTION
-Modbus/TCP: WRITE_MULTIPLE_REGISTERS_EXCEPTION
-Modbus/TCP: WRITE_SINGLE_COIL_EXCEPTION
-Modbus/TCP: WRITE_SINGLE_REGISTER_EXCEPTION </rdfs:comment>
-        <rdfs:label>OT Device Exception</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessage"/>
+        <definition>An unknown or anomalous condition occurred in the system.</definition>
+        <rdfs:comment>BACnet: Reject: 1
+BACnet: Reject: 2
+BACnet: Reject: 3
+BACnet: Reject: 4
+BACnet: Reject: 5
+BACnet: Reject: 6
+BACnet: Reject: 7
+BACnet: Reject: 8
+BACnet: Reject: 9
+BACnet: Reject: 10 </rdfs:comment>
+        <rdfs:comment>Modbus: Read Exception Status
+Modbus: Exception: Illegal Function
+Modbus: Exception: Illegal Data Address
+Modbus: Exception: Illegal Data Value
+Modbus: Exception: Slave Device Failure
+Modbus: Exception: Acknowledge
+Modbus: Exception: Slave Device Busy
+Modbus: Exception: Memory Parity Error
+Modbus: Exception: Gateway Path Unavailable
+Modbus: Exception: Gateway Target Device Failed to Respond</rdfs:comment>
+        <rdfs:label>OT Exception Message</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
@@ -24596,114 +24819,203 @@ Modbus/TCP: WRITE_SINGLE_REGISTER_EXCEPTION </rdfs:comment>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceExceptionEvent -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceExceptionEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessageEvent"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessageEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
                 <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceException"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Device Exception Event</rdfs:label>
+        <definition>An unknown or anomalous condition occurred in the system.</definition>
+        <rdfs:label>OT Exception Message Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceStatus -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceFirmwareCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceStatus">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessage"/>
-        <definition>A subscribed device status update message containing configuration, or I/O data.</definition>
-        <rdfs:comment>BACnet/IP: SUBSCRIBE_COV
-BACnet/IP: SUBSCRIBE_COV_PROPERTY
-BACnet/IP: UNCONFIRMED_COV_NOTIFICATION
-BACnet/IP: UNCONFIRMED_COV_NOTIFICATION_MULTIPLE
-BACnet/IP: CONFIRMED_COV_NOTIFICATION
-BACnet/IP: VT_DATA
-BACnet/IP: CONFIRMED_TEXT_MESSAGE
-BACnet/IP: UNCONFIRMED_TEXT_MESSAGE
-BACnet/IP: CONFIRMED_PRIVATE_TRANSFER
-BACnet/IP: UNCONFIRMED_PRIVATE_TRANSFER
-BACnet/IP: UTC_TIME_SYNCHRONIZATION </rdfs:comment>
-        <rdfs:comment>DNP3: DISABLE_UNSOLICITED
-DNP3: ENABLE_UNSOLICITED
-DNP3: DELAY_MEASURE
-DNP3: Local Timing Accuracy
-DNP3: DNP3 Subset and Conformance
-DNP3: Duration of Time Accuracy
-DNP3: CONFIRM
-DNP3: CONFIRMED_USER_DATA</rdfs:comment>
-        <rdfs:comment>GEMS: PingMessage
-GEMS: AsyncStatus</rdfs:comment>
-        <rdfs:label>OT Device Status</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceFirmwareCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessage"/>
+        <definition>Interact with the software responsible for low-level control of the system.</definition>
+        <rdfs:label>OT Firmware Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceStatusEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceFirmwareCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceStatusEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessageEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceFirmwareCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessageEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceStatus"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceFirmwareCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Device Status Event</rdfs:label>
+        <definition>Interact with the software responsible for low-level control of the system.</definition>
+        <rdfs:label>OT Firmware Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnection -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceIdentificationMessage -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnection">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTManageRemoteConnection"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceIdentificationMessage">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessage"/>
+        <definition>Identify devices on the network.</definition>
+        <rdfs:comment>BACnet: i-Am
+BACnet: i-Have
+BACnet: who-Has
+BACnet: who-Is </rdfs:comment>
+        <rdfs:comment>ENIP: List Identity</rdfs:comment>
+        <rdfs:comment>Modbus: Read Device Identification
+Modbus: Report Slave ID</rdfs:comment>
+        <rdfs:label>OT Device Identification Message</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceIdentificationMessageEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceIdentificationMessageEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessageEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceIdentificationMessage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Identify devices on the network.</definition>
+        <rdfs:label>OT Device Identification Message Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessage -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessage">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
+        <definition>Manage devices and their configurations.</definition>
+        <rdfs:label>OT Device Management Message</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessageEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessageEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Manage devices and their configurations.</definition>
+        <rdfs:label>OT Device Management Message Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessage -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessage">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
+        <definition>Relay error, exception, alarm, or log information.</definition>
+        <rdfs:label>OT Diagnostics Message</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessageEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessageEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Relay error, exception, alarm, or log information.</definition>
+        <rdfs:label>OT Diagnostics Message Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnectionCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnectionCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommand"/>
         <definition>The Disconnect Request message is sent to the message receiver to indicate that the transmitter is terminating its TCP socket.</definition>
-        <rdfs:comment>BACnet/IP: VT_CLOSE
-BACnet/IP: DEVICE_COMMUNICATION_CONTROL </rdfs:comment>
-        <rdfs:comment>GEMS: Disconnect</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: RESET_COMM_LINK</rdfs:comment>
-        <rdfs:label>OT Disconnect Remote Connection</rdfs:label>
+        <rdfs:label>OT Disconnect Remote Connection Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnectionEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnectionCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnectionEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnectionCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnection"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDisconnectRemoteConnectionCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Disconnect Remote Connection Event</rdfs:label>
+        <definition>The Disconnect Request message is sent to the message receiver to indicate that the transmitter is terminating its TCP socket.</definition>
+        <rdfs:label>OT Disconnect Remote Connection Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadControlProgramCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetData"/>
-        <definition>Copies a file from one file device to another file device connected to the same PC.</definition>
-        <rdfs:label>OT Download Data</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadControlProgramCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadDataEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadControlProgramCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadControlProgramCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Download Data Event</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadControlProgramCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Commands a remote device to download a control program.</definition>
+        <rdfs:label>OT Download Control Program Command Event</rdfs:label>
     </owl:Class>
     
 
@@ -24752,33 +25064,68 @@ BACnet/IP: DEVICE_COMMUNICATION_CONTROL </rdfs:comment>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnection -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTErrorMessage -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnection">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTManageRemoteConnection"/>
-        <definition>Used to establish an TCP/IP Connection to the target device.</definition>
-        <rdfs:comment>BACnet/IP: VT_OPEN
-BACnet/IP: DEVICE_COMMUNICATION_CONTROL
-BACnet/IP: SECURE_BVLL
-BACnet/IP: BVLC_RESULT</rdfs:comment>
-        <rdfs:comment>GEMS: ConnectionRequest</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: RESET_COMM_LINK:</rdfs:comment>
-        <rdfs:label>OT Establish Remote Connection</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTErrorMessage">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessage"/>
+        <definition>An anticipated, reproducible defect occurred within the system.</definition>
+        <rdfs:comment>BACnet: Error: 1
+BACnet: Error: 2
+BACnet: Error: 3
+BACnet: Error: 4
+BACnet: Error: 5
+BACnet: Error: 6
+BACnet: Error: 7
+BACnet: Error: 8</rdfs:comment>
+        <rdfs:label>OT Error Message</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnectionEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTErrorMessageEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnectionEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTErrorMessageEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDiagnosticsMessageEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnection"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTErrorMessage"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Establish Remote Connection Event</rdfs:label>
+        <definition>An anticipated, reproducible defect occurred within the system.</definition>
+        <rdfs:label>OT Error Message Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnectionCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnectionCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommand"/>
+        <definition>Used to establish an TCP/IP Connection to the target device.</definition>
+        <rdfs:label>OT Establish Remote Connection Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnectionCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnectionCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTConnectionCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEstablishRemoteConnectionCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Used to establish an TCP/IP Connection to the target device.</definition>
+        <rdfs:label>OT Establish Remote Connection Command Event</rdfs:label>
     </owl:Class>
     
 
@@ -24787,58 +25134,14 @@ BACnet/IP: BVLC_RESULT</rdfs:comment>
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEvent">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <definition>A discrete occurrence within an operational technology environment that denotes a significant change in state, execution of a command, or transmission of information.</definition>
         <rdfs:label>OT Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetData -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommand"/>
-        <definition>Request data from a remote device.</definition>
-        <rdfs:label>OT Get Data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetDataEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetData"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>OT Get Data Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTHardwareStatus -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTHardwareStatus">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceStatus"/>
-        <definition>OT command that requests the status of the hardware of a remote device.</definition>
-        <rdfs:label>OT Hardware Status</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTHardwareStatusEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTHardwareStatusEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTHardwareStatus"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>OT Hardware Status Event</rdfs:label>
     </owl:Class>
     
 
@@ -24863,95 +25166,10 @@ BACnet/IP: BVLC_RESULT</rdfs:comment>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTIdentifyDevice -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTIdentifyDevice">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTManageRemoteConnection"/>
-        <definition>Request the identification of a remote device.</definition>
-        <rdfs:comment>BACnet/IP: I_AM
-BACnet/IP: WHO_IS
-BACnet/IP: AUTHENTICATE
-BACnet/IP: REQUEST_KEY </rdfs:comment>
-        <rdfs:comment>DNP3: LINK_STATUS
-DNP3: REQUEST_LINK_STATUS
-DNP3: RESET_LINK_STATES
-DNP3: TEST_LINK_STATES
-DNP3: AUTHENTICATE_REQ
-DNP3: AUTHENTICATE_RESP</rdfs:comment>
-        <rdfs:label>OT Identify Device</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTIdentifyDeviceEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTIdentifyDeviceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTIdentifyDevice"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>OT Identify Device Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessage -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessage">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
-        <definition>Messages sent by remote devices not individually initiated by a request.</definition>
-        <rdfs:label>OT Informational Message</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessageEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessageEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEvent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTInformationalMessage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>OT Informational Message Event</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTLogicVariable -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTLogicVariable">
         <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#RuntimeVariable"/>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTManageRemoteConnection -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTManageRemoteConnection">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommand"/>
-        <definition>Manage remote connection with a device.</definition>
-        <rdfs:label>OT Manage Remote Connection</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTManageRemoteConnectionEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTManageRemoteConnectionEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTManageRemoteConnection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>OT Manage Remote Connection Event</rdfs:label>
     </owl:Class>
     
 
@@ -24970,123 +25188,141 @@ DNP3: AUTHENTICATE_RESP</rdfs:comment>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevice -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevice">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommand"/>
-        <definition>Modify the power, memory, configuration, or process data of a remote device.</definition>
-        <rdfs:label>OT Modify Device</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevice"/>
-        <definition>OT command that modifies the data stored on a remote device.</definition>
-        <rdfs:label>OT Modify Device Data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceDataEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Modify Device Data Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevice"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Modify Device Event</rdfs:label>
+        <definition>OT command that adds, removes, or changes, process data on a remote device.</definition>
+        <rdfs:label>OT Modify Control Program Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevice"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommand"/>
+        <definition>Modify device configuration.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: WRITE PROGRAM BLOCK MEMORY
+GE-SRTP: CHANGE PLC CPU PRIVILEGE LEVEL
+GE-SRTP: SET CONTROL ID(CPU ID)
+GE-SRTP: SET PLC (RUN VS STOP)
+GE-SRTP: PROGRAM STORE (UPLOAD FROM PLC)
+GE-SRTP: PROGRAM LOAD (DOWNLOAD TO PLC)
+GE-SRTP: TOGGLE FORCE SYSTEM MEMORY</rdfs:comment>
+        <rdfs:label>OT Modify Device Configuration Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePowerEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePowerEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Device Power Event</rdfs:label>
+        <definition>Modify device configuration.</definition>
+        <rdfs:label>OT Modify Device Configuration Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevice"/>
-        <definition>OT command that modifies the process data of a remote device, such as variables.</definition>
-        <rdfs:label>OT Modify Device Process Data</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessDataEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceConfigurationCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Modify Device Process Data Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevice"/>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramStateEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramStateEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Modify Device Program State Event</rdfs:label>
+        <definition>Modifies the running state of an application or program on a device.</definition>
+        <rdfs:label>OT Modify Device Operating Mode Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
+        <definition>Manage message routing or network connection mechanisms.</definition>
+        <rdfs:label>OT Network Management Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Manage message routing or network connection mechanisms.</definition>
+        <rdfs:label>OT Network Management Message Event</rdfs:label>
     </owl:Class>
     
 
@@ -25105,54 +25341,38 @@ DNP3: AUTHENTICATE_RESP</rdfs:comment>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTParameterStatus -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTParameterStatus">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceStatus"/>
-        <definition>OT command that requests parameter status data of a remote device often in an ASCII or boolean list.</definition>
-        <rdfs:comment>BACnet/IP: GET_ALARM_SUMMARY</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: READ_EXCEPTION_STATUS</rdfs:comment>
-        <rdfs:label>OT Parameter Status</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTParameterStatusEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTParameterStatusEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTParameterStatus"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Parameter Status Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseService -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseService">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
-        <definition>Command that tells the device to safely pause a service/program.</definition>
-        <rdfs:label>OT Pause Service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseServiceEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseServiceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseService"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Pause Service Event</rdfs:label>
+        <definition>Commands a device to pause a service/program.</definition>
+        <rdfs:label>OT Pause Command Event</rdfs:label>
     </owl:Class>
     
 
@@ -25165,6 +25385,35 @@ DNP3: AUTHENTICATE_RESP</rdfs:comment>
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
+        <definition>Manage data associated with a controlled process.</definition>
+        <rdfs:label>OT Process Data Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Manage data associated with a controlled process.</definition>
+        <rdfs:label>OT Process Data Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessVariable -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessVariable">
@@ -25173,27 +25422,67 @@ DNP3: AUTHENTICATE_RESP</rdfs:comment>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramService -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramModeCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramService">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
-        <definition>Command that places the controller in a mode capable of reprogramming logic. This may or may not stop the program.</definition>
-        <rdfs:label>OT Program Service</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramModeCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramServiceEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramModeCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramServiceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramModeCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramService"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramModeCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Program Service Event</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Command that places the controller in a mode capable of reprogramming logic. This may or may not stop the program.</definition>
+        <rdfs:label>OT Program Mode Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProprietaryMessage -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProprietaryMessage">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
+        <definition>Vendor specific and may not be publicly documented, or values left for device specific configuration.</definition>
+        <rdfs:label>OT Proprietary Message</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProprietaryMessageEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProprietaryMessageEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProprietaryMessage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Vendor specific and may not be publicly documented, or values left for device specific configuration.</definition>
+        <rdfs:label>OT Proprietary Message Event</rdfs:label>
     </owl:Class>
     
 
@@ -25201,274 +25490,299 @@ DNP3: AUTHENTICATE_RESP</rdfs:comment>
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage -->
 
     <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Command"/>
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalMessage"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetData"/>
-        <definition>OT command that requests configuration or identification data of a remote device.</definition>
-        <rdfs:comment>BACnet/IP: READ_BROADCAST_TABLE
-BACnet/IP: READ_FOREIGN_DEVICE_TABLE </rdfs:comment>
-        <rdfs:comment>DNP3: Secure Authentication Version
-DNP3: Device Manufacturer Hardware Version
-DNP3: Device Manufacturer Name
-DNP3: Device Manufacturer Product Name and Model
-DNP3: Device Manufacturer Software Version
-DNP3: Device Serial Number
-DNP3: User-Assigned Device Name
-DNP3: User-Assigned ID Code or Number
-DNP3: User-Assigned Location Name</rdfs:comment>
-        <rdfs:comment>GEMS: GetConfig
-GEMS: GetConfigList</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: REPORT_SLAVE_ID
-Modbus/TCP: READ_DEVICE_IDENTIFICATION
-Modbus/TCP: REPORT_LOCAL_ADDRESS </rdfs:comment>
-        <rdfs:label>OT Read Device Configuration Data</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommand"/>
+        <definition>Read or retrieve data.</definition>
+        <rdfs:comment>BACnet: confirmedCOVNotification
+BACnet: subscribeCOV
+BACnet: atomicReadFile
+BACnet: readProperty
+BACnet: readPropertyConditional
+BACnet: readPropertyMultiple
+BACnet: unconfirmedCOVNotification
+BACnet: readRange
+BACnet: subscribeCOVProperty
+BACnet: getEventInformation
+BACnet: subscribe-cov-property-multiple
+BACnet: confirmed-cov-notification-multiple
+BACnet: unconfirmed-cov-notification-multiple </rdfs:comment>
+        <rdfs:comment>CIP: Get Attributes All
+CIP: Get Attribute List
+CIP: Get Attribute Single
+CIP: Find Next Object Instance
+CIP: Get Member </rdfs:comment>
+        <rdfs:comment>GE-SRTP: READ SYSTEM MEMORY
+GE-SRTP: READ TASK MEMORY </rdfs:comment>
+        <rdfs:comment>Modbus: Read Coils
+Modbus: Read Discrete Inputs
+Modbus: Read Holding Registers
+Modbus: Read Input Registers
+Modbus: Read File Record
+Modbus: Read FIFO Queue</rdfs:comment>
+        <rdfs:label>OT Read Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationDataEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Read Device Configuration Data Event</rdfs:label>
+        <definition>Read or retrieve data.</definition>
+        <rdfs:label>OT Read Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationDataCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetData"/>
-        <definition>OT command that requests configuration or status details of a remote device.</definition>
-        <rdfs:comment>Modbus/TCP: DIAGNOSTICS
-DNP3: Non-Specific All Attributes Request
-DNP3: List of Attribute Variations</rdfs:comment>
-        <rdfs:label>OT Read Device Data</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationDataCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommand"/>
+        <definition>Read device configuration.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl</rdfs:comment>
+        <rdfs:comment>GE-SRTP: READ PROGRAM MEMORY</rdfs:comment>
+        <rdfs:label>OT Read Device Configuration Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceDataEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationDataCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationDataCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceConfigurationCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceConfigurationDataCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Read Device Data Event</rdfs:label>
+        <definition>Read device configuration.</definition>
+        <rdfs:label>OT Read Device Configuration Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceMemory -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceMemory">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetData"/>
-        <definition>Reads the contents of the specified number of consecutive memory area.</definition>
-        <rdfs:label>OT Read Device Memory</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceMemoryEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceMemoryEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommand"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceMemory"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#File"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Read Device Memory Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceStatus -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceStatus">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTGetData"/>
-        <definition>OT command that requests device hardware, state, or parameter status data.</definition>
-        <rdfs:comment>BACnet/IP: I_HAVE
-BACnet/IP: WHO_HAS
-BACnet/IP: GET_ENROLLMENT_SUMMARY
-BACnet/IP: GET_EVENT_INFORMATION
-BACnet/IP: LIFE_SAFETY_OPERATION
-</rdfs:comment>
-        <rdfs:label>OT Read Device Status</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceStatusEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceStatusEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceStatus"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#File"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Read Device Status Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFile -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFile">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceMemory"/>
-        <definition>Reads the contents of a specified  file stored in the file device connected to the PC.</definition>
-        <rdfs:comment>BACnet/IP: ATOMIC_READ_FILE</rdfs:comment>
-        <rdfs:comment>DNP3: GET_FILE_INFO
-DNP3: OPEN_FILE
-DNP3: ABORT_FILE
-DNP3: CLOSE_FILE
-DNP3: AUTHENTICATE_FILE</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: READ_FILE_RECORD</rdfs:comment>
-        <rdfs:label>OT Read File</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFile"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Read File Event</rdfs:label>
+        <definition>Reads data in specified chuncks or the contents of a specified file stored in the file device connected to the PC.</definition>
+        <rdfs:label>OT Read File Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValue -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValue">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceMemory"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTLogicVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTLogicVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <definition>Reads the contents of the specified number of consecutive parameter areawords starting from the specified word.</definition>
-        <rdfs:comment>BACnet/IP: READ_PROPERTY
-BACnet/IP: READ_PROPERTY_CONDITIONAL
-BACnet/IP: READ_PROPERTY_MULTIPLE
-BACnet/IP: READ_RANGE
-BACnet/IP: REGISTER_FOREIGN_DEVICE </rdfs:comment>
-        <rdfs:comment>DNP3: Number of Analog Input Points
-DNP3: Number of Analog Outputs
-DNP3: Number of Binary Input Points
-DNP3: Number of Binary Outputs
-DNP3: Number of Counter Points
-DNP3: Number of Double-Bit Binary Input Points
-DNP3: Number of Master-Defined Data Set Properties
-DNP3: Number of Master-Defined Data Sets
-DNP3: Number of Outstation-Defined Data Set Properties
-DNP3: Number of Outstation-Defined Data Sets
-DNP3: Number of Security Statistics per Association
-DNP3: Maximum Analog Input Index
-DNP3: Maximum Analog Output Index
-DNP3: Maximum Binary Input Index
-DNP3: Maximum Binary Output Index
-DNP3: Maximum Counter Index
-DNP3: Maximum Double-Bit Binary Index
-DNP3: Maximum Number of Binary Output Objects per Request
-DNP3: Maximum Receive Fragment Size
-DNP3: Maximum Transmit Fragment Size</rdfs:comment>
-        <rdfs:comment>GEMS: GetTargets</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: READ_COILS
-Modbus/TCP: READ_DISCRETE_INPUTS
-Modbus/TCP: READ_FIFO_QUEUE
-Modbus/TCP: READ_HOLDING_REGISTERS
-Modbus/TCP: READ_INPUT_REGISTERS
-Modbus/TCP: READ_WRITE_MULTIPLE_REGISTERS</rdfs:comment>
-        <rdfs:label>OT Read Set Value</rdfs:label>
+        <rdfs:label>OT Read Value Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadTimeCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadTimeCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommand"/>
+        <definition>Read timing mechanisms.</definition>
+        <rdfs:comment>example</rdfs:comment>
+        <rdfs:label>OT Read Time Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadTimeCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadTimeCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValue"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadTimeCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Read Set Value Event</rdfs:label>
+        <definition>Read timing mechanisms.</definition>
+        <rdfs:label>OT Read Time Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteService -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteModeCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteService">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteModeCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteModeCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteModeCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteModeCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <definition>Command that places the controller in a mode capable of receiving read/write communication from a networked entity.</definition>
-        <rdfs:label>OT Remote Service</rdfs:label>
+        <rdfs:label>OT Remote Mode Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteServiceEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRunCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteServiceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRunCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRunCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRunCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteService"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRunCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Remote Service Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRestartDevice -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRestartDevice">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower"/>
-        <definition>Modifies the power state of a device causing to to shut down and then reboot.</definition>
-        <rdfs:comment>BACnet/IP: REINITIALIZE_DEVICE</rdfs:comment>
-        <rdfs:comment>DNP3: COLD_RESTART
-DNP3: WARM_RESTART </rdfs:comment>
-        <rdfs:label>OT Restart Device</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRestartDeviceEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRestartDeviceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRestartDevice"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Restart Device Event</rdfs:label>
+        <definition>Commands a device to start or resume a service/program.</definition>
+        <rdfs:label>OT Run Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTSecurityCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSecurityCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommand"/>
+        <definition>Ensure confidentiality, integrity, or availability of system information.</definition>
+        <rdfs:comment>BACnet: authenticate
+BACnet: requestKey </rdfs:comment>
+        <rdfs:comment>GE-SRTP: PROGRAMMER LOGON</rdfs:comment>
+        <rdfs:label>OT Security Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTSecurityCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSecurityCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSecurityCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Ensure confidentiality, integrity, or availability of system information.</definition>
+        <rdfs:label>OT Security Command Event</rdfs:label>
     </owl:Class>
     
 
@@ -25499,167 +25813,248 @@ DNP3: WARM_RESTART </rdfs:comment>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTServiceStatus -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTSetTimeCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTServiceStatus">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadDeviceStatus"/>
-        <definition>OT command that requests the state or service status of a remote device.</definition>
-        <rdfs:comment>Modbus/TCP: GET_COMM_EVENT_COUNTER
-Modbus/TCP: GET_COMM_EVENT_LOG </rdfs:comment>
-        <rdfs:label>OT Service Status</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSetTimeCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommand"/>
+        <definition>Set timing mechanisms.</definition>
+        <rdfs:label>OT Set Time Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTServiceStatusEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTSetTimeCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTServiceStatusEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSetTimeCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTServiceStatus"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSetTimeCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Service Status Event</rdfs:label>
+        <definition>Set timing mechanisms.</definition>
+        <rdfs:label>OT Set Time Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTStartService -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStartService">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
-        <definition>Command that tells the device to start or resume a service/program.</definition>
-        <rdfs:comment>DNP3: INITIALIZE_APPL
-DNP3: START_APPL</rdfs:comment>
-        <rdfs:label>OT Start Service</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTStartServiceEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStartServiceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStartService"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Start Service Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopService -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopService">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
-        <definition>Command that tells the device to stop a service/program.</definition>
-        <rdfs:comment>DNP3: STOP_APPL</rdfs:comment>
-        <rdfs:label>OT Stop Service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopServiceEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopServiceEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopService"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Stop Service Event</rdfs:label>
+        <definition>Commands a device to stop a service/program.</definition>
+        <rdfs:label>OT Stop Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTUpdateDeviceFirmware -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTSynchronizeTimeCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUpdateDeviceFirmware">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevice"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#contains"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#may-contain"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSynchronizeTimeCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommand"/>
+        <definition>Used to align timing mechanisms.</definition>
+        <rdfs:comment>example</rdfs:comment>
+        <rdfs:label>OT Synchronize Time Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTUpdateDeviceFirmwareEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTSynchronizeTimeCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUpdateDeviceFirmwareEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSynchronizeTimeCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUpdateDeviceFirmware"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSynchronizeTimeCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Update Device Event</rdfs:label>
+        <definition>Used to align timing mechanisms.</definition>
+        <rdfs:label>OT Synchronize Time Command Event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadData -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTTestCommand -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceData"/>
-        <definition>OT command that uploads data to a remote device.</definition>
-        <rdfs:label>OT Upload Data</rdfs:label>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTestCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadDataEvent -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTTestCommandEvent -->
 
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTestCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTestCommand"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Upload Data Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadDeviceProcessData -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadDeviceProcessData">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProcessData"/>
-        <definition>OT command that uploads process data to a remote device.</definition>
-        <rdfs:label>OT Upload Device Process Data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadDeviceProcessDataEvent -->
-
-    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadDeviceProcessDataEvent">
-        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCommandEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
-                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUploadDeviceProcessData"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>OT Upload Device Process Data Event</rdfs:label>
+        <definition>Commands a  device to run a program in Test mode.</definition>
+        <rdfs:label>OT Test Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessage"/>
+        <definition>Read, set, or calculate timing mechanisms.</definition>
+        <rdfs:comment>BACnet: timeSynchronization
+BACnet: utcTimeSynchronization </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC TIME/DATE
+GE-SRTP: RETURN PLC TIME/DATE</rdfs:comment>
+        <rdfs:label>OT Time Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeviceManagementMessageEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTimeCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Read, set, or calculate timing mechanisms.</definition>
+        <rdfs:label>OT Time Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTTransportConfigurationCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTransportConfigurationCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommand"/>
+        <definition>Configure transport settings for a communication channel.</definition>
+        <rdfs:comment>Modbus: Encapsulated Interface Transport</rdfs:comment>
+        <rdfs:label>OT Transport Configuration Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTTransportConfigurationCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTransportConfigurationCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkManagementCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTransportConfigurationCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Configure transport settings for a communication channel.</definition>
+        <rdfs:label>OT Transport Configuration Command Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommand -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommand">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommand"/>
+        <definition>Write or store data.</definition>
+        <rdfs:comment>BACnet: atomicWriteFile
+BACnet: addListElement
+BACnet: removeListElement
+BACnet: createObject
+BACnet: deleteObject
+BACnet: writeProperty
+BACnet: writePropertyMultiple
+BACnet: write-group </rdfs:comment>
+        <rdfs:comment>CIP: Set Attributes All
+CIP: Set Attribute List
+CIP: Set Attribute Single
+CIP: Set Member
+CIP: Insert Member
+CIP: Remove Member </rdfs:comment>
+        <rdfs:comment>GE-SRTP: WRITE SYSTEM MEMORY
+GE-SRTP: WRITE TASK MEMORY </rdfs:comment>
+        <rdfs:comment>Modbus: Write Single Coil
+Modbus: Write Single Register
+Modbus: Write Multiple Coils
+Modbus: Write Multiple Registers
+Modbus: Write File Record
+Modbus: Mask Write Register
+Modbus: Read Write Register</rdfs:comment>
+        <rdfs:label>OT Write Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommandEvent -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommandEvent">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProcessDataCommandEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#has-participant"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTWriteCommand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <definition>Write or store data.</definition>
+        <rdfs:label>OT Write Command Event</rdfs:label>
     </owl:Class>
     
 
@@ -26297,6 +26692,20 @@ DNP3: START_APPL</rdfs:comment>
         <definition>A POSIX-compliant symbolic link.  These are often fast symbolic links, but need not be.</definition>
         <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Symbolic_link"/>
         <rdfs:label>POSIX Symbolic Link</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#PackageURL -->
+
+    <owl:Class rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PackageURL">
+        <rdfs:subClassOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#URL"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#identifies"/>
+                <owl:someValuesFrom rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SoftwarePackage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -44891,6 +45300,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessModeling"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-RFC7642SystemForCrossDomainIdentityManagementDefinitionsOverviewConceptsAndRequirements"/>
         <maps rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessControlConfiguration"/>
+        <maps rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#DigitalIdentity"/>
         <maps rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"/>
         <d3fend-id>D3-AM</d3fend-id>
     </owl:NamedIndividual>
@@ -50632,6 +51042,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CertificateRotation">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#CertificateRotation"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-PasswordandKeyRotation-SSH"/>
         <regenerates rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Certificate"/>
         <d3fend-id>D3-CERO</d3fend-id>
     </owl:NamedIndividual>
@@ -50649,12 +51060,14 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#ChangeDefaultPassword -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#ChangeDefaultPassword">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ChangeDefaultPassword"/>
         <hardens rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTController"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-CPGChecklist"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-GuidetoOTSecurity"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-MITREATTACKPasswordPolicies"/>
         <strengthens rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Password"/>
         <strengthens rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#UserAccount"/>
+        <d3fend-id>D3-CFP</d3fend-id>
     </owl:NamedIndividual>
     
 
@@ -53386,8 +53799,10 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Hardware-basedWriteProtection -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Hardware-basedWriteProtection">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Hardware-basedWriteProtection"/>
         <hardens rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Storage"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-WhatisHardwareWriteProtect"/>
+        <d3fend-id>D3-HBWP</d3fend-id>
     </owl:NamedIndividual>
     
 
@@ -57239,6 +57654,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTrafficSignatureAnalysis">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTrafficSignatureAnalysis"/>
         <analyzes rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTraffic"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-SystemAndMethodForStrategicAntiMalwareMonitoring"/>
         <d3fend-id>D3-NTSA</d3fend-id>
     </owl:NamedIndividual>
     
@@ -57250,6 +57666,7 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkVulnerabilityAssessment"/>
         <evaluates rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Network"/>
         <identifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Vulnerability"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ReachabilityGraphBasedSafeRemediationsforSecuirytofOnPremiseAndCloudComputingEnvironments"/>
         <d3fend-id>D3-NVA</d3fend-id>
     </owl:NamedIndividual>
     
@@ -57556,9 +57973,25 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTActuator -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTActuator"/>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeControlProgramCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeControlProgramCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+    </owl:NamedIndividual>
     
 
 
@@ -57586,6 +58019,30 @@ It is a combination of VPN hardware and software technologies that provides VPN 
         <monitors rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSensor"/>
         <powered-by rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPowerSupply"/>
         <runs rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewControlProgramCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewControlProgramCommand">
+        <has-participant rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteControlProgramCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteControlProgramCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadControlProgramCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadControlProgramCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
     </owl:NamedIndividual>
     
 
@@ -57630,15 +58087,19 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand -->
 
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower"/>
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlProgram"/>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand -->
 
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+    </owl:NamedIndividual>
     
 
 
@@ -57646,6 +58107,14 @@ It is a combination of VPN hardware and software technologies that provides VPN 
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkTraffic">
         <may-contain rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
     </owl:NamedIndividual>
     
 
@@ -57662,9 +58131,49 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramModeCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramModeCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage"/>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileCommand">
+        <has-participant rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#File"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueCommand">
+        <has-participant rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTLogicVariable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteModeCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteModeCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTRunCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRunCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+    </owl:NamedIndividual>
     
 
 
@@ -57678,11 +58187,18 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     
 
 
-    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTUpdateDeviceFirmware -->
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopCommand -->
 
-    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUpdateDeviceFirmware">
-        <contains rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState"/>
-        <may-contain rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower"/>
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OTTestCommand -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTestCommand">
+        <modifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
     </owl:NamedIndividual>
     
 
@@ -57754,9 +58270,11 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingModeMonitoring -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingModeMonitoring">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingModeMonitoring"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-PLCKeySwitchMonitoring"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-TRITONMalwareRemainsThreattoGlobalCriticalInfrastructureICS"/>
         <monitors rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+        <d3fend-id>D3-OMM</d3fend-id>
     </owl:NamedIndividual>
     
 
@@ -57764,9 +58282,11 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingModeRestriction -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingModeRestriction">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingModeRestriction"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-MITREATTACKAuthorizationEnforcement"/>
         <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-TRITONMalwareRemainsThreattoGlobalCriticalInfrastructureICS"/>
         <restricts rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#OperatingMode"/>
+        <d3fend-id>D3-OPR</d3fend-id>
     </owl:NamedIndividual>
     
 
@@ -58008,6 +58528,14 @@ It is a combination of VPN hardware and software technologies that provides VPN 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PE32PLUSExecutableFile">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#ExecutableBinary"/>
         <rdfs:label>PE32+ Executable File</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#PackageURL -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PackageURL">
+        <identifies rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#SoftwarePackage"/>
     </owl:NamedIndividual>
     
 
@@ -62200,6 +62728,20 @@ delivery, up to message rejection.</kb-abstract>
     
 
 
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ReachabilityGraphBasedSafeRemediationsforSecuirytofOnPremiseAndCloudComputingEnvironments -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-ReachabilityGraphBasedSafeRemediationsforSecuirytofOnPremiseAndCloudComputingEnvironments">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#PatentReference"/>
+        <kb-reference-of rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkVulnerabilityAssessment"/>
+        <has-link rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://patentimages.storage.googleapis.com/23/c1/a5/d78b3d4f275070/US11637861.pdf</has-link>
+        <kb-reference-title>Reachability graph-based safe remediations for security of on-premise and cloud computing environments</kb-reference-title>
+        <kb-abstract>A method for securing a networked computer system executing an application includes identifying a vulnerable computer resource in the networked computer system, determining all computer resources in the networked computer system that are accessible from, or are accessed by, the vulnerable computer resource, and prioritizing implementation of a remediation action to secure the vulnerable computer resource if a vulnerability path extends from the vulnerable computer resource to a critical computer resource that contains sensitive information. The remediation action to secure the vulnerable computer resource is a safe remediation action that does not impact availability of the application executing on the networked computer system.</kb-abstract>
+        <kb-author>Siddharth Sukumar Burle, Ajoy Kumar, Manish Jain</kb-author>
+        <rdfs:label>Reference - Reachability graph-based safe remediations for security of on-premise and cloud computing environments</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-RedHatEnterpriseLinux8SecurityTechnicalImplementationGuide -->
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-RedHatEnterpriseLinux8SecurityTechnicalImplementationGuide">
@@ -63093,6 +63635,21 @@ and deploy decoy physical or virtual endpoints.</kb-mitre-analysis>
         <kb-author>Sai Vashisht</kb-author>
         <kb-organization>Mandiant Inc, FireEye Security Holdings US LLC</kb-organization>
         <rdfs:label>Reference - System and method for scanning remote services to locate stored objects with malware</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-SystemAndMethodForStrategicAntiMalwareMonitoring -->
+
+    <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-SystemAndMethodForStrategicAntiMalwareMonitoring">
+        <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#PatentReference"/>
+        <kb-reference-of rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#NetworkTrafficSignatureAnalysis"/>
+        <has-link rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://patentimages.storage.googleapis.com/d9/02/31/3a28fefc73661d/US20230362189A1.pdf</has-link>
+        <kb-reference-title>System and method for strategic anti-malware monitoring</kb-reference-title>
+        <kb-abstract>The system and method described herein may leverage active network scanning and passive network monitoring to provide strategic anti-malware monitoring in a network. In particular, the system and method described herein may remotely connect to managed hosts in a network to compute hashes or other signatures associated with processes running thereon and suspicious files hosted thereon, wherein the hashes may communicated to a cloud database that aggregates all known virus or malware signatures that various anti-virus vendors have catalogued to detect malware infections without requiring the hosts to have a local or resident anti-virus agent. Furthermore, running processes and file system activity may be monitored in the network to further detect malware infections. Additionally, the network scanning and network monitoring may be used to detect hosts that may potentially be participating in an active botnet or hosting botnet content and audit anti-virus strategies deployed in the network.</kb-abstract>
+        <kb-author>Marcus J. Ranum, Ron Gula</kb-author>
+        <kb-organization>Tenable Inc</kb-organization>
+        <rdfs:label>Reference - System and method for strategic anti-malware monitoring - Tenable</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -68372,6 +68929,7 @@ With keystroke dynamics the biometric template used to identify an individual is
 
     <owl:NamedIndividual rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TokenBinding">
         <rdf:type rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#TokenBinding"/>
+        <kb-reference rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-RFC8471TheTokenBindingProtocolVersion1.0"/>
         <strengthens rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessToken"/>
         <d3fend-id>D3-TB</d3fend-id>
     </owl:NamedIndividual>
@@ -70308,7 +70866,7 @@ Wikipedia. (n.d.). Autoregressive-moving-average model. [Link](https://en.wikipe
         <rdfs:label>Access Control List</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessMediation">
-        <definition>Access mediation is the process of granting or denying specific requests to: 1) obtain and use information and related information processing services; and 2) enter specific physical facilities (e.g., Federal buildings, military establishments, border crossing entrances).</definition>
+        <definition>Access mediation is the process of granting or denying specific requests to: 1) obtain and use information and related information processing services; and 2) enter specific physical facilities (e.g., Federal buildings, military establishments, border crossing entrances). Access mediation decisions should enforce least privilege by granting access for scoped durations to prevent privilege creep and, where applicable, implement just-in-time (JIT) access. Denial decisions may prevent initial access or terminate access that has already been granted, ensuring continuous enforcement of security policies.</definition>
         <synonym>Access Control</synonym>
         <rdfs:label>Access Mediation</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Access_control"/>
@@ -70321,7 +70879,7 @@ Wikipedia. (n.d.). Autoregressive-moving-average model. [Link](https://en.wikipe
         <rdfs:label>Access Mediator</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessModeling">
-        <definition>Access modeling identifies and records the access permissions granted to administrators, users, groups, and systems.</definition>
+        <definition>Access modeling captures and records the access permissions granted to identities (e.g., administrators, users, groups, systems) and optionally includes details on how these identities are stored, managed, and shared across systems.</definition>
         <rdfs:label>Access Modeling</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#AccessPolicyAdministration">
@@ -71248,7 +71806,6 @@ An extension of PKP is Subject Public Key Information Pinning (SPKI) includes pu
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#CertificateRotation">
         <definition>Certificate rotation involves replacing digital certificates and their private keys to maintain cryptographic integrity and trust, mitigating key compromise risks and ensuring continuous secure communications.</definition>
-        <kb-article rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-PasswordandKeyRotation-SSH"/>
         <kb-article>## How it works
 
 Certificate rotation should be performed when:
@@ -73481,11 +74038,6 @@ Hardware process isolation is commonly implemented through Direct Memory Access 
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#Hardware-basedWriteProtection">
         <definition>Physical methods of preventing data from being written to computer storage.</definition>
-        <kb-article>## How it works
-comment
-
-## Considerations
-* considerations</kb-article>
         <rdfs:label>Hardware-based Write Protection</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#HardwareComponentInventory">
@@ -75148,10 +75700,33 @@ Programmatically checking if a pointer is NULL before use.
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OSAPIWriteMemory">
         <rdfs:label>OS API Write Memory</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTAbortCommand">
+        <definition>Commands a device to abort a service/program.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC (RUN VS STOP)</rdfs:comment>
+        <rdfs:label>OT Abort Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTActuator">
         <definition>An OT actuator is an industrial-grade actuator optimized for operational technology (OT) environments, such as SCADA or process-control systems. It tolerates harsher conditions, meets stricter safety and reliability standards, and integrates seamlessly with ICS protocols to enable real-time mechanical motion or adjustments in production lines and critical infrastructure.</definition>
         <rdfs:isDefinedBy rdf:resource="https://csrc.nist.gov/glossary/term/actuator"/>
         <rdfs:label>OT Actuator</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTChangeControlProgramCommand">
+        <definition>Commands a remote device to modify an existing control program.</definition>
+        <rdfs:comment>GE-SRTP: WRITE PROGRAM BLOCK MEMORY
+GE-SRTP: CHANGE PLC CPU PRIVILEGE LEVEL
+GE-SRTP: SET CONTROL ID(CPU ID)
+GE-SRTP: PROGRAM STORE (UPLOAD FROM PLC)
+GE-SRTP: PROGRAM LOAD (DOWNLOAD TO PLC)
+GE-SRTP: TOGGLE FORCE SYSTEM MEMORY</rdfs:comment>
+        <rdfs:label>OT Change Control Program Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTControlLogicProcess">
         <definition>The instructions and algorithms within an OT Controller defined by user programming to interpret inputs, process information, and determine outputs.</definition>
@@ -75167,6 +75742,35 @@ Programmatically checking if a pointer is NULL before use.
         <rdfs:isDefinedBy rdf:resource="https://csrc.nist.gov/glossary/term/controller"/>
         <rdfs:label>OT Controller</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTCreateNewControlProgramCommand">
+        <definition>Commands a remote device to create an control program.</definition>
+        <rdfs:comment>GE-SRTP: WRITE PROGRAM BLOCK MEMORY
+GE-SRTP: SET CONTROL ID(CPU ID)
+GE-SRTP: PROGRAM LOAD (DOWNLOAD TO PLC)
+GE-SRTP: TOGGLE FORCE SYSTEM MEMORY</rdfs:comment>
+        <rdfs:label>OT Create New Control Program Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDeleteControlProgramCommand">
+        <definition>Commands a remote device to remove an existing control program.</definition>
+        <rdfs:label>OT Delete Control Program Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTDownloadControlProgramCommand">
+        <definition>Commands a remote device to download a control program.</definition>
+        <synonym>OT Program Download</synonym>
+        <rdfs:comment>GE-SRTP: PROGRAM STORE (UPLOAD FROM PLC)
+GE-SRTP: PROGRAM LOAD (DOWNLOAD TO PLC)</rdfs:comment>
+        <rdfs:label>OT Download Control Program Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://attack.mitre.org/techniques/T0843/"/>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTEngineeringSoftware">
         <definition>Software used in an industrial process to help engineers design, test, and maintain OT. This software enables the programming of OT controllers.</definition>
         <rdfs:label>OT Engineering Software</rdfs:label>
@@ -75177,7 +75781,6 @@ Programmatically checking if a pointer is NULL before use.
         <synonym>Transient Cyber Asset</synonym>
         <synonym>Workstation</synonym>
         <rdfs:isDefinedBy>https://attack.mitre.org/assets/A0001/</rdfs:isDefinedBy>
-        <rdfs:label>OT Engineering Workstation</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTIOModule">
         <definition>An OT I/O Module is an industrial-grade interface designed for harsh Operational Technology (OT) environments. It reliably connects sensors and actuators to industrial control systems, ensuring precise, real-time data exchange in applications such as SCADA or ICS. Engineered for ruggedness and consistent performance, it can manage analog, digital, or other specialized signal types while enduring demanding conditions.</definition>
@@ -75200,29 +75803,42 @@ Programmatically checking if a pointer is NULL before use.
         <rdfs:seeAlso rdf:resource="https://isagca.org/hubfs/2023%20ISA%20Website%20Redesigns/ISAGCA/PDFs/Industrial%20Cybersecurity%20Knowledge%20FINAL.pdf?hsLang=en"/>
         <rdfs:seeAlso rdf:resource="https://www.dragos.com/blog/industry-news/value-of-plc-key-switch-monitoring/"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDevicePower">
-        <definition>Modifies the power state of a device.</definition>
-        <rdfs:label>OT Modify Device Power</rdfs:label>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyControlProgramCommand">
+        <definition>OT command that adds, removes, or changes, process data on a remote device.</definition>
+        <rdfs:comment>GE-SRTP: WRITE PROGRAM BLOCK MEMORY
+GE-SRTP: CHANGE PLC CPU PRIVILEGE LEVEL
+GE-SRTP: SET CONTROL ID(CPU ID)
+GE-SRTP: PROGRAM STORE (UPLOAD FROM PLC)
+GE-SRTP: PROGRAM LOAD (DOWNLOAD TO PLC)
+GE-SRTP: TOGGLE FORCE SYSTEM MEMORY</rdfs:comment>
+        <rdfs:label>OT Modify Control Program Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceProgramState">
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTModifyDeviceOperatingModeCommand">
         <definition>Modifies the running state of an application or program on a device.</definition>
-        <rdfs:comment>BACnet/IP: WRITE_PROPERTY
-BACnet/IP: WRITE_PROPERTY_MULTIPLE </rdfs:comment>
-        <rdfs:comment>DNP3: SELECT
-DNP3: OPERATE
-DNP3: DIRECT_OPERATE
-DNP3: DIRECT_OPERATE_NR</rdfs:comment>
-        <rdfs:comment>GEMS: Directive</rdfs:comment>
-        <rdfs:comment>Modbus/TCP: WRITE_MULTIPLE_COILS
-Modbus/TCP: MASK_WRITE_REGISTER
-Modbus/TCP: WRITE_MULTIPLE_REGISTERS
-Modbus/TCP: WRITE_SINGLE_COIL
-Modbus/TCP: WRITE_SINGLE_REGISTER </rdfs:comment>
-        <rdfs:label>OT Modify Device Program State</rdfs:label>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC (RUN VS STOP)</rdfs:comment>
+        <rdfs:label>OT Modify Device Operating Mode Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTNetworkTraffic">
         <definition>Network traffic generated by operational technology devices, e.g. programmable logic controllers</definition>
         <rdfs:label>OT Network Traffic</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPauseCommand">
+        <definition>Commands a device to pause a service/program.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC (RUN VS STOP)</rdfs:comment>
+        <rdfs:label>OT Pause Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTPowerSupply">
         <definition>An OT power supply is a power supply whose control amplifier is optimized for signal-processing tasks rather than supplying mere steady-state power to a load. It is a self-contained combination of operational amplifiers, power amplifiers, and integral power circuits designed for higher-level operations in industrial or OT contexts.</definition>
@@ -75236,9 +75852,79 @@ Modbus/TCP: WRITE_SINGLE_REGISTER </rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://isagca.org/hubfs/2023%20ISA%20Website%20Redesigns/ISAGCA/PDFs/Industrial%20Cybersecurity%20Knowledge%20FINAL.pdf?hsLang=en"/>
         <skos:example>If the current temperature in a home is 82 degrees Fahrenheit, the process variable is 82 degrees.</skos:example>
     </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProgramModeCommand">
+        <definition>Command that places the controller in a mode capable of reprogramming logic. This may or may not stop the program.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC (RUN VS STOP)</rdfs:comment>
+        <rdfs:label>OT Program Mode Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTProtocolMessage">
         <definition>Packets generated by an operational technology protocol contain an OT protocol message</definition>
         <rdfs:label>OT Protocol Message</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadFileCommand">
+        <definition>Reads data in specified chuncks or the contents of a specified file stored in the file device connected to the PC.</definition>
+        <rdfs:comment>BACnet: atomicReadFile</rdfs:comment>
+        <rdfs:comment>Modbus: Read File Record</rdfs:comment>
+        <rdfs:label>OT Read File Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTReadSetValueCommand">
+        <definition>Reads the contents of the specified number of consecutive parameter areawords starting from the specified word.</definition>
+        <rdfs:comment>BACnet: confirmedCOVNotification
+BACnet: subscribeCOV
+BACnet: readProperty
+BACnet: readPropertyConditional
+BACnet: readPropertyMultiple
+BACnet: unconfirmedCOVNotification
+BACnet: readRange
+BACnet: subscribeCOVProperty
+BACnet: getEventInformation
+BACnet: subscribe-cov-property-multiple
+BACnet: confirmed-cov-notification-multiple
+BACnet: unconfirmed-cov-notification-multiple </rdfs:comment>
+        <rdfs:comment>CIP: Get Attributes All
+CIP: Get Attribute List
+CIP: Get Attribute Single
+CIP: Find Next Object Instance
+CIP: Get Member </rdfs:comment>
+        <rdfs:comment>GE-SRTP: READ SYSTEM MEMORY
+GE-SRTP: READ TASK MEMORY </rdfs:comment>
+        <rdfs:comment>Modbus: Read Coils
+Modbus: Read Discrete Inputs
+Modbus: Read Holding Registers
+Modbus: Read Input Registers
+Modbus: Read FIFO Queue</rdfs:comment>
+        <rdfs:label>OT Read Value Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRemoteModeCommand">
+        <definition>Command that places the controller in a mode capable of receiving read/write communication from a networked entity.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC (RUN VS STOP)</rdfs:comment>
+        <rdfs:label>OT Remote Mode Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTRunCommand">
+        <definition>Commands a device to start or resume a service/program.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC (RUN VS STOP)</rdfs:comment>
+        <rdfs:label>OT Run Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTSensor">
         <definition>An OT Sensor is an industrial-grade sensing device engineered for operational technology (OT) environments (e.g. SCADA, ICS). It measures physical variables—such as pressure, temperature, or flow—under demanding conditions, converting them into reliable signals for real-time monitoring and process control loops.</definition>
@@ -75250,10 +75936,25 @@ Modbus/TCP: WRITE_SINGLE_REGISTER </rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.omega.com/en-us/pressure-measurement/pressure-gauges/c/analog-pressure-gauges"/>
         <rdfs:seeAlso rdf:resource="https://www.vega.com/en-us/products/product-catalog/level/radar"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTUpdateDeviceFirmware">
-        <definition>Commands the target device to update its firmware, often requiring the halt of application/program processes and monitoring,  taking the device offline temporarily.</definition>
-        <rdfs:comment>Modbus/TCP: FIRMWARE_REPLACEMENT</rdfs:comment>
-        <rdfs:label>OT Update Device</rdfs:label>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTStopCommand">
+        <definition>Commands a device to stop a service/program.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC (RUN VS STOP)</rdfs:comment>
+        <rdfs:label>OT Stop Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OTTestCommand">
+        <definition>Commands a  device to run a program in Test mode.</definition>
+        <rdfs:comment>BACnet: deviceCommunicationControl
+BACnet: reinitializeDevice </rdfs:comment>
+        <rdfs:comment>GE-SRTP: SET PLC (RUN VS STOP)</rdfs:comment>
+        <rdfs:label>OT Test Command</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://icscsi.org/library/Documents/ICS_Protocols/Control%20Microsystems%20-%20DNP3%20User%20and%20Reference%20Manual.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://nvlpubs.nist.gov/nistpubs/TechnicalNotes/NIST.TN.2023.pdf"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#OWL">
         <definition>The Web Ontology Language (OWL) is a family of knowledge representation languages for authoring ontologies.</definition>
@@ -75516,6 +76217,13 @@ There are various strategies for developing filtering rulesets:
 - Windows Firewall
 - pf (BSD)</kb-article>
         <rdfs:label>Outbound Traffic Filtering</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PackageURL">
+        <definition>A package URL, or purl, is a URL used to identify a software package in a mostly universal and uniform way across programming languages, package managers, packaging conventions, tools, APIs and databases.</definition>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/package-url/purl-spec/blob/main/PURL-SPECIFICATION.rst"/>
+        <rdfs:label>Package URL</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://github.com/package-url/purl-spec"/>
+        <skos:altLabel>purl</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#PacketCaptureFile">
         <definition>A file which contains raw representations of collected packets.</definition>
@@ -79083,22 +79791,22 @@ When system firmware verification fails a set of predefined responses is typical
         <rdfs:label>Reflective Code Loading</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TA0001">
-        <definition>The adversary is trying to get into your network. 
+        <definition>The adversary is trying to get into your network.
 
 Initial Access consists of techniques that use various entry vectors to gain their initial foothold within a network. Techniques used to gain a foothold include targeted spearphishing and exploiting weaknesses on public-facing web servers. Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.</definition>
         <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</display-order>
         <rdfs:label>Initial Access</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TA0002">
-        <definition>The adversary is trying to run malicious code. 
+        <definition>The adversary is trying to run malicious code.
 
 Execution consists of techniques that result in adversary-controlled code running on a local or remote system. Techniques that run malicious code are often paired with techniques from all other tactics to achieve broader goals, like exploring a network or stealing data. For example, an adversary might use a remote access tool to run a PowerShell script that does Remote System Discovery.</definition>
         <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</display-order>
         <rdfs:label>Execution</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TA0003">
-        <definition>The adversary is trying to maintain their foothold. 
-    
+        <definition>The adversary is trying to maintain their foothold.
+
 Persistence consists of techniques that adversaries use to keep access to systems across restarts, changed credentials, and other interruptions that could cut off their access. Techniques used for persistence include any access, action, or configuration changes that let them maintain their foothold on systems, such as replacing or hijacking legitimate code or adding startup code.</definition>
         <display-order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</display-order>
         <rdfs:label>Persistence</rdfs:label>
@@ -79255,7 +79963,6 @@ While token-based authentication is undoubtedly a major step above traditional p
     </rdf:Description>
     <rdf:Description rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#TokenBinding">
         <definition>Token binding is a security mechanism used to enhance the protection of tokens, such as cookies or OAuth tokens, by binding them to a specific connection.</definition>
-        <kb-article rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#Reference-RFC8471TheTokenBindingProtocolVersion1.0"/>
         <kb-article>## How it works
 
 When issuing a security token to a client that supports Token Binding, a server includes the client&apos;s Token Binding ID (or its cryptographic hash) in the token. Later on, when a client presents a security token containing a Token Binding ID, the server verifies that the ID in the token matches the ID of the Token Binding established with the client. In the case of a mismatch, the server rejects the token.
