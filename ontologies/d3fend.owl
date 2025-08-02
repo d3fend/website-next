@@ -11,7 +11,7 @@
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl">
         <owl:versionIRI rdf:resource="http://d3fend.mitre.org/ontologies/d3fend/1.2.0/d3fend.owl"/>
-        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-07-31T00:12:00+00:00</release-date>
+        <release-date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-01T00:12:00+00:00</release-date>
         <dcterms:description>D3FEND is a framework which encodes a countermeasure knowledge base as a knowledge graph. The graph contains the types and relations that define key concepts in the cybersecurity countermeasure domain and the relations necessary to link those concepts to each other. Each of these concepts and relations are linked to references in the cybersecurity literature.</dcterms:description>
         <dcterms:license>MIT</dcterms:license>
         <dcterms:title>D3FEND™ - A knowledge graph of cybersecurity countermeasures</dcterms:title>
@@ -84,6 +84,7 @@
     <owl:AnnotationProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-annotation">
         <definition>x d3fend-annotation y: The d3fend object x has the annotation y.</definition>
         <rdfs:label>d3fend-annotation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
     </owl:AnnotationProperty>
     
 
@@ -313,14 +314,6 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-annotation"/>
-    </rdf:Description>
     
 
 
@@ -2687,6 +2680,7 @@
 
     <owl:DatatypeProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-catalog-data-property">
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-data-property"/>
+        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property"/>
         <rdfs:label>d3fend-catalog-data-property</rdfs:label>
         <skos:altLabel xml:lang="en">d3fend-vendor-registry-data-property</skos:altLabel>
     </owl:DatatypeProperty>
@@ -2724,7 +2718,6 @@
     <!-- http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property -->
 
     <owl:DatatypeProperty rdf:about="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-external-control-data-property">
-        <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-catalog-data-property"/>
         <rdfs:subPropertyOf rdf:resource="http://d3fend.mitre.org/ontologies/d3fend.owl#d3fend-data-property"/>
         <rdfs:label>d3fend-external-control-data-property</rdfs:label>
     </owl:DatatypeProperty>

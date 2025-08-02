@@ -202,11 +202,11 @@ d3f:ApplicationConfigurationModificationEvent a owl:Class ;
     rdfs:label "Application Configuration Modification Event" ;
     d3f:definition "An event in which the configuration of a specific software application is changed, affecting how that application executes, interacts with other components, or exposes functionality to users or services." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:ApplicationConfiguration ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:precedes ;
             owl:someValuesFrom d3f:ApplicationUpdateEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:has-participant ;
+            owl:someValuesFrom d3f:ApplicationConfiguration ],
         d3f:ConfigurationModificationEvent .
 
 d3f:ApplicationInventorySensor a owl:Class,
@@ -271,11 +271,11 @@ d3f:AuthenticationServer a owl:Class,
     d3f:manages d3f:AuthenticationService ;
     rdfs:isDefinedBy <http://dbpedia.org/resource/Authentication_server> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:AuthenticationServiceApplication ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:manages ;
             owl:someValuesFrom d3f:AuthenticationService ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:contains ;
+            owl:someValuesFrom d3f:AuthenticationServiceApplication ],
         d3f:Server .
 
 d3f:AuthorizationLog a owl:Class,
@@ -3572,11 +3572,11 @@ d3f:CWE-502 a owl:Class,
         "Pickling, Unpickling" ;
     d3f:weakness-of d3f:DeserializationFunction ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:weakness-of ;
-            owl:someValuesFrom d3f:DeserializationFunction ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-be-weakness-of ;
             owl:someValuesFrom d3f:UserInputFunction ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:weakness-of ;
+            owl:someValuesFrom d3f:DeserializationFunction ],
         d3f:CWE-913 .
 
 d3f:CWE-508 a owl:Class ;
@@ -4564,13 +4564,13 @@ d3f:CWE-78 a owl:Class,
         "Shell metacharacters" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-be-weakness-of ;
+            owl:someValuesFrom d3f:UserInputFunction ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-be-weakness-of ;
             owl:someValuesFrom d3f:EvalFunction ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-be-weakness-of ;
             owl:someValuesFrom d3f:ProcessStartFunction ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-be-weakness-of ;
-            owl:someValuesFrom d3f:UserInputFunction ],
         d3f:CWE-77 .
 
 d3f:CWE-780 a owl:Class ;
@@ -5642,11 +5642,11 @@ d3f:EmbeddedDatabaseApplication a owl:Class,
     d3f:executes d3f:DatabaseQuery ;
     d3f:manages d3f:Database ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:manages ;
-            owl:someValuesFrom d3f:Database ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:executes ;
             owl:someValuesFrom d3f:DatabaseQuery ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:manages ;
+            owl:someValuesFrom d3f:Database ],
         d3f:DatabaseApplication .
 
 d3f:Enclave a owl:Class,
@@ -5871,10 +5871,10 @@ d3f:FileGetAttributesEvent a owl:Class ;
     d3f:definition "An event where a file's metadata attributes, such as size, creation date, or type, are queried or retrieved without altering its content." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:FileAccessEvent ],
+            owl:someValuesFrom d3f:FileCreationEvent ],
         [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:FileCreationEvent ],
+            owl:someValuesFrom d3f:FileAccessEvent ],
         d3f:FileEvent .
 
 d3f:FileGetPermissionsEvent a owl:Class ;
@@ -5912,10 +5912,10 @@ d3f:FileSetAttributesEvent a owl:Class ;
     d3f:definition "An event where a file's metadata attributes are modified, such as changing its timestamps, labels, or categorization within the system." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:FileCreationEvent ],
+            owl:someValuesFrom d3f:FileAccessEvent ],
         [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:FileAccessEvent ],
+            owl:someValuesFrom d3f:FileCreationEvent ],
         d3f:FileEvent .
 
 d3f:FileSetPermissionsEvent a owl:Class ;
@@ -5955,10 +5955,10 @@ d3f:FileUpdateEvent a owl:Class ;
     d3f:definition "An event involving changes to the content or metadata of an existing file, reflecting updates that alter its state or properties." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:FileCreationEvent ],
+            owl:someValuesFrom d3f:FileAccessEvent ],
         [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:FileAccessEvent ],
+            owl:someValuesFrom d3f:FileCreationEvent ],
         d3f:FileEvent .
 
 d3f:FingerPrintScannerInputDevice a owl:Class ;
@@ -6306,10 +6306,10 @@ d3f:HostConfigurationSensor a owl:Class,
         d3f:OperatingSystemConfiguration ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:monitors ;
-            owl:someValuesFrom d3f:ApplicationConfiguration ],
+            owl:someValuesFrom d3f:OperatingSystemConfiguration ],
         [ a owl:Restriction ;
             owl:onProperty d3f:monitors ;
-            owl:someValuesFrom d3f:OperatingSystemConfiguration ],
+            owl:someValuesFrom d3f:ApplicationConfiguration ],
         d3f:EndpointSensor .
 
 d3f:HostGroup a owl:Class,
@@ -6706,11 +6706,11 @@ d3f:KernelModuleUnloadEvent a owl:Class ;
     rdfs:label "Kernel Module Unload Event" ;
     d3f:definition "An event representing the removal of a kernel module from the operating system kernel, deallocating resources and potentially altering system functionality." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:precedes ;
-            owl:someValuesFrom d3f:MemoryDeletionEvent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:KernelModuleLoadEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:precedes ;
+            owl:someValuesFrom d3f:MemoryDeletionEvent ],
         d3f:KernelModuleEvent .
 
 d3f:KioskComputer a owl:Class ;
@@ -7824,11 +7824,11 @@ Wikipedia. (n.d.). Nonlinear regression. [Link](https://en.wikipedia.org/wiki/No
 d3f:OTAbortCommandEvent a owl:Class ;
     rdfs:label "OT Abort Command Event" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:OTRunCommandEvent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
             owl:someValuesFrom d3f:OperatingMode ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:preceded-by ;
+            owl:someValuesFrom d3f:OTRunCommandEvent ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
             owl:someValuesFrom d3f:OTAbortCommand ],
@@ -8032,13 +8032,13 @@ d3f:OTPauseCommandEvent a owl:Class ;
     d3f:definition "Commands a device to pause a service/program." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OperatingMode ],
+            owl:someValuesFrom d3f:OTPauseCommand ],
         [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:OTRunCommandEvent ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OTPauseCommand ],
+            owl:someValuesFrom d3f:OperatingMode ],
         d3f:OTModifyDeviceOperatingModeCommandEvent .
 
 d3f:OTProgramModeCommandEvent a owl:Class ;
@@ -8084,10 +8084,10 @@ d3f:OTReadSetValueCommandEvent a owl:Class ;
     d3f:definition "Reads the contents of the specified number of consecutive parameter areawords starting from the specified word." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OTLogicVariable ],
+            owl:someValuesFrom d3f:OTReadSetValueCommand ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OTReadSetValueCommand ],
+            owl:someValuesFrom d3f:OTLogicVariable ],
         d3f:OTReadCommandEvent .
 
 d3f:OTReadTimeCommandEvent a owl:Class ;
@@ -8103,13 +8103,13 @@ d3f:OTRemoteModeCommandEvent a owl:Class ;
     d3f:definition "Command that places the controller in a mode capable of receiving read/write communication from a networked entity." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OperatingMode ],
+            owl:someValuesFrom d3f:NetworkTraffic ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
             owl:someValuesFrom d3f:OTRemoteModeCommand ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:NetworkTraffic ],
+            owl:someValuesFrom d3f:OperatingMode ],
         d3f:OTModifyDeviceOperatingModeCommandEvent .
 
 d3f:OTSecurityCommandEvent a owl:Class ;
@@ -8135,11 +8135,11 @@ d3f:OTStopCommandEvent a owl:Class ;
             owl:onProperty d3f:has-participant ;
             owl:someValuesFrom d3f:OTStopCommand ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OperatingMode ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:OTRunCommandEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:has-participant ;
+            owl:someValuesFrom d3f:OperatingMode ],
         d3f:OTModifyDeviceOperatingModeCommandEvent .
 
 d3f:OTSynchronizeTimeCommandEvent a owl:Class ;
@@ -8155,10 +8155,10 @@ d3f:OTTestCommandEvent a owl:Class ;
     d3f:definition "Commands a  device to run a program in Test mode." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OTTestCommand ],
+            owl:someValuesFrom d3f:OperatingMode ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OperatingMode ],
+            owl:someValuesFrom d3f:OTTestCommand ],
         d3f:OTModifyDeviceOperatingModeCommandEvent .
 
 d3f:OTTransportConfigurationCommandEvent a owl:Class ;
@@ -8296,11 +8296,11 @@ d3f:PacketLog a owl:Class,
     d3f:summarizes d3f:PacketCaptureFile ;
     rdfs:seeAlso <http://dbpedia.org/resource/Packet_analyzer> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:records ;
-            owl:someValuesFrom d3f:NetworkSession ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:summarizes ;
             owl:someValuesFrom d3f:PacketCaptureFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:records ;
+            owl:someValuesFrom d3f:NetworkSession ],
         d3f:Log .
 
 d3f:Page a owl:Class ;
@@ -8951,11 +8951,11 @@ d3f:RemoveUserFromGroupEvent a owl:Class ;
     rdfs:label "Remove User from Group Event" ;
     d3f:definition "An event where a user is removed from a group, revoking the permissions and privileges associated with the group from the user." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:UserAccount ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:AddUserToGroupEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:has-participant ;
+            owl:someValuesFrom d3f:UserAccount ],
         d3f:GroupManagementEvent .
 
 d3f:ResidualNeuralNetwork a owl:Class,
@@ -9256,11 +9256,11 @@ d3f:ServiceRestartEvent a owl:Class ;
     rdfs:label "Service Restart Event" ;
     d3f:definition "An event describing the sequential stopping and starting of a service application to refresh its state, apply updates, or resolve operational issues." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:ServiceStopEvent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:precedes ;
             owl:someValuesFrom d3f:ServiceStartEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:preceded-by ;
+            owl:someValuesFrom d3f:ServiceStopEvent ],
         d3f:ApplicationRestartEvent,
         d3f:ServiceEvent .
 
@@ -9539,10 +9539,10 @@ d3f:T1003.001 a owl:Class,
     d3f:definition "Adversaries may attempt to access credential material stored in the process memory of the Local Security Authority Subsystem Service (LSASS). After a user logs on, the system generates and stores a variety of credential materials in LSASS process memory. These credential materials can be harvested by an administrative user or SYSTEM and used to conduct [Lateral Movement](https://attack.mitre.org/tactics/TA0008) using [Use Alternate Authentication Material](https://attack.mitre.org/techniques/T1550)." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:Process ],
+            owl:someValuesFrom d3f:AuthenticationService ],
         [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:AuthenticationService ],
+            owl:someValuesFrom d3f:Process ],
         d3f:T1003 .
 
 d3f:T1003.002 a owl:Class,
@@ -9558,10 +9558,10 @@ d3f:T1003.002 a owl:Class,
             owl:someValuesFrom d3f:Process ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:SystemPasswordDatabase ],
+            owl:someValuesFrom d3f:AuthenticationService ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:AuthenticationService ],
+            owl:someValuesFrom d3f:SystemPasswordDatabase ],
         d3f:T1003 .
 
 d3f:T1003.003 a owl:Class,
@@ -9598,11 +9598,11 @@ d3f:T1003.005 a owl:Class,
     d3f:definition "Adversaries may attempt to access cached domain credentials used to allow authentication to occur in the event a domain controller is unavailable.(Citation: Microsoft - Cached Creds)" ;
     d3f:may-modify d3f:Log ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:Log ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
             owl:someValuesFrom d3f:EncryptedCredential ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-modify ;
+            owl:someValuesFrom d3f:Log ],
         d3f:T1003 .
 
 d3f:T1003.006 a owl:Class,
@@ -9644,10 +9644,10 @@ d3f:T1003.008 a owl:Class,
     d3f:definition "Adversaries may attempt to dump the contents of <code>/etc/passwd</code> and <code>/etc/shadow</code> to enable offline password cracking. Most modern Linux operating systems use a combination of <code>/etc/passwd</code> and <code>/etc/shadow</code> to store user account information including password hashes in <code>/etc/shadow</code>. By default, <code>/etc/shadow</code> is only readable by the root user.(Citation: Linux Password and Shadow File Formats)" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:EncryptedCredential ],
+            owl:someValuesFrom d3f:PasswordFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:PasswordFile ],
+            owl:someValuesFrom d3f:EncryptedCredential ],
         d3f:T1003 .
 
 d3f:T1004 a owl:Class ;
@@ -9668,10 +9668,10 @@ d3f:T1005 a owl:Class,
     d3f:definition "Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:LocalResource ],
+            owl:someValuesFrom d3f:File ],
         [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:File ],
+            owl:someValuesFrom d3f:LocalResource ],
         d3f:CollectionTechnique .
 
 d3f:T1006 a owl:Class,
@@ -9694,10 +9694,10 @@ d3f:T1007 a owl:Class,
         d3f:GetRunningProcesses ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
-            owl:someValuesFrom d3f:GetRunningProcesses ],
+            owl:someValuesFrom d3f:CreateProcess ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
-            owl:someValuesFrom d3f:CreateProcess ],
+            owl:someValuesFrom d3f:GetRunningProcesses ],
         d3f:DiscoveryTechnique .
 
 d3f:T1008 a owl:Class,
@@ -9778,19 +9778,19 @@ d3f:T1014 a owl:Class,
         d3f:SharedLibraryFile ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
+            owl:someValuesFrom d3f:KernelModule ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:Kernel ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:KernelModule ],
+            owl:someValuesFrom d3f:Firmware ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:BootSector ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:Firmware ],
+            owl:someValuesFrom d3f:Kernel ],
         d3f:DefenseEvasionTechnique .
 
 d3f:T1015 a owl:Class ;
@@ -9841,10 +9841,10 @@ d3f:T1018 a owl:Class,
             owl:someValuesFrom d3f:NetworkTraffic ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
-            owl:someValuesFrom d3f:CreateSocket ],
+            owl:someValuesFrom d3f:CreateProcess ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
-            owl:someValuesFrom d3f:CreateProcess ],
+            owl:someValuesFrom d3f:CreateSocket ],
         d3f:DiscoveryTechnique .
 
 d3f:T1019 a owl:Class ;
@@ -10027,11 +10027,11 @@ d3f:T1027.006 a owl:Class,
     d3f:definition "Adversaries may smuggle data and files past content filters by hiding malicious payloads inside of seemingly benign HTML files. HTML documents can store large binary objects known as JavaScript Blobs (immutable data that represents raw bytes) that can later be constructed into file-like objects. Data may also be stored in Data URLs, which enable embedding media type or MIME files inline of HTML documents. HTML5 also introduced a download attribute that may be used to initiate file downloads.(Citation: HTML Smuggling Menlo Security 2020)(Citation: Outlflank HTML Smuggling 2018)" ;
     d3f:hides d3f:DigitalArtifact ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:hides ;
-            owl:someValuesFrom d3f:DigitalArtifact ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:creates ;
             owl:someValuesFrom d3f:JavaScriptBlob ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:hides ;
+            owl:someValuesFrom d3f:DigitalArtifact ],
         d3f:T1027 .
 
 d3f:T1027.007 a owl:Class ;
@@ -10163,22 +10163,22 @@ d3f:T1033 a owl:Class,
         d3f:CreateProcess ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:ProcessSegment ],
+            owl:someValuesFrom d3f:GetSystemConfigValue ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
             owl:someValuesFrom d3f:CreateProcess ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:DirectoryService ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
             owl:someValuesFrom d3f:CopyToken ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:GetSystemConfigValue ],
+            owl:someValuesFrom d3f:PasswordFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:PasswordFile ],
+            owl:someValuesFrom d3f:ProcessSegment ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-access ;
+            owl:someValuesFrom d3f:DirectoryService ],
         d3f:DiscoveryTechnique .
 
 d3f:T1034 a owl:Class ;
@@ -10255,11 +10255,11 @@ d3f:T1036.005 a owl:Class,
     d3f:invokes d3f:MoveFile ;
     d3f:may-create d3f:File ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
-            owl:someValuesFrom d3f:File ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:MoveFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-create ;
+            owl:someValuesFrom d3f:File ],
         d3f:T1036 .
 
 d3f:T1036.006 a owl:Class,
@@ -10462,11 +10462,11 @@ d3f:T1047 a owl:Class,
     d3f:may-create d3f:IntranetAdministrativeNetworkTraffic ;
     d3f:may-invoke d3f:CreateProcess ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
-            owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
             owl:someValuesFrom d3f:CreateProcess ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-create ;
+            owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
         d3f:ExecutionTechnique .
 
 d3f:T1048.001 a owl:Class,
@@ -10624,10 +10624,10 @@ d3f:T1055.001 a owl:Class,
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:SystemCall ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:loads ;
+            owl:onProperty d3f:adds ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:adds ;
+            owl:onProperty d3f:loads ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
         d3f:T1055 .
 
@@ -10975,11 +10975,11 @@ d3f:T1068 a owl:Class,
     d3f:may-modify d3f:StackFrame ;
     d3f:modifies d3f:ProcessCodeSegment ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:ProcessCodeSegment ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:enables ;
             owl:someValuesFrom d3f:TA0004 ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:ProcessCodeSegment ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:StackFrame ],
@@ -11044,10 +11044,10 @@ d3f:T1070.004 a owl:Class,
     d3f:deletes d3f:File ;
     d3f:may-modify d3f:File ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
+            owl:onProperty d3f:deletes ;
             owl:someValuesFrom d3f:File ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:deletes ;
+            owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:File ],
         d3f:T1070 .
 
@@ -11160,14 +11160,14 @@ d3f:T1072 a owl:Class,
     d3f:executes d3f:SoftwareDeploymentTool ;
     d3f:installs d3f:Software ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:adds ;
+            owl:someValuesFrom d3f:File ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:installs ;
             owl:someValuesFrom d3f:Software ],
         [ a owl:Restriction ;
             owl:onProperty d3f:executes ;
             owl:someValuesFrom d3f:SoftwareDeploymentTool ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:adds ;
-            owl:someValuesFrom d3f:File ],
         d3f:ExecutionTechnique,
         d3f:LateralMovementTechnique .
 
@@ -11314,11 +11314,11 @@ d3f:T1082 a owl:Class,
     d3f:may-access d3f:DecoyArtifact ;
     d3f:may-invoke d3f:CreateProcess ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:DecoyArtifact ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
             owl:someValuesFrom d3f:CreateProcess ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-access ;
+            owl:someValuesFrom d3f:DecoyArtifact ],
         d3f:DiscoveryTechnique .
 
 d3f:T1083 a owl:Class,
@@ -11330,10 +11330,10 @@ d3f:T1083 a owl:Class,
     d3f:definition "Adversaries may enumerate files and directories or may search in specific locations of a host or network share for certain information within a file system. Adversaries may use the information from [File and Directory Discovery](https://attack.mitre.org/techniques/T1083) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:Directory ],
+            owl:someValuesFrom d3f:File ],
         [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:File ],
+            owl:someValuesFrom d3f:Directory ],
         d3f:DiscoveryTechnique .
 
 d3f:T1084 a owl:Class ;
@@ -11533,11 +11533,11 @@ d3f:T1098.001 a owl:Class,
     d3f:definition "Adversaries may add adversary-controlled credentials to a cloud account to maintain persistent access to victim accounts and instances within the environment." ;
     d3f:produces d3f:IntranetAdministrativeNetworkTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:creates ;
-            owl:someValuesFrom d3f:Credential ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:creates ;
+            owl:someValuesFrom d3f:Credential ],
         d3f:T1098 .
 
 d3f:T1098.002 a owl:Class,
@@ -11743,17 +11743,17 @@ d3f:T1110.003 a owl:Class,
     d3f:modifies d3f:AuthenticationLog ;
     d3f:produces d3f:Authentication ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:Password ],
+            owl:onProperty d3f:may-create ;
+            owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
         [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:Authentication ],
         [ a owl:Restriction ;
+            owl:onProperty d3f:accesses ;
+            owl:someValuesFrom d3f:Password ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:AuthenticationLog ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
-            owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
         d3f:T1110 .
 
 d3f:T1110.004 a owl:Class,
@@ -11765,11 +11765,11 @@ d3f:T1110.004 a owl:Class,
     d3f:modifies d3f:AuthenticationLog ;
     d3f:produces d3f:Authentication ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:Authentication ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-create ;
             owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:produces ;
+            owl:someValuesFrom d3f:Authentication ],
         [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:AuthenticationLog ],
@@ -11805,11 +11805,11 @@ d3f:T1113 a owl:Class,
     d3f:may-access d3f:DisplayServer ;
     d3f:may-invoke d3f:GetScreenCapture ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-invoke ;
-            owl:someValuesFrom d3f:GetScreenCapture ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
             owl:someValuesFrom d3f:DisplayServer ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-invoke ;
+            owl:someValuesFrom d3f:GetScreenCapture ],
         d3f:CollectionTechnique .
 
 d3f:T1114.001 a owl:Class,
@@ -11942,10 +11942,10 @@ d3f:T1124 a owl:Class,
         d3f:GetSystemTime ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
-            owl:someValuesFrom d3f:CreateProcess ],
+            owl:someValuesFrom d3f:GetSystemTime ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
-            owl:someValuesFrom d3f:GetSystemTime ],
+            owl:someValuesFrom d3f:CreateProcess ],
         d3f:DiscoveryTechnique .
 
 d3f:T1125 a owl:Class,
@@ -11976,11 +11976,11 @@ d3f:T1127.001 a owl:Class,
     d3f:modifies d3f:CompilerConfigurationFile ;
     d3f:runs d3f:Compiler ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:CompilerConfigurationFile ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:runs ;
             owl:someValuesFrom d3f:Compiler ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:CompilerConfigurationFile ],
         d3f:T1127 .
 
 d3f:T1127.002 a owl:Class ;
@@ -12050,10 +12050,10 @@ d3f:T1133 a owl:Class,
         d3f:NetworkSession ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:Authorization ],
+            owl:someValuesFrom d3f:NetworkSession ],
         [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:NetworkSession ],
+            owl:someValuesFrom d3f:Authorization ],
         [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:Authentication ],
@@ -12164,10 +12164,10 @@ d3f:T1137.001 a owl:Class,
     d3f:may-modify d3f:ExecutableScript,
         d3f:SystemConfigurationDatabaseRecord ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
+            owl:onProperty d3f:may-add ;
             owl:someValuesFrom d3f:ExecutableScript ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-add ;
+            owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:ExecutableScript ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
@@ -12230,11 +12230,11 @@ d3f:T1137.006 a owl:Class,
             owl:onProperty d3f:adds ;
             owl:someValuesFrom d3f:Software ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabase ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:OfficeApplication ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-modify ;
+            owl:someValuesFrom d3f:SystemConfigurationDatabase ],
         d3f:T1137 .
 
 d3f:T1138 a owl:Class ;
@@ -12265,14 +12265,14 @@ d3f:T1140 a owl:Class,
     d3f:may-add d3f:ExecutableFile ;
     d3f:may-modify d3f:EventLog ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:invokes ;
+            owl:someValuesFrom d3f:CreateProcess ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:EventLog ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-add ;
             owl:someValuesFrom d3f:ExecutableFile ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:CreateProcess ],
         d3f:DefenseEvasionTechnique .
 
 d3f:T1141 a owl:Class ;
@@ -12726,14 +12726,14 @@ d3f:T1187 a owl:Class,
     d3f:modifies d3f:AuthenticationLog ;
     d3f:produces d3f:Authentication ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:produces ;
+            owl:someValuesFrom d3f:Authentication ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:WindowsShortcutFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:AuthenticationLog ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:Authentication ],
         d3f:CredentialAccessTechnique .
 
 d3f:T1188 a owl:Class ;
@@ -12773,11 +12773,11 @@ d3f:T1190 a owl:Class,
     d3f:modifies d3f:ProcessSegment ;
     d3f:produces d3f:InboundInternetNetworkTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:injects ;
-            owl:someValuesFrom d3f:DatabaseQuery ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:ProcessSegment ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:injects ;
+            owl:someValuesFrom d3f:DatabaseQuery ],
         [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:InboundInternetNetworkTraffic ],
@@ -12873,13 +12873,13 @@ d3f:T1197 a owl:Class,
         d3f:OutboundInternetWebTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-produce ;
-            owl:someValuesFrom d3f:OutboundInternetWebTraffic ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-produce ;
             owl:someValuesFrom d3f:IntranetWebNetworkTraffic ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-produce ;
             owl:someValuesFrom d3f:IntranetIPCNetworkTraffic ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-produce ;
+            owl:someValuesFrom d3f:OutboundInternetWebTraffic ],
         d3f:DefenseEvasionTechnique,
         d3f:PersistenceTechnique .
 
@@ -12940,10 +12940,10 @@ d3f:T1203 a owl:Class,
         d3f:StackFrame ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:StackFrame ],
+            owl:someValuesFrom d3f:ProcessCodeSegment ],
         [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:ProcessCodeSegment ],
+            owl:someValuesFrom d3f:StackFrame ],
         d3f:ExecutionTechnique .
 
 d3f:T1204.001 a owl:Class,
@@ -12954,11 +12954,11 @@ d3f:T1204.001 a owl:Class,
     d3f:definition "An adversary may rely upon a user clicking a malicious link in order to gain execution. Users may be subjected to social engineering to get them to click on a link that will lead to code execution. This user action will typically be observed as follow-on behavior from [Spearphishing Link](https://attack.mitre.org/techniques/T1566/002). Clicking on a link may also lead to other execution techniques such as exploitation of a browser or application vulnerability via [Exploitation for Client Execution](https://attack.mitre.org/techniques/T1203). Links may also lead users to download files that require execution via [Malicious File](https://attack.mitre.org/techniques/T1204/002)." ;
     d3f:produces d3f:OutboundInternetWebTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:OutboundInternetWebTraffic ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
             owl:someValuesFrom d3f:URL ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:produces ;
+            owl:someValuesFrom d3f:OutboundInternetWebTraffic ],
         d3f:T1204 .
 
 d3f:T1204.002 a owl:Class,
@@ -13018,11 +13018,11 @@ d3f:T1207 a owl:Class,
     d3f:modifies d3f:SystemConfigurationDatabase ;
     d3f:produces d3f:IntranetAdministrativeNetworkTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:SystemConfigurationDatabase ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:produces ;
+            owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
         d3f:DefenseEvasionTechnique .
 
 d3f:T1208 a owl:Class ;
@@ -13053,14 +13053,14 @@ d3f:T1210 a owl:Class,
         d3f:StackFrame ;
     d3f:produces d3f:IntranetNetworkTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:StackFrame ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:IntranetNetworkTraffic ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:ProcessSegment ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-modify ;
+            owl:someValuesFrom d3f:StackFrame ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:ProcessCodeSegment ],
@@ -13095,13 +13095,13 @@ d3f:T1212 a owl:Class,
             owl:someValuesFrom d3f:AuthenticationService ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:ProcessCodeSegment ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:StackFrame ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
             owl:someValuesFrom d3f:CredentialManagementSystem ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-modify ;
+            owl:someValuesFrom d3f:ProcessCodeSegment ],
         d3f:CredentialAccessTechnique .
 
 d3f:T1213.001 a owl:Class,
@@ -13194,10 +13194,10 @@ d3f:T1218.001 a owl:Class,
         d3f:CreateProcess ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:CreateFile ],
+            owl:someValuesFrom d3f:CreateProcess ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:CreateProcess ],
+            owl:someValuesFrom d3f:CreateFile ],
         d3f:T1218 .
 
 d3f:T1218.002 a owl:Class,
@@ -13223,11 +13223,11 @@ d3f:T1218.003 a owl:Class,
     d3f:invokes d3f:CreateProcess ;
     d3f:may-produce d3f:NetworkTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-produce ;
-            owl:someValuesFrom d3f:NetworkTraffic ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:CreateProcess ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-produce ;
+            owl:someValuesFrom d3f:NetworkTraffic ],
         d3f:T1218 .
 
 d3f:T1218.004 a owl:Class ;
@@ -13321,11 +13321,11 @@ d3f:T1218.014 a owl:Class,
     d3f:may-add d3f:Software ;
     d3f:may-modify d3f:SystemConfigurationDatabase ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabase ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:executes ;
             owl:someValuesFrom d3f:Command ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-modify ;
+            owl:someValuesFrom d3f:SystemConfigurationDatabase ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-add ;
             owl:someValuesFrom d3f:Software ],
@@ -13367,11 +13367,11 @@ d3f:T1220 a owl:Class,
             owl:onProperty d3f:interprets ;
             owl:someValuesFrom d3f:ExecutableScript ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:adds ;
-            owl:someValuesFrom d3f:File ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:CreateProcess ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:adds ;
+            owl:someValuesFrom d3f:File ],
         d3f:DefenseEvasionTechnique .
 
 d3f:T1221 a owl:Class ;
@@ -13582,11 +13582,11 @@ d3f:T1497.003 a owl:Class,
     d3f:may-invoke d3f:GetSystemTime ;
     d3f:may-run d3f:SystemTimeApplication ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-invoke ;
-            owl:someValuesFrom d3f:GetSystemTime ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-run ;
             owl:someValuesFrom d3f:SystemTimeApplication ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-invoke ;
+            owl:someValuesFrom d3f:GetSystemTime ],
         d3f:T1497 .
 
 d3f:T1498.001 a owl:Class,
@@ -13695,11 +13695,11 @@ d3f:T1505.001 a owl:Class,
     d3f:definition "Adversaries may abuse SQL stored procedures to establish persistent access to systems. SQL Stored Procedures are code that can be saved and reused so that database users do not waste time rewriting frequently used SQL queries. Stored procedures can be invoked via SQL statements to the database using the procedure name or via defined events (e.g. when a SQL server application is started/restarted)." ;
     d3f:invokes d3f:CreateProcess ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:CreateProcess ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:creates ;
             owl:someValuesFrom d3f:StoredProcedure ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:invokes ;
+            owl:someValuesFrom d3f:CreateProcess ],
         d3f:T1505 .
 
 d3f:T1505.002 a owl:Class,
@@ -13710,11 +13710,11 @@ d3f:T1505.002 a owl:Class,
     d3f:definition "Adversaries may abuse Microsoft transport agents to establish persistent access to systems. Microsoft Exchange transport agents can operate on email messages passing through the transport pipeline to perform various tasks such as filtering spam, filtering malicious attachments, journaling, or adding a corporate signature to the end of all outgoing emails.(Citation: Microsoft TransportAgent Jun 2016)(Citation: ESET LightNeuron May 2019) Transport agents can be written by application developers and then compiled to .NET assemblies that are subsequently registered with the Exchange server. Transport agents will be invoked during a specified stage of email processing and carry out developer defined tasks." ;
     d3f:modifies d3f:MailServer ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:adds ;
-            owl:someValuesFrom d3f:MessageTransferAgent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:MailServer ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:adds ;
+            owl:someValuesFrom d3f:MessageTransferAgent ],
         d3f:T1505 .
 
 d3f:T1505.003 a owl:Class,
@@ -13726,14 +13726,14 @@ d3f:T1505.003 a owl:Class,
     d3f:modifies d3f:WebServer ;
     d3f:produces d3f:Process ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:WebServer ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:adds ;
             owl:someValuesFrom d3f:WebScriptFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:Process ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:WebServer ],
         d3f:T1505 .
 
 d3f:T1505.004 a owl:Class,
@@ -13790,19 +13790,19 @@ d3f:T1518.001 a owl:Class,
     d3f:may-invoke d3f:GetRunningProcesses ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:FileSystemMetadata ],
+            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-access ;
+            owl:someValuesFrom d3f:KernelProcessTable ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
             owl:someValuesFrom d3f:GetRunningProcesses ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:KernelProcessTable ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-access ;
             owl:someValuesFrom d3f:SystemFirewallConfiguration ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-access ;
+            owl:someValuesFrom d3f:FileSystemMetadata ],
         d3f:T1518 .
 
 d3f:T1519 a owl:Class ;
@@ -13976,10 +13976,10 @@ d3f:T1542.003 a owl:Class,
         d3f:VolumeBootRecord ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:VolumeBootRecord ],
+            owl:someValuesFrom d3f:BootLoader ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:BootLoader ],
+            owl:someValuesFrom d3f:VolumeBootRecord ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:BootSector ],
@@ -14095,11 +14095,11 @@ d3f:T1546.003 a owl:Class,
     d3f:modifies d3f:EventLog ;
     d3f:produces d3f:IntranetAdministrativeNetworkTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:EventLog ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:EventLog ],
         d3f:T1546 .
 
 d3f:T1546.004 a owl:Class,
@@ -14123,17 +14123,17 @@ d3f:T1546.005 a owl:Class,
     d3f:may-modify d3f:ExecutableScript ;
     d3f:modifies d3f:EventLog ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:executes ;
-            owl:someValuesFrom d3f:Command ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
+            owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:ExecutableScript ],
         [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:EventLog ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
+            owl:onProperty d3f:may-create ;
             owl:someValuesFrom d3f:ExecutableScript ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:executes ;
+            owl:someValuesFrom d3f:Command ],
         d3f:T1546 .
 
 d3f:T1546.006 a owl:Class,
@@ -14171,14 +14171,14 @@ d3f:T1546.008 a owl:Class,
     d3f:may-modify d3f:ExecutableBinary,
         d3f:SystemConfigurationDatabaseRecord ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-create ;
             owl:someValuesFrom d3f:IntranetAdministrativeNetworkTraffic ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:ExecutableBinary ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-modify ;
+            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
         d3f:T1546 .
 
 d3f:T1546.009 a owl:Class,
@@ -14190,14 +14190,14 @@ d3f:T1546.009 a owl:Class,
     d3f:loads d3f:SharedLibraryFile ;
     d3f:modifies d3f:SystemConfigurationDatabaseRecord ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
+            owl:onProperty d3f:loads ;
+            owl:someValuesFrom d3f:SharedLibraryFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:CreateProcess ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:loads ;
-            owl:someValuesFrom d3f:SharedLibraryFile ],
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
         d3f:T1546 .
 
 d3f:T1546.010 a owl:Class,
@@ -14209,14 +14209,14 @@ d3f:T1546.010 a owl:Class,
     d3f:loads d3f:SharedLibraryFile ;
     d3f:modifies d3f:SystemConfigurationDatabaseRecord ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
+            owl:onProperty d3f:loads ;
+            owl:someValuesFrom d3f:SharedLibraryFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:CreateProcess ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:loads ;
-            owl:someValuesFrom d3f:SharedLibraryFile ],
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
         d3f:T1546 .
 
 d3f:T1546.011 a owl:Class,
@@ -14268,11 +14268,11 @@ d3f:T1546.014 a owl:Class,
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:PropertyListFile ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
-            owl:someValuesFrom d3f:PropertyListFile ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:ConfigurationResource ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-create ;
+            owl:someValuesFrom d3f:PropertyListFile ],
         d3f:T1546 .
 
 d3f:T1546.015 a owl:Class,
@@ -14284,11 +14284,11 @@ d3f:T1546.015 a owl:Class,
     d3f:modifies d3f:SystemConfigurationDatabase ;
     rdfs:seeAlso <http://dbpedia.org/resource/Component_Object_Model> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabase ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:loads ;
             owl:someValuesFrom d3f:ExecutableBinary ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:SystemConfigurationDatabase ],
         d3f:T1546 .
 
 d3f:T1546.016 a owl:Class ;
@@ -14392,11 +14392,11 @@ d3f:T1547.008 a owl:Class,
     d3f:may-create d3f:SharedLibraryFile ;
     d3f:modifies d3f:SystemServiceSoftware ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:SystemServiceSoftware ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-create ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:SystemServiceSoftware ],
         d3f:T1547 .
 
 d3f:T1547.009 a owl:Class,
@@ -14506,11 +14506,11 @@ d3f:T1548.003 a owl:Class,
     d3f:may-modify d3f:EventLog ;
     d3f:modifies d3f:OperatingSystemConfigurationFile ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:OperatingSystemConfigurationFile ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:EventLog ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:OperatingSystemConfigurationFile ],
         d3f:T1548 .
 
 d3f:T1548.004 a owl:Class,
@@ -14757,14 +14757,14 @@ d3f:T1555.003 a owl:Class,
     d3f:may-access d3f:In-memoryPasswordStore ;
     d3f:may-invoke d3f:ReadFile ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:In-memoryPasswordStore ],
+            owl:onProperty d3f:accesses ;
+            owl:someValuesFrom d3f:DatabaseFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
             owl:someValuesFrom d3f:ReadFile ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:DatabaseFile ],
+            owl:onProperty d3f:may-access ;
+            owl:someValuesFrom d3f:In-memoryPasswordStore ],
         d3f:T1555 .
 
 d3f:T1555.004 a owl:Class ;
@@ -14799,11 +14799,11 @@ d3f:T1556.002 a owl:Class,
     d3f:definition "Adversaries may register malicious password filter dynamic link libraries (DLLs) into the authentication process to acquire user credentials as they are validated." ;
     d3f:modifies d3f:SystemConfigurationDatabaseRecord ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:creates ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:SystemConfigurationDatabaseRecord ],
         d3f:T1556 .
 
 d3f:T1556.003 a owl:Class,
@@ -14815,10 +14815,10 @@ d3f:T1556.003 a owl:Class,
         d3f:OperatingSystemSharedLibraryFile ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:OperatingSystemConfigurationFile ],
+            owl:someValuesFrom d3f:OperatingSystemSharedLibraryFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:OperatingSystemSharedLibraryFile ],
+            owl:someValuesFrom d3f:OperatingSystemConfigurationFile ],
         d3f:T1556 .
 
 d3f:T1556.004 a owl:Class ;
@@ -14995,19 +14995,19 @@ d3f:T1561.001 a owl:Class,
     d3f:modifies d3f:BlockDevice ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:Volume ],
+            owl:someValuesFrom d3f:Partition ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:BootSector ],
+            owl:someValuesFrom d3f:PartitionTable ],
         [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:BlockDevice ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:PartitionTable ],
+            owl:someValuesFrom d3f:Volume ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:Partition ],
+            owl:someValuesFrom d3f:BootSector ],
         d3f:T1561 .
 
 d3f:T1561.002 a owl:Class,
@@ -15019,10 +15019,10 @@ d3f:T1561.002 a owl:Class,
         d3f:PartitionTable ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:PartitionTable ],
+            owl:someValuesFrom d3f:BootSector ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:BootSector ],
+            owl:someValuesFrom d3f:PartitionTable ],
         d3f:T1561 .
 
 d3f:T1562.001 a owl:Class,
@@ -15061,10 +15061,10 @@ d3f:T1562.003 a owl:Class,
     d3f:modifies d3f:ProcessEnvironmentVariable ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:WindowsRegistryKey ],
+            owl:someValuesFrom d3f:UserInitScript ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:UserInitScript ],
+            owl:someValuesFrom d3f:WindowsRegistryKey ],
         [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:ProcessEnvironmentVariable ],
@@ -15109,13 +15109,13 @@ d3f:T1562.009 a owl:Class,
     d3f:may-modify d3f:EndpointHealthBeacon ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:disables ;
-            owl:someValuesFrom d3f:SystemConfigurationInitDatabaseRecord ],
+            owl:someValuesFrom d3f:EndpointSensor ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:EndpointHealthBeacon ],
         [ a owl:Restriction ;
             owl:onProperty d3f:disables ;
-            owl:someValuesFrom d3f:EndpointSensor ],
+            owl:someValuesFrom d3f:SystemConfigurationInitDatabaseRecord ],
         d3f:T1562 .
 
 d3f:T1562.010 a owl:Class,
@@ -15219,11 +15219,11 @@ d3f:T1564.005 a owl:Class,
     d3f:may-modify d3f:SystemConfigurationDatabase ;
     d3f:modifies d3f:Storage ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
-            owl:someValuesFrom d3f:SystemConfigurationDatabase ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:Storage ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-modify ;
+            owl:someValuesFrom d3f:SystemConfigurationDatabase ],
         d3f:T1564 .
 
 d3f:T1564.006 a owl:Class,
@@ -15236,14 +15236,14 @@ d3f:T1564.006 a owl:Class,
     d3f:may-add d3f:VirtualizationSoftware ;
     d3f:may-create d3f:Directory ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:executes ;
-            owl:someValuesFrom d3f:VirtualizationSoftware ],
+            owl:onProperty d3f:may-create ;
+            owl:someValuesFrom d3f:Directory ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-add ;
             owl:someValuesFrom d3f:VirtualizationSoftware ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
-            owl:someValuesFrom d3f:Directory ],
+            owl:onProperty d3f:executes ;
+            owl:someValuesFrom d3f:VirtualizationSoftware ],
         [ a owl:Restriction ;
             owl:onProperty d3f:creates ;
             owl:someValuesFrom d3f:File ],
@@ -15287,10 +15287,10 @@ d3f:T1564.009 a owl:Class,
     d3f:may-create d3f:ResourceFork ;
     d3f:may-modify d3f:ResourceFork ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
+            owl:onProperty d3f:may-create ;
             owl:someValuesFrom d3f:ResourceFork ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
+            owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:ResourceFork ],
         d3f:T1564 .
 
@@ -15382,13 +15382,13 @@ d3f:T1566.002 a owl:Class,
         d3f:URL ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
+            owl:someValuesFrom d3f:InboundInternetMailTraffic ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:URL ],
         [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:Email ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:InboundInternetMailTraffic ],
         d3f:T1566 .
 
 d3f:T1566.003 a owl:Class,
@@ -15400,10 +15400,10 @@ d3f:T1566.003 a owl:Class,
         d3f:URL ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:URL ],
+            owl:someValuesFrom d3f:File ],
         [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:File ],
+            owl:someValuesFrom d3f:URL ],
         d3f:T1566 .
 
 d3f:T1566.004 a owl:Class ;
@@ -15421,10 +15421,10 @@ d3f:T1567.001 a owl:Class,
         d3f:OutboundInternetEncryptedWebTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-produce ;
-            owl:someValuesFrom d3f:OutboundInternetEncryptedWebTraffic ],
+            owl:someValuesFrom d3f:OutboundInternetEncryptedRemoteTerminalTraffic ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-produce ;
-            owl:someValuesFrom d3f:OutboundInternetEncryptedRemoteTerminalTraffic ],
+            owl:someValuesFrom d3f:OutboundInternetEncryptedWebTraffic ],
         d3f:T1567 .
 
 d3f:T1567.002 a owl:Class,
@@ -15566,10 +15566,10 @@ d3f:T1574.002 a owl:Class,
     rdfs:comment "This technique has been revoked by T1574.001" ;
     rdfs:seeAlso "T1574.001" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
+            owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
+            owl:onProperty d3f:may-create ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
         d3f:T1574 ;
     owl:deprecated true .
@@ -15582,10 +15582,10 @@ d3f:T1574.004 a owl:Class,
     d3f:may-create d3f:SharedLibraryFile ;
     d3f:may-modify d3f:SharedLibraryFile ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-create ;
+            owl:onProperty d3f:may-modify ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-modify ;
+            owl:onProperty d3f:may-create ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
         d3f:T1574 .
 
@@ -16569,11 +16569,11 @@ d3f:UnloadLibraryEvent a owl:Class ;
     rdfs:label "Unload Library Event" ;
     d3f:definition "An event where a process unloads a dynamically linked library or module, reducing its memory footprint or functionality." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:SharedLibraryFile ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:LoadLibraryEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:has-participant ;
+            owl:someValuesFrom d3f:SharedLibraryFile ],
         d3f:ProcessEvent .
 
 d3f:UseCaseGoal a owl:Class ;
@@ -16636,11 +16636,11 @@ d3f:UserAccountPasswordChangeEvent a owl:Class ;
     rdfs:label "User Account Password Change Event" ;
     d3f:definition "An event where a user account's password is modified, typically by the user or an administrator." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:UserAccountCreationEvent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
             owl:someValuesFrom d3f:Credential ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:preceded-by ;
+            owl:someValuesFrom d3f:UserAccountCreationEvent ],
         d3f:UserAccountEvent .
 
 d3f:UserAccountPasswordResetEvent a owl:Class ;
@@ -16817,13 +16817,13 @@ d3f:WindowsCreateFileA a owl:Class,
     rdfs:isDefinedBy <https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilea> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtCreateNamedPipeFile ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:WindowsNtCreatePagingFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:WindowsNtCreateFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:invokes ;
+            owl:someValuesFrom d3f:WindowsNtCreateNamedPipeFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:WindowsNtCreateMailslotFile ],
@@ -16839,10 +16839,10 @@ d3f:WindowsCreateProcessA a owl:Class,
     rdfs:isDefinedBy <https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtCreateProcessEx ],
+            owl:someValuesFrom d3f:WindowsNtCreateProcess ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtCreateProcess ],
+            owl:someValuesFrom d3f:WindowsNtCreateProcessEx ],
         d3f:OSAPICreateProcess .
 
 d3f:WindowsCreateRemoteThread a owl:Class,
@@ -17100,10 +17100,10 @@ d3f:WindowsVirtualAllocEx a owl:Class,
     rdfs:isDefinedBy <https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtAllocateVirtualMemory ],
+            owl:someValuesFrom d3f:WindowsNtProtectVirtualMemory ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtProtectVirtualMemory ],
+            owl:someValuesFrom d3f:WindowsNtAllocateVirtualMemory ],
         d3f:OSAPIAllocateMemory .
 
 d3f:WindowsVirtualFree a owl:Class,
@@ -17126,10 +17126,10 @@ d3f:WindowsVirtualProtectEx a owl:Class,
     rdfs:isDefinedBy <https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotectex> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtAllocateVirtualMemory ],
+            owl:someValuesFrom d3f:WindowsNtProtectVirtualMemory ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtProtectVirtualMemory ],
+            owl:someValuesFrom d3f:WindowsNtAllocateVirtualMemory ],
         d3f:OSAPIAllocateMemory .
 
 d3f:WindowsWriteFile a owl:Class,
@@ -17141,10 +17141,10 @@ d3f:WindowsWriteFile a owl:Class,
     rdfs:isDefinedBy <https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtWriteFile ],
+            owl:someValuesFrom d3f:WindowsNtWriteFileGather ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtWriteFileGather ],
+            owl:someValuesFrom d3f:WindowsNtWriteFile ],
         d3f:OSAPIWriteFile .
 
 d3f:WindowsWriteProcessMemory a owl:Class,
@@ -17157,13 +17157,13 @@ d3f:WindowsWriteProcessMemory a owl:Class,
     rdfs:isDefinedBy <https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
+            owl:someValuesFrom d3f:WindowsNtWriteVirtualMemory ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:WindowsNtFlushInstructionCache ],
         [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:WindowsNtProtectVirtualMemory ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:invokes ;
-            owl:someValuesFrom d3f:WindowsNtWriteVirtualMemory ],
         d3f:OSAPIWriteMemory .
 
 d3f:WirelessAttacker a owl:Class ;
@@ -17171,13 +17171,13 @@ d3f:WirelessAttacker a owl:Class ;
     d3f:definition "An attacker who targets wireless communication methods, like Wi-Fi, without needing physical access to the premises." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:WirelessAccessPoint ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:accesses ;
             owl:someValuesFrom d3f:WirelessRouter ],
         [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
             owl:someValuesFrom d3f:PhysicalLink ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:accesses ;
+            owl:someValuesFrom d3f:WirelessAccessPoint ],
         d3f:RemoteAttacker .
 
 d3f:WriteProtectSwitch a owl:Class,
@@ -17661,7 +17661,7 @@ skos:example a owl:AnnotationProperty .
 <wptmp:entity#Reference%20-%20DNS%20Whitelist%20(DNSWL)%20Email%20Authentication%20Method%20Extension> d3f:kb-author "Alessandro Vesely" .
 
 <http://d3fend.mitre.org/ontologies/d3fend.owl> a owl:Ontology ;
-    d3f:release-date "2025-07-31T00:12:00+00:00"^^xsd:dateTime ;
+    d3f:release-date "2025-08-01T00:12:00+00:00"^^xsd:dateTime ;
     dcterms:description "D3FEND is a framework which encodes a countermeasure knowledge base as a knowledge graph. The graph contains the types and relations that define key concepts in the cybersecurity countermeasure domain and the relations necessary to link those concepts to each other. Each of these concepts and relations are linked to references in the cybersecurity literature." ;
     dcterms:license "MIT" ;
     dcterms:title "D3FEND™ - A knowledge graph of cybersecurity countermeasures" ;
@@ -17679,11 +17679,11 @@ d3f:AddUserToGroupEvent a owl:Class ;
     rdfs:label "Add User to Group Event" ;
     d3f:definition "An event where a user is added to a group, granting the user the permissions and privileges associated with the group." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:UserAccount ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:UserAccountCreationEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:has-participant ;
+            owl:someValuesFrom d3f:UserAccount ],
         [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:GroupCreationEvent ],
@@ -17722,11 +17722,11 @@ d3f:ApplicationRestartEvent a owl:Class ;
     rdfs:label "Application Restart Event" ;
     d3f:definition "An event where an application is sequentially stopped and started, typically to refresh its state, apply updates, or resolve issues while preserving its availability." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:precedes ;
-            owl:someValuesFrom d3f:ApplicationStartEvent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:ApplicationStopEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:precedes ;
+            owl:someValuesFrom d3f:ApplicationStartEvent ],
         d3f:ApplicationEvent .
 
 d3f:ApplicationRule a owl:Class ;
@@ -21219,10 +21219,10 @@ Quarantining serves as a protective measure to isolate potentially harmful files
         d3f:File ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:quarantines ;
-            owl:someValuesFrom d3f:File ],
+            owl:someValuesFrom d3f:DatabaseRecord ],
         [ a owl:Restriction ;
             owl:onProperty d3f:quarantines ;
-            owl:someValuesFrom d3f:DatabaseRecord ],
+            owl:someValuesFrom d3f:File ],
         d3f:ContentFiltering .
 
 d3f:CorrelationClustering a owl:Class,
@@ -21372,11 +21372,11 @@ d3f:FilePathOpenFunction a owl:Class,
     d3f:definition "Has an input of a file path, and opens a file handle for reading or writing." ;
     d3f:invokes d3f:OpenFile ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:File ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:OpenFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:accesses ;
+            owl:someValuesFrom d3f:File ],
         d3f:Subroutine .
 
 d3f:ForwardResolutionIPDenylisting a d3f:ForwardResolutionIPDenylisting,
@@ -21617,11 +21617,11 @@ d3f:LoadLibraryEvent a owl:Class ;
     rdfs:label "Load Library Event" ;
     d3f:definition "An event where a process dynamically loads a library or module into its memory space, extending its capabilities." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:ProcessCreationEvent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
             owl:someValuesFrom d3f:SharedLibraryFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:preceded-by ;
+            owl:someValuesFrom d3f:ProcessCreationEvent ],
         d3f:ProcessEvent .
 
 d3f:LocalFileAccessMediation a d3f:LocalFileAccessMediation,
@@ -21736,11 +21736,11 @@ d3f:MemoryDeletionEvent a owl:Class ;
     rdfs:label "Memory Deletion Event" ;
     d3f:definition "An event marking the release or deallocation of memory resources, reclaiming them for reuse within the system." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:preceded-by ;
-            owl:someValuesFrom d3f:MemoryAllocationEvent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
             owl:someValuesFrom d3f:MemoryFreeFunction ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:preceded-by ;
+            owl:someValuesFrom d3f:MemoryAllocationEvent ],
         d3f:MemoryEvent .
 
 d3f:MemoryManagementUnitComponent a owl:Class ;
@@ -27527,8 +27527,6 @@ d3f:writes a owl:ObjectProperty ;
 
 rdfs:label a owl:AnnotationProperty .
 
-owl:versionInfo rdfs:subPropertyOf d3f:d3fend-annotation .
-
 d3f:ATTACKThing a owl:Class ;
     rdfs:label "ATTACK Thing" ;
     d3f:definition "ATTACK things are concepts defined in the ATT&CK Framework." ;
@@ -27576,11 +27574,11 @@ d3f:AccessMediator a owl:Class,
     d3f:mediates-access-to d3f:Resource ;
     d3f:used-by d3f:Agent ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:mediates-access-to ;
-            owl:someValuesFrom d3f:Resource ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:implements ;
             owl:someValuesFrom d3f:AccessControlConfiguration ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:mediates-access-to ;
+            owl:someValuesFrom d3f:Resource ],
         [ a owl:Restriction ;
             owl:onProperty d3f:used-by ;
             owl:someValuesFrom d3f:Agent ],
@@ -27824,16 +27822,16 @@ IEEE Std 1003.1-2017: A file that refers to a device. A block special file is no
     rdfs:seeAlso <https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_79> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:PartitionTable ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:Partition ],
+            owl:someValuesFrom d3f:BootSector ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:Volume ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:BootSector ],
+            owl:someValuesFrom d3f:Partition ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:contains ;
+            owl:someValuesFrom d3f:PartitionTable ],
         d3f:DigitalInformationBearer ;
     skos:altLabel "Block Special File" .
 
@@ -27883,11 +27881,11 @@ d3f:BusNetworkFrame a owl:Class,
     d3f:contains d3f:BusMessage ;
     d3f:definition "A network frame whose layout and timing follow a bus protocol, allowing data to be exchanged across the shared bus medium." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:BusMessage ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:contained-by ;
             owl:someValuesFrom d3f:BusNetworkTraffic ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:contains ;
+            owl:someValuesFrom d3f:BusMessage ],
         d3f:NetworkFrame ;
     skos:altLabel "Bus Frame" .
 
@@ -28789,11 +28787,11 @@ d3f:DatabaseService a owl:Class,
     d3f:executes d3f:DatabaseQuery ;
     d3f:manages d3f:Database ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:executes ;
-            owl:someValuesFrom d3f:DatabaseQuery ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:manages ;
             owl:someValuesFrom d3f:Database ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:executes ;
+            owl:someValuesFrom d3f:DatabaseQuery ],
         d3f:ServiceApplicationProcess .
 
 d3f:DecoyPublicRelease a d3f:DecoyPublicRelease,
@@ -28996,11 +28994,11 @@ Email files may propagate through many storage systems across the an organizatio
     d3f:may-access d3f:MailServer ;
     d3f:synonym "Email Deletion" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:MailServer ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:deletes ;
             owl:someValuesFrom d3f:Email ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-access ;
+            owl:someValuesFrom d3f:MailServer ],
         d3f:FileEviction .
 
 d3f:EquivalenceMatching a owl:Class,
@@ -29157,10 +29155,10 @@ This technique involves validating the consistency between a file's metadata and
     d3f:kb-reference d3f:Reference-GatheringEvidenceModel-DrivenSoftwareEngineeringinAutomatedDigitalForensics ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
-            owl:someValuesFrom d3f:FileMetadata ],
+            owl:someValuesFrom d3f:FileContentBlockData ],
         [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
-            owl:someValuesFrom d3f:FileContentBlockData ],
+            owl:someValuesFrom d3f:FileMetadata ],
         d3f:FileFormatVerification .
 
 d3f:FileSystem a owl:Class,
@@ -29177,13 +29175,13 @@ d3f:FileSystem a owl:Class,
             owl:someValuesFrom d3f:FileSystemLink ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:FileSystemMetadata ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:File ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:Directory ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:contains ;
+            owl:someValuesFrom d3f:FileSystemMetadata ],
         d3f:DigitalInformationBearer .
 
 d3f:Firewall a owl:Class,
@@ -29700,6 +29698,9 @@ d3f:MemoryManagementUnit a owl:Class,
     rdfs:isDefinedBy <https://www.techopedia.com/definition/4768/memory-management-unit-mmu> ;
     rdfs:seeAlso <https://dbpedia.org/page/Memory_management_unit> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:creates ;
+            owl:someValuesFrom d3f:VirtualAddress ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:TranslationLookasideBuffer ],
         [ a owl:Restriction ;
@@ -29708,9 +29709,6 @@ d3f:MemoryManagementUnit a owl:Class,
         [ a owl:Restriction ;
             owl:onProperty d3f:manages ;
             owl:someValuesFrom d3f:Storage ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:creates ;
-            owl:someValuesFrom d3f:VirtualAddress ],
         d3f:ProcessorComponent .
 
 d3f:MemoryProtectionUnit a owl:Class,
@@ -29845,11 +29843,11 @@ d3f:NetworkTrafficPolicyMapping a d3f:NetworkTrafficPolicyMapping,
         "IPS Policy Mapping",
         "Web Security Gateway Policy Mapping" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:queries ;
-            owl:someValuesFrom d3f:NetworkAgent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
             owl:someValuesFrom d3f:AccessControlConfiguration ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:queries ;
+            owl:someValuesFrom d3f:NetworkAgent ],
         d3f:NetworkMapping .
 
 d3f:NumericPatternMatching a owl:Class,
@@ -29954,10 +29952,10 @@ d3f:OTConnectionCommandEvent a owl:Class ;
     d3f:definition "Establish a network connection with a device." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:NetworkTraffic ],
+            owl:someValuesFrom d3f:OTConnectionCommand ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OTConnectionCommand ],
+            owl:someValuesFrom d3f:NetworkTraffic ],
         d3f:OTNetworkManagementCommandEvent .
 
 d3f:OTDeviceConfigurationCommandEvent a owl:Class ;
@@ -31122,13 +31120,13 @@ d3f:SoftwareLibraryFile a owl:Class,
     rdfs:seeAlso <https://dbpedia.org/page/Library_(computing)> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:ExecutableScript ],
+            owl:someValuesFrom d3f:ExecutableBinary ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:Subroutine ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:ExecutableBinary ],
+            owl:someValuesFrom d3f:ExecutableScript ],
         d3f:File .
 
 d3f:SoftwarePackagingTool a owl:Class ;
@@ -31291,11 +31289,11 @@ d3f:SystemVulnerabilityAssessment a d3f:SystemVulnerabilityAssessment,
     d3f:identifies d3f:Vulnerability ;
     d3f:kb-reference d3f:Reference-SoftwareVulnerabilityGraphDatabase ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:evaluates ;
-            owl:someValuesFrom d3f:DigitalSystem ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:identifies ;
             owl:someValuesFrom d3f:Vulnerability ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:evaluates ;
+            owl:someValuesFrom d3f:DigitalSystem ],
         d3f:SystemMapping .
 
 d3f:T1016 a owl:Class,
@@ -31430,11 +31428,11 @@ d3f:T1563 a owl:Class,
     d3f:definition "Adversaries may take control of preexisting sessions with remote services to move laterally in an environment. Users may use valid credentials to log into a service specifically designed to accept remote connections, such as telnet, SSH, and RDP. When a user logs into a service, a session will be established that will allow them to maintain a continuous interaction with that service." ;
     d3f:produces d3f:AdministrativeNetworkTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:AdministrativeNetworkTraffic ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
             owl:someValuesFrom d3f:RemoteSession ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:produces ;
+            owl:someValuesFrom d3f:AdministrativeNetworkTraffic ],
         d3f:LateralMovementTechnique .
 
 d3f:T1573 a owl:Class,
@@ -31753,10 +31751,10 @@ d3f:UnloadModule a owl:Class,
         d3f:KernelModule ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:unloads ;
-            owl:someValuesFrom d3f:KernelModule ],
+            owl:someValuesFrom d3f:HardwareDriver ],
         [ a owl:Restriction ;
             owl:onProperty d3f:unloads ;
-            owl:someValuesFrom d3f:HardwareDriver ],
+            owl:someValuesFrom d3f:KernelModule ],
         d3f:SystemCall .
 
 d3f:UserInterface a owl:Class ;
@@ -32046,11 +32044,6 @@ d3f:d3fend-artifact-data-property a owl:DatatypeProperty ;
     d3f:definition "x d3fend-artifact-data-property y: The artifact x has the data property y." ;
     rdfs:domain d3f:DigitalArtifact ;
     rdfs:subPropertyOf d3f:d3fend-data-property .
-
-d3f:d3fend-external-control-data-property a owl:DatatypeProperty ;
-    rdfs:label "d3fend-external-control-data-property" ;
-    rdfs:subPropertyOf d3f:d3fend-catalog-data-property,
-        d3f:d3fend-data-property .
 
 d3f:detects a owl:ObjectProperty ;
     rdfs:label "detects" ;
@@ -32586,10 +32579,10 @@ d3f:ComputerPlatform a owl:Class,
     rdfs:seeAlso <http://dbpedia.org/resource/Computing_platform> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:HardwareDevice ],
+            owl:someValuesFrom d3f:Firmware ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:Firmware ],
+            owl:someValuesFrom d3f:HardwareDevice ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:OperatingSystem ],
@@ -32899,11 +32892,11 @@ SafeSEH might be applied only to some executable files or modules, allowing an a
 d3f:ExternalControl a owl:Class ;
     rdfs:label "External Control" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:semantic-relation ;
-            owl:someValuesFrom d3f:DefensiveTechnique ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:member-of ;
             owl:someValuesFrom d3f:ControlCatalog ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:semantic-relation ;
+            owl:someValuesFrom d3f:DefensiveTechnique ],
         d3f:ExternalControlThing .
 
 d3f:ExternalThing a owl:Class ;
@@ -33205,13 +33198,13 @@ d3f:LogicalLinkMapping a d3f:LogicalLinkMapping,
         d3f:NetworkNode ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
+            owl:someValuesFrom d3f:NetworkNode ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:maps ;
             owl:someValuesFrom d3f:Network ],
         [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
             owl:someValuesFrom d3f:LogicalLink ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:maps ;
-            owl:someValuesFrom d3f:NetworkNode ],
         d3f:NetworkMapping .
 
 d3f:LogicalRules a owl:Class,
@@ -33274,10 +33267,10 @@ d3f:NetworkResourceAccess a owl:Class,
     d3f:definition "Ephemeral digital artifact comprising a request of a network resource and any response from that network resource." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:NetworkResource ],
+            owl:someValuesFrom d3f:Resource ],
         [ a owl:Restriction ;
             owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:Resource ],
+            owl:someValuesFrom d3f:NetworkResource ],
         d3f:ResourceAccess .
 
 d3f:NetworkTrafficSignatureAnalysis a d3f:NetworkTrafficSignatureAnalysis,
@@ -33529,10 +33522,10 @@ d3f:OTRunCommandEvent a owl:Class ;
     d3f:definition "Commands a device to start or resume a service/program." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OperatingMode ],
+            owl:someValuesFrom d3f:OTRunCommand ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:OTRunCommand ],
+            owl:someValuesFrom d3f:OperatingMode ],
         d3f:OTModifyDeviceOperatingModeCommandEvent .
 
 d3f:OTTimeCommandEvent a owl:Class ;
@@ -33609,17 +33602,17 @@ d3f:OperatingSystem a owl:Class,
     rdfs:seeAlso <http://dbpedia.org/resource/Operating_system>,
         <https://schema.ocsf.io/objects/os> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:Kernel ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:OperatingSystemConfigurationComponent ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:LocalUserAccount ],
+            owl:someValuesFrom d3f:SystemServiceSoftware ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:SystemServiceSoftware ],
+            owl:someValuesFrom d3f:Kernel ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:contains ;
+            owl:someValuesFrom d3f:LocalUserAccount ],
         d3f:DigitalInformationBearer .
 
 d3f:OutputDevice a owl:Class ;
@@ -33681,11 +33674,11 @@ d3f:PhysicalLinkDownEvent a owl:Class ;
     rdfs:label "Physical Link Down Event" ;
     d3f:definition "Carrier or negotiation is lost, or the port is shut, rendering the link non-operational while the medium remains connected." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:precedes ;
-            owl:someValuesFrom d3f:PhysicalLinkDisconnectEvent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:preceded-by ;
             owl:someValuesFrom d3f:PhysicalLinkUpEvent ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:precedes ;
+            owl:someValuesFrom d3f:PhysicalLinkDisconnectEvent ],
         d3f:PhysicalLinkEvent .
 
 d3f:PhysicalLinkMapping a d3f:PhysicalLinkMapping,
@@ -33701,10 +33694,10 @@ d3f:PhysicalLinkMapping a d3f:PhysicalLinkMapping,
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Network_topology#Links> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
-            owl:someValuesFrom d3f:PhysicalLink ],
+            owl:someValuesFrom d3f:NetworkNode ],
         [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
-            owl:someValuesFrom d3f:NetworkNode ],
+            owl:someValuesFrom d3f:PhysicalLink ],
         d3f:NetworkMapping .
 
 d3f:PhysicalLinkUpEvent a owl:Class ;
@@ -33729,11 +33722,11 @@ d3f:PointerValidation a owl:Class,
 d3f:Procedure a owl:Class ;
     rdfs:label "Procedure" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:implements ;
-            owl:someValuesFrom d3f:Technique ],
-        [ a owl:Restriction ;
             owl:allValuesFrom d3f:Step ;
             owl:onProperty d3f:start ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:implements ;
+            owl:someValuesFrom d3f:Technique ],
         d3f:Plan .
 
 d3f:ProcessStartFunction a owl:Class,
@@ -34339,6 +34332,10 @@ d3f:d3fend-display-annotation a owl:AnnotationProperty ;
     rdfs:label "d3fend-display-annotation" ;
     rdfs:subPropertyOf d3f:d3fend-annotation .
 
+d3f:d3fend-external-control-data-property a owl:DatatypeProperty ;
+    rdfs:label "d3fend-external-control-data-property" ;
+    rdfs:subPropertyOf d3f:d3fend-data-property .
+
 d3f:d3fend-kb-annotation-property a owl:AnnotationProperty ;
     rdfs:label "d3fend-kb-annotation-property" ;
     d3f:definition "x d3fend-kb-annotation-property y: The entity x had the d3fend kb annotation y." ;
@@ -34623,14 +34620,14 @@ d3f:CacheMemory a owl:Class,
     rdfs:isDefinedBy <https://whatis.techtarget.com/definition/memory> ;
     rdfs:seeAlso <https://dbpedia.org/page/CPU_cache> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:CacheMemory ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:accessed-by ;
             owl:someValuesFrom d3f:CentralProcessingUnit ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:ProcessSegment ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:CacheMemory ],
         d3f:PrimaryStorage .
 
 d3f:CentralProcessingUnit a owl:Class,
@@ -34647,16 +34644,16 @@ d3f:CentralProcessingUnit a owl:Class,
     rdfs:isDefinedBy <https://en.wikipedia.org/wiki/Central_processing_unit> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:CacheMemory ],
+            owl:someValuesFrom d3f:MemoryProtectionUnit ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:MemoryManagementUnit ],
+            owl:someValuesFrom d3f:CacheMemory ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:ProcessorRegister ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:MemoryProtectionUnit ],
+            owl:someValuesFrom d3f:MemoryManagementUnit ],
         d3f:Processor .
 
 d3f:ChangeDefaultPassword a d3f:ChangeDefaultPassword,
@@ -34678,14 +34675,14 @@ Change the default password as soon as a new device is received. The default cre
     d3f:strengthens d3f:Password,
         d3f:UserAccount ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:hardens ;
-            owl:someValuesFrom d3f:OTController ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:strengthens ;
             owl:someValuesFrom d3f:UserAccount ],
         [ a owl:Restriction ;
             owl:onProperty d3f:strengthens ;
             owl:someValuesFrom d3f:Password ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:hardens ;
+            owl:someValuesFrom d3f:OTController ],
         d3f:StrongPasswordPolicy .
 
 d3f:CommandHistoryLog a owl:Class,
@@ -35078,10 +35075,10 @@ d3f:EmulatedFileAnalysis a d3f:EmulatedFileAnalysis,
     d3f:kb-reference d3f:Reference-Network-levelPolymorphicShellcodeDetectionUsingEmulation ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
-            owl:someValuesFrom d3f:ExecutableFile ],
+            owl:someValuesFrom d3f:DocumentFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
-            owl:someValuesFrom d3f:DocumentFile ],
+            owl:someValuesFrom d3f:ExecutableFile ],
         d3f:FileAnalysis .
 
 d3f:EndpointHealthBeacon a d3f:EndpointHealthBeacon,
@@ -35143,10 +35140,10 @@ File format specifications often define expected values for specific fields. A c
         d3f:Reference-IntroductoryComputerForensics ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
-            owl:someValuesFrom d3f:FileHeaderBlock ],
+            owl:someValuesFrom d3f:FileFooterBlock ],
         [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
-            owl:someValuesFrom d3f:FileFooterBlock ],
+            owl:someValuesFrom d3f:FileHeaderBlock ],
         d3f:FileFormatVerification .
 
 d3f:FreeMemory a owl:Class,
@@ -35558,17 +35555,17 @@ d3f:OTControlLogicProcess a owl:Class,
     d3f:definition "The instructions and algorithms within an OT Controller defined by user programming to interpret inputs, process information, and determine outputs." ;
     d3f:monitors d3f:OTSensor ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:OTLogicVariable ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:communicates-with ;
             owl:someValuesFrom d3f:OTIOModule ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:controls ;
-            owl:someValuesFrom d3f:OTActuator ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:monitors ;
             owl:someValuesFrom d3f:OTSensor ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:contains ;
+            owl:someValuesFrom d3f:OTLogicVariable ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:controls ;
+            owl:someValuesFrom d3f:OTActuator ],
         d3f:ServiceApplicationProcess .
 
 d3f:OTController a owl:Class,
@@ -35640,13 +35637,13 @@ d3f:OTSensor a owl:Class,
         <https://www.vega.com/en-us/products/product-catalog/level/radar> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:RFTransmitter ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:ClientComputer ],
         [ a owl:Restriction ;
             owl:onProperty d3f:writes ;
             owl:someValuesFrom d3f:OTProcessVariable ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-contain ;
+            owl:someValuesFrom d3f:RFTransmitter ],
         d3f:Sensor .
 
 d3f:OTTimeCommand a owl:Class ;
@@ -35725,13 +35722,13 @@ d3f:OrganizationMapping a d3f:OrganizationMapping,
     d3f:may-map d3f:OrganizationalActivity ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
-            owl:someValuesFrom d3f:Dependency ],
+            owl:someValuesFrom d3f:Person ],
         [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
             owl:someValuesFrom d3f:Organization ],
         [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
-            owl:someValuesFrom d3f:Person ],
+            owl:someValuesFrom d3f:Dependency ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-map ;
             owl:someValuesFrom d3f:OrganizationalActivity ],
@@ -36256,14 +36253,14 @@ d3f:T1078 a owl:Class,
         d3f:Authorization ;
     d3f:uses d3f:UserAccount ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:uses ;
-            owl:someValuesFrom d3f:UserAccount ],
+            owl:onProperty d3f:produces ;
+            owl:someValuesFrom d3f:Authorization ],
         [ a owl:Restriction ;
             owl:onProperty d3f:produces ;
             owl:someValuesFrom d3f:Authentication ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:Authorization ],
+            owl:onProperty d3f:uses ;
+            owl:someValuesFrom d3f:UserAccount ],
         d3f:DefenseEvasionTechnique,
         d3f:InitialAccessTechnique,
         d3f:PersistenceTechnique,
@@ -36522,11 +36519,11 @@ d3f:UserToUserMessage a owl:Class,
             owl:onProperty d3f:has-recipient ;
             owl:someValuesFrom d3f:UserAccount ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:has-sender ;
-            owl:someValuesFrom d3f:UserAccount ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:Email ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:has-sender ;
+            owl:someValuesFrom d3f:UserAccount ],
         d3f:DigitalMessage ;
     skos:altLabel "Personal Message",
         "Private Message" .
@@ -36683,11 +36680,11 @@ The following aspects help make browser-based process isolation possible:
         "Remote Browser Isolation",
         "Sandbox" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:restricts ;
-            owl:someValuesFrom d3f:Subroutine ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:isolates ;
             owl:someValuesFrom d3f:Process ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:restricts ;
+            owl:someValuesFrom d3f:Subroutine ],
         d3f:ExecutionIsolation .
 
 d3f:ApplicationConfigurationDatabase a owl:Class,
@@ -37260,11 +37257,11 @@ d3f:RDPEvent a owl:Class ;
     rdfs:label "RDP Event" ;
     d3f:definition "An event involving the Remote Desktop Protocol (RDP), a communication protocol developed by Microsoft that facilitates secure remote access to graphical interfaces on desktops or applications hosted on remote servers. RDP supports multi-channel communication for transferring input, output, and management commands." ;
     rdfs:seeAlso <https://schema.ocsf.io/1.3.0/classes/rdp_activity> ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:unionOf ( d3f:TCPEvent d3f:UDPEvent ) ],
-        [ a owl:Restriction ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
             owl:someValuesFrom d3f:RDPSession ],
+        [ a owl:Class ;
+            owl:unionOf ( d3f:TCPEvent d3f:UDPEvent ) ],
         d3f:ApplicationLayerEvent .
 
 d3f:RDPSession a owl:Class,
@@ -37491,17 +37488,17 @@ Detecting unauthorized user sessions by comparing the duration of a user logon s
 d3f:Step a owl:Class ;
     rdfs:label "Step" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:next ;
-            owl:someValuesFrom d3f:Step ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:end ;
-            owl:someValuesFrom d3f:Step ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:fork ;
+            owl:someValuesFrom d3f:Step ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:next ;
             owl:someValuesFrom d3f:Step ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-be-associated-with ;
             owl:someValuesFrom d3f:Artifact ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:end ;
+            owl:someValuesFrom d3f:Step ],
         d3f:Plan .
 
 d3f:SystemDependencyMapping a d3f:SystemDependencyMapping,
@@ -37566,11 +37563,11 @@ d3f:T1071 a owl:Class,
     d3f:pref-label "Application Layer Protocol C2" ;
     d3f:produces d3f:OutboundInternetNetworkTraffic ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:produces ;
-            owl:someValuesFrom d3f:OutboundInternetNetworkTraffic ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-transfer ;
             owl:someValuesFrom d3f:CertificateFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:produces ;
+            owl:someValuesFrom d3f:OutboundInternetNetworkTraffic ],
         d3f:CommandAndControlTechnique .
 
 d3f:T1134 a owl:Class ;
@@ -37768,11 +37765,11 @@ d3f:AgentAuthentication a d3f:AgentAuthentication,
     d3f:kb-reference d3f:Reference-NIST-Special-Publication-800-53-Revision-5 ;
     d3f:strengthens d3f:UserAccount ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:strengthens ;
-            owl:someValuesFrom d3f:UserAccount ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:enables ;
             owl:someValuesFrom d3f:Harden ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:strengthens ;
+            owl:someValuesFrom d3f:UserAccount ],
         [ a owl:Restriction ;
             owl:onProperty d3f:authenticates ;
             owl:someValuesFrom d3f:Agent ],
@@ -37798,11 +37795,11 @@ d3f:AssetVulnerabilityEnumeration a d3f:AssetVulnerabilityEnumeration,
             owl:onProperty d3f:evaluates ;
             owl:someValuesFrom d3f:Software ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:evaluates ;
-            owl:someValuesFrom d3f:PhysicalArtifact ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:identifies ;
             owl:someValuesFrom d3f:Vulnerability ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:evaluates ;
+            owl:someValuesFrom d3f:PhysicalArtifact ],
         d3f:AssetInventory .
 
 d3f:AuthenticationCacheInvalidation a d3f:AuthenticationCacheInvalidation,
@@ -37898,11 +37895,11 @@ An extension of PKP is Subject Public Key Information Pinning (SPKI) includes pu
         d3f:Reference-End-to-endCertificatePinning,
         d3f:Reference-PublicKeyPinningExtensionForHTTP ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:authenticates ;
-            owl:someValuesFrom d3f:PublicKey ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:hardens ;
             owl:someValuesFrom d3f:Certificate ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:authenticates ;
+            owl:someValuesFrom d3f:PublicKey ],
         d3f:CredentialHardening .
 
 d3f:Classification a owl:Class,
@@ -38096,6 +38093,9 @@ When content is found to not comply with it's content policy, it may be transfor
     d3f:kb-reference d3f:Reference-MethodForContentDisarmandReconstruction_OPSWATInc ;
     d3f:modifies d3f:File ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:filters ;
+            owl:someValuesFrom d3f:DigitalMedia ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:File ],
         [ a owl:Restriction ;
@@ -38104,9 +38104,6 @@ When content is found to not comply with it's content policy, it may be transfor
         [ a owl:Restriction ;
             owl:onProperty d3f:filters ;
             owl:someValuesFrom d3f:FileMetadata ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:filters ;
-            owl:someValuesFrom d3f:DigitalMedia ],
         d3f:ContentFiltering .
 
 d3f:DecoyNetworkResource a d3f:DecoyNetworkResource,
@@ -38236,13 +38233,13 @@ d3f:JobSchedulerSoftware a owl:Class,
         <http://dbpedia.org/resource/Windows_Task_Scheduler> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
+            owl:someValuesFrom d3f:JobSchedule ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:ScheduledJob ],
         [ a owl:Restriction ;
             owl:onProperty d3f:creates ;
             owl:someValuesFrom d3f:ScheduledJob ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:modifies ;
-            owl:someValuesFrom d3f:JobSchedule ],
         d3f:SystemServiceSoftware .
 
 d3f:KerberosTicket a owl:Class,
@@ -38264,20 +38261,20 @@ d3f:Kernel a owl:Class,
     rdfs:isDefinedBy <http://dbpedia.org/resource/Kernel_(operating_system)> ;
     rdfs:seeAlso <https://schema.ocsf.io/objects/kernel> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:KernelProcessTable ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:HardwareDriver ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:manages ;
-            owl:someValuesFrom d3f:OperatingSystemProcess ],
+            owl:onProperty d3f:contains ;
+            owl:someValuesFrom d3f:KernelProcessTable ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:loads ;
+            owl:someValuesFrom d3f:Application ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:KernelModule ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:loads ;
-            owl:someValuesFrom d3f:Application ],
+            owl:onProperty d3f:manages ;
+            owl:someValuesFrom d3f:OperatingSystemProcess ],
         [ a owl:Restriction ;
             owl:onProperty d3f:manages ;
             owl:someValuesFrom d3f:UserProcess ],
@@ -38331,10 +38328,10 @@ d3f:MemoryEvent a owl:Class ;
     rdfs:seeAlso <https://schema.ocsf.io/1.3.0/classes/memory_activity> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:MemoryExtent ],
+            owl:someValuesFrom d3f:MemoryAddress ],
         [ a owl:Restriction ;
             owl:onProperty d3f:has-participant ;
-            owl:someValuesFrom d3f:MemoryAddress ],
+            owl:someValuesFrom d3f:MemoryExtent ],
         d3f:DigitalEvent .
 
 d3f:NTPEvent a owl:Class ;
@@ -38701,11 +38698,11 @@ d3f:T1555 a owl:Class,
     d3f:definition "Adversaries may search for common password storage locations to obtain user credentials.(Citation: F-Secure The Dukes) Passwords are stored in several places on a system, depending on the operating system or application holding the credentials. There are also specific applications and services that store passwords to make them easier for users to manage and maintain, such as password managers and cloud secrets vaults. Once credentials are obtained, they can be used to perform lateral movement and access restricted information." ;
     d3f:may-access d3f:DatabaseFile ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:PasswordStore ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:may-access ;
             owl:someValuesFrom d3f:DatabaseFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:accesses ;
+            owl:someValuesFrom d3f:PasswordStore ],
         d3f:CredentialAccessTechnique .
 
 d3f:T1590 a owl:Class ;
@@ -39038,11 +39035,11 @@ Systems in a decoy environment are typically configured so that some detectable 
     d3f:manages d3f:DecoyArtifact ;
     d3f:synonym "Honeypot" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:manages ;
-            owl:someValuesFrom d3f:DecoyArtifact ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:enables ;
             owl:someValuesFrom d3f:Deceive ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:manages ;
+            owl:someValuesFrom d3f:DecoyArtifact ],
         d3f:DefensiveTechnique .
 
 d3f:EndpointSensor a owl:Class,
@@ -39253,10 +39250,10 @@ d3f:OperationalDependencyMapping a d3f:OperationalDependencyMapping,
         d3f:OrganizationalActivity ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
-            owl:someValuesFrom d3f:Dependency ],
+            owl:someValuesFrom d3f:OrganizationalActivity ],
         [ a owl:Restriction ;
             owl:onProperty d3f:maps ;
-            owl:someValuesFrom d3f:OrganizationalActivity ],
+            owl:someValuesFrom d3f:Dependency ],
         d3f:OperationalActivityMapping .
 
 d3f:OperationalRiskAssessment a d3f:OperationalRiskAssessment,
@@ -39470,14 +39467,14 @@ d3f:T1053 a owl:Class,
     d3f:invokes d3f:CreateProcess ;
     d3f:modifies d3f:JobSchedule ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:executes ;
+            owl:someValuesFrom d3f:ScheduledJob ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:invokes ;
             owl:someValuesFrom d3f:CreateProcess ],
         [ a owl:Restriction ;
             owl:onProperty d3f:modifies ;
             owl:someValuesFrom d3f:JobSchedule ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:executes ;
-            owl:someValuesFrom d3f:ScheduledJob ],
         d3f:ExecutionTechnique,
         d3f:PersistenceTechnique,
         d3f:PrivilegeEscalationTechnique .
@@ -39983,11 +39980,11 @@ d3f:PartitionTable a owl:Class,
     d3f:may-contain d3f:BootRecord ;
     rdfs:isDefinedBy <http://dbpedia.org/resource/Partition_table> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:BootRecord ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:addresses ;
             owl:someValuesFrom d3f:Partition ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-contain ;
+            owl:someValuesFrom d3f:BootRecord ],
         d3f:DigitalInformationBearer .
 
 d3f:Pipe a owl:Class,
@@ -40475,10 +40472,10 @@ This technique analyzes a user's resource accesses by comparing the user's recen
         d3f:Reference-SystemAndMethodThereofForIdentifyingAndRespondingToSecurityIncidentsBasedOnPreemptiveForensics_PaloAltoNetworksInc ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
-            owl:someValuesFrom d3f:Authentication ],
+            owl:someValuesFrom d3f:Authorization ],
         [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
-            owl:someValuesFrom d3f:Authorization ],
+            owl:someValuesFrom d3f:Authentication ],
         d3f:UserBehaviorAnalysis .
 
 d3f:SystemDaemonMonitoring a d3f:SystemDaemonMonitoring,
@@ -40524,6 +40521,11 @@ d3f:WindowsRegistryKeyEvent a owl:Class ;
             owl:someValuesFrom d3f:WindowsRegistryKey ],
         d3f:WindowsRegistryEvent .
 
+d3f:d3fend-annotation a owl:AnnotationProperty ;
+    rdfs:label "d3fend-annotation" ;
+    d3f:definition "x d3fend-annotation y: The d3fend object x has the annotation y." ;
+    rdfs:subPropertyOf owl:versionInfo .
+
 d3f:restores a owl:ObjectProperty ;
     rdfs:label "restores" ;
     d3f:definition "x restores y: The entity x returns entity y to its known-good or previous state." ;
@@ -40553,10 +40555,10 @@ d3f:Certificate a owl:Class,
     rdfs:seeAlso <https://schema.ocsf.io/objects/certificate> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:PublicKey ],
+            owl:someValuesFrom d3f:Identifier ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:Identifier ],
+            owl:someValuesFrom d3f:PublicKey ],
         d3f:DigitalInformationBearer ;
     skos:altLabel "Public Key Certificate" .
 
@@ -40773,10 +40775,6 @@ d3f:T1070 a owl:Class ;
     d3f:definition "Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary’s actions. Typically these artifacts are used as defensive indicators related to monitored events, such as strings from downloaded files, logs that are generated from user actions, and other data analyzed by defenders. Location, format, and type of artifact (such as command or login history) are often specific to each platform." ;
     rdfs:subClassOf d3f:DefenseEvasionTechnique .
 
-d3f:d3fend-annotation a owl:AnnotationProperty ;
-    rdfs:label "d3fend-annotation" ;
-    d3f:definition "x d3fend-annotation y: The d3fend object x has the annotation y." .
-
 d3f:loads a owl:ObjectProperty ;
     rdfs:label "loads" ;
     d3f:definition "x loads y: The technique or process x transfers a software from a storage y to a computer's memory for subsequent execution." ;
@@ -40988,14 +40986,14 @@ d3f:WindowsRegistryKey a owl:Class,
     rdfs:seeAlso <https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-hives>,
         <https://schema.ocsf.io/objects/registry_key> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:WindowsRegistryKey ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:windows-registry-key ;
             owl:someValuesFrom xsd:string ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:WindowsRegistryValue ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-contain ;
+            owl:someValuesFrom d3f:WindowsRegistryKey ],
         d3f:SystemConfigurationDatabaseRecord .
 
 d3f:adds a owl:ObjectProperty ;
@@ -41113,11 +41111,11 @@ d3f:FileAnalysis a d3f:FileAnalysis,
     d3f:kb-article """## Technique Overview
 Some techniques use file signatures or file metadata to compare against historical collections of malware. Files may also be compared against a source of ground truth such as cryptographic signatures. Examining files for potential malware using pattern matching against file contents/file behavior. Binary code may be dissembled and analyzed for predictive malware behavior, such as API call signatures. Analysis might occur within a protected environment such as a sandbox or live system.""" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:enables ;
-            owl:someValuesFrom d3f:Detect ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:analyzes ;
             owl:someValuesFrom d3f:File ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:enables ;
+            owl:someValuesFrom d3f:Detect ],
         d3f:DefensiveTechnique .
 
 d3f:FileHashing a d3f:FileHashing,
@@ -41274,6 +41272,12 @@ d3f:Weakness a owl:Class ;
     d3f:definition "A weakness is a condition in a software, firmware, hardware, or service component that, under certain circumstances, could contribute to the introduction of vulnerabilities." ;
     rdfs:subClassOf d3f:D3FENDCore .
 
+d3f:d3fend-catalog-data-property a owl:DatatypeProperty ;
+    rdfs:label "d3fend-catalog-data-property" ;
+    rdfs:subPropertyOf d3f:d3fend-data-property,
+        d3f:d3fend-external-control-data-property ;
+    skos:altLabel "d3fend-vendor-registry-data-property"@en .
+
 d3f:identifies a owl:ObjectProperty ;
     rdfs:label "identifies" ;
     d3f:definition "x identifies y: The entity x recognizes or brings attention to entity y, making it distinct or clear through naming, description, or discovery." ;
@@ -41404,11 +41408,11 @@ Hardware process isolation is commonly implemented through Direct Memory Access 
     d3f:restricts d3f:CreateProcess ;
     d3f:synonym "Virtualization" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:isolates ;
-            owl:someValuesFrom d3f:Process ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:restricts ;
             owl:someValuesFrom d3f:CreateProcess ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:isolates ;
+            owl:someValuesFrom d3f:Process ],
         d3f:ExecutionIsolation .
 
 d3f:Host a owl:Class,
@@ -41473,10 +41477,10 @@ d3f:ScheduledJob a owl:Class,
             owl:onProperty d3f:contained-by ;
             owl:someValuesFrom d3f:JobSchedule ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:modified-by ;
+            owl:onProperty d3f:created-by ;
             owl:someValuesFrom d3f:JobSchedulerSoftware ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:created-by ;
+            owl:onProperty d3f:modified-by ;
             owl:someValuesFrom d3f:JobSchedulerSoftware ],
         d3f:OperatingSystemProcess .
 
@@ -41494,11 +41498,6 @@ d3f:authenticates a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://wordnet-rdf.princeton.edu/id/01980375-s> ;
     rdfs:subPropertyOf d3f:associated-with,
         d3f:hardens .
-
-d3f:d3fend-catalog-data-property a owl:DatatypeProperty ;
-    rdfs:label "d3fend-catalog-data-property" ;
-    rdfs:subPropertyOf d3f:d3fend-data-property ;
-    skos:altLabel "d3fend-vendor-registry-data-property"@en .
 
 d3f:restricts a owl:ObjectProperty ;
     rdfs:label "restricts" ;
@@ -41678,11 +41677,11 @@ Initial planning of access model and continuous monitoring of the available user
         d3f:Reference-OverviewOfTheSeccompSandbox ;
     d3f:synonym "System Call Control" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:filters ;
-            owl:someValuesFrom d3f:SystemCall ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:isolates ;
             owl:someValuesFrom d3f:Process ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:filters ;
+            owl:someValuesFrom d3f:SystemCall ],
         d3f:AccessMediation ;
     skos:altLabel "Mandatory Access Control",
         "System Call Mediation" .
@@ -41882,11 +41881,11 @@ Organizations which download or create high volumes of software make management 
         d3f:Reference-EnhancingNetworkSecurityByPreventingUser-InitiatedMalwareExecution_ ;
     d3f:synonym "File Signature Authentication" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:blocks ;
-            owl:someValuesFrom d3f:ExecutableFile ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:filters ;
             owl:someValuesFrom d3f:CreateProcess ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:blocks ;
+            owl:someValuesFrom d3f:ExecutableFile ],
         d3f:ExecutionIsolation .
 
 d3f:NetworkResource a owl:Class,
@@ -42039,10 +42038,10 @@ d3f:DomainTrustPolicy a d3f:DomainTrustPolicy,
         d3f:T1087.002 ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:restricts ;
-            owl:someValuesFrom d3f:DirectoryService ],
+            owl:someValuesFrom d3f:T1087.002 ],
         [ a owl:Restriction ;
             owl:onProperty d3f:restricts ;
-            owl:someValuesFrom d3f:T1087.002 ],
+            owl:someValuesFrom d3f:DirectoryService ],
         d3f:AccessPolicyAdministration .
 
 d3f:FileEncryption a d3f:FileEncryption,
@@ -42098,10 +42097,10 @@ d3f:LocalFilePermissions a d3f:LocalFilePermissions,
         d3f:File ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:restricts ;
-            owl:someValuesFrom d3f:Directory ],
+            owl:someValuesFrom d3f:File ],
         [ a owl:Restriction ;
             owl:onProperty d3f:restricts ;
-            owl:someValuesFrom d3f:File ],
+            owl:someValuesFrom d3f:Directory ],
         d3f:AccessPolicyAdministration .
 
 d3f:MemoryBlock a owl:Class,
@@ -42186,10 +42185,10 @@ d3f:StackFrame a owl:Class,
     rdfs:seeAlso <http://dbpedia.org/resource/Call_stack> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:StackFrameCanary ],
+            owl:someValuesFrom d3f:Pointer ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:Pointer ],
+            owl:someValuesFrom d3f:StackFrameCanary ],
         d3f:StackComponent ;
     skos:altLabel "Activation Frame",
         "Activation Record" .
@@ -42280,14 +42279,14 @@ d3f:TechniqueReference a owl:Class ;
     d3f:definition "A reference used to develop KB articles." ;
     d3f:pref-label "Technique Reference" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:has-link ;
-            owl:someValuesFrom xsd:anyURI ],
+            owl:onProperty d3f:kb-reference-of ;
+            owl:someValuesFrom d3f:DefensiveTechnique ],
         [ a owl:Restriction ;
             owl:onProperty d3f:kb-reference-title ;
             owl:someValuesFrom xsd:string ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:kb-reference-of ;
-            owl:someValuesFrom d3f:DefensiveTechnique ],
+            owl:onProperty d3f:has-link ;
+            owl:someValuesFrom xsd:anyURI ],
         d3f:D3FENDKBThing .
 
 d3f:CWE-1390 a owl:Class ;
@@ -42401,14 +42400,14 @@ d3f:ExecutableBinary a owl:Class,
     d3f:may-interpret d3f:ExecutableScript ;
     rdfs:seeAlso <http://dbpedia.org/resource/Executable> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:may-interpret ;
-            owl:someValuesFrom d3f:ExecutableScript ],
+            owl:onProperty d3f:contains ;
+            owl:someValuesFrom d3f:ImageCodeSegment ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:ImageDataSegment ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:contains ;
-            owl:someValuesFrom d3f:ImageCodeSegment ],
+            owl:onProperty d3f:may-interpret ;
+            owl:someValuesFrom d3f:ExecutableScript ],
         d3f:ExecutableFile .
 
 d3f:ExecutableDenylisting a d3f:ExecutableDenylisting,
@@ -42463,11 +42462,11 @@ On a Windows machine the Windows Defender Application Control (WDAC) policy enfo
         d3f:Reference-MethodAndApparatusForIncreasingTheSpeedAtWhichComputerVirusesAreDetected_McAfeeLLC ;
     d3f:synonym "Executable Blacklisting" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:filters ;
-            owl:someValuesFrom d3f:CreateProcess ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:blocks ;
             owl:someValuesFrom d3f:ExecutableFile ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:filters ;
+            owl:someValuesFrom d3f:CreateProcess ],
         d3f:ExecutionIsolation .
 
 d3f:GuidelineReference a owl:Class ;
@@ -42627,14 +42626,14 @@ d3f:Authentication a owl:Class,
     rdfs:seeAlso <http://dbpedia.org/resource/Authentication>,
         <http://wordnet-rdf.princeton.edu/id/00155053-n> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:originates-from ;
+            owl:someValuesFrom d3f:PhysicalLocation ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:authenticates ;
             owl:someValuesFrom d3f:User ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-create ;
             owl:someValuesFrom d3f:IntranetNetworkTraffic ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:originates-from ;
-            owl:someValuesFrom d3f:PhysicalLocation ],
         d3f:DefensiveAction .
 
 d3f:Email a owl:Class,
@@ -42721,17 +42720,17 @@ d3f:CredentialAccessTechnique a owl:Class,
     d3f:may-access d3f:PasswordFile ;
     d3f:may-invoke d3f:CreateProcess ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:accesses ;
-            owl:someValuesFrom d3f:Credential ],
+            owl:onProperty d3f:may-access ;
+            owl:someValuesFrom d3f:PasswordFile ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-invoke ;
             owl:someValuesFrom d3f:CreateProcess ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:may-access ;
-            owl:someValuesFrom d3f:PasswordFile ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:enables ;
             owl:someValuesFrom d3f:TA0006 ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:accesses ;
+            owl:someValuesFrom d3f:Credential ],
         d3f:ATTACKEnterpriseTechnique,
         d3f:OffensiveTechnique .
 
@@ -42802,17 +42801,17 @@ d3f:DefensiveTechnique a d3f:DefensiveTechnique,
         "Technical Security Control" ;
     rdfs:seeAlso <https://csrc.nist.gov/glossary/term/security_control> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:d3fend-id ;
-            owl:someValuesFrom xsd:string ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:kb-reference ;
-            owl:someValuesFrom d3f:TechniqueReference ],
+            owl:onProperty d3f:date ;
+            owl:someValuesFrom xsd:dateTime ],
         [ a owl:Restriction ;
             owl:onProperty d3f:enables ;
             owl:someValuesFrom d3f:DefensiveTactic ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:date ;
-            owl:someValuesFrom xsd:dateTime ],
+            owl:onProperty d3f:kb-reference ;
+            owl:someValuesFrom d3f:TechniqueReference ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:d3fend-id ;
+            owl:someValuesFrom xsd:string ],
         d3f:CyberTechnique .
 
 d3f:DiscoveryTechnique a owl:Class,
@@ -42920,11 +42919,11 @@ d3f:CWE-284 a owl:Class ;
 d3f:ATTACKEnterpriseMitigation a owl:Class ;
     rdfs:label "ATTACK Enterprise Mitigation" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:d3fend-comment ;
-            owl:someValuesFrom xsd:string ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:semantic-relation ;
             owl:someValuesFrom d3f:DefensiveTechnique ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:d3fend-comment ;
+            owl:someValuesFrom xsd:string ],
         d3f:ATTACKEnterpriseThing .
 
 d3f:Subroutine a owl:Class,
@@ -43061,11 +43060,11 @@ d3f:UserAccount a owl:Class,
     rdfs:seeAlso <http://dbpedia.org/resource/User_account>,
         <https://schema.ocsf.io/objects/user> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:used-by ;
-            owl:someValuesFrom d3f:Agent ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:identified-by ;
             owl:someValuesFrom d3f:DigitalIdentity ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:used-by ;
+            owl:someValuesFrom d3f:Agent ],
         d3f:DigitalInformationBearer .
 
 d3f:OutboundTrafficFiltering a d3f:OutboundTrafficFiltering,
@@ -43117,14 +43116,14 @@ d3f:NetworkTraffic a owl:Class,
     rdfs:seeAlso <http://dbpedia.org/resource/Network_traffic>,
         <https://schema.ocsf.io/objects/network_traffic> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty d3f:may-contain ;
+            owl:someValuesFrom d3f:DomainName ],
+        [ a owl:Restriction ;
             owl:onProperty d3f:originates-from ;
             owl:someValuesFrom d3f:PhysicalLocation ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:NetworkPacket ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:DomainName ],
         d3f:DigitalInformationBearer ;
     skos:altLabel "Data Traffic" .
 
@@ -43162,17 +43161,14 @@ d3f:Process a owl:Class,
     rdfs:isDefinedBy <http://dbpedia.org/resource/Process_(computing)> ;
     rdfs:seeAlso <https://schema.ocsf.io/objects/process> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty d3f:process-user ;
-            owl:someValuesFrom d3f:UserAccount ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:process-environmental-variables ;
-            owl:someValuesFrom xsd:string ],
+            owl:onProperty d3f:process-identifier ;
+            owl:someValuesFrom xsd:integer ],
         [ a owl:Restriction ;
             owl:onProperty d3f:uses ;
             owl:someValuesFrom d3f:Resource ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:process-identifier ;
-            owl:someValuesFrom xsd:integer ],
+            owl:onProperty d3f:process-image-path ;
+            owl:someValuesFrom d3f:ExecutableBinary ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:ProcessImage ],
@@ -43180,14 +43176,17 @@ d3f:Process a owl:Class,
             owl:onProperty d3f:instructed-by ;
             owl:someValuesFrom d3f:Software ],
         [ a owl:Restriction ;
-            owl:onProperty d3f:process-image-path ;
-            owl:someValuesFrom d3f:ExecutableBinary ],
-        [ a owl:Restriction ;
             owl:onProperty d3f:process-command-line-arguments ;
+            owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:process-environmental-variables ;
             owl:someValuesFrom xsd:string ],
         [ a owl:Restriction ;
             owl:onProperty d3f:process-security-context ;
             owl:someValuesFrom xsd:string ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:process-user ;
+            owl:someValuesFrom d3f:UserAccount ],
         [ a owl:Restriction ;
             owl:onProperty d3f:may-execute ;
             owl:someValuesFrom d3f:Thread ],
@@ -43340,13 +43339,13 @@ d3f:File a owl:Class,
     rdfs:seeAlso <http://wordnet-rdf.princeton.edu/id/06521201-n> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty d3f:may-contain ;
-            owl:someValuesFrom d3f:URL ],
-        [ a owl:Restriction ;
-            owl:onProperty d3f:may-contain ;
             owl:someValuesFrom d3f:File ],
         [ a owl:Restriction ;
             owl:onProperty d3f:contains ;
             owl:someValuesFrom d3f:FileSection ],
+        [ a owl:Restriction ;
+            owl:onProperty d3f:may-contain ;
+            owl:someValuesFrom d3f:URL ],
         d3f:Resource .
 
 d3f:preceded-by a owl:ObjectProperty ;
@@ -43833,17 +43832,17 @@ d3f:CCIControl a owl:Class ;
         d3f:ExternalControl .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( d3f:CoefficientOfVariation d3f:InterquartileRange d3f:MeanAbsoluteDeviation d3f:MedianAbsoluteDeviation d3f:Range d3f:StandardDeviation d3f:Variance ) .
-
-[] a owl:AllDisjointClasses ;
     owl:members ( d3f:Clustering d3f:Grouping d3f:Histogramming ) .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( d3f:Kurtosis d3f:Moments d3f:Skewness ) .
 
 [] a owl:AllDisjointClasses ;
+    owl:members ( d3f:Classifying d3f:Forecasting d3f:Generation d3f:Matching d3f:Summarizing ) .
+
+[] a owl:AllDisjointClasses ;
     owl:members ( d3f:GeometricMean d3f:HarmonicMean d3f:Mean d3f:Median d3f:Mode d3f:TrimmedMean d3f:WeightedMean ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( d3f:Classifying d3f:Forecasting d3f:Generation d3f:Matching d3f:Summarizing ) .
+    owl:members ( d3f:CoefficientOfVariation d3f:InterquartileRange d3f:MeanAbsoluteDeviation d3f:MedianAbsoluteDeviation d3f:Range d3f:StandardDeviation d3f:Variance ) .
 

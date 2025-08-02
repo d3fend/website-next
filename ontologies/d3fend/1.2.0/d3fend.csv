@@ -92,6 +92,9 @@ D3-BSE,Detect,,Byte Sequence Emulation,,Analyzing sequences of bytes and determi
 D3-CA,Detect,,Certificate Analysis,,"Analyzing Public Key Infrastructure certificates to detect if they have been misconfigured or spoofed using both network traffic, certificate fields and third-party logs."
 D3-PCA,Detect,,,Passive Certificate Analysis,Collecting host certificates from network traffic or other passive sources like a certificate transparency log and analyzing them for unauthorized activity.
 D3-ACA,Detect,,,Active Certificate Analysis,Actively collecting PKI certificates by connecting to the server and downloading its server certificates for analysis.
+D3-MA,Detect,Message Analysis,,,
+D3-SRA,Detect,,Sender Reputation Analysis,,Ascertaining sender reputation based on information associated with a message (e.g. email/instant messaging).
+D3-SMRA,Detect,,Sender MTA Reputation Analysis,,Characterizing the reputation of mail transfer agents (MTA) to determine the security risk in emails.
 D3-PA,Detect,Process Analysis,,,
 D3-FAPA,Detect,,File Access Pattern Analysis,,Analyzing the files accessed by a process to identify unauthorized activity.
 D3-DQSA,Detect,,Database Query String Analysis,,Analyzing database queries to detect [SQL Injection](https://capec.mitre.org/data/definitions/66.html).
@@ -104,9 +107,6 @@ D3-SCA,Detect,,System Call Analysis,,Analyzing system calls to determine whether
 D3-FCA,Detect,,,File Creation Analysis,Analyzing the properties of file create system call invocations.
 D3-PSMD,Detect,,Process Self-Modification Detection,,"Detects processes that modify, change, or replace their own code at runtime."
 D3-PCSV,Detect,,Process Code Segment Verification,,"Comparing the ""text"" or ""code"" memory segments to a source of truth."
-D3-MA,Detect,Message Analysis,,,
-D3-SRA,Detect,,Sender Reputation Analysis,,Ascertaining sender reputation based on information associated with a message (e.g. email/instant messaging).
-D3-SMRA,Detect,,Sender MTA Reputation Analysis,,Characterizing the reputation of mail transfer agents (MTA) to determine the security risk in emails.
 D3-FA,Detect,File Analysis,,,
 D3-FH,Detect,,File Hashing,,Employing file hash comparisons to detect known malware.
 D3-FCOA,Detect,,File Content Analysis,,Employing a pattern matching algorithm to statically analyze the content of files.
