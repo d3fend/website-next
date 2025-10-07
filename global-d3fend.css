@@ -442,6 +442,9 @@ code {
 .glow {
   text-shadow: 2px 2px 10px #3bf730;
 }
+.glow-red {
+  text-shadow: 2px 2px 10px red;
+}
 
 .glow:hover {
   text-shadow: 2px 2px 10px #4d87fa;

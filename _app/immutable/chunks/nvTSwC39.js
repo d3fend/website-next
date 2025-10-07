@@ -1,0 +1,1 @@
+import{ad as c,v as o,ae as d,an as i,aQ as m}from"./DOkXS4i_.js";function k(e,n,a){c(()=>{var r=o(()=>n(e,a==null?void 0:a())||{});if(a&&(r!=null&&r.update)){var s=!1,t={};d(()=>{var f=a();i(f),s&&m(t,f)&&(t=f,r.update(f))}),s=!0}if(r!=null&&r.destroy)return()=>r.destroy()})}export{k as a};

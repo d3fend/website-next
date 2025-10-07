@@ -1,1 +1,6 @@
-{"HIDE_CLASSIFICATION_BANNER":true,"CLASSIFICATION_BANNER_TEXT":"UNCLASSIFIED","CLASSIFICATION_BANNER_BG_COLOR":"#008000","CLASSIFICATION_BANNER_TEXT_COLOR":"white"}
+{
+  "HIDE_CLASSIFICATION_BANNER" : false,
+  "CLASSIFICATION_BANNER_TEXT" : "WARNING: this is an unstable, preview build of the next version of D3FEND. If you find any issues, please report them <a href='https://github.com/d3fend/d3fend/issues/new'>here</a>",
+  "CLASSIFICATION_BANNER_BG_COLOR" : "lightblue",
+  "CLASSIFICATION_BANNER_TEXT_COLOR" : "black"
+}

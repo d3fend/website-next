@@ -1,0 +1,14 @@
+import"./CWj6FrbW.js";import{o as M}from"./CKLSrT8G.js";import{p as j,ap as B,aq as C,f as q,s as n,a as m,b as d,c as F,X as i,V as g,d as p,r as $,e as P,aU as R,g as S,t as U}from"./DOkXS4i_.js";import{i as V}from"./BqfZpZLV.js";import{k as X}from"./Bzdg1BGb.js";import{b as z}from"./DODyupNj.js";import{b as c}from"./DpS3c_AD.js";import{_ as H}from"./DetYpOfP.js";import{t as k,T as I}from"./Ba48h5AQ.js";import{b as J,T as K,c as u,d as Q}from"./OR5gwmyQ.js";var W=q("<small>There are no digital artifacts defined on this offensive technique (yet). Please consider <a>contributing</a> an addition to D3FEND.</small>"),Y=q('<br/> <div class="center shrink"><!></div> <br/> <br/> <!>',1);function ce(T,_){j(_,!0);const x=new K,v=new Set;_.off_to_def.results.bindings.forEach(e=>{"def_tactic_label"in e&&v.add(e.def_tactic_label.value)});let r=B(C(["Model"])),h=Array.from(v).sort(function(e,a){return k[e]-k[a]});const y=R(()=>N(_.off_to_def.results.bindings,x,i(r)));M(()=>{J(h,i(r))&&g(r,[],!0)});function N(e,a,t){let f=`graph LR
+`;a.reset();for(const l of e)Object.hasOwn(l,"def_tech")&&(f+=D(l,a,t)),a.edge_is_unique(l.off_tech_label.value,l.off_artifact_rel_label.value,l.off_artifact_label.value)&&(f+=A(l));return f}function D(e,a,t){let f="";if(!a.edge_is_unique(e.def_tech_label.value,e.def_artifact_rel_label.value,e.off_artifact_label.value))return f;if(!t.includes(e.def_tactic_label.value)){const l=u(e.def_tech.value),o=e.def_tech_label.value;f+=`${l}["${o}"] --> | ${e.def_artifact_rel_label.value.replace(/ /g,"")} | ${u(e.off_artifact.value)}["${e.off_artifact_label.value}"];
+`,a.edge_is_unique(e.def_tech.value,e.def_tactic_label.value,e.off_tech_id.value)&&(f+=`${l}["${o}"] -.-> | ${"may-"+e.def_tactic_label.value.toLowerCase()} | ${e.off_tech_id.value.replace(/ |\./g,"")}["${e.off_tech_label.value}"];
+`),f+=`class ${o.replace(/ |\./g,"")} DefensiveTechniqueNode; 
+        class ${e.off_artifact_label.value.replace(/ /g,"")} ArtifactNode; 
+        click ${l} href "${c}/technique/d3f:${l}";
+`}return f}function A(e){const a=u(e.off_artifact.value),t=e.off_tech_id.value.replace(/ |\./g,"");return`${t}["${e.off_tech_label.value}"] --> | ${e.off_artifact_rel_label.value.replace(/ /g,"")} | ${a}["${e.off_artifact_label.value}"]; 
+    
+    class ${t} OffensiveTechniqueNode; 
+    class ${a} ArtifactNode;
+    click ${a} href "${c}/dao/artifact/d3f:${a}";
+    click ${t} href "${Q(e.off_tech_id.value)}";
+    click ${a} href "${c}/dao/artifact/d3f:${a}";
+`}var b=Y(),s=n(m(b),2),G=p(s);I(G,{get toggles(){return h},get selected(){return i(r)},set selected(e){g(r,e,!0)}}),$(s);var O=n(s,6);{var E=e=>{var a=P(),t=m(a);X(t,()=>i(r),f=>{H(f,{get mermaid_text(){return i(y)}})}),d(e,a)},L=e=>{var a=W(),t=n(p(a));S(),$(a),U(()=>z(t,"href",`${c??""}/contribute`)),d(e,a)};V(O,e=>{_.off_to_def.results.bindings.length>0?e(E):e(L,!1)})}d(T,b),F()}export{ce as G};

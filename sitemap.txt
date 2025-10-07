@@ -502,6 +502,7 @@
 /dao/artifact/d3f:OTEngineeringWorkstation
 /dao/artifact/d3f:OTErrorMessage
 /dao/artifact/d3f:OTEstablishRemoteConnectionCommand
+/dao/artifact/d3f:OTHumanMachineInterface
 /dao/artifact/d3f:OTIOModule
 /dao/artifact/d3f:OTLogicVariable
 /dao/artifact/d3f:OTModeSwitch
@@ -584,6 +585,7 @@
 /dao/artifact/d3f:PeripheralHubFirmware
 /dao/artifact/d3f:PersonalComputer
 /dao/artifact/d3f:PhysicalAddress
+/dao/artifact/d3f:PhysicalDataDiode
 /dao/artifact/d3f:PhysicalLink
 /dao/artifact/d3f:Pipe
 /dao/artifact/d3f:Pointer
@@ -2010,6 +2012,7 @@
 /technique/d3f:Application-basedProcessIsolation
 /technique/d3f:ApplicationConfigurationHardening
 /technique/d3f:ApplicationHardening
+/technique/d3f:ApplicationProtocolCommandAnalysis
 /technique/d3f:AssetInventory
 /technique/d3f:AssetVulnerabilityEnumeration
 /technique/d3f:AuthenticationCacheInvalidation
@@ -2061,6 +2064,8 @@
 /technique/d3f:DecoySessionToken
 /technique/d3f:DecoyUserCredential
 /technique/d3f:DirectPhysicalLinkMapping
+/technique/d3f:DirectionalNetworkLink
+/technique/d3f:DisableRemoteAccess
 /technique/d3f:DiskEncryption
 /technique/d3f:DiskErasure
 /technique/d3f:DiskFormatting
@@ -2075,7 +2080,7 @@
 /technique/d3f:EmailRemoval
 /technique/d3f:EmulatedFileAnalysis
 /technique/d3f:EncryptedTunnels
-/technique/d3f:EndpointBasedWebServerAccessMediation
+/technique/d3f:Endpoint-basedWebServerAccessMediation
 /technique/d3f:EndpointHealthBeacon
 /technique/d3f:ExceptionHandlerPointerValidation
 /technique/d3f:ExecutableAllowlisting
@@ -2181,7 +2186,7 @@
 /technique/d3f:ProcessSuspension
 /technique/d3f:ProcessTermination
 /technique/d3f:ProtocolMetadataAnomalyDetection
-/technique/d3f:ProxyBasedWebServerAccessMediation
+/technique/d3f:Proxy-basedWebServerAccessMediation
 /technique/d3f:RFShielding
 /technique/d3f:RPCTrafficAnalysis
 /technique/d3f:ReferenceNullification
@@ -2189,6 +2194,7 @@
 /technique/d3f:ReissueCredential
 /technique/d3f:RelayPatternAnalysis
 /technique/d3f:RemoteFileAccessMediation
+/technique/d3f:RemoteFirmwareUpdateMonitoring
 /technique/d3f:RemoteTerminalSessionDetection
 /technique/d3f:ResourceAccessPatternAnalysis
 /technique/d3f:RestoreAccess
