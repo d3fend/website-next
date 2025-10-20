@@ -2,8 +2,8 @@
   "version": "1.2.0",
   "ontology_version": "1.2.0",
   "release_date": "2025-08-01T00:12:00.000Z",
-  "ontology_hash_sha256": "869c8e4f216b0ec3d123bef9d8d993e92d5a924987c1b53b2d43f809f43376cd",
+  "ontology_hash_sha256": "08fcd299aa10f76227b2a13bc17500b5129e8726cb38c97d2d36780d8385e60f",
   "frontend_version": "0.21.0",
-  "ui_build_date": "2025-10-07T00:48:06.975Z",
+  "ui_build_date": "2025-10-20T17:59:48.207Z",
   "ui_commit": "no repo found"
 }
