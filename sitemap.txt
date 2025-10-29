@@ -670,6 +670,7 @@
 /dao/artifact/d3f:SharedComputer
 /dao/artifact/d3f:SharedLibraryFile
 /dao/artifact/d3f:SharedResourceAccessFunction
+/dao/artifact/d3f:ShellCommand
 /dao/artifact/d3f:Shim
 /dao/artifact/d3f:ShimDatabase
 /dao/artifact/d3f:ShortcutFile
@@ -773,6 +774,7 @@
 /dao/artifact/d3f:VolumeSnapshot
 /dao/artifact/d3f:WebAPIResource
 /dao/artifact/d3f:WebAccessToken
+/dao/artifact/d3f:WebApplication
 /dao/artifact/d3f:WebApplicationFirewall
 /dao/artifact/d3f:WebApplicationServer
 /dao/artifact/d3f:WebFileResource
