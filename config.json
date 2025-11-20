@@ -1,6 +1,6 @@
 {
-  "HIDE_CLASSIFICATION_BANNER" : false,
-  "CLASSIFICATION_BANNER_TEXT" : "WARNING: this is an unstable, preview build of the next version of D3FEND. If you find any issues, please report them <a href='https://github.com/d3fend/d3fend/issues/new'>here</a>",
-  "CLASSIFICATION_BANNER_BG_COLOR" : "lightblue",
-  "CLASSIFICATION_BANNER_TEXT_COLOR" : "black"
+  "SHOW_BANNER" : true,
+  "BANNER_TEXT" : "WARNING: this is an unstable, preview build of the next version of D3FEND. If you find any issues, please report them <a href='https://github.com/d3fend/d3fend/issues/new'>here</a>",
+  "BANNER_BG_COLOR" : "lightblue",
+  "BANNER_TEXT_COLOR" : "black"
 }
