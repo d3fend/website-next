@@ -16,8 +16,7 @@
             "https://cloud.google.com/blog/topics/threat-intelligence/investigating-ivanti-exploitation-persistence/",
             "https://attack.mitre.org/software/S1118/"
         ],
-        "settings": {},
-        "cad_data_version": 1
+        "settings": {}
     },
     "nodes": [
         {

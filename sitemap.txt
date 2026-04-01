@@ -4,8 +4,8 @@
 /api-docs
 /blog
 /cad
+/cad-embed-builder
 /cad-frame
-/cad-view
 /changelog
 /contact
 /contribute
@@ -40,6 +40,7 @@
 /dao/artifact/d3f:ApplicationScanTime
 /dao/artifact/d3f:ApplicationShim
 /dao/artifact/d3f:ArchiveFile
+/dao/artifact/d3f:Artifact
 /dao/artifact/d3f:ArtifactServer
 /dao/artifact/d3f:AssetInventoryAgent
 /dao/artifact/d3f:AsymmetricKey
@@ -93,12 +94,16 @@
 /dao/artifact/d3f:CodecApplication
 /dao/artifact/d3f:CodecLibrary
 /dao/artifact/d3f:CollaborativeSoftware
+/dao/artifact/d3f:CombinationLock
 /dao/artifact/d3f:Command
 /dao/artifact/d3f:CommandHistoryLog
 /dao/artifact/d3f:CommandHistoryLogFile
 /dao/artifact/d3f:CommandLineInterface
 /dao/artifact/d3f:Compiler
 /dao/artifact/d3f:CompilerConfigurationFile
+/dao/artifact/d3f:ComputerCabinet
+/dao/artifact/d3f:ComputerCase
+/dao/artifact/d3f:ComputerEnclosure
 /dao/artifact/d3f:ComputerNetworkNode
 /dao/artifact/d3f:ComputerPlatform
 /dao/artifact/d3f:ComputingImage
@@ -188,6 +193,8 @@
 /dao/artifact/d3f:DomainRegistration
 /dao/artifact/d3f:DomainUserAccount
 /dao/artifact/d3f:DynamicAnalysisTool
+/dao/artifact/d3f:ElectricalSignal
+/dao/artifact/d3f:ElectromagneticSignal
 /dao/artifact/d3f:ElectronicCombinationLock
 /dao/artifact/d3f:Email
 /dao/artifact/d3f:EmailAttachment
@@ -495,6 +502,7 @@
 /dao/artifact/d3f:OTControlProgram
 /dao/artifact/d3f:OTControlVariable
 /dao/artifact/d3f:OTController
+/dao/artifact/d3f:OTControllerOperatingMode
 /dao/artifact/d3f:OTCreateDataCommand
 /dao/artifact/d3f:OTCreateNewControlProgramCommand
 /dao/artifact/d3f:OTDebugCommand
@@ -502,7 +510,6 @@
 /dao/artifact/d3f:OTDeleteDataCommand
 /dao/artifact/d3f:OTDeviceConfigurationCommand
 /dao/artifact/d3f:OTDeviceDescriptionMessage
-/dao/artifact/d3f:OTDeviceException
 /dao/artifact/d3f:OTDeviceFirmwareCommand
 /dao/artifact/d3f:OTDeviceIdentificationMessage
 /dao/artifact/d3f:OTDeviceManagementMessage
@@ -514,6 +521,7 @@
 /dao/artifact/d3f:OTEngineeringWorkstation
 /dao/artifact/d3f:OTErrorMessage
 /dao/artifact/d3f:OTEstablishRemoteConnectionCommand
+/dao/artifact/d3f:OTExceptionMessage
 /dao/artifact/d3f:OTHumanMachineInterface
 /dao/artifact/d3f:OTIOModule
 /dao/artifact/d3f:OTLogicVariable
@@ -533,10 +541,10 @@
 /dao/artifact/d3f:OTProprietaryMessage
 /dao/artifact/d3f:OTProtocolMessage
 /dao/artifact/d3f:OTReadCommand
-/dao/artifact/d3f:OTReadDeviceConfigurationDataCommand
+/dao/artifact/d3f:OTReadDeviceConfigurationCommand
 /dao/artifact/d3f:OTReadFileCommand
-/dao/artifact/d3f:OTReadSetValueCommand
 /dao/artifact/d3f:OTReadTimeCommand
+/dao/artifact/d3f:OTReadValueCommand
 /dao/artifact/d3f:OTRemoteModeCommand
 /dao/artifact/d3f:OTRunCommand
 /dao/artifact/d3f:OTScanTime
@@ -600,8 +608,12 @@
 /dao/artifact/d3f:PeripheralHubFirmware
 /dao/artifact/d3f:PersonalComputer
 /dao/artifact/d3f:PhysicalAddress
+/dao/artifact/d3f:PhysicalArtifact
 /dao/artifact/d3f:PhysicalDataDiode
+/dao/artifact/d3f:PhysicalKey
+/dao/artifact/d3f:PhysicalKeyLock
 /dao/artifact/d3f:PhysicalLink
+/dao/artifact/d3f:PhysicalLock
 /dao/artifact/d3f:Pipe
 /dao/artifact/d3f:PlatformUptime
 /dao/artifact/d3f:Pointer
@@ -643,7 +655,6 @@
 /dao/artifact/d3f:RemoteAuthenticationService
 /dao/artifact/d3f:RemoteAuthorizationService
 /dao/artifact/d3f:RemoteCommand
-/dao/artifact/d3f:RemoteControlCommand
 /dao/artifact/d3f:RemoteDatabaseQuery
 /dao/artifact/d3f:RemoteLoginSession
 /dao/artifact/d3f:RemoteProcedureCall
@@ -690,6 +701,7 @@
 /dao/artifact/d3f:Shim
 /dao/artifact/d3f:ShimDatabase
 /dao/artifact/d3f:ShortcutFile
+/dao/artifact/d3f:Signal
 /dao/artifact/d3f:SlowSymbolicLink
 /dao/artifact/d3f:Software
 /dao/artifact/d3f:SoftwareArtifactServer
@@ -718,6 +730,7 @@
 /dao/artifact/d3f:Switch
 /dao/artifact/d3f:SymbolicLink
 /dao/artifact/d3f:SymmetricKey
+/dao/artifact/d3f:System
 /dao/artifact/d3f:SystemApplicationCycleCount
 /dao/artifact/d3f:SystemCall
 /dao/artifact/d3f:SystemConfigSystemCall
@@ -742,6 +755,7 @@
 /dao/artifact/d3f:TFTPNetworkTraffic
 /dao/artifact/d3f:TFTPServer
 /dao/artifact/d3f:TabletComputer
+/dao/artifact/d3f:Telecommand
 /dao/artifact/d3f:TerminateProcess
 /dao/artifact/d3f:TertiaryStorage
 /dao/artifact/d3f:TestExecutionTool
