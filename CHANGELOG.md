@@ -1,5 +1,9 @@
 # D3FEND UI Change Log
 
+## Version - 0.23.1 - 2026-04-01
+ - Minor website updates
+ - Correct downloadable ontology files.
+
 ## Version - 0.23.0 - 2026-03-31
  - CAD Improvements:
     - New CAD view presets provide focused layouts for attack paths, defenders, defenses, events, temporal flows, system composition, and related perspectives.
