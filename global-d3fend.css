@@ -159,6 +159,11 @@ input:disabled {
   color: var(--d3fend-border-default);
 }
 
+/* The autocomplete library otherwise moves lists above inputs near the viewport bottom. */
+.autocomplete-list {
+  top: 0 !important;
+}
+
 /* button {
   color: var(--d3fend-text-default);
   background-color: var(--d3fend-surface-quiet);
